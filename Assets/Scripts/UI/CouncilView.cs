@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class CouncilView : MonoBehaviour
 {
-    public GameObject PanelManage;
-    public GameObject PanelPlan;
+    public GameObject panelManage;
+    public GameObject panelPlan;
     public void ButtonPlan_OnClick()
     {
-        PanelPlan.SetActive(true);
-        PanelManage.SetActive(false);
+        panelPlan.SetActive(true);
+        panelManage.SetActive(false);
     }
     public void ButtonManage_OnClick()
     {
-        PanelPlan.SetActive(false);
-        PanelManage.SetActive(true);
+        panelPlan.SetActive(false);
+        panelManage.SetActive(true);
     }
 }
