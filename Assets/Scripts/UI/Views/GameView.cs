@@ -25,7 +25,7 @@ public class GameView : MonoBehaviour
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").GetComponent<Button>();
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
-        contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("Content").GetComponent<RectTransform>();
+        contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
     }
     
     public void ButtonTestEvent_OnClick()
