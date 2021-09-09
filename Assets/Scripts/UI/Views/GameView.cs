@@ -69,23 +69,23 @@ public class GameView : MonoBehaviour
     //Buttons in Event Exe
     public void ButtonOpenExePanel_OnClick()
     {
-        buttonOpenExePanel.gameObject.SetActive(false);
-        buttonCloseExePanel.gameObject.SetActive(true);
         OpenExePanel();
     }
     public void ButtonCloseExePanel_OnClick()
     {
-        buttonOpenExePanel.gameObject.SetActive(true);
-        buttonCloseExePanel.gameObject.SetActive(false);
         CloseExePanel();
     }
 
-    void OpenExePanel()
+    public void OpenExePanel()
     {
+        buttonOpenExePanel.gameObject.SetActive(false);
+        buttonCloseExePanel.gameObject.SetActive(true);
         rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,0,rectExePanel.sizeDelta.x);
     }
-    void CloseExePanel()
+    public void CloseExePanel()
     {
+        buttonOpenExePanel.gameObject.SetActive(true);
+        buttonCloseExePanel.gameObject.SetActive(false);
         rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,-rectExePanel.sizeDelta.x/2.0f,rectExePanel.sizeDelta.x);
     }
 }

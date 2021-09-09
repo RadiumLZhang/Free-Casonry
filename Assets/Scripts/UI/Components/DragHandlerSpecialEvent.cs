@@ -17,6 +17,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     private RectTransform rectTransform;
     private GameObject draggingImage;
     private ScrollRect scrollRect;
+    private GameView gameView;
     
     private Vector3 pos;                            //控件初始位置
     private Vector3 mousePos;                       //鼠标初始位置
@@ -29,6 +30,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     void Start()
     {
         scrollRect = GameObject.Find("ScrollSpecialEvent").GetComponent<ScrollRect>();
+        gameView = GameObject.Find("Canvas").GetComponent<GameView>();
     }
     private GameObject InsImage()
     {
@@ -68,6 +70,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
                 bIsExtracting = true;
                 draggingImage.SetActive(true);
                 transform.Find("ImageEventEmpty").gameObject.SetActive(true);
+                gameView.OpenExePanel();
             }
         }
         
@@ -79,7 +82,6 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
                 draggingImage.SetActive(false);
                 transform.Find("ImageEventEmpty").gameObject.SetActive(false);
             }
-            print("pos = "+scrollRect.horizontalNormalizedPosition+"\ndelta = "+(Input.mousePosition.x - tempMousePos_x) * 10.0f / (HandleSelfFittingHorizontal(transform.parent.parent)));
             scrollRect.horizontalNormalizedPosition -= (Input.mousePosition.x - tempMousePos_x) * Screen.width * 1.7f / Mathf.Pow(HandleSelfFittingHorizontal(transform.parent.parent),2.0f);
             tempMousePos_x = Input.mousePosition.x;
         }
@@ -95,6 +97,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         timerDragStart = 6;
         Destroy(draggingImage);
         transform.Find("ImageEventEmpty").gameObject.SetActive(false);
+        gameView.CloseExePanel();
     }
     
     private float HandleSelfFittingHorizontal(Transform obj)
