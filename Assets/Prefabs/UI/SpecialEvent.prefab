@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad9848ba7f7e4499172a37bc2b4371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extractAngle: 30
 --- !u!1 &4181008343742182339
 GameObject:
   m_ObjectHideFlags: 0
