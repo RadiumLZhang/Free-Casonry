@@ -1676,7 +1676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Test\n\u70B9\u51FB\u6DFB\u52A0\u7279\u522B\u4E8B\u4EF6"
+  m_Text: ADD
 --- !u!222 &497205532
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4200,8 +4200,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -458, y: -161}
-  m_SizeDelta: {x: -1626.8, y: -882.9363}
+  m_AnchoredPosition: {x: -116, y: -270.46}
+  m_SizeDelta: {x: -1797.6057, y: -952.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108861295
 MonoBehaviour:
