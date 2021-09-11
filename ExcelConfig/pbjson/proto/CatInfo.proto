@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package CatInfo;
+
+// @wrapper 猫咪信息表(CatInfo.pb.json)
+message CatInfo 
+{
+    message CatItemConfig
+    {
+        // @name 猫咪id
+        // @key
+        int64 id = 1;
+        // @name 名称
+        string name = 2;
+        // @name 品种
+        string type = 3;
+        // @name 头像or形象
+        string image = 4;
+        // @name 能力参数(属性参数)
+        repeated int32 property = 5;
+        // @name 技能
+        int64 skill = 6;
+        // @name 简介
+        string description = 7;
+    }
+
+    // @name 猫咪信息
+    repeated CatItemConfig cat_config = 1;
+}
