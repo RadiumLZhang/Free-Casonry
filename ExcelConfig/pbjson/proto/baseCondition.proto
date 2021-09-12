@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package BaseCondition;
+
+// @wrapper 基础条件表(BaseCondition.pb.json)
+message BaseCondition
+{
+    message BaseConditionItem
+    {
+        // @name 条件编号
+        // @key
+        string key = 1;
+        // @name 文本内容
+        string value = 2;
+    }
+
+    // @name 基础条件配置
+    repeated BaseConditionItem baseCondition_config = 1;
+}

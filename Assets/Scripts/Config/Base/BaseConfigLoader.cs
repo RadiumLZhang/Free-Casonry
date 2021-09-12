@@ -2,7 +2,7 @@
 using Pbjson;
 using UnityEngine;
 
-namespace CatInfo
+namespace Config
 {
     public abstract class BaseConfigLoader<T> where T : IRepeatedFieldConvert, IMessage<T>, new()
     {

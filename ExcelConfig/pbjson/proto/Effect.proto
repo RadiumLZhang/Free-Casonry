@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package Effect;
+
+// @wrapper 应用效果表(Effect.pb.json)
+message Effect
+{
+    message EffectItem
+    {
+        // @name 效果编号
+        // @key
+        int64 effectId = 1;
+        // @name 基础效果编号
+        int64 baseEffectId = 2;
+        // @name 参数
+        repeated int32 paras = 3;
+    }
+
+    //@name 应用效果表
+    repeated EffectItem effect_config = 1;
+}

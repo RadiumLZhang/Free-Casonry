@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Config;
 
 namespace {{packageInfo.packageNames.unique}}
 {

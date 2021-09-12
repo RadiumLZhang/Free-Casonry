@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package HumanInfo;
+
+// @wrapper 人类信息表(HumanInfo.pb.json)
+message HumanInfo
+{
+    message person{
+        // @name 人物编号
+        // @key
+        int64 humanId = 1;
+        // @name 姓名
+        string name = 2;
+        // @name 头衔
+        string title = 3;
+        // @name 头像
+        string image = 4;
+        // @name 性别
+        int32 sex = 5;
+        // @name 是否为主要人物
+        int32 isImportant = 6;
+        // @name 能否养猫
+        int32 canRaiseCat = 7;
+        // @name 能否洗脑
+        int32 canWashHead = 8;
+        // @name 默认养猫编号
+        int64 defaultCatId = 9;
+        // @name 标签
+        repeated int64 tags = 10;
+        // @name 初始能见度
+        int32 visibility = 11;
+        // @name 初始养猫意向
+        int32 tendToRaiseCat = 12;
+        // @name 初始亲密度
+        int32 FavorValue = 13;
+    }
+
+    // @name 人类信息配置
+    repeated person people = 1;
+}

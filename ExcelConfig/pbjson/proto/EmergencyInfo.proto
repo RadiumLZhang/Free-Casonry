@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package EmergencyInfo;
+
+// @wrapper 突发事件信息表(TriggerEvent.pb.json)
+message EmergencyInfoConfig
+{
+    message EmergencyItem
+    {
+        // @name 触发事件id
+        // @key
+        int64 emergencyId = 1;
+        // @name 名称
+        string name = 2;
+        // @name 事件描述
+        string description = 3;
+        // @name 产生时间
+        uint32 timeOffset = 4;
+        // @name 默认选项
+        int32 defaultOption = 5;
+
+    }
+
+    message defaultOption
+    {
+        // @name 选项名称
+        string name = 1;
+        // @name 描述
+        string description = 2;
+        // @name 效果
+        // @style inline
+        repeated int64 effects = 3;
+        // @name 条件
+        // @style inline
+        repeated int64 conditions = 5;
+    }
+
+    // @name 突发事件配置
+    repeated EmergencyItem emergencyItem_config = 1;
+}
