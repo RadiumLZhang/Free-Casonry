@@ -24,26 +24,26 @@ namespace Event {
     static EventInfoConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chtwcm90by9FdmVudEluZm9Db25maWcucHJvdG8SBUV2ZW50IpgFCg9FdmVu",
+            "Chtwcm90by9FdmVudEluZm9Db25maWcucHJvdG8SBUV2ZW50IpUFCg9FdmVu",
             "dEluZm9Db25maWcSPAoMZXZlbnRfY29uZmlnGAEgAygLMiYuRXZlbnQuRXZl",
-            "bnRJbmZvQ29uZmlnLkV2ZW50SXRlbUNvbmZpZxrsAwoPRXZlbnRJdGVtQ29u",
+            "bnRJbmZvQ29uZmlnLkV2ZW50SXRlbUNvbmZpZxrpAwoPRXZlbnRJdGVtQ29u",
             "ZmlnEg8KB2V2ZW50SWQYASABKAMSDAoEbmFtZRgCIAEoCRIMCgR0eXBlGAMg",
             "ASgFEhMKC2NvbnN1bWVUaW1lGAUgASgDEg0KBWltYWdlGBMgASgJEhIKCmV4",
             "cGlyZVRpbWUYBiABKAMSGQoRb3V0T2ZUaW1lUmVjb3JkSWQYByABKAMSDwoH",
-            "aHVtYW5JZBgIIAEoAxISCgpyZXBlYXRUaW1lGAkgASgFEhYKDnRyaWdnZXJF",
-            "dmVudElkGAogASgDEhMKC2lzSW1wb3J0YW50GAsgASgFEhAKCHByaW9yaXR5",
-            "GAwgASgFEhUKDXByZWNvbmRpdGlvbnMYDSADKAMSDwoHZWZmZWN0cxgOIAMo",
-            "AxIyCgZyZXN1bHQYDyADKAsyIi5FdmVudC5FdmVudEluZm9Db25maWcuUmVz",
-            "dWx0RXZlbnQSFAoMZXhwaXJlRWZmZWN0GBAgAygDEkEKEmdlbmVyYXRlQ29u",
-            "ZGl0aW9ucxgRIAMoCzIlLkV2ZW50LkV2ZW50SW5mb0NvbmZpZy5Db25kaXRp",
-            "b25Hcm91cBJAChFkZXN0cm95Q29uZGl0aW9ucxgSIAMoCzIlLkV2ZW50LkV2",
-            "ZW50SW5mb0NvbmZpZy5Db25kaXRpb25Hcm91cBoyCgtSZXN1bHRFdmVudBIP",
-            "CgdldmVudElkGAEgASgDEhIKCmNvbmRpdGlvbnMYAiADKAMaJAoOQ29uZGl0",
-            "aW9uR3JvdXASEgoKY29uZGl0aW9ucxgBIAMoA2IGcHJvdG8z"));
+            "aHVtYW5JZBgIIAEoAxISCgpyZXBlYXRUaW1lGAkgASgFEhMKC2VtZXJnZW5j",
+            "eUlkGAogASgDEhMKC2lzSW1wb3J0YW50GAsgASgFEhAKCHByaW9yaXR5GAwg",
+            "ASgFEhUKDXByZWNvbmRpdGlvbnMYDSADKAMSDwoHZWZmZWN0cxgOIAMoAxIy",
+            "CgZyZXN1bHQYDyADKAsyIi5FdmVudC5FdmVudEluZm9Db25maWcuUmVzdWx0",
+            "RXZlbnQSFAoMZXhwaXJlRWZmZWN0GBAgAygDEkEKEmdlbmVyYXRlQ29uZGl0",
+            "aW9ucxgRIAMoCzIlLkV2ZW50LkV2ZW50SW5mb0NvbmZpZy5Db25kaXRpb25H",
+            "cm91cBJAChFkZXN0cm95Q29uZGl0aW9ucxgSIAMoCzIlLkV2ZW50LkV2ZW50",
+            "SW5mb0NvbmZpZy5Db25kaXRpb25Hcm91cBoyCgtSZXN1bHRFdmVudBIPCgdl",
+            "dmVudElkGAEgASgDEhIKCmNvbmRpdGlvbnMYAiADKAMaJAoOQ29uZGl0aW9u",
+            "R3JvdXASEgoKY29uZGl0aW9ucxgBIAMoA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig), global::Event.EventInfoConfig.Parser, new[]{ "EventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.EventItemConfig), global::Event.EventInfoConfig.Types.EventItemConfig.Parser, new[]{ "EventId", "Name", "Type", "ConsumeTime", "Image", "ExpireTime", "OutOfTimeRecordId", "HumanId", "RepeatTime", "TriggerEventId", "IsImportant", "Priority", "Preconditions", "Effects", "Result", "ExpireEffect", "GenerateConditions", "DestroyConditions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig), global::Event.EventInfoConfig.Parser, new[]{ "EventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.EventItemConfig), global::Event.EventInfoConfig.Types.EventItemConfig.Parser, new[]{ "EventId", "Name", "Type", "ConsumeTime", "Image", "ExpireTime", "OutOfTimeRecordId", "HumanId", "RepeatTime", "EmergencyId", "IsImportant", "Priority", "Preconditions", "Effects", "Result", "ExpireEffect", "GenerateConditions", "DestroyConditions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.ResultEvent), global::Event.EventInfoConfig.Types.ResultEvent.Parser, new[]{ "EventId", "Conditions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.ConditionGroup), global::Event.EventInfoConfig.Types.ConditionGroup.Parser, new[]{ "Conditions" }, null, null, null, null)})
           }));
@@ -215,7 +215,7 @@ namespace Event {
           outOfTimeRecordId_ = other.outOfTimeRecordId_;
           humanId_ = other.humanId_;
           repeatTime_ = other.repeatTime_;
-          triggerEventId_ = other.triggerEventId_;
+          emergencyId_ = other.emergencyId_;
           isImportant_ = other.isImportant_;
           priority_ = other.priority_;
           preconditions_ = other.preconditions_.Clone();
@@ -359,17 +359,17 @@ namespace Event {
           }
         }
 
-        /// <summary>Field number for the "triggerEventId" field.</summary>
-        public const int TriggerEventIdFieldNumber = 10;
-        private long triggerEventId_;
+        /// <summary>Field number for the "emergencyId" field.</summary>
+        public const int EmergencyIdFieldNumber = 10;
+        private long emergencyId_;
         /// <summary>
         ///@name 突发事件id
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public long TriggerEventId {
-          get { return triggerEventId_; }
+        public long EmergencyId {
+          get { return emergencyId_; }
           set {
-            triggerEventId_ = value;
+            emergencyId_ = value;
           }
         }
 
@@ -501,7 +501,7 @@ namespace Event {
           if (OutOfTimeRecordId != other.OutOfTimeRecordId) return false;
           if (HumanId != other.HumanId) return false;
           if (RepeatTime != other.RepeatTime) return false;
-          if (TriggerEventId != other.TriggerEventId) return false;
+          if (EmergencyId != other.EmergencyId) return false;
           if (IsImportant != other.IsImportant) return false;
           if (Priority != other.Priority) return false;
           if(!preconditions_.Equals(other.preconditions_)) return false;
@@ -525,7 +525,7 @@ namespace Event {
           if (OutOfTimeRecordId != 0L) hash ^= OutOfTimeRecordId.GetHashCode();
           if (HumanId != 0L) hash ^= HumanId.GetHashCode();
           if (RepeatTime != 0) hash ^= RepeatTime.GetHashCode();
-          if (TriggerEventId != 0L) hash ^= TriggerEventId.GetHashCode();
+          if (EmergencyId != 0L) hash ^= EmergencyId.GetHashCode();
           if (IsImportant != 0) hash ^= IsImportant.GetHashCode();
           if (Priority != 0) hash ^= Priority.GetHashCode();
           hash ^= preconditions_.GetHashCode();
@@ -579,9 +579,9 @@ namespace Event {
             output.WriteRawTag(72);
             output.WriteInt32(RepeatTime);
           }
-          if (TriggerEventId != 0L) {
+          if (EmergencyId != 0L) {
             output.WriteRawTag(80);
-            output.WriteInt64(TriggerEventId);
+            output.WriteInt64(EmergencyId);
           }
           if (IsImportant != 0) {
             output.WriteRawTag(88);
@@ -636,8 +636,8 @@ namespace Event {
           if (RepeatTime != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(RepeatTime);
           }
-          if (TriggerEventId != 0L) {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(TriggerEventId);
+          if (EmergencyId != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(EmergencyId);
           }
           if (IsImportant != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(IsImportant);
@@ -689,8 +689,8 @@ namespace Event {
           if (other.RepeatTime != 0) {
             RepeatTime = other.RepeatTime;
           }
-          if (other.TriggerEventId != 0L) {
-            TriggerEventId = other.TriggerEventId;
+          if (other.EmergencyId != 0L) {
+            EmergencyId = other.EmergencyId;
           }
           if (other.IsImportant != 0) {
             IsImportant = other.IsImportant;
@@ -748,7 +748,7 @@ namespace Event {
                 break;
               }
               case 80: {
-                TriggerEventId = input.ReadInt64();
+                EmergencyId = input.ReadInt64();
                 break;
               }
               case 88: {

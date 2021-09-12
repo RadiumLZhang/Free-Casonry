@@ -24,19 +24,21 @@ namespace EmergencyInfo {
     static EmergencyInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chlwcm90by9FbWVyZ2VuY3lJbmZvLnByb3RvEg1FbWVyZ2VuY3lJbmZvIrIC",
+            "Chlwcm90by9FbWVyZ2VuY3lJbmZvLnByb3RvEg1FbWVyZ2VuY3lJbmZvIugC",
             "ChNFbWVyZ2VuY3lJbmZvQ29uZmlnEk4KFGVtZXJnZW5jeUl0ZW1fY29uZmln",
             "GAEgAygLMjAuRW1lcmdlbmN5SW5mby5FbWVyZ2VuY3lJbmZvQ29uZmlnLkVt",
-            "ZXJnZW5jeUl0ZW0acgoNRW1lcmdlbmN5SXRlbRITCgtlbWVyZ2VuY3lJZBgB",
-            "IAEoAxIMCgRuYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhIKCnRp",
-            "bWVPZmZzZXQYBCABKA0SFQoNZGVmYXVsdE9wdGlvbhgFIAEoBRpXCg1kZWZh",
-            "dWx0T3B0aW9uEgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkS",
-            "DwoHZWZmZWN0cxgDIAMoAxISCgpjb25kaXRpb25zGAUgAygDYgZwcm90bzM="));
+            "ZXJnZW5jeUl0ZW0argEKDUVtZXJnZW5jeUl0ZW0SEwoLZW1lcmdlbmN5SWQY",
+            "ASABKAMSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRISCgp0",
+            "aW1lT2Zmc2V0GAQgASgNEhUKDWRlZmF1bHRPcHRpb24YBSABKAUSOgoHb3B0",
+            "aW9ucxgGIAMoCzIpLkVtZXJnZW5jeUluZm8uRW1lcmdlbmN5SW5mb0NvbmZp",
+            "Zy5PcHRpb24aUAoGT3B0aW9uEgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
+            "b24YAiABKAkSDwoHZWZmZWN0cxgDIAMoAxISCgpjb25kaXRpb25zGAUgAygD",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig), global::EmergencyInfo.EmergencyInfoConfig.Parser, new[]{ "EmergencyItemConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem), global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem.Parser, new[]{ "EmergencyId", "Name", "Description", "TimeOffset", "DefaultOption" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.defaultOption), global::EmergencyInfo.EmergencyInfoConfig.Types.defaultOption.Parser, new[]{ "Name", "Description", "Effects", "Conditions" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig), global::EmergencyInfo.EmergencyInfoConfig.Parser, new[]{ "EmergencyItemConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem), global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem.Parser, new[]{ "EmergencyId", "Name", "Description", "TimeOffset", "DefaultOption", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.Option), global::EmergencyInfo.EmergencyInfoConfig.Types.Option.Parser, new[]{ "Name", "Description", "Effects", "Conditions" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -202,6 +204,7 @@ namespace EmergencyInfo {
           description_ = other.description_;
           timeOffset_ = other.timeOffset_;
           defaultOption_ = other.defaultOption_;
+          options_ = other.options_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -281,6 +284,19 @@ namespace EmergencyInfo {
           }
         }
 
+        /// <summary>Field number for the "options" field.</summary>
+        public const int OptionsFieldNumber = 6;
+        private static readonly pb::FieldCodec<global::EmergencyInfo.EmergencyInfoConfig.Types.Option> _repeated_options_codec
+            = pb::FieldCodec.ForMessage(50, global::EmergencyInfo.EmergencyInfoConfig.Types.Option.Parser);
+        private readonly pbc::RepeatedField<global::EmergencyInfo.EmergencyInfoConfig.Types.Option> options_ = new pbc::RepeatedField<global::EmergencyInfo.EmergencyInfoConfig.Types.Option>();
+        /// <summary>
+        /// @name 选项
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::EmergencyInfo.EmergencyInfoConfig.Types.Option> Options {
+          get { return options_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as EmergencyItem);
@@ -299,6 +315,7 @@ namespace EmergencyInfo {
           if (Description != other.Description) return false;
           if (TimeOffset != other.TimeOffset) return false;
           if (DefaultOption != other.DefaultOption) return false;
+          if(!options_.Equals(other.options_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -310,6 +327,7 @@ namespace EmergencyInfo {
           if (Description.Length != 0) hash ^= Description.GetHashCode();
           if (TimeOffset != 0) hash ^= TimeOffset.GetHashCode();
           if (DefaultOption != 0) hash ^= DefaultOption.GetHashCode();
+          hash ^= options_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -343,6 +361,7 @@ namespace EmergencyInfo {
             output.WriteRawTag(40);
             output.WriteInt32(DefaultOption);
           }
+          options_.WriteTo(output, _repeated_options_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -366,6 +385,7 @@ namespace EmergencyInfo {
           if (DefaultOption != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefaultOption);
           }
+          size += options_.CalculateSize(_repeated_options_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -392,6 +412,7 @@ namespace EmergencyInfo {
           if (other.DefaultOption != 0) {
             DefaultOption = other.DefaultOption;
           }
+          options_.Add(other.options_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -423,17 +444,21 @@ namespace EmergencyInfo {
                 DefaultOption = input.ReadInt32();
                 break;
               }
+              case 50: {
+                options_.AddEntriesFrom(input, _repeated_options_codec);
+                break;
+              }
             }
           }
         }
 
       }
 
-      public sealed partial class defaultOption : pb::IMessage<defaultOption> {
-        private static readonly pb::MessageParser<defaultOption> _parser = new pb::MessageParser<defaultOption>(() => new defaultOption());
+      public sealed partial class Option : pb::IMessage<Option> {
+        private static readonly pb::MessageParser<Option> _parser = new pb::MessageParser<Option>(() => new Option());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<defaultOption> Parser { get { return _parser; } }
+        public static pb::MessageParser<Option> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -446,14 +471,14 @@ namespace EmergencyInfo {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public defaultOption() {
+        public Option() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public defaultOption(defaultOption other) : this() {
+        public Option(Option other) : this() {
           name_ = other.name_;
           description_ = other.description_;
           effects_ = other.effects_.Clone();
@@ -462,8 +487,8 @@ namespace EmergencyInfo {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public defaultOption Clone() {
-          return new defaultOption(this);
+        public Option Clone() {
+          return new Option(this);
         }
 
         /// <summary>Field number for the "name" field.</summary>
@@ -524,11 +549,11 @@ namespace EmergencyInfo {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as defaultOption);
+          return Equals(other as Option);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(defaultOption other) {
+        public bool Equals(Option other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -595,7 +620,7 @@ namespace EmergencyInfo {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(defaultOption other) {
+        public void MergeFrom(Option other) {
           if (other == null) {
             return;
           }

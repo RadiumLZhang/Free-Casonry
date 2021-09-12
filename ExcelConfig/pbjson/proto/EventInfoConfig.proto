@@ -27,7 +27,7 @@ message EventInfoConfig {
         //@name 重复次数
         int32 repeatTime = 9;
         //@name 突发事件id
-        int64 triggerEventId = 10;
+        int64 emergencyId = 10;
         //@name 红点(是否重要)
         int32 isImportant = 11;
         //@name 优先级(排序权重)

@@ -18,10 +18,11 @@ message EmergencyInfoConfig
         uint32 timeOffset = 4;
         // @name 默认选项
         int32 defaultOption = 5;
-
+        // @name 选项
+        repeated Option options = 6;
     }
 
-    message defaultOption
+    message Option
     {
         // @name 选项名称
         string name = 1;
