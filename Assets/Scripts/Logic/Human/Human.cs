@@ -41,10 +41,9 @@ namespace Logic.Human
         public int FavorValue { get; private set; }
 
         /// <summary>
-        /// todo 养的猫
+        /// 养的猫
         /// </summary>
-        /// <returns></returns>
-
+        public Cat cat;
 
 
         public Human(long mID)

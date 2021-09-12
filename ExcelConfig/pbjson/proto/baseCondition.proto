@@ -9,7 +9,7 @@ message BaseCondition
     {
         // @name 条件编号
         // @key
-        string key = 1;
+        int64 key = 1;
         // @name 文本内容
         string value = 2;
     }

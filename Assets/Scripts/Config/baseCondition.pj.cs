@@ -20,8 +20,8 @@ namespace BaseCondition
             }
         }
         public IReadOnlyList<BaseCondition.Types.BaseConditionItem> BaseConditionConfig => Table.BaseConditionConfig;
-        public IReadOnlyDictionary<string, BaseCondition.Types.BaseConditionItem> BaseConditionItemDic => Table.BaseConditionItemDic;
-        public BaseCondition.Types.BaseConditionItem FindBaseConditionItem(string key)
+        public IReadOnlyDictionary<long, BaseCondition.Types.BaseConditionItem> BaseConditionItemDic => Table.BaseConditionItemDic;
+        public BaseCondition.Types.BaseConditionItem FindBaseConditionItem(long key)
         {
             BaseConditionItemDic.TryGetValue(key, out var value);
             return value;
@@ -29,7 +29,7 @@ namespace BaseCondition
     }
     public partial class BaseCondition : Pbjson.IRepeatedFieldConvert
     {
-        public readonly Dictionary<string, BaseCondition.Types.BaseConditionItem> BaseConditionItemDic = new Dictionary<string, BaseCondition.Types.BaseConditionItem>();
+        public readonly Dictionary<long, BaseCondition.Types.BaseConditionItem> BaseConditionItemDic = new Dictionary<long, BaseCondition.Types.BaseConditionItem>();
         public void RepeatedFieldToDictionary()
         {
             foreach (var item in BaseConditionConfig)

@@ -27,7 +27,7 @@ namespace BaseEffect {
             "ChZwcm90by9iYXNlRWZmZWN0LnByb3RvEgpCYXNlRWZmZWN0InwKCkJhc2VF",
             "ZmZlY3QSQAoRYmFzZUVmZmVjdF9jb25maWcYASADKAsyJS5CYXNlRWZmZWN0",
             "LkJhc2VFZmZlY3QuQmFzZUVmZmVjdEl0ZW0aLAoOQmFzZUVmZmVjdEl0ZW0S",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJYgZwcm90bzM="));
+            "CwoDa2V5GAEgASgDEg0KBXZhbHVlGAIgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -204,16 +204,16 @@ namespace BaseEffect {
 
         /// <summary>Field number for the "key" field.</summary>
         public const int KeyFieldNumber = 1;
-        private string key_ = "";
+        private long key_;
         /// <summary>
         /// @name 基础效果编号
         /// @key
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Key {
+        public long Key {
           get { return key_; }
           set {
-            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            key_ = value;
           }
         }
 
@@ -252,7 +252,7 @@ namespace BaseEffect {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          if (Key != 0L) hash ^= Key.GetHashCode();
           if (Value.Length != 0) hash ^= Value.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -267,9 +267,9 @@ namespace BaseEffect {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Key.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(Key);
+          if (Key != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Key);
           }
           if (Value.Length != 0) {
             output.WriteRawTag(18);
@@ -283,8 +283,8 @@ namespace BaseEffect {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Key.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+          if (Key != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Key);
           }
           if (Value.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
@@ -300,7 +300,7 @@ namespace BaseEffect {
           if (other == null) {
             return;
           }
-          if (other.Key.Length != 0) {
+          if (other.Key != 0L) {
             Key = other.Key;
           }
           if (other.Value.Length != 0) {
@@ -317,8 +317,8 @@ namespace BaseEffect {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
-              case 10: {
-                Key = input.ReadString();
+              case 8: {
+                Key = input.ReadInt64();
                 break;
               }
               case 18: {

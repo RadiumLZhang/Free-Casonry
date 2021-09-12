@@ -20,8 +20,8 @@ namespace BaseEffect
             }
         }
         public IReadOnlyList<BaseEffect.Types.BaseEffectItem> BaseEffectConfig => Table.BaseEffectConfig;
-        public IReadOnlyDictionary<string, BaseEffect.Types.BaseEffectItem> BaseEffectItemDic => Table.BaseEffectItemDic;
-        public BaseEffect.Types.BaseEffectItem FindBaseEffectItem(string key)
+        public IReadOnlyDictionary<long, BaseEffect.Types.BaseEffectItem> BaseEffectItemDic => Table.BaseEffectItemDic;
+        public BaseEffect.Types.BaseEffectItem FindBaseEffectItem(long key)
         {
             BaseEffectItemDic.TryGetValue(key, out var value);
             return value;
@@ -29,7 +29,7 @@ namespace BaseEffect
     }
     public partial class BaseEffect : Pbjson.IRepeatedFieldConvert
     {
-        public readonly Dictionary<string, BaseEffect.Types.BaseEffectItem> BaseEffectItemDic = new Dictionary<string, BaseEffect.Types.BaseEffectItem>();
+        public readonly Dictionary<long, BaseEffect.Types.BaseEffectItem> BaseEffectItemDic = new Dictionary<long, BaseEffect.Types.BaseEffectItem>();
         public void RepeatedFieldToDictionary()
         {
             foreach (var item in BaseEffectConfig)

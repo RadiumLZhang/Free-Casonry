@@ -80,7 +80,7 @@ namespace Logic.Event
 
         public void Execute()
         {
-            //执行效果、代价
+            //todo 执行效果、代价
             // Config.Effects;
             if (!CanExecute())
             {

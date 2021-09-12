@@ -27,7 +27,7 @@ namespace BaseCondition {
             "Chlwcm90by9iYXNlQ29uZGl0aW9uLnByb3RvEg1CYXNlQ29uZGl0aW9uIo4B",
             "Cg1CYXNlQ29uZGl0aW9uEkwKFGJhc2VDb25kaXRpb25fY29uZmlnGAEgAygL",
             "Mi4uQmFzZUNvbmRpdGlvbi5CYXNlQ29uZGl0aW9uLkJhc2VDb25kaXRpb25J",
-            "dGVtGi8KEUJhc2VDb25kaXRpb25JdGVtEgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "dGVtGi8KEUJhc2VDb25kaXRpb25JdGVtEgsKA2tleRgBIAEoAxINCgV2YWx1",
             "ZRgCIAEoCWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -205,16 +205,16 @@ namespace BaseCondition {
 
         /// <summary>Field number for the "key" field.</summary>
         public const int KeyFieldNumber = 1;
-        private string key_ = "";
+        private long key_;
         /// <summary>
         /// @name 条件编号
         /// @key
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Key {
+        public long Key {
           get { return key_; }
           set {
-            key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            key_ = value;
           }
         }
 
@@ -253,7 +253,7 @@ namespace BaseCondition {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Key.Length != 0) hash ^= Key.GetHashCode();
+          if (Key != 0L) hash ^= Key.GetHashCode();
           if (Value.Length != 0) hash ^= Value.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -268,9 +268,9 @@ namespace BaseCondition {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Key.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(Key);
+          if (Key != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Key);
           }
           if (Value.Length != 0) {
             output.WriteRawTag(18);
@@ -284,8 +284,8 @@ namespace BaseCondition {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Key.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+          if (Key != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Key);
           }
           if (Value.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
@@ -301,7 +301,7 @@ namespace BaseCondition {
           if (other == null) {
             return;
           }
-          if (other.Key.Length != 0) {
+          if (other.Key != 0L) {
             Key = other.Key;
           }
           if (other.Value.Length != 0) {
@@ -318,8 +318,8 @@ namespace BaseCondition {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
-              case 10: {
-                Key = input.ReadString();
+              case 8: {
+                Key = input.ReadInt64();
                 break;
               }
               case 18: {
