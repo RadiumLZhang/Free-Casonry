@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8681204101248051776}
   - component: {fileID: 5985800591458493649}
   m_Layer: 5
-  m_Name: Image
+  m_Name: EventTimeBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181008343742182336}
   - component: {fileID: 4181008343742182342}
+  - component: {fileID: 6941956213874047666}
   m_Layer: 5
   m_Name: SpecialEvent
   m_TagString: Special Event
@@ -289,6 +290,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4181008343742182339}
   m_CullTransparentMesh: 1
+--- !u!114 &6941956213874047666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4181008343742182339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e7c64e2a18dab4ea56e0dd7709b6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4181008344223998204
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad9848ba7f7e4499172a37bc2b4371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extractAngle: 0
 --- !u!1 &8720818722140333043
 GameObject:
   m_ObjectHideFlags: 0
