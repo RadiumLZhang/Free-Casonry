@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Timers;
+using UnityEngine;
+using Object = System.Object;
 
-public class TimeTickerManager
+
+public enum TICKER_SPEED_ENUM : int
 {
-    public enum TICKER_SPEED_ENUM : int
-    {
-        STOP = 0,
-        NORMAL = 1,
-        FAST = 2
-    }
-    
+    STOP = 0,
+    NORMAL = 1,
+    FAST = 2
+}
+public class TimeTickerManager : MonoBehaviour
+{
     public delegate void CallBack();
 
     public delegate bool Condition();
@@ -165,7 +167,7 @@ public class TimeTickerManager
     
 
     // 初始化
-    public static void Init()
+    public static void Awake()
     {
         speed = (int) TICKER_SPEED_ENUM.NORMAL;
         stepPerSecond = 20;
@@ -177,6 +179,7 @@ public class TimeTickerManager
         timer.Elapsed += Ontick;
         timer.AutoReset = true;
         timer.Enabled = true;
+        //test();   --用来测试的test函数，可以打开看看控制台效果
     }
     
     private static void Ontick(Object source, ElapsedEventArgs e)
@@ -307,18 +310,24 @@ public class TimeTickerManager
     }
 
     /************************************ 自己测试用的 **************************************************/
-    public static int test(Condition condition, CallBack callBack)
+    public static int test()
     {
-        if (condition.Invoke())
+        AddEvent(() =>
         {
-            Console.WriteLine("condition is true");
-        }
-        else
-        {
-            Console.WriteLine("condition is false");
-        }
-
-        callBack.Invoke();
+            Console.WriteLine("TimeTickerManager Awake");
+        }, 0);
+        int id = 1;
+        AddLastingEvent(
+            () =>
+            {
+                Console.WriteLine("id = " + id);
+                id++;
+            }, 0, 1, 10,
+            () =>
+            {
+                Console.WriteLine("Finish Exist");
+            });
+        Console.ReadLine();
         return 0;
     }
 }
