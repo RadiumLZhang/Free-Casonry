@@ -5,7 +5,7 @@
       "name" : "月下之盟",
       "type" : 3,
       "consumeTime" : "30",
-      "image" : "event.jpg",
+      "image" : "Sprites/Main/4 刺探事件卡片.png",
       "expireTime" : "-1",
       "outOfTimeRecordId" : "10000",
       "humanId" : "10",
