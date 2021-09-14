@@ -127,8 +127,8 @@ public class GameView : MonoBehaviour
 
     public void UpdatePanelResources()
     {
-        panelResources.transform.Find("TextMoney").GetComponent<Text>().text = ""+PlayerModel.Instance.money;
-        panelResources.transform.Find("TextInfluence").GetComponent<Text>().text = ""+PlayerModel.Instance.influence;
-        panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = ""+PlayerModel.Instance.cohesion;
+        panelResources.transform.Find("TextMoney").GetComponent<Text>().text = "" + PlayerModel.Instance.Money;
+        panelResources.transform.Find("TextInfluence").GetComponent<Text>().text = "" + PlayerModel.Instance.Influence;
+        panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = "" + PlayerModel.Instance.Cohesion;
     }
 }
