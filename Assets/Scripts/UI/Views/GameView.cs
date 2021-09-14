@@ -5,44 +5,40 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
-using Logic.Event;
-
+using Logic;
 public class GameView : MonoBehaviour
 {
-    public GameObject panelCouncil;
-    public GameObject panelSettings;
-    public GameObject panelEventExe;
+    private GameObject darkBackgroundImage;
+    private GameObject panelCouncil;
+    private GameObject panelSettings;
+    private GameObject panelEventExe;
+    private GameObject panelResources;
+    private GameObject scrollSpecialEvent;
+    private RectTransform contentTransform;
     private Button buttonOpenExePanel;
     private Button buttonCloseExePanel;
     private RectTransform rectExePanel;
-    
-    //特别事件栏
-    public GameObject scrollSpecialEvent;
-    private RectTransform contentTransform;
-    public RectTransform itemTransform;//设置添加的预制体
+    private RectTransform specialEventPrefab;
 
     void Start()
     {
+        darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
+        panelCouncil = transform.Find("PanelCouncil").gameObject;
+        panelSettings = transform.Find("PanelSettings").gameObject;
+        panelEventExe = transform.Find("PanelEventExe").gameObject;
+        panelResources = transform.Find("PanelResources").gameObject;
+        scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
+        specialEventPrefab = Resources.Load<RectTransform>("Prefabs/SpecialEvent");
+        
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").GetComponent<Button>();
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
     }
-
-    // void Update()
-    // {
-    //     Logic.Event.Event myevent;
-    //     myevent(2);
-    //     UpdateSpecialEvent(myevent);
-    // }
-    //
-    // public void UpdateSpecialEvent(Logic.Event.Event event)
-    // {
-    //     return;
-    // }
+    
     public void ButtonTestEvent_OnClick()
     {
-        Transform temp = Instantiate(itemTransform).transform;
+        Transform temp = Instantiate(specialEventPrefab).transform;
         //TODO:把这个random重写成你的事件生成方法（带ID），其余不动
         if (Random.value > 0.5f)
         {
@@ -60,6 +56,8 @@ public class GameView : MonoBehaviour
 
     public void ButtonSettings_OnClick()
     {
+        //TODO:Ticker暂停游戏
+        darkBackgroundImage.SetActive(true);
         panelSettings.SetActive(true);
     }
     public void ButtonRelationship_OnClick()
@@ -70,7 +68,22 @@ public class GameView : MonoBehaviour
     {
         panelCouncil.SetActive(true);
     }
-
+    
+    public void ButtonPause_OnClick()
+    {
+        //TODO:Ticker暂停游戏
+    }
+    
+    public void ButtonNormal_OnClick()
+    {
+        //TODO:Ticker正常
+    }
+    
+    public void ButtonSpeed_OnClick()
+    {
+        //TODO:Ticker加速
+    }
+    
     //Button in Council
     public void ButtonBacktoGame_OnClick()
     {
@@ -84,6 +97,8 @@ public class GameView : MonoBehaviour
     }
     public void ButtonResume_OnClick()
     {
+        //TODO:Ticker恢复到正常/加速
+        darkBackgroundImage.SetActive(false);
         panelSettings.SetActive(false);
     }
     
@@ -108,5 +123,12 @@ public class GameView : MonoBehaviour
         buttonOpenExePanel.gameObject.SetActive(true);
         buttonCloseExePanel.gameObject.SetActive(false);
         rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,-rectExePanel.sizeDelta.x/2.0f,rectExePanel.sizeDelta.x);
+    }
+
+    public void UpdatePanelResources()
+    {
+        panelResources.transform.Find("TextMoney").GetComponent<Text>().text = "" + PlayerModel.Instance.Money;
+        panelResources.transform.Find("TextInfluence").GetComponent<Text>().text = "" + PlayerModel.Instance.Influence;
+        panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = "" + PlayerModel.Instance.Cohesion;
     }
 }

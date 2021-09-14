@@ -1,3 +1,18 @@
 {
-  "event_config" : [ ]
+  "event_config" : [
+    {
+      "eventId" : "1000",
+      "name" : "月下之盟",
+      "type" : 3,
+      "consumeTime" : "30",
+      "image" : "event.jpg",
+      "expireTime" : "-1",
+      "outOfTimeRecordId" : "10000",
+      "humanId" : "10",
+      "repeatTime" : 0,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100
+    }
+  ]
 }
