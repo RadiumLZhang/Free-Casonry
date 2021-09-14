@@ -53,13 +53,15 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         if (myID != -1)
             transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime").GetComponent<Text>().text =
                 Convert.ToString(remainingTime) + "秒";
+        if (remainingTime == 0)
+            OnFinish();
+        
     }
 
     //TODO:事件完成时调这个方法清空栏位，可以是(0 == remainingTime)的时候？
     public void OnFinish()
     {
         //TODO:用猫咪Handler调事件完成方法（影响议会资源之类的）
-        
         //清空UI的栏位并重设当前ID为-1
         transform.Find("ImageEvent").GetComponent<Image>().enabled = false;
         transform.Find("ImageEvent").GetComponent<Image>().sprite = null;
