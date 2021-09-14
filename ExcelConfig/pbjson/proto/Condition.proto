@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package Condition;
+
+// @wrapper 应用条件表(Condition.pb.json)
+message Condition
+{
+    message ConditionItem
+    {
+        // @name 条件编号
+        // @key
+        int64 conditionId = 1;
+        // @name 基础条件编号
+        int64 baseConditionId = 2;
+        // @name 参数
+        repeated int32 paras = 3;
+    }
+
+    //@name 应用条件表
+    repeated ConditionItem condition_config = 1;
+}

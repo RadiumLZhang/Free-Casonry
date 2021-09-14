@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package BaseEffect;
+
+// @wrapper 基础效果表(BaseEffect.pb.json)
+message BaseEffect
+{
+    message BaseEffectItem
+    {
+        // @name 基础效果编号
+        // @key
+        int64 key = 1;
+        // @name 效果描述
+        string value = 2;
+    }
+
+    // @name 基础效果配置
+    repeated BaseEffectItem baseEffect_config = 1;
+}

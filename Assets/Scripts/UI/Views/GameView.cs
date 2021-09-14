@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
+using Logic.Event;
 
 public class GameView : MonoBehaviour
 {
@@ -27,10 +28,30 @@ public class GameView : MonoBehaviour
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
     }
-    
+
+    // void Update()
+    // {
+    //     Logic.Event.Event myevent;
+    //     myevent(2);
+    //     UpdateSpecialEvent(myevent);
+    // }
+    //
+    // public void UpdateSpecialEvent(Logic.Event.Event event)
+    // {
+    //     return;
+    // }
     public void ButtonTestEvent_OnClick()
     {
         Transform temp = Instantiate(itemTransform).transform;
+        //TODO:把这个random重写成你的事件生成方法（带ID），其余不动
+        if (Random.value > 0.5f)
+        {
+            temp.GetComponent<SpecialEventMono>().InitWithID(1);
+        }
+        else
+        {
+            temp.GetComponent<SpecialEventMono>().InitWithID(2);
+        }
         temp.SetParent(contentTransform);
         temp.localPosition = Vector3.zero;
         temp.localRotation = Quaternion.identity;

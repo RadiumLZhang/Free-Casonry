@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package Language;
+
+// @wrapper 文本语言表(Language.pb.json)
+message Language
+{
+    message LanguageItem
+    {
+        // @name 文本编号
+        // @key
+        string key = 1;
+        // @name 文本内容
+        string value = 2;
+    }
+
+    // @name 文本配置
+    repeated LanguageItem language_config = 1;
+}

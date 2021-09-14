@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package Event;
+
+// @wrapper 事件配置表(EventInfoConfig.pb.json)
+message EventInfoConfig {
+
+    message EventItemConfig
+    {
+        //@name Id
+        //@key
+        int64 eventId = 1;
+        //@name 名称
+        string name = 2;
+        //@name 类型
+        int32 type = 3;
+        //@name 行动时间
+        int64 consumeTime = 5;
+        //@name 图片
+        string image = 19;
+        //@name 销毁时间
+        int64 expireTime = 6;
+        //@name 超时结果记录
+        int64 outOfTimeRecordId = 7;
+        //@name 绑定人物
+        int64 humanId = 8;
+        //@name 重复次数
+        int32 repeatTime = 9;
+        //@name 突发事件id
+        int64 emergencyId = 10;
+        //@name 红点(是否重要)
+        int32 isImportant = 11;
+        //@name 优先级(排序权重)
+        int32 priority = 12;
+        //@name 前提条件
+        repeated int64 preconditions = 13;
+        //@name 效果(代价)
+        repeated int64 effects = 14;
+        //@name 结果
+        repeated ResultEvent result = 15;
+        //@name 超时效果
+        repeated int64 expireEffect = 16;
+        //@name 生成条件组
+        repeated ConditionGroup generateConditions = 17;
+        //@name 销毁条件组
+        repeated ConditionGroup destroyConditions = 18;
+    }
+
+    message ResultEvent
+    {
+        //@name id
+        //@key
+        int64 eventId = 1;
+        //@name 条件
+        //@style inline
+        repeated int64 conditions = 2;
+    }
+
+    message ConditionGroup
+    {
+        //@style inline
+        repeated int64 conditions = 1;
+    }
+
+    //@name 事件配置表
+    repeated EventItemConfig event_config = 1;
+}

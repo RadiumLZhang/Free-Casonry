@@ -5,15 +5,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using FitMode = UnityEngine.UI.ContentSizeFitter.FitMode;
+using Image = UnityEngine.UI.Image;
 
 public class DragHandlerSpecialEvent : MonoBehaviour,
     IBeginDragHandler,
     IDragHandler,
-    IDropHandler,
     IEndDragHandler
-    
 {
-    
+    private long eventID;
     private RectTransform rectTransform;
     private GameObject draggingImage;
     private ScrollRect scrollRect;
@@ -34,6 +33,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     }
     private GameObject InsImage()
     {
+        GetComponent<Image>().raycastTarget = false;
         GameObject tempImg = Instantiate(gameObject);
         tempImg.transform.SetParent(scrollRect.transform,false);
         return tempImg;
@@ -87,10 +87,6 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         }
 
     }
-    public void OnDrop(PointerEventData eventData)
-    {
-        
-    }
     public void OnEndDrag(PointerEventData eventData)
     {
         bIsExtracting = false;
@@ -98,6 +94,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         Destroy(draggingImage);
         transform.Find("ImageEventEmpty").gameObject.SetActive(false);
         gameView.CloseExePanel();
+        GetComponent<Image>().raycastTarget = true;
     }
     
     private float HandleSelfFittingHorizontal(Transform obj)
@@ -113,4 +110,12 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         }
     }
 
+    public void SetEventID(long id)
+    {
+        eventID = id;
+    }
+    public long GetEventID()
+    {
+        return eventID;
+    }
 }

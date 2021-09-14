@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package BuffInfo;
+
+// @wrapper buff配置表(BuffInfo.pb.json)
+message BuffInfo
+{
+    message BuffItem
+    {
+        // @name Id
+        // @key
+        int64 buffId = 1;
+        // @name 条件id
+        int64 conditionId = 2;
+        // @name 浮窗文本
+        string content = 3;
+        // @name 时间影响
+        int64 deltaTime = 4;
+    }
+    
+    // @name Buff配置
+    repeated BuffItem buff_configs = 1;
+}
