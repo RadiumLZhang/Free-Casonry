@@ -21,8 +21,10 @@ public class CatColumnHandler : MonoBehaviour,
         myID = droppedEvent.GetEventID();
         
         //TODO:demo里不读表的话就自己写下myEventInfo结构体，有ID,Name,ConsumeTime和sprite即可
+        //TODO:Sprite路径写“Sprites/Main/4 刺探事件卡片.png”（zizhezhang要求的）
         myEventInfo = new Logic.Event.Event(myID);
         transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
+        transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
         transform.Find("ImageEvent").Find("EventTimeBackground").gameObject.SetActive(true);
         
         //用表中的ConsumeTime(需要消耗的时间)初始化remainingTime
@@ -51,6 +53,7 @@ public class CatColumnHandler : MonoBehaviour,
         //（其实把这方法放在GameView.cs的update里就不用调了，只是占资源）
         GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
         //清空UI的栏位并重设当前ID为-1
+        transform.Find("ImageEvent").GetComponent<Image>().enabled = false;
         transform.Find("ImageEvent").GetComponent<Image>().sprite = null;
         transform.Find("ImageEvent").Find("EventTimeBackground").gameObject.SetActive(false);
         myID = -1;
