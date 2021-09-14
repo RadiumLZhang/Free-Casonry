@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Net.Security;
 using UnityEngine.UIElements;
-using UI.Components;
 using Event = Logic.Event.Event;
 
 namespace EventHandler
@@ -19,35 +18,36 @@ namespace EventHandler
         private int cacheTime = 0;
 
         // constructor
-        private DesignedEventHandler(Cat cat)
+        public DesignedEventHandler(Cat cat)
         {
             catInfo = cat;
         }
 
-        private DesignedEventHandler(Cat catIns, int eventID)
+        public void SetEventInfo(int newEventID)
         {
-            catInfo = catIns;
+            eventID = newEventID;
             eventInfo = new Logic.Event.Event(eventID);
+            cacheTime = (int)eventInfo.ConsumeTime;
+            TimeTickerManager.AddLastingEvent(UpdateCacheTime, 1, 1, (int)eventInfo.ConsumeTime, SetEffect);
         }
 
+        public Logic.Event.Event GetEventInfo()
+        {
+            return eventInfo;
+        }
+        public void UpdateCacheTime()
+        {
+            cacheTime = cacheTime - 1;
+        }
+    
         public int GetTimeRemain()
         {
             return cacheTime;
         }
-
-        private void SetEventInfo(int eventID)
+        
+        private void SetEffect()
         {
-            eventInfo = new Logic.Event.Event(eventID);
-            TimeTickerManager.AddLastingEvent(UpdateUI, 1 , 1, eventInfo.ConsumeTime, SetEffect)
-        }
-        public void UpdateUI()
-        {
-            
-        }
-
-        public void SetEffect()
-        {
-            
+            PlayerModel.Instance.Money = 100;
         }
     }
 }

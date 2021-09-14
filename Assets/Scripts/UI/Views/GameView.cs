@@ -42,11 +42,11 @@ public class GameView : MonoBehaviour
         //TODO:把这个random重写成你的事件生成方法（带ID），其余不动
         if (Random.value > 0.5f)
         {
-            temp.GetComponent<SpecialEventMono>().InitWithID(1);
+            temp.GetComponent<SpecialEventMono>().InitWithID(1000);
         }
         else
         {
-            temp.GetComponent<SpecialEventMono>().InitWithID(2);
+            temp.GetComponent<SpecialEventMono>().InitWithID(1000);
         }
         temp.SetParent(contentTransform);
         temp.localPosition = Vector3.zero;
