@@ -5,55 +5,37 @@ using System.Collections.Generic;
 using Event;
 using Logic;
 
-namespace EventHandler{
-    public class EventManager
-    {
+namespace EventHandler
+{
+    
+    
+public class EventManager
+{
+        private List<DesignedEventHandler> handlerList = new List<DesignedEventHandler>();
+        public static EventManager Instance;
 
-        private static EventManager instance = null;
-        List<DesignedEventHandler> EventHandlerList; //控制长度为4
-        List<Cat> CatList;
-        
-        // constructor
         private EventManager()
         {
-            CatList.Add(1, new Cat(1));
-            
+            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
+            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
+            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
+            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
         }
 
-        public static void Start()
+        public static EventManager GetInstance()
         {
-            
-        }
-        
-        //accessor
-        public static EventManager GetEventManager()
-        {
-            if (instance == null)
+            //如果进行调用时instance为null则进行初始化
+            if (Instance == null) 
             {
-                instance = new EventManager();
+                Instance = new EventManager();
             }
-
-            return instance;
+            return Instance;
         }
 
-        private void Start(){
-
-        }
-        
-        // 猫咪作为handler的一个属性
-        public int InitalizeNewEvent(Logic.Event.Event event, Cat cat)
+         public DesignedEventHandler GetHandlerByID(int id)
         {
-            
-            EventHandlerList.Add(new EventHandler(cat, event));
+            //Debug.Log(ID);
+            return handlerList[id];
         }
-        
-
-        public int GetHandlerID(CatInfo cat){
-            
-        }
-
-        public int RefreshUIPerSecond()
-        {
-                        
-        }
+    }
 }

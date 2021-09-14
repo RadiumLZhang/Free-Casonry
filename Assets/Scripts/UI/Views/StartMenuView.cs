@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class StartMenuView : MonoBehaviour
 {
+    void Awake()
+    {
+        Input.multiTouchEnabled = false;
+    }
+    
     public void ButtonStart_OnClick()
     {
         SceneManager.LoadScene("Game");
