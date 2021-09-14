@@ -125,6 +125,10 @@ public class GameView : MonoBehaviour
         rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,-rectExePanel.sizeDelta.x/2.0f,rectExePanel.sizeDelta.x);
     }
 
+    void Update()
+    {
+        UpdatePanelResources();
+    }
     public void UpdatePanelResources()
     {
         panelResources.transform.Find("TextMoney").GetComponent<Text>().text = "" + PlayerModel.Instance.Money;
