@@ -29,6 +29,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         //TODO:demo里不读表的话就自己写下myEventInfo结构体，有ID,Name,ConsumeTime和sprite即可
         myEventInfo = eventHandler.GetEventInfo();
         transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
+        transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
         transform.Find("ImageEvent").Find("EventTimeBackground").gameObject.SetActive(true);
 
         //用表中的ConsumeTime(需要消耗的时间)初始化remainingTime
@@ -60,6 +61,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         //TODO:用猫咪Handler调事件完成方法（影响议会资源之类的）
         
         //清空UI的栏位并重设当前ID为-1
+        transform.Find("ImageEvent").GetComponent<Image>().enabled = false;
         transform.Find("ImageEvent").GetComponent<Image>().sprite = null;
         transform.Find("ImageEvent").Find("EventTimeBackground").gameObject.SetActive(false);
         myID = -1;
