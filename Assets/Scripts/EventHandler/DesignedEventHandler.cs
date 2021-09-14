@@ -47,6 +47,7 @@ namespace EventHandler
         
         private void SetEffect()
         {
+            UpdateCacheTime();
             PlayerModel.Instance.Money = 100;
         }
     }

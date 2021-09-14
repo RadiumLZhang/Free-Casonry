@@ -11,7 +11,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     private Logic.Event.Event myEventInfo;
     private DragHandlerSpecialEvent droppedEvent;
     
-    public int index = 0;
+    public int index;
     private long myID = -1;
 
     //remainingTime维护剩余时间
