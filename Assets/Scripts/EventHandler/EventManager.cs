@@ -6,19 +6,24 @@ using Event;
 using Logic;
 
 namespace EventHandler{
-    public class EventManager : MonoBehaviour
+    public class EventManager
     {
 
         private static EventManager instance = null;
+        List<DesignedEventHandler> EventHandlerList; //控制长度为4
+        List<Cat> CatList;
         
         // constructor
         private EventManager()
         {
-            List<DesignedEventHandler> EventHandlerList; //控制长度为4
-            List<Cat> CatList;
-            CatList.Add(new Cat(1));
+            CatList.Add(1, new Cat(1));
+            
         }
 
+        public static void Start()
+        {
+            
+        }
         
         //accessor
         public static EventManager GetEventManager()
@@ -36,7 +41,7 @@ namespace EventHandler{
         }
         
         // 猫咪作为handler的一个属性
-        public int InitalizeNewEvent(Event event, Cat cat)
+        public int InitalizeNewEvent(Logic.Event.Event event, Cat cat)
         {
             
             EventHandlerList.Add(new EventHandler(cat, event));

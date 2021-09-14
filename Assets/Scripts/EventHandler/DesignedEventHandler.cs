@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Net.Security;
 using UnityEngine.UIElements;
+using UI.Components;
+using Event = Logic.Event.Event;
 
 namespace EventHandler
 {
@@ -22,18 +24,30 @@ namespace EventHandler
             catInfo = cat;
         }
 
-        private DesignedEventHandler(Cat catIns, Logic.Event.Event eventIns)
+        private DesignedEventHandler(Cat catIns, int eventID)
         {
             catInfo = catIns;
-            eventInfo = eventIns;
+            eventInfo = new Logic.Event.Event(eventID);
         }
-        public void SetEventID(int newEventID)
-        {
-            eventID = newEventID;
-        }
-        public void callback()
-        {
 
+        public int GetTimeRemain()
+        {
+            return cacheTime;
+        }
+
+        private void SetEventInfo(int eventID)
+        {
+            eventInfo = new Logic.Event.Event(eventID);
+            TimeTickerManager.AddLastingEvent(UpdateUI, 1 , 1, eventInfo.ConsumeTime, SetEffect)
+        }
+        public void UpdateUI()
+        {
+            
+        }
+
+        public void SetEffect()
+        {
+            
         }
     }
 }
