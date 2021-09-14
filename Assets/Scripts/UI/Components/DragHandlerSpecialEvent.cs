@@ -85,9 +85,14 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
             scrollRect.horizontalNormalizedPosition -= (Input.mousePosition.x - tempMousePos_x) * Screen.width * 1.7f / Mathf.Pow(HandleSelfFittingHorizontal(transform.parent.parent),2.0f);
             tempMousePos_x = Input.mousePosition.x;
         }
-
     }
+    
     public void OnEndDrag(PointerEventData eventData)
+    {
+        EndDrag();
+    }
+
+    public void EndDrag()
     {
         bIsExtracting = false;
         timerDragStart = 6;
