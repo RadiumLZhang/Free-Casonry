@@ -47,7 +47,9 @@ public class CatColumnHandler : MonoBehaviour,
     public void OnFinish()
     {
         //TODO:用猫咪Handler调事件完成方法（影响议会资源之类的）
-        
+        //设置好Logic.PlayerModel的资源参数后，调如下方法刷新右上角三个资源的UI
+        //（其实把这方法放在GameView.cs的update里就不用调了，只是占资源）
+        GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
         //清空UI的栏位并重设当前ID为-1
         transform.Find("ImageEvent").GetComponent<Image>().sprite = null;
         transform.Find("ImageEvent").Find("EventTimeBackground").gameObject.SetActive(false);
