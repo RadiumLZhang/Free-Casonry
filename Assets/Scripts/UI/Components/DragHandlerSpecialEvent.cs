@@ -94,11 +94,11 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
 
     public void EndDrag()
     {
+        if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;
         timerDragStart = 6;
         Destroy(draggingImage);
         transform.Find("ImageEventEmpty").gameObject.SetActive(false);
-        gameView.CloseExePanel();
         GetComponent<Image>().raycastTarget = true;
     }
     

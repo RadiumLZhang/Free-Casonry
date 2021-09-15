@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Logic;
+using Random = UnityEngine.Random;
+
 public class GameView : MonoBehaviour
 {
     private GameObject darkBackgroundImage;
@@ -19,7 +22,9 @@ public class GameView : MonoBehaviour
     private Button buttonCloseExePanel;
     private RectTransform rectExePanel;
     private RectTransform specialEventPrefab;
-
+    
+    private Coroutine openExePanel_coroutine;
+    private Coroutine closeExePanel_coroutine;
     void Start()
     {
         darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
@@ -116,13 +121,17 @@ public class GameView : MonoBehaviour
     {
         buttonOpenExePanel.gameObject.SetActive(false);
         buttonCloseExePanel.gameObject.SetActive(true);
-        rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,0,rectExePanel.sizeDelta.x);
+        if(openExePanel_coroutine != null) StopCoroutine(openExePanel_coroutine);
+        if(closeExePanel_coroutine != null) StopCoroutine(closeExePanel_coroutine);
+        openExePanel_coroutine = StartCoroutine(ExePanelCoroutine(true));
     }
     public void CloseExePanel()
     {
         buttonOpenExePanel.gameObject.SetActive(true);
         buttonCloseExePanel.gameObject.SetActive(false);
-        rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,-rectExePanel.sizeDelta.x/2.0f,rectExePanel.sizeDelta.x);
+        if(openExePanel_coroutine != null) StopCoroutine(openExePanel_coroutine);
+        if(closeExePanel_coroutine != null) StopCoroutine(closeExePanel_coroutine);
+        closeExePanel_coroutine = StartCoroutine(ExePanelCoroutine(false));
     }
 
     void Update()
@@ -134,5 +143,27 @@ public class GameView : MonoBehaviour
         panelResources.transform.Find("TextMoney").GetComponent<Text>().text = "" + PlayerModel.Instance.Money;
         panelResources.transform.Find("TextInfluence").GetComponent<Text>().text = "" + PlayerModel.Instance.Influence;
         panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = "" + PlayerModel.Instance.Cohesion;
+    }
+
+    IEnumerator ExePanelCoroutine(bool bIsOpen)
+    {
+        float openPos = -rectExePanel.sizeDelta.x / 2.0f;
+        float curPos = bIsOpen ? openPos : 0;
+        print("++"+curPos);
+        for (float i = 0f; i < 0.3f; i += Time.deltaTime)
+        {
+            if (bIsOpen)
+            {
+                curPos -= openPos * Time.deltaTime * 3.33f;
+                if (curPos > 0) curPos = 0;
+            }
+            else
+            {
+                curPos += openPos * Time.deltaTime * 3.33f;
+                if (curPos < openPos) curPos = openPos;
+            }
+            rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,curPos,rectExePanel.sizeDelta.x);
+            yield return null;
+        }
     }
 }
