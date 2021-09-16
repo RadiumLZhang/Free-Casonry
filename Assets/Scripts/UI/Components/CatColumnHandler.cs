@@ -28,21 +28,24 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         droppedEvent = eventData.pointerDrag.GetComponent<DragHandlerSpecialEvent>();
-        myID = droppedEvent.GetEventID();
-        DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
-        eventHandler.SetEventInfo((int) myID);
+        if (droppedEvent && droppedEvent.bIsExtracting)
+        {
+            myID = droppedEvent.GetEventID();
+            DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
+            eventHandler.SetEventInfo((int) myID);
         
-        myEventInfo = eventHandler.GetEventInfo();
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
-        transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
+            myEventInfo = eventHandler.GetEventInfo();
+            transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
+            transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
         
-        remainingTime = eventHandler.GetTimeRemain();
-        textRemainingTime.text = Convert.ToString(remainingTime) + "s";
-        imageRemainingTime.gameObject.SetActive(true);
+            remainingTime = eventHandler.GetTimeRemain();
+            textRemainingTime.text = Convert.ToString(remainingTime) + "s";
+            imageRemainingTime.gameObject.SetActive(true);
         
-        droppedEvent.EndDrag();
-        Destroy(droppedEvent.transform.parent.gameObject);
-        transform.GetComponent<Image>().raycastTarget = false;
+            droppedEvent.EndDrag();
+            Destroy(droppedEvent.transform.parent.gameObject);
+            transform.GetComponent<Image>().raycastTarget = false;
+        }
     }
 
     public static void SendEventDestroyEvent(long id)

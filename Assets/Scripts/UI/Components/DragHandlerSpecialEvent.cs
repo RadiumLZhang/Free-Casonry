@@ -22,7 +22,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     private Vector3 mousePos;                       //鼠标初始位置
 
     public float extractAngle;
-    private bool bIsExtracting;
+    public bool bIsExtracting;
     private uint timerDragStart;
     private float tempMousePos_x;
 
