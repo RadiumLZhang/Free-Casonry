@@ -149,7 +149,6 @@ public class GameView : MonoBehaviour
     {
         float openPos = -rectExePanel.sizeDelta.x / 2.0f;
         float curPos = bIsOpen ? openPos : 0;
-        print("++"+curPos);
         for (float i = 0f; i < 0.3f; i += Time.deltaTime)
         {
             if (bIsOpen)
