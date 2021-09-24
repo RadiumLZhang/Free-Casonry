@@ -30,7 +30,7 @@ namespace EventHandler
             eventID = newEventID;
             eventInfo = new Logic.Event.Event(eventID);
             cacheTime = (int)eventInfo.ConsumeTime;
-            TimeTickerManager.AddLastingEvent(UpdateCacheTime, 1, 1, (int)eventInfo.ConsumeTime, SetEffect);
+            TimeTickerManager.Instance.AddLastingEvent(UpdateCacheTime, 1, 1, (int)eventInfo.ConsumeTime, SetEffect);
         }
 
         public Logic.Event.Event GetEventInfo()

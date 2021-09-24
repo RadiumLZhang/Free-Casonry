@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package CatConspiracyInfo;
+
+// @wrapper 猫咪阴谋配置表(CatConspiracyInfo.pb.json)
+message CatConspiracyInfo
+{
+    message CatConspiracyItem
+    {
+        // @name 阴谋编号
+        // @key
+        int64 ConspiracyId = 1;
+        // @name 阴谋描述
+        string description = 2;
+        // @name 达成条件
+        int64 condition = 3;
+    }
+
+    // @name 猫咪阴谋配置
+    repeated CatConspiracyItem resultEvent_config = 1;
+}

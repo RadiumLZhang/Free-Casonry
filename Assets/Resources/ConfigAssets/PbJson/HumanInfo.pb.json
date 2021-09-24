@@ -1,3 +1,220 @@
 {
-  "people" : [ ]
+  "people" : [
+    {
+      "humanId" : "1000",
+      "name" : "国王",
+      "sex" : 1,
+      "isImportant" : 1,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1001",
+      "name" : "王后",
+      "sex" : 0,
+      "isImportant" : 1,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1002",
+      "name" : "主教",
+      "sex" : 1,
+      "isImportant" : 1,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1003",
+      "name" : "叔叔",
+      "sex" : 1,
+      "isImportant" : 1,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1004",
+      "name" : "女仆",
+      "sex" : 0,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1005",
+      "name" : "乞丐",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1006",
+      "name" : "贵族",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1007",
+      "name" : "炼金术士",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1008",
+      "name" : "骑士",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1009",
+      "name" : "医生",
+      "sex" : 0,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1010",
+      "name" : "厨师",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "1011",
+      "name" : "侍卫",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "-1",
+      "tags" : [
+        "2000",
+        "2000",
+        "2000",
+        "2000"
+      ],
+      "visibility" : 0,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    }
+  ]
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Timers;
+using Logic;
 using UnityEngine;
 using Object = System.Object;
 
@@ -11,7 +12,7 @@ public enum TICKER_SPEED_ENUM : int
     NORMAL = 1,
     FAST = 2
 }
-public class TimeTickerManager : MonoBehaviour
+public class TimeTickerManager : BaseModel<TimeTickerManager>
 {
     public delegate void CallBack();
 
@@ -22,7 +23,7 @@ public class TimeTickerManager : MonoBehaviour
     /*
      * 暂停
      */
-    public static void Stop()
+    public void StopTick()
     {
         speed = (int) TICKER_SPEED_ENUM.STOP;
     }
@@ -30,7 +31,7 @@ public class TimeTickerManager : MonoBehaviour
     /*
      * 开始
      */
-    public static void Start()
+    public void StartTick()
     {
         speed = (int) TICKER_SPEED_ENUM.NORMAL;
     }
@@ -39,7 +40,7 @@ public class TimeTickerManager : MonoBehaviour
      * 自定义速度
      * @param: speedEnum        速度枚举值
      */
-    public static void StartWithSpeed(TICKER_SPEED_ENUM speedEnum)
+    public void StartTickWithSpeed(TICKER_SPEED_ENUM speedEnum)
     {
         speed = (int) speedEnum;
     }
@@ -49,7 +50,7 @@ public class TimeTickerManager : MonoBehaviour
      * @param: callBack     回调函数
      * @param: delaySecond  经过x秒后触发
      */
-    public static int AddEvent(CallBack callBack, int delaySecond)
+    public int AddEvent(CallBack callBack, int delaySecond)
     {
         int frame = delaySecond * stepPerSecond + frameIndex;
         EventItem eventItem = new EventItem(callBack, frame);
@@ -65,7 +66,7 @@ public class TimeTickerManager : MonoBehaviour
      * @param: destroySecond    经过x秒后不再等待，传入负数表示不会销毁
      * @param: destroyCallBack  未生效回调
      */
-    public static int AddWaitingEvent(Condition condition, CallBack callBack, int beginWaitSecond,
+    public int AddWaitingEvent(Condition condition, CallBack callBack, int beginWaitSecond,
         int destroySecond, CallBack destroyCallBack)
     {
         int frame = beginWaitSecond * stepPerSecond + frameIndex;
@@ -80,15 +81,15 @@ public class TimeTickerManager : MonoBehaviour
      * @param: callBack         持续事件回调函数
      * @param: delaySecond      经过x秒后开始执行
      * @param: intervalSecond   执行间隔x秒，要是非负数，起码都会间隔一帧
-     * @param: finishSecond     经过x秒后不再持续
+     * @param: finishSecond     经过x秒后不再持续，配置0或负数表示会一直执行不会结束
      * @param: finishCallBack   结束回调
      */
-    public static int AddLastingEvent(CallBack callBack, int delaySecond, int intervalSecond,
+    public int AddLastingEvent(CallBack callBack, int delaySecond, int intervalSecond,
         int finishSecond, CallBack finishCallBack)
     {
         int frame = delaySecond * stepPerSecond + frameIndex;
         int step = intervalSecond * stepPerSecond;
-        int finishFrame = finishSecond * stepPerSecond + frameIndex;
+        int finishFrame = finishSecond > 0 ? finishSecond * stepPerSecond + frameIndex : 0;
         LastingEventItem lastingEventItem = new LastingEventItem(callBack, frame, step, finishCallBack, finishFrame);
         insertEvent(lastingList, lastingEventItem);
         return 0;
@@ -101,7 +102,7 @@ public class TimeTickerManager : MonoBehaviour
      * @param: finishSecond     经过x秒后不再持续
      * @param: finishCallBack   结束回调
      */
-    public static int onUpdate(CallBack callBack, int delaySecond,
+    public int onUpdate(CallBack callBack, int delaySecond,
     int finishSecond, CallBack finishCallBack)
     {
         return AddLastingEvent(callBack, delaySecond, 0, finishSecond, finishCallBack);
@@ -156,18 +157,18 @@ public class TimeTickerManager : MonoBehaviour
     }
     
 
-    private static int speed;                           //	当前速率
-    private static int stepPerSecond;                   //	每秒步长
-    private static int frameIndex;                      //	当前帧
-    private static List<EventItem> eventList;
-    private static List<WaitingEventItem> waitingList;
-    private static List<LastingEventItem> lastingList;
+    private int speed;                           //	当前速率
+    private int stepPerSecond;                   //	每秒步长
+    private int frameIndex;                      //	当前帧
+    private List<EventItem> eventList;
+    private List<WaitingEventItem> waitingList;
+    private List<LastingEventItem> lastingList;
     
-    private static System.Timers.Timer timer;
+    private System.Timers.Timer timer;
     
 
     // 初始化
-    public static void Awake()
+    public void Init()
     {
         speed = (int) TICKER_SPEED_ENUM.NORMAL;
         stepPerSecond = 20;
@@ -182,7 +183,7 @@ public class TimeTickerManager : MonoBehaviour
         //test();   --用来测试的test函数，可以打开看看控制台效果
     }
     
-    private static void Ontick(Object source, ElapsedEventArgs e)
+    private void Ontick(Object source, ElapsedEventArgs e)
     {
         for (int i = 0; i < speed; i++)
         {
@@ -194,7 +195,7 @@ public class TimeTickerManager : MonoBehaviour
     }
 
     // 以生效帧升序插入
-    private static void insertEvent<T>(List<T> eventList, T eventItem) where T : EventItem
+    private void insertEvent<T>(List<T> eventList, T eventItem) where T : EventItem
     {
         if (eventList.Count == 0)
         {
@@ -215,7 +216,7 @@ public class TimeTickerManager : MonoBehaviour
         }
     }
 
-    private static void eventHandle()
+    private void eventHandle()
     {
         if (eventList.Count == 0)
         {
@@ -238,7 +239,7 @@ public class TimeTickerManager : MonoBehaviour
         }
     }
 
-    private static void waitingHandle()
+    private void waitingHandle()
     {
         if (waitingList.Count == 0)
         {
@@ -278,7 +279,7 @@ public class TimeTickerManager : MonoBehaviour
 
     }
 
-    private static void lastingHandle()
+    private void lastingHandle()
     {
         if (lastingList.Count == 0)
         {
@@ -289,7 +290,8 @@ public class TimeTickerManager : MonoBehaviour
         while (index < lastingList.Count)
         {
             LastingEventItem lastingEventItem = lastingList[index];
-            if (lastingEventItem.finishFrame >= 0 && lastingEventItem.finishFrame > frameIndex)
+            // 使用非正数的结束帧表示不会停止
+            if (lastingEventItem.finishFrame <= 0 || lastingEventItem.finishFrame > frameIndex)
             {
                 if (lastingEventItem.frame <= frameIndex)
                 {
@@ -310,7 +312,7 @@ public class TimeTickerManager : MonoBehaviour
     }
 
     /************************************ 自己测试用的 **************************************************/
-    public static int test()
+    public int test()
     {
         AddEvent(() =>
         {

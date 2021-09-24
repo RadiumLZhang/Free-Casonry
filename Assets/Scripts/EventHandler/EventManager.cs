@@ -28,7 +28,6 @@ public class EventManager
             //如果进行调用时instance为null则进行初始化
             if (Instance == null) 
             {
-                TimeTickerManager.Awake();
                 Instance = new EventManager();
             }
             return Instance;
