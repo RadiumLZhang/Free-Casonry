@@ -38,18 +38,6 @@ public class EventManager
             //Debug.Log(ID);
             return handlerList[index];
         }
-
-         public bool AddNewHandler(Cat catInfo)
-         {
-             if (handlerList.Count >= 4)
-                 return false;
-             else
-             {
-                 handlerList.Add(new DesignedEventHandler(catInfo));
-                 return true;
-             }
-         }
-         
          public bool BanHandler(int index)
          {
              if (handlerList.Count <= index)
