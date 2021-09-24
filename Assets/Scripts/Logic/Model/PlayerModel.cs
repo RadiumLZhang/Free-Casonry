@@ -32,9 +32,9 @@ namespace Logic
         public int Influence => m_resource[1];
 
         /// <summary>
-        /// 猫咪集群
+        /// 隐匿度
         /// </summary>
-        public int Cohesion => m_resource[2];
+        public int Hidency => m_resource[2];
 
         public void SetResource(ResourceType type, int value)
         {
