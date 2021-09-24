@@ -81,7 +81,7 @@ public class TimeTickerManager : BaseModel<TimeTickerManager>
      * @param: callBack         持续事件回调函数
      * @param: delaySecond      经过x秒后开始执行
      * @param: intervalSecond   执行间隔x秒，要是非负数，起码都会间隔一帧
-     * @param: finishSecond     经过x秒后不再持续
+     * @param: finishSecond     经过x秒后不再持续，配置0或负数表示会一直执行不会结束
      * @param: finishCallBack   结束回调
      */
     public int AddLastingEvent(CallBack callBack, int delaySecond, int intervalSecond,
@@ -89,7 +89,7 @@ public class TimeTickerManager : BaseModel<TimeTickerManager>
     {
         int frame = delaySecond * stepPerSecond + frameIndex;
         int step = intervalSecond * stepPerSecond;
-        int finishFrame = finishSecond * stepPerSecond + frameIndex;
+        int finishFrame = finishSecond > 0 ? finishSecond * stepPerSecond + frameIndex : 0;
         LastingEventItem lastingEventItem = new LastingEventItem(callBack, frame, step, finishCallBack, finishFrame);
         insertEvent(lastingList, lastingEventItem);
         return 0;
@@ -168,7 +168,7 @@ public class TimeTickerManager : BaseModel<TimeTickerManager>
     
 
     // 初始化
-    public void Awake()
+    public void Init()
     {
         speed = (int) TICKER_SPEED_ENUM.NORMAL;
         stepPerSecond = 20;
@@ -290,7 +290,8 @@ public class TimeTickerManager : BaseModel<TimeTickerManager>
         while (index < lastingList.Count)
         {
             LastingEventItem lastingEventItem = lastingList[index];
-            if (lastingEventItem.finishFrame >= 0 && lastingEventItem.finishFrame > frameIndex)
+            // 使用非正数的结束帧表示不会停止
+            if (lastingEventItem.finishFrame <= 0 || lastingEventItem.finishFrame > frameIndex)
             {
                 if (lastingEventItem.frame <= frameIndex)
                 {

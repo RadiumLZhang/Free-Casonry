@@ -5,9 +5,16 @@ namespace Manager
 {
     public class ManagerInit : MonoBehaviour
     {
-        public void Awake()
+        public void Start()
         {
-            TimeTickerManager.Instance.Awake();
+            TimeTickerManager.Instance.Init();
+            TimeManager.Instance.Init();
+        }
+
+        public void OnDestroy()
+        {
+            TimeManager.Destroy();
+            TimeTickerManager.Destroy();
         }
     }
 }

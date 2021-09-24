@@ -1,6 +1,8 @@
-﻿namespace Logic
+﻿using System;
+
+namespace Logic
 {
-    public class BaseModel<T> where T : new()
+    public class BaseModel<T> where T : class, new()
     {
 
         private static T m_instance;
@@ -16,6 +18,11 @@
 
                 return m_instance;
             }
+        }
+
+        public static void Destroy()
+        {
+            m_instance = null;
         }
     }
 }
