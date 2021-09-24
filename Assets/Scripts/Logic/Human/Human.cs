@@ -9,7 +9,7 @@ namespace Logic.Human
     {
         public long ID { get; private set; }
 
-        private readonly HumanInfo.HumanInfo.Types.person Config;
+        public readonly HumanInfo.HumanInfo.Types.person Config;
 
         public string Name { get; private set; }
         

@@ -75,10 +75,9 @@ namespace Manager
         public void Init()
         {
             // 初始化时间戳
-            System.DateTime configTime =
-                TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(ConstValue.YEAR, ConstValue.MONTH,
-                    ConstValue.DAY));
-            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            System.DateTime configTime =new System.DateTime(ConstValue.YEAR, ConstValue.MONTH,
+                    ConstValue.DAY);
+            System.DateTime startTime = new System.DateTime(1970, 1, 1);
             timeStamp = (long)(configTime - startTime).TotalSeconds;
             
             // 添加ticker
@@ -109,7 +108,7 @@ namespace Manager
 
         private System.DateTime Build()
         {
-            System.DateTime time = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            System.DateTime time = new System.DateTime(1970, 1, 1);
             return time.AddSeconds(timeStamp);
         }
     }
