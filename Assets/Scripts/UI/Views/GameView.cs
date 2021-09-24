@@ -142,7 +142,7 @@ public class GameView : MonoBehaviour
     {
         panelResources.transform.Find("TextMoney").GetComponent<Text>().text = "" + PlayerModel.Instance.Money;
         panelResources.transform.Find("TextInfluence").GetComponent<Text>().text = "" + PlayerModel.Instance.Influence;
-        panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = "" + PlayerModel.Instance.Cohesion;
+        panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = "" + PlayerModel.Instance.Hidency;
     }
 
     IEnumerator ExePanelCoroutine(bool bIsOpen)

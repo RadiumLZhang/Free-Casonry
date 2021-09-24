@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Event;
 using Logic;
-using UnityEditor.Experimental.GraphView;
 
 namespace EventHandler
 {
@@ -65,11 +64,11 @@ public class EventManager
         {
             if (handlerList.Count <= index)
                 return false;
-            else
-            {
-                handlerList[index].SetValid(false);
-                return true;
-            }
-        }
-}
+             else
+             {
+                 handlerList[index].SetValid(false);
+                 return true;
+             }
+         }
+    }
 }
