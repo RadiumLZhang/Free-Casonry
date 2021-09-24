@@ -6,46 +6,45 @@ namespace Logic
 {
     public class PlayerModel : BaseModel<PlayerModel>
     {
-        private int m_money;
+        private int[] m_resource = new int[3];
+        public enum ResourceType
+        {
+            Money = 0,
+            Influence = 1,
+            Cohesion = 2
+        }
+        
+        public enum ResourceOperate
+        {
+            Minus = -1,
+            Set = 0,
+            Add = 1
+        }
+        
         /// <summary>
         /// 人类货币
         /// </summary>
-        public int Money
-        {
-            get => m_money;
-            set
-            {
-                m_money = value;
-                GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
-            }
-        }
+        public int Money => m_resource[0];
 
-        private int m_influence;
         /// <summary>
         /// 猫咪影响力
         /// </summary>
-        public int Influence
-        {
-            get => m_influence;
-            set
-            {
-                m_influence = value;
-                GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
-            }
-        }
+        public int Influence => m_resource[1];
 
-        private int m_cohension;
         /// <summary>
         /// 猫咪集群
         /// </summary>
-        public int Cohesion
+        public int Cohesion => m_resource[2];
+
+        public void SetResource(ResourceType type, int value)
         {
-            get => m_cohension;
-            set
-            {
-                m_cohension = value;
-                GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
-            }
+            m_resource[(int) type] = value;
+            GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
+        }
+
+        public int GetResource(ResourceType type)
+        {
+            return m_resource[(int) type];
         }
 
         /// <summary>
@@ -58,5 +57,7 @@ namespace Logic
             public long eventId;
             public long result;
         }
+        
+        
     }
 }
