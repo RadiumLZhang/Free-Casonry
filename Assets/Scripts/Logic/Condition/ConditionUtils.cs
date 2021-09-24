@@ -49,7 +49,7 @@ namespace Logic.Condition
                 case 4001: // 拥有至少X点“猫咪影响力”
                     return CheckCatInfluenceGreaterEqual(args);
                     break;
-                case 4002: // 拥有至少X点“隐匿度”
+                /*case 4002: // 拥有至少X点“隐匿度”
                     return CheckCatHidency(args); 
                     break;
                 case 4003: // 当前时间已到达X
@@ -83,7 +83,7 @@ namespace Logic.Condition
                 case 4104: // 目标人物X，能见度低于Y
                     return CheckHumanVisibilityGreaterEqual(args) == false;
                     break;
-                case 4105：// 目标人物X，养猫意愿至少为Y
+                case 4105:// 目标人物X，养猫意愿至少为Y
                     return CheckHumanRaiseCatFavorGreaterEqual(args);
                     break;
                 case 4106: // 目标人物X，养猫意愿为Y
@@ -97,7 +97,7 @@ namespace Logic.Condition
                     break;
                 case 4109: //目标人物X，亲密度为Y
                     CheckHumanIntimacyEqual(args);
-                    break;
+                    break;*/
             }
 
             return false;
@@ -108,7 +108,7 @@ namespace Logic.Condition
             return (int)args[0] >= PlayerModel.Instance.Money;
         }
 
-        private static bool CheckCatInfluence(params object[] args)
+        private static bool CheckCatInfluenceGreaterEqual(params object[] args)
         {
             return (int) args[0] > PlayerModel.Instance.Influence;
         }
