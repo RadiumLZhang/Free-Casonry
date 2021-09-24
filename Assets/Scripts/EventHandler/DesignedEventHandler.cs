@@ -16,11 +16,13 @@ namespace EventHandler
         private Logic.Event.Event eventInfo = null;
         private int eventID = 0;
         private int cacheTime = 0;
+        private bool valid = true;
 
         // constructor
         public DesignedEventHandler(Cat cat)
         {
             catInfo = cat;
+            valid = true;
         }
 
         public void SetEventInfo(int newEventID)
@@ -44,11 +46,17 @@ namespace EventHandler
         {
             return cacheTime;
         }
+
+        public void SetValid(bool newValid)
+        {
+            valid = newValid;
+        }
         
         private void SetEffect()
         {
             UpdateCacheTime();
-            PlayerModel.Instance.Money += 100;
+            var money = PlayerModel.Instance.Money + 100;
+            PlayerModel.Instance.SetResource(PlayerModel.ResourceType.Money, money);
         }
     }
 }

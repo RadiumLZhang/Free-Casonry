@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class CatColumnHandler : MonoBehaviour, IDropHandler
 {
     private Logic.Event.Event myEventInfo;
-    private DragHandlerSpecialEvent droppedEvent;
+    private DragHandlerSpecialEvent droppedSpecialEvent;
+    private DragHandlerNPCEvent droppedNPCEvent;
     
     public int index;
     private long myID = -1;
@@ -27,23 +28,43 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
-        droppedEvent = eventData.pointerDrag.GetComponent<DragHandlerSpecialEvent>();
-        if (droppedEvent && droppedEvent.bIsExtracting)
+        if ((droppedSpecialEvent = eventData.pointerDrag.GetComponent<DragHandlerSpecialEvent>()) != null)
         {
-            myID = droppedEvent.GetEventID();
+            if (droppedSpecialEvent.bIsExtracting)
+            {
+                myID = droppedSpecialEvent.GetEventID();
+                DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
+                eventHandler.SetEventInfo((int) myID);
+
+                myEventInfo = eventHandler.GetEventInfo();
+                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
+                transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
+
+                remainingTime = eventHandler.GetTimeRemain();
+                textRemainingTime.text = Convert.ToString(remainingTime) + "s";
+                imageRemainingTime.gameObject.SetActive(true);
+
+                droppedSpecialEvent.EndDrag();
+                Destroy(droppedSpecialEvent.transform.parent.gameObject);
+                transform.GetComponent<Image>().raycastTarget = false;
+            }
+        }
+        else if ((droppedNPCEvent = eventData.pointerDrag.GetComponent<DragHandlerNPCEvent>()) != null)
+        {
+            myID = droppedNPCEvent.GetEventID();
             DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
             eventHandler.SetEventInfo((int) myID);
-        
+                
             myEventInfo = eventHandler.GetEventInfo();
             transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
             transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
-        
+                
             remainingTime = eventHandler.GetTimeRemain();
             textRemainingTime.text = Convert.ToString(remainingTime) + "s";
             imageRemainingTime.gameObject.SetActive(true);
-        
-            droppedEvent.EndDrag();
-            Destroy(droppedEvent.transform.parent.gameObject);
+                
+            droppedNPCEvent.EndDrag();
+            Destroy(droppedNPCEvent.transform.parent.gameObject);
             transform.GetComponent<Image>().raycastTarget = false;
         }
     }
@@ -73,6 +94,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         imageRemainingTime.gameObject.SetActive(false);
         myID = -1;
         transform.GetComponent<Image>().raycastTarget = true;
+        droppedSpecialEvent = null;
+        droppedNPCEvent = null;
     }
 }
     
