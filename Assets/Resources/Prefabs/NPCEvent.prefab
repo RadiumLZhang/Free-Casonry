@@ -163,14 +163,14 @@ GameObject:
   - component: {fileID: 4181008342880097600}
   - component: {fileID: 4181008342880097606}
   - component: {fileID: 4181008342880097601}
-  - component: {fileID: 267853092934619174}
+  - component: {fileID: 841135822010984886}
   m_Layer: 5
   m_Name: ImageEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4181008342880097600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &267853092934619174
+--- !u!114 &841135822010984886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,11 +239,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4181008342880097603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dad9848ba7f7e4499172a37bc2b4371, type: 3}
+  m_Script: {fileID: 11500000, guid: 570eda364aedaab46890a0263669dc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extractAngle: 30
-  bIsExtracting: 0
 --- !u!1 &4181008343742182339
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,9 +252,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4181008343742182336}
   - component: {fileID: 4181008343742182342}
-  - component: {fileID: 6941956213874047666}
+  - component: {fileID: 4992837334859644503}
   m_Layer: 5
-  m_Name: SpecialEvent
+  m_Name: NPCEvent
   m_TagString: Special Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,7 +289,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4181008343742182339}
   m_CullTransparentMesh: 1
---- !u!114 &6941956213874047666
+--- !u!114 &4992837334859644503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,7 +298,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4181008343742182339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e7c64e2a18dab4ea56e0dd7709b6f3, type: 3}
+  m_Script: {fileID: 11500000, guid: a7f05d6de5f9a2f41b887ff06fd554df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4181008344223998204
@@ -381,7 +379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u79D8\u5BC6\u884C\u52A8"
+  m_Text: "\u7A7A\u95F2"
 --- !u!1 &6657243051811264548
 GameObject:
   m_ObjectHideFlags: 0
