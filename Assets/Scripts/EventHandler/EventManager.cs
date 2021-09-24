@@ -33,32 +33,43 @@ public class EventManager
             return Instance;
         }
 
-         public DesignedEventHandler GetHandlerByID(int index)
+        public DesignedEventHandler GetHandlerByID(int index)
         {
             //Debug.Log(ID);
             return handlerList[index];
         }
 
-         public bool AddNewHandler(Cat catInfo)
-         {
-             if (handlerList.Count >= 4)
-                 return false;
-             else
-             {
-                 handlerList.Add(new DesignedEventHandler(catInfo));
-                 return true;
-             }
-         }
-         
-         public bool BanHandler(int index)
-         {
-             if (handlerList.Count <= index)
+        public bool AddNewHandler(Cat catInfo)
+        {
+            if (handlerList.Count >= 4)
                 return false;
-             else
-             {
-                 handlerList[index].SetValid(false);
-                 return true;
-             }
-         }
+            else
+            {
+                handlerList.Add(new DesignedEventHandler(catInfo));
+                return true;
+            }
+        }
+
+        public bool ActiveHandler(int index)
+        {
+            if (handlerList.Count <= index)
+            { 
+                return false;
+            }
+            
+            handlerList[index].SetValid(true);
+            return true;
+        }
+         
+        public bool BanHandler(int index)
+        {
+            if (handlerList.Count <= index)
+                return false;
+            else
+            {
+                handlerList[index].SetValid(false);
+                return true;
+            }
+        }
 }
 }

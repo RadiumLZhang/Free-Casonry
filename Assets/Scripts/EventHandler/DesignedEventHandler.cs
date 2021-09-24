@@ -55,7 +55,8 @@ namespace EventHandler
         private void SetEffect()
         {
             UpdateCacheTime();
-            PlayerModel.Instance.Money += 100;
+            var money = PlayerModel.Instance.Money + 100;
+            PlayerModel.Instance.SetResource(PlayerModel.ResourceType.Money, money);
         }
     }
 }
