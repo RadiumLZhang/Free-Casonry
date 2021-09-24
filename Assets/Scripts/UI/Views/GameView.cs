@@ -76,17 +76,17 @@ public class GameView : MonoBehaviour
     
     public void ButtonPause_OnClick()
     {
-        //TODO:Ticker暂停游戏
+        TimeTickerManager.Instance.StopTick();
     }
     
     public void ButtonNormal_OnClick()
     {
-        //TODO:Ticker正常
+        TimeTickerManager.Instance.StartTick();
     }
     
     public void ButtonSpeed_OnClick()
     {
-        //TODO:Ticker加速
+        TimeTickerManager.Instance.StartTickWithSpeed(TICKER_SPEED_ENUM.FAST);
     }
     
     //Button in Council
