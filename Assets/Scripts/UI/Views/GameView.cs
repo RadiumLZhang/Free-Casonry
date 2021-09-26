@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Logic;
+using Manager;
+using UnityEngine.Android;
 using Random = UnityEngine.Random;
 
 public class GameView : MonoBehaviour
@@ -16,12 +18,19 @@ public class GameView : MonoBehaviour
     private GameObject panelSettings;
     private GameObject panelEventExe;
     private GameObject panelResources;
+    private Text textMoney;
+    private Text textInfluence;
+    private Text textHidency;
     private GameObject scrollSpecialEvent;
     private RectTransform contentTransform;
     private Button buttonOpenExePanel;
     private Button buttonCloseExePanel;
     private RectTransform rectExePanel;
     private RectTransform specialEventPrefab;
+
+    //左上角时间
+    private Text textDate;
+    private Text textTime;
     
     private Coroutine openExePanel_coroutine;
     private Coroutine closeExePanel_coroutine;
@@ -35,8 +44,15 @@ public class GameView : MonoBehaviour
         panelSettings = transform.Find("PanelSettings").gameObject;
         panelEventExe = transform.Find("PanelEventExe").gameObject;
         panelResources = transform.Find("PanelResources").gameObject;
+        textMoney = panelResources.transform.Find("TextMoney").GetComponent<Text>();
+        textInfluence = panelResources.transform.Find("TextInfluence").GetComponent<Text>();
+        textHidency = panelResources.transform.Find("TextHidency").GetComponent<Text>();
         scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
         specialEventPrefab = Resources.Load<RectTransform>("Prefabs/SpecialEvent");
+        
+        //左上角时间
+        textDate = transform.Find("ImageTime").Find("TextDate").GetComponent<Text>();
+        textTime = transform.Find("ImageTime").Find("TextTime").GetComponent<Text>();
         
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").GetComponent<Button>();
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
@@ -141,14 +157,26 @@ public class GameView : MonoBehaviour
     void Update()
     {
         UpdatePanelResources();
+        UpdateTime();
     }
     public void UpdatePanelResources()
     {
-        panelResources.transform.Find("TextMoney").GetComponent<Text>().text = "" + PlayerModel.Instance.Money;
-        panelResources.transform.Find("TextInfluence").GetComponent<Text>().text = "" + PlayerModel.Instance.Influence;
-        panelResources.transform.Find("TextCohesion").GetComponent<Text>().text = "" + PlayerModel.Instance.Hidency;
+        textMoney.text = "" + PlayerModel.Instance.Money;
+        textInfluence.text = "" + PlayerModel.Instance.Influence;
+        textHidency.text = "" + PlayerModel.Instance.Hidency;
     }
 
+    public void UpdateTime()
+    {
+        System.DateTime now = TimeManager.Instance.GetTime();
+        uint timeHour = (uint)now.Hour;
+        uint timeMinute = (uint)now.Minute;
+        uint timeMonth = (uint)now.Month;
+        uint timeDate = (uint)now.Day;
+
+        textTime.text = timeHour + ":" + (timeMinute == 0 ? "00" : timeMinute.ToString());
+        textDate.text = timeMonth + "月" + timeDate + "日" + " "+ (timeHour > 6 && timeHour < 18 ? "昼" : "夜");
+    }
     IEnumerator ExePanelCoroutine(bool bIsOpen)
     {
         float openPos = -rectExePanel.sizeDelta.x / 2.0f;

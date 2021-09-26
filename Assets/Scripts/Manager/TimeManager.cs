@@ -16,6 +16,24 @@ namespace Manager
         {
             return timeStamp;
         }
+
+        /*
+         * 根据月-日-时-分转换为时间戳
+         * 为输入的参数一律按1月1日0：0处理
+         */
+        public long TimeToStamp(int? month, int? day, int? hour, int? minute)
+        {
+            System.DateTime input = new System.DateTime(ConstValue.YEAR, month ?? 1, day ?? 1, hour ?? 0, minute ?? 0, 0);
+            return (long)(input - startTime).TotalSeconds;
+        }
+
+        /**
+         * 获取当前时间
+         */
+        public System.DateTime GetTime()
+        {
+            return Build();
+        }
         
         /*
          * 获取当前时间年份
@@ -68,16 +86,17 @@ namespace Manager
         /************************************** 实现 ******************************************/
 
         // 现实中的一秒对应游戏中的x秒
-        private int step = 20;
+        private int step = ConstValue.TIME_STEP;
 
         private long timeStamp; 
+        
+        private System.DateTime startTime = new System.DateTime(1970, 1, 1);
         
         public void Init()
         {
             // 初始化时间戳
             System.DateTime configTime =new System.DateTime(ConstValue.YEAR, ConstValue.MONTH,
                     ConstValue.DAY);
-            System.DateTime startTime = new System.DateTime(1970, 1, 1);
             timeStamp = (long)(configTime - startTime).TotalSeconds;
             
             // 添加ticker
@@ -108,8 +127,8 @@ namespace Manager
 
         private System.DateTime Build()
         {
-            System.DateTime time = new System.DateTime(1970, 1, 1);
-            return time.AddSeconds(timeStamp);
+            System.DateTime time = startTime.AddSeconds(timeStamp);
+            return time;
         }
     }
 }
