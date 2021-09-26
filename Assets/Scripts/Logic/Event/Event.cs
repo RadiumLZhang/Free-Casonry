@@ -52,6 +52,10 @@ namespace Logic.Event
             }
         }
 
+        public long GetEmergencyId()
+        {
+            return EmergencyId;
+        }
 
         public bool CanExecute()
         {

@@ -52,6 +52,10 @@ namespace Logic.Event
             return options;
         }
 
+        public uint GetTimeOffset()
+        {
+            return TimeOffset;
+        }
         public bool OptionCanChoose(int option)
         {
             //todo 判断条件
