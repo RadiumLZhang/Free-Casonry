@@ -112,12 +112,12 @@ namespace Logic.Condition
 
         private static bool CheckEventHandlerCountGreaterEqual(params object[] args)
         {
-            return (int)args[0] >= EventManager.GetInstance().GetHandlerCount();
+            return (int)args[0] >= EventHandlerManager.Instance.GetHandlerCount();
         }
         
         private static bool CheckEventHandlerCountEqual(params object[] args)
         {
-            return (int)args[0] == EventManager.GetInstance().GetHandlerCount();
+            return (int)args[0] == EventHandlerManager.Instance.GetHandlerCount();
         }
         
          private static bool CheckCatPurpose(params object[] args)
