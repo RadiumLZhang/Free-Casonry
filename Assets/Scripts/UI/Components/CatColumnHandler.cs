@@ -64,7 +64,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             imageRemainingTime.gameObject.SetActive(true);
                 
             droppedNPCEvent.EndDrag();
-            Destroy(droppedNPCEvent.transform.parent.gameObject);
+            //TODO:删除该NPC池子中的事件
+            droppedNPCEvent.GetComponent<Image>().sprite = null;
+            droppedNPCEvent.gameObject.SetActive(false);
             transform.GetComponent<Image>().raycastTarget = false;
         }
     }
