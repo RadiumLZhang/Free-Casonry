@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Logic.Event
 {
-    public class Event
+    public class CatEvent
     {
         public long ID { get; private set; }
 
@@ -42,7 +42,7 @@ namespace Logic.Event
         /// </summary>
         public int Priority => Config?.Priority ?? 0;
 
-        public Event(long id)
+        public CatEvent(long id)
         {
             ID = id;
             Config = EventInfoConfigLoader.Instance.FindEventItemConfig(id);

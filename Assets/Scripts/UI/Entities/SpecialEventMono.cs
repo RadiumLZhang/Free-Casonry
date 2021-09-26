@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SpecialEventMono : MonoBehaviour
 {
     private long myID = -1;
-    private Logic.Event.Event myEventInfo;
+    private Logic.Event.CatEvent m_myCatEventInfo;
     private Text textRemainingTime;
     private long remainingTime;
 
@@ -17,18 +17,18 @@ public class SpecialEventMono : MonoBehaviour
         myID = ID;
         //读表
         //TODO:demo里不读表的话就自己写下myEventInfo结构体，有ID,Name,ConsumeTime和sprite即可
-        myEventInfo = new Logic.Event.Event(myID);
+        m_myCatEventInfo = new Logic.Event.CatEvent(myID);
 
         //DragHandler接收ID
         transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>().SetEventID(myID);
 
         //UI
-        remainingTime = myEventInfo.ConsumeTime;
+        remainingTime = m_myCatEventInfo.ConsumeTime;
         textRemainingTime = transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime")
             .GetComponent<Text>();
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
-        transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = myEventInfo.Name;
-        textRemainingTime.text = Convert.ToString(myEventInfo.ConsumeTime) + "秒";
+        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Image);
+        transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = m_myCatEventInfo.Name;
+        textRemainingTime.text = Convert.ToString(m_myCatEventInfo.ConsumeTime) + "秒";
         //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身
     }
 }

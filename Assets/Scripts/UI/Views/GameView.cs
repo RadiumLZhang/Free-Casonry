@@ -39,7 +39,6 @@ public class GameView : MonoBehaviour
     private TICKER_SPEED_ENUM speedEnum;
     void Start()
     {
-        UIManagerInit();
         darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
@@ -59,6 +58,8 @@ public class GameView : MonoBehaviour
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
+        
+        UIManagerInit();
     }
 
     private void UIManagerInit()

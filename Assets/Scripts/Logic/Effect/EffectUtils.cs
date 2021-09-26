@@ -48,6 +48,7 @@ namespace Logic.Effect
         {
             switch (id)
             {
+                //资源类变更
                 case 5000:
                     SetResource(ResourceType.Money, ResourceOperate.Add, args);
                     break;
@@ -75,9 +76,35 @@ namespace Logic.Effect
                 case 5008:
                     SetResource(ResourceType.Cohesion, ResourceOperate.Set, args);
                     break;
-                
+                //议程槽变更
                 case 5009:
-                    HandlerChange(args);
+                    HandlerChange(true, args);
+                    break;
+                case 5010:
+                    HandlerChange(false, args);
+                    break;
+                case 5011://完成目标
+                    break;
+                case 5012: //设置时间
+                    SetTime();
+                    break;
+                //事件记录变更
+                case 5013: 
+                    RecordChange(true);
+                    break;
+                case 5014:
+                    RecordChange(false);
+                    break;
+                //生成事件(建议两个合并)
+                case 5015:
+                    EventGenerate(args);
+                    break;
+                case 5016:
+                    EventGenerate(args);
+                    break;
+                //按钮变化
+                case 5017:
+                    UIButtonChange(args);
                     break;
                 default:
                     break;
@@ -110,7 +137,7 @@ namespace Logic.Effect
             PlayerModel.Instance.SetResource(type, result);
         }
 
-        private static void HandlerChange(params object[] args)
+        private static void HandlerChange(bool active, params object[] args)
         {
             if (args == null || args.Length != 1)
             {
@@ -123,6 +150,31 @@ namespace Logic.Effect
             }
 
             EventHandlerManager.Instance.EnableHandler(index);
+        }
+
+        private static void SetTime(params object[] args)
+        {
+            // TimeManager.Instance
+        }
+
+        private static void RecordChange(bool isAdd, params object[] args)
+        {
+            //todo
+        }
+
+        private static void EventGenerate(params object[] args)
+        {
+            if (args == null || args.Length != 2)
+            {
+                return;
+            }
+            
+            
+        }
+
+        private static void UIButtonChange(params object[] args)
+        {
+            
         }
     }
 }
