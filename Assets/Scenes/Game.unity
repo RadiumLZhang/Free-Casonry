@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 279782991}
   - component: {fileID: 279782990}
   m_Layer: 5
-  m_Name: ImageCohesion
+  m_Name: ImageHidency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7831,7 +7831,7 @@ GameObject:
   - component: {fileID: 1666869237}
   - component: {fileID: 1666869236}
   m_Layer: 5
-  m_Name: TextCohesion
+  m_Name: TextHidency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
