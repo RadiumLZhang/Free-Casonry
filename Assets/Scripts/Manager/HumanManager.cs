@@ -37,8 +37,9 @@ namespace Manager
             if (human.Config != null)
             {
                 humanMap[id] = human;
+                return human;
             }
-            return human;
+            return null;
         }
     }
 }

@@ -45,6 +45,14 @@ public class TimeTickerManager : BaseModel<TimeTickerManager>
         speed = (int) speedEnum;
     }
 
+    /**
+     * 获取当前速度
+     */
+    public TICKER_SPEED_ENUM GetSpeed()
+    {
+        return (TICKER_SPEED_ENUM)speed;
+    }
+
     /*
      * 添加事件
      * @param: callBack     回调函数

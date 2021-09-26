@@ -38,8 +38,9 @@ namespace Manager
             if (cat.Config != null)
             {
                 catMap[id] = cat;
+                return cat;
             }
-            return cat;
+            return null;
         }
     }
 }
