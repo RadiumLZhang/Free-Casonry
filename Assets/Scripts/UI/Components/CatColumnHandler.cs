@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using EventHandler;
+using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -33,7 +34,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             if (droppedSpecialEvent.bIsExtracting)
             {
                 myID = droppedSpecialEvent.GetEventID();
-                DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
+                DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
                 eventHandler.SetEventInfo((int) myID);
 
                 myEventInfo = eventHandler.GetEventInfo();
@@ -52,7 +53,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         else if ((droppedNPCEvent = eventData.pointerDrag.GetComponent<DragHandlerNPCEvent>()) != null)
         {
             myID = droppedNPCEvent.GetEventID();
-            DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
+            DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
             eventHandler.SetEventInfo((int) myID);
                 
             myEventInfo = eventHandler.GetEventInfo();
@@ -64,7 +65,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             imageRemainingTime.gameObject.SetActive(true);
                 
             droppedNPCEvent.EndDrag();
-            Destroy(droppedNPCEvent.transform.parent.gameObject);
+            //TODO:删除该NPC池子中的事件
+            droppedNPCEvent.GetComponent<Image>().sprite = null;
+            droppedNPCEvent.gameObject.SetActive(false);
             transform.GetComponent<Image>().raycastTarget = false;
         }
     }
@@ -76,7 +79,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
     void Update()
     {
-        DesignedEventHandler eventHandler = EventManager.GetInstance().GetHandlerByID(index);
+        DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
         remainingTime = eventHandler.GetTimeRemain();
         //只要栏位中有事件(即ID不是默认的-1)就用remainingTime刷新UI显示
         if (myID != -1)
