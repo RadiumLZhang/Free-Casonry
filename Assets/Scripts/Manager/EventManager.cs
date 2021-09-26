@@ -33,6 +33,11 @@ namespace Manager
         public void Init()
         {
             // TODO 把所有事件读进来
+            foreach (var config in EventInfoConfigLoader.Instance.EventConfig)
+            {
+                AddEvent(new Logic.Event.Event(config.EventId));
+            }
+                
         }
         
         private void AddEvent(Logic.Event.Event e)
