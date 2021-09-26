@@ -1,4 +1,6 @@
 ﻿using Event;
+using Google.Protobuf.Collections;
+using Logic.Condition;
 using UnityEngine;
 
 namespace Logic.Event
@@ -50,11 +52,20 @@ namespace Logic.Event
             }
         }
 
+        public long GetEmergencyId()
+        {
+            return EmergencyId;
+        }
 
         public bool CanExecute()
         {
-            //todo 判断前提条件
-            //Config.Preconditions;
+            foreach (var id in Config.Preconditions)
+            {
+                if (ConditionUtils.CheckCondition(id))
+                {
+                    return false;
+                }
+            }
             //判断执行次数
             if (ExecuteCount >= Config.RepeatTime)
             {
@@ -66,16 +77,12 @@ namespace Logic.Event
 
         public bool CanGenerate()
         {
-            //todo 判断生成条件组
-            //Config.GenerateConditions;
-            return true;
+            return CheckConditionGroup(Config.GenerateConditions);
         }
 
         public bool IsDestroyed()
         {
-            //todo 判断销毁条件组
-            // Config.DestroyConditions;
-            return true;
+            return CheckConditionGroup(Config.DestroyConditions);
         }
 
         public void Execute()
@@ -101,6 +108,28 @@ namespace Logic.Event
             // Config.ExpireEffect;
             //todo 超时record 不知道干嘛用
             // Config.OutOfTimeRecordId;
+        }
+
+        private bool CheckConditionGroup(RepeatedField<EventInfoConfig.Types.ConditionGroup> conditionGroup)
+        {
+            foreach (var condition in Config.DestroyConditions)
+            {
+                bool success = true;
+                foreach (var id in condition.Conditions)
+                {
+                    if (ConditionUtils.CheckCondition(id))
+                    {
+                        success = false;
+                        break;
+                    }
+                }
+
+                if (success)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

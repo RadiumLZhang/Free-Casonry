@@ -4,6 +4,7 @@ using Logic;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Net.Security;
+using Logic.Event;
 using Manager;
 using UnityEngine.UIElements;
 using Event = Logic.Event.Event;
@@ -15,8 +16,12 @@ namespace EventHandler
 
         private Cat catInfo = null;
         private Logic.Event.Event eventInfo = null;
+        private Emergency emergency = null;
+        private int emergencyId = 0;
+        private bool emergencyResolved = false;
         private int eventID = 0;
         private int cacheTime = 0;
+        private uint emergencyTime = 0;
         private bool valid = true;
 
         // constructor
@@ -30,6 +35,14 @@ namespace EventHandler
         {
             eventID = newEventID;
             eventInfo = new Logic.Event.Event(eventID);
+            emergencyId = (int)eventInfo.GetEmergencyId();
+            if (emergencyId != 0)
+            {
+                emergency = new Emergency(eventInfo.GetEmergencyId());
+                emergencyResolved = false;
+            }
+
+            emergencyTime = emergency.GetTimeOffset();
             cacheTime = (int)eventInfo.ConsumeTime;
             TimeTickerManager.Instance.AddLastingEvent(UpdateCacheTime, 1, 1, (int)eventInfo.ConsumeTime, SetEffect);
         }
@@ -40,7 +53,17 @@ namespace EventHandler
         }
         public void UpdateCacheTime()
         {
+
+            // 更新倒计时
             cacheTime = cacheTime - 1;
+            if (emergencyId != 0)
+            {
+                emergencyTime = emergencyTime - 1;
+            }
+            else
+            {
+                // 
+            }
         }
     
         public int GetTimeRemain()
