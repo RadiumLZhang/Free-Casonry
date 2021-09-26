@@ -174,7 +174,7 @@ public class GameView : MonoBehaviour
         uint timeMonth = (uint)now.Month;
         uint timeDate = (uint)now.Day;
 
-        textTime.text = timeHour + ":" + (timeMinute == 0 ? "00" : timeMinute.ToString());
+        textTime.text = (timeHour < 10 ? "0" + timeHour : timeHour.ToString()) + ":" + (timeMinute < 10 ? "0" + timeMinute : timeMinute.ToString());
         textDate.text = timeMonth + "月" + timeDate + "日" + " "+ (timeHour > 6 && timeHour < 18 ? "昼" : "夜");
     }
     IEnumerator ExePanelCoroutine(bool bIsOpen)
