@@ -9,6 +9,8 @@ public class NPCManager : MonoBehaviour
     private float lerpPosX;
     private float lerpPosY;
     public bool bIsLerping;
+    private bool bIsXStopped;
+    private bool bIsYStopped;
     public GameObject currentOpenedNPC;
     void Start()
     {
@@ -22,6 +24,8 @@ public class NPCManager : MonoBehaviour
         bIsLerping = true;
         lerpPosX = x;
         lerpPosY = y;
+        bIsXStopped = false;
+        bIsYStopped = false;
     }
 
     public void SetOpenedNPC(GameObject NPC)
@@ -31,16 +35,56 @@ public class NPCManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bIsLerping)
+        if (bIsLerping && !bIsXStopped)
         {
-            scrollRect.horizontalNormalizedPosition =Mathf.Lerp(scrollRect.horizontalNormalizedPosition, lerpPosX, 20.0f * Time.deltaTime);
-            scrollRect.verticalNormalizedPosition =Mathf.Lerp(scrollRect.verticalNormalizedPosition, lerpPosY, 20.0f * Time.deltaTime);
+            scrollRect.horizontalNormalizedPosition =Mathf.Lerp(scrollRect.horizontalNormalizedPosition, lerpPosX, 10.0f * Time.deltaTime);
         }
-        if (Mathf.Abs(scrollRect.horizontalNormalizedPosition - lerpPosX) < 0.02f &&
-            Mathf.Abs(scrollRect.verticalNormalizedPosition - lerpPosY) < 0.02f)
+
+        if (bIsLerping && !bIsYStopped)
+        {
+            scrollRect.verticalNormalizedPosition =Mathf.Lerp(scrollRect.verticalNormalizedPosition, lerpPosY, 10.0f * Time.deltaTime);
+        }
+
+        //边界情况处理
+        if (lerpPosX <= 0 && scrollRect.horizontalNormalizedPosition < 0.005f)
+        {
+            scrollRect.horizontalNormalizedPosition = 0;
+            bIsXStopped = true;
+        }
+
+        if (lerpPosX >= 1 && scrollRect.horizontalNormalizedPosition > 0.995f)
+        {
+            scrollRect.horizontalNormalizedPosition = 1;
+            bIsXStopped = true;
+        }
+        
+        if (lerpPosY <= 0 && scrollRect.verticalNormalizedPosition < 0.005f)
+        {
+            scrollRect.verticalNormalizedPosition = 0;
+            bIsYStopped = true;
+        }
+        
+        if (lerpPosY >= 1 && scrollRect.verticalNormalizedPosition > 0.995f)
+        {
+            scrollRect.verticalNormalizedPosition = 1;
+            bIsYStopped = true;
+        }
+        
+        //做Clamp
+        if (Mathf.Abs(scrollRect.horizontalNormalizedPosition - lerpPosX) < 0.005f)
         {
             scrollRect.horizontalNormalizedPosition = lerpPosX;
+            bIsXStopped = true;
+        }
+        
+        if (Mathf.Abs(scrollRect.verticalNormalizedPosition - lerpPosY) < 0.005f)
+        {
             scrollRect.verticalNormalizedPosition = lerpPosY;
+            bIsYStopped = true;
+        }
+        
+        if (bIsXStopped && bIsYStopped)
+        {
             bIsLerping = false;
         }
     }
