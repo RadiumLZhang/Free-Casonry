@@ -29,7 +29,6 @@ namespace EventHandler
             {
                 Instance = new EventManager();
             }
-
             return Instance;
         }
 
