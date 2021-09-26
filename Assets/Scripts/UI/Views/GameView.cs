@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Logic;
+using Manager;
 using UnityEngine.Android;
 using Random = UnityEngine.Random;
 
@@ -167,11 +168,11 @@ public class GameView : MonoBehaviour
 
     public void UpdateTime()
     {
-        //TODO:replace following timeXXXs.
-        uint timeHour = 19;
-        uint timeMinute = 00;
-        uint timeMonth = 3;
-        uint timeDate = 8;
+        System.DateTime now = TimeManager.Instance.GetTime();
+        uint timeHour = (uint)now.Hour;
+        uint timeMinute = (uint)now.Minute;
+        uint timeMonth = (uint)now.Month;
+        uint timeDate = (uint)now.Day;
 
         textTime.text = timeHour + ":" + (timeMinute == 0 ? "00" : timeMinute.ToString());
         textDate.text = timeMonth + "月" + timeDate + "日" + " "+ (timeHour > 6 && timeHour < 18 ? "昼" : "夜");
