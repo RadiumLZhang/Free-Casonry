@@ -40,9 +40,10 @@ namespace EventHandler
             {
                 emergency = new Emergency(eventInfo.GetEmergencyId());
                 emergencyResolved = false;
+                emergencyTime = emergency.GetTimeOffset();
             }
 
-            emergencyTime = emergency.GetTimeOffset();
+            
             cacheTime = (int)eventInfo.ConsumeTime;
             TimeTickerManager.Instance.AddLastingEvent(UpdateCacheTime, 1, 1, (int)eventInfo.ConsumeTime, SetEffect);
         }
@@ -62,7 +63,9 @@ namespace EventHandler
             }
             else
             {
-                // 
+                TimeTickerManager.Instance.StopTick();
+                // todo 紧急显示接口红点
+                
             }
         }
     
