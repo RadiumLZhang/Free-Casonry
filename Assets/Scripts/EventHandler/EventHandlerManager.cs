@@ -7,10 +7,10 @@ using Logic;
 
 namespace EventHandler
 {
-    
-    
-public class EventManager
-{
+
+
+    public class EventManager
+    {
         private List<DesignedEventHandler> handlerList = new List<DesignedEventHandler>();
         public static EventManager Instance;
 
@@ -25,13 +25,21 @@ public class EventManager
         public static EventManager GetInstance()
         {
             //如果进行调用时instance为null则进行初始化
-            if (Instance == null) 
+            if (Instance == null)
             {
                 Instance = new EventManager();
             }
+
             return Instance;
         }
 
+        // 获取议程槽的数量
+        public int GetHandlerCount()
+        {
+            return handlerList.Count;
+        }
+
+        // 获取议程槽的事件
         public DesignedEventHandler GetHandlerByID(int index)
         {
             //Debug.Log(ID);
@@ -49,26 +57,26 @@ public class EventManager
             }
         }
 
-        public bool ActiveHandler(int index)
+        public bool DisableHandler(int index)
         {
             if (handlerList.Count <= index)
-            { 
+            {
                 return false;
             }
-            
+
             handlerList[index].SetValid(true);
             return true;
         }
-         
-        public bool BanHandler(int index)
+
+        public bool EnableHandler(int index)
         {
             if (handlerList.Count <= index)
                 return false;
-             else
-             {
-                 handlerList[index].SetValid(false);
-                 return true;
-             }
-         }
+            else
+            {
+                handlerList[index].SetValid(false);
+                return true;
+            }
+        }
     }
 }

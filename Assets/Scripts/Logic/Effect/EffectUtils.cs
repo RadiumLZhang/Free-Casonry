@@ -121,7 +121,7 @@ namespace Logic.Effect
                 return;
             }
 
-            EventManager.Instance.ActiveHandler(index);
+            EventManager.Instance.EnableHandler(index);
         }
     }
 }

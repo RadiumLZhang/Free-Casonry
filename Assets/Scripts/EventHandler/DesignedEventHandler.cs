@@ -55,6 +55,8 @@ namespace EventHandler
         private void SetEffect()
         {
             UpdateCacheTime();
+            
+            // Todo: add set effet function here
             var money = PlayerModel.Instance.Money + 100;
             PlayerModel.Instance.SetResource(PlayerModel.ResourceType.Money, money);
         }

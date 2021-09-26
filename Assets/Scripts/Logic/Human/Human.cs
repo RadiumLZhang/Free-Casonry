@@ -103,5 +103,20 @@ namespace Logic.Human
 
             return Tags;
         }
+
+        public int GetVisibility()
+        {
+            return Visibility;
+        }
+
+        public int GetTendToRaiseCat()
+        {
+            return TendToRaiseCat;
+        }
+
+        public int GetFavorValue()
+        {
+            return FavorValue;
+        }
     }
 }
