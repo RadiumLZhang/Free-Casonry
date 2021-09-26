@@ -3,33 +3,23 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Event;
+using EventHandler;
 using Logic;
 
-namespace EventHandler
+namespace Manager
 {
 
 
-    public class EventManager
+    public class EventHandlerManager : BaseModel<EventHandlerManager>
     {
         private List<DesignedEventHandler> handlerList = new List<DesignedEventHandler>();
-        public static EventManager Instance;
 
-        private EventManager()
+        public EventHandlerManager()
         {
             handlerList.Add(new DesignedEventHandler(new Cat(1001)));
             handlerList.Add(new DesignedEventHandler(new Cat(1001)));
             handlerList.Add(new DesignedEventHandler(new Cat(1001)));
             handlerList.Add(new DesignedEventHandler(new Cat(1001)));
-        }
-
-        public static EventManager GetInstance()
-        {
-            //如果进行调用时instance为null则进行初始化
-            if (Instance == null)
-            {
-                Instance = new EventManager();
-            }
-            return Instance;
         }
 
         // 获取议程槽的数量

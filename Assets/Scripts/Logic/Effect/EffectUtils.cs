@@ -1,6 +1,7 @@
 ﻿using BaseEffect;
 using Effect;
 using EventHandler;
+using Manager;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
@@ -121,7 +122,7 @@ namespace Logic.Effect
                 return;
             }
 
-            EventManager.Instance.EnableHandler(index);
+            EventHandlerManager.Instance.EnableHandler(index);
         }
     }
 }
