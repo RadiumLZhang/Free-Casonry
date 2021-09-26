@@ -1,9 +1,7 @@
 ﻿using BaseEffect;
 using Effect;
-using EventHandler;
 using Manager;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 
 using ResourceOperate = Logic.PlayerModel.ResourceOperate;
 using ResourceType = Logic.PlayerModel.ResourceType;
@@ -104,7 +102,65 @@ namespace Logic.Effect
                     break;
                 //按钮变化
                 case 5017:
-                    UIButtonChange(args);
+                    ButtonCouncilStateChange(false);
+                    break;
+                case 5018:
+                    ButtonCouncilStateChange(true);
+                    break;
+                case 5019:
+                    ButtonCatManageStateChange(false);
+                    break;
+                case 5020:
+                    ButtonCatManageStateChange(true);
+                    break;
+                //游戏结局
+                case 5021:
+                case 5022:
+                case 5023:
+                case 5024:
+                case 5025:
+                    GameEnd(args);
+                    break;
+                //播放动效？
+                case 5026:
+                    break;
+                
+                //人物相关
+                case 5100:
+                    TagChange(true);
+                    break;
+                case 5101:
+                    TagChange(false);
+                    break;
+                case 5102:
+                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Human.Human.PropertyOperate.Add, args);
+                    break;
+                case 5103:
+                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Human.Human.PropertyOperate.Minus, args);
+                    break;
+                case 5104:
+                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Human.Human.PropertyOperate.Set, args);
+                    break;
+                case 5105:
+                    HumanPropertyLock(Human.Human.PropertyType.Visibility, true, args);
+                    break;
+                case 5106:
+                    HumanPropertyLock(Human.Human.PropertyType.Visibility, false, args);
+                    break;
+                case 5107:
+                    HumanPropertyChange(Human.Human.PropertyType.Defence, Human.Human.PropertyOperate.Add, args);
+                    break;
+                case 5108:
+                    HumanPropertyChange(Human.Human.PropertyType.Defence, Human.Human.PropertyOperate.Minus, args);
+                    break;
+                case 5109:
+                    HumanPropertyChange(Human.Human.PropertyType.Defence, Human.Human.PropertyOperate.Set, args);
+                    break;
+                case 5110:
+                    HumanPropertyLock(Human.Human.PropertyType.Defence, true, args);
+                    break;
+                case 5111:
+                    HumanPropertyLock(Human.Human.PropertyType.Defence, false, args);
                     break;
                 default:
                     break;
@@ -113,7 +169,7 @@ namespace Logic.Effect
 
         private static void SetResource(PlayerModel.ResourceType type, ResourceOperate sign, params object[] args)
         {
-            if (args == null || args.Length != 1)
+            if (args == null || args.Length <= 1)
             {
                 return;
             }
@@ -123,14 +179,9 @@ namespace Logic.Effect
                 return;
             }
 
-            int result;
-            if (sign == 0)
+            var result = PlayerModel.Instance.GetResource(type);
+            if (sign != ResourceOperate.Set)
             {
-                result = value;
-            }
-            else
-            {
-                result = PlayerModel.Instance.GetResource(type);
                 result += (int)sign * value;
             }
             
@@ -139,7 +190,7 @@ namespace Logic.Effect
 
         private static void HandlerChange(bool active, params object[] args)
         {
-            if (args == null || args.Length != 1)
+            if (args == null || args.Length <= 1)
             {
                 return;
             }
@@ -149,7 +200,14 @@ namespace Logic.Effect
                 return;
             }
 
-            EventHandlerManager.Instance.EnableHandler(index);
+            if (active)
+            {
+                EventHandlerManager.Instance.EnableHandler(index);
+            }
+            else
+            {
+                EventHandlerManager.Instance.DisableHandler(index);
+            }
         }
 
         private static void SetTime(params object[] args)
@@ -164,17 +222,98 @@ namespace Logic.Effect
 
         private static void EventGenerate(params object[] args)
         {
-            if (args == null || args.Length != 2)
+            if (args == null || args.Length <= 2)
             {
                 return;
             }
             
-            
+            //todo
         }
 
-        private static void UIButtonChange(params object[] args)
+        private static void ButtonCouncilStateChange(bool active)
         {
+            UIManager.Instance.buttonCouncil.SetActive(active);
+        }
+
+        private static void ButtonCatManageStateChange(bool active)
+        {
+            UIManager.Instance.buttonCouncilCatManage.SetActive(active);
+        }
+
+        private static void GameEnd(params object[] args)
+        {
+            //todo
+        }
+
+        private static void TagChange(bool isAdd, params object[] args)
+        {
+            if (args == null || args.Length <= 2)
+            {
+                return;
+            }
+
+            if (!(args[0] is long humanId) || !(args[1] is long tagId))
+            {
+                return;
+            }
+            var human = HumanManager.Instance.GetHuman(humanId);
+            if (human == null)
+            {
+                return;
+            }
             
+            if (isAdd)
+            {
+                human.Tags.Add(tagId);
+            }
+            else
+            {
+                human.Tags.Remove(tagId);
+            }
+        }
+
+        private static void HumanPropertyChange(Human.Human.PropertyType type, Human.Human.PropertyOperate operate, params object[] args)
+        {
+            if (args == null || args.Length <= 2)
+            {
+                return;
+            }
+
+            if (!(args[0] is long humanId) || !(args[1] is int value))
+            {
+                return;
+            }
+
+            var human = HumanManager.Instance.GetHuman(humanId);
+            if (human == null)
+            {
+                return;
+            }
+
+            var result = human.GetProperty(type);
+            if (operate != Human.Human.PropertyOperate.Set)
+            {
+                result += value * (int) operate;
+            }
+            
+            human.SetProperty(type, result);
+        }
+
+        private static void HumanPropertyLock(Human.Human.PropertyType type, bool isLock, params object[] args)
+        {
+            if (args == null || args.Length <= 1)
+            {
+                return;
+            }
+            
+            if (!(args[0] is long humanId))
+            {
+                return;
+            }
+            
+            var human = HumanManager.Instance.GetHuman(humanId);
+
+            human?.SetLock(type, isLock);
         }
     }
 }

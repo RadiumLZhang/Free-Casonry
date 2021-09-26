@@ -21,4 +21,6 @@ public class UIManager: BaseModel<UIManager>
     //Buttons
     public GameObject buttonOpenExePanel;
     public GameObject buttonCloseExePanel;
+    public GameObject buttonCouncil;
+    public GameObject buttonCouncilCatManage;
 }

@@ -73,16 +73,16 @@ namespace Logic.Condition
                     return CheckHumanVisibilityEqual(args);
                 case 4104: // 目标人物X，能见度低于Y
                     return CheckHumanVisibilityGreaterEqual(args) == false;
-                case 4105:// 目标人物X，养猫意愿至少为Y
-                    return CheckHumanRaiseCatFavorGreaterEqual(args);
-                case 4106: // 目标人物X，养猫意愿为Y
-                    return CheckHumanRaiseCatFavorEqual(args);
-                case 4107: // 目标人物X，养猫意愿低于Y
-                    return CheckHumanRaiseCatFavorGreaterEqual(args) == false;
-                case 4108: // 目标人物X，亲密度至少为Y
-                    return CheckHumanIntimacyGreaterEqual(args);
-                case 4109: //目标人物X，亲密度为Y
-                    return CheckHumanIntimacyEqual(args);
+                    // case 4105:// 目标人物X，养猫意愿至少为Y
+                    //     return CheckHumanRaiseCatFavorGreaterEqual(args);
+                    // case 4106: // 目标人物X，养猫意愿为Y
+                    //     return CheckHumanRaiseCatFavorEqual(args);
+                    // case 4107: // 目标人物X，养猫意愿低于Y
+                    //     return CheckHumanRaiseCatFavorGreaterEqual(args) == false;
+                    // case 4108: // 目标人物X，亲密度至少为Y
+                    //     return CheckHumanIntimacyGreaterEqual(args);
+                    // case 4109: //目标人物X，亲密度为Y
+                    //     return CheckHumanIntimacyEqual(args);
             }
 
             return false;
@@ -133,32 +133,32 @@ namespace Logic.Condition
          
          private static bool CheckHumanVisibilityGreaterEqual(params object[] args)
          {
-             return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).GetVisibility();
+             return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).Visibility;
          }
          
          private static bool CheckHumanVisibilityEqual(params object[] args)
          {
-             return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetVisibility();
+             return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).Visibility;
          }
          
-         private static bool CheckHumanRaiseCatFavorGreaterEqual(params object[] args)
-         {
-             return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).GetTendToRaiseCat();
-         }
-         
-         private static bool CheckHumanRaiseCatFavorEqual(params object[] args)
-         {
-             return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetTendToRaiseCat();
-         }
-
-         private static bool CheckHumanIntimacyGreaterEqual(params object[] args)
-         {
-             return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).GetFavorValue();
-         }
-         
-         private static bool CheckHumanIntimacyEqual(params object[] args)
-         {
-             return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetFavorValue();
-         }
+         // private static bool CheckHumanRaiseCatFavorGreaterEqual(params object[] args)
+         // {
+         //     return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).GetTendToRaiseCat();
+         // }
+         //
+         // private static bool CheckHumanRaiseCatFavorEqual(params object[] args)
+         // {
+         //     return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetTendToRaiseCat();
+         // }
+         //
+         // private static bool CheckHumanIntimacyGreaterEqual(params object[] args)
+         // {
+         //     return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).GetFavorValue();
+         // }
+         //
+         // private static bool CheckHumanIntimacyEqual(params object[] args)
+         // {
+         //     return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetFavorValue();
+         // }
     }
 }
