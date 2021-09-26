@@ -39,6 +39,7 @@ public class GameView : MonoBehaviour
     private TICKER_SPEED_ENUM speedEnum;
     void Start()
     {
+        UIManagerInit();
         darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
@@ -59,7 +60,18 @@ public class GameView : MonoBehaviour
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
     }
-    
+
+    private void UIManagerInit()
+    {
+        UIManager.Instance.darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
+        UIManager.Instance.panelCouncil = transform.Find("PanelCouncil").gameObject;
+        UIManager.Instance.panelSettings = transform.Find("PanelSettings").gameObject;
+        UIManager.Instance.panelEventExe = transform.Find("PanelEventExe").gameObject;
+        UIManager.Instance.panelResources = transform.Find("PanelResources").gameObject;
+        UIManager.Instance.scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
+        UIManager.Instance.buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
+        UIManager.Instance.buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
+    }
     public void ButtonTestEvent_OnClick()
     {
         Transform temp = Instantiate(specialEventPrefab).transform;
