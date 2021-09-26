@@ -16,8 +16,10 @@ message EventInfoConfig {
         int32 type = 3;
         //@name 行动时间
         int64 consumeTime = 5;
-        //@name 图片
-        string image = 19;
+        //@name 外部图片
+        string imageout = 19;
+        //@name 内部图片
+        string imageIn = 20;
         //@name 销毁时间
         int64 expireTime = 6;
         //@name 超时结果记录
