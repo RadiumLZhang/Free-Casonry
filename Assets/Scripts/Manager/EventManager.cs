@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Event;
 using Logic;
+using Logic.Event;
 
 namespace Manager
 {
@@ -55,7 +56,14 @@ namespace Manager
             {
                 if (!e.IsDestroyed() && e.CanGenerate())
                 {
-                    returnList.Add(e);
+                    if (e.Status == EventStatus.Init)
+                    {
+                        e.Status = EventStatus.Generated;
+                    }
+                    if (e.Status == EventStatus.Generated)
+                    {
+                        returnList.Add(e);
+                    }
                 }
             }
             return returnList;

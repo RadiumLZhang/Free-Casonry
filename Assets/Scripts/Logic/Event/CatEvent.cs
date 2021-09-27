@@ -5,6 +5,15 @@ using UnityEngine;
 
 namespace Logic.Event
 {
+
+    public enum EventStatus : int
+    {
+        Init = 0,
+        Generated = 1,
+        OnProcess = 2,
+        Finished = 3,
+        Destroyed = 4
+    }
     public class CatEvent
     {
         public long ID { get; private set; }
@@ -37,6 +46,8 @@ namespace Logic.Event
 
         public bool IsImportant => Config?.IsImportant == 1;
 
+        public EventStatus Status { get; set; }
+
         /// <summary>
         /// 优先级
         /// </summary>
@@ -46,6 +57,7 @@ namespace Logic.Event
         {
             ID = id;
             Config = EventInfoConfigLoader.Instance.FindEventItemConfig(id);
+            Status = EventStatus.Init;
             if (Config == null)
             {
                 Debug.LogError($"Invalid EventID:{id}");
