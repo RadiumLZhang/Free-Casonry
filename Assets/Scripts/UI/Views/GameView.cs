@@ -87,6 +87,8 @@ public class GameView : MonoBehaviour
         {
             temp.GetComponent<SpecialEventMono>().InitWithID(1000);
         }
+        
+        
         temp.SetParent(contentTransform);
         temp.localPosition = Vector3.zero;
         temp.localRotation = Quaternion.identity;
