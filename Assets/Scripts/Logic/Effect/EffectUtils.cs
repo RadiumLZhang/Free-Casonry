@@ -1,9 +1,10 @@
-﻿using BaseEffect;
+﻿using System.Collections.Generic;
+using BaseEffect;
 using Effect;
+using Language;
 using Manager;
 using UnityEngine;
 
-using ResourceOperate = Logic.PlayerModel.ResourceOperate;
 using ResourceType = Logic.PlayerModel.ResourceType;
 
 namespace Logic.Effect
@@ -13,7 +14,7 @@ namespace Logic.Effect
         /// <summary>
         /// 获取描述
         /// </summary>
-        public static string GetDescription(long id)
+        public static string GetDescription(int id)
         {
             var config = EffectLoader.Instance.FindEffectItem(id);
             if (config == null)
@@ -39,7 +40,7 @@ namespace Logic.Effect
                 return;
             }
             
-            ActivateBaseEffect(config.BaseEffectId, config.Paras);
+            ActivateBaseEffect(config.BaseEffectId, new List<int>(config.Paras));
         }
         
         private static void ActivateBaseEffect(long id, params object[] args)
@@ -48,31 +49,31 @@ namespace Logic.Effect
             {
                 //资源类变更
                 case 5000:
-                    SetResource(ResourceType.Money, ResourceOperate.Add, args);
+                    SetGlobalValue(ResourceType.Money, Operate.Add, args);
                     break;
                 case 5001:
-                    SetResource(ResourceType.Money,ResourceOperate.Minus, args);
+                    SetGlobalValue(ResourceType.Money,Operate.Minus, args);
                     break;
                 case 5002:
-                    SetResource(ResourceType.Money, ResourceOperate.Set, args);
+                    SetGlobalValue(ResourceType.Money, Operate.Set, args);
                     break;
                 case 5003:
-                    SetResource(ResourceType.Influence, ResourceOperate.Add, args);
+                    SetGlobalValue(ResourceType.Influence, Operate.Add, args);
                     break;
                 case 5004:
-                    SetResource(ResourceType.Influence, ResourceOperate.Minus, args);
+                    SetGlobalValue(ResourceType.Influence, Operate.Minus, args);
                     break;
                 case 5005:
-                    SetResource(ResourceType.Influence, ResourceOperate.Set, args);
+                    SetGlobalValue(ResourceType.Influence, Operate.Set, args);
                     break;
                 case 5006:
-                    SetResource(ResourceType.Cohesion, ResourceOperate.Add, args);
+                    SetGlobalValue(ResourceType.Cohesion, Operate.Add, args);
                     break;
                 case 5007:
-                    SetResource(ResourceType.Cohesion, ResourceOperate.Minus, args);
+                    SetGlobalValue(ResourceType.Cohesion, Operate.Minus, args);
                     break;
                 case 5008:
-                    SetResource(ResourceType.Cohesion, ResourceOperate.Set, args);
+                    SetGlobalValue(ResourceType.Cohesion, Operate.Set, args);
                     break;
                 //议程槽变更
                 case 5009:
@@ -133,13 +134,13 @@ namespace Logic.Effect
                     TagChange(false);
                     break;
                 case 5102:
-                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Human.Human.PropertyOperate.Add, args);
+                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Operate.Add, args);
                     break;
                 case 5103:
-                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Human.Human.PropertyOperate.Minus, args);
+                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Operate.Minus, args);
                     break;
                 case 5104:
-                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Human.Human.PropertyOperate.Set, args);
+                    HumanPropertyChange(Human.Human.PropertyType.Visibility, Operate.Set, args);
                     break;
                 case 5105:
                     HumanPropertyLock(Human.Human.PropertyType.Visibility, true, args);
@@ -148,13 +149,13 @@ namespace Logic.Effect
                     HumanPropertyLock(Human.Human.PropertyType.Visibility, false, args);
                     break;
                 case 5107:
-                    HumanPropertyChange(Human.Human.PropertyType.Defence, Human.Human.PropertyOperate.Add, args);
+                    HumanPropertyChange(Human.Human.PropertyType.Defence, Operate.Add, args);
                     break;
                 case 5108:
-                    HumanPropertyChange(Human.Human.PropertyType.Defence, Human.Human.PropertyOperate.Minus, args);
+                    HumanPropertyChange(Human.Human.PropertyType.Defence, Operate.Minus, args);
                     break;
                 case 5109:
-                    HumanPropertyChange(Human.Human.PropertyType.Defence, Human.Human.PropertyOperate.Set, args);
+                    HumanPropertyChange(Human.Human.PropertyType.Defence, Operate.Set, args);
                     break;
                 case 5110:
                     HumanPropertyLock(Human.Human.PropertyType.Defence, true, args);
@@ -178,20 +179,91 @@ namespace Logic.Effect
                     HumanDeath(args);
                     break;
                 case 5123:
-                    HumanGetCat(true, args);
+                    HumanGetCat(args);
                     break;
                 case 5124:
-                    HumanGetCat(false, args);
+                    HumanLoseCat(args);
                     break;
                 case 5127:
                     HumanImageChange(args);
+                    break;
+                // 猫咪相关
+                case 5200:
+                    CatPropertyChange(Cat.CatPropertyType.Conspiracy, Operate.Add, args);
+                    break;
+                case 5201:
+                    CatPropertyChange(Cat.CatPropertyType.Conspiracy, Operate.Minus, args);
+                    break;
+                case 5202:
+                    CatPropertyChange(Cat.CatPropertyType.Conspiracy, Operate.Set, args);
+                    break;
+                case 5203:
+                    CatPropertyChange(Cat.CatPropertyType.Scout, Operate.Add, args);
+                    break;
+                case 5204:
+                    CatPropertyChange(Cat.CatPropertyType.Scout, Operate.Minus, args);
+                    break;
+                case 5205:
+                    CatPropertyChange(Cat.CatPropertyType.Scout, Operate.Set, args);
+                    break;
+                case 5206:
+                    CatPropertyChange(Cat.CatPropertyType.Communication, Operate.Add, args);
+                    break;
+                case 5207:
+                    CatPropertyChange(Cat.CatPropertyType.Communication, Operate.Minus, args);
+                    break;
+                case 5208:
+                    CatPropertyChange(Cat.CatPropertyType.Communication, Operate.Set, args);
+                    break;
+                case 5209:
+                    CatStatusChange(true, args);
+                    break;
+                case 5210:
+                    CatStatusChange(false, args);
+                    break;
+                case 5211:
+                    CatImageChange(args);
+                    break;
+                //人际关系图操作
+                // case 5300:
+                //     ShowHuman(args);
+                //     break;
+                // case 5301:
+                //     ShowRelationLine(args);
+                //     break;
+                // case 5302:
+                //     ShowAll(args);
+                //     break;
+                // case 5303:
+                //     SetRelation(args);
+                //     break;
+                case 5500:
+                    SetStoryProcess(args);
+                    break;
+                case 5501:
+                    SetGlobalValue(ResourceType.ArmyDifference, Operate.Add, args);
+                    break;
+                case 5502:
+                    SetGlobalValue(ResourceType.ArmyDifference, Operate.Minus, args);
+                    break;
+                case 5503:
+                    SetGlobalValue(ResourceType.ArmyDifference, Operate.Set, args);
+                    break;
+                case 5507:
+                    SetGlobalValue(ResourceType.DiseaseSurvey, Operate.Add, args);
+                    break;
+                case 5508:
+                    SetGlobalValue(ResourceType.DiseaseSurvey, Operate.Minus, args);
+                    break;
+                case 5509:
+                    SetGlobalValue(ResourceType.DiseaseSurvey, Operate.Set, args);
                     break;
                 default:
                     break;
             }
         }
 
-        private static void SetResource(PlayerModel.ResourceType type, ResourceOperate sign, params object[] args)
+        private static void SetGlobalValue(PlayerModel.ResourceType type, Operate sign, params object[] args)
         {
             if (!CheckArgs(1, args))
             {
@@ -203,10 +275,10 @@ namespace Logic.Effect
                 return;
             }
 
-            var result = PlayerModel.Instance.GetResource(type);
-            if (sign != ResourceOperate.Set)
+            var result = value;
+            if (sign != Operate.Set)
             {
-                result += (int)sign * value;
+                result = PlayerModel.Instance.GetResource(type) + (int)sign * value;
             }
             
             PlayerModel.Instance.SetResource(type, result);
@@ -276,7 +348,7 @@ namespace Logic.Effect
                 return;
             }
 
-            if (!(args[0] is long humanId) || !(args[1] is long tagId))
+            if (!(args[0] is int humanId) || !(args[1] is int tagId))
             {
                 return;
             }
@@ -296,14 +368,14 @@ namespace Logic.Effect
             }
         }
 
-        private static void HumanPropertyChange(Human.Human.PropertyType type, Human.Human.PropertyOperate operate, params object[] args)
+        private static void HumanPropertyChange(Human.Human.PropertyType type, Operate operate, params object[] args)
         {
             if (!CheckArgs(2, args))
             {
                 return;
             }
 
-            if (!(args[0] is long humanId) || !(args[1] is int value))
+            if (!(args[0] is int humanId) || !(args[1] is int value))
             {
                 return;
             }
@@ -314,10 +386,10 @@ namespace Logic.Effect
                 return;
             }
 
-            var result = human.GetProperty(type);
-            if (operate != Human.Human.PropertyOperate.Set)
+            var result = value;
+            if (operate != Operate.Set)
             {
-                result += value * (int) operate;
+                result = human.GetProperty(type) + value * (int) operate;
             }
             
             human.SetProperty(type, result);
@@ -330,7 +402,7 @@ namespace Logic.Effect
                 return;
             }
             
-            if (!(args[0] is long humanId))
+            if (!(args[0] is int humanId))
             {
                 return;
             }
@@ -347,7 +419,7 @@ namespace Logic.Effect
                 return;
             }
 
-            if (!(args[0] is long humanId))
+            if (!(args[0] is int humanId))
             {
                 return;
             }
@@ -364,7 +436,7 @@ namespace Logic.Effect
                 return;
             }
 
-            if (!(args[0] is long humanId))
+            if (!(args[0] is int humanId))
             {
                 return;
             }
@@ -380,7 +452,7 @@ namespace Logic.Effect
                 return;
             }
 
-            if (!(args[0] is long humanId))
+            if (!(args[0] is int humanId))
             {
                 return;
             }
@@ -402,7 +474,7 @@ namespace Logic.Effect
                 return;
             }
             
-            if (!(args[1] is long catId))
+            if (!(args[1] is int catId))
             {
                 return;
             }
@@ -449,12 +521,97 @@ namespace Logic.Effect
 
         private static Human.Human GetHuman(object obj)
         {
-            if (!(obj is long humanId))
+            if (!(obj is int humanId))
             {
                 return null;
             }
 
             return HumanManager.Instance.GetHuman(humanId);
+        }
+
+        private static void CatPropertyChange(Cat.CatPropertyType type, Operate operate, params object[] args)
+        {
+            if (!CheckArgs(2, args))
+            {
+                return;
+            }
+
+            var cat = GetCat(args[0]);
+            if (cat == null || !(args[1] is int value))
+            {
+                return;
+            }
+
+            var result = value;
+            if (operate != Operate.Set)
+            {
+                result = cat.GetProperty(type) + (int) operate * value;
+            }
+            
+            cat.SetProperty(type, result);
+        }
+
+        private static void CatStatusChange(bool isAdd, params object[] args)
+        {
+            if (!CheckArgs(2, args))
+            {
+                return;
+            }
+
+            var cat = GetCat(args[0]);
+            if (cat == null || !(args[1] is int textId))
+            {
+                return;
+            }
+
+            var text = LanguageLoader.Instance.FindLanguageItem(textId.ToString());
+            if (isAdd)
+            {
+                cat.AddTag(text.Value);
+            }
+            else
+            {
+                cat.RemoveTag(text.Value);
+            }
+        }
+
+        private static void CatImageChange(params object[] args)
+        {
+            if (!CheckArgs(2, args))
+            {
+                return;
+            }
+
+            var cat = GetCat(args[0]);
+            if (cat == null || !(args[1] is int image))
+            {
+                return;
+            }
+            
+            cat.SetImage(image.ToString());
+        }
+
+        private static Cat GetCat(object obj)
+        {
+            if (!(obj is int catId))
+            {
+                return null;
+            }
+
+            return CatManager.Instance.GetCat(catId);
+        }
+
+        private static void SetStoryProcess(params object[] args)
+        {
+            if (!CheckArgs(1, args))
+            {
+                return;
+            }
+
+            if (args[0] is int value)
+            {
+                PlayerModel.Instance.StoryProgress = value;
+            }
         }
     }
 }

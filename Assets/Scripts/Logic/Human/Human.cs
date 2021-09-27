@@ -8,13 +8,6 @@ namespace Logic.Human
 {
     public class Human
     {
-        public enum PropertyOperate
-        {
-            Minus = -1,
-            Set = 0,
-            Add = 1,
-        }
-        
         public enum PropertyType
         {
             Visibility = 0,
