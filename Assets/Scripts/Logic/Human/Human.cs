@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using HumanInfo;
 using Language;
+using Manager;
 using UnityEngine;
 
 namespace Logic.Human
@@ -34,7 +35,11 @@ namespace Logic.Human
 
         public bool IsImport { get; private set; } = false;
 
-        public bool IsWashHead { get; set; }
+        public bool IsWashHead { get; private set; }
+
+        public bool IsEventRollActive { get; private set; }
+        
+        public bool IsAlive { get; private set; }
         
         public List<long> Tags { get; private set; }
 
@@ -76,6 +81,7 @@ namespace Logic.Human
             Image = Config.Image;
             Sex = Config.Sex;
             IsImport = Config.IsImportant == 1;
+            IsWashHead = false;
 
             m_properties[(int) PropertyType.Visibility] = Config.Visibility;
             m_properties[(int) PropertyType.Defence] = 0;
@@ -125,6 +131,41 @@ namespace Logic.Human
         public void SetLock(PropertyType type, bool isLock)
         {
             m_locks[(int) type] = isLock;
+        }
+
+        public void SetWashHead(bool status)
+        {
+            IsWashHead = status;
+        }
+
+        public void SetEventRoll(bool status)
+        {
+            IsEventRollActive = status;
+            //todo
+        }
+
+        public void Death()
+        {
+            IsAlive = false;
+            //todo 处理一些必要的逻辑
+        }
+
+        public void SetCat(long id)
+        {
+            if (id == 0)
+            {
+                cat = null;
+            }
+            else
+            {
+                cat = CatManager.Instance.GetCat(id);
+            }
+        }
+
+        public void SetImage(string image)
+        {
+            Image = image;
+            //todo
         }
     }
 }
