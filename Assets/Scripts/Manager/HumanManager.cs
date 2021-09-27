@@ -13,8 +13,7 @@ namespace Manager
          */
         public Human GetHuman(long id)
         {
-            Human human = humanMap[id];
-            if (human == null)
+            if (humanMap.TryGetValue(id, out var human))
             {
                 human = LoadHuman(id);
                 humanMap[id] = human;

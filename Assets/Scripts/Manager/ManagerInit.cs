@@ -9,6 +9,7 @@ namespace Manager
         {
             TimeTickerManager.Instance.Init();
             TimeManager.Instance.Init();
+            EventManager.Instance.Init();
         }
 
         public void OnDestroy()
