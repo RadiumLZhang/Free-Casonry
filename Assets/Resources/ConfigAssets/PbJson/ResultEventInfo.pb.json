@@ -1,3 +1,50 @@
 {
-  "resultEvent_config" : [ ]
+  "resultEvent_config" : [
+    {
+      "resultId" : "31000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "50000"
+      ]
+    },
+    {
+      "resultId" : "31001",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "50000"
+      ]
+    },
+    {
+      "resultId" : "31002",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "50000"
+      ]
+    },
+    {
+      "resultId" : "31003",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "50000"
+      ]
+    },
+    {
+      "resultId" : "31004",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "50000",
+        "51004"
+      ]
+    }
+  ]
 }

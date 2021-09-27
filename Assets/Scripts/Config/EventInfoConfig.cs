@@ -24,26 +24,27 @@ namespace Event {
     static EventInfoConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chtwcm90by9FdmVudEluZm9Db25maWcucHJvdG8SBUV2ZW50IpUFCg9FdmVu",
+            "Chtwcm90by9FdmVudEluZm9Db25maWcucHJvdG8SBUV2ZW50IqkFCg9FdmVu",
             "dEluZm9Db25maWcSPAoMZXZlbnRfY29uZmlnGAEgAygLMiYuRXZlbnQuRXZl",
-            "bnRJbmZvQ29uZmlnLkV2ZW50SXRlbUNvbmZpZxrpAwoPRXZlbnRJdGVtQ29u",
+            "bnRJbmZvQ29uZmlnLkV2ZW50SXRlbUNvbmZpZxr9AwoPRXZlbnRJdGVtQ29u",
             "ZmlnEg8KB2V2ZW50SWQYASABKAMSDAoEbmFtZRgCIAEoCRIMCgR0eXBlGAMg",
-            "ASgFEhMKC2NvbnN1bWVUaW1lGAUgASgDEg0KBWltYWdlGBMgASgJEhIKCmV4",
-            "cGlyZVRpbWUYBiABKAMSGQoRb3V0T2ZUaW1lUmVjb3JkSWQYByABKAMSDwoH",
-            "aHVtYW5JZBgIIAEoAxISCgpyZXBlYXRUaW1lGAkgASgFEhMKC2VtZXJnZW5j",
-            "eUlkGAogASgDEhMKC2lzSW1wb3J0YW50GAsgASgFEhAKCHByaW9yaXR5GAwg",
-            "ASgFEhUKDXByZWNvbmRpdGlvbnMYDSADKAMSDwoHZWZmZWN0cxgOIAMoAxIy",
-            "CgZyZXN1bHQYDyADKAsyIi5FdmVudC5FdmVudEluZm9Db25maWcuUmVzdWx0",
-            "RXZlbnQSFAoMZXhwaXJlRWZmZWN0GBAgAygDEkEKEmdlbmVyYXRlQ29uZGl0",
-            "aW9ucxgRIAMoCzIlLkV2ZW50LkV2ZW50SW5mb0NvbmZpZy5Db25kaXRpb25H",
-            "cm91cBJAChFkZXN0cm95Q29uZGl0aW9ucxgSIAMoCzIlLkV2ZW50LkV2ZW50",
-            "SW5mb0NvbmZpZy5Db25kaXRpb25Hcm91cBoyCgtSZXN1bHRFdmVudBIPCgdl",
-            "dmVudElkGAEgASgDEhIKCmNvbmRpdGlvbnMYAiADKAMaJAoOQ29uZGl0aW9u",
-            "R3JvdXASEgoKY29uZGl0aW9ucxgBIAMoA2IGcHJvdG8z"));
+            "ASgFEhMKC2NvbnN1bWVUaW1lGAUgASgDEhAKCGltYWdlb3V0GBMgASgJEg8K",
+            "B2ltYWdlSW4YFCABKAkSEgoKZXhwaXJlVGltZRgGIAEoAxIZChFvdXRPZlRp",
+            "bWVSZWNvcmRJZBgHIAEoAxIPCgdodW1hbklkGAggASgDEhIKCnJlcGVhdFRp",
+            "bWUYCSABKAUSEwoLZW1lcmdlbmN5SWQYCiABKAMSEwoLaXNJbXBvcnRhbnQY",
+            "CyABKAUSEAoIcHJpb3JpdHkYDCABKAUSFQoNcHJlY29uZGl0aW9ucxgNIAMo",
+            "AxIPCgdlZmZlY3RzGA4gAygDEjIKBnJlc3VsdBgPIAMoCzIiLkV2ZW50LkV2",
+            "ZW50SW5mb0NvbmZpZy5SZXN1bHRFdmVudBIUCgxleHBpcmVFZmZlY3QYECAD",
+            "KAMSQQoSZ2VuZXJhdGVDb25kaXRpb25zGBEgAygLMiUuRXZlbnQuRXZlbnRJ",
+            "bmZvQ29uZmlnLkNvbmRpdGlvbkdyb3VwEkAKEWRlc3Ryb3lDb25kaXRpb25z",
+            "GBIgAygLMiUuRXZlbnQuRXZlbnRJbmZvQ29uZmlnLkNvbmRpdGlvbkdyb3Vw",
+            "GjIKC1Jlc3VsdEV2ZW50Eg8KB2V2ZW50SWQYASABKAMSEgoKY29uZGl0aW9u",
+            "cxgCIAMoAxokCg5Db25kaXRpb25Hcm91cBISCgpjb25kaXRpb25zGAEgAygD",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig), global::Event.EventInfoConfig.Parser, new[]{ "EventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.EventItemConfig), global::Event.EventInfoConfig.Types.EventItemConfig.Parser, new[]{ "EventId", "Name", "Type", "ConsumeTime", "Image", "ExpireTime", "OutOfTimeRecordId", "HumanId", "RepeatTime", "EmergencyId", "IsImportant", "Priority", "Preconditions", "Effects", "Result", "ExpireEffect", "GenerateConditions", "DestroyConditions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig), global::Event.EventInfoConfig.Parser, new[]{ "EventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.EventItemConfig), global::Event.EventInfoConfig.Types.EventItemConfig.Parser, new[]{ "EventId", "Name", "Type", "ConsumeTime", "Imageout", "ImageIn", "ExpireTime", "OutOfTimeRecordId", "HumanId", "RepeatTime", "EmergencyId", "IsImportant", "Priority", "Preconditions", "Effects", "Result", "ExpireEffect", "GenerateConditions", "DestroyConditions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.ResultEvent), global::Event.EventInfoConfig.Types.ResultEvent.Parser, new[]{ "EventId", "Conditions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.ConditionGroup), global::Event.EventInfoConfig.Types.ConditionGroup.Parser, new[]{ "Conditions" }, null, null, null, null)})
           }));
@@ -210,7 +211,8 @@ namespace Event {
           name_ = other.name_;
           type_ = other.type_;
           consumeTime_ = other.consumeTime_;
-          image_ = other.image_;
+          imageout_ = other.imageout_;
+          imageIn_ = other.imageIn_;
           expireTime_ = other.expireTime_;
           outOfTimeRecordId_ = other.outOfTimeRecordId_;
           humanId_ = other.humanId_;
@@ -289,17 +291,31 @@ namespace Event {
           }
         }
 
-        /// <summary>Field number for the "image" field.</summary>
-        public const int ImageFieldNumber = 19;
-        private string image_ = "";
+        /// <summary>Field number for the "imageout" field.</summary>
+        public const int ImageoutFieldNumber = 19;
+        private string imageout_ = "";
         /// <summary>
-        ///@name 图片
+        ///@name 外部图片
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Image {
-          get { return image_; }
+        public string Imageout {
+          get { return imageout_; }
           set {
-            image_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            imageout_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "imageIn" field.</summary>
+        public const int ImageInFieldNumber = 20;
+        private string imageIn_ = "";
+        /// <summary>
+        ///@name 内部图片
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string ImageIn {
+          get { return imageIn_; }
+          set {
+            imageIn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -496,7 +512,8 @@ namespace Event {
           if (Name != other.Name) return false;
           if (Type != other.Type) return false;
           if (ConsumeTime != other.ConsumeTime) return false;
-          if (Image != other.Image) return false;
+          if (Imageout != other.Imageout) return false;
+          if (ImageIn != other.ImageIn) return false;
           if (ExpireTime != other.ExpireTime) return false;
           if (OutOfTimeRecordId != other.OutOfTimeRecordId) return false;
           if (HumanId != other.HumanId) return false;
@@ -520,7 +537,8 @@ namespace Event {
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (Type != 0) hash ^= Type.GetHashCode();
           if (ConsumeTime != 0L) hash ^= ConsumeTime.GetHashCode();
-          if (Image.Length != 0) hash ^= Image.GetHashCode();
+          if (Imageout.Length != 0) hash ^= Imageout.GetHashCode();
+          if (ImageIn.Length != 0) hash ^= ImageIn.GetHashCode();
           if (ExpireTime != 0L) hash ^= ExpireTime.GetHashCode();
           if (OutOfTimeRecordId != 0L) hash ^= OutOfTimeRecordId.GetHashCode();
           if (HumanId != 0L) hash ^= HumanId.GetHashCode();
@@ -597,9 +615,13 @@ namespace Event {
           expireEffect_.WriteTo(output, _repeated_expireEffect_codec);
           generateConditions_.WriteTo(output, _repeated_generateConditions_codec);
           destroyConditions_.WriteTo(output, _repeated_destroyConditions_codec);
-          if (Image.Length != 0) {
+          if (Imageout.Length != 0) {
             output.WriteRawTag(154, 1);
-            output.WriteString(Image);
+            output.WriteString(Imageout);
+          }
+          if (ImageIn.Length != 0) {
+            output.WriteRawTag(162, 1);
+            output.WriteString(ImageIn);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -621,8 +643,11 @@ namespace Event {
           if (ConsumeTime != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(ConsumeTime);
           }
-          if (Image.Length != 0) {
-            size += 2 + pb::CodedOutputStream.ComputeStringSize(Image);
+          if (Imageout.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(Imageout);
+          }
+          if (ImageIn.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(ImageIn);
           }
           if (ExpireTime != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(ExpireTime);
@@ -674,8 +699,11 @@ namespace Event {
           if (other.ConsumeTime != 0L) {
             ConsumeTime = other.ConsumeTime;
           }
-          if (other.Image.Length != 0) {
-            Image = other.Image;
+          if (other.Imageout.Length != 0) {
+            Imageout = other.Imageout;
+          }
+          if (other.ImageIn.Length != 0) {
+            ImageIn = other.ImageIn;
           }
           if (other.ExpireTime != 0L) {
             ExpireTime = other.ExpireTime;
@@ -787,7 +815,11 @@ namespace Event {
                 break;
               }
               case 154: {
-                Image = input.ReadString();
+                Imageout = input.ReadString();
+                break;
+              }
+              case 162: {
+                ImageIn = input.ReadString();
                 break;
               }
             }

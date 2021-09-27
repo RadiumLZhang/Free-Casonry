@@ -1,218 +1,230 @@
 {
   "people" : [
     {
-      "humanId" : "1000",
-      "name" : "国王",
+      "humanId" : "60000",
+      "name" : "葛林",
+      "title" : "因西亚国王",
       "sex" : 1,
       "isImportant" : 1,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1001",
-      "name" : "王后",
+      "humanId" : "60001",
+      "name" : "茵菲尔",
+      "title" : "因西亚王后",
       "sex" : 0,
       "isImportant" : 1,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1002",
-      "name" : "主教",
+      "humanId" : "60002",
+      "name" : "安彼西奥",
+      "title" : "亲王",
       "sex" : 1,
       "isImportant" : 1,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1003",
-      "name" : "叔叔",
+      "humanId" : "60003",
+      "name" : "佩尔",
+      "title" : "红衣主教",
       "sex" : 1,
       "isImportant" : 1,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1004",
-      "name" : "女仆",
+      "humanId" : "60004",
+      "name" : "嘉帕兹",
+      "title" : "女仆",
       "sex" : 0,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1005",
-      "name" : "乞丐",
+      "humanId" : "60005",
+      "name" : "门提尔",
+      "title" : "炼金术士",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1006",
-      "name" : "贵族",
+      "humanId" : "60006",
+      "name" : "班诺",
+      "title" : "骑士",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1007",
-      "name" : "炼金术士",
+      "humanId" : "60007",
+      "name" : "瓦林提亚",
+      "title" : "侍从",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1008",
-      "name" : "骑士",
-      "sex" : 1,
-      "isImportant" : 0,
-      "canRaiseCat" : 1,
-      "canWashHead" : 1,
-      "defaultCatId" : "-1",
-      "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
-      ],
-      "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
-    },
-    {
-      "humanId" : "1009",
-      "name" : "医生",
+      "humanId" : "60008",
+      "name" : "费琳娜",
+      "title" : "医生",
       "sex" : 0,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1010",
-      "name" : "厨师",
+      "humanId" : "60009",
+      "name" : "依斯皮柯",
+      "title" : "厨师",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
     {
-      "humanId" : "1011",
-      "name" : "侍卫",
+      "humanId" : "60010",
+      "name" : "尼奥塔德",
+      "title" : "侯爵",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "-1",
+      "defaultCatId" : "0",
       "tags" : [
-        "2000",
-        "2000",
-        "2000",
-        "2000"
+        "0",
+        "0",
+        "0",
+        "0"
       ],
-      "visibility" : 0,
+      "visibility" : 10,
+      "tendToRaiseCat" : 0,
+      "FavorValue" : 0
+    },
+    {
+      "humanId" : "60011",
+      "name" : "塞达",
+      "title" : "乞丐",
+      "sex" : 1,
+      "isImportant" : 0,
+      "canRaiseCat" : 1,
+      "canWashHead" : 1,
+      "defaultCatId" : "0",
+      "tags" : [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "visibility" : 10,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     }
