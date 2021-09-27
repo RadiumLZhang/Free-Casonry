@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class NPCMono : MonoBehaviour
 {
-    private GameObject eventCycle;
+    public GameObject eventCycle;
     private RectTransform selfRect;
     private RectTransform contentRect;
     private RectTransform viewRect;

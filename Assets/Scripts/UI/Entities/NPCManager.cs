@@ -38,7 +38,7 @@ public class NPCManager : MonoBehaviour
     {
         for (int i = 60000; i < 60012; i++)
         {
-            UIManager.Instance.NPCs[i] = NPCs[i].gameObject;
+            UIManager.Instance.NPCEventCycles[i] = NPCs[i].eventCycle;
         }
     }
     public void StartNPCLerp(float x, float y)

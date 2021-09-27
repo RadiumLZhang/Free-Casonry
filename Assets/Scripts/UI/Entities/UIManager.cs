@@ -25,5 +25,5 @@ public class UIManager: BaseModel<UIManager>
     public GameObject buttonCouncilCatManage;
     
     //NPCs
-    public Dictionary<long, GameObject> NPCs;
+    public Dictionary<long, GameObject> NPCEventCycles;
 }
