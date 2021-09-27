@@ -4,6 +4,13 @@ using UnityEngine;
 
 namespace Logic
 {
+    public enum Operate
+    {
+        Minus = -1,
+        Set = 0,
+        Add = 1
+    }
+    
     public class PlayerModel : BaseModel<PlayerModel>
     {
         private int[] m_resource = new int[3];
@@ -11,16 +18,11 @@ namespace Logic
         {
             Money = 0,
             Influence = 1,
-            Cohesion = 2
+            Cohesion = 2,
+            ArmyDifference = 3,
+            DiseaseSurvey = 4
         }
-        
-        public enum ResourceOperate
-        {
-            Minus = -1,
-            Set = 0,
-            Add = 1
-        }
-        
+
         /// <summary>
         /// 人类货币
         /// </summary>
@@ -35,6 +37,19 @@ namespace Logic
         /// 隐匿度
         /// </summary>
         public int Hidency => m_resource[2];
+
+        /// <summary>
+        /// 军队实力差
+        /// </summary>
+        public int ArmyDifference => m_resource[3];
+
+        /// <summary>
+        /// 传染病调查进度
+        /// </summary>
+        public int DiseaseSurvey => m_resource[4];
+
+
+        public int StoryProgress { get; set; }
 
         public void SetResource(ResourceType type, int value)
         {

@@ -29,11 +29,13 @@ namespace Logic
         /// <summary>
         /// 交流
         /// </summary>
-        public int Communicate => Properties[2];
+        public int Communication => Properties[2];
 
         public long skillId { get; set; }
         
         public string Description { get; private set; }
+
+        public List<string> Tags;
 
         public Cat(long id)
         {
@@ -50,12 +52,46 @@ namespace Logic
             Image = Config.Image;
 
             Properties = new List<int>(Config.Property);
+            Tags = new List<string>();
         }
-        
+
+        public void SetProperty(CatPropertyType type, int value)
+        {
+            Properties[(int) type] = value;
+        }
+
+        public int GetProperty(CatPropertyType type)
+        {
+            return Properties[(int) type];
+        }
+
+        public void AddTag(string tag)
+        {
+            Tags.Add(tag);
+        }
+
+        public void RemoveTag(string tag)
+        {
+            Tags.Remove(tag);
+        }
+
+        public void SetImage(string image)
+        {
+            Image = image;
+            //todo
+        }
+
         public enum CatStatus
         {
             None,
             Normal
+        }
+
+        public enum CatPropertyType
+        {
+            Scout = 0,
+            Conspiracy = 1,
+            Communication = 2
         }
     }
 }
