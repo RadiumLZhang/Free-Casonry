@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181008343742182339, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
       propertyPath: m_Name
-      value: NPCEvent2
+      value: NPCEvent1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
@@ -696,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181008343742182339, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
       propertyPath: m_Name
-      value: NPCEvent3
+      value: NPCEvent2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
@@ -798,7 +798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181008343742182339, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
       propertyPath: m_Name
-      value: NPCEvent4
+      value: NPCEvent3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
@@ -900,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181008343742182339, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
       propertyPath: m_Name
-      value: NPCEvent5
+      value: NPCEvent4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
@@ -1006,7 +1006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181008343742182339, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
       propertyPath: m_Name
-      value: NPCEvent1
+      value: NPCEvent0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6744176c944c194b914ad883ea9a65f, type: 3}
