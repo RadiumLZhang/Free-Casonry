@@ -30,7 +30,7 @@ namespace Logic.Effect
         /// <summary>
         /// 激活应用效果
         /// </summary>
-        public static void ActiveEffect(long id)
+        public static void ActivateEffect(long id)
         {
             var config = EffectLoader.Instance.FindEffectItem(id);
             if (config == null)
@@ -39,10 +39,10 @@ namespace Logic.Effect
                 return;
             }
             
-            ActiveBaseEffect(config.BaseEffectId, config.Paras);
+            ActivateBaseEffect(config.BaseEffectId, config.Paras);
         }
         
-        private static void ActiveBaseEffect(long id, params object[] args)
+        private static void ActivateBaseEffect(long id, params object[] args)
         {
             switch (id)
             {
@@ -107,12 +107,12 @@ namespace Logic.Effect
                 case 5018:
                     ButtonCouncilStateChange(true);
                     break;
-                case 5019:
-                    ButtonCatManageStateChange(false);
-                    break;
-                case 5020:
-                    ButtonCatManageStateChange(true);
-                    break;
+                // case 5019:
+                //     ButtonCatManageStateChange(false);
+                //     break;
+                // case 5020:
+                //     ButtonCatManageStateChange(true);
+                //     break;
                 //游戏结局
                 case 5021:
                 case 5022:
@@ -162,6 +162,30 @@ namespace Logic.Effect
                 case 5111:
                     HumanPropertyLock(Human.Human.PropertyType.Defence, false, args);
                     break;
+                case 5117:
+                    HumanWashHeadStatus(true, args);
+                    break;
+                case 5118:
+                    HumanWashHeadStatus(false, args);
+                    break;
+                case 5121:
+                    HumanEventRoll(false, args);
+                    break;
+                case 5128:
+                    HumanEventRoll(true, args);
+                    break;
+                case 5122:
+                    HumanDeath(args);
+                    break;
+                case 5123:
+                    HumanGetCat(true, args);
+                    break;
+                case 5124:
+                    HumanGetCat(false, args);
+                    break;
+                case 5127:
+                    HumanImageChange(args);
+                    break;
                 default:
                     break;
             }
@@ -169,7 +193,7 @@ namespace Logic.Effect
 
         private static void SetResource(PlayerModel.ResourceType type, ResourceOperate sign, params object[] args)
         {
-            if (args == null || args.Length <= 1)
+            if (!CheckArgs(1, args))
             {
                 return;
             }
@@ -190,7 +214,7 @@ namespace Logic.Effect
 
         private static void HandlerChange(bool active, params object[] args)
         {
-            if (args == null || args.Length <= 1)
+            if (!CheckArgs(1, args))
             {
                 return;
             }
@@ -222,7 +246,7 @@ namespace Logic.Effect
 
         private static void EventGenerate(params object[] args)
         {
-            if (args == null || args.Length <= 2)
+            if (!CheckArgs(2, args))
             {
                 return;
             }
@@ -235,10 +259,10 @@ namespace Logic.Effect
             UIManager.Instance.buttonCouncil.SetActive(active);
         }
 
-        private static void ButtonCatManageStateChange(bool active)
-        {
-            UIManager.Instance.buttonCouncilCatManage.SetActive(active);
-        }
+        // private static void ButtonCatManageStateChange(bool active)
+        // {
+        //     UIManager.Instance.buttonCouncilCatManage.SetActive(active);
+        // }
 
         private static void GameEnd(params object[] args)
         {
@@ -247,7 +271,7 @@ namespace Logic.Effect
 
         private static void TagChange(bool isAdd, params object[] args)
         {
-            if (args == null || args.Length <= 2)
+            if (!CheckArgs(2, args))
             {
                 return;
             }
@@ -274,7 +298,7 @@ namespace Logic.Effect
 
         private static void HumanPropertyChange(Human.Human.PropertyType type, Human.Human.PropertyOperate operate, params object[] args)
         {
-            if (args == null || args.Length <= 2)
+            if (!CheckArgs(2, args))
             {
                 return;
             }
@@ -301,7 +325,7 @@ namespace Logic.Effect
 
         private static void HumanPropertyLock(Human.Human.PropertyType type, bool isLock, params object[] args)
         {
-            if (args == null || args.Length <= 1)
+            if (!CheckArgs(1, args))
             {
                 return;
             }
@@ -314,6 +338,123 @@ namespace Logic.Effect
             var human = HumanManager.Instance.GetHuman(humanId);
 
             human?.SetLock(type, isLock);
+        }
+        
+        private static void HumanWashHeadStatus(bool isWashHead, params object[] args)
+        {
+            if (!CheckArgs(1, args))
+            {
+                return;
+            }
+
+            if (!(args[0] is long humanId))
+            {
+                return;
+            }
+
+            var human = HumanManager.Instance.GetHuman(humanId);
+
+            human?.SetWashHead(isWashHead);
+        }
+
+        private static void HumanEventRoll(bool isActive, params object[] args)
+        {
+            if (!CheckArgs(1, args))
+            {
+                return;
+            }
+
+            if (!(args[0] is long humanId))
+            {
+                return;
+            }
+
+            var human = HumanManager.Instance.GetHuman(humanId);
+            human?.SetEventRoll(isActive);
+        }
+
+        private static void HumanDeath(params object[] args)
+        {
+            if (!CheckArgs(1, args))
+            {
+                return;
+            }
+
+            if (!(args[0] is long humanId))
+            {
+                return;
+            }
+
+            var human = HumanManager.Instance.GetHuman(humanId);
+            human?.Death();
+        }
+
+        private static void HumanGetCat(params object[] args)
+        {
+            if (!CheckArgs(2, args))
+            {
+                return;
+            }
+            
+            var human = GetHuman(args[0]);
+            if (human == null)
+            {
+                return;
+            }
+            
+            if (!(args[1] is long catId))
+            {
+                return;
+            }
+            
+            human.SetCat(catId);
+        }
+
+        private static void HumanLoseCat(params object[] args)
+        {
+            if (!CheckArgs(1, args))
+            {
+                return;
+            }
+
+            var human = GetHuman(args[0]);
+            human?.SetCat(0);
+        }
+
+        private static void HumanImageChange(params object[] args)
+        {
+            if (!CheckArgs(2, args))
+            {
+                return;
+            }
+
+            var human = GetHuman(args[0]);
+            if (human == null || !(args[1] is string image))
+            {
+                return;
+            }
+
+            human.SetImage(image);
+        }
+
+        private static bool CheckArgs(int count, params object[] args)
+        {
+            if (args == null || args.Length < count)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private static Human.Human GetHuman(object obj)
+        {
+            if (!(obj is long humanId))
+            {
+                return null;
+            }
+
+            return HumanManager.Instance.GetHuman(humanId);
         }
     }
 }
