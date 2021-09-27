@@ -6,11 +6,11 @@ using Object = System.Object;
 
 namespace Manager
 {
-    public enum TICKER_SPEED_ENUM : int
+    public enum TickerSpeedEnum : int
     {
-        STOP = 0,
-        NORMAL = 1,
-        FAST = 2
+        Stop = 0,
+        Normal = 1,
+        Fast = 2
     }
 
     public class TimeTickerManager : BaseModel<TimeTickerManager>
@@ -26,7 +26,7 @@ namespace Manager
          */
         public void StopTick()
         {
-            speed = (int) TICKER_SPEED_ENUM.STOP;
+            speed = (int) TickerSpeedEnum.Stop;
         }
 
         /*
@@ -34,14 +34,14 @@ namespace Manager
          */
         public void StartTick()
         {
-            speed = (int) TICKER_SPEED_ENUM.NORMAL;
+            speed = (int) TickerSpeedEnum.Normal;
         }
 
         /*
          * 自定义速度
          * @param: speedEnum        速度枚举值
          */
-        public void StartTickWithSpeed(TICKER_SPEED_ENUM speedEnum)
+        public void StartTickWithSpeed(TickerSpeedEnum speedEnum)
         {
             speed = (int) speedEnum;
         }
@@ -49,9 +49,9 @@ namespace Manager
         /**
      * 获取当前速度
      */
-        public TICKER_SPEED_ENUM GetSpeed()
+        public TickerSpeedEnum GetSpeed()
         {
-            return (TICKER_SPEED_ENUM) speed;
+            return (TickerSpeedEnum) speed;
         }
 
         /*
@@ -190,7 +190,7 @@ namespace Manager
         // 初始化
         public void Init()
         {
-            speed = (int) TICKER_SPEED_ENUM.NORMAL;
+            speed = (int) TickerSpeedEnum.Normal;
             stepPerSecond = ConstValue.TIME_TICKER_STEP;
             frameIndex = 0;
             eventList = new List<EventItem>();

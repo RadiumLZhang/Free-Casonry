@@ -36,7 +36,7 @@ public class GameView : MonoBehaviour
     private Coroutine closeExePanel_coroutine;
 
     // 游戏当前运行速度，用于设置当中的继续游戏
-    private TICKER_SPEED_ENUM speedEnum;
+    private TickerSpeedEnum speedEnum;
     void Start()
     {
         darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
@@ -137,7 +137,7 @@ public class GameView : MonoBehaviour
     
     public void ButtonSpeed_OnClick()
     {
-        TimeTickerManager.Instance.StartTickWithSpeed(TICKER_SPEED_ENUM.FAST);
+        TimeTickerManager.Instance.StartTickWithSpeed(TickerSpeedEnum.Fast);
     }
     
     //Button in Council

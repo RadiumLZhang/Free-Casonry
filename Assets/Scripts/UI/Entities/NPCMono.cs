@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class NPCMono : MonoBehaviour
 {
-    private GameObject eventCycle;
+    public GameObject eventCycle;
     private RectTransform selfRect;
     private RectTransform contentRect;
     private RectTransform viewRect;
     private ScrollRect scrollRect;
     private NPCManager manager;
+    public List<NPCEventMono> eventcols; 
     private void Start()
     {
         eventCycle = transform.Find("EventCycle").gameObject;
@@ -20,6 +21,10 @@ public class NPCMono : MonoBehaviour
         viewRect = GameObject.Find("ScrollRelationship").transform.Find("Viewport").GetComponent<RectTransform>();
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
+        for (int i = 0; i < 5; i++)
+        {
+            eventcols[i] = transform.Find("EventCycle").Find("NPCEvent" + i).GetComponent<NPCEventMono>();
+        }
     }
 
     public void NPC_OnClick()
