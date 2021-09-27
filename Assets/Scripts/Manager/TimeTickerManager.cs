@@ -17,7 +17,7 @@ namespace Manager
     {
         public delegate void CallBack();
 
-        public delegate bool Condition();
+        public delegate bool ConditionCallBack();
 
         /********************************* 接口 ***********************************************/
 
@@ -75,13 +75,13 @@ namespace Manager
          * @param: destroySecond    经过x秒后不再等待，传入负数表示不会销毁
          * @param: destroyCallBack  未生效回调
          */
-        public int AddWaitingEvent(Condition condition, CallBack callBack, int beginWaitSecond,
+        public int AddWaitingEvent(ConditionCallBack conditionCallBack, CallBack callBack, int beginWaitSecond,
             int destroySecond, CallBack destroyCallBack)
         {
             int frame = beginWaitSecond * stepPerSecond + frameIndex;
             int destroyFrame = destroySecond * stepPerSecond + frameIndex;
             WaitingEventItem waitingEventItem =
-                new WaitingEventItem(callBack, frame, condition, destroyFrame, destroyCallBack);
+                new WaitingEventItem(callBack, frame, conditionCallBack, destroyFrame, destroyCallBack);
             insertEvent(waitingList, waitingEventItem);
             return 0;
         }
@@ -119,6 +119,14 @@ namespace Manager
             return AddLastingEvent(callBack, delaySecond, 0, finishSecond, finishCallBack);
         }
 
+        /*
+         * 时间后跳x秒
+         */
+        public void AddTime(int seconds)
+        {
+            frameIndex += seconds * stepPerSecond;
+        }
+
 
 
         /************************************** 实现 ***************************************************/
@@ -140,14 +148,14 @@ namespace Manager
         class WaitingEventItem : EventItem
         {
             public int destroyFrame;
-            public Condition condition;
+            public ConditionCallBack ConditionCallBack;
             public CallBack destroyCallBack;
 
             public WaitingEventItem(CallBack callBack, int frame,
-                Condition condition, int destroyFrame, CallBack destroyCallBack) : base(callBack, frame)
+                ConditionCallBack conditionCallBack, int destroyFrame, CallBack destroyCallBack) : base(callBack, frame)
             {
                 this.destroyFrame = destroyFrame;
-                this.condition = condition;
+                this.ConditionCallBack = conditionCallBack;
                 this.destroyCallBack = destroyCallBack;
             }
         }
@@ -267,7 +275,7 @@ namespace Manager
                 WaitingEventItem waitingEventItem = waitingList[index];
                 if (waitingEventItem.frame <= frameIndex)
                 {
-                    if (waitingEventItem.condition.Invoke())
+                    if (waitingEventItem.ConditionCallBack == null || waitingEventItem.ConditionCallBack.Invoke())
                     {
                         waitingList.RemoveAt(index);
                         if (waitingEventItem.callBack != null)

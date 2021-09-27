@@ -27,6 +27,22 @@ namespace Manager
             return (long)(input - startTime).TotalSeconds;
         }
 
+        /*
+         * 根据月-日-时-分设置当前时间
+         * 为输入的参数一律按1月1日0：0处理
+         * 时间只允许向后跳
+         */
+        public void SetTime(int? month, int? day, int? hour, int? minute)
+        {
+            System.DateTime input = new System.DateTime(ConstValue.YEAR, month ?? 1, day ?? 1, hour ?? 0, minute ?? 0, 0);
+            long newTimeStamp = (long)(input - startTime).TotalSeconds;
+            if (newTimeStamp >= timeStamp)
+            {
+                TimeTickerManager.Instance.AddTime((int) (newTimeStamp - timeStamp));
+                timeStamp = newTimeStamp;
+            }
+        }
+
         /**
          * 获取当前时间
          */
