@@ -77,6 +77,12 @@ public class GameView : MonoBehaviour
     }
     public void ButtonTestEvent_OnClick()
     {
+        
+        var human = HumanManager.Instance;
+        var h = human.GetHuman(60000);
+        var list = EventManager.Instance.GetCommonEventList();
+
+    
         Transform temp = Instantiate(specialEventPrefab).transform;
         //TODO:把这个random重写成你的事件生成方法（带ID），其余不动
         
