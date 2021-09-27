@@ -112,12 +112,12 @@ namespace Logic.Event
 
         private bool CheckConditionGroup(RepeatedField<EventInfoConfig.Types.ConditionGroup> conditionGroup)
         {
-            foreach (var condition in Config.DestroyConditions)
+            foreach (var condition in conditionGroup)
             {
                 bool success = true;
                 foreach (var id in condition.Conditions)
                 {
-                    if (ConditionUtils.CheckCondition(id))
+                    if (!ConditionUtils.CheckCondition(id))
                     {
                         success = false;
                         break;

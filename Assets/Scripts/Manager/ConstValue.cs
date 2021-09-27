@@ -16,5 +16,10 @@
         
         // TimeTickerManager每秒执行多少次
         public const int TIME_TICKER_STEP = 20;
+
+        // 默认成功的条件ID
+        public const int CONDITION_TRUE_ID = 0;
+        // 默认失败的条件ID
+        public const int CONDITION_FALSE_ID = -1;
     }
 }
