@@ -12,13 +12,35 @@ public class NPCManager : MonoBehaviour
     private bool bIsXStopped;
     private bool bIsYStopped;
     public GameObject currentOpenedNPC;
+    public Dictionary<long, NPCMono> NPCs;
     void Start()
     {
         lerpPosX = 0.5f;
         lerpPosY = 0.5f;
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
+        Transform listNPC = transform.Find("Viewport").Find("Content");
+        NPCs[60000] = listNPC.Find("king").GetComponent<NPCMono>();
+        NPCs[60001] = listNPC.Find("queen").GetComponent<NPCMono>();
+        NPCs[60002] = listNPC.Find("prince").GetComponent<NPCMono>();
+        NPCs[60003] = listNPC.Find("cardinal").GetComponent<NPCMono>();
+        NPCs[60004] = listNPC.Find("maid").GetComponent<NPCMono>();
+        NPCs[60005] = listNPC.Find("alchemist").GetComponent<NPCMono>();
+        NPCs[60006] = listNPC.Find("knight").GetComponent<NPCMono>();
+        NPCs[60007] = listNPC.Find("attendant").GetComponent<NPCMono>();
+        NPCs[60008] = listNPC.Find("doctor").GetComponent<NPCMono>();
+        NPCs[60009] = listNPC.Find("chef").GetComponent<NPCMono>();
+        NPCs[60010] = listNPC.Find("marquis").GetComponent<NPCMono>();
+        NPCs[60011] = listNPC.Find("beggar").GetComponent<NPCMono>();
+        UIManagerInitNPCs();
     }
 
+    private void UIManagerInitNPCs()
+    {
+        for (int i = 60000; i < 60012; i++)
+        {
+            UIManager.Instance.NPCs[i] = NPCs[i].gameObject;
+        }
+    }
     public void StartNPCLerp(float x, float y)
     {
         bIsLerping = true;

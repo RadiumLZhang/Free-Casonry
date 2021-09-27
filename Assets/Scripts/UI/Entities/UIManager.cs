@@ -23,4 +23,7 @@ public class UIManager: BaseModel<UIManager>
     public GameObject buttonCloseExePanel;
     public GameObject buttonCouncil;
     public GameObject buttonCouncilCatManage;
+    
+    //NPCs
+    public Dictionary<long, GameObject> NPCs;
 }
