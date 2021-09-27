@@ -51,46 +51,34 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
             "41000"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ],
       "destroyConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ]
@@ -146,46 +134,34 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
             "41001"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ],
       "destroyConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ]
@@ -241,46 +217,34 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
             "41002"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ],
       "destroyConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ]
@@ -336,46 +300,34 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
             "41003"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ],
       "destroyConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ]
@@ -431,46 +383,35 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0",
             "41005",
             "41004"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ],
       "destroyConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ]
@@ -526,46 +467,35 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0",
             "41007",
             "41006"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ],
       "destroyConditions" : [
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         },
         {
           "conditions" : [
-            "0",
-            "0",
-            "0"
+            "-1"
           ]
         }
       ]

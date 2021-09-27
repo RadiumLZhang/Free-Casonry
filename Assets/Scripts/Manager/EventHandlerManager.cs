@@ -16,10 +16,10 @@ namespace Manager
 
         public EventHandlerManager()
         {
-            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
-            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
-            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
-            handlerList.Add(new DesignedEventHandler(new Cat(1001)));
+            handlerList.Add(new DesignedEventHandler(new Cat(61001)));
+            handlerList.Add(new DesignedEventHandler(new Cat(61002)));
+            handlerList.Add(new DesignedEventHandler(new Cat(61003)));
+            handlerList.Add(new DesignedEventHandler(new Cat(61004)));
         }
 
         // 获取议程槽的数量
