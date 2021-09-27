@@ -12,7 +12,7 @@ public class NPCMono : MonoBehaviour
     private RectTransform viewRect;
     private ScrollRect scrollRect;
     private NPCManager manager;
-    public List<NPCEventMono> eventcols; 
+    public List<NPCEventMono> eventcols = new List<NPCEventMono>(); 
     private void Start()
     {
         eventCycle = transform.Find("EventCycle").gameObject;
@@ -23,7 +23,7 @@ public class NPCMono : MonoBehaviour
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
         for (int i = 0; i < 5; i++)
         {
-            eventcols[i] = transform.Find("EventCycle").Find("NPCEvent" + i).GetComponent<NPCEventMono>();
+            eventcols.Add(transform.Find("EventCycle").Find("NPCEvent" + i).GetComponent<NPCEventMono>());
         }
     }
 
