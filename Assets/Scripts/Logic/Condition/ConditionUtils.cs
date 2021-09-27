@@ -29,6 +29,15 @@ namespace Logic.Condition
         /// <returns></returns>
         public static bool CheckCondition(long id)
         {
+            if (id == ConstValue.CONDITION_TRUE_ID)
+            {
+                return true;
+            }
+
+            if (id == ConstValue.CONDITION_FALSE_ID)
+            {
+                return false;
+            }
             var config = ConditionLoader.Instance.FindConditionItem(id);
             if (config == null)
             {
