@@ -86,14 +86,14 @@ public class GameView : MonoBehaviour
         Transform temp = Instantiate(specialEventPrefab).transform;
         //TODO:把这个random重写成你的事件生成方法（带ID），其余不动
         
-        var list = EventManager.Instance.GetCommonEventList();
+        var testList = EventManager.Instance.GetCommonEventList();
         foreach (var item in list)
         {
             temp.GetComponent<SpecialEventMono>().InitWithID(item.ID);
         }
         
         
-        if (Random.value > 0.5f)
+        /*if (Random.value > 0.5f)
         {
             temp.GetComponent<SpecialEventMono>().InitWithID(1000);
         }
@@ -101,7 +101,7 @@ public class GameView : MonoBehaviour
         {
             temp.GetComponent<SpecialEventMono>().InitWithID(1000);
         }
-        
+        */
         
         temp.SetParent(contentTransform);
         temp.localPosition = Vector3.zero;

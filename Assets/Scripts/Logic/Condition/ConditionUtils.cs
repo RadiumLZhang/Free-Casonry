@@ -1,6 +1,7 @@
 ﻿using BaseCondition;
 using Condition;
 using EventHandler;
+using Google.Protobuf.Collections;
 using Manager;
 using UnityEngine;
 
@@ -142,13 +143,19 @@ namespace Logic.Condition
          
          private static bool CheckHumanVisibilityGreaterEqual(params object[] args)
          {
-             return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).Visibility;
+             var arg = args[0];
+             return true;
+             //return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).Visibility;
          }
          
          private static bool CheckHumanVisibilityEqual(params object[] args)
          {
-             
-             return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).Visibility;
+             if (!(args[0] is RepeatedField<int> list))
+             {
+                 return false;
+             }
+
+             return (int) list[1] == HumanManager.Instance.GetHuman(list[0]).Visibility;
          }
          
          // private static bool CheckHumanRaiseCatFavorGreaterEqual(params object[] args)
