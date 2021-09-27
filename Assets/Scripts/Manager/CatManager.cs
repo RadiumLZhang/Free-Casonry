@@ -10,10 +10,9 @@ namespace Manager
         /**
          * 根据id获取猫猫
          */
-        public Cat GetCat(int id)
+        public Cat GetCat(long id)
         {
-            Cat cat = catMap[id];
-            if (cat == null)
+            if (!catMap.TryGetValue(id, out var cat))
             {
                 cat = LoadCat(id);
                 catMap[id] = cat;
@@ -25,14 +24,14 @@ namespace Manager
         
         /************************************** 实现 ******************************************/
 
-        private Dictionary<int, Cat> catMap;
+        private Dictionary<long, Cat> catMap;
 
         public CatManager()
         {
-            catMap = new Dictionary<int, Cat>();
+            catMap = new Dictionary<long, Cat>();
         }
 
-        private Cat LoadCat(int id)
+        private Cat LoadCat(long id)
         {
             Cat cat = new Cat(id);
             if (cat.Config != null)

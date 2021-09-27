@@ -32,18 +32,15 @@ namespace Manager
 
         public void Init()
         {
-            // TODO 把所有事件读进来
             foreach (var config in EventInfoConfigLoader.Instance.EventConfig)
             {
                 AddEvent(new Logic.Event.CatEvent(config.EventId));
             }
-                
         }
         
         private void AddEvent(Logic.Event.CatEvent e)
         {
-            List<Logic.Event.CatEvent> eventList = eventMap[e.HumanId];
-            if (eventList == null)
+            if (!eventMap.TryGetValue(e.HumanId, out var eventList))
             {
                 eventList = new List<Logic.Event.CatEvent>();
                 eventMap[e.HumanId] = eventList;
