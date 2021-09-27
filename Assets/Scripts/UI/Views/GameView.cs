@@ -58,8 +58,23 @@ public class GameView : MonoBehaviour
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
+        
+        UIManagerInit();
     }
-    
+
+    private void UIManagerInit()
+    {
+        UIManager.Instance.darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
+        UIManager.Instance.panelCouncil = transform.Find("PanelCouncil").gameObject;
+        UIManager.Instance.panelSettings = transform.Find("PanelSettings").gameObject;
+        UIManager.Instance.panelEventExe = transform.Find("PanelEventExe").gameObject;
+        UIManager.Instance.panelResources = transform.Find("PanelResources").gameObject;
+        UIManager.Instance.scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
+        UIManager.Instance.buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
+        UIManager.Instance.buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
+        UIManager.Instance.buttonCouncil = transform.Find("ButtonCouncil").gameObject;
+        UIManager.Instance.buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+    }
     public void ButtonTestEvent_OnClick()
     {
         Transform temp = Instantiate(specialEventPrefab).transform;

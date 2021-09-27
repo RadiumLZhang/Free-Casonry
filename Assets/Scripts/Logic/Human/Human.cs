@@ -7,6 +7,19 @@ namespace Logic.Human
 {
     public class Human
     {
+        public enum PropertyOperate
+        {
+            Minus = -1,
+            Set = 0,
+            Add = 1,
+        }
+        
+        public enum PropertyType
+        {
+            Visibility = 0,
+            Defence = 1
+        }
+        
         public long ID { get; private set; }
 
         public readonly HumanInfo.HumanInfo.Types.person Config;
@@ -24,21 +37,23 @@ namespace Logic.Human
         public bool IsWashHead { get; set; }
         
         public List<long> Tags { get; private set; }
-        
+
+        private int[] m_properties = new int[2];
+        private bool[] m_locks = new bool[2];
+
         /// <summary>
         /// 能见度
         /// </summary>
-        public int Visibility { get; private set; }
-        
+        public int Visibility => m_properties[0];
+        public bool VisibilityLock => m_locks[0];
+
         /// <summary>
-        /// 养猫意向
+        /// 心防
         /// </summary>
-        public int TendToRaiseCat { get; private set; }
+        public int Defence => m_properties[1];
+        public bool DefenceLock => m_locks[1];
         
-        /// <summary>
-        /// 亲密度
-        /// </summary>
-        public int FavorValue { get; private set; }
+        
 
         /// <summary>
         /// 养的猫
@@ -62,9 +77,10 @@ namespace Logic.Human
             Sex = Config.Sex;
             IsImport = Config.IsImportant == 1;
 
-            Visibility = Config.Visibility;
-            TendToRaiseCat = TendToRaiseCat;
-            FavorValue = FavorValue;
+            m_properties[(int) PropertyType.Visibility] = Config.Visibility;
+            m_properties[(int) PropertyType.Defence] = 0;
+
+            Tags = new List<long>(Config.Tags);
         }
         
         public bool CanRaiseCat()
@@ -89,34 +105,26 @@ namespace Logic.Human
 
         public List<long> GetTags()
         {
-            if (Tags != null)
-            {
-                return Tags;
-            }
-            
-            if (Config?.Tags == null)
-            {
-                return null;
-            }
-            
-            Tags = new List<long>(Config.Tags);
-
             return Tags;
         }
 
-        public int GetVisibility()
+        public void SetProperty(PropertyType type, int value)
         {
-            return Visibility;
+            if (m_locks[(int) type])
+            {
+                return;
+            }
+            m_properties[(int) type] = value;
         }
 
-        public int GetTendToRaiseCat()
+        public int GetProperty(PropertyType type)
         {
-            return TendToRaiseCat;
+            return m_properties[(int) type];
         }
 
-        public int GetFavorValue()
+        public void SetLock(PropertyType type, bool isLock)
         {
-            return FavorValue;
+            m_locks[(int) type] = isLock;
         }
     }
 }

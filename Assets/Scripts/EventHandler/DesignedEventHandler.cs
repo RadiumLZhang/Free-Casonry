@@ -7,7 +7,6 @@ using System.Net.Security;
 using Logic.Event;
 using Manager;
 using UnityEngine.UIElements;
-using Event = Logic.Event.Event;
 
 namespace EventHandler
 {
@@ -15,7 +14,7 @@ namespace EventHandler
     {
 
         private Cat catInfo = null;
-        private Logic.Event.Event eventInfo = null;
+        private Logic.Event.CatEvent m_catEventInfo = null;
         private Emergency emergency = null;
         private int emergencyId = 0;
         private bool emergencyResolved = false;
@@ -34,23 +33,23 @@ namespace EventHandler
         public void SetEventInfo(int newEventID)
         {
             eventID = newEventID;
-            eventInfo = new Logic.Event.Event(eventID);
-            emergencyId = (int)eventInfo.GetEmergencyId();
+            m_catEventInfo = new Logic.Event.CatEvent(eventID);
+            emergencyId = (int)m_catEventInfo.GetEmergencyId();
             if (emergencyId != 0)
             {
-                emergency = new Emergency(eventInfo.GetEmergencyId());
+                emergency = new Emergency(m_catEventInfo.GetEmergencyId());
                 emergencyResolved = false;
                 emergencyTime = emergency.GetTimeOffset();
             }
 
             
-            cacheTime = (int)eventInfo.ConsumeTime;
-            TimeTickerManager.Instance.AddLastingEvent(UpdateCacheTime, 1, 1, (int)eventInfo.ConsumeTime, SetEffect);
+            cacheTime = (int)m_catEventInfo.ConsumeTime;
+            TimeTickerManager.Instance.AddLastingEvent(UpdateCacheTime, 1, 1, (int)m_catEventInfo.ConsumeTime, SetEffect);
         }
 
-        public Logic.Event.Event GetEventInfo()
+        public Logic.Event.CatEvent GetEventInfo()
         {
-            return eventInfo;
+            return m_catEventInfo;
         }
         public void UpdateCacheTime()
         {

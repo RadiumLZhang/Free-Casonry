@@ -11,7 +11,7 @@ namespace Manager
         /**
          * 根据id获取人
          */
-        public Human GetHuman(int id)
+        public Human GetHuman(long id)
         {
             Human human = humanMap[id];
             if (human == null)
@@ -24,14 +24,14 @@ namespace Manager
         
         /************************************** 实现 ******************************************/
         
-        private Dictionary<int, Human> humanMap;
+        private Dictionary<long, Human> humanMap;
 
         public HumanManager()
         {
-            humanMap = new Dictionary<int, Human>();
+            humanMap = new Dictionary<long, Human>();
         }
 
-        private Human LoadHuman(int id)
+        private Human LoadHuman(long id)
         {
             Human human = new Human(id);
             if (human.Config != null)

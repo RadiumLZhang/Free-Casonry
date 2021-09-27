@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class CatColumnHandler : MonoBehaviour, IDropHandler
 {
-    private Logic.Event.Event myEventInfo;
+    private Logic.Event.CatEvent m_myCatEventInfo;
     private DragHandlerSpecialEvent droppedSpecialEvent;
     private DragHandlerNPCEvent droppedNPCEvent;
     
@@ -37,8 +37,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
                 eventHandler.SetEventInfo((int) myID);
 
-                myEventInfo = eventHandler.GetEventInfo();
-                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
+                m_myCatEventInfo = eventHandler.GetEventInfo();
+                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Image);
                 transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
 
                 remainingTime = eventHandler.GetTimeRemain();
@@ -56,8 +56,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
             eventHandler.SetEventInfo((int) myID);
                 
-            myEventInfo = eventHandler.GetEventInfo();
-            transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(myEventInfo.Image);
+            m_myCatEventInfo = eventHandler.GetEventInfo();
+            transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Image);
             transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
                 
             remainingTime = eventHandler.GetTimeRemain();

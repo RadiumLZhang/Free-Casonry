@@ -11,7 +11,7 @@ namespace Manager
         /*
          * 获取下方的事件列表
          */
-        public List<Logic.Event.Event> GetCommonEventList()
+        public List<Logic.Event.CatEvent> GetCommonEventList()
         {
             return GetEffectiveEventList(0);
         }
@@ -19,7 +19,7 @@ namespace Manager
         /*
          * 获取人物周围的事件列表
          */
-        public List<Logic.Event.Event> GetRoleEventList(long id)
+        public List<Logic.Event.CatEvent> GetRoleEventList(long id)
         {
             return GetEffectiveEventList(id);
         }
@@ -28,32 +28,32 @@ namespace Manager
         /********************************* 实现 ***********************************************/
 
         // 
-        private Dictionary<long, List<Logic.Event.Event>> eventMap = new Dictionary<long, List<Logic.Event.Event>>();
+        private Dictionary<long, List<Logic.Event.CatEvent>> eventMap = new Dictionary<long, List<Logic.Event.CatEvent>>();
 
         public void Init()
         {
             // TODO 把所有事件读进来
             foreach (var config in EventInfoConfigLoader.Instance.EventConfig)
             {
-                AddEvent(new Logic.Event.Event(config.EventId));
+                AddEvent(new Logic.Event.CatEvent(config.EventId));
             }
                 
         }
         
-        private void AddEvent(Logic.Event.Event e)
+        private void AddEvent(Logic.Event.CatEvent e)
         {
-            List<Logic.Event.Event> eventList = eventMap[e.HumanId];
+            List<Logic.Event.CatEvent> eventList = eventMap[e.HumanId];
             if (eventList == null)
             {
-                eventList = new List<Logic.Event.Event>();
+                eventList = new List<Logic.Event.CatEvent>();
                 eventMap[e.HumanId] = eventList;
             }
             eventList.Add(e);
         }
 
-        private List<Logic.Event.Event> GetEffectiveEventList(long id)
+        private List<Logic.Event.CatEvent> GetEffectiveEventList(long id)
         {
-            List<Logic.Event.Event> returnList = new List<Logic.Event.Event>();
+            List<Logic.Event.CatEvent> returnList = new List<Logic.Event.CatEvent>();
             foreach (var e in eventMap[id])
             {
                 if (!e.IsDestroyed() && e.CanGenerate())
