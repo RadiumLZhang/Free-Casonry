@@ -38,7 +38,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 eventHandler.SetEventInfo((int) myID);
 
                 m_myCatEventInfo = eventHandler.GetEventInfo();
-                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Image);
+                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
                 transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
 
                 remainingTime = eventHandler.GetTimeRemain();
@@ -57,7 +57,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.SetEventInfo((int) myID);
                 
             m_myCatEventInfo = eventHandler.GetEventInfo();
-            transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Image);
+            transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
             transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
                 
             remainingTime = eventHandler.GetTimeRemain();
