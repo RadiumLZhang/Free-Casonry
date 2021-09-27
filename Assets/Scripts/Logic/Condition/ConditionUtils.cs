@@ -138,6 +138,7 @@ namespace Logic.Condition
          
          private static bool CheckHumanVisibilityEqual(params object[] args)
          {
+             
              return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).Visibility;
          }
          
