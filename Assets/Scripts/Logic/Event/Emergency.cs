@@ -68,5 +68,11 @@ namespace Logic.Event
             //todo 选择选项，生成影响
             // Config?.Options[option].Effects;
         }
+
+        public void ChosseDefaultOption()
+        {
+            // todo
+        }
+        
     }
 }
