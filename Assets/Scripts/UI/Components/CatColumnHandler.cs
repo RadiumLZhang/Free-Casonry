@@ -118,7 +118,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         }
         if (myID != -1)
         {
-            Debug.LogError("update:" + remainingTime);
             textRemainingTime.text = Convert.ToString(remainingTime) + "s";
         }
         if (remainingTime == 0)
