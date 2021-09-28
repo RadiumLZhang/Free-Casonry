@@ -46,7 +46,7 @@ namespace EventHandler
             }
             
             cacheTime = (int)m_catEventInfo.ConsumeTime;
-            TimeTickerManager.Instance.AddLastingEvent(UpdateCacheTime, 1, 1, (int)m_catEventInfo.ConsumeTime, SetEffect);
+            TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateCacheTime, 1, 1, (int)m_catEventInfo.ConsumeTime, SetEffect);
         }
 
         public Logic.Event.CatEvent GetEventInfo()

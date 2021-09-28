@@ -56,71 +56,75 @@ namespace Manager
 
         /*
          * 添加事件
+         * @param: id           id配负数表示删不掉
          * @param: callBack     回调函数
          * @param: delaySecond  经过x秒后触发
          */
-        public int AddEvent(CallBack callBack, int delaySecond)
+        public int AddEvent(long id, CallBack callBack, int delaySecond)
         {
             int frame = delaySecond * stepPerSecond + frameIndex;
-            EventItem eventItem = new EventItem(callBack, frame);
+            EventItem eventItem = new EventItem(id, callBack, frame);
             insertEvent(eventList, eventItem);
             return 0;
         }
 
         /*
          * 添加等待事件
+         * @param: id               id配负数表示删不掉
          * @param: condition        生效判定，需要返回布尔值(会在每次tick时候调用判定)
          * @param: callBack         生效回调函数
          * @param: beginWaitSecond  经过x秒后开始等待
          * @param: destroySecond    经过x秒后不再等待，传入负数表示不会销毁
          * @param: destroyCallBack  未生效回调
          */
-        public int AddWaitingEvent(ConditionCallBack conditionCallBack, CallBack callBack, int beginWaitSecond,
+        public int AddWaitingEvent(long id, ConditionCallBack conditionCallBack, CallBack callBack, int beginWaitSecond,
             int destroySecond, CallBack destroyCallBack)
         {
             int frame = beginWaitSecond * stepPerSecond + frameIndex;
             int destroyFrame = destroySecond * stepPerSecond + frameIndex;
             WaitingEventItem waitingEventItem =
-                new WaitingEventItem(callBack, frame, conditionCallBack, destroyFrame, destroyCallBack);
+                new WaitingEventItem(id, callBack, frame, conditionCallBack, destroyFrame, destroyCallBack);
             insertEvent(waitingList, waitingEventItem);
             return 0;
         }
 
         /*
          * 添加持续性事件
+         * @param: id               id配负数表示删不掉
          * @param: callBack         持续事件回调函数
          * @param: delaySecond      经过x秒后开始执行
          * @param: intervalSecond   执行间隔x秒，要是非负数，起码都会间隔一帧
          * @param: finishSecond     经过x秒后不再持续，配置0或负数表示会一直执行不会结束
          * @param: finishCallBack   结束回调
          */
-        public int AddLastingEvent(CallBack callBack, int delaySecond, int intervalSecond,
+        public int AddLastingEvent(long id, CallBack callBack, int delaySecond, int intervalSecond,
             int finishSecond, CallBack finishCallBack)
         {
             int frame = delaySecond * stepPerSecond + frameIndex;
             int step = intervalSecond * stepPerSecond;
             int finishFrame = finishSecond > 0 ? finishSecond * stepPerSecond + frameIndex : 0;
             LastingEventItem lastingEventItem =
-                new LastingEventItem(callBack, frame, step, finishCallBack, finishFrame);
+                new LastingEventItem(id, callBack, frame, step, finishCallBack, finishFrame);
             insertEvent(lastingList, lastingEventItem);
             return 0;
         }
 
         /*
          * 每x帧都会执行的事件
+         * @param: id               id配负数表示删不掉
          * @param: callBack         持续事件回调函数
          * @param: delaySecond      经过x秒后开始执行
          * @param: step             每x帧执行一次
          * @param: finishSecond     经过x秒后不再持续，配置0或负数表示会一直执行不会结束
          * @param: finishCallBack   结束回调
          */
-        public int AddLastingEventByStep(CallBack callBack, int delaySecond, int step,
+        public int AddLastingEventByStep(long id, CallBack callBack, int delaySecond, int step,
             int finishSecond, CallBack finishCallBack)
         {
             int frame = delaySecond * stepPerSecond + frameIndex;
             int finishFrame = finishSecond > 0 ? finishSecond * stepPerSecond + frameIndex : 0;
             LastingEventItem lastingEventItem =
-                new LastingEventItem(callBack, frame, step, finishCallBack, finishFrame);
+                new LastingEventItem(id, callBack, frame, step, finishCallBack, finishFrame);
             insertEvent(lastingList, lastingEventItem);
             return 0;
         }
@@ -133,6 +137,16 @@ namespace Manager
             frameIndex += seconds * stepPerSecond;
         }
 
+        /**
+         * 根据ID删除Ticker
+         */
+        public void RemoveByID(long id)
+        {
+            if (id < 0) return;
+            removeByID(eventList, id);
+            removeByID(waitingList, id);
+            removeByID(lastingList, id);
+        }
 
 
         /************************************** 实现 ***************************************************/
@@ -140,11 +154,13 @@ namespace Manager
         // 事件类
         class EventItem
         {
+            public long id;
             public CallBack callBack;
             public int frame;
 
-            public EventItem(CallBack callBack, int frame)
+            public EventItem(long id, CallBack callBack, int frame)
             {
+                this.id = id;
                 this.callBack = callBack;
                 this.frame = frame;
             }
@@ -157,8 +173,8 @@ namespace Manager
             public ConditionCallBack ConditionCallBack;
             public CallBack destroyCallBack;
 
-            public WaitingEventItem(CallBack callBack, int frame,
-                ConditionCallBack conditionCallBack, int destroyFrame, CallBack destroyCallBack) : base(callBack, frame)
+            public WaitingEventItem(long id, CallBack callBack, int frame,
+                ConditionCallBack conditionCallBack, int destroyFrame, CallBack destroyCallBack) : base(id, callBack, frame)
             {
                 this.destroyFrame = destroyFrame;
                 this.ConditionCallBack = conditionCallBack;
@@ -173,8 +189,8 @@ namespace Manager
             public CallBack finishCallBack;
             public int finishFrame;
 
-            public LastingEventItem(CallBack callBack, int frame,
-                int step, CallBack finishCallBack, int finishFrame) : base(callBack, frame)
+            public LastingEventItem(long id, CallBack callBack, int frame,
+                int step, CallBack finishCallBack, int finishFrame) : base(id, callBack, frame)
             {
                 this.step = step;
                 this.finishCallBack = finishCallBack;
@@ -229,7 +245,7 @@ namespace Manager
             }
             else
             {
-                int index = 0;
+                int index = eventList.Count;
                 for (int i = 0; i < eventList.Count; i++)
                 {
                     if (eventList[i].frame > eventItem.frame)
@@ -240,6 +256,24 @@ namespace Manager
                 }
 
                 eventList.Insert(index, eventItem);
+            }
+        }
+        
+        // 按ID删除
+        private void removeByID<T>(List<T> eventList, long id) where T : EventItem
+        {
+            int index = 0;
+            while (eventList.Count > index)
+            {
+                T eventItem = eventList[index];
+                if (eventItem.id == id)
+                {
+                    eventList.Remove(eventItem);
+                }
+                else
+                {
+                    index++;
+                }
             }
         }
 
@@ -276,7 +310,7 @@ namespace Manager
             }
 
             int index = 0;
-            while (waitingList.Count > 0)
+            while (waitingList.Count > index)
             {
                 WaitingEventItem waitingEventItem = waitingList[index];
                 if (waitingEventItem.frame <= frameIndex)
@@ -288,7 +322,6 @@ namespace Manager
                         {
                             waitingEventItem.callBack.Invoke();
                         }
-
                         continue;
                     }
 
@@ -299,6 +332,7 @@ namespace Manager
                         {
                             waitingEventItem.destroyCallBack.Invoke();
                         }
+                        continue;
                     }
 
                     index++;
@@ -347,9 +381,10 @@ namespace Manager
         /************************************ 自己测试用的 **************************************************/
         public int test()
         {
-            AddEvent(() => { Console.WriteLine("TimeTickerManager Awake"); }, 0);
+            AddEvent(1, () => { Console.WriteLine("TimeTickerManager Awake"); }, 0);
             int id = 1;
             AddLastingEvent(
+                1, 
                 () =>
                 {
                     Console.WriteLine("id = " + id);

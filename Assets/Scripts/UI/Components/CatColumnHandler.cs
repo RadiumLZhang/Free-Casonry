@@ -38,8 +38,11 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 myID = droppedSpecialEvent.GetEventID();
                 DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
                 eventHandler.SetEventInfo((int) myID);
-
+                
                 m_myCatEventInfo = eventHandler.GetEventInfo();
+                UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
+                //TODO:这里需要暂停一下，点击弹窗中的“行动开始”后再执行后续步骤，按钮回调函数是GameView.cs line 171 ButtonStartEvent_OnClick()
+                
                 m_myCatEventInfo.Status = EventStatus.OnProcess;
                 transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
                 transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
@@ -60,6 +63,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.SetEventInfo((int) myID);
                 
             m_myCatEventInfo = eventHandler.GetEventInfo();
+            UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
+            //TODO:这里需要暂停一下，点击弹窗中的“行动开始”后再执行后续步骤，按钮回调函数是GameView.cs line 171 ButtonStartEvent_OnClick()
             transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
             transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
                 

@@ -12,7 +12,7 @@ public class NPCManager : MonoBehaviour
     private bool bIsXStopped;
     private bool bIsYStopped;
     public GameObject currentOpenedNPC;
-    public Dictionary<long, NPCMono> NPCs;
+    public static Dictionary<long, NPCMono> NPCs;
     void Start()
     {
         NPCs = new Dictionary<long, NPCMono>();
@@ -113,7 +113,7 @@ public class NPCManager : MonoBehaviour
         }
     }
     
-    public void SetEventCycleActive(long id, bool active)
+    public static void SetEventCycleActive(long id, bool active)
     {
         if (!NPCs.TryGetValue(id, out var npc))
         {

@@ -1,6 +1,8 @@
 ﻿using Event;
 using Google.Protobuf.Collections;
 using Logic.Condition;
+using Logic.Effect;
+using ResultEventInfo;
 using UnityEngine;
 
 namespace Logic.Event
@@ -25,7 +27,8 @@ namespace Logic.Event
         public int Type => Config?.Type ?? 0;
 
         public string Imageout => Config?.Imageout;
-
+        public string ImageIn => Config?.ImageIn;
+        
         public long ConsumeTime => Config?.ConsumeTime ?? 0;
 
         public long ExpireTime => Config?.ExpireTime ?? 0;
@@ -113,12 +116,50 @@ namespace Logic.Event
                 return;
             }
             ExecuteCount++;
+
+            foreach (var VARIABLE in Config.Effects)
+            {
+                
+            }
         }
 
         public void Finish()
         {
             //todo 结算结果
             // Config.Result;
+            var resultId = 0l;
+            foreach (var resultEvent in Config.Result)
+            {
+                var success = true;
+                foreach (var condition in resultEvent.Conditions)
+                {
+                    if (!ConditionUtils.CheckCondition(condition))
+                    {
+                        success = false;
+                        break;
+                    }
+                }
+
+                if (success)
+                {
+                    resultId = resultEvent.EventId;
+                    break;
+                }
+            }
+            
+            Status = EventStatus.Finished;
+
+            if (resultId == 0)
+            {
+                Debug.Log("There is no suitable result");
+                return;
+            }
+
+            var item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
+            foreach (var effect in item.Effects)
+            {
+                EffectUtils.ActivateEffect(effect);
+            }
         }
 
         public void OutOfTimeResult()
