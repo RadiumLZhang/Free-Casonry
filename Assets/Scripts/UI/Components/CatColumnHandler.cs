@@ -118,12 +118,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         }
         if (myID != -1)
         {
-            Debug.LogError("update:" + remainingTime);
             textRemainingTime.text = Convert.ToString(remainingTime) + "s";
         }
         if (remainingTime == 0)
             OnFinish();
-        
     }
 
     //TODO:事件完成时调这个方法清空栏位，可以是(0 == remainingTime)的时候？
