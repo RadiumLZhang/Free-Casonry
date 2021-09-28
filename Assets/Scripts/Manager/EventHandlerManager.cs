@@ -36,7 +36,7 @@ namespace Manager
             {
                 handlerList[i].SetMonoHandler(monoList[i]);
             }
-            Debug.LogError("init 叻吗");
+            //Debug.LogError("init 叻吗");
         }
 
         // 获取议程槽的数量

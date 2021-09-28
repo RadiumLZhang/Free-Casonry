@@ -72,7 +72,16 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         textRemainingTime.text = Convert.ToString(remainingTime) + "s";
         imageRemainingTime.gameObject.SetActive(true);
         
-        droppedNPCEvent.EndDrag();
+        if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
+        {
+            droppedSpecialEvent.EndDrag();
+        }
+        else if ((droppedNPCEvent = pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
+        {
+            droppedNPCEvent.EndDrag();
+        }
+        
+        
     }
 
     public void DestroyEvent()
