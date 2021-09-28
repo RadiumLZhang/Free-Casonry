@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using EventHandler;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,8 @@ public class GameView : MonoBehaviour
     private Button buttonCloseExePanel;
     private RectTransform rectExePanel;
     private RectTransform specialEventPrefab;
+    public long currentDialogEventID;
+    
 
     //左上角时间
     private Text textDate;
@@ -59,6 +62,7 @@ public class GameView : MonoBehaviour
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
         
         UIManagerInit();
+        EventHandlerManager.Instance.InitMono(panelEventExe.transform);
     }
 
     private void UIManagerInit()
@@ -155,11 +159,17 @@ public class GameView : MonoBehaviour
     {
         //TODO：把原来的拖入响应事件放到这里
         UIManager.Instance.panelStartEventDialog.SetActive(false);
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnInit(currentDialogEventID);
+        eventHandler.OnPostInit(currentDialogEventID);
     }
     
     public void ButtonCloseEventDialog_OnClick()
     {
         UIManager.Instance.panelStartEventDialog.SetActive(false);
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnDestroy(currentDialogEventID);
+        
     }
     public void OpenExePanel()
     {

@@ -88,10 +88,10 @@ namespace Logic.Event
         public bool CanGenerate()
         {
             //判断生成次数
-            if (ExecuteCount >= Config.RepeatTime)
+            /*if (ExecuteCount >= Config.RepeatTime)
             {
                 return false;
-            }
+            }*/
             
             return CheckConditionGroup(Config.GenerateConditions);
         }
