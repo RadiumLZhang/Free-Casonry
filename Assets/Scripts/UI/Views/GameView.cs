@@ -185,6 +185,13 @@ public class GameView : MonoBehaviour
         closeExePanel_coroutine = StartCoroutine(ExePanelCoroutine(false));
     }
 
+    public void ClearScrollSpecialEvent()
+    {
+        for (int i = 0; i < contentTransform.transform.childCount; i++) {  
+            Destroy (contentTransform.transform.GetChild (i).gameObject);  
+        }  
+    }
+    
     void Update()
     {
         UpdatePanelResources();
