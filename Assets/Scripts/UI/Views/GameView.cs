@@ -67,7 +67,7 @@ public class GameView : MonoBehaviour
 
     private void UIManagerInit()
     {
-        UIManager.Instance.darkBackgroundImage = GameObject.Find("BackgroundImage").transform.Find("ImageBackgroundDark").gameObject;
+        UIManager.Instance.darkBackgroundImage = transform.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
         UIManager.Instance.panelCouncil = transform.Find("PanelCouncil").gameObject;
         UIManager.Instance.panelSettings = transform.Find("PanelSettings").gameObject;
         UIManager.Instance.panelEventExe = transform.Find("PanelEventExe").gameObject;
