@@ -441,8 +441,7 @@ namespace Logic.Effect
                 return;
             }
 
-            var human = HumanManager.Instance.GetHuman(humanId);
-            human?.SetEventRoll(isActive);
+            NPCManager.SetEventCycleActive(humanId, isActive);
         }
 
         private static void HumanDeath(params object[] args)
