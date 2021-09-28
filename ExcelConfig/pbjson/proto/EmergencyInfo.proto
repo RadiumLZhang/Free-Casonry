@@ -10,16 +10,18 @@ message EmergencyInfoConfig
         // @name 触发事件id
         // @key
         int64 emergencyId = 1;
+        // @name 图片
+        string picture = 2;
         // @name 名称
-        string name = 2;
+        string name = 3;
         // @name 事件描述
-        string description = 3;
+        string description = 4;
         // @name 产生时间
-        uint32 timeOffset = 4;
+        uint32 timeOffset = 5;
         // @name 默认选项
-        int32 defaultOption = 5;
+        int32 defaultOption = 6;
         // @name 选项
-        repeated Option options = 6;
+        repeated Option options = 7;
     }
 
     message Option
