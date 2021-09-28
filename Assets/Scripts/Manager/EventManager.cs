@@ -12,7 +12,7 @@ namespace Manager
         /*
          * 获取下方的事件列表
          */
-        public List<Logic.Event.CatEvent> GetCommonEventList()
+        public List<CatEvent> GetCommonEventList()
         {
             return GetEffectiveEventList(0);
         }
@@ -20,9 +20,14 @@ namespace Manager
         /*
          * 获取人物周围的事件列表
          */
-        public List<Logic.Event.CatEvent> GetRoleEventList(long id)
+        public List<CatEvent> GetRoleEventList(long id)
         {
             return GetEffectiveEventList(id);
+        }
+
+        public CatEvent GetCatEventByID(long id)
+        {
+            return id2Event[id];
         }
         
         
@@ -30,6 +35,7 @@ namespace Manager
 
         // 
         private Dictionary<long, List<Logic.Event.CatEvent>> eventMap = new Dictionary<long, List<Logic.Event.CatEvent>>();
+        private Dictionary<long, CatEvent> id2Event = new Dictionary<long, CatEvent>();
 
         public void Init()
         {
@@ -47,6 +53,7 @@ namespace Manager
                 eventMap[e.HumanId] = eventList;
             }
             eventList.Add(e);
+            id2Event[e.ID] = e;
         }
 
         private List<Logic.Event.CatEvent> GetEffectiveEventList(long id)
@@ -56,6 +63,7 @@ namespace Manager
             {
                 if (!e.IsDestroyed() && e.CanGenerate())
                 {
+                    var  a = e.GetHashCode();
                     if (e.Status == EventStatus.Init)
                     {
                         e.Status = EventStatus.Generated;

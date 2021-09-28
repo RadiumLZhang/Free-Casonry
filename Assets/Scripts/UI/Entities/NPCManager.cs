@@ -112,4 +112,14 @@ public class NPCManager : MonoBehaviour
             bIsLerping = false;
         }
     }
+    
+    public void SetEventCycleActive(long id, bool active)
+    {
+        if (!NPCs.TryGetValue(id, out var npc))
+        {
+            return;
+        }
+        
+        npc.SetEventTriggerActive(active);
+    }
 }

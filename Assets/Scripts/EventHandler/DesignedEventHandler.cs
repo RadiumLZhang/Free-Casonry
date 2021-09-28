@@ -34,7 +34,7 @@ namespace EventHandler
         public void SetEventInfo(int newEventID)
         {
             eventID = newEventID;
-            m_catEventInfo = new Logic.Event.CatEvent(eventID);
+            m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             emergencyId = (int)m_catEventInfo.GetEmergencyId();
             
             // 如果有紧急事件
@@ -92,7 +92,7 @@ namespace EventHandler
         private void SetEffect()
         {
             UpdateCacheTime();
-            
+            m_catEventInfo.Status = EventStatus.Finished;   
             m_catEventInfo.Finish(); //执行事件结算
             if (emergencyResolved == false)
             {

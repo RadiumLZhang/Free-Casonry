@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using EventHandler;
+using Logic.Event;
 using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -33,11 +34,13 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         {
             if (droppedSpecialEvent.bIsExtracting)
             {
+
                 myID = droppedSpecialEvent.GetEventID();
                 DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByID(index);
                 eventHandler.SetEventInfo((int) myID);
 
                 m_myCatEventInfo = eventHandler.GetEventInfo();
+                m_myCatEventInfo.Status = EventStatus.OnProcess;
                 transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
                 transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
 
