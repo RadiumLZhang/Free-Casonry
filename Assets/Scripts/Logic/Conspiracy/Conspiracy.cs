@@ -1,4 +1,5 @@
 using CatConspiracyInfo;
+using Logic.Condition;
 using UnityEngine;
 
 namespace Logic.Conspiracy
@@ -22,6 +23,11 @@ namespace Logic.Conspiracy
 
             Desc = Config.Description;
             Conditions = Config.Condition;
+        }
+
+        public bool Check()
+        {
+            return ConditionUtils.CheckCondition(Conditions);
         }
     }
 }
