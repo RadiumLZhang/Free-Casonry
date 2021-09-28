@@ -63,6 +63,7 @@ public class UIManager: BaseModel<UIManager>
         textResultPreview.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件结果，然后替换这个.Name
         if (m_myCatEventInfo.HumanId == 0)
         {
+            GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了human id == 0");
             imageParticipantCenter.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：换成拖进猫栏对应的猫的头像图片，@muidarzhang
             imageTarget.SetActive(false);
             imageParticipant.SetActive(false);
@@ -70,6 +71,7 @@ public class UIManager: BaseModel<UIManager>
         }
         else
         {
+            GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了human id != 0");
             imageParticipant.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：换成拖进猫栏对应的猫的头像图片，@muidarzhang
             imageTarget.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：绑定的人类单头像的路径，需要读人物表，@xinqizhou，人物id是m_myCatEventInfo.HumanId
             imageTarget.SetActive(true);
