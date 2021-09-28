@@ -40,7 +40,7 @@ public class UIManager: BaseModel<UIManager>
     public GameObject imageParticipantCenter;
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
-        darkBackgroundImage.SetActive(bIsSwitchToDark);
+        // darkBackgroundImage.SetActive(bIsSwitchToDark);
     }
 
     public void InitStartEventDialogUI()
