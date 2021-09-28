@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Logic;
+using Logic.Event;
 using Manager;
 using UnityEngine.Android;
 using Random = UnityEngine.Random;
@@ -81,32 +82,18 @@ public class GameView : MonoBehaviour
         var human = HumanManager.Instance;
         var h = human.GetHuman(60000);
         var list = EventManager.Instance.GetCommonEventList();
+        
+        RefreshScrollSpecialEvent(list);
 
-    
-        Transform temp = Instantiate(specialEventPrefab).transform;
-        //TODO:把这个random重写成你的事件生成方法（带ID），其余不动
-        
-        var testList = EventManager.Instance.GetCommonEventList();
-        foreach (var item in list)
-        {
-            temp.GetComponent<SpecialEventMono>().InitWithID(item.ID);
-        }
-        
-        
-        /*if (Random.value > 0.5f)
-        {
-            temp.GetComponent<SpecialEventMono>().InitWithID(1000);
-        }
-        else
-        {
-            temp.GetComponent<SpecialEventMono>().InitWithID(1000);
-        }
-        */
-        
-        temp.SetParent(contentTransform);
-        temp.localPosition = Vector3.zero;
-        temp.localRotation = Quaternion.identity;
-        temp.localScale = Vector3.one;
+        // foreach (var item in list)
+        // {
+        //     Transform temp = Instantiate(specialEventPrefab).transform;
+        //     temp.GetComponent<SpecialEventMono>().InitWithID(item.ID);
+        //     temp.SetParent(contentTransform);
+        //     temp.localPosition = Vector3.zero;
+        //     temp.localRotation = Quaternion.identity;
+        //     temp.localScale = Vector3.one;
+        // }
     }
 
     public void ButtonSettings_OnClick()
@@ -185,10 +172,30 @@ public class GameView : MonoBehaviour
         closeExePanel_coroutine = StartCoroutine(ExePanelCoroutine(false));
     }
 
-    public void ClearScrollSpecialEvent()
+    public void RefreshScrollSpecialEvent(List<CatEvent> events)
     {
-        for (int i = 0; i < contentTransform.transform.childCount; i++) {  
-            Destroy (contentTransform.transform.GetChild (i).gameObject);  
+        var originObjCount = contentTransform.childCount;
+        var n = Math.Min(events.Count, originObjCount);
+        //刷新现有的
+        for (var i = 0; i < n; i++)
+        {
+            contentTransform.GetChild(i).GetComponent<SpecialEventMono>().InitWithID(events[i].ID);
+        }
+
+        //增加新增的
+        for (var i = n; i < events.Count; i++)
+        {
+            var obj = Instantiate(specialEventPrefab).transform;
+            obj.GetComponent<SpecialEventMono>().InitWithID(events[i].ID);
+            obj.SetParent(contentTransform);
+            obj.localPosition = Vector3.zero;
+            obj.localRotation = Quaternion.identity;
+            obj.localScale = Vector3.one;
+        }
+        
+        //销毁多余的
+        for (var i = n; i < originObjCount; i++) {  
+            Destroy (contentTransform.GetChild (i).gameObject);  
         }  
     }
     
