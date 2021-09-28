@@ -27,7 +27,8 @@ namespace Logic.Event
         public int Type => Config?.Type ?? 0;
 
         public string Imageout => Config?.Imageout;
-
+        public string ImageIn => Config?.ImageIn;
+        
         public long ConsumeTime => Config?.ConsumeTime ?? 0;
 
         public long ExpireTime => Config?.ExpireTime ?? 0;

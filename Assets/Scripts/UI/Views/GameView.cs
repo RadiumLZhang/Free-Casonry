@@ -14,7 +14,6 @@ using Random = UnityEngine.Random;
 
 public class GameView : MonoBehaviour
 {
-    private GameObject darkBackgroundImage;
     private GameObject panelCouncil;
     private GameObject panelSettings;
     private GameObject panelEventExe;
@@ -40,7 +39,6 @@ public class GameView : MonoBehaviour
     private TickerSpeedEnum speedEnum;
     void Start()
     {
-        darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
         panelEventExe = transform.Find("PanelEventExe").gameObject;
@@ -65,16 +63,18 @@ public class GameView : MonoBehaviour
 
     private void UIManagerInit()
     {
-        UIManager.Instance.darkBackgroundImage = transform.Find("DarkBackgroundImage").gameObject;
+        UIManager.Instance.darkBackgroundImage = GameObject.Find("BackgroundImage").transform.Find("ImageBackgroundDark").gameObject;
         UIManager.Instance.panelCouncil = transform.Find("PanelCouncil").gameObject;
         UIManager.Instance.panelSettings = transform.Find("PanelSettings").gameObject;
         UIManager.Instance.panelEventExe = transform.Find("PanelEventExe").gameObject;
         UIManager.Instance.panelResources = transform.Find("PanelResources").gameObject;
+        UIManager.Instance.panelStartEventDialog = transform.Find("PanelStartEventDialog").gameObject;
         UIManager.Instance.scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
         UIManager.Instance.buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         UIManager.Instance.buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         UIManager.Instance.buttonCouncil = transform.Find("ButtonCouncil").gameObject;
         UIManager.Instance.buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+        UIManager.Instance.InitStartEventDialogUI();
     }
     public void ButtonTestEvent_OnClick()
     {
@@ -96,7 +96,7 @@ public class GameView : MonoBehaviour
     {
         speedEnum = TimeTickerManager.Instance.GetSpeed();
         TimeTickerManager.Instance.StopTick();
-        darkBackgroundImage.SetActive(true);
+        UIManager.Instance.SwitchDarkBackGround(true);
         panelSettings.SetActive(true);
     }
     public void ButtonRelationship_OnClick()
@@ -137,7 +137,7 @@ public class GameView : MonoBehaviour
     public void ButtonResume_OnClick()
     {
         TimeTickerManager.Instance.StartTickWithSpeed(speedEnum);
-        darkBackgroundImage.SetActive(false);
+        UIManager.Instance.SwitchDarkBackGround(false);
         panelSettings.SetActive(false);
     }
     
@@ -151,6 +151,16 @@ public class GameView : MonoBehaviour
         CloseExePanel();
     }
 
+    public void ButtonStartEvent_OnClick()
+    {
+        //TODO：把原来的拖入响应事件放到这里
+        UIManager.Instance.panelStartEventDialog.SetActive(false);
+    }
+    
+    public void ButtonCloseEventDialog_OnClick()
+    {
+        UIManager.Instance.panelStartEventDialog.SetActive(false);
+    }
     public void OpenExePanel()
     {
         buttonOpenExePanel.gameObject.SetActive(false);
