@@ -24,9 +24,9 @@ namespace Event {
     static EventInfoConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chtwcm90by9FdmVudEluZm9Db25maWcucHJvdG8SBUV2ZW50IqkFCg9FdmVu",
+            "Chtwcm90by9FdmVudEluZm9Db25maWcucHJvdG8SBUV2ZW50IssFCg9FdmVu",
             "dEluZm9Db25maWcSPAoMZXZlbnRfY29uZmlnGAEgAygLMiYuRXZlbnQuRXZl",
-            "bnRJbmZvQ29uZmlnLkV2ZW50SXRlbUNvbmZpZxr9AwoPRXZlbnRJdGVtQ29u",
+            "bnRJbmZvQ29uZmlnLkV2ZW50SXRlbUNvbmZpZxqfBAoPRXZlbnRJdGVtQ29u",
             "ZmlnEg8KB2V2ZW50SWQYASABKAMSDAoEbmFtZRgCIAEoCRIMCgR0eXBlGAMg",
             "ASgFEhMKC2NvbnN1bWVUaW1lGAUgASgDEhAKCGltYWdlb3V0GBMgASgJEg8K",
             "B2ltYWdlSW4YFCABKAkSEgoKZXhwaXJlVGltZRgGIAEoAxIZChFvdXRPZlRp",
@@ -38,13 +38,13 @@ namespace Event {
             "KAMSQQoSZ2VuZXJhdGVDb25kaXRpb25zGBEgAygLMiUuRXZlbnQuRXZlbnRJ",
             "bmZvQ29uZmlnLkNvbmRpdGlvbkdyb3VwEkAKEWRlc3Ryb3lDb25kaXRpb25z",
             "GBIgAygLMiUuRXZlbnQuRXZlbnRJbmZvQ29uZmlnLkNvbmRpdGlvbkdyb3Vw",
-            "GjIKC1Jlc3VsdEV2ZW50Eg8KB2V2ZW50SWQYASABKAMSEgoKY29uZGl0aW9u",
-            "cxgCIAMoAxokCg5Db25kaXRpb25Hcm91cBISCgpjb25kaXRpb25zGAEgAygD",
-            "YgZwcm90bzM="));
+            "Eg4KBnVwRGVzYxgVIAEoCRIQCghkb3duRGVzYxgWIAEoCRoyCgtSZXN1bHRF",
+            "dmVudBIPCgdldmVudElkGAEgASgDEhIKCmNvbmRpdGlvbnMYAiADKAMaJAoO",
+            "Q29uZGl0aW9uR3JvdXASEgoKY29uZGl0aW9ucxgBIAMoA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig), global::Event.EventInfoConfig.Parser, new[]{ "EventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.EventItemConfig), global::Event.EventInfoConfig.Types.EventItemConfig.Parser, new[]{ "EventId", "Name", "Type", "ConsumeTime", "Imageout", "ImageIn", "ExpireTime", "OutOfTimeRecordId", "HumanId", "RepeatTime", "EmergencyId", "IsImportant", "Priority", "Preconditions", "Effects", "Result", "ExpireEffect", "GenerateConditions", "DestroyConditions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig), global::Event.EventInfoConfig.Parser, new[]{ "EventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.EventItemConfig), global::Event.EventInfoConfig.Types.EventItemConfig.Parser, new[]{ "EventId", "Name", "Type", "ConsumeTime", "Imageout", "ImageIn", "ExpireTime", "OutOfTimeRecordId", "HumanId", "RepeatTime", "EmergencyId", "IsImportant", "Priority", "Preconditions", "Effects", "Result", "ExpireEffect", "GenerateConditions", "DestroyConditions", "UpDesc", "DownDesc" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.ResultEvent), global::Event.EventInfoConfig.Types.ResultEvent.Parser, new[]{ "EventId", "Conditions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Event.EventInfoConfig.Types.ConditionGroup), global::Event.EventInfoConfig.Types.ConditionGroup.Parser, new[]{ "Conditions" }, null, null, null, null)})
           }));
@@ -226,6 +226,8 @@ namespace Event {
           expireEffect_ = other.expireEffect_.Clone();
           generateConditions_ = other.generateConditions_.Clone();
           destroyConditions_ = other.destroyConditions_.Clone();
+          upDesc_ = other.upDesc_;
+          downDesc_ = other.downDesc_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -495,6 +497,34 @@ namespace Event {
           get { return destroyConditions_; }
         }
 
+        /// <summary>Field number for the "upDesc" field.</summary>
+        public const int UpDescFieldNumber = 21;
+        private string upDesc_ = "";
+        /// <summary>
+        ///@name 上方描述
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string UpDesc {
+          get { return upDesc_; }
+          set {
+            upDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "downDesc" field.</summary>
+        public const int DownDescFieldNumber = 22;
+        private string downDesc_ = "";
+        /// <summary>
+        ///@name 下方描述
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DownDesc {
+          get { return downDesc_; }
+          set {
+            downDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as EventItemConfig);
@@ -527,6 +557,8 @@ namespace Event {
           if(!expireEffect_.Equals(other.expireEffect_)) return false;
           if(!generateConditions_.Equals(other.generateConditions_)) return false;
           if(!destroyConditions_.Equals(other.destroyConditions_)) return false;
+          if (UpDesc != other.UpDesc) return false;
+          if (DownDesc != other.DownDesc) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -552,6 +584,8 @@ namespace Event {
           hash ^= expireEffect_.GetHashCode();
           hash ^= generateConditions_.GetHashCode();
           hash ^= destroyConditions_.GetHashCode();
+          if (UpDesc.Length != 0) hash ^= UpDesc.GetHashCode();
+          if (DownDesc.Length != 0) hash ^= DownDesc.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -623,6 +657,14 @@ namespace Event {
             output.WriteRawTag(162, 1);
             output.WriteString(ImageIn);
           }
+          if (UpDesc.Length != 0) {
+            output.WriteRawTag(170, 1);
+            output.WriteString(UpDesc);
+          }
+          if (DownDesc.Length != 0) {
+            output.WriteRawTag(178, 1);
+            output.WriteString(DownDesc);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -676,6 +718,12 @@ namespace Event {
           size += expireEffect_.CalculateSize(_repeated_expireEffect_codec);
           size += generateConditions_.CalculateSize(_repeated_generateConditions_codec);
           size += destroyConditions_.CalculateSize(_repeated_destroyConditions_codec);
+          if (UpDesc.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(UpDesc);
+          }
+          if (DownDesc.Length != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeStringSize(DownDesc);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -732,6 +780,12 @@ namespace Event {
           expireEffect_.Add(other.expireEffect_);
           generateConditions_.Add(other.generateConditions_);
           destroyConditions_.Add(other.destroyConditions_);
+          if (other.UpDesc.Length != 0) {
+            UpDesc = other.UpDesc;
+          }
+          if (other.DownDesc.Length != 0) {
+            DownDesc = other.DownDesc;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -820,6 +874,14 @@ namespace Event {
               }
               case 162: {
                 ImageIn = input.ReadString();
+                break;
+              }
+              case 170: {
+                UpDesc = input.ReadString();
+                break;
+              }
+              case 178: {
+                DownDesc = input.ReadString();
                 break;
               }
             }
