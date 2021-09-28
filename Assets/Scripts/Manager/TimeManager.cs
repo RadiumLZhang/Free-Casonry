@@ -117,6 +117,7 @@ namespace Manager
             
             // 添加ticker
             TimeTickerManager.Instance.AddLastingEvent(
+                -1,
                 () =>
                 {
                     timeStamp += step;

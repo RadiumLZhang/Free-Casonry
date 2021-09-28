@@ -24,6 +24,7 @@ namespace Manager
         private void AddTicker()
         {
             TimeTickerManager.Instance.AddLastingEventByStep(
+                -1,
                 transform.GetComponent<GameView>().RefreshScrollSpecialEvent,
                 1,
                 10,
