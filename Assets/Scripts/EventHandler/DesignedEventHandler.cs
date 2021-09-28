@@ -59,7 +59,6 @@ namespace EventHandler
                 emergencyTime = emergency.GetTimeOffset();
             }
             cacheTime = m_catEventInfo.ConsumeTime;
-            
             m_catEventInfo.Status = EventStatus.OnProcess; 
             TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateCacheTime, 1, 1, (int)m_catEventInfo.ConsumeTime, SetEffect);
             TimeTickerManager.Instance.StartTick(); //恢复时间
@@ -70,7 +69,7 @@ namespace EventHandler
             
             monoHandler.DestroyEvent(); // 删除时间槽的ui
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
-            m_catEventInfo.Execute(); //执行事件代价
+            //m_catEventInfo.Execute(); //执行事件代价
             //TimeTickerManager.Instance.StartTick(); //恢复时间
         }
 

@@ -27,7 +27,6 @@ namespace Manager
         
         public void InitMono(Transform panelEventExe)
         {
-            Debug.LogError("init 叻吗");
             monoList.Add(panelEventExe.Find("EventSlot").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot1").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot2").GetComponent<CatColumnHandler>());
@@ -36,7 +35,6 @@ namespace Manager
             {
                 handlerList[i].SetMonoHandler(monoList[i]);
             }
-            //Debug.LogError("init 叻吗");
         }
 
         // 获取议程槽的数量

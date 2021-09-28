@@ -99,8 +99,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             transform.GetComponent<Image>().raycastTarget = false;
         }
     }
-
-
+    
     public static void SendEventDestroyEvent(long id)
     {
         return;
@@ -108,11 +107,20 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
     void Update()
     {
+        
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         remainingTime = eventHandler.GetTimeRemain();
         //只要栏位中有事件(即ID不是默认的-1)就用remainingTime刷新UI显示
+        var tempEvent = eventHandler.GetEventInfo();
+        if (tempEvent != null)
+        {
+            myID = tempEvent.ID;
+        }
         if (myID != -1)
+        {
+            Debug.LogError("update:" + remainingTime);
             textRemainingTime.text = Convert.ToString(remainingTime) + "s";
+        }
         if (remainingTime == 0)
             OnFinish();
         
