@@ -33,13 +33,11 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
-        GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了on drop");
         pointerDragCache = eventData.pointerDrag;
         if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
         {
             if (droppedSpecialEvent.bIsExtracting)
             {
-
                 myID = droppedSpecialEvent.GetEventID();
                 DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
                 
@@ -47,7 +45,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 eventHandler.OnPreInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
-                GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了init start event dialog");
                 UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
             }
         }
@@ -60,7 +57,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.OnPreInit(myID);
             gameView.currentDialogEventID = myID;
             m_myCatEventInfo = eventHandler.GetEventInfo();
-            GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了init start event dialog");
             UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
         }
     }
