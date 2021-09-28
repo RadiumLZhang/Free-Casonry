@@ -79,11 +79,7 @@ public class GameView : MonoBehaviour
     public void ButtonTestEvent_OnClick()
     {
         
-        var human = HumanManager.Instance;
-        var h = human.GetHuman(60000);
-        var list = EventManager.Instance.GetCommonEventList();
-        
-        RefreshScrollSpecialEvent(list);
+        RefreshScrollSpecialEvent();
 
         // foreach (var item in list)
         // {
@@ -172,8 +168,9 @@ public class GameView : MonoBehaviour
         closeExePanel_coroutine = StartCoroutine(ExePanelCoroutine(false));
     }
 
-    public void RefreshScrollSpecialEvent(List<CatEvent> events)
+    public void RefreshScrollSpecialEvent()
     {
+        var events = EventManager.Instance.GetCommonEventList();
         var originObjCount = contentTransform.childCount;
         var n = Math.Min(events.Count, originObjCount);
         //刷新现有的
