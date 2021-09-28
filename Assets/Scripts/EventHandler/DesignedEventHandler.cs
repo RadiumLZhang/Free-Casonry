@@ -92,7 +92,7 @@ namespace EventHandler
         private void SetEffect()
         {
             UpdateCacheTime();
-            
+            m_catEventInfo.Status = EventStatus.Finished;   
             m_catEventInfo.Finish(); //执行事件结算
             if (emergencyResolved == false)
             {
