@@ -180,7 +180,6 @@ public class GameView : MonoBehaviour
         for (var i = 0; i < n; i++)
         {
             contentTransform.GetChild(i).GetComponent<SpecialEventMono>().InitWithID(events[i].ID);
-            events[i].Status = EventStatus.OnProcess;
         }
 
         //增加新增的
