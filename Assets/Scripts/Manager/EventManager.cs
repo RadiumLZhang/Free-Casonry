@@ -61,17 +61,38 @@ namespace Manager
             List<Logic.Event.CatEvent> returnList = new List<Logic.Event.CatEvent>();
             foreach (var e in eventMap[id])
             {
-                if (!e.IsDestroyed() && e.CanGenerate())
+                // finished
+                if (e.Status == EventStatus.Finished)
                 {
-                    var  a = e.GetHashCode();
-                    if (e.Status == EventStatus.Init)
+                    if (e.ExecuteCount >= e.Config.RepeatTime)
                     {
-                        e.Status = EventStatus.Generated;
+                        e.Status = EventStatus.Destroyed;
                     }
-                    if (e.Status == EventStatus.Generated)
+                    else
                     {
-                        returnList.Add(e);
+                        e.Status = EventStatus.Init;
                     }
+                }
+                // init
+                if (e.Status == EventStatus.Init)
+                {
+                    if (e.IsDestroyed())
+                    {
+                        e.Status = EventStatus.Destroyed;
+                    }
+                    else if (e.CanGenerate())
+                    {
+                        e.Generate();
+                    }
+                }
+                // generated
+                if (e.Status == EventStatus.Generated)
+                {
+                    if (!e.HasTicker && e.ExpireTime != 0)
+                    {
+                        e.AddTicker();
+                    }
+                    returnList.Add(e);
                 }
             }
             return returnList;

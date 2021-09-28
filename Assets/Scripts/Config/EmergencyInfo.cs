@@ -24,20 +24,20 @@ namespace EmergencyInfo {
     static EmergencyInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chlwcm90by9FbWVyZ2VuY3lJbmZvLnByb3RvEg1FbWVyZ2VuY3lJbmZvIugC",
+            "Chlwcm90by9FbWVyZ2VuY3lJbmZvLnByb3RvEg1FbWVyZ2VuY3lJbmZvIvkC",
             "ChNFbWVyZ2VuY3lJbmZvQ29uZmlnEk4KFGVtZXJnZW5jeUl0ZW1fY29uZmln",
             "GAEgAygLMjAuRW1lcmdlbmN5SW5mby5FbWVyZ2VuY3lJbmZvQ29uZmlnLkVt",
-            "ZXJnZW5jeUl0ZW0argEKDUVtZXJnZW5jeUl0ZW0SEwoLZW1lcmdlbmN5SWQY",
-            "ASABKAMSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRISCgp0",
-            "aW1lT2Zmc2V0GAQgASgNEhUKDWRlZmF1bHRPcHRpb24YBSABKAUSOgoHb3B0",
-            "aW9ucxgGIAMoCzIpLkVtZXJnZW5jeUluZm8uRW1lcmdlbmN5SW5mb0NvbmZp",
-            "Zy5PcHRpb24aUAoGT3B0aW9uEgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRp",
-            "b24YAiABKAkSDwoHZWZmZWN0cxgDIAMoAxISCgpjb25kaXRpb25zGAUgAygD",
-            "YgZwcm90bzM="));
+            "ZXJnZW5jeUl0ZW0avwEKDUVtZXJnZW5jeUl0ZW0SEwoLZW1lcmdlbmN5SWQY",
+            "ASABKAMSDwoHcGljdHVyZRgCIAEoCRIMCgRuYW1lGAMgASgJEhMKC2Rlc2Ny",
+            "aXB0aW9uGAQgASgJEhIKCnRpbWVPZmZzZXQYBSABKA0SFQoNZGVmYXVsdE9w",
+            "dGlvbhgGIAEoBRI6CgdvcHRpb25zGAcgAygLMikuRW1lcmdlbmN5SW5mby5F",
+            "bWVyZ2VuY3lJbmZvQ29uZmlnLk9wdGlvbhpQCgZPcHRpb24SDAoEbmFtZRgB",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRIPCgdlZmZlY3RzGAMgAygDEhIK",
+            "CmNvbmRpdGlvbnMYBSADKANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig), global::EmergencyInfo.EmergencyInfoConfig.Parser, new[]{ "EmergencyItemConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem), global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem.Parser, new[]{ "EmergencyId", "Name", "Description", "TimeOffset", "DefaultOption", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig), global::EmergencyInfo.EmergencyInfoConfig.Parser, new[]{ "EmergencyItemConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem), global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem.Parser, new[]{ "EmergencyId", "Picture", "Name", "Description", "TimeOffset", "DefaultOption", "Options" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.Option), global::EmergencyInfo.EmergencyInfoConfig.Types.Option.Parser, new[]{ "Name", "Description", "Effects", "Conditions" }, null, null, null, null)})
           }));
     }
@@ -200,6 +200,7 @@ namespace EmergencyInfo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public EmergencyItem(EmergencyItem other) : this() {
           emergencyId_ = other.emergencyId_;
+          picture_ = other.picture_;
           name_ = other.name_;
           description_ = other.description_;
           timeOffset_ = other.timeOffset_;
@@ -228,8 +229,22 @@ namespace EmergencyInfo {
           }
         }
 
+        /// <summary>Field number for the "picture" field.</summary>
+        public const int PictureFieldNumber = 2;
+        private string picture_ = "";
+        /// <summary>
+        /// @name 图片
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Picture {
+          get { return picture_; }
+          set {
+            picture_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         /// <summary>Field number for the "name" field.</summary>
-        public const int NameFieldNumber = 2;
+        public const int NameFieldNumber = 3;
         private string name_ = "";
         /// <summary>
         /// @name 名称
@@ -243,7 +258,7 @@ namespace EmergencyInfo {
         }
 
         /// <summary>Field number for the "description" field.</summary>
-        public const int DescriptionFieldNumber = 3;
+        public const int DescriptionFieldNumber = 4;
         private string description_ = "";
         /// <summary>
         /// @name 事件描述
@@ -257,7 +272,7 @@ namespace EmergencyInfo {
         }
 
         /// <summary>Field number for the "timeOffset" field.</summary>
-        public const int TimeOffsetFieldNumber = 4;
+        public const int TimeOffsetFieldNumber = 5;
         private uint timeOffset_;
         /// <summary>
         /// @name 产生时间
@@ -271,7 +286,7 @@ namespace EmergencyInfo {
         }
 
         /// <summary>Field number for the "defaultOption" field.</summary>
-        public const int DefaultOptionFieldNumber = 5;
+        public const int DefaultOptionFieldNumber = 6;
         private int defaultOption_;
         /// <summary>
         /// @name 默认选项
@@ -285,9 +300,9 @@ namespace EmergencyInfo {
         }
 
         /// <summary>Field number for the "options" field.</summary>
-        public const int OptionsFieldNumber = 6;
+        public const int OptionsFieldNumber = 7;
         private static readonly pb::FieldCodec<global::EmergencyInfo.EmergencyInfoConfig.Types.Option> _repeated_options_codec
-            = pb::FieldCodec.ForMessage(50, global::EmergencyInfo.EmergencyInfoConfig.Types.Option.Parser);
+            = pb::FieldCodec.ForMessage(58, global::EmergencyInfo.EmergencyInfoConfig.Types.Option.Parser);
         private readonly pbc::RepeatedField<global::EmergencyInfo.EmergencyInfoConfig.Types.Option> options_ = new pbc::RepeatedField<global::EmergencyInfo.EmergencyInfoConfig.Types.Option>();
         /// <summary>
         /// @name 选项
@@ -311,6 +326,7 @@ namespace EmergencyInfo {
             return true;
           }
           if (EmergencyId != other.EmergencyId) return false;
+          if (Picture != other.Picture) return false;
           if (Name != other.Name) return false;
           if (Description != other.Description) return false;
           if (TimeOffset != other.TimeOffset) return false;
@@ -323,6 +339,7 @@ namespace EmergencyInfo {
         public override int GetHashCode() {
           int hash = 1;
           if (EmergencyId != 0L) hash ^= EmergencyId.GetHashCode();
+          if (Picture.Length != 0) hash ^= Picture.GetHashCode();
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (Description.Length != 0) hash ^= Description.GetHashCode();
           if (TimeOffset != 0) hash ^= TimeOffset.GetHashCode();
@@ -345,20 +362,24 @@ namespace EmergencyInfo {
             output.WriteRawTag(8);
             output.WriteInt64(EmergencyId);
           }
-          if (Name.Length != 0) {
+          if (Picture.Length != 0) {
             output.WriteRawTag(18);
+            output.WriteString(Picture);
+          }
+          if (Name.Length != 0) {
+            output.WriteRawTag(26);
             output.WriteString(Name);
           }
           if (Description.Length != 0) {
-            output.WriteRawTag(26);
+            output.WriteRawTag(34);
             output.WriteString(Description);
           }
           if (TimeOffset != 0) {
-            output.WriteRawTag(32);
+            output.WriteRawTag(40);
             output.WriteUInt32(TimeOffset);
           }
           if (DefaultOption != 0) {
-            output.WriteRawTag(40);
+            output.WriteRawTag(48);
             output.WriteInt32(DefaultOption);
           }
           options_.WriteTo(output, _repeated_options_codec);
@@ -372,6 +393,9 @@ namespace EmergencyInfo {
           int size = 0;
           if (EmergencyId != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(EmergencyId);
+          }
+          if (Picture.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Picture);
           }
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -399,6 +423,9 @@ namespace EmergencyInfo {
           }
           if (other.EmergencyId != 0L) {
             EmergencyId = other.EmergencyId;
+          }
+          if (other.Picture.Length != 0) {
+            Picture = other.Picture;
           }
           if (other.Name.Length != 0) {
             Name = other.Name;
@@ -429,22 +456,26 @@ namespace EmergencyInfo {
                 break;
               }
               case 18: {
-                Name = input.ReadString();
+                Picture = input.ReadString();
                 break;
               }
               case 26: {
+                Name = input.ReadString();
+                break;
+              }
+              case 34: {
                 Description = input.ReadString();
                 break;
               }
-              case 32: {
+              case 40: {
                 TimeOffset = input.ReadUInt32();
                 break;
               }
-              case 40: {
+              case 48: {
                 DefaultOption = input.ReadInt32();
                 break;
               }
-              case 50: {
+              case 58: {
                 options_.AddEntriesFrom(input, _repeated_options_codec);
                 break;
               }

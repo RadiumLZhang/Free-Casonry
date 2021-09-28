@@ -9,7 +9,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 0,
+      "repeatTime" : 1,
       "emergencyId" : "20000",
       "isImportant" : 1,
       "priority" : 200,
@@ -81,7 +81,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     },
     {
       "eventId" : "11001",
@@ -92,7 +94,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 0,
+      "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 200,
@@ -164,7 +166,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     },
     {
       "eventId" : "11002",
@@ -175,7 +179,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 0,
+      "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 200,
@@ -247,7 +251,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     },
     {
       "eventId" : "11003",
@@ -258,7 +264,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 0,
+      "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 190,
@@ -330,7 +336,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     },
     {
       "eventId" : "11004",
@@ -341,7 +349,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 0,
+      "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 180,
@@ -414,7 +422,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     },
     {
       "eventId" : "11005",
@@ -425,7 +435,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 0,
+      "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 250,
@@ -498,7 +508,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     }
   ]
 }
