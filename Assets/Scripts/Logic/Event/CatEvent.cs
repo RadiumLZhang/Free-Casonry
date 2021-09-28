@@ -90,6 +90,12 @@ namespace Logic.Event
 
         public bool CanGenerate()
         {
+            //判断生成次数
+            /*if (ExecuteCount >= Config.RepeatTime)
+            {
+                return false;
+            }*/
+            
             return CheckConditionGroup(Config.GenerateConditions);
         }
 
@@ -124,7 +130,7 @@ namespace Logic.Event
         {
             //todo 结算结果
             // Config.Result;
-            var resultId = 0l;
+            var resultId = 0L;
             foreach (var resultEvent in Config.Result)
             {
                 var success = true;

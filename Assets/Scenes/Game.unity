@@ -3214,7 +3214,7 @@ GameObject:
   - component: {fileID: 500003603}
   - component: {fileID: 500003602}
   m_Layer: 5
-  m_Name: EventSlot (3)
+  m_Name: EventSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5093,7 +5093,7 @@ GameObject:
   - component: {fileID: 762328847}
   - component: {fileID: 762328846}
   m_Layer: 5
-  m_Name: EventSlot (2)
+  m_Name: EventSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6500,7 +6500,7 @@ GameObject:
   - component: {fileID: 986882632}
   - component: {fileID: 986882634}
   m_Layer: 5
-  m_Name: EventSlot (1)
+  m_Name: EventSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8584,6 +8584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0b8f47d43aa644ba9347c6fbc80edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDialogEventID: 0
 --- !u!114 &1285887100
 MonoBehaviour:
   m_ObjectHideFlags: 0
