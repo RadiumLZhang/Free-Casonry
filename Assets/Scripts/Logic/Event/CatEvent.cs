@@ -2,6 +2,7 @@
 using Google.Protobuf.Collections;
 using Logic.Condition;
 using Logic.Effect;
+using Manager;
 using ResultEventInfo;
 using UnityEngine;
 
@@ -56,6 +57,8 @@ namespace Logic.Event
         /// </summary>
         public int Priority => Config?.Priority ?? 0;
 
+        public bool HasTicker = false;
+
         public CatEvent(long id)
         {
             ID = id;
@@ -87,12 +90,6 @@ namespace Logic.Event
 
         public bool CanGenerate()
         {
-            //判断生成次数
-            if (ExecuteCount >= Config.RepeatTime)
-            {
-                return false;
-            }
-            
             return CheckConditionGroup(Config.GenerateConditions);
         }
 
@@ -109,13 +106,13 @@ namespace Logic.Event
 
         public void Execute()
         {
+            this.Status = EventStatus.OnProcess;
             //todo 执行效果、代价
             // Config.Effects;
             if (!CanExecute())
             {
                 return;
             }
-            ExecuteCount++;
 
             foreach (var VARIABLE in Config.Effects)
             {
@@ -162,8 +159,21 @@ namespace Logic.Event
             }
         }
 
+        public void AddTicker()
+        {
+            this.HasTicker = true;
+            TimeTickerManager.Instance.AddEvent(ID,
+                () =>
+                {
+                    this.OutOfTimeResult();
+                },
+                (int) ExpireTime);
+        }
+
         public void OutOfTimeResult()
         {
+            this.HasTicker = false;
+            this.Status = EventStatus.Finished;
             //todo 结算超时效果
             // Config.ExpireEffect;
             //todo 超时record 不知道干嘛用
