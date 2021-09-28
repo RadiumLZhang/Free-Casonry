@@ -33,6 +33,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
+        Debug.LogError("走到了on drop");
         pointerDragCache = eventData.pointerDrag;
         if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
         {
