@@ -107,16 +107,22 @@ namespace Manager
         }
 
         /*
-         * 每一帧都会执行的事件
+         * 每x帧都会执行的事件
          * @param: callBack         持续事件回调函数
          * @param: delaySecond      经过x秒后开始执行
-         * @param: finishSecond     经过x秒后不再持续
+         * @param: step             每x帧执行一次
+         * @param: finishSecond     经过x秒后不再持续，配置0或负数表示会一直执行不会结束
          * @param: finishCallBack   结束回调
          */
-        public int onUpdate(CallBack callBack, int delaySecond,
+        public int AddLastingEventByStep(CallBack callBack, int delaySecond, int step,
             int finishSecond, CallBack finishCallBack)
         {
-            return AddLastingEvent(callBack, delaySecond, 0, finishSecond, finishCallBack);
+            int frame = delaySecond * stepPerSecond + frameIndex;
+            int finishFrame = finishSecond > 0 ? finishSecond * stepPerSecond + frameIndex : 0;
+            LastingEventItem lastingEventItem =
+                new LastingEventItem(callBack, frame, step, finishCallBack, finishFrame);
+            insertEvent(lastingList, lastingEventItem);
+            return 0;
         }
 
         /*

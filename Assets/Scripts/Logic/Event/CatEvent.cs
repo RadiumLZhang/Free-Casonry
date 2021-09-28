@@ -80,18 +80,25 @@ namespace Logic.Event
                     return false;
                 }
             }
-            //判断执行次数
-            if (ExecuteCount >= Config.RepeatTime)
-            {
-                return false;
-            }
-            
+
             return true;
         }
 
         public bool CanGenerate()
         {
+            //判断生成次数
+            if (ExecuteCount >= Config.RepeatTime)
+            {
+                return false;
+            }
+            
             return CheckConditionGroup(Config.GenerateConditions);
+        }
+
+        public void Generate()
+        {
+            ExecuteCount++;
+            Status = EventStatus.Generated;
         }
 
         public bool IsDestroyed()

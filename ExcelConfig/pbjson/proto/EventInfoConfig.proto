@@ -46,6 +46,10 @@ message EventInfoConfig {
         repeated ConditionGroup generateConditions = 17;
         //@name 销毁条件组
         repeated ConditionGroup destroyConditions = 18;
+        //@name 上方描述
+        string upDesc = 21;
+        //@name 下方描述
+        string downDesc = 22;
     }
 
     message ResultEvent
