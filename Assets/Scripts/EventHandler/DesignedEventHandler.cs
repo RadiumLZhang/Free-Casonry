@@ -138,7 +138,6 @@ namespace EventHandler
             cacheTime = 0;
             emergencyTime = 0;
             TimeTickerManager.Instance.Restore(); //恢复时间
-            monoHandler.DestroyEvent(); //设置议程槽的ui
         }
 
         // 点击紧急事件红点
