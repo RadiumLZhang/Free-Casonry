@@ -51,6 +51,8 @@ namespace Logic
 
         public int StoryProgress { get; set; }
 
+        private HashSet<long> m_records = new HashSet<long>();
+
         public void SetResource(ResourceType type, int value)
         {
             m_resource[(int) type] = value;
@@ -72,7 +74,20 @@ namespace Logic
             public long eventId;
             public long result;
         }
-        
-        
+
+        public void AddRecord(long id)
+        {
+            m_records.Add(id);
+        }
+
+        public void RemoveRecord(long id)
+        {
+            m_records.Remove(id);
+        }
+
+        public bool CheckRecord(long id)
+        {
+            return m_records.Contains(id);
+        }
     }
 }
