@@ -32,7 +32,7 @@ public class NPCMono : MonoBehaviour
         
         for (int i = 0; i < 5; i++)
         {
-            eventcols.Add(transform.Find("EventCycle").Find("NPCEvent" + i).GetComponent<NPCEventMono>());
+            eventcols.Add(transform.Find("EventCycle/root/NPCEvent" + i).GetComponent<NPCEventMono>());
         }
     }
 
