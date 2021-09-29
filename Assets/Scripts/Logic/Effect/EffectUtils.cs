@@ -39,8 +39,16 @@ namespace Logic.Effect
                 Debug.LogError($"Invalid EffectId:{id}");
                 return;
             }
+
+
+            var parasCount = config.Paras.Count;
+            var list = new object[parasCount];
+            for (int i = 0; i < parasCount; i++)
+            {
+                list[i] = config.Paras[i];
+            }
             
-            ActivateBaseEffect(config.BaseEffectId, new List<int>(config.Paras));
+            ActivateBaseEffect(config.BaseEffectId, list);
         }
         
         private static void ActivateBaseEffect(long id, params object[] args)
@@ -272,6 +280,7 @@ namespace Logic.Effect
 
             if (!(args[0] is int value))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
 
@@ -293,6 +302,7 @@ namespace Logic.Effect
 
             if (!(args[0] is int index))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
 
@@ -313,7 +323,16 @@ namespace Logic.Effect
 
         private static void RecordChange(bool isAdd, params object[] args)
         {
-            //todo
+            var record = (int) args[0];
+            if (isAdd)
+            {
+                PlayerModel.Instance.AddRecord(record);
+            }
+            else
+            {
+                PlayerModel.Instance.RemoveRecord(record);
+            }
+            
         }
 
         private static void EventGenerate(params object[] args)
@@ -350,6 +369,7 @@ namespace Logic.Effect
 
             if (!(args[0] is int humanId) || !(args[1] is int tagId))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
             var human = HumanManager.Instance.GetHuman(humanId);
@@ -377,12 +397,14 @@ namespace Logic.Effect
 
             if (!(args[0] is int humanId) || !(args[1] is int value))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
 
             var human = HumanManager.Instance.GetHuman(humanId);
             if (human == null)
             {
+                Debug.LogError($"无人物 {humanId}");
                 return;
             }
 
@@ -404,12 +426,19 @@ namespace Logic.Effect
             
             if (!(args[0] is int humanId))
             {
+                
                 return;
             }
             
             var human = HumanManager.Instance.GetHuman(humanId);
 
-            human?.SetLock(type, isLock);
+            if (human == null)
+            {
+                Debug.LogError($"无人物 {humanId}");
+                return;
+            }
+            
+            human.SetLock(type, isLock);
         }
         
         private static void HumanWashHeadStatus(bool isWashHead, params object[] args)
@@ -421,12 +450,19 @@ namespace Logic.Effect
 
             if (!(args[0] is int humanId))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
 
             var human = HumanManager.Instance.GetHuman(humanId);
 
-            human?.SetWashHead(isWashHead);
+            if (human == null)
+            {
+                Debug.LogError($"无人物 {humanId}");
+                return;
+            }
+            
+            human.SetWashHead(isWashHead);
         }
 
         private static void HumanEventRoll(bool isActive, params object[] args)
@@ -438,6 +474,7 @@ namespace Logic.Effect
 
             if (!(args[0] is int humanId))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
 
@@ -453,11 +490,18 @@ namespace Logic.Effect
 
             if (!(args[0] is int humanId))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
 
             var human = HumanManager.Instance.GetHuman(humanId);
-            human?.Death();
+            if (human == null)
+            {
+                Debug.LogError($"无人物 {humanId}");
+                return;
+            }
+            
+            human.Death();
         }
 
         private static void HumanGetCat(params object[] args)
@@ -466,15 +510,16 @@ namespace Logic.Effect
             {
                 return;
             }
-            
             var human = GetHuman(args[0]);
             if (human == null)
             {
+                Debug.LogError($"无人物 {(int) args[0]}");
                 return;
             }
             
             if (!(args[1] is int catId))
             {
+                Debug.LogError($"参数不为int");
                 return;
             }
             
@@ -512,6 +557,7 @@ namespace Logic.Effect
         {
             if (args == null || args.Length < count)
             {
+                Debug.LogError($"参数长度异常！！！");
                 return false;
             }
 
@@ -522,6 +568,7 @@ namespace Logic.Effect
         {
             if (!(obj is int humanId))
             {
+                Debug.LogError($"参数不为int");
                 return null;
             }
 
@@ -594,6 +641,7 @@ namespace Logic.Effect
         {
             if (!(obj is int catId))
             {
+                Debug.LogError($"参数不为int");
                 return null;
             }
 
