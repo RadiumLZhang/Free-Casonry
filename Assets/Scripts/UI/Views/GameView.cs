@@ -66,22 +66,8 @@ public class GameView : MonoBehaviour
 
     private void UIManagerInit()
     {
-        UIManager.Instance.darkBackgroundImage = transform.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
-        UIManager.Instance.panelCouncil = transform.Find("PanelCouncil").gameObject;
-        UIManager.Instance.panelSettings = transform.Find("PanelSettings").gameObject;
-        UIManager.Instance.panelEventExe = transform.Find("PanelEventExe").gameObject;
-        UIManager.Instance.panelResources = transform.Find("PanelResources").gameObject;
-        UIManager.Instance.panelStartEventDialog = transform.Find("PanelStartEventDialog").gameObject;
-        UIManager.Instance.panelEmergencyDialog = transform.Find("PanelEmergencyDialog").gameObject;
-        UIManager.Instance.panelFinishEventDialog = transform.Find("PanelFinishEventDialog").gameObject;
-        UIManager.Instance.scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
-        UIManager.Instance.buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
-        UIManager.Instance.buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
-        UIManager.Instance.buttonCouncil = transform.Find("ButtonCouncil").gameObject;
-        UIManager.Instance.buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
-        UIManager.Instance.EventPopAnimation = transform.Find("Animation/EventPopAnimation").gameObject;
-        UIManager.Instance.InitCatColumns();
-        UIManager.Instance.InitDialogs();
+        UIManager.Instance.gameView = transform;
+        UIManager.Instance.Init();
     }
     public void ButtonTestEvent_OnClick()
     {
