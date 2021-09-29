@@ -44,6 +44,10 @@ public class UIManager: BaseModel<UIManager>
     public GameObject FinishFlag1;
     public GameObject FinishFlag2;
     public GameObject FinishFlag3;
+    public GameObject EmergencyFlag0;
+    public GameObject EmergencyFlag1;
+    public GameObject EmergencyFlag2;
+    public GameObject EmergencyFlag3;
     
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
@@ -64,13 +68,33 @@ public class UIManager: BaseModel<UIManager>
                 break;
         }
     }
+    public void SwitchEmergencyFlag(int index,bool bIsSwitchToShown)
+    {
+        switch (index)
+        {
+            case 0:EmergencyFlag0.SetActive(bIsSwitchToShown);
+                break;
+            case 1:EmergencyFlag1.SetActive(bIsSwitchToShown);
+                break;
+            case 2:EmergencyFlag2.SetActive(bIsSwitchToShown);
+                break;
+            case 3:EmergencyFlag3.SetActive(bIsSwitchToShown);
+                break;
+        }
+    }
+    
 
-    public void InitFinishFlags()
+    public void InitFlags()
     {
         FinishFlag0 = panelEventExe.transform.Find("EventSlot/ImageFinishFlag").gameObject;
         FinishFlag1 = panelEventExe.transform.Find("EventSlot1/ImageFinishFlag").gameObject;
         FinishFlag2 = panelEventExe.transform.Find("EventSlot2/ImageFinishFlag").gameObject;
         FinishFlag3 = panelEventExe.transform.Find("EventSlot3/ImageFinishFlag").gameObject;
+        
+        EmergencyFlag0 = panelEventExe.transform.Find("EventSlot/ImageEmergencyFlag").gameObject;
+        EmergencyFlag1 = panelEventExe.transform.Find("EventSlot1/ImageEmergencyFlag").gameObject;
+        EmergencyFlag2 = panelEventExe.transform.Find("EventSlot2/ImageEmergencyFlag").gameObject;
+        EmergencyFlag3 = panelEventExe.transform.Find("EventSlot3/ImageEmergencyFlag").gameObject;
     }
     public void InitStartEventDialogUI()
     {
