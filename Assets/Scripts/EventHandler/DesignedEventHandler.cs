@@ -58,15 +58,18 @@ namespace EventHandler
         {
             return cacheTime;
         }
-
+        
+        // 拖动事件到议程槽触发
         public void OnInit(long newEventID)
         {
             eventID = newEventID;
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             emergencyId = m_catEventInfo.GetEmergencyId();
             TimeTickerManager.Instance.StopTick(); // 暂停时间
+            UIManager.Instance.InitStartEventDialog(m_catEventInfo);
         }
 
+        // 点击确认开始事件触发
         public void OnPostInit(long newEventID)
         {
             
@@ -85,7 +88,6 @@ namespace EventHandler
             m_catEventInfo.Status = EventStatus.OnProcess; 
             TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateTime, 1, 1, (int)m_catEventInfo.ConsumeTime, OnPreFinish);
             TimeTickerManager.Instance.Restore(); //恢复时间
-            monoHandler.DestroyEvent(); // 删除时间槽的ui
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             m_catEventInfo.ExecuteEffect(); //执行事件代价
         }
@@ -120,7 +122,6 @@ namespace EventHandler
             long resultId = m_catEventInfo.GetResultId();
             m_catEventInfo.FinishEffect(resultId);
             OnDestroyEvent();
-            
             UIManager.Instance.SwitchFinishFlag(index, false);
         }
         
@@ -149,14 +150,8 @@ namespace EventHandler
         // 点击紧急事件结算
         public void OnPostEmergency(int choiceIndex)
         {
-            switch (choiceIndex)
-            {
-                case 1:
-                    break;
-                case 2:
-                    break;
-            }
-            //TODO:选择紧急事件选项@muidarzhang
+            emergency.Choose(choiceIndex);
+            emergencyResolved = true;
         }
         
         // 紧急事件红点显示

@@ -47,7 +47,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
-                UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
                 
                 transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
                 transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
@@ -61,8 +60,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             // on preinit
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
-            m_myCatEventInfo = eventHandler.GetEventInfo();
-            UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
+            
         }
 
         InitHandler();
