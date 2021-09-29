@@ -43,6 +43,7 @@ namespace UI.Animation
 
         public void Play()
         {
+            UIManager.Instance.SwitchDarkBackGround(true);
             UIManager.Instance.EventPopAnimation.SetActive(true);
             SetSprite(0);
             CallBackFunction = null;
@@ -53,6 +54,7 @@ namespace UI.Animation
 
         public void Play(CallBack callBack)
         {
+            UIManager.Instance.SwitchDarkBackGround(true);
             UIManager.Instance.EventPopAnimation.SetActive(true);
             SetSprite(0);
             CallBackFunction = callBack;

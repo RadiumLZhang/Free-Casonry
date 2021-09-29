@@ -12,7 +12,7 @@
         public const int DAY = 24;
         
         // 现实中的一秒对应游戏中的x秒, TimeManager当中使用
-        public const int TIME_STEP = 20;
+        public const int TIME_STEP = 600;
         
         // TimeTickerManager每秒执行多少次
         public const int TIME_TICKER_STEP = 20;
