@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Logic;
 using Logic.Event;
 using UnityEngine;
@@ -36,6 +37,8 @@ public class UIManager: BaseModel<UIManager>
     public Transform textEventDescription_start;
     public Transform imageEvent_start;
     public Transform textResultPreview_start;
+    public Transform textEventCardTime_start;
+    public Transform textEventCardName_start;
     
     public GameObject imageTarget_start;
     public GameObject imageParticipant_start;
@@ -47,6 +50,16 @@ public class UIManager: BaseModel<UIManager>
     public Transform imageEvent_finish;
     public Transform textResult_finish;
     public Transform buttonText_finish;
+    
+    //EmergencyDialog
+    public Transform textEventName_emergency;
+    public Transform textEventDescription_emergency;
+    public Transform imageEvent_emergency;
+    public Transform textResult_emergency;
+    public Transform textEventCardTime_emergency;
+    public Transform textEventCardName_emergency;
+    public Transform Choice1_emergency;
+    public Transform Choice2_emergency;
     
     //CatColumns
     public GameObject CatColumn0;
@@ -136,6 +149,8 @@ public class UIManager: BaseModel<UIManager>
         textEventName_start = panelStartEventDialog.transform.Find("TextEventName");
         textEventDescription_start = panelStartEventDialog.transform.Find("TextEventDescription");
         imageEvent_start = panelStartEventDialog.transform.Find("ImageEvent");
+        textEventCardTime_start = imageEvent_start.Find("EventCard/TextEventCardTime");
+        textEventCardName_start = imageEvent_start.Find("EventCard/TextEventCardName");
         textResultPreview_start = panelStartEventDialog.transform.Find("ImageResultPreview/TextResultPreview");
         
         imageTarget_start = panelStartEventDialog.transform.Find("ImageTarget").gameObject;
@@ -150,14 +165,38 @@ public class UIManager: BaseModel<UIManager>
         buttonText_finish = panelFinishEventDialog.transform.Find("ButtonFinishEvent/Text");
         
         //EmergencyDialog
+        textEventName_emergency = panelEmergencyDialog.transform.Find("TextEventName");
+        textEventDescription_emergency = panelEmergencyDialog.transform.Find("TextEventDescription");
+        imageEvent_emergency = panelEmergencyDialog.transform.Find("ImageEvent"); 
+        textEventCardTime_emergency = imageEvent_emergency.Find("EventCard/TextEventCardTime");
+        textEventCardName_emergency = imageEvent_emergency.Find("EventCard/TextEventCardName");
+        //Choice1_emergency;
+        //Choice2_emergency;
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
         panelStartEventDialog.SetActive(true);
         textEventName_start.GetComponent<Text>().text = m_myCatEventInfo.Name;
-        textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name
+        textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
         imageEvent_start.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);//TODO:这个字段策划还没配！！
-        textResultPreview_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件结果，然后替换这个.Name
+        textResultPreview_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
+        switch(m_myCatEventInfo.Type)
+        {
+            case 0:
+                textEventCardName_start.GetComponent<Text>().text = "特殊事件";
+                break;
+            case 1:
+                textEventCardName_start.GetComponent<Text>().text = "刺探事件";
+                break;
+            case 2:
+                textEventCardName_start.GetComponent<Text>().text = "密谋事件";
+                break;
+            case 3:
+                textEventCardName_start.GetComponent<Text>().text = "交流事件";
+                break;
+        }
+        textEventCardTime_start.GetComponent<Text>().text = m_myCatEventInfo.ConsumeTime.ToString();
+        
         if (m_myCatEventInfo.HumanId == 0)
         {
             GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了human id == 0");
