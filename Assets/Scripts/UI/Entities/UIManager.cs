@@ -181,7 +181,7 @@ public class UIManager: BaseModel<UIManager>
         textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
         imageEvent_start.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);//TODO:这个字段策划还没配！！
         textResultPreview_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
-        textEventCardTime_start.GetComponent<Text>().text = m_myCatEventInfo.ConsumeTime.ToString();
+        textEventCardTime_start.GetComponent<Text>().text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
         switch(m_myCatEventInfo.Type)
         {
             case 0:
@@ -223,7 +223,7 @@ public class UIManager: BaseModel<UIManager>
         panelEmergencyDialog.SetActive(true);
         textEventName_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Name;
         textEventDescription_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Description;//TODO:读事件描述，然后替换这个.Name @muidarzhang
-        textEventCardTime_emergency.GetComponent<Text>().text = cacheTime.ToString();
+        textEventCardTime_emergency.GetComponent<Text>().text = (cacheTime * 10) + "分钟";
         //imageEvent_emergency.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myEmergencyInfo.ImageIn);//TODO:这个字段策划还没配！！
         List<EmergencyInfoConfig.Types.Option> optionList = m_myEmergencyInfo.GetOptions();
         if (optionList.Count >= 1)

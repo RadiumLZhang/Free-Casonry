@@ -73,7 +73,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         // transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
         
         remainingTime = eventHandler.GetTimeRemain();
-        textRemainingTime.text = Convert.ToString(remainingTime) + "s";
+        textRemainingTime.text = Convert.ToString((remainingTime) * 10) + "分钟";
         imageRemainingTime.gameObject.SetActive(true);
         
         if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
@@ -121,7 +121,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         }
         if (myID != -1)
         {
-            textRemainingTime.text = Convert.ToString(remainingTime) + "s";
+            textRemainingTime.text = Convert.ToString((remainingTime) * 10) + "分钟";
         }
         
         if (tempEvent == null)
