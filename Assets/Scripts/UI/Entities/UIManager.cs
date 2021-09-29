@@ -16,6 +16,8 @@ public class UIManager: BaseModel<UIManager>
     public GameObject panelEventExe;
     public GameObject panelResources;
     public GameObject panelStartEventDialog;
+    public GameObject panelEmergencyDialog;
+    public GameObject panelFinishEventDialog;
     
     //Scrolls
     public GameObject scrollSpecialEvent;
@@ -38,6 +40,12 @@ public class UIManager: BaseModel<UIManager>
     public GameObject imageTarget;
     public GameObject imageParticipant;
     public GameObject imageParticipantCenter;
+    
+    //CatColumns
+    public GameObject CatColumn0;
+    public GameObject CatColumn1;
+    public GameObject CatColumn2;
+    public GameObject CatColumn3;
     
     //FinishFlags
     public GameObject FinishFlag0;
@@ -82,19 +90,38 @@ public class UIManager: BaseModel<UIManager>
                 break;
         }
     }
-    
 
-    public void InitFlags()
+    public void SwitchCatColumn(int index, bool bIsSwitchToShown)
     {
-        FinishFlag0 = panelEventExe.transform.Find("EventSlot/ImageFinishFlag").gameObject;
-        FinishFlag1 = panelEventExe.transform.Find("EventSlot1/ImageFinishFlag").gameObject;
-        FinishFlag2 = panelEventExe.transform.Find("EventSlot2/ImageFinishFlag").gameObject;
-        FinishFlag3 = panelEventExe.transform.Find("EventSlot3/ImageFinishFlag").gameObject;
+        switch (index)
+        {
+            case 0:CatColumn0.SetActive(bIsSwitchToShown);
+                break;
+            case 1:CatColumn1.SetActive(bIsSwitchToShown);
+                break;
+            case 2:CatColumn2.SetActive(bIsSwitchToShown);
+                break;
+            case 3:CatColumn3.SetActive(bIsSwitchToShown);
+                break;
+        }
+    }
+
+    public void InitCatColumns()
+    {
+        CatColumn0 = panelEventExe.transform.Find("EventSlot").gameObject;
+        CatColumn1 = panelEventExe.transform.Find("EventSlot1").gameObject;
+        CatColumn2 = panelEventExe.transform.Find("EventSlot2").gameObject;
+        CatColumn3 = panelEventExe.transform.Find("EventSlot3").gameObject;
         
-        EmergencyFlag0 = panelEventExe.transform.Find("EventSlot/ImageEmergencyFlag").gameObject;
-        EmergencyFlag1 = panelEventExe.transform.Find("EventSlot1/ImageEmergencyFlag").gameObject;
-        EmergencyFlag2 = panelEventExe.transform.Find("EventSlot2/ImageEmergencyFlag").gameObject;
-        EmergencyFlag3 = panelEventExe.transform.Find("EventSlot3/ImageEmergencyFlag").gameObject;
+        FinishFlag0 = CatColumn0.transform.Find("ImageFinishFlag").gameObject;
+        FinishFlag1 = CatColumn1.transform.Find("ImageFinishFlag").gameObject;
+        FinishFlag2 = CatColumn2.transform.Find("ImageFinishFlag").gameObject;
+        FinishFlag3 = CatColumn3.transform.Find("ImageFinishFlag").gameObject;
+        
+        EmergencyFlag0 = CatColumn0.transform.Find("ImageEmergencyFlag").gameObject;
+        EmergencyFlag1 = CatColumn1.transform.Find("ImageEmergencyFlag").gameObject;
+        EmergencyFlag2 = CatColumn2.transform.Find("ImageEmergencyFlag").gameObject;
+        EmergencyFlag3 = CatColumn3.transform.Find("ImageEmergencyFlag").gameObject;
     }
     public void InitStartEventDialogUI()
     {
