@@ -8,6 +8,7 @@ using Logic.Event;
 using Logic.Effect;
 using Manager;
 using ResultEventInfo;
+using UI.Animation;
 using UnityEngine.UIElements;
 
 namespace EventHandler
@@ -66,7 +67,11 @@ namespace EventHandler
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             emergencyId = m_catEventInfo.GetEmergencyId();
             TimeTickerManager.Instance.StopTick(); // 暂停时间
-            UIManager.Instance.InitStartEventDialog(m_catEventInfo);
+            UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
+                () =>
+                {
+                    UIManager.Instance.InitStartEventDialog(m_catEventInfo);
+                });
         }
 
         // 点击确认开始事件触发
@@ -112,7 +117,12 @@ namespace EventHandler
             ResultEventInfo.ResultEventInfo.Types.ResultEventItem item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
             TimeTickerManager.Instance.StopTick();
             // 跳出弹窗
-            UIManager.Instance.InitFinishEventDialog(item);
+            UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
+                () =>
+                {
+                    UIManager.Instance.InitFinishEventDialog(item);
+                }
+                );
         }
 
         //点击结算，触发结果事件效果
@@ -144,7 +154,12 @@ namespace EventHandler
         // 点击紧急事件红点
         public void OnEmergency()
         {
-            UIManager.Instance.InitEmergencyDialog(emergency, cacheTime);
+            UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
+                () =>
+                {
+                    UIManager.Instance.InitEmergencyDialog(emergency, cacheTime);
+                }
+            );
         }
 
         // 点击紧急事件结算

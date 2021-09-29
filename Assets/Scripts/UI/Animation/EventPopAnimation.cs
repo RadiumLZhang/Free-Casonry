@@ -30,32 +30,21 @@ namespace UI.Animation
             ImageSource = GetComponent<Image>();
         }
 
-        void Start()
-        {
-
-            if (AutoPlay)
-            {
-
-                Play();
-            }
-            else
-            {
-
-                IsPlaying = false;
-            }
-        }
-
         private void SetSprite(int idx)
         {
 
             ImageSource.sprite = SpriteFrames[idx];
             //该部分为设置成原始图片大小，如果只需要显示Image设定好的图片大小，注释掉该行即可。
-            ImageSource.SetNativeSize();
+            if (mCurFrame < FrameCount)
+            {
+                ImageSource.SetNativeSize();
+            }
         }
 
         public void Play()
         {
             UIManager.Instance.EventPopAnimation.SetActive(true);
+            SetSprite(0);
             CallBackFunction = null;
             mCurFrame = 0;
             IsPlaying = true;
@@ -65,6 +54,7 @@ namespace UI.Animation
         public void Play(CallBack callBack)
         {
             UIManager.Instance.EventPopAnimation.SetActive(true);
+            SetSprite(0);
             CallBackFunction = callBack;
             mCurFrame = 0;
             IsPlaying = true;
@@ -118,6 +108,7 @@ namespace UI.Animation
                             CallBackFunction.Invoke();
                         }
                         IsPlaying = false;
+                        SetSprite(0);
                         UIManager.Instance.EventPopAnimation.SetActive(false);
                         return;
                     }
@@ -137,6 +128,7 @@ namespace UI.Animation
                             CallBackFunction.Invoke();
                         }
                         IsPlaying = false;
+                        SetSprite(0);
                         UIManager.Instance.EventPopAnimation.SetActive(false);
                         return;
                     }
