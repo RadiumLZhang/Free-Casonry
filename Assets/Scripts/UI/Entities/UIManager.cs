@@ -175,6 +175,7 @@ public class UIManager: BaseModel<UIManager>
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
+        SwitchDarkBackGround(true);
         panelStartEventDialog.SetActive(true);
         textEventName_start.GetComponent<Text>().text = m_myCatEventInfo.Name;
         textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
@@ -218,6 +219,7 @@ public class UIManager: BaseModel<UIManager>
 
     public void InitEmergencyDialog(Emergency m_myEmergencyInfo, long cacheTime)
     {
+        SwitchDarkBackGround(true);
         panelEmergencyDialog.SetActive(true);
         textEventName_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Name;
         textEventDescription_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Description;//TODO:读事件描述，然后替换这个.Name @muidarzhang
@@ -238,6 +240,7 @@ public class UIManager: BaseModel<UIManager>
     
     public void InitFinishEventDialog(ResultEventInfo.ResultEventInfo.Types.ResultEventItem m_myResultInfo)
     {
+        SwitchDarkBackGround(true);
         panelFinishEventDialog.SetActive(true);
         textEventName_finish.GetComponent<Text>().text = m_myResultInfo.Name;
         textEventDescription_finish.GetComponent<Text>().text = m_myResultInfo.Description1;

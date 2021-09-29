@@ -161,6 +161,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostInit(currentDialogEventID);
+        UIManager.Instance.SwitchDarkBackGround(false);
     }
     
     public void ButtonCloseEventDialog_OnClick()
@@ -170,24 +171,36 @@ public class GameView : MonoBehaviour
         DroppedImage.SetActive(true);
         DroppedImage.GetComponent<DragHandlerSpecialEvent>().EndDrag();
         eventHandler.OnDestroyEvent();
+        UIManager.Instance.SwitchDarkBackGround(false);
     }
     public void ButtonFinishDialog_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostFinish();
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
+        UIManager.Instance.SwitchDarkBackGround(false);
     }
 
     public void ButtonEmergencyDialogChoice1_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostEmergency(1);
+        UIManager.Instance.panelEmergencyDialog.SetActive(false);
+        UIManager.Instance.SwitchDarkBackGround(false);
     }
 
     public void ButtonEmergencyDialogChoice2_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostEmergency(2);
+        UIManager.Instance.panelEmergencyDialog.SetActive(false);
+        UIManager.Instance.SwitchDarkBackGround(false);
+    }
+
+    public void ButtonCloseEmergencyDialog_OnClick()
+    {
+        UIManager.Instance.panelEmergencyDialog.SetActive(false);
+        UIManager.Instance.SwitchDarkBackGround(false);
     }
     public void OpenExePanel()
     {
