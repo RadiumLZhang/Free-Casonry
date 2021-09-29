@@ -4,18 +4,19 @@
       "humanId" : "60000",
       "name" : "葛林",
       "title" : "因西亚国王",
+      "image" : "Sprites\\Portraits\\60000",
       "sex" : 1,
       "isImportant" : 1,
       "canRaiseCat" : 1,
-      "canWashHead" : 1,
+      "canWashHead" : 0,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70000",
+        "70001",
+        "70002",
+        "10"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -23,18 +24,19 @@
       "humanId" : "60001",
       "name" : "茵菲尔",
       "title" : "因西亚王后",
+      "image" : "Sprites\\Portraits\\60001",
       "sex" : 0,
       "isImportant" : 1,
       "canRaiseCat" : 1,
-      "canWashHead" : 1,
+      "canWashHead" : 0,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70010",
+        "70011",
+        "70012",
+        "10"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -42,18 +44,19 @@
       "humanId" : "60002",
       "name" : "安彼西奥",
       "title" : "亲王",
+      "image" : "Sprites\\Portraits\\60002",
       "sex" : 1,
       "isImportant" : 1,
       "canRaiseCat" : 1,
-      "canWashHead" : 1,
+      "canWashHead" : 0,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70020",
+        "70021",
+        "70022",
+        "10"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -61,18 +64,19 @@
       "humanId" : "60003",
       "name" : "佩尔",
       "title" : "红衣主教",
+      "image" : "Sprites\\Portraits\\60003",
       "sex" : 1,
       "isImportant" : 1,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70030",
+        "70031",
+        "70032",
+        "10"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -80,18 +84,19 @@
       "humanId" : "60004",
       "name" : "嘉帕兹",
       "title" : "女仆",
+      "image" : "Sprites\\Portraits\\60004",
       "sex" : 0,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70040",
+        "70041",
+        "70042",
+        "9"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -99,18 +104,19 @@
       "humanId" : "60005",
       "name" : "门提尔",
       "title" : "炼金术士",
+      "image" : "Sprites\\Portraits\\60005",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70050",
+        "70051",
+        "70052",
+        "8"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -118,18 +124,19 @@
       "humanId" : "60006",
       "name" : "班诺",
       "title" : "骑士",
+      "image" : "Sprites\\Portraits\\60006",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70060",
+        "70061",
+        "70062",
+        "9"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -137,18 +144,19 @@
       "humanId" : "60007",
       "name" : "瓦林提亚",
       "title" : "侍从",
+      "image" : "Sprites\\Portraits\\60007",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70070",
+        "70071",
+        "70072",
+        "8"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -156,18 +164,19 @@
       "humanId" : "60008",
       "name" : "费琳娜",
       "title" : "医生",
+      "image" : "Sprites\\Portraits\\60008",
       "sex" : 0,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
-      "defaultCatId" : "0",
+      "defaultCatId" : "61000",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70080",
+        "70081",
+        "70082",
+        "6"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -175,18 +184,19 @@
       "humanId" : "60009",
       "name" : "依斯皮柯",
       "title" : "厨师",
+      "image" : "Sprites\\Portraits\\60009",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70090",
+        "70091",
+        "70092",
+        "8"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -194,18 +204,19 @@
       "humanId" : "60010",
       "name" : "尼奥塔德",
       "title" : "侯爵",
+      "image" : "Sprites\\Portraits\\60010",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70100",
+        "70101",
+        "70102",
+        "9"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     },
@@ -213,18 +224,19 @@
       "humanId" : "60011",
       "name" : "塞达",
       "title" : "乞丐",
+      "image" : "Sprites\\Portraits\\60011",
       "sex" : 1,
       "isImportant" : 0,
       "canRaiseCat" : 1,
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "0",
-        "0",
-        "0",
-        "0"
+        "70110",
+        "70111",
+        "70112",
+        "6"
       ],
-      "visibility" : 10,
+      "visibility" : 0,
       "tendToRaiseCat" : 0,
       "FavorValue" : 0
     }

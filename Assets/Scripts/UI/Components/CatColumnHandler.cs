@@ -38,12 +38,11 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         {
             if (droppedSpecialEvent.bIsExtracting)
             {
-
                 myID = droppedSpecialEvent.GetEventID();
                 DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
                 
                 // on preinit
-                eventHandler.OnPreInit(myID);
+                eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
                 UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
@@ -55,7 +54,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
             
             // on preinit
-            eventHandler.OnPreInit(myID);
+            eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
             m_myCatEventInfo = eventHandler.GetEventInfo();
             UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
