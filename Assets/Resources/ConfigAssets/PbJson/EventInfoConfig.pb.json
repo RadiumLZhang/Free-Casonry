@@ -264,7 +264,7 @@
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 1,
+      "repeatTime" : 100,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 190,
