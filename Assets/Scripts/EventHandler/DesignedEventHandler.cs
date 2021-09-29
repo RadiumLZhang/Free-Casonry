@@ -84,7 +84,7 @@ namespace EventHandler
             cacheTime = m_catEventInfo.ConsumeTime;
             m_catEventInfo.Status = EventStatus.OnProcess; 
             TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateTime, 1, 1, (int)m_catEventInfo.ConsumeTime, OnPreFinish);
-            TimeTickerManager.Instance.StartTick(); //恢复时间
+            TimeTickerManager.Instance.Restore(); //恢复时间
             monoHandler.DestroyEvent(); // 删除时间槽的ui
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             m_catEventInfo.ExecuteEffect(); //执行事件代价
@@ -136,7 +136,7 @@ namespace EventHandler
             eventID = 0;
             cacheTime = 0;
             emergencyTime = 0;
-            TimeTickerManager.Instance.StartTick(); //恢复时间
+            TimeTickerManager.Instance.Restore(); //恢复时间
         }
 
         // 点击紧急事件红点

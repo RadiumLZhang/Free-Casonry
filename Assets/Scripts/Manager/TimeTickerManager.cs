@@ -28,6 +28,7 @@ namespace Manager
          */
         public void StopTick()
         {
+            preSpeed = speed;
             speed = (int) TickerSpeedEnum.Stop;
         }
 
@@ -37,6 +38,14 @@ namespace Manager
         public void StartTick()
         {
             speed = (int) TickerSpeedEnum.Normal;
+        }
+
+        /**
+         * 恢复暂停前的速度
+         */
+        public void Restore()
+        {
+            speed = preSpeed;
         }
 
         /*
@@ -202,6 +211,7 @@ namespace Manager
 
 
         private int speed; //	当前速率
+        private int preSpeed; //    暂停前的时间
         private int stepPerSecond; //	每秒步长
         private int frameIndex; //	当前帧
         private List<EventItem> eventList;
