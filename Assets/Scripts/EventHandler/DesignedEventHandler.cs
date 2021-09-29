@@ -65,6 +65,7 @@ namespace EventHandler
             eventID = newEventID;
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             emergencyId = m_catEventInfo.GetEmergencyId();
+            cacheTime = m_catEventInfo.ConsumeTime;
             TimeTickerManager.Instance.StopTick(); // 暂停时间
             UIManager.Instance.InitStartEventDialog(m_catEventInfo);
         }
@@ -84,7 +85,6 @@ namespace EventHandler
                 emergencyResolved = false;
                 emergencyTime = emergency.GetTimeOffset();
             }
-            cacheTime = m_catEventInfo.ConsumeTime;
             m_catEventInfo.Status = EventStatus.OnProcess; 
             TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateTime, 1, 1, (int)m_catEventInfo.ConsumeTime, OnPreFinish);
             TimeTickerManager.Instance.Restore(); //恢复时间
@@ -145,6 +145,7 @@ namespace EventHandler
         public void OnEmergency()
         {
             UIManager.Instance.InitEmergencyDialog(emergency, cacheTime);
+            TimeTickerManager.Instance.StopTick(); // 暂停时间
         }
 
         // 点击紧急事件结算
@@ -152,6 +153,7 @@ namespace EventHandler
         {
             emergency.Choose(choiceIndex);
             emergencyResolved = true;
+            TimeTickerManager.Instance.Restore(); // 恢复时间
         }
         
         // 紧急事件红点显示

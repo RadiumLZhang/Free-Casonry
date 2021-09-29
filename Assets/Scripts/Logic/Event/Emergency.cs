@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using EmergencyInfo;
+using Logic.Effect;
 using UnityEngine;
 
 namespace Logic.Event
@@ -65,13 +66,15 @@ namespace Logic.Event
 
         public void Choose(int option)
         {
-            //todo 选择选项，生成影响
-            // Config?.Options[option].Effects;
+            foreach (var effect in options[option].Effects)
+            {
+                EffectUtils.ActivateEffect(effect);
+            }
         }
 
         public void ChosseDefaultOption()
         {
-            // todo
+            Choose(DefaultOption);
         }
         
     }
