@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using EmergencyInfo;
 using Logic;
 using Logic.Event;
 using UnityEngine;
@@ -169,9 +170,8 @@ public class UIManager: BaseModel<UIManager>
         textEventDescription_emergency = panelEmergencyDialog.transform.Find("TextEventDescription");
         imageEvent_emergency = panelEmergencyDialog.transform.Find("ImageEvent"); 
         textEventCardTime_emergency = imageEvent_emergency.Find("EventCard/TextEventCardTime");
-        textEventCardName_emergency = imageEvent_emergency.Find("EventCard/TextEventCardName");
-        //Choice1_emergency;
-        //Choice2_emergency;
+        Choice1_emergency = panelEmergencyDialog.transform.Find("ImageChoice1");
+        Choice2_emergency = panelEmergencyDialog.transform.Find("ImageChoice2");
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
@@ -180,6 +180,7 @@ public class UIManager: BaseModel<UIManager>
         textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
         imageEvent_start.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);//TODO:这个字段策划还没配！！
         textResultPreview_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
+        textEventCardTime_start.GetComponent<Text>().text = m_myCatEventInfo.ConsumeTime.ToString();
         switch(m_myCatEventInfo.Type)
         {
             case 0:
@@ -195,8 +196,7 @@ public class UIManager: BaseModel<UIManager>
                 textEventCardName_start.GetComponent<Text>().text = "交流事件";
                 break;
         }
-        textEventCardTime_start.GetComponent<Text>().text = m_myCatEventInfo.ConsumeTime.ToString();
-        
+
         if (m_myCatEventInfo.HumanId == 0)
         {
             GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了human id == 0");
@@ -216,9 +216,24 @@ public class UIManager: BaseModel<UIManager>
         }
     }
 
-    public void InitEmergencyDialog(Emergency m_myResultInfo, long cacheTime)
+    public void InitEmergencyDialog(Emergency m_myEmergencyInfo, long cacheTime)
     {
-        
+        panelEmergencyDialog.SetActive(true);
+        textEventName_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Name;
+        textEventDescription_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Description;//TODO:读事件描述，然后替换这个.Name @muidarzhang
+        textEventCardTime_emergency.GetComponent<Text>().text = cacheTime.ToString();
+        //imageEvent_emergency.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myEmergencyInfo.ImageIn);//TODO:这个字段策划还没配！！
+        List<EmergencyInfoConfig.Types.Option> optionList = m_myEmergencyInfo.GetOptions();
+        if (optionList.Count >= 1)
+        {
+            Choice1_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[0].Description;
+            Choice1_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[0].Name;
+            if (optionList.Count == 2)
+            {
+                Choice2_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[1].Description;
+                Choice2_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[1].Name;
+            }
+        }
     }
     
     public void InitFinishEventDialog(ResultEventInfo.ResultEventInfo.Types.ResultEventItem m_myResultInfo)

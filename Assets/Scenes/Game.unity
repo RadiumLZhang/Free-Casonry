@@ -7083,7 +7083,7 @@ GameObject:
   - component: {fileID: 828742668}
   - component: {fileID: 828742667}
   m_Layer: 5
-  m_Name: TextChoice1
+  m_Name: TextChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10433,7 +10433,7 @@ GameObject:
   - component: {fileID: 1193464311}
   - component: {fileID: 1193464310}
   m_Layer: 5
-  m_Name: TextChoice2
+  m_Name: TextChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14703,7 +14703,7 @@ GameObject:
   - component: {fileID: 1703043597}
   - component: {fileID: 1703043596}
   m_Layer: 5
-  m_Name: ButtonChoice2
+  m_Name: ButtonChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15292,7 +15292,7 @@ GameObject:
   - component: {fileID: 1809489520}
   - component: {fileID: 1809489519}
   m_Layer: 5
-  m_Name: ButtonChoice1
+  m_Name: ButtonChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -175,6 +175,18 @@ public class GameView : MonoBehaviour
         eventHandler.OnPostFinish();
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
     }
+
+    public void ButtonEmergencyDialogChoice1_OnClick()
+    {
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnPostEmergency(1);
+    }
+
+    public void ButtonEmergencyDialogChoice2_OnClick()
+    {
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnPostEmergency(2);
+    }
     public void OpenExePanel()
     {
         buttonOpenExePanel.gameObject.SetActive(false);
