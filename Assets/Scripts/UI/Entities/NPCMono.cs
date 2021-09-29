@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ using UnityEngine.UI;
 public class NPCMono : MonoBehaviour
 {
     public GameObject eventCycle;
+    public long id;
     private RectTransform selfRect;
     private RectTransform contentRect;
     private RectTransform viewRect;
@@ -38,6 +40,7 @@ public class NPCMono : MonoBehaviour
 
     public void NPC_OnClick()
     {
+        UIManager.Instance.SwitchNPCInfo(HumanManager.Instance.GetHuman(id));
         if (!eventCycle.activeSelf)
         {
             if (manager.currentOpenedNPC)
