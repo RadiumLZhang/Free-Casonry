@@ -147,9 +147,16 @@ namespace EventHandler
         }
 
         // 点击紧急事件结算
-        public void OnPostEmergency()
+        public void OnPostEmergency(int choiceIndex)
         {
-            //TODO:@takiding 选择紧急事件选项
+            switch (choiceIndex)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+            }
+            //TODO:选择紧急事件选项@muidarzhang
         }
         
         // 紧急事件红点显示

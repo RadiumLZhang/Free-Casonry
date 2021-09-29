@@ -20,7 +20,7 @@ namespace Logic.Event
         //好像缺了个持续时间？
 
         public int DefaultOption => Config?.DefaultOption ?? 0;
-
+        
         public List<EmergencyInfoConfig.Types.Option> options;
 
         public Emergency(long id)

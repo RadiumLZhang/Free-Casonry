@@ -14,7 +14,6 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
 {
     private long eventID;
     private RectTransform rectTransform;
-    private GameObject draggingImage;
     private ScrollRect scrollRect;
     private GameView gameView;
     
@@ -31,21 +30,12 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         scrollRect = GameObject.Find("ScrollSpecialEvent").GetComponent<ScrollRect>();
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
     }
-    private GameObject InsImage()
-    {
-        GetComponent<Image>().raycastTarget = false;
-        GameObject tempImg = Instantiate(gameObject);
-        tempImg.transform.SetParent(scrollRect.transform,false);
-        return tempImg;
-    }
-    
     public void OnBeginDrag(PointerEventData eventData)
     {
         bIsExtracting = false;
         timerDragStart = 6;
-        draggingImage = InsImage();
-        rectTransform = draggingImage.transform.GetComponent<RectTransform>();
-        draggingImage.SetActive(false);
+        GetComponent<Image>().raycastTarget = false;
+        rectTransform = transform.GetComponent<RectTransform>();
         
         pos = GetComponent<RectTransform>().position;
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
@@ -68,8 +58,8 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
             if (offset.y > 0 && offset.y/Mathf.Abs(offset.x) >= Mathf.Sin(extractAngle * Mathf.Deg2Rad))
             {
                 bIsExtracting = true;
-                draggingImage.SetActive(true);
-                transform.Find("ImageEventEmpty").gameObject.SetActive(true);
+                transform.GetComponent<Image>().maskable = false;
+                transform.Find("EventTimeBackground").gameObject.SetActive(false);
                 gameView.OpenExePanel();
             }
         }
@@ -79,8 +69,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
             rectTransform.position = pos;
             if (timerDragStart == 1)
             {
-                draggingImage.SetActive(false);
-                transform.Find("ImageEventEmpty").gameObject.SetActive(false);
+                GetComponent<Image>().raycastTarget = true;
             }
             scrollRect.horizontalNormalizedPosition -= (Input.mousePosition.x - tempMousePos_x) * Screen.width * 1.7f / Mathf.Pow(HandleSelfFittingHorizontal(transform.parent.parent),2.0f);
             tempMousePos_x = Input.mousePosition.x;
@@ -97,8 +86,9 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;
         timerDragStart = 6;
-        Destroy(draggingImage);
-        transform.Find("ImageEventEmpty").gameObject.SetActive(false);
+        rectTransform.position = pos;
+        transform.GetComponent<Image>().maskable = true;
+        transform.Find("EventTimeBackground").gameObject.SetActive(true);
         GetComponent<Image>().raycastTarget = true;
     }
     

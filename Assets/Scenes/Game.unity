@@ -7083,7 +7083,7 @@ GameObject:
   - component: {fileID: 828742668}
   - component: {fileID: 828742667}
   m_Layer: 5
-  m_Name: TextChoice1
+  m_Name: TextChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10433,7 +10433,7 @@ GameObject:
   - component: {fileID: 1193464311}
   - component: {fileID: 1193464310}
   m_Layer: 5
-  m_Name: TextChoice2
+  m_Name: TextChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11381,6 +11381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogEventID: 0
+  DroppedImage: {fileID: 0}
 --- !u!114 &1285887100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12111,7 +12112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -387.3462, y: 100}
+  m_AnchoredPosition: {x: -387.34616, y: 100}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1403892668
@@ -14703,7 +14704,7 @@ GameObject:
   - component: {fileID: 1703043597}
   - component: {fileID: 1703043596}
   m_Layer: 5
-  m_Name: ButtonChoice2
+  m_Name: ButtonChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15292,7 +15293,7 @@ GameObject:
   - component: {fileID: 1809489520}
   - component: {fileID: 1809489519}
   m_Layer: 5
-  m_Name: ButtonChoice1
+  m_Name: ButtonChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

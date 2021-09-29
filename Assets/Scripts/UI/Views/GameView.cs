@@ -36,7 +36,8 @@ public class GameView : MonoBehaviour
     
     private Coroutine openExePanel_coroutine;
     private Coroutine closeExePanel_coroutine;
-    
+
+    public GameObject DroppedImage;
     void Start()
     {
         panelCouncil = transform.Find("PanelCouncil").gameObject;
@@ -166,7 +167,8 @@ public class GameView : MonoBehaviour
     {
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
-
+        DroppedImage.SetActive(true);
+        DroppedImage.GetComponent<DragHandlerSpecialEvent>().EndDrag();
         eventHandler.OnDestroyEvent();
     }
     public void ButtonFinishDialog_OnClick()
@@ -174,6 +176,18 @@ public class GameView : MonoBehaviour
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostFinish();
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
+    }
+
+    public void ButtonEmergencyDialogChoice1_OnClick()
+    {
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnPostEmergency(1);
+    }
+
+    public void ButtonEmergencyDialogChoice2_OnClick()
+    {
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnPostEmergency(2);
     }
     public void OpenExePanel()
     {
