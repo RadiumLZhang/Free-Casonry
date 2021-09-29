@@ -5458,7 +5458,7 @@ GameObject:
   - component: {fileID: 573262798}
   - component: {fileID: 573262797}
   m_Layer: 5
-  m_Name: ImageResultPreview
+  m_Name: ImageResult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14607,7 +14607,7 @@ GameObject:
   - component: {fileID: 1806808530}
   - component: {fileID: 1806808529}
   m_Layer: 5
-  m_Name: TextResultPreview
+  m_Name: TextResult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

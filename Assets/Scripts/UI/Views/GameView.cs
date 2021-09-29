@@ -81,7 +81,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.buttonCouncil = transform.Find("ButtonCouncil").gameObject;
         UIManager.Instance.buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
         UIManager.Instance.InitCatColumns();
-        UIManager.Instance.InitStartEventDialogUI();
+        UIManager.Instance.InitDialogs();
     }
     public void ButtonTestEvent_OnClick()
     {

@@ -32,14 +32,21 @@ public class UIManager: BaseModel<UIManager>
     public Dictionary<long, GameObject> NPCEventCycles;
 
     //StartEventDialog
-    public Transform textEventName;
-    public Transform textEventDescription;
-    public Transform imageEvent;
-    public Transform textResultPreview;
+    public Transform textEventName_start;
+    public Transform textEventDescription_start;
+    public Transform imageEvent_start;
+    public Transform textResultPreview_start;
     
-    public GameObject imageTarget;
-    public GameObject imageParticipant;
-    public GameObject imageParticipantCenter;
+    public GameObject imageTarget_start;
+    public GameObject imageParticipant_start;
+    public GameObject imageParticipantCenter_start;
+    
+    //FinsihEventDialog
+    public Transform textEventName_finish;
+    public Transform textEventDescription_finish;
+    public Transform imageEvent_finish;
+    public Transform textResult_finish;
+    public Transform buttonText_finish;
     
     //CatColumns
     public GameObject CatColumn0;
@@ -56,7 +63,7 @@ public class UIManager: BaseModel<UIManager>
     public GameObject EmergencyFlag1;
     public GameObject EmergencyFlag2;
     public GameObject EmergencyFlag3;
-    
+
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
         darkBackgroundImage.SetActive(bIsSwitchToDark);
@@ -123,40 +130,60 @@ public class UIManager: BaseModel<UIManager>
         EmergencyFlag2 = CatColumn2.transform.Find("ImageEmergencyFlag").gameObject;
         EmergencyFlag3 = CatColumn3.transform.Find("ImageEmergencyFlag").gameObject;
     }
-    public void InitStartEventDialogUI()
+    public void InitDialogs()
     {
-        textEventName = panelStartEventDialog.transform.Find("TextEventName");
-        textEventDescription = panelStartEventDialog.transform.Find("TextEventDescription");
-        imageEvent = panelStartEventDialog.transform.Find("ImageEvent");
-        textResultPreview = panelStartEventDialog.transform.Find("ImageResultPreview").Find("TextResultPreview");
+        //StartEventDialog
+        textEventName_start = panelStartEventDialog.transform.Find("TextEventName");
+        textEventDescription_start = panelStartEventDialog.transform.Find("TextEventDescription");
+        imageEvent_start = panelStartEventDialog.transform.Find("ImageEvent");
+        textResultPreview_start = panelStartEventDialog.transform.Find("ImageResultPreview/TextResultPreview");
         
-        imageTarget = panelStartEventDialog.transform.Find("ImageTarget").gameObject;
-        imageParticipant = panelStartEventDialog.transform.Find("ImageParticipant").gameObject;
-        imageParticipantCenter = panelStartEventDialog.transform.Find("ImageParticipantCenter").gameObject;
+        imageTarget_start = panelStartEventDialog.transform.Find("ImageTarget").gameObject;
+        imageParticipant_start = panelStartEventDialog.transform.Find("ImageParticipant").gameObject;
+        imageParticipantCenter_start = panelStartEventDialog.transform.Find("ImageParticipantCenter").gameObject;
+        
+        //FinishEventDialog
+        textEventName_finish = panelFinishEventDialog.transform.Find("TextEventName");;
+        textEventDescription_finish = panelFinishEventDialog.transform.Find("TextEventDescription");
+        imageEvent_finish = panelFinishEventDialog.transform.Find("ImageEvent");
+        textResult_finish = panelFinishEventDialog.transform.Find("ImageResult/TextResult");
+        buttonText_finish = panelFinishEventDialog.transform.Find("ButtonFinishEvent/Text");
+        
+        //EmergencyDialog
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
         panelStartEventDialog.SetActive(true);
-        textEventName.GetComponent<Text>().text = m_myCatEventInfo.Name;
-        textEventDescription.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name
-        imageEvent.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);//TODO:这个字段策划还没配！！
-        textResultPreview.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件结果，然后替换这个.Name
+        textEventName_start.GetComponent<Text>().text = m_myCatEventInfo.Name;
+        textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name
+        imageEvent_start.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);//TODO:这个字段策划还没配！！
+        textResultPreview_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件结果，然后替换这个.Name
         if (m_myCatEventInfo.HumanId == 0)
         {
             GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了human id == 0");
-            imageParticipantCenter.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：换成拖进猫栏对应的猫的头像图片，@muidarzhang
-            imageTarget.SetActive(false);
-            imageParticipant.SetActive(false);
-            imageParticipantCenter.SetActive(true);
+            imageParticipantCenter_start.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：换成拖进猫栏对应的猫的头像图片，@muidarzhang
+            imageTarget_start.SetActive(false);
+            imageParticipant_start.SetActive(false);
+            imageParticipantCenter_start.SetActive(true);
         }
         else
         {
             GameObject.Find("Canvas").GetComponent<UtilsMath>().WriteToFile("走到了human id != 0");
-            imageParticipant.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：换成拖进猫栏对应的猫的头像图片，@muidarzhang
-            imageTarget.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：绑定的人类单头像的路径，需要读人物表，@xinqizhou，人物id是m_myCatEventInfo.HumanId
-            imageTarget.SetActive(true);
-            imageParticipant.SetActive(true);
-            imageParticipantCenter.SetActive(false);
+            imageParticipant_start.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：换成拖进猫栏对应的猫的头像图片，@muidarzhang
+            imageTarget_start.GetComponent<Image>().sprite = Resources.Load<Sprite>("hahaha");//TODO：绑定的人类单头像的路径，需要读人物表，@xinqizhou，人物id是m_myCatEventInfo.HumanId
+            imageTarget_start.SetActive(true);
+            imageParticipant_start.SetActive(true);
+            imageParticipantCenter_start.SetActive(false);
         }
+    }
+    
+    public void InitFinishEventDialog(Result m_myResultInfo)
+    {
+        panelFinishEventDialog.SetActive(true);
+        textEventName_finish.GetComponent<Text>().text = m_myResultInfo.Name;
+        textEventDescription_finish.GetComponent<Text>().text = m_myResultInfo.Description1;
+        //imageEvent_finish.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myResultInfo.ImageIn);//TODO:这个字段策划还没配！！
+        textResult_finish.GetComponent<Text>().text = m_myResultInfo.Description2;
+        buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
     }
 }
