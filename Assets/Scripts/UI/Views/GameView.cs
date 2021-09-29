@@ -10,6 +10,7 @@ using Button = UnityEngine.UI.Button;
 using Logic;
 using Logic.Event;
 using Manager;
+using UI.Animation;
 using UnityEngine.Android;
 using Random = UnityEngine.Random;
 
@@ -78,6 +79,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         UIManager.Instance.buttonCouncil = transform.Find("ButtonCouncil").gameObject;
         UIManager.Instance.buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+        UIManager.Instance.EventPopAnimation = transform.Find("Animation/EventPopAnimation").gameObject;
         UIManager.Instance.InitCatColumns();
         UIManager.Instance.InitDialogs();
     }

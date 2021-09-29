@@ -77,6 +77,10 @@ public class UIManager: BaseModel<UIManager>
     public GameObject EmergencyFlag1;
     public GameObject EmergencyFlag2;
     public GameObject EmergencyFlag3;
+    
+    
+    //Animation
+    public GameObject EventPopAnimation;
 
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
