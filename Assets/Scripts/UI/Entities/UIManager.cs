@@ -215,14 +215,19 @@ public class UIManager: BaseModel<UIManager>
             imageParticipantCenter_start.SetActive(false);
         }
     }
+
+    public void InitEmergencyDialog(Emergency m_myResultInfo, long cacheTime)
+    {
+        
+    }
     
-    public void InitFinishEventDialog(Result m_myResultInfo)
+    public void InitFinishEventDialog(ResultEventInfo.ResultEventInfo.Types.ResultEventItem m_myResultInfo)
     {
         panelFinishEventDialog.SetActive(true);
         textEventName_finish.GetComponent<Text>().text = m_myResultInfo.Name;
         textEventDescription_finish.GetComponent<Text>().text = m_myResultInfo.Description1;
         //imageEvent_finish.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myResultInfo.ImageIn);//TODO:这个字段策划还没配！！
         textResult_finish.GetComponent<Text>().text = m_myResultInfo.Description2;
-        buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
+        //buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
     }
 }

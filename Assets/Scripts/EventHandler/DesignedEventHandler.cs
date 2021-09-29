@@ -110,6 +110,7 @@ namespace EventHandler
             var item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
             TimeTickerManager.Instance.StopTick();
             // 跳出弹窗
+            UIManager.Instance.InitFinishEventDialog(item);
         }
 
         //点击结算，触发结果事件效果
@@ -119,6 +120,8 @@ namespace EventHandler
             long resultId = m_catEventInfo.GetResultId();
             m_catEventInfo.FinishEffect(resultId);
             OnDestroyEvent();
+            
+            UIManager.Instance.SwitchFinishFlag(index, false);
         }
         
         // 取消事件进行 or 完成事件后调用
@@ -139,13 +142,13 @@ namespace EventHandler
         // 点击紧急事件红点
         public void OnEmergency()
         {
-            
+            UIManager.Instance.InitEmergencyDialog(emergency, cacheTime);
         }
 
         // 点击紧急事件结算
         public void OnPostEmergency()
         {
-            
+            //TODO:@takiding 选择紧急事件选项
         }
         
         // 紧急事件红点显示
@@ -157,10 +160,15 @@ namespace EventHandler
             }
             else if(emergencyId != 0 && emergencyTime <= 0) // 如果有紧急事件 且 到触发时间
             {
-                if(emergencyResolved == false)
+
+                if (emergencyResolved == false)
+                {
                     UIManager.Instance.SwitchEmergencyFlag(index, true);
+                }
                 else
+                {
                     UIManager.Instance.SwitchEmergencyFlag(index, false);
+                }
             }
             else
             {
