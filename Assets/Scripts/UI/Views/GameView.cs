@@ -29,7 +29,6 @@ public class GameView : MonoBehaviour
     private RectTransform rectExePanel;
     private RectTransform specialEventPrefab;
     public long currentDialogEventID;
-    
 
     //左上角时间
     private Text textDate;
@@ -175,8 +174,8 @@ public class GameView : MonoBehaviour
     }
     public void ButtonFinishDialog_OnClick()
     {
-        //事件完成面板的 “X” 按钮和 “继续” 按钮是同一个效果，所以都用同一个回调
-        //TODO:加事件完成的效果 @mudiarzhang
+        var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
+        eventHandler.OnPostFinish();
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
     }
     public void OpenExePanel()

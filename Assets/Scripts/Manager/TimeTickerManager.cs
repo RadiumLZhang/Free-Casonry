@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using Logic;
+using UnityEngine;
 using Object = System.Object;
 
 namespace Manager
@@ -218,14 +220,25 @@ namespace Manager
             eventList = new List<EventItem>();
             waitingList = new List<WaitingEventItem>();
             lastingList = new List<LastingEventItem>();
-            timer = new Timer(1000 / stepPerSecond);
+            
+            /*timer = new Timer(1000 / stepPerSecond);
             timer.Elapsed += Ontick;
             timer.AutoReset = true;
             timer.Enabled = true;
-            //test();   --用来测试的test函数，可以打开看看控制台效果
+            //test();   --用来测试的test函数，可以打开看看控制台效果*/
+            
         }
 
-        private void Ontick(Object source, ElapsedEventArgs e)
+        public IEnumerator Loop()
+        {
+            while (true)
+            {
+                Ontick();
+                yield return new WaitForSeconds(1f / stepPerSecond);
+            }
+        }
+
+        private void Ontick()
         {
             for (int i = 0; i < speed; i++)
             {
@@ -286,14 +299,15 @@ namespace Manager
 
             while (eventList.Count > 0)
             {
-                if (eventList[0].frame <= frameIndex)
+                var e = eventList[0];
+                if (e.frame <= frameIndex)
                 {
-                    if (eventList[0].callBack != null)
+                    eventList.Remove(e);
+                    if (e.callBack != null)
                     {
-                        eventList[0].callBack.Invoke();
+                        e.callBack.Invoke();
                     }
 
-                    eventList.RemoveAt(0);
                 }
                 else
                 {

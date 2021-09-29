@@ -119,7 +119,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         {
             textRemainingTime.text = Convert.ToString(remainingTime) + "s";
         }
-        if (remainingTime == 0)
+        
+        if (tempEvent == null)
             OnFinish();
     }
 
@@ -133,6 +134,16 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         transform.GetComponent<Image>().raycastTarget = true;
         droppedSpecialEvent = null;
         droppedNPCEvent = null;
+    }
+    
+    public void ButtonFinishFlag_OnClick()
+    {
+        EventHandlerManager.Instance.GetHandlerByIndex(index).OnFinish();
+    }
+    
+    public void ButtonEmergencyFlag_OnClick()
+    {
+        EventHandlerManager.Instance.GetHandlerByIndex(index).OnEmergency();
     }
 }
     
