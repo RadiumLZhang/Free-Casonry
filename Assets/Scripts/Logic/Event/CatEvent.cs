@@ -110,9 +110,9 @@ namespace Logic.Event
             return CheckConditionGroup(Config.DestroyConditions);
         }
 
-        public void Execute()
+        public void ExecuteEffect()
         {
-            this.Status = EventStatus.OnProcess;
+            //this.Status = EventStatus.OnProcess;
             //todo 执行效果、代价
             // Config.Effects;
             if (!CanExecute())
@@ -125,8 +125,17 @@ namespace Logic.Event
                 
             }
         }
-
-        public void Finish()
+        
+        public void FinishEffect(long resultId)
+        {
+            var item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
+            foreach (var effect in item.Effects)
+            {
+                EffectUtils.ActivateEffect(effect);
+            }
+        }
+        
+        public long GetResultId()
         {
             //todo 结算结果
             // Config.Result;
@@ -150,19 +159,13 @@ namespace Logic.Event
                 }
             }
             
-            Status = EventStatus.Finished;
 
             if (resultId == 0)
             {
                 Debug.Log("There is no suitable result");
-                return;
             }
 
-            var item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
-            foreach (var effect in item.Effects)
-            {
-                EffectUtils.ActivateEffect(effect);
-            }
+            return resultId;
         }
 
         public void AddTicker()

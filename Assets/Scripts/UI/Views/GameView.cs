@@ -161,7 +161,6 @@ public class GameView : MonoBehaviour
         //TODO：把原来的拖入响应事件放到这里
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
-        eventHandler.OnInit(currentDialogEventID);
         eventHandler.OnPostInit(currentDialogEventID);
     }
     
@@ -169,7 +168,7 @@ public class GameView : MonoBehaviour
     {
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
-        eventHandler.OnDestroy(currentDialogEventID);
+        eventHandler.OnDestroyEvent();
         
     }
     public void OpenExePanel()

@@ -34,6 +34,7 @@ namespace Manager
             for(int i = 0; i < 4; i++)
             {
                 handlerList[i].SetMonoHandler(monoList[i]);
+                handlerList[i].SetIndex(i);
             }
         }
 
