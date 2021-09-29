@@ -163,6 +163,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostInit(currentDialogEventID);
+        DroppedImage.SetActive(true);
         UIManager.Instance.SwitchDarkBackGround(false);
     }
     
