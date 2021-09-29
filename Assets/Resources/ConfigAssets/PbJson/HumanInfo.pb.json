@@ -17,8 +17,7 @@
         "10"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 10
     },
     {
       "humanId" : "60001",
@@ -37,8 +36,7 @@
         "10"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 10
     },
     {
       "humanId" : "60002",
@@ -57,8 +55,7 @@
         "10"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 10
     },
     {
       "humanId" : "60003",
@@ -77,8 +74,7 @@
         "10"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 10
     },
     {
       "humanId" : "60004",
@@ -97,8 +93,7 @@
         "9"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 9
     },
     {
       "humanId" : "60005",
@@ -117,8 +112,7 @@
         "8"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 8
     },
     {
       "humanId" : "60006",
@@ -137,8 +131,7 @@
         "9"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 9
     },
     {
       "humanId" : "60007",
@@ -157,8 +150,7 @@
         "8"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 8
     },
     {
       "humanId" : "60008",
@@ -177,8 +169,7 @@
         "6"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 6
     },
     {
       "humanId" : "60009",
@@ -197,8 +188,7 @@
         "8"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 8
     },
     {
       "humanId" : "60010",
@@ -217,8 +207,7 @@
         "9"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 9
     },
     {
       "humanId" : "60011",
@@ -237,8 +226,7 @@
         "6"
       ],
       "visibility" : 0,
-      "tendToRaiseCat" : 0,
-      "FavorValue" : 0
+      "Defense" : 6
     }
   ]
 }

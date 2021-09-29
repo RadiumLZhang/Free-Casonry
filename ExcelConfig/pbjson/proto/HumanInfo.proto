@@ -26,13 +26,11 @@ message HumanInfo
         // @name 默认养猫编号
         int64 defaultCatId = 9;
         // @name 标签
-        repeated int64 tags = 10;
+        repeated string tags = 10;
         // @name 初始能见度
         int32 visibility = 11;
-        // @name 初始养猫意向
-        int32 tendToRaiseCat = 12;
-        // @name 初始亲密度
-        int32 FavorValue = 13;
+        // @name 初始心防
+        int32 Defense = 12;
     }
 
     // @name 人类信息配置
