@@ -34,11 +34,13 @@ namespace Manager
         /********************************* 实现 ***********************************************/
 
         // 
-        private Dictionary<long, List<Logic.Event.CatEvent>> eventMap = new Dictionary<long, List<Logic.Event.CatEvent>>();
-        private Dictionary<long, CatEvent> id2Event = new Dictionary<long, CatEvent>();
+        private Dictionary<long, List<Logic.Event.CatEvent>> eventMap;
+        private Dictionary<long, CatEvent> id2Event;
 
         public void Init()
         {
+            eventMap = new Dictionary<long, List<Logic.Event.CatEvent>>();
+            id2Event = new Dictionary<long, CatEvent>();
             foreach (var config in EventInfoConfigLoader.Instance.EventConfig)
             {
                 AddEvent(new Logic.Event.CatEvent(config.EventId));
