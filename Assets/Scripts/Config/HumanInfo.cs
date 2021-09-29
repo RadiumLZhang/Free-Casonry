@@ -24,18 +24,18 @@ namespace HumanInfo {
     static HumanInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVwcm90by9IdW1hbkluZm8ucHJvdG8SCUh1bWFuSW5mbyKwAgoJSHVtYW5J",
+            "ChVwcm90by9IdW1hbkluZm8ucHJvdG8SCUh1bWFuSW5mbyKVAgoJSHVtYW5J",
             "bmZvEisKBnBlb3BsZRgBIAMoCzIbLkh1bWFuSW5mby5IdW1hbkluZm8ucGVy",
-            "c29uGvUBCgZwZXJzb24SDwoHaHVtYW5JZBgBIAEoAxIMCgRuYW1lGAIgASgJ",
+            "c29uGtoBCgZwZXJzb24SDwoHaHVtYW5JZBgBIAEoAxIMCgRuYW1lGAIgASgJ",
             "Eg0KBXRpdGxlGAMgASgJEg0KBWltYWdlGAQgASgJEgsKA3NleBgFIAEoBRIT",
             "Cgtpc0ltcG9ydGFudBgGIAEoBRITCgtjYW5SYWlzZUNhdBgHIAEoBRITCgtj",
             "YW5XYXNoSGVhZBgIIAEoBRIUCgxkZWZhdWx0Q2F0SWQYCSABKAMSDAoEdGFn",
-            "cxgKIAMoAxISCgp2aXNpYmlsaXR5GAsgASgFEhYKDnRlbmRUb1JhaXNlQ2F0",
-            "GAwgASgFEhIKCkZhdm9yVmFsdWUYDSABKAViBnByb3RvMw=="));
+            "cxgKIAMoCRISCgp2aXNpYmlsaXR5GAsgASgFEg8KB0RlZmVuc2UYDCABKAVi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::HumanInfo.HumanInfo), global::HumanInfo.HumanInfo.Parser, new[]{ "People" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::HumanInfo.HumanInfo.Types.person), global::HumanInfo.HumanInfo.Types.person.Parser, new[]{ "HumanId", "Name", "Title", "Image", "Sex", "IsImportant", "CanRaiseCat", "CanWashHead", "DefaultCatId", "Tags", "Visibility", "TendToRaiseCat", "FavorValue" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::HumanInfo.HumanInfo), global::HumanInfo.HumanInfo.Parser, new[]{ "People" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::HumanInfo.HumanInfo.Types.person), global::HumanInfo.HumanInfo.Types.person.Parser, new[]{ "HumanId", "Name", "Title", "Image", "Sex", "IsImportant", "CanRaiseCat", "CanWashHead", "DefaultCatId", "Tags", "Visibility", "Defense" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -207,8 +207,7 @@ namespace HumanInfo {
           defaultCatId_ = other.defaultCatId_;
           tags_ = other.tags_.Clone();
           visibility_ = other.visibility_;
-          tendToRaiseCat_ = other.tendToRaiseCat_;
-          favorValue_ = other.favorValue_;
+          defense_ = other.defense_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -346,14 +345,14 @@ namespace HumanInfo {
 
         /// <summary>Field number for the "tags" field.</summary>
         public const int TagsFieldNumber = 10;
-        private static readonly pb::FieldCodec<long> _repeated_tags_codec
-            = pb::FieldCodec.ForInt64(82);
-        private readonly pbc::RepeatedField<long> tags_ = new pbc::RepeatedField<long>();
+        private static readonly pb::FieldCodec<string> _repeated_tags_codec
+            = pb::FieldCodec.ForString(82);
+        private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// @name 标签
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<long> Tags {
+        public pbc::RepeatedField<string> Tags {
           get { return tags_; }
         }
 
@@ -371,31 +370,17 @@ namespace HumanInfo {
           }
         }
 
-        /// <summary>Field number for the "tendToRaiseCat" field.</summary>
-        public const int TendToRaiseCatFieldNumber = 12;
-        private int tendToRaiseCat_;
+        /// <summary>Field number for the "Defense" field.</summary>
+        public const int DefenseFieldNumber = 12;
+        private int defense_;
         /// <summary>
-        /// @name 初始养猫意向
+        /// @name 初始心防
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int TendToRaiseCat {
-          get { return tendToRaiseCat_; }
+        public int Defense {
+          get { return defense_; }
           set {
-            tendToRaiseCat_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "FavorValue" field.</summary>
-        public const int FavorValueFieldNumber = 13;
-        private int favorValue_;
-        /// <summary>
-        /// @name 初始亲密度
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int FavorValue {
-          get { return favorValue_; }
-          set {
-            favorValue_ = value;
+            defense_ = value;
           }
         }
 
@@ -423,8 +408,7 @@ namespace HumanInfo {
           if (DefaultCatId != other.DefaultCatId) return false;
           if(!tags_.Equals(other.tags_)) return false;
           if (Visibility != other.Visibility) return false;
-          if (TendToRaiseCat != other.TendToRaiseCat) return false;
-          if (FavorValue != other.FavorValue) return false;
+          if (Defense != other.Defense) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -442,8 +426,7 @@ namespace HumanInfo {
           if (DefaultCatId != 0L) hash ^= DefaultCatId.GetHashCode();
           hash ^= tags_.GetHashCode();
           if (Visibility != 0) hash ^= Visibility.GetHashCode();
-          if (TendToRaiseCat != 0) hash ^= TendToRaiseCat.GetHashCode();
-          if (FavorValue != 0) hash ^= FavorValue.GetHashCode();
+          if (Defense != 0) hash ^= Defense.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -498,13 +481,9 @@ namespace HumanInfo {
             output.WriteRawTag(88);
             output.WriteInt32(Visibility);
           }
-          if (TendToRaiseCat != 0) {
+          if (Defense != 0) {
             output.WriteRawTag(96);
-            output.WriteInt32(TendToRaiseCat);
-          }
-          if (FavorValue != 0) {
-            output.WriteRawTag(104);
-            output.WriteInt32(FavorValue);
+            output.WriteInt32(Defense);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -545,11 +524,8 @@ namespace HumanInfo {
           if (Visibility != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(Visibility);
           }
-          if (TendToRaiseCat != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TendToRaiseCat);
-          }
-          if (FavorValue != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FavorValue);
+          if (Defense != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Defense);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -593,11 +569,8 @@ namespace HumanInfo {
           if (other.Visibility != 0) {
             Visibility = other.Visibility;
           }
-          if (other.TendToRaiseCat != 0) {
-            TendToRaiseCat = other.TendToRaiseCat;
-          }
-          if (other.FavorValue != 0) {
-            FavorValue = other.FavorValue;
+          if (other.Defense != 0) {
+            Defense = other.Defense;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -646,8 +619,7 @@ namespace HumanInfo {
                 DefaultCatId = input.ReadInt64();
                 break;
               }
-              case 82:
-              case 80: {
+              case 82: {
                 tags_.AddEntriesFrom(input, _repeated_tags_codec);
                 break;
               }
@@ -656,11 +628,7 @@ namespace HumanInfo {
                 break;
               }
               case 96: {
-                TendToRaiseCat = input.ReadInt32();
-                break;
-              }
-              case 104: {
-                FavorValue = input.ReadInt32();
+                Defense = input.ReadInt32();
                 break;
               }
             }

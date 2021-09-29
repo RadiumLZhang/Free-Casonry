@@ -21,7 +21,10 @@ message ResultEventInfo
         // @name 结果记录
         int64 recordId = 6;
         // @name 效果
+        // @style inline
         repeated int64 effects = 7;
+        // @name 图片
+        string picture = 8;
     }
 
     // @name 结果事件配置

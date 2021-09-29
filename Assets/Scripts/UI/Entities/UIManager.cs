@@ -4,11 +4,14 @@ using System.Diagnostics;
 using EmergencyInfo;
 using Logic;
 using Logic.Event;
+using Logic.Human;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager: BaseModel<UIManager>
 {
+    public Transform gameView;
+    
     //Images
     public GameObject darkBackgroundImage;
 
@@ -20,6 +23,7 @@ public class UIManager: BaseModel<UIManager>
     public GameObject panelStartEventDialog;
     public GameObject panelEmergencyDialog;
     public GameObject panelFinishEventDialog;
+    public GameObject panelNPCInfo;
     
     //Scrolls
     public GameObject scrollSpecialEvent;
@@ -78,6 +82,14 @@ public class UIManager: BaseModel<UIManager>
     public GameObject EmergencyFlag2;
     public GameObject EmergencyFlag3;
     
+    //NPCInfo
+    public GameObject imageNPC;
+    public GameObject textNPCName;
+    public GameObject textNPCTitle;
+    public GameObject textNPCVisibility;
+    public GameObject textLabelA;
+    public GameObject textLabelB;
+    public GameObject textLabelC;
     
     //Animation
     public GameObject EventPopAnimation;
@@ -131,7 +143,39 @@ public class UIManager: BaseModel<UIManager>
         }
     }
 
-    public void InitCatColumns()
+    public void Init()
+    {
+        darkBackgroundImage = gameView.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
+        panelCouncil = gameView.Find("PanelCouncil").gameObject;
+        panelSettings = gameView.Find("PanelSettings").gameObject;
+        panelEventExe = gameView.Find("PanelEventExe").gameObject;
+        panelResources = gameView.Find("PanelResources").gameObject;
+        panelStartEventDialog = gameView.Find("PanelStartEventDialog").gameObject;
+        panelEmergencyDialog = gameView.Find("PanelEmergencyDialog").gameObject;
+        panelFinishEventDialog = gameView.Find("PanelFinishEventDialog").gameObject;
+        scrollSpecialEvent = gameView.Find("ScrollSpecialEvent").gameObject;
+        buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
+        buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
+        buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
+        buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+        EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
+        panelNPCInfo = gameView.Find("PanelNPCInfo").gameObject;
+        InitNPCInfo();
+        InitCatColumns();
+        InitDialogs();
+    }
+
+    private void InitNPCInfo()
+    {
+        imageNPC = panelNPCInfo.transform.Find("ImageNPCBackground/ImageNPC").gameObject;
+        textNPCName = panelNPCInfo.transform.Find("TextNPCName").gameObject;
+        textNPCTitle = panelNPCInfo.transform.Find("TextNPCTitle").gameObject;
+        textNPCVisibility = panelNPCInfo.transform.Find("TextNPCVisibility").gameObject; 
+        textLabelA = panelNPCInfo.transform.Find("TextLabelA").gameObject;  
+        textLabelB = panelNPCInfo.transform.Find("TextLabelB").gameObject;  
+        textLabelC = panelNPCInfo.transform.Find("TextLabelC").gameObject; 
+    }
+    private void InitCatColumns()
     {
         CatColumn0 = panelEventExe.transform.Find("EventSlot").gameObject;
         CatColumn1 = panelEventExe.transform.Find("EventSlot1").gameObject;
@@ -148,7 +192,7 @@ public class UIManager: BaseModel<UIManager>
         EmergencyFlag2 = CatColumn2.transform.Find("ImageEmergencyFlag").gameObject;
         EmergencyFlag3 = CatColumn3.transform.Find("ImageEmergencyFlag").gameObject;
     }
-    public void InitDialogs()
+    private void InitDialogs()
     {
         //StartEventDialog
         textEventName_start = panelStartEventDialog.transform.Find("TextEventName");
@@ -251,5 +295,18 @@ public class UIManager: BaseModel<UIManager>
         //imageEvent_finish.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myResultInfo.ImageIn);//TODO:这个字段策划还没配！！
         textResult_finish.GetComponent<Text>().text = m_myResultInfo.Description2;
         //buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
+    }
+
+    public void SwitchNPCInfo(Human m_NPC)
+    {
+        imageNPC.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_NPC.Image);
+        textNPCName.GetComponent<Text>().text = m_NPC.Name;
+        textNPCTitle.GetComponent<Text>().text = m_NPC.Title;
+        textNPCVisibility.GetComponent<Text>().text = m_NPC.Visibility.ToString();
+        
+        //TODO:等表改了之后读三个label
+        textLabelA.GetComponent<Text>().text = m_NPC.Name;
+        textLabelB.GetComponent<Text>().text = m_NPC.Name;
+        textLabelC.GetComponent<Text>().text = m_NPC.Name;
     }
 }

@@ -143,11 +143,13 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     public void ButtonFinishFlag_OnClick()
     {
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnFinish();
+        gameView.currentDialogEventID = myID;
     }
     
     public void ButtonEmergencyFlag_OnClick()
     {
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnEmergency();
+        gameView.currentDialogEventID = myID;
     }
 }
     

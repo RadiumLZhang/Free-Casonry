@@ -32,6 +32,10 @@ public class NPCManager : MonoBehaviour
         NPCs.Add(60009,listNPC.Find("chef").GetComponent<NPCMono>());
         NPCs.Add(60010,listNPC.Find("marquis").GetComponent<NPCMono>());
         NPCs.Add(60011,listNPC.Find("beggar").GetComponent<NPCMono>());
+        foreach (var item in NPCs)
+        {
+            item.Value.id = item.Key;
+        }
         UIManagerInitNPCs();
     }
 
