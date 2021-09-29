@@ -59,6 +59,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             m_myCatEventInfo = eventHandler.GetEventInfo();
             UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
         }
+
+        InitHandler();
     }
 
     public void InitHandler()
@@ -79,7 +81,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         {
             droppedNPCEvent.EndDrag();
         }
-        
         
     }
 
