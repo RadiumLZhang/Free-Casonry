@@ -36,7 +36,8 @@ public class GameView : MonoBehaviour
     
     private Coroutine openExePanel_coroutine;
     private Coroutine closeExePanel_coroutine;
-    
+
+    public GameObject DroppedImage;
     void Start()
     {
         panelCouncil = transform.Find("PanelCouncil").gameObject;
@@ -166,7 +167,8 @@ public class GameView : MonoBehaviour
     {
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
-
+        DroppedImage.SetActive(true);
+        DroppedImage.GetComponent<DragHandlerSpecialEvent>().EndDrag();
         eventHandler.OnDestroyEvent();
     }
     public void ButtonFinishDialog_OnClick()

@@ -42,10 +42,15 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
                 
                 // on preinit
+                droppedSpecialEvent.gameObject.SetActive(false);
+                gameView.DroppedImage = droppedSpecialEvent.gameObject;
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
                 UIManager.Instance.InitStartEventDialog(m_myCatEventInfo);
+                
+                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+                transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
             }
         }
         else if ((droppedNPCEvent = pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
@@ -64,8 +69,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     public void InitHandler()
     {
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
-        transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
+        // transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        // transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
         
         remainingTime = eventHandler.GetTimeRemain();
         textRemainingTime.text = Convert.ToString(remainingTime) + "s";
