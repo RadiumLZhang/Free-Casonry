@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BaseEffect;
 using Effect;
 using Language;
@@ -367,7 +368,7 @@ namespace Logic.Effect
                 return;
             }
 
-            if (!(args[0] is int humanId) || !(args[1] is int tagId))
+            if (!(args[0] is int humanId) || !(args[1] is String tag))
             {
                 Debug.LogError($"参数不为int");
                 return;
@@ -380,11 +381,11 @@ namespace Logic.Effect
             
             if (isAdd)
             {
-                human.Tags.Add(tagId);
+                human.Tags.Add(tag);
             }
             else
             {
-                human.Tags.Remove(tagId);
+                human.Tags.Remove(tag);
             }
         }
 

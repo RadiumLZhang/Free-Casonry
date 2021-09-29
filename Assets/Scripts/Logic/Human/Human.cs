@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HumanInfo;
 using Language;
 using Manager;
@@ -34,7 +35,7 @@ namespace Logic.Human
         
         public bool IsAlive { get; private set; }
         
-        public List<long> Tags { get; private set; }
+        public List<String> Tags { get; private set; }
 
         private int[] m_properties = new int[2];
         private bool[] m_locks = new bool[2];
@@ -79,7 +80,7 @@ namespace Logic.Human
             m_properties[(int) PropertyType.Visibility] = Config.Visibility;
             m_properties[(int) PropertyType.Defence] = 0;
 
-            Tags = new List<long>(Config.Tags);
+            Tags = new List<String>(Config.Tags);
         }
         
         public bool CanRaiseCat()
@@ -102,7 +103,7 @@ namespace Logic.Human
             return Config.CanWashHead == 1;
         }
 
-        public List<long> GetTags()
+        public List<String> GetTags()
         {
             return Tags;
         }

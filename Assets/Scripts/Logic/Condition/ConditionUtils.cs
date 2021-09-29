@@ -1,4 +1,5 @@
-﻿using BaseCondition;
+﻿using System;
+using BaseCondition;
 using Condition;
 using EventHandler;
 using Google.Protobuf.Collections;
@@ -147,7 +148,7 @@ namespace Logic.Condition
 
          private static bool CheckHumanHasTag(params object[] args)
          {
-             return HumanManager.Instance.GetHuman((int) args[0]).GetTags().Exists(l => l == (long) args[1]);
+             return HumanManager.Instance.GetHuman((int) args[0]).GetTags().Exists(l => l == (String) args[1]);
          }
          
          private static bool CheckHumanVisibilityGreaterEqual(params object[] args)
