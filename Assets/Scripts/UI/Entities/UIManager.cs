@@ -39,39 +39,38 @@ public class UIManager: BaseModel<UIManager>
     public GameObject imageParticipant;
     public GameObject imageParticipantCenter;
     
-    //RedPoints
-    public GameObject RedPoint0;
-    public GameObject RedPoint1;
-    public GameObject RedPoint2;
-    public GameObject RedPoint3;
+    //FinishFlags
+    public GameObject FinishFlag0;
+    public GameObject FinishFlag1;
+    public GameObject FinishFlag2;
+    public GameObject FinishFlag3;
     
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
         darkBackgroundImage.SetActive(bIsSwitchToDark);
     }
 
-    public void SwitchRedPoint(int index,bool bIsSwitchToShown)
+    public void SwitchFinishFlag(int index,bool bIsSwitchToShown)
     {
         switch (index)
         {
-            case 0:RedPoint0.SetActive(bIsSwitchToShown);
+            case 0:FinishFlag0.SetActive(bIsSwitchToShown);
                 break;
-            case 1:RedPoint1.SetActive(bIsSwitchToShown);
+            case 1:FinishFlag1.SetActive(bIsSwitchToShown);
                 break;
-            case 2:RedPoint2.SetActive(bIsSwitchToShown);
+            case 2:FinishFlag2.SetActive(bIsSwitchToShown);
                 break;
-            case 3:RedPoint3.SetActive(bIsSwitchToShown);
+            case 3:FinishFlag3.SetActive(bIsSwitchToShown);
                 break;
-            default: break;
         }
     }
 
-    public void InitRedPoints()
+    public void InitFinishFlags()
     {
-        RedPoint0 = panelEventExe.transform.Find("EventSlot/ImageRedPoint").gameObject;
-        RedPoint1 = panelEventExe.transform.Find("EventSlot1/ImageRedPoint").gameObject;
-        RedPoint2 = panelEventExe.transform.Find("EventSlot2/ImageRedPoint").gameObject;
-        RedPoint3 = panelEventExe.transform.Find("EventSlot3/ImageRedPoint").gameObject;
+        FinishFlag0 = panelEventExe.transform.Find("EventSlot/ImageFinishFlag").gameObject;
+        FinishFlag1 = panelEventExe.transform.Find("EventSlot1/ImageFinishFlag").gameObject;
+        FinishFlag2 = panelEventExe.transform.Find("EventSlot2/ImageFinishFlag").gameObject;
+        FinishFlag3 = panelEventExe.transform.Find("EventSlot3/ImageFinishFlag").gameObject;
     }
     public void InitStartEventDialogUI()
     {
