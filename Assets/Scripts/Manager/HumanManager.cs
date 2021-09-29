@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using HumanInfo;
 using Logic;
 using Logic.Human;
 
@@ -13,17 +14,20 @@ namespace Manager
          */
         public Human GetHuman(long id)
         {
-            if (!humanMap.TryGetValue(id, out var human))
-            {
-                human = LoadHuman(id);
-                humanMap[id] = human;
-            }
-            return human;
+            return humanMap[id];
         }
         
         /************************************** 实现 ******************************************/
         
         private Dictionary<long, Human> humanMap;
+
+        public void Init()
+        {
+            foreach (var person in HumanInfoLoader.Instance.People)
+            {
+                humanMap[person.HumanId] = new Human(person.HumanId);
+            }
+        }
 
         public HumanManager()
         {

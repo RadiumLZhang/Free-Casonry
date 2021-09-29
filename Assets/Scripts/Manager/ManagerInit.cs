@@ -1,4 +1,5 @@
 ﻿using System;
+using Logic.Condition;
 using UnityEngine;
 
 namespace Manager
@@ -10,8 +11,12 @@ namespace Manager
             TimeTickerManager.Instance.Init();
             TimeManager.Instance.Init();
             EventManager.Instance.Init();
-            
-            //AddTicker();
+            ConditionUtils.Init();
+            HumanManager.Instance.Init();
+
+            StartCoroutine(TimeTickerManager.Instance.Loop());
+
+            AddTicker();
         }
 
         public void OnDestroy()
@@ -26,7 +31,7 @@ namespace Manager
             TimeTickerManager.Instance.AddLastingEventByStep(
                 -1,
                 transform.GetComponent<GameView>().RefreshScrollSpecialEvent,
-                1,
+                2,
                 10,
                 0,
                 null);
