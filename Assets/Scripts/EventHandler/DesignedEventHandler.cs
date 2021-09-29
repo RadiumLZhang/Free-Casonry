@@ -107,7 +107,7 @@ namespace EventHandler
         public void OnFinish()
         {
             long resultId = m_catEventInfo.GetResultId();
-            var item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
+            ResultEventInfo.ResultEventInfo.Types.ResultEventItem item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
             TimeTickerManager.Instance.StopTick();
             // 跳出弹窗
         }

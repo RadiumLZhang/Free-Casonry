@@ -216,7 +216,7 @@ public class UIManager: BaseModel<UIManager>
         }
     }
     
-    public void InitFinishEventDialog(Result m_myResultInfo)
+    public void InitFinishEventDialog(ResultEventInfo.ResultEventInfo.Types.ResultEventItem m_myResultInfo)
     {
         panelFinishEventDialog.SetActive(true);
         textEventName_finish.GetComponent<Text>().text = m_myResultInfo.Name;
