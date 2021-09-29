@@ -78,6 +78,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         UIManager.Instance.buttonCouncil = transform.Find("ButtonCouncil").gameObject;
         UIManager.Instance.buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+        UIManager.Instance.InitRedPoints();
         UIManager.Instance.InitStartEventDialogUI();
     }
     public void ButtonTestEvent_OnClick()

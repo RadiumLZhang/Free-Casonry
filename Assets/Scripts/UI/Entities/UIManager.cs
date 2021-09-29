@@ -38,11 +38,41 @@ public class UIManager: BaseModel<UIManager>
     public GameObject imageTarget;
     public GameObject imageParticipant;
     public GameObject imageParticipantCenter;
+    
+    //RedPoints
+    public GameObject RedPoint0;
+    public GameObject RedPoint1;
+    public GameObject RedPoint2;
+    public GameObject RedPoint3;
+    
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
         darkBackgroundImage.SetActive(bIsSwitchToDark);
     }
 
+    public void SwitchRedPoint(int index,bool bIsSwitchToShown)
+    {
+        switch (index)
+        {
+            case 0:RedPoint0.SetActive(bIsSwitchToShown);
+                break;
+            case 1:RedPoint1.SetActive(bIsSwitchToShown);
+                break;
+            case 2:RedPoint2.SetActive(bIsSwitchToShown);
+                break;
+            case 3:RedPoint3.SetActive(bIsSwitchToShown);
+                break;
+            default: break;
+        }
+    }
+
+    public void InitRedPoints()
+    {
+        RedPoint0 = panelEventExe.transform.Find("EventSlot/ImageRedPoint").gameObject;
+        RedPoint1 = panelEventExe.transform.Find("EventSlot1/ImageRedPoint").gameObject;
+        RedPoint2 = panelEventExe.transform.Find("EventSlot2/ImageRedPoint").gameObject;
+        RedPoint3 = panelEventExe.transform.Find("EventSlot3/ImageRedPoint").gameObject;
+    }
     public void InitStartEventDialogUI()
     {
         textEventName = panelStartEventDialog.transform.Find("TextEventName");
