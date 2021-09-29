@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using Event;
 using Logic;
 using Logic.Event;
+using Newtonsoft.Json;
 
 namespace Manager
 {
-    public class EventManager : BaseModel<EventManager>
+    public class EventManager : BaseModel<EventManager>, ISaveObject
     {
         /********************************* 接口 ***********************************************/
 
@@ -34,7 +35,7 @@ namespace Manager
         /********************************* 实现 ***********************************************/
 
         // 
-        private Dictionary<long, List<Logic.Event.CatEvent>> eventMap;
+        private Dictionary<long, List<CatEvent>> eventMap;
         private Dictionary<long, CatEvent> id2Event;
 
         public void Init()
@@ -99,7 +100,24 @@ namespace Manager
             }
             return returnList;
         }
-        
-        
+
+        public string Save()
+        {
+            string jsonString = JsonConvert.SerializeObject(eventMap);
+            return jsonString;
+        }
+
+        public void Load(string json)
+        {
+            eventMap = JsonConvert.DeserializeObject<Dictionary<long, List<CatEvent>>>(json);
+            id2Event = new Dictionary<long, CatEvent>();
+            foreach (var list in eventMap)
+            {
+                foreach (var e in list.Value)
+                {
+                    id2Event[e.ID] = e;
+                }
+            }
+        }
     }
 }
