@@ -14776,7 +14776,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1285887099}
         m_TargetAssemblyTypeName: GameView, Assembly-CSharp
-        m_MethodName: ButtonStartEvent_OnClick
+        m_MethodName: ButtonEmergencyDialogChoice2_OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15365,7 +15365,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1285887099}
         m_TargetAssemblyTypeName: GameView, Assembly-CSharp
-        m_MethodName: ButtonStartEvent_OnClick
+        m_MethodName: ButtonEmergencyDialogChoice1_OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
