@@ -6,12 +6,13 @@ using System.Runtime.InteropServices;
 using Event;
 using EventHandler;
 using Logic;
+using Newtonsoft.Json;
 
 namespace Manager
 {
 
 
-    public class EventHandlerManager : BaseModel<EventHandlerManager>/*, ISaveObject*/
+    public class EventHandlerManager : BaseModel<EventHandlerManager>, ISaveObject
     {
         private List<DesignedEventHandler> handlerList = new List<DesignedEventHandler>();
         private List<CatColumnHandler> monoList = new List<CatColumnHandler>();
@@ -104,24 +105,33 @@ namespace Manager
             }
         }
 
-        /*public string Save()
+        public string Save()
         {
-        for(int i = 0; i < 4; i++)
-        {
-            handlerList[i].
-        }
-        private long emergencyId
-        private bool emergencyResolved
-        private long eventID 
-        private long cacheTime
-        private uint emergencyTime 
-        private bool valid
-        private int index
+            var jsonList = new Dictionary<int, string>();
+            for (int i = 0; i < 4; i++)
+            {
+                jsonList[i] = handlerList[i].Save();
+            }
+            var jsonString = JsonConvert.SerializeObject(jsonList);
+            return jsonString;
         }
 
         public void Load(string json)
         {
-            
-        }*/
+            var jsonList = JsonConvert.DeserializeObject<Dictionary<int, string>>(json);
+            for (int i = 0; i < 4; i++)
+            {
+                var map = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonList[i]);
+                handlerList[i].Load(
+                    long.Parse(map["emergencyId"]),
+                    bool.Parse(map["emergencyResolved"]),
+                    long.Parse(map["eventID"]),
+                    long.Parse(map["cacheTime"]),
+                    uint.Parse(map["emergencyTime"]),
+                    bool.Parse(map["valid"]),
+                    int.Parse(map["index"])
+                    );
+            }
+        }
     }
 }
