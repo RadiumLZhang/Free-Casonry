@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class UIManager: BaseModel<UIManager>
 {
+    public bool buttonCouncilActive = false;
+    
     public Transform gameView;
     
     //Images
@@ -108,14 +110,16 @@ public class UIManager: BaseModel<UIManager>
         scrollRelationShip = gameView.Find("ScrollRelationship").gameObject;
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
-        buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
         buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
         buttonCloseRelationship = gameView.Find("ButtonCloseRelationship").gameObject;
         buttonRelationship = gameView.Find("ButtonRelationship").gameObject;
         EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
+        
+        buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
+        buttonCouncil.SetActive(buttonCouncilActive);
 
         panelNPCInfo = gameView.Find("PanelNPCInfo").GetComponent<NPCInfoMono>();
-        
+
         InitCatColumns();
         InitDialogs();
     }
@@ -242,5 +246,11 @@ public class UIManager: BaseModel<UIManager>
     public void ScaleRelationship(float scale)
     {
         scrollRelationShip.transform.localScale = new Vector3(scale, scale, 1.0f);
+    }
+
+    public void SetButtonCouncil(bool isActive)
+    {
+        buttonCouncilActive = isActive;
+        buttonCouncil.SetActive(isActive);
     }
 }

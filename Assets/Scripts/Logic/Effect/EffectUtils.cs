@@ -348,7 +348,7 @@ namespace Logic.Effect
 
         private static void ButtonCouncilStateChange(bool active)
         {
-            UIManager.Instance.buttonCouncil.SetActive(active);
+            UIManager.Instance.SetButtonCouncil(active);
         }
 
         // private static void ButtonCatManageStateChange(bool active)
