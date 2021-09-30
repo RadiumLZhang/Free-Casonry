@@ -21,23 +21,23 @@ namespace Manager
     
     public class SaveManager : BaseModel<SaveManager>
     {
-        private Dictionary<string, ISaveObject> saveMap;
+        private List<ISaveObject> nodeList;
         private string savePath;
-        
+
         public void Init()
         {
             savePath = "Assets/Resources/Save";
-            saveMap = new Dictionary<string, ISaveObject>();
+            nodeList = new List<ISaveObject>();
             
             // 需要存档的对象在这里注册
-            saveMap["EventManager"] = EventManager.Instance;
-            saveMap["TimeTickerManager"] = TimeTickerManager.Instance;
-            saveMap["TimeManager"] = TimeManager.Instance;
-            saveMap["PlayerModel"] = PlayerModel.Instance;
-            saveMap["EmergencyManager"] = EmergencyManager.Instance;
-            saveMap["UIManager"] = UIManager.Instance;
-            saveMap["CatManager"] = CatManager.Instance;
-            saveMap["EventHandlerManager"] = EventHandlerManager.Instance;
+            nodeList.Add(TimeTickerManager.Instance);
+            nodeList.Add(TimeManager.Instance);
+            nodeList.Add(EventManager.Instance);
+            nodeList.Add(PlayerModel.Instance);
+            nodeList.Add(EmergencyManager.Instance);
+            nodeList.Add(UIManager.Instance);
+            nodeList.Add(CatManager.Instance);
+            nodeList.Add(EventHandlerManager.Instance);
 
             string userName = PlayerPrefs.GetString("userName");
             if (userName != null && !"".Equals(userName))
@@ -49,12 +49,12 @@ namespace Manager
         public void SaveData(string name)
         {
             string filePath = savePath + "/" + name + ".txt";
-            var map = new Dictionary<string, string>();
-            foreach (var kv in saveMap)
+            var list = new List<string>();
+            foreach (var node in nodeList)
             {
-                map[kv.Key] = kv.Value.Save();
+                list.Add(node.Save());
             }
-            string jsonString = JsonConvert.SerializeObject(map);
+            string jsonString = JsonConvert.SerializeObject(list);
 
             if (File.Exists(filePath))
             {
@@ -76,10 +76,10 @@ namespace Manager
 
             var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(filePath);
             var json = asset.text;
-            var map = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
-            foreach (var kv in map)
+            var list = JsonConvert.DeserializeObject<List<string>>(json);
+            for (int i = 0; i < nodeList.Count; i++)
             {
-                saveMap[kv.Key].Load(kv.Value);
+                nodeList[i].Load(list[i]);
             }
 
             return true;
