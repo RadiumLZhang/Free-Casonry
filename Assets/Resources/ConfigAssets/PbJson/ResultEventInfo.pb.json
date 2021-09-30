@@ -166,6 +166,42 @@
       "effects" : [
         "511030"
       ]
+    },
+    {
+      "resultId" : "316100",
+      "name" : "flag测试0",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516100"
+      ]
+    },
+    {
+      "resultId" : "316110",
+      "name" : "flag测试1",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516110"
+      ]
+    },
+    {
+      "resultId" : "316120",
+      "name" : "flag测试2",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516120"
+      ]
+    },
+    {
+      "resultId" : "316130",
+      "name" : "flag测试3",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516130"
+      ]
     }
   ]
 }
