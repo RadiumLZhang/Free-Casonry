@@ -61,9 +61,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
-                
-                transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
-                transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
+                Image m_image = transform.Find("ImageEvent").GetComponent<Image>();
+                m_image.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+                m_image.enabled = true;
             }
         }
         else if ((droppedNPCEvent = pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
@@ -74,7 +74,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             // on preinit
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
-            
+            m_myCatEventInfo = eventHandler.GetEventInfo();
+            Image m_image = transform.Find("ImageEvent").GetComponent<Image>();
+            m_image.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+            m_image.enabled = true;
         }
 
         InitHandler();

@@ -135,10 +135,26 @@ public class NPCMono : MonoBehaviour
 
     public void RefreshEventCycle()
     {
-        for (int i = 0; i < 5; i++)
+        // by default
+        SwitchNPCRedPoint(false);
+        var list = EventManager.Instance.GetRoleEventList(id);
+        int i = 0;
+        
+        for (; i < list.Count; i++)
         {
-            eventcols[i].InitWithID(1);//@muidarzhang 这里把1改成事件id
+            var tempEvent = list[i];
+            if (tempEvent.IsImportant)
+            {
+                SwitchNPCRedPoint(true);
+            }
+            eventcols[i].InitWithID(list[i].ID);
         }
-        SwitchNPCRedPoint(true);//@muidarzhang 这里把ture改为“列表里有红点事件”的bool值
+
+        for (; i < 5; i++)
+        {
+            // todo 五个环中没有事件 @takiding
+        }
+        
+        
     }
 }

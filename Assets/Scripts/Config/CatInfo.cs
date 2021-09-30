@@ -28,7 +28,7 @@ namespace CatInfo {
             "CmNhdF9jb25maWcYASADKAsyHi5DYXRJbmZvLkNhdEluZm8uQ2F0SXRlbUNv",
             "bmZpZxp8Cg1DYXRJdGVtQ29uZmlnEgoKAmlkGAEgASgDEgwKBG5hbWUYAiAB",
             "KAkSDAoEdHlwZRgDIAEoCRINCgVpbWFnZRgEIAEoCRIQCghwcm9wZXJ0eRgF",
-            "IAMoBRINCgVza2lsbBgGIAEoAxITCgtkZXNjcmlwdGlvbhgHIAEoCWIGcHJv",
+            "IAMoBRINCgVza2lsbBgGIAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCWIGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -281,15 +281,15 @@ namespace CatInfo {
 
         /// <summary>Field number for the "skill" field.</summary>
         public const int SkillFieldNumber = 6;
-        private long skill_;
+        private string skill_ = "";
         /// <summary>
         /// @name 技能
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public long Skill {
+        public string Skill {
           get { return skill_; }
           set {
-            skill_ = value;
+            skill_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -338,7 +338,7 @@ namespace CatInfo {
           if (Type.Length != 0) hash ^= Type.GetHashCode();
           if (Image.Length != 0) hash ^= Image.GetHashCode();
           hash ^= property_.GetHashCode();
-          if (Skill != 0L) hash ^= Skill.GetHashCode();
+          if (Skill.Length != 0) hash ^= Skill.GetHashCode();
           if (Description.Length != 0) hash ^= Description.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -370,9 +370,9 @@ namespace CatInfo {
             output.WriteString(Image);
           }
           property_.WriteTo(output, _repeated_property_codec);
-          if (Skill != 0L) {
-            output.WriteRawTag(48);
-            output.WriteInt64(Skill);
+          if (Skill.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(Skill);
           }
           if (Description.Length != 0) {
             output.WriteRawTag(58);
@@ -399,8 +399,8 @@ namespace CatInfo {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Image);
           }
           size += property_.CalculateSize(_repeated_property_codec);
-          if (Skill != 0L) {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Skill);
+          if (Skill.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Skill);
           }
           if (Description.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
@@ -429,7 +429,7 @@ namespace CatInfo {
             Image = other.Image;
           }
           property_.Add(other.property_);
-          if (other.Skill != 0L) {
+          if (other.Skill.Length != 0) {
             Skill = other.Skill;
           }
           if (other.Description.Length != 0) {
@@ -467,8 +467,8 @@ namespace CatInfo {
                 property_.AddEntriesFrom(input, _repeated_property_codec);
                 break;
               }
-              case 48: {
-                Skill = input.ReadInt64();
+              case 50: {
+                Skill = input.ReadString();
                 break;
               }
               case 58: {

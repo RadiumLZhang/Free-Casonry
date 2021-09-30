@@ -19,7 +19,7 @@ message CatInfo
         // @name 能力参数(属性参数)
         repeated int32 property = 5;
         // @name 技能
-        int64 skill = 6;
+        string skill = 6;
         // @name 简介
         string description = 7;
     }
