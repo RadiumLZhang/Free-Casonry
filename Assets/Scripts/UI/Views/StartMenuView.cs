@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using Manager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartMenuView : MonoBehaviour
 {
+    public string UserName;
+    public Text TextUserName;
     void Awake()
     {
         Input.multiTouchEnabled = false;
+        TextUserName = transform.Find("InputField/Text").GetComponent<Text>();
     }
-    
+
+    void Update()
+    {
+        print(UserName);
+    }
     public void ButtonStart_OnClick()
     {
         PlayerPrefs.SetString("userName", "");
@@ -20,5 +28,9 @@ public class StartMenuView : MonoBehaviour
     {
         PlayerPrefs.SetString("userName", "jonahwei");
         SceneManager.LoadScene("Game");
+    }
+    public void ButtonLogin_OnClick()
+    {
+        UserName = TextUserName.text;
     }
 }
