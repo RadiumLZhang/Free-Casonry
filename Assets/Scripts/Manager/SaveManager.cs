@@ -75,7 +75,8 @@ namespace Manager
                 return false;
             }
 
-            var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(filePath);
+            //var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(filePath);
+            var asset = Resources.Load<TextAsset>(filePath);
             var json = asset.text;
             var list = JsonConvert.DeserializeObject<List<string>>(json);
             for (int i = 0; i < nodeList.Count; i++)
