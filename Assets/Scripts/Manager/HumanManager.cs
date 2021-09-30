@@ -47,16 +47,13 @@ namespace Manager
 
         public string Save()
         {
-            var jsonMap = new Dictionary<string, string>();
-            jsonMap["humanMap"] = JsonConvert.SerializeObject(humanMap);
-            var jsonString = JsonConvert.SerializeObject(jsonMap);
+            var jsonString = JsonConvert.SerializeObject(humanMap);
             return jsonString;
         }
         
         public void Load(string json)
         {
-            var jsonMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
-            humanMap = JsonConvert.DeserializeObject<Dictionary<long, Human>>(jsonMap["humanMap"]);
+            humanMap = JsonConvert.DeserializeObject<Dictionary<long, Human>>(json);
         }
     }
 }
