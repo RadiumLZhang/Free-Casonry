@@ -105,6 +105,7 @@ public class NPCMono : MonoBehaviour
     public void ClostBtn_OnClick()
     {
         CloseEventCycle();
+        UIManager.Instance.panelNPCInfo.CloseNpcInfo();
     }
 
     public void SetEventTriggerActive(bool active)

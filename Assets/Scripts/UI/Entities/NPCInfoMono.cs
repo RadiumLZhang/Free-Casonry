@@ -13,16 +13,22 @@ public class NPCInfoMono : MonoBehaviour
     private Text m_textLabelA;
     private Text m_textLabelB;
     private Text m_textLabelC;
-    // Start is called before the first frame update
+    private Animation m_animation;
+
+    private const string PanelInAnimation = "NpcPanelIn";
+    
     void Start()
     {
-        m_imageNPC = transform.Find("ImageNPCBackground/ImageNPC").GetComponent<Image>();
-        m_textNPCName = transform.Find("TextNPCName").GetComponent<Text>();
-        m_textNPCTitle = transform.Find("TextNPCTitle").GetComponent<Text>();
-        m_textNPCVisibility = transform.Find("TextNPCVisibility").GetComponent<Text>(); 
-        m_textLabelA = transform.Find("TextLabelA").GetComponent<Text>();  
-        m_textLabelB = transform.Find("TextLabelB").GetComponent<Text>();  
-        m_textLabelC = transform.Find("TextLabelC").GetComponent<Text>(); 
+        m_imageNPC = transform.Find("animationRoot/ImageNPCBackground/ImageNPC").GetComponent<Image>();
+        m_textNPCName = transform.Find("animationRoot/TextNPCName").GetComponent<Text>();
+        m_textNPCTitle = transform.Find("animationRoot/TextNPCTitle").GetComponent<Text>();
+        m_textNPCVisibility = transform.Find("animationRoot/TextNPCVisibility").GetComponent<Text>(); 
+        m_textLabelA = transform.Find("animationRoot/TextLabelA").GetComponent<Text>();  
+        m_textLabelB = transform.Find("animationRoot/TextLabelB").GetComponent<Text>();  
+        m_textLabelC = transform.Find("animationRoot/TextLabelC").GetComponent<Text>();
+
+        m_animation = transform.Find("animationRoot").GetComponent<Animation>();
+        m_animation.Stop();
     }
 
     // Update is called once per frame
@@ -33,6 +39,7 @@ public class NPCInfoMono : MonoBehaviour
 
     public void SwitchNpcInfo(Human npc)
     {
+        OpenNpcInfo();
         m_imageNPC.sprite = Resources.Load<Sprite>(npc.Image);
         m_textNPCName.text = npc.Name;
         m_textNPCTitle.text = npc.Title;
@@ -43,5 +50,27 @@ public class NPCInfoMono : MonoBehaviour
         m_textLabelB.text = npc.Name;
         m_textLabelC.text = npc.Name;
     }
-    
+
+    public void OpenNpcInfo()
+    {
+        var inAni = m_animation[PanelInAnimation];
+        inAni.speed = 1;
+        inAni.normalizedTime = 0;
+
+        inAni.enabled = false;
+        m_animation.Sample();
+        m_animation.Play(PanelInAnimation);
+    }
+
+    public void CloseNpcInfo()
+    {
+        var inAni = m_animation[PanelInAnimation];
+        inAni.speed = -1;
+        inAni.normalizedTime = 1;
+
+        inAni.enabled = false;
+        m_animation.Sample();
+        m_animation.Play(PanelInAnimation);
+        
+    }
 }
