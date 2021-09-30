@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Manager;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Logic
@@ -11,9 +13,9 @@ namespace Logic
         Add = 1
     }
     
-    public class PlayerModel : BaseModel<PlayerModel>
+    public class PlayerModel : BaseModel<PlayerModel>, ISaveObject
     {
-        private int[] m_resource = new int[3];
+        private int[] m_resource = new int[5];
         public enum ResourceType
         {
             Money = 0,
@@ -64,11 +66,6 @@ namespace Logic
             return m_resource[(int) type];
         }
 
-        /// <summary>
-        /// 已完成的事件
-        /// </summary>
-        public readonly List<EventResult> EventResultList;
-        
         public class EventResult
         {
             public long eventId;
@@ -88,6 +85,25 @@ namespace Logic
         public bool CheckRecord(long id)
         {
             return m_records.Contains(id);
+        }
+
+        public string Save()
+        {
+            var jsonMap = new Dictionary<string, string>();
+            jsonMap["m_resource"] = JsonConvert.SerializeObject(m_resource);
+            jsonMap["StoryProgress"] = Convert.ToString(StoryProgress);
+            jsonMap["m_records"] = JsonConvert.SerializeObject(m_records);
+            var jsonString = JsonConvert.SerializeObject(jsonMap);
+            return jsonString;
+        }
+
+        public void Load(string json)
+        {
+            var jsonMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+            m_resource = JsonConvert.DeserializeObject<int[]>(jsonMap["m_resource"]);
+            StoryProgress = int.Parse(jsonMap["StoryProgress"]);
+            m_records = JsonConvert.DeserializeObject<HashSet<long>>(jsonMap["m_records"]);
+            GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
         }
     }
 }

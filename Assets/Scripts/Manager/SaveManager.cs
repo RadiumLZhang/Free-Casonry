@@ -33,6 +33,7 @@ namespace Manager
             saveMap["EventManager"] = EventManager.Instance;
             saveMap["TimeTickerManager"] = TimeTickerManager.Instance;
             saveMap["TimeManager"] = TimeManager.Instance;
+            saveMap["PlayerModel"] = PlayerModel.Instance;
 
             string userName = PlayerPrefs.GetString("userName");
             if (userName != null && !"".Equals(userName))

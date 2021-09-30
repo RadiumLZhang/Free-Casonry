@@ -13,7 +13,7 @@ public class StartMenuView : MonoBehaviour
     
     public void ButtonStart_OnClick()
     {
-        PlayerPrefs.SetString("userName", "jonahwei");
+        PlayerPrefs.SetString("userName", "");
         SceneManager.LoadScene("Game");
     }
     public void ButtonContinue_OnClick()
