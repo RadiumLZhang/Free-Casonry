@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using Logic;
+using Newtonsoft.Json;
 
 namespace Manager
 {
-    public class CatManager : BaseModel<CatManager>
+    public class CatManager : BaseModel<CatManager>, ISaveObject
     {
         /********************************* 接口 ***********************************************/
 
@@ -28,7 +29,10 @@ namespace Manager
 
         public CatManager()
         {
-            catMap = new Dictionary<long, Cat>();
+            if (catMap == null)
+            {
+                catMap = new Dictionary<long, Cat>();
+            }
         }
 
         private Cat LoadCat(long id)
@@ -40,6 +44,17 @@ namespace Manager
                 return cat;
             }
             return null;
+        }
+
+        public string Save()
+        {
+            var jsonString = JsonConvert.SerializeObject(catMap);
+            return jsonString;
+        }
+
+        public void Load(string json)
+        {
+            catMap = JsonConvert.DeserializeObject<Dictionary<long, Cat>>(json);
         }
     }
 }
