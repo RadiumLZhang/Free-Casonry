@@ -5,10 +5,12 @@ using EmergencyInfo;
 using Logic;
 using Logic.Event;
 using Logic.Human;
+using Manager;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager: BaseModel<UIManager>
+public class UIManager: BaseModel<UIManager>, ISaveObject
 {
     public bool buttonCouncilActive = false;
     
@@ -76,6 +78,18 @@ public class UIManager: BaseModel<UIManager>
 
     //Animation
     public GameObject EventPopAnimation;
+
+    public string Save()
+    {
+        var jsonString = JsonConvert.SerializeObject(buttonCouncilActive);
+        return jsonString;
+    }
+    
+
+    public void Load(string json)
+    {
+        SetButtonCouncil(JsonConvert.DeserializeObject<bool>(json));
+    }
 
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
