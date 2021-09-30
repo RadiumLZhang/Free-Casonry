@@ -167,7 +167,7 @@ public class GameView : MonoBehaviour
     //Buttons in Settings
     public void ButtonSaveQuit_OnClick()
     {
-        SaveManager.Instance.SaveData("jonahwei");
+        SaveManager.Instance.SaveData(PlayerPrefs.GetString("userName"));
         SceneManager.LoadScene("StartMenu");
     }
     public void ButtonResume_OnClick()
