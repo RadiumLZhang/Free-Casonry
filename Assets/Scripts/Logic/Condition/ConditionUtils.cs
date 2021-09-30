@@ -186,7 +186,8 @@ namespace Logic.Condition
 
          private static bool CheckHasFlag(params object[] args)
          {
-             return PlayerModel.Instance.CheckRecord((long)args[0]);
+             var list = (RepeatedField<int>)args[0];
+             return PlayerModel.Instance.CheckRecord(list[0]);
          }
 
          private static bool CheckEmergencyChoice(params object[] args)
