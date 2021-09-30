@@ -815,6 +815,7 @@ GameObject:
   - component: {fileID: 2535074838341233825}
   - component: {fileID: 2535074838341233839}
   - component: {fileID: 2535074838341233824}
+  - component: {fileID: 3511649664522733696}
   m_Layer: 5
   m_Name: ImageEmergencyFlag
   m_TagString: Untagged
@@ -880,6 +881,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &3511649664522733696
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535074838341233826}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 5a0316d046e74be42b4588dbf83be370, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 5a0316d046e74be42b4588dbf83be370, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2535074838709241053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1239,7 @@ GameObject:
   - component: {fileID: 2535074838980910579}
   - component: {fileID: 2535074838980910577}
   - component: {fileID: 2535074838980910578}
+  - component: {fileID: 1567566334734773435}
   m_Layer: 5
   m_Name: ImageFinishFlag
   m_TagString: Untagged
@@ -1287,6 +1305,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &1567566334734773435
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535074838980910580}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 5a0316d046e74be42b4588dbf83be370, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 5a0316d046e74be42b4588dbf83be370, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2535074839084211756
 GameObject:
   m_ObjectHideFlags: 0

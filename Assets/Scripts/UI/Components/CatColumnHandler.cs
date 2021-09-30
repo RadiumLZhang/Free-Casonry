@@ -16,6 +16,15 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     private GameView gameView;
     private GameObject pointerDragCache;
     
+    private Transform m_emergencyFlag;
+    private Animation m_emergencyFlagAnimation;
+
+    private Transform m_finishFlag;
+    private Animation m_finishFlagAnimation;
+
+
+    private const string FlagAnimation = "FlagIn";
+    
     public int index;
     private long myID = -1;
 
@@ -28,8 +37,13 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     void Start()
     {
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
-        imageRemainingTime = transform.Find("CatPortrait").Find("ImageRemainingTime");
+        imageRemainingTime = transform.Find("CatPortrait/ImageRemainingTime");
         textRemainingTime = imageRemainingTime.Find("TextRemainingTime").GetComponent<Text>();
+        m_emergencyFlag = transform.Find("ImageEmergencyFlag");
+        m_emergencyFlagAnimation = m_emergencyFlag.GetComponent<Animation>();
+
+        m_finishFlag = transform.Find("ImageFinishFlag");
+        m_finishFlagAnimation = m_finishFlag.GetComponent<Animation>();
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -150,6 +164,58 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     {
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnEmergency();
         gameView.currentDialogEventID = myID;
+    }
+
+    public void SetEmergencyFlag(bool active)
+    {
+        if (active == m_emergencyFlag.gameObject.activeSelf)
+        {
+            return;
+        }
+        
+        m_emergencyFlag.gameObject.SetActive(active);
+
+        var inAni = m_emergencyFlagAnimation[FlagAnimation];
+        if (active)
+        {
+            inAni.speed = 1;
+            inAni.normalizedTime = 0;
+        }
+        else
+        {
+            inAni.speed = -1;
+            inAni.normalizedTime = 1;
+        }
+        
+        inAni.enabled = false;
+        m_emergencyFlagAnimation.Sample();
+        m_emergencyFlagAnimation.Play(FlagAnimation);
+    }
+
+    public void SetFinishFlag(bool active)
+    {
+        if (active == m_finishFlag.gameObject.activeSelf)
+        {
+            return;
+        }
+        
+        m_finishFlag.gameObject.SetActive(active);
+        
+        var inAni = m_finishFlagAnimation[FlagAnimation];
+        if (active)
+        {
+            inAni.speed = 1;
+            inAni.normalizedTime = 0;
+        }
+        else
+        {
+            inAni.speed = -1;
+            inAni.normalizedTime = 1;
+        }
+        
+        inAni.enabled = false;
+        m_finishFlagAnimation.Sample();
+        m_finishFlagAnimation.Play(FlagAnimation);
     }
 }
     
