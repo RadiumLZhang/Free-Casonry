@@ -1543,6 +1543,31 @@
         60011,
         2
       ]
+    },
+    {
+      "conditionId" : "416100",
+      "baseConditionId" : "0"
+    },
+    {
+      "conditionId" : "416110",
+      "baseConditionId" : "4400",
+      "paras" : [
+        116100
+      ]
+    },
+    {
+      "conditionId" : "416120",
+      "baseConditionId" : "4400",
+      "paras" : [
+        116110
+      ]
+    },
+    {
+      "conditionId" : "416130",
+      "baseConditionId" : "4400",
+      "paras" : [
+        116120
+      ]
     }
   ]
 }

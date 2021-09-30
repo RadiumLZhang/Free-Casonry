@@ -19,6 +19,7 @@ public class NPCMono : MonoBehaviour
     private Animation m_animation;
     private GameObject npcRedPoint;
     private Animation m_redPointAnimation;
+    private Transform backgroundButton;
 
     private const string ImportantPointIn = "ImportantPointIn";
     
@@ -32,7 +33,7 @@ public class NPCMono : MonoBehaviour
         viewRect = GameObject.Find("ScrollRelationship").transform.Find("Viewport").GetComponent<RectTransform>();
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
-        
+        backgroundButton = transform.Find("EventCycle/root/Button");
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
         m_redPointAnimation = npcRedPoint.GetComponent<Animation>();
         
@@ -77,13 +78,12 @@ public class NPCMono : MonoBehaviour
         }
         m_animation.Play("EventCycleShow");
         
-        
         // eventCycle.SetActive(!eventCycle.activeSelf);
     }
 
     public void OpenEventCycle()
     {
-        
+        backgroundButton.gameObject.SetActive(true);
         var inAni = m_animation["EventCycleShow"];
         inAni.speed = 1;
         inAni.normalizedTime = 0;
@@ -97,6 +97,7 @@ public class NPCMono : MonoBehaviour
     
     public void CloseEventCycle()
     {
+        backgroundButton.gameObject.SetActive(false);
         var inAni = m_animation["EventCycleShow"];
         inAni.speed = -1;
         inAni.normalizedTime = 1;
@@ -111,6 +112,7 @@ public class NPCMono : MonoBehaviour
     public void ClostBtn_OnClick()
     {
         CloseEventCycle();
+        UIManager.Instance.panelNPCInfo.CloseNpcInfo();
     }
 
     public void SetEventTriggerActive(bool active)
@@ -162,7 +164,7 @@ public class NPCMono : MonoBehaviour
 
         for (; i < 5; i++)
         {
-            // todo 五个环中没有事件 @takiding
+            eventcols[i].EmptyCol();
         }
     }
 }

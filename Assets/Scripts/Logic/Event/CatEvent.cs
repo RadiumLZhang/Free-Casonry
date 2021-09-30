@@ -36,7 +36,7 @@ namespace Logic.Event
         /// <summary>
         /// 人物id，非专有事件为0
         /// </summary>
-        public long HumanId => Config?.ExpireTime ?? 0;
+        public long HumanId => Config?.HumanId ?? 0;
 
         /// <summary>
         /// 已执行次数
