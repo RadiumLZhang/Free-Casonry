@@ -149,7 +149,9 @@ public class GameView : MonoBehaviour
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostInit(currentDialogEventID);
+        if(DroppedImage)DroppedImage.SetActive(true);
         DroppedImage.SetActive(true);
+        DroppedImage = null;
         UIManager.Instance.SwitchDarkBackGround(false);
     }
     
@@ -157,8 +159,12 @@ public class GameView : MonoBehaviour
     {
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
-        DroppedImage.SetActive(true);
-        DroppedImage.GetComponent<DragHandlerSpecialEvent>().EndDrag();
+        if (DroppedImage)
+        {
+            DroppedImage.SetActive(true);
+            DroppedImage.GetComponent<DragHandlerSpecialEvent>().EndDrag();
+        }
+        DroppedImage = null;
         eventHandler.OnDestroyEvent();
         UIManager.Instance.SwitchDarkBackGround(false);
     }

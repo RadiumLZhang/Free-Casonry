@@ -25,7 +25,10 @@ public class NPCEventMono : MonoBehaviour
         remainingTime = m_myCatEventInfo.ConsumeTime;
         textRemainingTime = transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime")
             .GetComponent<Text>();
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        GameObject m_image = transform.Find("ImageEvent").gameObject;
+        m_image.SetActive(true);
+        m_image.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        
         transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = m_myCatEventInfo.Name;
         textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
         transform.Find("RedPoint").gameObject.SetActive(m_myCatEventInfo.IsImportant);

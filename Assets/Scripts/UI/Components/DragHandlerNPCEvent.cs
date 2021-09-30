@@ -41,7 +41,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         pos = GetComponent<RectTransform>().position;
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
         gameView.OpenExePanel();
-        transform.Find("ImageEventEmpty").gameObject.SetActive(true);
+        GetComponent<Image>().enabled = false;
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -61,7 +61,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
     {
         gameView.CloseExePanel();
         Destroy(draggingImage);
-        transform.Find("ImageEventEmpty").gameObject.SetActive(false);
+        GetComponent<Image>().enabled = true;
         GetComponent<Image>().raycastTarget = true;
     }
 
