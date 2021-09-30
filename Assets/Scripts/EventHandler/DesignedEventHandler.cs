@@ -92,7 +92,7 @@ namespace EventHandler
                 emergencyTime = emergency.GetTimeOffset();
             }
             m_catEventInfo.Status = EventStatus.OnProcess; 
-            TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateTime, 1, 1, (int)m_catEventInfo.ConsumeTime, OnPreFinish);
+            TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
             TimeTickerManager.Instance.Restore(); //恢复时间
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             m_catEventInfo.ExecuteEffect(); //执行事件代价
@@ -224,7 +224,16 @@ namespace EventHandler
         
         public void Load(long emergencyIdReload, bool emergencyResolvedReload, long eventIDReload, long cacheTimeReload, uint emergencyTimeReload, bool validReload, int indexReload)
         {
-            
+            m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
+            emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
+            emergencyId = emergencyIdReload;
+            emergencyResolved = emergencyResolvedReload;
+            eventID = eventIDReload;
+            cacheTime = cacheTimeReload;
+            emergencyTime = emergencyTimeReload;
+            valid = validReload; // 议程槽是否被封印
+            index = indexReload;
+            TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
         }
     }
 }
