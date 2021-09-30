@@ -35,7 +35,7 @@ public class NPCMono : MonoBehaviour
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
         backgroundButton = transform.Find("EventCycle/root/Button");
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
-        m_redPointAnimation = npcRedPoint.GetComponent<Animation>();
+        m_redPointAnimation = transform.Find("animationRoot").GetComponent<Animation>();
         
         m_trigger = transform.GetComponent<EventTrigger>();
         m_animation = transform.Find("EventCycle").GetComponent<Animation>();
@@ -149,23 +149,22 @@ public class NPCMono : MonoBehaviour
     public void RefreshEventCycle()
     {
         // by default
-        SwitchNPCRedPoint(false);
+        
         var list = EventManager.Instance.GetRoleEventList(id);
         int i = 0;
-        
-        for (; i < list.Count; i++)
-        {
-            var tempEvent = list[i];
-            if (tempEvent.IsImportant)
-            {
-                SwitchNPCRedPoint(true);
-            }
-            eventcols[i].InitWithID(list[i].ID);
-        }
 
+        var flag = false;
         for (; i < 5; i++)
         {
             eventcols[i].EmptyCol();
         }
+        for (i = 0; i < list.Count; i++)
+        {
+            var tempEvent = list[i];
+            eventcols[i].InitWithID(list[i].ID);
+            flag |= tempEvent.IsImportant;
+        }
+        
+        SwitchNPCRedPoint(flag);
     }
 }

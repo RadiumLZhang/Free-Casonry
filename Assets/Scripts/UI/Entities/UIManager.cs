@@ -37,6 +37,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public GameObject buttonOpenExePanel;
     public GameObject buttonCloseExePanel;
     public GameObject buttonCouncil;
+    private Animation m_buttonCouncilAnimation;
     public GameObject buttonCouncilCatManage;
     public GameObject buttonCloseRelationship;
     public GameObject buttonRelationship;
@@ -130,6 +131,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
         
         buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
+        m_buttonCouncilAnimation = buttonCouncil.GetComponent<Animation>();
         buttonCouncil.SetActive(buttonCouncilActive);
 
         panelNPCInfo = gameView.Find("PanelNPCInfo").GetComponent<NPCInfoMono>();
@@ -266,5 +268,16 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     {
         buttonCouncilActive = isActive;
         buttonCouncil.SetActive(isActive);
+
+        if (isActive)
+        {
+            var inAni = m_buttonCouncilAnimation["ButtonCouncilIn"];
+            inAni.speed = 1;
+            inAni.normalizedTime = 0;
+
+            inAni.enabled = false;
+            m_buttonCouncilAnimation.Sample();
+            m_buttonCouncilAnimation.Play("ButtonCouncilIn");
+        }
     }
 }

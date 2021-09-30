@@ -22,6 +22,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     private Transform m_finishFlag;
     private Animation m_finishFlagAnimation;
 
+    private Image m_eventImage;
+    private RectTransform m_mask;
+
 
     private const string FlagAnimation = "FlagIn";
     
@@ -44,6 +47,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
         m_finishFlag = transform.Find("ImageFinishFlag");
         m_finishFlagAnimation = m_finishFlag.GetComponent<Animation>();
+        
+        m_eventImage = transform.Find("ImageEvent").GetComponent<Image>();
+        m_mask = m_eventImage.transform.Find("Mask").GetComponent<RectTransform>();
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -61,9 +67,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
-                Image m_image = transform.Find("ImageEvent").GetComponent<Image>();
-                m_image.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
-                m_image.enabled = true;
+                m_eventImage.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+                m_eventImage.enabled = true;
             }
         }
         else if ((droppedNPCEvent = pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
@@ -75,12 +80,12 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
             m_myCatEventInfo = eventHandler.GetEventInfo();
-            Image m_image = transform.Find("ImageEvent").GetComponent<Image>();
-            m_image.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
-            m_image.enabled = true;
+            m_eventImage.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+            m_eventImage.enabled = true;
         }
 
         InitHandler();
+        m_mask.gameObject.SetActive(true);
     }
 
     public void InitHandler()
@@ -139,6 +144,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         if (myID != -1)
         {
             textRemainingTime.text = Convert.ToString((remainingTime) * 10) + "分钟";
+            // var percent = remainingTime / eventHandler.GetEventInfo().ConsumeTime;
+            // m_mask.localScale = new Vector3(1, percent, 1);
         }
         
         if (tempEvent == null)
@@ -148,13 +155,15 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     //TODO:事件完成时调这个方法清空栏位，可以是(0 == remainingTime)的时候？
     public void OnFinish()
     {
-        transform.Find("ImageEvent").GetComponent<Image>().enabled = false;
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = null;
+        m_eventImage.enabled = false;
+        m_eventImage.sprite = null;
         imageRemainingTime.gameObject.SetActive(false);
         myID = -1;
         transform.GetComponent<Image>().raycastTarget = true;
         droppedSpecialEvent = null;
         droppedNPCEvent = null;
+        
+        m_mask.gameObject.SetActive(false);
     }
     
     public void ButtonFinishFlag_OnClick()
