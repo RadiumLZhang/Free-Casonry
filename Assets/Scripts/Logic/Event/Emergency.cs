@@ -24,8 +24,11 @@ namespace Logic.Event
         
         public List<EmergencyInfoConfig.Types.Option> options;
 
+        private int choice;
+
         public Emergency(long id)
         {
+            choice = -1;
             ID = id;
             Config = EmergencyInfoConfigLoader.Instance.FindEmergencyItem(id);
             if (Config == null)
@@ -66,7 +69,8 @@ namespace Logic.Event
 
         public void Choose(int option)
         {
-            foreach (var effect in options[option].Effects)
+            choice = option;
+            foreach (var effect in options[option-1].Effects)
             {
                 EffectUtils.ActivateEffect(effect);
             }
@@ -75,8 +79,17 @@ namespace Logic.Event
 
         public void ChosseDefaultOption()
         {
+            choice = DefaultOption;
             Choose(DefaultOption);
         }
-        
+
+        public int GetChoice()
+        {
+            if (choice == -1)
+            {
+                return DefaultOption;
+            }
+            return choice;
+        }
     }
 }
