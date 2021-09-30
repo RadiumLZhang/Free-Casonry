@@ -67,20 +67,7 @@ public class UIManager: BaseModel<UIManager>
     public Transform Choice2_emergency;
     
     //CatColumns
-    public GameObject CatColumn0;
-    public GameObject CatColumn1;
-    public GameObject CatColumn2;
-    public GameObject CatColumn3;
-    
-    //FinishFlags
-    public GameObject FinishFlag0;
-    public GameObject FinishFlag1;
-    public GameObject FinishFlag2;
-    public GameObject FinishFlag3;
-    public GameObject EmergencyFlag0;
-    public GameObject EmergencyFlag1;
-    public GameObject EmergencyFlag2;
-    public GameObject EmergencyFlag3;
+    public CatColumnHandler[] catColumnHandlers;
     
     //NPCInfo
     public GameObject imageNPC;
@@ -101,46 +88,16 @@ public class UIManager: BaseModel<UIManager>
 
     public void SwitchFinishFlag(int index,bool bIsSwitchToShown)
     {
-        switch (index)
-        {
-            case 0:FinishFlag0.SetActive(bIsSwitchToShown);
-                break;
-            case 1:FinishFlag1.SetActive(bIsSwitchToShown);
-                break;
-            case 2:FinishFlag2.SetActive(bIsSwitchToShown);
-                break;
-            case 3:FinishFlag3.SetActive(bIsSwitchToShown);
-                break;
-        }
+        catColumnHandlers[index].SetFinishFlag(bIsSwitchToShown);
     }
     public void SwitchEmergencyFlag(int index,bool bIsSwitchToShown)
     {
-        switch (index)
-        {
-            case 0:EmergencyFlag0.SetActive(bIsSwitchToShown);
-                break;
-            case 1:EmergencyFlag1.SetActive(bIsSwitchToShown);
-                break;
-            case 2:EmergencyFlag2.SetActive(bIsSwitchToShown);
-                break;
-            case 3:EmergencyFlag3.SetActive(bIsSwitchToShown);
-                break;
-        }
+        catColumnHandlers[index].SetEmergencyFlag(bIsSwitchToShown);
     }
 
     public void SwitchCatColumn(int index, bool bIsSwitchToShown)
     {
-        switch (index)
-        {
-            case 0:CatColumn0.SetActive(bIsSwitchToShown);
-                break;
-            case 1:CatColumn1.SetActive(bIsSwitchToShown);
-                break;
-            case 2:CatColumn2.SetActive(bIsSwitchToShown);
-                break;
-            case 3:CatColumn3.SetActive(bIsSwitchToShown);
-                break;
-        }
+        catColumnHandlers[index].gameObject.SetActive(bIsSwitchToShown);
     }
 
     public void Init()
@@ -177,20 +134,13 @@ public class UIManager: BaseModel<UIManager>
     }
     private void InitCatColumns()
     {
-        CatColumn0 = panelEventExe.transform.Find("EventSlot").gameObject;
-        CatColumn1 = panelEventExe.transform.Find("EventSlot1").gameObject;
-        CatColumn2 = panelEventExe.transform.Find("EventSlot2").gameObject;
-        CatColumn3 = panelEventExe.transform.Find("EventSlot3").gameObject;
-        
-        FinishFlag0 = CatColumn0.transform.Find("ImageFinishFlag").gameObject;
-        FinishFlag1 = CatColumn1.transform.Find("ImageFinishFlag").gameObject;
-        FinishFlag2 = CatColumn2.transform.Find("ImageFinishFlag").gameObject;
-        FinishFlag3 = CatColumn3.transform.Find("ImageFinishFlag").gameObject;
-        
-        EmergencyFlag0 = CatColumn0.transform.Find("ImageEmergencyFlag").gameObject;
-        EmergencyFlag1 = CatColumn1.transform.Find("ImageEmergencyFlag").gameObject;
-        EmergencyFlag2 = CatColumn2.transform.Find("ImageEmergencyFlag").gameObject;
-        EmergencyFlag3 = CatColumn3.transform.Find("ImageEmergencyFlag").gameObject;
+        catColumnHandlers = new[]
+        {
+            panelEventExe.transform.Find("EventSlot").GetComponent<CatColumnHandler>(),
+            panelEventExe.transform.Find("EventSlot1").GetComponent<CatColumnHandler>(),
+            panelEventExe.transform.Find("EventSlot2").GetComponent<CatColumnHandler>(),
+            panelEventExe.transform.Find("EventSlot3").GetComponent<CatColumnHandler>()
+        };
     }
     private void InitDialogs()
     {

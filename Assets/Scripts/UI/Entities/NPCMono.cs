@@ -17,7 +17,11 @@ public class NPCMono : MonoBehaviour
     private NPCManager manager;
     private EventTrigger m_trigger;
     private Animation m_animation;
+    private GameObject npcRedPoint;
+    private Animation m_redPointAnimation;
 
+    private const string ImportantPointIn = "ImportantPointIn";
+    
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
     
     private void Start()
@@ -28,6 +32,10 @@ public class NPCMono : MonoBehaviour
         viewRect = GameObject.Find("ScrollRelationship").transform.Find("Viewport").GetComponent<RectTransform>();
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
+        
+        npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
+        m_redPointAnimation = npcRedPoint.GetComponent<Animation>();
+        
         m_trigger = transform.GetComponent<EventTrigger>();
         m_animation = transform.Find("EventCycle").GetComponent<Animation>();
         m_animation.Stop();
@@ -98,5 +106,53 @@ public class NPCMono : MonoBehaviour
     public void SetEventTriggerActive(bool active)
     {
         m_trigger.enabled = active;
+    }
+
+    public void SwitchNPCRedPoint(bool bIsSwitchToShown)
+    {
+        if (npcRedPoint.activeSelf == bIsSwitchToShown)
+        {
+            return;
+        }
+        
+        npcRedPoint.SetActive(bIsSwitchToShown);
+        var inAni = m_redPointAnimation[ImportantPointIn];
+        if (bIsSwitchToShown)
+        {
+            inAni.speed = 1;
+            inAni.normalizedTime = 0;
+        }
+        else
+        {
+            inAni.speed = -1;
+            inAni.normalizedTime = 1;
+        }
+        
+        inAni.enabled = false;
+        m_redPointAnimation.Sample();
+        m_redPointAnimation.Play(ImportantPointIn);
+    }
+
+    public void RefreshEventCycle()
+    {
+        // by default
+        SwitchNPCRedPoint(false);
+        var list = EventManager.Instance.GetRoleEventList(id);
+        int i = 0;
+        
+        for (; i < list.Count; i++)
+        {
+            var tempEvent = list[i];
+            if (tempEvent.IsImportant)
+            {
+                SwitchNPCRedPoint(true);
+            }
+            eventcols[i].InitWithID(list[i].ID);
+        }
+
+        for (; i < 5; i++)
+        {
+            // todo 五个环中没有事件 @takiding
+        }
     }
 }

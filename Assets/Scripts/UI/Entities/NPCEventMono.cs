@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,19 +17,21 @@ public class NPCEventMono : MonoBehaviour
     {
         myID = ID;
         //读表
-        //TODO:demo里不读表的话就自己写下myEventInfo结构体，有ID,Name,ConsumeTime和sprite即可
-        m_myCatEventInfo = new Logic.Event.CatEvent(myID);
+        m_myCatEventInfo = EventManager.Instance.GetCatEventByID(myID);
 
         //DragHandler接收ID
-        transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>().SetEventID(myID);
+        transform.Find("ImageEvent").GetComponent<DragHandlerNPCEvent>().SetEventID(myID);
 
         //UI
         remainingTime = m_myCatEventInfo.ConsumeTime;
         textRemainingTime = transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime")
             .GetComponent<Text>();
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        GameObject m_image = transform.Find("ImageEvent").gameObject;
+        m_image.SetActive(true);
+        m_image.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        
         transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = m_myCatEventInfo.Name;
         textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
-        //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身
+        transform.Find("RedPoint").gameObject.SetActive(m_myCatEventInfo.IsImportant);
     }
 }

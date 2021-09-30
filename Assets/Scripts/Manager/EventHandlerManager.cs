@@ -19,10 +19,11 @@ namespace Manager
         
         public EventHandlerManager()
         {
-            handlerList.Add(new DesignedEventHandler(new Cat(61001)));
-            handlerList.Add(new DesignedEventHandler(new Cat(61002)));
-            handlerList.Add(new DesignedEventHandler(new Cat(61003)));
-            handlerList.Add(new DesignedEventHandler(new Cat(61004)));
+            
+            handlerList.Add(new DesignedEventHandler(CatManager.Instance.GetCat(61001)));
+            handlerList.Add(new DesignedEventHandler(CatManager.Instance.GetCat(61002)));
+            handlerList.Add(new DesignedEventHandler(CatManager.Instance.GetCat(61003)));
+            handlerList.Add(new DesignedEventHandler(CatManager.Instance.GetCat(61004)));
         }
         
         public void InitMono(Transform panelEventExe)

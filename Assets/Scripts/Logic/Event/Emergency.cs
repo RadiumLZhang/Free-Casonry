@@ -70,6 +70,7 @@ namespace Logic.Event
             {
                 EffectUtils.ActivateEffect(effect);
             }
+            
         }
 
         public void ChosseDefaultOption()
