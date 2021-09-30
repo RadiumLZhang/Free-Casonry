@@ -206,5 +206,15 @@ namespace EventHandler
             cacheTime = cacheTime - 1;
             UpdateEmergencyEvent();
         }
+
+        public string Save()
+        {
+            return "";
+        }
+        
+        public void Load(long emergencyIdReload, bool emergencyResolvedReload, long eventIDReload, long cacheTimeReload, uint emergencyTimeReload, bool validReload, int indexReload)
+        {
+            
+        }
     }
 }
