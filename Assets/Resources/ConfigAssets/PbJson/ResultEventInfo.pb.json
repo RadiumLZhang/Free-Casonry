@@ -8,7 +8,8 @@
       "effects" : [
         "50000",
         "51000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "31001",
@@ -18,7 +19,8 @@
       "effects" : [
         "50000",
         "51000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "31002",
@@ -28,7 +30,8 @@
       "effects" : [
         "50000",
         "51000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "31003",
@@ -38,7 +41,8 @@
       "effects" : [
         "50000",
         "51001"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "31004",
@@ -49,7 +53,8 @@
         "50000",
         "51002",
         "51004"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310000",
@@ -60,7 +65,8 @@
         "510000",
         "510001",
         "510002"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310010",
@@ -69,7 +75,8 @@
       "recordId" : "0",
       "effects" : [
         "510000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310020",
@@ -78,7 +85,8 @@
       "recordId" : "0",
       "effects" : [
         "510000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310030",
@@ -87,7 +95,8 @@
       "recordId" : "0",
       "effects" : [
         "510010"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310040",
@@ -97,7 +106,8 @@
       "effects" : [
         "510020",
         "510040"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310050",
@@ -106,7 +116,8 @@
       "recordId" : "0",
       "effects" : [
         "510030"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311000",
@@ -119,7 +130,8 @@
         "511002",
         "511003",
         "511004"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311010",
@@ -128,7 +140,8 @@
       "recordId" : "0",
       "effects" : [
         "511000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311020",
@@ -137,7 +150,8 @@
       "recordId" : "0",
       "effects" : [
         "511000"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311030",
@@ -146,7 +160,8 @@
       "recordId" : "0",
       "effects" : [
         "511010"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311040",
@@ -156,7 +171,8 @@
       "effects" : [
         "511020",
         "510040"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311050",
@@ -165,7 +181,8 @@
       "recordId" : "0",
       "effects" : [
         "511030"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316100",
@@ -174,7 +191,8 @@
       "recordId" : "0",
       "effects" : [
         "516100"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316110",
@@ -183,7 +201,8 @@
       "recordId" : "0",
       "effects" : [
         "516110"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316120",
@@ -192,7 +211,8 @@
       "recordId" : "0",
       "effects" : [
         "516120"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316130",
@@ -201,7 +221,8 @@
       "recordId" : "0",
       "effects" : [
         "516130"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311700",
@@ -211,7 +232,8 @@
       "recordId" : "0",
       "effects" : [
         "0"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311701",
@@ -221,7 +243,8 @@
       "recordId" : "0",
       "effects" : [
         "0"
-      ]
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     }
   ]
 }
