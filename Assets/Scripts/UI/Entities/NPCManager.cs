@@ -38,7 +38,7 @@ public class NPCManager : MonoBehaviour
         }
         UIManagerInitNPCs();
     }
-
+    
     private void UIManagerInitNPCs()
     {
         UIManager.Instance.NPCEventCycles = new Dictionary<long, GameObject>();
@@ -115,6 +115,8 @@ public class NPCManager : MonoBehaviour
         {
             bIsLerping = false;
         }
+        
+        UpdateAllNPCEvents();
     }
     
     public static void SetEventCycleActive(long id, bool active)
@@ -125,5 +127,13 @@ public class NPCManager : MonoBehaviour
         }
         
         npc.SetEventTriggerActive(active);
+    }
+
+    public void UpdateAllNPCEvents()
+    {
+        foreach (var item in NPCs)
+        {
+            item.Value.RefreshEventCycle();
+        }
     }
 }

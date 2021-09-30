@@ -17,7 +17,7 @@ public class NPCMono : MonoBehaviour
     private NPCManager manager;
     private EventTrigger m_trigger;
     private Animation m_animation;
-
+    private GameObject npcRedPoint;
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
     
     private void Start()
@@ -28,6 +28,7 @@ public class NPCMono : MonoBehaviour
         viewRect = GameObject.Find("ScrollRelationship").transform.Find("Viewport").GetComponent<RectTransform>();
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
+        npcRedPoint = transform.Find("RedPoint").gameObject;
         m_trigger = transform.GetComponent<EventTrigger>();
         m_animation = transform.Find("EventCycle").GetComponent<Animation>();
         m_animation.Stop();
@@ -98,5 +99,19 @@ public class NPCMono : MonoBehaviour
     public void SetEventTriggerActive(bool active)
     {
         m_trigger.enabled = active;
+    }
+
+    public void SwitchNPCRedPoint(bool bIsSwitchToShown)
+    {
+        npcRedPoint.SetActive(bIsSwitchToShown);
+    }
+
+    public void RefreshEventCycle()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            eventcols[i].InitWithID(1);//@muidarzhang 这里把1改成事件id
+        }
+        SwitchNPCRedPoint(true);//@muidarzhang 这里把ture改为“列表里有红点事件”的bool值
     }
 }
