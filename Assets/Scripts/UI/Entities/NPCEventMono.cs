@@ -19,7 +19,7 @@ public class NPCEventMono : MonoBehaviour
         m_myCatEventInfo = new Logic.Event.CatEvent(myID);
 
         //DragHandler接收ID
-        transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>().SetEventID(myID);
+        transform.Find("ImageEvent").GetComponent<DragHandlerNPCEvent>().SetEventID(myID);
 
         //UI
         remainingTime = m_myCatEventInfo.ConsumeTime;
