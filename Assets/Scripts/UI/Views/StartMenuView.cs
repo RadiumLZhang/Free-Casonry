@@ -17,16 +17,18 @@ public class StartMenuView : MonoBehaviour
 
     void Update()
     {
-        print(UserName);
+      //  print(UserName);
     }
     public void ButtonStart_OnClick()
     {
-        PlayerPrefs.SetString("userName", "");
+        PlayerPrefs.SetString("userName", UserName);
+        PlayerPrefs.SetString("saveName", "");
         SceneManager.LoadScene("Game");
     }
     public void ButtonContinue_OnClick()
     {
         PlayerPrefs.SetString("userName", UserName);
+        PlayerPrefs.SetString("saveName", UserName);
         SceneManager.LoadScene("Game");
     }
     public void ButtonLogin_OnClick()

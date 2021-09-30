@@ -39,7 +39,7 @@ namespace Manager
             nodeList.Add(CatManager.Instance);
             nodeList.Add(EventHandlerManager.Instance);
 
-            string userName = PlayerPrefs.GetString("userName");
+            string userName = PlayerPrefs.GetString("saveName");
             if (userName != null && !"".Equals(userName))
             {
                 LoadData(userName);
