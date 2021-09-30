@@ -24,6 +24,7 @@ public class GameView : MonoBehaviour
     private Text textInfluence;
     private Text textHidency;
     private GameObject scrollSpecialEvent;
+    private GameObject scrollRelationship;
     private RectTransform contentTransform;
     private Button buttonOpenExePanel;
     private Button buttonCloseExePanel;
@@ -38,7 +39,11 @@ public class GameView : MonoBehaviour
     private Coroutine openExePanel_coroutine;
     private Coroutine closeExePanel_coroutine;
 
+    //杂项
     public GameObject DroppedImage;
+    public float relationshipScale;
+    public Vector2 oldRelationshipPos;
+    public bool bIsRelationshipScaling;
     void Start()
     {
         panelCouncil = transform.Find("PanelCouncil").gameObject;
@@ -49,6 +54,7 @@ public class GameView : MonoBehaviour
         textInfluence = panelResources.transform.Find("TextInfluence").GetComponent<Text>();
         textHidency = panelResources.transform.Find("TextHidency").GetComponent<Text>();
         scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
+        scrollRelationship = transform.Find("ScrollRelationship").gameObject;
         specialEventPrefab = Resources.Load<RectTransform>("Prefabs/SpecialEvent");
         
         //左上角时间
@@ -59,7 +65,9 @@ public class GameView : MonoBehaviour
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
-        
+
+
+        bIsRelationshipScaling = false;
         UIManagerInit();
         EventHandlerManager.Instance.InitMono(panelEventExe.transform);
     }
@@ -91,9 +99,26 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchDarkBackGround(true);
         panelSettings.SetActive(true);
     }
+
+    public void ButtonCloseRelationship_OnClick()
+    {
+        relationshipScale = 1f;
+        bIsRelationshipScaling = true;
+        scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(oldRelationshipPos.x, oldRelationshipPos.y);
+        scrollRelationship.GetComponent<ScrollRect>().enabled = true;
+        UIManager.Instance.buttonRelationship.SetActive(true);
+        UIManager.Instance.buttonCloseRelationship.SetActive(false);
+    }
     public void ButtonRelationship_OnClick()
     {
-        
+        relationshipScale = 0.42f;
+        bIsRelationshipScaling = true;
+        oldRelationshipPos = new Vector2(UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().horizontalNormalizedPosition,UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().verticalNormalizedPosition);
+        scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC.GetComponent<NPCMono>().CloseEventCycle();
+        scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(0.5f, 0.5f);
+        scrollRelationship.GetComponent<ScrollRect>().enabled = false;
+        UIManager.Instance.buttonCloseRelationship.SetActive(true);
+        UIManager.Instance.buttonRelationship.SetActive(false);
     }
     public void ButtonCouncil_OnClick()
     {
@@ -124,6 +149,7 @@ public class GameView : MonoBehaviour
     //Buttons in Settings
     public void ButtonSaveQuit_OnClick()
     {
+        SaveManager.Instance.SaveData("jonahwei");
         SceneManager.LoadScene("StartMenu");
     }
     public void ButtonResume_OnClick()
@@ -246,6 +272,20 @@ public class GameView : MonoBehaviour
     {
         UpdatePanelResources();
         UpdateTime();
+        UpdateRelationshipScale();
+    }
+
+    public void UpdateRelationshipScale()
+    {
+        if (bIsRelationshipScaling)
+        {
+            UIManager.Instance.ScaleRelationship(Mathf.Lerp(UIManager.Instance.scrollRelationShip.transform.localScale.x, relationshipScale, 8.0f * Time.deltaTime));
+            if (Mathf.Abs(UIManager.Instance.scrollRelationShip.transform.localScale.x - relationshipScale) < 0.001f)
+            {
+                UIManager.Instance.ScaleRelationship(relationshipScale);
+                bIsRelationshipScaling = false;
+            }
+        }
     }
     public void UpdatePanelResources()
     {

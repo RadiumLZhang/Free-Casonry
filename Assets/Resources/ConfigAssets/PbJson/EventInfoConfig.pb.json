@@ -511,6 +511,525 @@
       ],
       "upDesc" : "喵喵喵？",
       "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11100",
+      "name" : "猫咪监视",
+      "type" : 1,
+      "consumeTime" : "20",
+      "imageout" : "11000",
+      "imageIn" : "11000",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 200,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "311000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "411000",
+            "400070"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "459000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11101",
+      "name" : "猫咪监视",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "11000",
+      "imageIn" : "11000",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 200,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "311010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "411010"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "459000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11102",
+      "name" : "猫咪监视",
+      "type" : 1,
+      "consumeTime" : "40",
+      "imageout" : "11000",
+      "imageIn" : "11000",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 200,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "311020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "411020"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "459000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11103",
+      "name" : "猫咪陪伴",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "11003",
+      "imageIn" : "11003",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 100,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 190,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "311030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "411030"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "459000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11104",
+      "name" : "猫咪入住",
+      "type" : 2,
+      "consumeTime" : "30",
+      "imageout" : "11004",
+      "imageIn" : "11004",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 180,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "311040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "411050",
+            "411040"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "459000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11105",
+      "name" : "猫咪洗脑",
+      "type" : 2,
+      "consumeTime" : "40",
+      "imageout" : "11005",
+      "imageIn" : "11005",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 250,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "311050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "411070",
+            "411060"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "459000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     }
   ]
 }

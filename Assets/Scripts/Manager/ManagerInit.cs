@@ -13,6 +13,7 @@ namespace Manager
             EventManager.Instance.Init();
             ConditionUtils.Init();
             HumanManager.Instance.Init();
+            SaveManager.Instance.Init();
 
             StartCoroutine(TimeTickerManager.Instance.Loop());
 
@@ -31,7 +32,7 @@ namespace Manager
             TimeTickerManager.Instance.AddLastingEventByStep(
                 -1,
                 transform.GetComponent<GameView>().RefreshScrollSpecialEvent,
-                2,
+                0,
                 10,
                 0,
                 null);

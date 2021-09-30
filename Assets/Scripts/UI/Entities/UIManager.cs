@@ -27,12 +27,15 @@ public class UIManager: BaseModel<UIManager>
     
     //Scrolls
     public GameObject scrollSpecialEvent;
-
+    public GameObject scrollRelationShip;
+    
     //Buttons
     public GameObject buttonOpenExePanel;
     public GameObject buttonCloseExePanel;
     public GameObject buttonCouncil;
     public GameObject buttonCouncilCatManage;
+    public GameObject buttonCloseRelationship;
+    public GameObject buttonRelationship;
     
     //NPCs
     public Dictionary<long, GameObject> NPCEventCycles;
@@ -102,10 +105,13 @@ public class UIManager: BaseModel<UIManager>
         panelEmergencyDialog = gameView.Find("PanelEmergencyDialog").gameObject;
         panelFinishEventDialog = gameView.Find("PanelFinishEventDialog").gameObject;
         scrollSpecialEvent = gameView.Find("ScrollSpecialEvent").gameObject;
+        scrollRelationShip = gameView.Find("ScrollRelationship").gameObject;
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
         buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+        buttonCloseRelationship = gameView.Find("ButtonCloseRelationship").gameObject;
+        buttonRelationship = gameView.Find("ButtonRelationship").gameObject;
         EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
 
         panelNPCInfo = gameView.Find("PanelNPCInfo").GetComponent<NPCInfoMono>();
@@ -231,5 +237,10 @@ public class UIManager: BaseModel<UIManager>
     public void SwitchNPCInfo(Human m_NPC)
     {
         panelNPCInfo.SwitchNpcInfo(m_NPC);
+    }
+
+    public void ScaleRelationship(float scale)
+    {
+        scrollRelationShip.transform.localScale = new Vector3(scale, scale, 1.0f);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using Logic;
+using Newtonsoft.Json;
 using UnityEngine;
 using Object = System.Object;
 
@@ -15,7 +16,7 @@ namespace Manager
         Fast = 2
     }
 
-    public class TimeTickerManager : BaseModel<TimeTickerManager>
+    public class TimeTickerManager : BaseModel<TimeTickerManager>, ISaveObject
     {
         public delegate void CallBack();
 
@@ -400,6 +401,27 @@ namespace Manager
                     }
                 }
             }
+        }
+        /************************************ 存储 *********************************************************/
+
+        public string Save()
+        {
+            var jsonMap = new Dictionary<string, string>();
+            jsonMap["speed"] = Convert.ToString(speed);
+            jsonMap["preSpeed"] = Convert.ToString(preSpeed);
+            jsonMap["stepPerSecond"] = Convert.ToString(stepPerSecond);
+            jsonMap["frameIndex"] = Convert.ToString(frameIndex);
+            var jsonString = JsonConvert.SerializeObject(jsonMap);
+            return jsonString;
+        }
+
+        public void Load(string json)
+        {
+            var jsonMap = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+            speed = int.Parse(jsonMap["speed"]);
+            preSpeed = int.Parse(jsonMap["preSpeed"]);
+            stepPerSecond = int.Parse(jsonMap["stepPerSecond"]);
+            frameIndex = int.Parse(jsonMap["frameIndex"]);
         }
 
         /************************************ 自己测试用的 **************************************************/

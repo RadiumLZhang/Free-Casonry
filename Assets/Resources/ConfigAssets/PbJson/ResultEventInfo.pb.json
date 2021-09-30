@@ -50,6 +50,63 @@
         "51002",
         "51004"
       ]
+    },
+    {
+      "resultId" : "310000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510000",
+        "510001",
+        "510002"
+      ]
+    },
+    {
+      "resultId" : "310010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510000"
+      ]
+    },
+    {
+      "resultId" : "310020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510000"
+      ]
+    },
+    {
+      "resultId" : "310030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510010"
+      ]
+    },
+    {
+      "resultId" : "310040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510020",
+        "510040"
+      ]
+    },
+    {
+      "resultId" : "310050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510030"
+      ]
     }
   ]
 }
