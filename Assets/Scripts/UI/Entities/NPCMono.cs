@@ -77,11 +77,13 @@ public class NPCMono : MonoBehaviour
         }
         m_animation.Play("EventCycleShow");
         
+        
         // eventCycle.SetActive(!eventCycle.activeSelf);
     }
 
     public void OpenEventCycle()
     {
+        
         var inAni = m_animation["EventCycleShow"];
         inAni.speed = 1;
         inAni.normalizedTime = 0;
@@ -89,6 +91,8 @@ public class NPCMono : MonoBehaviour
         inAni.enabled = false;
         m_animation.Sample();
         m_animation.Play("EventCycleShow");
+        
+        UIManager.Instance.panelNPCInfo.OpenNpcInfo();
     }
     
     public void CloseEventCycle()
@@ -100,12 +104,13 @@ public class NPCMono : MonoBehaviour
         inAni.enabled = false;
         m_animation.Sample();
         m_animation.Play("EventCycleShow");
+        
+        UIManager.Instance.panelNPCInfo.CloseNpcInfo();
     }
 
     public void ClostBtn_OnClick()
     {
         CloseEventCycle();
-        UIManager.Instance.panelNPCInfo.CloseNpcInfo();
     }
 
     public void SetEventTriggerActive(bool active)

@@ -39,7 +39,6 @@ public class NPCInfoMono : MonoBehaviour
 
     public void SwitchNpcInfo(Human npc)
     {
-        OpenNpcInfo();
         m_imageNPC.sprite = Resources.Load<Sprite>(npc.Image);
         m_textNPCName.text = npc.Name;
         m_textNPCTitle.text = npc.Title;
