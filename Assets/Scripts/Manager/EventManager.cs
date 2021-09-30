@@ -41,15 +41,18 @@ namespace Manager
 
         public void Init()
         {
-            eventMap = new Dictionary<long, List<Logic.Event.CatEvent>>();
-            id2Event = new Dictionary<long, CatEvent>();
-            foreach (var config in EventInfoConfigLoader.Instance.EventConfig)
+            if (eventMap == null)
             {
-                AddEvent(new Logic.Event.CatEvent(config.EventId));
+                eventMap = new Dictionary<long, List<Logic.Event.CatEvent>>();
+                id2Event = new Dictionary<long, CatEvent>();
+                foreach (var config in EventInfoConfigLoader.Instance.EventConfig)
+                {
+                    AddEvent(new Logic.Event.CatEvent(config.EventId));
+                }
             }
         }
         
-        private void AddEvent(Logic.Event.CatEvent e)
+        private void AddEvent(CatEvent e)
         {
             if (!eventMap.TryGetValue(e.HumanId, out var eventList))
             {
@@ -60,7 +63,7 @@ namespace Manager
             id2Event[e.ID] = e;
         }
 
-        private List<Logic.Event.CatEvent> GetEffectiveEventList(long id)
+        private List<CatEvent> GetEffectiveEventList(long id)
         {
             var returnList = new List<Logic.Event.CatEvent>();
             if (!eventMap.TryGetValue(id, out var list))

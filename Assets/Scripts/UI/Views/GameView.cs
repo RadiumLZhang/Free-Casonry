@@ -29,6 +29,7 @@ public class GameView : MonoBehaviour
     private Button buttonOpenExePanel;
     private Button buttonCloseExePanel;
     private RectTransform rectExePanel;
+    private RectTransform rectSpecialScroll;
     private RectTransform specialEventPrefab;
     public long currentDialogEventID;
 
@@ -38,7 +39,9 @@ public class GameView : MonoBehaviour
     
     private Coroutine openExePanel_coroutine;
     private Coroutine closeExePanel_coroutine;
-
+    private Coroutine openSpecialScroll_coroutine;
+    private Coroutine closeSpecialScroll_coroutine;
+    
     //杂项
     public GameObject DroppedImage;
     public float relationshipScale;
@@ -64,6 +67,8 @@ public class GameView : MonoBehaviour
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").GetComponent<Button>();
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
         rectExePanel = panelEventExe.GetComponent<RectTransform>();
+        rectSpecialScroll = scrollSpecialEvent.GetComponent<RectTransform>();
+        rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,0f,0);
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
 
 
@@ -106,6 +111,12 @@ public class GameView : MonoBehaviour
         bIsRelationshipScaling = true;
         scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(oldRelationshipPos.x, oldRelationshipPos.y);
         scrollRelationship.GetComponent<ScrollRect>().enabled = true;
+        if(openSpecialScroll_coroutine != null) StopCoroutine(openSpecialScroll_coroutine);
+        if(closeSpecialScroll_coroutine != null) StopCoroutine(closeSpecialScroll_coroutine);
+        closeSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(true));
+        rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,0f,0);
+        
+        //buttons
         UIManager.Instance.buttonRelationship.SetActive(true);
         UIManager.Instance.buttonCloseRelationship.SetActive(false);
     }
@@ -114,9 +125,16 @@ public class GameView : MonoBehaviour
         relationshipScale = 0.42f;
         bIsRelationshipScaling = true;
         oldRelationshipPos = new Vector2(UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().horizontalNormalizedPosition,UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().verticalNormalizedPosition);
-        scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC.GetComponent<NPCMono>().CloseEventCycle();
+        if (scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC && scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC.GetComponent<NPCMono>().eventCycle.activeSelf)
+            scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC.GetComponent<NPCMono>().CloseEventCycle();
         scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(0.5f, 0.5f);
         scrollRelationship.GetComponent<ScrollRect>().enabled = false;
+        if(openSpecialScroll_coroutine != null) StopCoroutine(openSpecialScroll_coroutine);
+        if(closeSpecialScroll_coroutine != null) StopCoroutine(closeSpecialScroll_coroutine);
+        openSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(false));
+        rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,-185f,0);
+        
+        //buttons
         UIManager.Instance.buttonCloseRelationship.SetActive(true);
         UIManager.Instance.buttonRelationship.SetActive(false);
     }
@@ -322,6 +340,28 @@ public class GameView : MonoBehaviour
                 if (curPos < openPos) curPos = openPos;
             }
             rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,curPos,rectExePanel.sizeDelta.x);
+            yield return null;
+        }
+    }
+    
+    IEnumerator ScrollSpecialCoroutine(bool bIsOpen)
+    {
+        float openPos = 0;
+        float closePos = -185f;
+        float curPos = bIsOpen ? closePos : openPos;
+        for (float i = 0f; i < 0.3f; i += Time.deltaTime)
+        {
+            if (bIsOpen)
+            {
+                curPos -= closePos * Time.deltaTime * 5f;
+                if (curPos > 0) curPos = 0;
+            }
+            else
+            {
+                curPos += closePos * Time.deltaTime * 5f;
+                if (curPos < closePos) curPos = closePos;
+            }
+            rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,curPos,0);
             yield return null;
         }
     }

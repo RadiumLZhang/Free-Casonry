@@ -211,10 +211,10 @@ namespace Manager
         }
 
 
-        private int speed; //	当前速率
+        private int speed = (int) TickerSpeedEnum.Normal; //	当前速率
         private int preSpeed; //    暂停前的时间
-        private int stepPerSecond; //	每秒步长
-        private int frameIndex; //	当前帧
+        private int stepPerSecond = ConstValue.TIME_TICKER_STEP; //	每秒步长
+        private int frameIndex = 0; //	当前帧
         private List<EventItem> eventList;
         private List<WaitingEventItem> waitingList;
         private List<LastingEventItem> lastingList;
@@ -225,9 +225,6 @@ namespace Manager
         // 初始化
         public void Init()
         {
-            speed = (int) TickerSpeedEnum.Normal;
-            stepPerSecond = ConstValue.TIME_TICKER_STEP;
-            frameIndex = 0;
             eventList = new List<EventItem>();
             waitingList = new List<WaitingEventItem>();
             lastingList = new List<LastingEventItem>();

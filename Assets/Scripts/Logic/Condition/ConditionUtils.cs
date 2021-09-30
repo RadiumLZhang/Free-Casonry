@@ -11,15 +11,6 @@ namespace Logic.Condition
 {
     public class ConditionUtils
     {
-        public static void Init()
-        {
-            // 初始化将所有的condition加载一遍
-            foreach (var configItem in ConditionLoader.Instance.ConditionConfig)
-            {
-                ConditionLoader.Instance.FindConditionItem(configItem.ConditionId);
-            }
-        }
-        
         public static string GetDescription(long id)
         {
             var config = ConditionLoader.Instance.FindConditionItem(id);

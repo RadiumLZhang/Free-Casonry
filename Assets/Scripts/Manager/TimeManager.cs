@@ -106,17 +106,20 @@ namespace Manager
         // 现实中的一秒对应游戏中的x秒
         private int step = ConstValue.TIME_STEP;
 
-        private long timeStamp; 
+        private long timeStamp = 0L; 
         
         private System.DateTime startTime = new System.DateTime(1970, 1, 1);
         
         public void Init()
         {
             // 初始化时间戳
-            System.DateTime configTime =new System.DateTime(ConstValue.YEAR, ConstValue.MONTH,
+            if (timeStamp == 0L)
+            {
+                System.DateTime configTime = new System.DateTime(ConstValue.YEAR, ConstValue.MONTH,
                     ConstValue.DAY);
-            timeStamp = (long)(configTime - startTime).TotalSeconds;
-            
+                timeStamp = (long) (configTime - startTime).TotalSeconds;
+            }
+
             // 添加ticker
             TimeTickerManager.Instance.AddLastingEvent(
                 -1,
