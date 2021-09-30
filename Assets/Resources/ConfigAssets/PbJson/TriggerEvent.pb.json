@@ -2,6 +2,7 @@
   "emergencyItem_config" : [
     {
       "emergencyId" : "20000",
+      "picture" : "Sprites/Main/4刺探事件卡片",
       "name" : "艰难抉择",
       "description" : "小鱼干还是猫薄荷，这是一个问题。",
       "timeOffset" : 5,
@@ -22,6 +23,36 @@
           "description" : "圣草才能引领我们抵达真实。",
           "effects" : [
             "50001"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "20001",
+      "picture" : "Sprites/Main/4刺探事件卡片",
+      "name" : "分支测试",
+      "description" : "测试用",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "小鱼干",
+          "description" : "脚踏实地才是合理之举。",
+          "effects" : [
+            "50000"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "猫薄荷",
+          "description" : "圣草才能引领我们抵达真实。",
+          "effects" : [
+            "0"
           ],
           "conditions" : [
             "0"
