@@ -23,10 +23,13 @@ namespace Manager
 
         public void Init()
         {
-            humanMap = new Dictionary<long, Human>();
-            foreach (var person in HumanInfoLoader.Instance.People)
+            if (humanMap == null)
             {
-                humanMap[person.HumanId] = new Human(person.HumanId);
+                humanMap = new Dictionary<long, Human>();
+                foreach (var person in HumanInfoLoader.Instance.People)
+                {
+                    humanMap[person.HumanId] = new Human(person.HumanId);
+                }
             }
         }
         private Human LoadHuman(long id)

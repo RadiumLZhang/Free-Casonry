@@ -8,12 +8,11 @@ namespace Manager
     {
         public void Start()
         {
+            SaveManager.Instance.Init();
             TimeTickerManager.Instance.Init();
             TimeManager.Instance.Init();
             EventManager.Instance.Init();
-            ConditionUtils.Init();
             HumanManager.Instance.Init();
-            SaveManager.Instance.Init();
 
             StartCoroutine(TimeTickerManager.Instance.Loop());
 
