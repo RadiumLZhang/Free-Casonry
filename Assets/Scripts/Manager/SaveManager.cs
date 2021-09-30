@@ -35,6 +35,7 @@ namespace Manager
             saveMap["TimeManager"] = TimeManager.Instance;
             saveMap["PlayerModel"] = PlayerModel.Instance;
             saveMap["EmergencyManager"] = EmergencyManager.Instance;
+            saveMap["UIManager"] = UIManager.Instance;
 
             string userName = PlayerPrefs.GetString("userName");
             if (userName != null && !"".Equals(userName))
