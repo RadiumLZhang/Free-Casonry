@@ -112,6 +112,7 @@ public class NPCMono : MonoBehaviour
         SwitchNPCRedPoint(false);
         var list = EventManager.Instance.GetRoleEventList(id);
         int i = 0;
+        
         for (; i < list.Count; i++)
         {
             eventcols[i].InitWithID(list[i].ID);
@@ -125,7 +126,7 @@ public class NPCMono : MonoBehaviour
         
         for (; i < 5; i++)
         {
-            // todo @takiding
+            // todo 五个环中没有事件 @takiding
         }
         
         

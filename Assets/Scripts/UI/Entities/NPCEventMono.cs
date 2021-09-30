@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,7 +17,8 @@ public class NPCEventMono : MonoBehaviour
     {
         myID = ID;
         //读表
-        m_myCatEventInfo = new Logic.Event.CatEvent(myID);
+        m_myCatEventInfo = EventManager.Instance.GetCatEventByID(myID)
+            new Logic.Event.CatEvent(myID);
 
         //DragHandler接收ID
         transform.Find("ImageEvent").GetComponent<DragHandlerNPCEvent>().SetEventID(myID);
