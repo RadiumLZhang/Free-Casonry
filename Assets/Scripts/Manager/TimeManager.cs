@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using Logic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Manager
 {
     // 全局时间管理（左上角那个年月日时分秒
-    public class TimeManager : BaseModel<TimeManager>
+    public class TimeManager : BaseModel<TimeManager>, ISaveObject
     {
         /********************************* 接口 ***********************************************/
         
@@ -146,6 +148,17 @@ namespace Manager
         {
             System.DateTime time = startTime.AddSeconds(timeStamp);
             return time;
+        }
+        
+        /************************************** 存档 ******************************************/
+        public string Save()
+        {
+            return Convert.ToString(timeStamp);
+        }
+
+        public void Load(string json)
+        {
+            timeStamp = long.Parse(json);
         }
     }
 }
