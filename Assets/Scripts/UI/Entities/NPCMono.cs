@@ -19,7 +19,8 @@ public class NPCMono : MonoBehaviour
     private Animation m_animation;
     private GameObject npcRedPoint;
     private Animation m_redPointAnimation;
-
+    private Transform backgroundButton;
+    
     private const string ImportantPointIn = "ImportantPointIn";
     
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
@@ -32,7 +33,7 @@ public class NPCMono : MonoBehaviour
         viewRect = GameObject.Find("ScrollRelationship").transform.Find("Viewport").GetComponent<RectTransform>();
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
-        
+        backgroundButton = transform.Find("EventCycle/root/Button");
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
         m_redPointAnimation = npcRedPoint.GetComponent<Animation>();
         
@@ -82,6 +83,7 @@ public class NPCMono : MonoBehaviour
 
     public void OpenEventCycle()
     {
+        backgroundButton.gameObject.SetActive(true);
         var inAni = m_animation["EventCycleShow"];
         inAni.speed = 1;
         inAni.normalizedTime = 0;
@@ -93,6 +95,7 @@ public class NPCMono : MonoBehaviour
     
     public void CloseEventCycle()
     {
+        backgroundButton.gameObject.SetActive(false);
         var inAni = m_animation["EventCycleShow"];
         inAni.speed = -1;
         inAni.normalizedTime = 1;
