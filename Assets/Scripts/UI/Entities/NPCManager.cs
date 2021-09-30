@@ -18,7 +18,7 @@ public class NPCManager : MonoBehaviour
         NPCs = new Dictionary<long, NPCMono>();
         lerpPosX = 0.5f;
         lerpPosY = 0.5f;
-        scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
+        scrollRect = UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>();
         Transform listNPC = transform.Find("Viewport").Find("Content");
         NPCs.Add(60000,listNPC.Find("king").GetComponent<NPCMono>());
         NPCs.Add(60001,listNPC.Find("queen").GetComponent<NPCMono>());

@@ -58,7 +58,11 @@ public class NPCMono : MonoBehaviour
             
             float contentX = contentRect.sizeDelta.x - viewRect.sizeDelta.x;
             float contentY = contentRect.sizeDelta.y - viewRect.sizeDelta.y;
-            manager.StartNPCLerp((selfRect.anchoredPosition.x + contentX / 2.0f) / contentX,(selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.03f);
+            //manager.StartNPCLerp((selfRect.anchoredPosition.x + contentX / 2.0f) / contentX,(selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.03f);
+            UIManager.Instance.gameView.GetComponent<GameView>().oldRelationshipPos = new Vector2(
+                (selfRect.anchoredPosition.x + contentX / 2.0f) / contentX,
+                (selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.03f);
+            UIManager.Instance.gameView.GetComponent<GameView>().ButtonCloseRelationship_OnClick();
             manager.SetOpenedNPC(gameObject);
         }
         

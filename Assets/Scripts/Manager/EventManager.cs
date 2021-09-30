@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Event;
 using Logic;
 using Logic.Event;
@@ -64,8 +65,13 @@ namespace Manager
 
         private List<CatEvent> GetEffectiveEventList(long id)
         {
-            List<Logic.Event.CatEvent> returnList = new List<Logic.Event.CatEvent>();
-            foreach (var e in eventMap[id])
+            var returnList = new List<Logic.Event.CatEvent>();
+            if (!eventMap.TryGetValue(id, out var list))
+            {
+                return returnList;
+            }
+            
+            foreach (var e in list)
             {
                 // finished
                 if (e.Status == EventStatus.Finished)

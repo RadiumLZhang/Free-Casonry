@@ -23,16 +23,19 @@ public class UIManager: BaseModel<UIManager>
     public GameObject panelStartEventDialog;
     public GameObject panelEmergencyDialog;
     public GameObject panelFinishEventDialog;
-    public GameObject panelNPCInfo;
+    public NPCInfoMono panelNPCInfo;
     
     //Scrolls
     public GameObject scrollSpecialEvent;
-
+    public GameObject scrollRelationShip;
+    
     //Buttons
     public GameObject buttonOpenExePanel;
     public GameObject buttonCloseExePanel;
     public GameObject buttonCouncil;
     public GameObject buttonCouncilCatManage;
+    public GameObject buttonCloseRelationship;
+    public GameObject buttonRelationship;
     
     //NPCs
     public Dictionary<long, GameObject> NPCEventCycles;
@@ -68,16 +71,7 @@ public class UIManager: BaseModel<UIManager>
     
     //CatColumns
     public CatColumnHandler[] catColumnHandlers;
-    
-    //NPCInfo
-    public GameObject imageNPC;
-    public GameObject textNPCName;
-    public GameObject textNPCTitle;
-    public GameObject textNPCVisibility;
-    public GameObject textLabelA;
-    public GameObject textLabelB;
-    public GameObject textLabelC;
-    
+
     //Animation
     public GameObject EventPopAnimation;
 
@@ -111,26 +105,19 @@ public class UIManager: BaseModel<UIManager>
         panelEmergencyDialog = gameView.Find("PanelEmergencyDialog").gameObject;
         panelFinishEventDialog = gameView.Find("PanelFinishEventDialog").gameObject;
         scrollSpecialEvent = gameView.Find("ScrollSpecialEvent").gameObject;
+        scrollRelationShip = gameView.Find("ScrollRelationship").gameObject;
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").gameObject;
         buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
         buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
+        buttonCloseRelationship = gameView.Find("ButtonCloseRelationship").gameObject;
+        buttonRelationship = gameView.Find("ButtonRelationship").gameObject;
         EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
-        panelNPCInfo = gameView.Find("PanelNPCInfo").gameObject;
-        InitNPCInfo();
+
+        panelNPCInfo = gameView.Find("PanelNPCInfo").GetComponent<NPCInfoMono>();
+        
         InitCatColumns();
         InitDialogs();
-    }
-
-    private void InitNPCInfo()
-    {
-        imageNPC = panelNPCInfo.transform.Find("ImageNPCBackground/ImageNPC").gameObject;
-        textNPCName = panelNPCInfo.transform.Find("TextNPCName").gameObject;
-        textNPCTitle = panelNPCInfo.transform.Find("TextNPCTitle").gameObject;
-        textNPCVisibility = panelNPCInfo.transform.Find("TextNPCVisibility").gameObject; 
-        textLabelA = panelNPCInfo.transform.Find("TextLabelA").gameObject;  
-        textLabelB = panelNPCInfo.transform.Find("TextLabelB").gameObject;  
-        textLabelC = panelNPCInfo.transform.Find("TextLabelC").gameObject; 
     }
     private void InitCatColumns()
     {
@@ -249,14 +236,11 @@ public class UIManager: BaseModel<UIManager>
 
     public void SwitchNPCInfo(Human m_NPC)
     {
-        imageNPC.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_NPC.Image);
-        textNPCName.GetComponent<Text>().text = m_NPC.Name;
-        textNPCTitle.GetComponent<Text>().text = m_NPC.Title;
-        textNPCVisibility.GetComponent<Text>().text = m_NPC.Visibility.ToString();
-        
-        //TODO:等表改了之后读三个label
-        textLabelA.GetComponent<Text>().text = m_NPC.Name;
-        textLabelB.GetComponent<Text>().text = m_NPC.Name;
-        textLabelC.GetComponent<Text>().text = m_NPC.Name;
+        panelNPCInfo.SwitchNpcInfo(m_NPC);
+    }
+
+    public void ScaleRelationship(float scale)
+    {
+        scrollRelationShip.transform.localScale = new Vector3(scale, scale, 1.0f);
     }
 }
