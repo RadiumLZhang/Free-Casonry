@@ -1029,6 +1029,350 @@
       ],
       "upDesc" : "喵喵喵？",
       "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11610",
+      "name" : "flag测试0",
+      "type" : 3,
+      "consumeTime" : "20",
+      "imageout" : "11610",
+      "imageIn" : "11610",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60000",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "316100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "416100"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11611",
+      "name" : "flag测试1",
+      "type" : 1,
+      "consumeTime" : "20",
+      "imageout" : "11610",
+      "imageIn" : "11610",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60000",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "316110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "416110"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11612",
+      "name" : "flag测试2",
+      "type" : 2,
+      "consumeTime" : "20",
+      "imageout" : "11610",
+      "imageIn" : "11610",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60000",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "316120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "416120"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
+    },
+    {
+      "eventId" : "11613",
+      "name" : "flag测试3",
+      "type" : 3,
+      "consumeTime" : "20",
+      "imageout" : "11610",
+      "imageIn" : "11610",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60000",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "316130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "416130"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "喵喵喵？",
+      "downDesc" : "喵喵喵！"
     }
   ]
 }
