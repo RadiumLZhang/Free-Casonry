@@ -126,4 +126,12 @@ public class NPCManager : MonoBehaviour
         
         npc.SetEventTriggerActive(active);
     }
+
+    public void UpdateAllNPCEvents()
+    {
+        foreach (var item in NPCs)
+        {
+            item.Value.RefreshEventCycle();
+        }
+    }
 }
