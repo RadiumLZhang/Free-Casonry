@@ -202,6 +202,26 @@
       "effects" : [
         "516130"
       ]
+    },
+    {
+      "resultId" : "311700",
+      "name" : "选了分支0",
+      "description1" : "选了第一个分支",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "0"
+      ]
+    },
+    {
+      "resultId" : "311701",
+      "name" : "默认分支1",
+      "description1" : "默认分支",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "0"
+      ]
     }
   ]
 }
