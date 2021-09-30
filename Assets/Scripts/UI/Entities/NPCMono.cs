@@ -127,7 +127,5 @@ public class NPCMono : MonoBehaviour
         {
             // todo 五个环中没有事件 @takiding
         }
-        
-        
     }
 }

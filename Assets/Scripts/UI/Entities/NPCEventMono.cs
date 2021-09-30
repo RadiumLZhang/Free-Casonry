@@ -17,8 +17,7 @@ public class NPCEventMono : MonoBehaviour
     {
         myID = ID;
         //读表
-        m_myCatEventInfo = EventManager.Instance.GetCatEventByID(myID)
-            new Logic.Event.CatEvent(myID);
+        m_myCatEventInfo = EventManager.Instance.GetCatEventByID(myID);
 
         //DragHandler接收ID
         transform.Find("ImageEvent").GetComponent<DragHandlerNPCEvent>().SetEventID(myID);
