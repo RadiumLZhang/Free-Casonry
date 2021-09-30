@@ -7,6 +7,7 @@ using System.Net.Security;
 using Logic.Event;
 using Logic.Effect;
 using Manager;
+using Newtonsoft.Json;
 using ResultEventInfo;
 using UI.Animation;
 using UnityEngine.UIElements;
@@ -209,7 +210,16 @@ namespace EventHandler
 
         public string Save()
         {
-            return "";
+            var map = new Dictionary<string, string>();
+            map["emergencyId"] = Convert.ToString(emergencyId);
+            map["emergencyResolved"] = Convert.ToString(emergencyResolved);
+            map["eventID"] = Convert.ToString(eventID);
+            map["cacheTime"] = Convert.ToString(cacheTime);
+            map["emergencyTime"] = Convert.ToString(emergencyTime);
+            map["valid"] = Convert.ToString(valid);
+            map["index"] = Convert.ToString(index);
+            var jsonString = JsonConvert.SerializeObject(map);
+            return jsonString;
         }
         
         public void Load(long emergencyIdReload, bool emergencyResolvedReload, long eventIDReload, long cacheTimeReload, uint emergencyTimeReload, bool validReload, int indexReload)
