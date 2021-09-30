@@ -113,6 +113,7 @@ public class NPCMono : MonoBehaviour
     {
         CloseEventCycle();
         UIManager.Instance.panelNPCInfo.CloseNpcInfo();
+        manager.currentOpenedNPC = null;
     }
 
     public void SetEventTriggerActive(bool active)
