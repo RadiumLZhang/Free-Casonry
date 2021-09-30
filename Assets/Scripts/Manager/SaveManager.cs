@@ -34,6 +34,7 @@ namespace Manager
             nodeList.Add(TimeManager.Instance);
             nodeList.Add(EventManager.Instance);
             nodeList.Add(PlayerModel.Instance);
+            nodeList.Add(HumanManager.Instance);
             nodeList.Add(EmergencyManager.Instance);
             nodeList.Add(UIManager.Instance);
             nodeList.Add(CatManager.Instance);
