@@ -11,7 +11,7 @@ namespace Manager
 {
 
 
-    public class EventHandlerManager : BaseModel<EventHandlerManager>
+    public class EventHandlerManager : BaseModel<EventHandlerManager>/*, ISaveObject*/
     {
         private List<DesignedEventHandler> handlerList = new List<DesignedEventHandler>();
         private List<CatColumnHandler> monoList = new List<CatColumnHandler>();
@@ -103,5 +103,25 @@ namespace Manager
                 return true;
             }
         }
+
+        /*public string Save()
+        {
+        for(int i = 0; i < 4; i++)
+        {
+            handlerList[i].
+        }
+        private long emergencyId
+        private bool emergencyResolved
+        private long eventID 
+        private long cacheTime
+        private uint emergencyTime 
+        private bool valid
+        private int index
+        }
+
+        public void Load(string json)
+        {
+            
+        }*/
     }
 }
