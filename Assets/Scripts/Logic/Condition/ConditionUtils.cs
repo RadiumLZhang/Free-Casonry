@@ -3,6 +3,7 @@ using BaseCondition;
 using Condition;
 using EventHandler;
 using Google.Protobuf.Collections;
+using Logic.Event;
 using Manager;
 using UnityEngine;
 
@@ -94,6 +95,10 @@ namespace Logic.Condition
                     //     return CheckHumanIntimacyGreaterEqual(args);
                     // case 4109: //目标人物X，亲密度为Y
                     //     return CheckHumanIntimacyEqual(args);
+                case 4400:
+                    return CheckHasFlag(args);
+                case 4403:
+                    return CheckEmergencyChoice(args);
             }
 
             return false;
@@ -178,5 +183,17 @@ namespace Logic.Condition
          // {
          //     return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetFavorValue();
          // }
+
+         private static bool CheckHasFlag(params object[] args)
+         {
+             return PlayerModel.Instance.CheckRecord((long)args[0]);
+         }
+
+         private static bool CheckEmergencyChoice(params object[] args)
+         {
+             Emergency tempEmergency = EmergencyManager.Instance.GetEmergencyByID((long)args[0]);
+             return tempEmergency.GetChoice() == (int)args[1];
+         }
     }
+    
 }

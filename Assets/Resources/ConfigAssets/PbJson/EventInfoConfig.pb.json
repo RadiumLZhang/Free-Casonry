@@ -564,8 +564,7 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "411000",
-            "400070"
+            "411000"
           ]
         },
         {
@@ -582,7 +581,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "459000"
+            "-1"
           ]
         },
         {
@@ -668,7 +667,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "459000"
+            "-1"
           ]
         },
         {
@@ -754,7 +753,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "459000"
+            "-1"
           ]
         },
         {
@@ -840,7 +839,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "459000"
+            "-1"
           ]
         },
         {
@@ -854,7 +853,7 @@
           ]
         }
       ],
-      "upDesc" : "喵喵喵？",
+      "upDesc" : "喵喵喵？\\n喵喵",
       "downDesc" : "喵喵喵！"
     },
     {
@@ -909,8 +908,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "411050",
-            "411040"
+            "411040",
+            "411041"
           ]
         },
         {
@@ -927,7 +926,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "459000"
+            "-1"
           ]
         },
         {
@@ -996,8 +995,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "411070",
-            "411060"
+            "412050",
+            "412051"
           ]
         },
         {
@@ -1014,7 +1013,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "459000"
+            "-1"
           ]
         },
         {

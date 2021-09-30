@@ -107,6 +107,65 @@
       "effects" : [
         "510030"
       ]
+    },
+    {
+      "resultId" : "311000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511000",
+        "511001",
+        "511002",
+        "511003",
+        "511004"
+      ]
+    },
+    {
+      "resultId" : "311010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511000"
+      ]
+    },
+    {
+      "resultId" : "311020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511000"
+      ]
+    },
+    {
+      "resultId" : "311030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511010"
+      ]
+    },
+    {
+      "resultId" : "311040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511020",
+        "510040"
+      ]
+    },
+    {
+      "resultId" : "311050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511030"
+      ]
     }
   ]
 }
