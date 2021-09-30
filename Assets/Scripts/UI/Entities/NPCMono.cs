@@ -115,15 +115,14 @@ public class NPCMono : MonoBehaviour
         
         for (; i < list.Count; i++)
         {
+            var tempEvent = list[i];
+            if (tempEvent.IsImportant)
+            {
+                SwitchNPCRedPoint(true);
+            }
             eventcols[i].InitWithID(list[i].ID);
-            SwitchNPCRedPoint(true);
         }
 
-        if (i == 0)
-        {
-            SwitchNPCRedPoint(false);
-        }
-        
         for (; i < 5; i++)
         {
             // todo 五个环中没有事件 @takiding
