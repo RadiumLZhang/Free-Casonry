@@ -91,5 +91,10 @@ namespace Logic.Event
             }
             return choice;
         }
+
+        public void SetChoice(int c)
+        {
+            choice = c;
+        }
     }
 }
