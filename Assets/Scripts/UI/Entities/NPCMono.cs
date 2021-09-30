@@ -160,7 +160,7 @@ public class NPCMono : MonoBehaviour
 
         for (; i < 5; i++)
         {
-            // todo 五个环中没有事件 @takiding
+            eventcols[i].EmptyCol();
         }
     }
 }
