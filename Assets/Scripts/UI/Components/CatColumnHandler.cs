@@ -141,11 +141,11 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         {
             myID = tempEvent.ID;
         }
-        if (myID != -1)
+        if (tempEvent != null && myID != -1)
         {
             textRemainingTime.text = Convert.ToString((remainingTime) * 10) + "分钟";
-            // var percent = remainingTime / eventHandler.GetEventInfo().ConsumeTime;
-            // m_mask.localScale = new Vector3(1, percent, 1);
+            var percent = (float)remainingTime / tempEvent.ConsumeTime;
+            m_mask.localScale = new Vector3(1, percent, 1);
         }
         
         if (tempEvent == null)
