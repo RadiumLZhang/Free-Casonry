@@ -1575,6 +1575,62 @@
       "paras" : [
         0
       ]
+    },
+    {
+      "conditionId" : "450000",
+      "baseConditionId" : "4400",
+      "paras" : [
+        112100
+      ]
+    },
+    {
+      "conditionId" : "450001",
+      "baseConditionId" : "4400",
+      "paras" : [
+        112110
+      ]
+    },
+    {
+      "conditionId" : "450002",
+      "baseConditionId" : "4400",
+      "paras" : [
+        112120
+      ]
+    },
+    {
+      "conditionId" : "450003",
+      "baseConditionId" : "4400",
+      "paras" : [
+        112130
+      ]
+    },
+    {
+      "conditionId" : "450010",
+      "baseConditionId" : "4400",
+      "paras" : [
+        101000
+      ]
+    },
+    {
+      "conditionId" : "450011",
+      "baseConditionId" : "4400",
+      "paras" : [
+        101010
+      ]
+    },
+    {
+      "conditionId" : "450012",
+      "baseConditionId" : "4400",
+      "paras" : [
+        101020
+      ]
+    },
+    {
+      "conditionId" : "450013",
+      "baseConditionId" : "4400",
+      "paras" : [
+        101040
+      ]
     }
   ]
 }
