@@ -1,58 +1,106 @@
 {
   "resultEvent_config" : [
     {
-      "resultId" : "31000",
-      "name" : "猫咪监视",
+      "resultId" : "300000",
+      "name" : "猫的秘药",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "50000",
-        "51000"
+        "500000",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "31001",
-      "name" : "猫咪监视",
+      "resultId" : "300010",
+      "name" : "猫语者",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "50000",
-        "51000"
+        "500010",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "31002",
-      "name" : "猫咪监视",
+      "resultId" : "300020",
+      "name" : "逃亡",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "50000",
-        "51000"
+        "500020",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "31003",
-      "name" : "猫咪陪伴",
+      "resultId" : "300030",
+      "name" : "求援",
+      "description2" : "当隐匿度降为0后，猫咪组织将因人类打击而被毁。",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "50000",
-        "51001"
+        "500030",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "31004",
-      "name" : "猫咪入住",
+      "resultId" : "300031",
+      "name" : "求援",
+      "description2" : "当隐匿度降为0后，猫咪组织将因人类打击而被毁。",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "50000",
-        "51002",
-        "51004"
+        "500031",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300040",
+      "name" : "互不亏欠",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500040",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300050",
+      "name" : "绝望",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500050",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300060",
+      "name" : "寝食难安",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500060",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300070",
+      "name" : "月下之盟",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500070",
+        "550000",
+        "500074",
+        "500075",
+        "500076"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -185,64 +233,2819 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "316100",
-      "name" : "flag测试0",
+      "resultId" : "312000",
+      "name" : "猫咪监视",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "516100"
+        "512000",
+        "512001",
+        "512002",
+        "512003",
+        "512004",
+        "512005",
+        "512006"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513000",
+        "513001",
+        "513002",
+        "513003",
+        "513004"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "314000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "514000",
+        "514001",
+        "514002"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "314010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "514000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "314020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "514000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "314030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "514010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "314040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "514020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "314050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "514030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515000",
+        "515001",
+        "515002",
+        "515003",
+        "515004"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516000",
+        "516001",
+        "516002",
+        "516003",
+        "516004"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517000",
+        "517001",
+        "517002",
+        "517003",
+        "517004",
+        "517005",
+        "517006",
+        "517007"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518000",
+        "518001",
+        "518002",
+        "518003",
+        "518004",
+        "518005",
+        "518006"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519000",
+        "519001",
+        "519002",
+        "519003",
+        "519004",
+        "519005"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520000",
+        "520001",
+        "520002",
+        "520003",
+        "520004",
+        "520005"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321000",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521000",
+        "521001",
+        "521002",
+        "521003"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321010",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321020",
+      "name" : "猫咪监视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321030",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321040",
+      "name" : "猫咪入住",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521020",
+        "510040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321050",
+      "name" : "猫咪洗脑",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300100",
+      "name" : "猫咪盛宴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500100"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300110",
+      "name" : "异动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500110"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300120",
+      "name" : "突然袭击",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500120"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300130",
+      "name" : "猫咪救援",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500130"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300140",
+      "name" : "猫咪救援",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500140"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300150",
+      "name" : "猫咪救援",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500150"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300160",
+      "name" : "猫咪救援",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500160"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300170",
+      "name" : "紧急会议",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500170"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300180",
+      "name" : "将计就计",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500180"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300200",
+      "name" : "庆典开幕",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500200"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300210",
+      "name" : "猫咪渗透",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500210"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300220",
+      "name" : "猫咪渗透",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500220"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300230",
+      "name" : "猫咪渗透",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500230"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300240",
+      "name" : "猫咪渗透",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500240"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300250",
+      "name" : "王的罪行",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500250"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300260",
+      "name" : "宣判",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500260"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300270",
+      "name" : "神的使节",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500270"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300280",
+      "name" : "清水变美酒",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500280"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300290",
+      "name" : "猫咪行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500290"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300300",
+      "name" : "平息风暴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500300"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300310",
+      "name" : "猫咪行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500310"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300320",
+      "name" : "死者复生",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500320"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300330",
+      "name" : "猫咪行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500330"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300340",
+      "name" : "决斗",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500340"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "300350",
+      "name" : "欢庆吧",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "500350"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301000",
+      "name" : "圣杯的传言",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301010",
+      "name" : "圣杯的痕迹",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301020",
+      "name" : "圣杯的线索",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301030",
+      "name" : "火刑场遗迹",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301040",
+      "name" : "颠倒的酒杯",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301050",
+      "name" : "圣杯的力量",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501050"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302000",
+      "name" : "绿庭幽会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302010",
+      "name" : "秘密",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302020",
+      "name" : "最后的吻",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302030",
+      "name" : "唯一的朋友",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303000",
+      "name" : "不安的传言",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303010",
+      "name" : "秘员集会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303020",
+      "name" : "巫术审判团",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303030",
+      "name" : "女巫审判",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303040",
+      "name" : "政令",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303100",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503100"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303110",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503110"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303120",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503120"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303130",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503130"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303140",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503140"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303150",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503150"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303160",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503160"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303170",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503170"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303180",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503180"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303190",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503190"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303200",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503200"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303210",
+      "name" : "牺牲者",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503210"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303220",
+      "name" : "愿恩人安息",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503220"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303300",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503300"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303310",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503310"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303320",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503320"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303330",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503330"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303340",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503340"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303350",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503350"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303360",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503360"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303370",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503370"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303380",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503380"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303390",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503390"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303400",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503400"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303410",
+      "name" : "传闻打探",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503410"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303500",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503500"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303510",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503510"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303520",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503520"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303530",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503530"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303540",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503540"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303550",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503550"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303560",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503560"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303570",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503570"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303580",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503580"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303590",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503590"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303600",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503600"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303610",
+      "name" : "捕鼠行动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503610"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303700",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503700"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303710",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503710"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303720",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503720"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303730",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503730"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303740",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503740"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303750",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503750"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303760",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503760"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303770",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503770"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303780",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503780"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303790",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503790"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303800",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503800"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303810",
+      "name" : "传播询问",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503810"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303900",
+      "name" : "医疗记录",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503900"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303910",
+      "name" : "医疗记录",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503910"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "303920",
+      "name" : "医疗记录",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "503920"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304000",
+      "name" : "大军压境",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304010",
+      "name" : "资金支援",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304020",
+      "name" : "反间谍活动",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304030",
+      "name" : "宗教施压",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304040",
+      "name" : "老朋友",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304050",
+      "name" : "强健药方",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504050"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304060",
+      "name" : "英雄人物",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504060"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304070",
+      "name" : "倒戈相向",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504070"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304080",
+      "name" : "往昔之情",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504080"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304090",
+      "name" : "英雄人物",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504090"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304100",
+      "name" : "猫咪嚎叫",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504100"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304110",
+      "name" : "猫咪陪伴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504110"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304120",
+      "name" : "猫咪潜入",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504120"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304130",
+      "name" : "猫咪投毒",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504130"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304200",
+      "name" : "决战",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504200"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304210",
+      "name" : "不再退缩",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504210"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304220",
+      "name" : "最后一击",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504220"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "304230",
+      "name" : "凯旋",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "504230"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "309000",
+      "name" : "终幕",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "509000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "309010",
+      "name" : "终幕",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "509010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "309020",
+      "name" : "终幕",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "509020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "309030",
+      "name" : "终幕",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "509030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "310100",
+      "name" : "暗杀危机",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "310110",
+      "name" : "暗杀危机",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "310120",
+      "name" : "暗杀危机",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "311060",
+      "name" : "猫咪联络",
+      "description2" : "提升影响，寻找新成员",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "511060",
+        "511061"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312100",
+      "name" : "武器置备",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312110",
+      "name" : "兵力运输",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312120",
+      "name" : "贵族安抚",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312130",
+      "name" : "宗教支持",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512130",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "312140",
+      "name" : "意外失火",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "512140",
+        "550002"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313100",
+      "name" : "伪造笔迹",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313110",
+      "name" : "寄送遗书",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313120",
+      "name" : "葬礼仪式",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313130",
+      "name" : "宁静",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513130",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313140",
+      "name" : "天谴",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513140",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313150",
+      "name" : "哀怨之影",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513150",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313160",
+      "name" : "救赎的使徒",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513160",
+        "550000",
+        "513161"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313200",
+      "name" : "猫的凝视",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513200",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313210",
+      "name" : "观察日记",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513210",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313220",
+      "name" : "猫的研究",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513220",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "313230",
+      "name" : "神的使徒",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "513230",
+        "550000",
+        "513231"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315100",
+      "name" : "点石成金",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315110",
+      "name" : "石头戏法",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315120",
+      "name" : "穷酸的钻研",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515120",
+        "550000",
+        "515121",
+        "515122"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315130",
+      "name" : "不懈的钻研",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515130",
+        "550000",
+        "515131",
+        "515132"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315140",
+      "name" : "“赃物”",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515140",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315150",
+      "name" : "暴政的争论",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515150",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315160",
+      "name" : "滥杀的不满",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515160",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315170",
+      "name" : "苹果的启明",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515170",
+        "550000",
+        "515171"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315180",
+      "name" : "干点脏活",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515180",
+        "550000",
+        "515181"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316100",
+      "name" : "虐猫人",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516100",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316110",
-      "name" : "flag测试1",
+      "name" : "光荣的挑衅",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "516110"
+        "516110",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316120",
-      "name" : "flag测试2",
+      "name" : "重拾荣耀",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "516120"
+        "516120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "316121",
+      "name" : "重拾荣耀",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516121",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316130",
-      "name" : "flag测试3",
+      "name" : "借酒消愁",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "516130"
+        "516130",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "311700",
-      "name" : "选了分支0",
-      "description1" : "选了第一个分支",
+      "resultId" : "317100",
+      "name" : "事业或爱情？",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "0"
+        "517100",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "311701",
-      "name" : "默认分支1",
-      "description1" : "默认分支",
+      "resultId" : "317110",
+      "name" : "不忠之人",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "0"
+        "517110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317120",
+      "name" : "约会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317130",
+      "name" : "奉命行事",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517130",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317140",
+      "name" : "捉奸",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517140",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317150",
+      "name" : "他的抉择",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517150",
+        "550000",
+        "517151"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "317151",
+      "name" : "他的抉择",
+      "description2" : "医生开心的消息传为美谈",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517150",
+        "550000",
+        "517152",
+        "517153",
+        "517154"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318100",
+      "name" : "猫咪疗伤",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518100"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318110",
+      "name" : "猫咪圣草",
+      "description2" : "见到了神",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518110",
+        "518113"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318111",
+      "name" : "猫咪圣草",
+      "description2" : "看到了水",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518110",
+        "518114"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318112",
+      "name" : "猫咪圣草",
+      "description2" : "看到了火",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518110",
+        "518113"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "318113",
+      "name" : "猫咪圣草",
+      "description2" : "做了好梦",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518110",
+        "518116"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319100",
+      "name" : "鼠患烦恼",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319101",
+      "name" : "鼠患烦恼",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519101",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319110",
+      "name" : "不惜代价",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319111",
+      "name" : "不惜代价",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519111",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319120",
+      "name" : "猫的降世",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319121",
+      "name" : "猫的降世",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519121",
+        "550000",
+        "519122",
+        "519123"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319130",
+      "name" : "鼠患四起",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519130",
+        "519131"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319140",
+      "name" : "鼠患四起",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519140",
+        "519141"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "319150",
+      "name" : "鼠患四起",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "519150",
+        "519151"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320100",
+      "name" : "建言",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320110",
+      "name" : "奇怪的作息",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320120",
+      "name" : "拦截密函",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520120",
+        "550000",
+        "520121"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320121",
+      "name" : "拦截密函",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320130",
+      "name" : "逮捕叛徒",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520130",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320140",
+      "name" : "复仇",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520140",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320150",
+      "name" : "“偷狱”",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520150",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "320160",
+      "name" : "放弃追债",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "520160"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321100",
+      "name" : "逃债",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321110",
+      "name" : "铤而走险",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321120",
+      "name" : "赎金",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521130",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321130",
+      "name" : "救赎",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521140",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321140",
+      "name" : "难兄难弟",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521150",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321150",
+      "name" : "寒酸的款待",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521160",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321160",
+      "name" : "自保措施",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521170",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321170",
+      "name" : "破屋保卫战",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521180",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321180",
+      "name" : "虚惊一场",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521190",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330000",
+      "name" : "猫咪审判",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330010",
+      "name" : "猫咪联络",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530010",
+        "530011"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330020",
+      "name" : "猫咪联络",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530020",
+        "530021"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330030",
+      "name" : "猫咪巡游",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330040",
+      "name" : "猫咪巡游",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330050",
+      "name" : "猫咪巡游",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530050"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330060",
+      "name" : "猫咪仪式",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530060"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330070",
+      "name" : "猫咪仪式",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530070"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330080",
+      "name" : "猫咪仪式",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530080"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330090",
+      "name" : "猫咪集会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530090"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330100",
+      "name" : "猫咪集会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530100"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330110",
+      "name" : "猫咪集会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530110"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330120",
+      "name" : "穿梭特训",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530120",
+        "530121",
+        "530122",
+        "530123"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330130",
+      "name" : "冥想特训",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530130",
+        "530131",
+        "530132",
+        "530133"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330140",
+      "name" : "怜爱特训",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530140",
+        "530141",
+        "530142",
+        "530143"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330150",
+      "name" : "穿梭特训",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530150",
+        "530151",
+        "530152",
+        "530153"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330160",
+      "name" : "冥想特训",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530160",
+        "530161",
+        "530162",
+        "530163"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330170",
+      "name" : "怜爱特训",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530170",
+        "530171",
+        "530172",
+        "530173"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "330180",
+      "name" : "人类警觉",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "530180"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     }

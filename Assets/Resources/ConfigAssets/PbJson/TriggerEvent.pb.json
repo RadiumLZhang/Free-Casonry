@@ -5,14 +5,14 @@
       "picture" : "Sprites/Main/4刺探事件卡片",
       "name" : "艰难抉择",
       "description" : "小鱼干还是猫薄荷，这是一个问题。",
-      "timeOffset" : 5,
+      "timeOffset" : 3,
       "defaultOption" : 1,
       "options" : [
         {
           "name" : "小鱼干",
           "description" : "脚踏实地才是合理之举。",
           "effects" : [
-            "50000"
+            "1005"
           ],
           "conditions" : [
             "0"
@@ -22,39 +22,629 @@
           "name" : "猫薄荷",
           "description" : "圣草才能引领我们抵达真实。",
           "effects" : [
-            "50001"
+            "1006"
           ],
           "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
             "0"
           ]
         }
       ]
     },
     {
-      "emergencyId" : "20001",
+      "emergencyId" : "20003",
       "picture" : "Sprites/Main/4刺探事件卡片",
-      "name" : "分支测试",
-      "description" : "测试用",
-      "timeOffset" : 5,
+      "name" : "遭遇守卫",
+      "timeOffset" : 3,
       "defaultOption" : 1,
       "options" : [
         {
-          "name" : "小鱼干",
-          "description" : "脚踏实地才是合理之举。",
+          "name" : "转移注意",
           "effects" : [
-            "50000"
+            "500032",
+            "500033"
           ],
           "conditions" : [
             "0"
           ]
         },
         {
-          "name" : "猫薄荷",
-          "description" : "圣草才能引领我们抵达真实。",
+          "name" : "冷眼旁观",
           "effects" : [
             "0"
           ],
           "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "20007",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "恶魔的契约",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "权力",
+          "effects" : [
+            "500072"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "资助",
+          "effects" : [
+            "500073"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21010",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "女仆的警觉",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "低调行动",
+          "description" : "掉影响",
+          "effects" : [
+            "510101"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "继续活跃",
+          "description" : "掉隐匿",
+          "effects" : [
+            "510102"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21510",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "点石成金",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "拿走金子",
+          "effects" : [
+            "515101",
+            "515102",
+            "515103"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "静观其变",
+          "effects" : [
+            "515104"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21511",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "石头戏法",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "拿走金子",
+          "effects" : [
+            "515111",
+            "515112",
+            "515113"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "静观其变",
+          "effects" : [
+            "515114"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21610",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "虐猫取乐",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "保护猫咪",
+          "description" : "得影响，掉隐匿，救猫flag",
+          "effects" : [
+            "516101",
+            "516102",
+            "516103"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "维持低调",
+          "description" : "掉影响，加隐匿",
+          "effects" : [
+            "516104516105"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21612",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "偷梁换柱",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "换把好剑",
+          "description" : "胜利flag，隐匿度-2",
+          "effects" : [
+            "516122",
+            "516123"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "换把钝剑",
+          "description" : "失败flag",
+          "effects" : [
+            "516124"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21613",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "陪酒",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "喝点酒",
+          "description" : "得影响",
+          "effects" : [
+            "516131"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "默默看着",
+          "description" : "降心防",
+          "effects" : [
+            "516132"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21712",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "小插曲",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "粘人",
+          "description" : "降心防",
+          "effects" : [
+            "517121"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "营造气氛",
+          "description" : "得影响",
+          "effects" : [
+            "517122"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21713",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "入神",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "接受启明",
+          "description" : "宗教猫入神",
+          "effects" : [
+            "517131"
+          ],
+          "conditions" : [
+            "418112"
+          ]
+        },
+        {
+          "name" : "享受美梦",
+          "description" : "常规",
+          "effects" : [
+            "517132"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21910",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "捕鼠工具",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "破坏工具",
+          "description" : "不准抓",
+          "effects" : [
+            "519102"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "2",
+          "description" : "可以抓",
+          "effects" : [
+            "0"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21911",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "捕鼠毒药",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "破坏工具",
+          "description" : "不准抓",
+          "effects" : [
+            "519112"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "2",
+          "description" : "可以抓",
+          "effects" : [
+            "0"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "21912",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "捕鼠猫",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "放弃捕鼠",
+          "description" : "不准抓",
+          "effects" : [
+            "0"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "认真工作",
+          "description" : "可以抓",
+          "effects" : [
+            "0"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "22012",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "拦截密函",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "向亲王告密",
+          "description" : "掉隐匿",
+          "effects" : [
+            "0"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "向国王汇报",
+          "description" : "加金币与影响",
+          "effects" : [
+            "0"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "22016",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "偿还",
+      "description" : "钱也不都是他的",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "补足资金",
+          "description" : "减钱",
+          "effects" : [
+            "520161"
+          ],
+          "conditions" : [
+            "420165"
+          ]
+        },
+        {
+          "name" : "强行游说",
+          "description" : "掉影响",
+          "effects" : [
+            "520162"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "23000",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "name" : "猫咪审判",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "1",
+          "description" : "扣钱",
+          "effects" : [
+            "530001"
+          ],
+          "conditions" : [
+            "420165"
+          ]
+        },
+        {
+          "name" : "2",
+          "description" : "扣影响",
+          "effects" : [
+            "530002"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "emergencyId" : "20104",
+      "picture" : "Sprites/Main/5刺探事件卡片",
+      "description" : "小鱼干还是猫薄荷，这是一个问题。",
+      "timeOffset" : 5,
+      "defaultOption" : 1,
+      "options" : [
+        {
+          "name" : "仔细翻找",
+          "description" : "脚踏实地才是合理之举。",
+          "effects" : [
+            "1005"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "轮班翻找",
+          "description" : "圣草才能引领我们抵达真实。",
+          "effects" : [
+            "1006"
+          ],
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "name" : "0",
+          "description" : "0",
+          "effects" : [
             "0"
           ]
         }
