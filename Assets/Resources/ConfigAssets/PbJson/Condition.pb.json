@@ -1294,6 +1294,7 @@
       "conditionId" : "410100",
       "baseConditionId" : "4003",
       "paras" : [
+        7,
         11,
         12,
         0
@@ -1317,6 +1318,7 @@
       "conditionId" : "410110",
       "baseConditionId" : "4003",
       "paras" : [
+        7,
         12,
         12,
         0
@@ -1326,6 +1328,7 @@
       "conditionId" : "410120",
       "baseConditionId" : "4003",
       "paras" : [
+        7,
         13,
         12,
         0
@@ -1333,7 +1336,11 @@
     },
     {
       "conditionId" : "411060",
-      "baseConditionId" : "4102"
+      "baseConditionId" : "4102",
+      "paras" : [
+        60001,
+        1
+      ]
     },
     {
       "conditionId" : "412100",
