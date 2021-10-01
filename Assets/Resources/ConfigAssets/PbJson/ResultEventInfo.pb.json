@@ -2368,6 +2368,17 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
+      "resultId" : "316101",
+      "name" : "虐猫人",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "516100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
       "resultId" : "316110",
       "name" : "光荣的挑衅",
       "btnText" : "完成",
