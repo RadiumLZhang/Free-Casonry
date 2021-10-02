@@ -14287,8 +14287,8 @@
       "name" : "猫咪联络",
       "type" : 3,
       "consumeTime" : "40",
-      "imageout" : "13001",
-      "imageIn" : "13001",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14378,8 +14378,8 @@
       "name" : "猫咪联络",
       "type" : 3,
       "consumeTime" : "40",
-      "imageout" : "13001",
-      "imageIn" : "13001",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14470,8 +14470,8 @@
       "name" : "猫咪巡游",
       "type" : 1,
       "consumeTime" : "30",
-      "imageout" : "13003",
-      "imageIn" : "13003",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14563,8 +14563,8 @@
       "name" : "猫咪巡游",
       "type" : 1,
       "consumeTime" : "30",
-      "imageout" : "13003",
-      "imageIn" : "13003",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14656,8 +14656,8 @@
       "name" : "猫咪巡游",
       "type" : 1,
       "consumeTime" : "30",
-      "imageout" : "13003",
-      "imageIn" : "13003",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14750,8 +14750,8 @@
       "name" : "猫咪仪式",
       "type" : 2,
       "consumeTime" : "30",
-      "imageout" : "13006",
-      "imageIn" : "13006",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14843,8 +14843,8 @@
       "name" : "猫咪仪式",
       "type" : 2,
       "consumeTime" : "30",
-      "imageout" : "13006",
-      "imageIn" : "13006",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -14936,8 +14936,8 @@
       "name" : "猫咪仪式",
       "type" : 2,
       "consumeTime" : "30",
-      "imageout" : "13006",
-      "imageIn" : "13006",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15030,8 +15030,8 @@
       "name" : "猫咪集会",
       "type" : 3,
       "consumeTime" : "30",
-      "imageout" : "13009",
-      "imageIn" : "13009",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15123,8 +15123,8 @@
       "name" : "猫咪集会",
       "type" : 3,
       "consumeTime" : "30",
-      "imageout" : "13009",
-      "imageIn" : "13009",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15216,8 +15216,8 @@
       "name" : "猫咪集会",
       "type" : 3,
       "consumeTime" : "30",
-      "imageout" : "13009",
-      "imageIn" : "13009",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15312,8 +15312,8 @@
       "name" : "穿梭特训",
       "type" : 1,
       "consumeTime" : "30",
-      "imageout" : "13003",
-      "imageIn" : "13003",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15404,8 +15404,8 @@
       "name" : "冥想特训",
       "type" : 2,
       "consumeTime" : "30",
-      "imageout" : "13006",
-      "imageIn" : "13006",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15496,8 +15496,8 @@
       "name" : "怜爱特训",
       "type" : 3,
       "consumeTime" : "30",
-      "imageout" : "13009",
-      "imageIn" : "13009",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15588,8 +15588,8 @@
       "name" : "穿梭特训",
       "type" : 1,
       "consumeTime" : "30",
-      "imageout" : "13003",
-      "imageIn" : "13003",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15681,8 +15681,8 @@
       "name" : "冥想特训",
       "type" : 2,
       "consumeTime" : "30",
-      "imageout" : "13006",
-      "imageIn" : "13006",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15774,8 +15774,8 @@
       "name" : "怜爱特训",
       "type" : 3,
       "consumeTime" : "30",
-      "imageout" : "13009",
-      "imageIn" : "13009",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -15867,8 +15867,8 @@
       "name" : "人类警觉",
       "type" : 0,
       "consumeTime" : "40",
-      "imageout" : "13000",
-      "imageIn" : "13000",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "40",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
@@ -16118,7 +16118,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "440030"
           ]
         },
         {
@@ -16372,6 +16372,186 @@
         {
           "conditions" : [
             "440040"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "14005",
+      "name" : "2号",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 1,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "440030"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "14006",
+      "name" : "2号",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 1,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "440030"
           ]
         },
         {
