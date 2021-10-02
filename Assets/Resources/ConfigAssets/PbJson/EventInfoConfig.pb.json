@@ -5690,7 +5690,7 @@
       "outOfTimeRecordId" : "0",
       "humanId" : "60005",
       "repeatTime" : 1,
-      "emergencyId" : "0",
+      "emergencyId" : "21510",
       "isImportant" : 0,
       "priority" : 100,
       "preconditions" : [
@@ -5775,7 +5775,7 @@
       "outOfTimeRecordId" : "0",
       "humanId" : "60005",
       "repeatTime" : 1,
-      "emergencyId" : "0",
+      "emergencyId" : "21511",
       "isImportant" : 0,
       "priority" : 100,
       "preconditions" : [
@@ -12356,6 +12356,174 @@
         {
           "conditions" : [
             "421180"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "14000",
+      "name" : "全加",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 100,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "14001",
+      "name" : "全减",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 100,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "0"
           ]
         },
         {

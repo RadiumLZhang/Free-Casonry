@@ -2274,6 +2274,17 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
+      "resultId" : "315111",
+      "name" : "石头戏法",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
       "resultId" : "315120",
       "name" : "穷酸的钻研",
       "btnText" : "完成",
@@ -3057,6 +3068,30 @@
       "recordId" : "0",
       "effects" : [
         "530180"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "340000",
+      "name" : "怜爱特训",
+      "btnText" : "全加",
+      "recordId" : "0",
+      "effects" : [
+        "540000",
+        "540001",
+        "540002"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "340010",
+      "name" : "人类警觉",
+      "btnText" : "全减",
+      "recordId" : "0",
+      "effects" : [
+        "540010",
+        "540011",
+        "540012"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     }

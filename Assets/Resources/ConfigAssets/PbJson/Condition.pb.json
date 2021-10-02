@@ -53,9 +53,10 @@
     },
     {
       "conditionId" : "400070",
-      "baseConditionId" : "4501",
+      "baseConditionId" : "4102",
       "paras" : [
-        200
+        60000,
+        0
       ]
     },
     {

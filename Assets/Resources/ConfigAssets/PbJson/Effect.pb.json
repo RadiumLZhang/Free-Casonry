@@ -267,14 +267,14 @@
       ]
     },
     {
-      "effectId" : "512003",
+      "effectId" : "512005",
       "baseEffectId" : "5301",
       "paras" : [
         404
       ]
     },
     {
-      "effectId" : "512004",
+      "effectId" : "512006",
       "baseEffectId" : "5300",
       "paras" : [
         60009
@@ -2556,6 +2556,48 @@
       "baseEffectId" : "5013",
       "paras" : [
         559000
+      ]
+    },
+    {
+      "effectId" : "540000",
+      "baseEffectId" : "5000",
+      "paras" : [
+        50
+      ]
+    },
+    {
+      "effectId" : "540001",
+      "baseEffectId" : "5003",
+      "paras" : [
+        50
+      ]
+    },
+    {
+      "effectId" : "540002",
+      "baseEffectId" : "5006",
+      "paras" : [
+        50
+      ]
+    },
+    {
+      "effectId" : "540010",
+      "baseEffectId" : "5000",
+      "paras" : [
+        -50
+      ]
+    },
+    {
+      "effectId" : "540011",
+      "baseEffectId" : "5003",
+      "paras" : [
+        -50
+      ]
+    },
+    {
+      "effectId" : "540012",
+      "baseEffectId" : "5006",
+      "paras" : [
+        -50
       ]
     }
   ]
