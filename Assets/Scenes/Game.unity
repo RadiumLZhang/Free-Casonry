@@ -11487,8 +11487,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1403892667}
-  - component: {fileID: 1403892668}
   - component: {fileID: 1403892669}
+  - component: {fileID: 1403892668}
   m_Layer: 5
   m_Name: ContentSpecialEvent
   m_TagString: Untagged
@@ -11524,21 +11524,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1403892666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 10
+    m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 175, y: 175}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 2
-  m_ConstraintCount: 1
+  m_ChildAlignment: 3
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!114 &1403892669
 MonoBehaviour:
   m_ObjectHideFlags: 0
