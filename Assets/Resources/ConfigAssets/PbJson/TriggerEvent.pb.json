@@ -363,7 +363,7 @@
       ]
     },
     {
-      "emergencyId" : "21713",
+      "emergencyId" : "21811",
       "picture" : "Sprites/Main/5刺探事件卡片",
       "name" : "入神",
       "timeOffset" : 5,
@@ -416,7 +416,6 @@
           ]
         },
         {
-          "name" : "2",
           "description" : "可以抓",
           "effects" : [
             "0"
@@ -452,7 +451,6 @@
           ]
         },
         {
-          "name" : "2",
           "description" : "可以抓",
           "effects" : [
             "0"
@@ -554,17 +552,18 @@
           "name" : "补足资金",
           "description" : "减钱",
           "effects" : [
-            "520161"
+            "521122",
+            "521123"
           ],
           "conditions" : [
-            "420165"
+            "421123"
           ]
         },
         {
           "name" : "强行游说",
           "description" : "掉影响",
           "effects" : [
-            "520162"
+            "521124"
           ],
           "conditions" : [
             "0"

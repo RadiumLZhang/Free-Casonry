@@ -42,6 +42,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -111,6 +117,12 @@
       "result" : [
         {
           "eventId" : "300010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -210,6 +222,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -294,6 +312,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -363,6 +387,12 @@
       "result" : [
         {
           "eventId" : "300040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -462,6 +492,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -531,6 +567,12 @@
       "result" : [
         {
           "eventId" : "300060",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -630,6 +672,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -641,6 +689,910 @@
         {
           "conditions" : [
             "400070"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10100",
+      "name" : "圣杯的传言",
+      "type" : 1,
+      "consumeTime" : "20",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "301000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "401000"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10101",
+      "name" : "圣杯的痕迹",
+      "type" : 2,
+      "consumeTime" : "20",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "301010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "401010"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10102",
+      "name" : "圣杯的线索",
+      "type" : 3,
+      "consumeTime" : "20",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "301020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "401020"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10103",
+      "name" : "火刑场遗迹",
+      "type" : 1,
+      "consumeTime" : "40",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "301030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "401030"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10104",
+      "name" : "颠倒的酒杯",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 50,
+      "preconditions" : [
+        "401041",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "301040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "401040"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10105",
+      "name" : "圣杯的力量",
+      "type" : 2,
+      "consumeTime" : "60",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "301050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "401050"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10200",
+      "name" : "绿庭幽会",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "302000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "402000",
+            "402001",
+            "402002",
+            "402003",
+            "402004"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10201",
+      "name" : "秘密",
+      "type" : 0,
+      "consumeTime" : "20",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "40",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60000",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "302010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "402010"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10202",
+      "name" : "最后的吻",
+      "type" : 0,
+      "consumeTime" : "10",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "302020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "402020"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "10203",
+      "name" : "唯一的朋友",
+      "type" : 0,
+      "consumeTime" : "10",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60000",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 100,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "302030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "402030"
           ]
         },
         {
@@ -699,6 +1651,12 @@
       "result" : [
         {
           "eventId" : "310000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -799,6 +1757,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -869,6 +1833,12 @@
       "result" : [
         {
           "eventId" : "310020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -969,6 +1939,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -1039,6 +2015,12 @@
       "result" : [
         {
           "eventId" : "310040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1140,6 +2122,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -1150,7 +2138,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "410050"
+            "410050",
+            "410051",
+            "410052"
           ]
         },
         {
@@ -1180,8 +2170,7 @@
             "-1"
           ]
         }
-      ],
-      "downDesc" : "洗脑控制人类"
+      ]
     },
     {
       "eventId" : "11010",
@@ -1210,6 +2199,12 @@
       "result" : [
         {
           "eventId" : "310100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1311,6 +2306,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -1382,6 +2383,12 @@
       "result" : [
         {
           "eventId" : "310120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1483,6 +2490,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -1554,6 +2567,12 @@
       "result" : [
         {
           "eventId" : "310140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1655,6 +2674,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -1726,6 +2751,12 @@
       "result" : [
         {
           "eventId" : "311000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1826,6 +2857,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -1895,6 +2932,12 @@
       "result" : [
         {
           "eventId" : "311020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1994,6 +3037,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2063,6 +3112,12 @@
       "result" : [
         {
           "eventId" : "311040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2163,6 +3218,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2233,6 +3294,12 @@
       "result" : [
         {
           "eventId" : "311060",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2333,6 +3400,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2403,6 +3476,12 @@
       "result" : [
         {
           "eventId" : "312010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2502,6 +3581,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2586,6 +3671,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2655,6 +3746,12 @@
       "result" : [
         {
           "eventId" : "312040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2755,6 +3852,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2825,6 +3928,12 @@
       "result" : [
         {
           "eventId" : "312100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2925,6 +4034,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -2995,6 +4110,12 @@
       "result" : [
         {
           "eventId" : "312120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3095,6 +4216,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -3165,6 +4292,12 @@
       "result" : [
         {
           "eventId" : "312140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3265,6 +4398,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -3335,6 +4474,12 @@
       "result" : [
         {
           "eventId" : "313010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3434,6 +4579,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -3518,6 +4669,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -3587,6 +4744,12 @@
       "result" : [
         {
           "eventId" : "313040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3687,6 +4850,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -3757,6 +4926,12 @@
       "result" : [
         {
           "eventId" : "313100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3857,6 +5032,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -3927,6 +5108,12 @@
       "result" : [
         {
           "eventId" : "313120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4027,6 +5214,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -4097,6 +5290,12 @@
       "result" : [
         {
           "eventId" : "313140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4197,6 +5396,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -4267,6 +5472,12 @@
       "result" : [
         {
           "eventId" : "313160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4367,6 +5578,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -4437,6 +5654,12 @@
       "result" : [
         {
           "eventId" : "313210",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4537,6 +5760,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -4607,6 +5836,12 @@
       "result" : [
         {
           "eventId" : "313230",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4707,6 +5942,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -4776,6 +6017,12 @@
       "result" : [
         {
           "eventId" : "314010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4876,6 +6123,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -4960,6 +6213,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -5029,6 +6288,12 @@
       "result" : [
         {
           "eventId" : "314040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5129,6 +6394,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -5199,6 +6470,12 @@
       "result" : [
         {
           "eventId" : "315000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5299,6 +6576,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -5368,6 +6651,12 @@
       "result" : [
         {
           "eventId" : "315020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5467,6 +6756,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -5536,6 +6831,12 @@
       "result" : [
         {
           "eventId" : "315040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5636,6 +6937,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -5706,6 +7013,12 @@
       "result" : [
         {
           "eventId" : "315100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5807,6 +7120,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -5878,6 +7197,12 @@
       "result" : [
         {
           "eventId" : "315120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5980,6 +7305,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -6051,6 +7382,12 @@
       "result" : [
         {
           "eventId" : "315140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6152,6 +7489,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -6238,6 +7581,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -6309,6 +7658,12 @@
       "result" : [
         {
           "eventId" : "315170",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6411,6 +7766,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -6481,6 +7842,12 @@
       "result" : [
         {
           "eventId" : "316000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6581,6 +7948,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -6650,6 +8023,12 @@
       "result" : [
         {
           "eventId" : "316020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6749,6 +8128,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -6818,6 +8203,12 @@
       "result" : [
         {
           "eventId" : "316040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6918,6 +8309,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7003,6 +8400,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7073,6 +8476,12 @@
       "result" : [
         {
           "eventId" : "316110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7174,6 +8583,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7245,6 +8660,12 @@
       "result" : [
         {
           "eventId" : "316130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7345,6 +8766,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7415,6 +8842,12 @@
       "result" : [
         {
           "eventId" : "317010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7514,6 +8947,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7598,6 +9037,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7667,6 +9112,12 @@
       "result" : [
         {
           "eventId" : "317040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7767,6 +9218,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -7837,6 +9294,12 @@
       "result" : [
         {
           "eventId" : "317100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7938,6 +9401,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -8007,6 +9476,12 @@
       "result" : [
         {
           "eventId" : "317120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8092,6 +9567,12 @@
       "result" : [
         {
           "eventId" : "317130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8194,6 +9675,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -8278,6 +9765,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -8348,6 +9841,12 @@
       "result" : [
         {
           "eventId" : "318000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8448,6 +9947,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -8517,6 +10022,12 @@
       "result" : [
         {
           "eventId" : "318020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8616,6 +10127,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -8685,6 +10202,12 @@
       "result" : [
         {
           "eventId" : "318040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8785,6 +10308,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -8855,6 +10384,12 @@
       "result" : [
         {
           "eventId" : "318100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8957,6 +10492,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9027,6 +10568,12 @@
       "result" : [
         {
           "eventId" : "319000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9127,6 +10674,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9196,6 +10749,12 @@
       "result" : [
         {
           "eventId" : "319020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9295,6 +10854,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9364,6 +10929,12 @@
       "result" : [
         {
           "eventId" : "319040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9464,6 +11035,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9549,6 +11126,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9624,6 +11207,12 @@
         },
         {
           "eventId" : "319111",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9718,6 +11307,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9788,6 +11383,12 @@
       "result" : [
         {
           "eventId" : "319130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9887,6 +11488,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -9971,6 +11578,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -10040,6 +11653,12 @@
       "result" : [
         {
           "eventId" : "320000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10140,6 +11759,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -10209,6 +11834,12 @@
       "result" : [
         {
           "eventId" : "320020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10308,6 +11939,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -10377,6 +12014,12 @@
       "result" : [
         {
           "eventId" : "320040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10477,6 +12120,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -10562,6 +12211,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -10631,6 +12286,12 @@
       "result" : [
         {
           "eventId" : "320110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10732,6 +12393,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -10801,6 +12468,12 @@
       "result" : [
         {
           "eventId" : "320130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10886,6 +12559,12 @@
       "result" : [
         {
           "eventId" : "320140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10988,6 +12667,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -11060,6 +12745,12 @@
       "result" : [
         {
           "eventId" : "320160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11164,6 +12855,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -11205,7 +12902,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "密切监视人类最近的动向，了解人类的性格与习惯。",
+      "downDesc" : "此人能见度增加1点，相关事件被揭露"
     },
     {
       "eventId" : "12101",
@@ -11234,6 +12933,12 @@
       "result" : [
         {
           "eventId" : "321010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11289,7 +12994,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "密切监视人类最近的动向，了解人类的性格与习惯。",
+      "downDesc" : "此人能见度增加1点，相关事件被揭露"
     },
     {
       "eventId" : "12102",
@@ -11318,6 +13025,12 @@
       "result" : [
         {
           "eventId" : "321020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11373,7 +13086,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "密切监视人类最近的动向，了解人类的性格与习惯。",
+      "downDesc" : "此人能见度增加1点，相关事件被揭露"
     },
     {
       "eventId" : "12103",
@@ -11402,6 +13117,12 @@
       "result" : [
         {
           "eventId" : "321030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11457,7 +13178,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "了解人类的喜好后，可以让猫咪对阵下药，进一步降低其防备。",
+      "downDesc" : "此人心防减少2点"
     },
     {
       "eventId" : "12104",
@@ -11486,6 +13209,12 @@
       "result" : [
         {
           "eventId" : "321040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11542,7 +13271,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "对猫咪缺乏防备的人类，会有养猫的意愿。养猫的人越多，我们的行动越容易保持低调。",
+      "downDesc" : "猫咪隐匿度提升10点，此人收养猫咪"
     },
     {
       "eventId" : "12105",
@@ -11571,6 +13302,12 @@
       "result" : [
         {
           "eventId" : "321050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11627,7 +13364,9 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "在人类缺少防备时，对其进行彻底的洗脑控制。关键时刻，他们可以为组织所用。",
+      "downDesc" : "猫咪影响力提升10点，并控制该人"
     },
     {
       "eventId" : "12110",
@@ -11655,7 +13394,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321110",
+          "eventId" : "321100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11681,7 +13426,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421100"
+            "421110",
+            "421101"
           ]
         },
         {
@@ -11712,7 +13458,7 @@
           ]
         }
       ],
-      "downDesc" : "被人追"
+      "downDesc" : "被人追，传家宝【乞丐理解猫语，执行他的事件，隐匿度不会扣减】"
     },
     {
       "eventId" : "12111",
@@ -11726,7 +13472,7 @@
       "humanId" : "60011",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 100,
       "preconditions" : [
         "0",
@@ -11740,7 +13486,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321120",
+          "eventId" : "321110",
+          "conditions" : [
+            "421113"
+          ]
+        },
+        {
+          "eventId" : "321111",
           "conditions" : [
             "0"
           ]
@@ -11766,7 +13518,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421110"
+            "421120",
+            "421111",
+            "421112"
           ]
         },
         {
@@ -11806,7 +13560,7 @@
       "consumeTime" : "20",
       "imageout" : "Sprites/Main/4刺探事件卡片",
       "imageIn" : "Sprites/Main/4刺探事件卡片",
-      "expireTime" : "90",
+      "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "60011",
       "repeatTime" : 1,
@@ -11825,7 +13579,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321130",
+          "eventId" : "321120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11851,7 +13611,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421120"
+            "421120",
+            "421124"
           ]
         },
         {
@@ -11868,12 +13629,12 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "421121"
           ]
         },
         {
           "conditions" : [
-            "-1"
+            "421122"
           ]
         },
         {
@@ -11909,7 +13670,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321140",
+          "eventId" : "321130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11993,7 +13760,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321150",
+          "eventId" : "321140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12019,7 +13792,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421140"
+            "421140",
+            "421141"
           ]
         },
         {
@@ -12077,7 +13851,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321160",
+          "eventId" : "321150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12103,7 +13883,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421150"
+            "421150",
+            "421151"
           ]
         },
         {
@@ -12161,7 +13942,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321170",
+          "eventId" : "321160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12187,7 +13974,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421160"
+            "421160",
+            "421163"
           ]
         },
         {
@@ -12204,12 +13992,12 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "421161"
           ]
         },
         {
           "conditions" : [
-            "-1"
+            "421162"
           ]
         },
         {
@@ -12245,7 +14033,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321180",
+          "eventId" : "321170",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12288,12 +14082,12 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "421171"
           ]
         },
         {
           "conditions" : [
-            "-1"
+            "421172"
           ]
         },
         {
@@ -12329,7 +14123,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321190",
+          "eventId" : "321180",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12355,7 +14155,100 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421180"
+            "421180",
+            "421181"
+          ]
+        },
+        {
+          "conditions" : [
+            "421180",
+            "421182"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "13000",
+      "name" : "猫咪审判",
+      "type" : 0,
+      "consumeTime" : "30",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "40",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 100,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 200,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "530003",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430000",
+            "400070"
           ]
         },
         {
@@ -12385,7 +14278,1680 @@
             "-1"
           ]
         }
-      ]
+      ],
+      "upDesc" : "狂热的宗教分子们注意到了我们。一些猫咪受到了迫害。我们必须妥善应对这个问题。",
+      "downDesc" : "消耗货币或影响，提升5隐匿度"
+    },
+    {
+      "eventId" : "13001",
+      "name" : "猫咪联络",
+      "type" : 3,
+      "consumeTime" : "40",
+      "imageout" : "13001",
+      "imageIn" : "13001",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530012",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430010"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "downDesc" : "猫咪凯修参与行动，获得“猫咪入住”能力"
+    },
+    {
+      "eventId" : "13002",
+      "name" : "猫咪联络",
+      "type" : 3,
+      "consumeTime" : "40",
+      "imageout" : "13001",
+      "imageIn" : "13001",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530022",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430020",
+            "430021"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "downDesc" : "猫咪科恩参与行动，获得“猫咪洗脑”能力"
+    },
+    {
+      "eventId" : "13003",
+      "name" : "猫咪巡游",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "13003",
+      "imageIn" : "13003",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530031",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430030",
+            "430031"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "让猫咪们在大街小巷中穿梭，观察，并向当地猫咪打听圣杯的线索。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13004",
+      "name" : "猫咪巡游",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "13003",
+      "imageIn" : "13003",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530041",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430040",
+            "430041"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "让猫咪们在大街小巷中穿梭，观察，并向当地猫咪打听圣杯的线索。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13005",
+      "name" : "猫咪巡游",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "13003",
+      "imageIn" : "13003",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530051",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430050",
+            "430051",
+            "430052"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "让猫咪们在大街小巷中穿梭，观察，并向当地猫咪打听圣杯的线索。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13006",
+      "name" : "猫咪仪式",
+      "type" : 2,
+      "consumeTime" : "30",
+      "imageout" : "13006",
+      "imageIn" : "13006",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530061",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330060",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430060",
+            "430061"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "聚集猫咪，借由圣草的力量，在仪式中寻觅圣杯的痕迹。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13007",
+      "name" : "猫咪仪式",
+      "type" : 2,
+      "consumeTime" : "30",
+      "imageout" : "13006",
+      "imageIn" : "13006",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530071",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330070",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430070",
+            "430071"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "聚集猫咪，借由圣草的力量，在仪式中寻觅圣杯的痕迹。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13008",
+      "name" : "猫咪仪式",
+      "type" : 2,
+      "consumeTime" : "30",
+      "imageout" : "13006",
+      "imageIn" : "13006",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530081",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330080",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430080",
+            "430081",
+            "430082"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "聚集猫咪，借由圣草的力量，在仪式中寻觅圣杯的痕迹。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13009",
+      "name" : "猫咪集会",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "13009",
+      "imageIn" : "13009",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530091",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330090",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430090",
+            "430091"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "召集猫咪，分析历史与人类宗教文献，以归纳出圣杯的线索。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13010",
+      "name" : "猫咪集会",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "13009",
+      "imageIn" : "13009",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530101",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430100",
+            "430101"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "召集猫咪，分析历史与人类宗教文献，以归纳出圣杯的线索。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13011",
+      "name" : "猫咪集会",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "13009",
+      "imageIn" : "13009",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "530111",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430110",
+            "430111",
+            "430112"
+          ]
+        },
+        {
+          "conditions" : [
+            "430110",
+            "430111",
+            "430113"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "召集猫咪，分析历史与人类宗教文献，以归纳出圣杯的线索。",
+      "downDesc" : "消耗20点猫咪影响力"
+    },
+    {
+      "eventId" : "13012",
+      "name" : "穿梭特训",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "13003",
+      "imageIn" : "13003",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 2,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430120"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "让猫咪练习快速穿过狭小的栅栏，提升身体柔软度，以便在探查活动中快速地做出反应。",
+      "downDesc" : "猫咪全员探查能力提升，探查事件执行加快"
+    },
+    {
+      "eventId" : "13013",
+      "name" : "冥想特训",
+      "type" : 2,
+      "consumeTime" : "30",
+      "imageout" : "13006",
+      "imageIn" : "13006",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 2,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430130"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "寻找小巧的罐子，让猫咪蜷缩至幽暗的空间中，以达成深层次的思考。",
+      "downDesc" : "猫咪全员密谋能力提升，密谋事件执行加快"
+    },
+    {
+      "eventId" : "13014",
+      "name" : "怜爱特训",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "13009",
+      "imageIn" : "13009",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 2,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430140"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "练习以适当地距离亲近人类，使人类在若即若离的距离中沉沦于猫咪。",
+      "downDesc" : "猫咪全员交流能力提升，交流事件执行加快"
+    },
+    {
+      "eventId" : "13015",
+      "name" : "穿梭特训",
+      "type" : 1,
+      "consumeTime" : "30",
+      "imageout" : "13003",
+      "imageIn" : "13003",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 2,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430150",
+            "430151"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "让猫咪练习快速穿过狭小的栅栏，提升身体柔软度，以便在探查活动中快速地做出反应。",
+      "downDesc" : "猫咪全员探查能力提升，探查事件执行加快"
+    },
+    {
+      "eventId" : "13016",
+      "name" : "冥想特训",
+      "type" : 2,
+      "consumeTime" : "30",
+      "imageout" : "13006",
+      "imageIn" : "13006",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 2,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430160",
+            "430161"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "寻找小巧的罐子，让猫咪蜷缩至幽暗的空间中，以达成深层次的思考。",
+      "downDesc" : "猫咪全员密谋能力提升，密谋事件执行加快"
+    },
+    {
+      "eventId" : "13017",
+      "name" : "怜爱特训",
+      "type" : 3,
+      "consumeTime" : "30",
+      "imageout" : "13009",
+      "imageIn" : "13009",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 2,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 50,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330170",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430170",
+            "430171"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "练习以适当地距离亲近人类，使人类在若即若离的距离中沉沦于猫咪。",
+      "downDesc" : "猫咪全员交流能力提升，交流事件执行加快"
+    },
+    {
+      "eventId" : "13018",
+      "name" : "人类警觉",
+      "type" : 0,
+      "consumeTime" : "40",
+      "imageout" : "13000",
+      "imageIn" : "13000",
+      "expireTime" : "40",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 0,
+      "priority" : 500,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "330180",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "530181",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "430180"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "downDesc" : "组织暴露将导致完全失败"
     },
     {
       "eventId" : "14000",
@@ -12414,6 +15980,12 @@
       "result" : [
         {
           "eventId" : "340000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12513,6 +16085,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -12582,6 +16160,12 @@
       "result" : [
         {
           "eventId" : "340020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12681,6 +16265,12 @@
           "conditions" : [
             "0"
           ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
         }
       ],
       "expireEffect" : [
@@ -12750,6 +16340,12 @@
       "result" : [
         {
           "eventId" : "340040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]

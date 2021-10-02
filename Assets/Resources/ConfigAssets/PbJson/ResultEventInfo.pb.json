@@ -105,6 +105,110 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
+      "resultId" : "301000",
+      "name" : "圣杯的传言",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301010",
+      "name" : "圣杯的痕迹",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301020",
+      "name" : "圣杯的线索",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301030",
+      "name" : "火刑场遗迹",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301040",
+      "name" : "颠倒的酒杯",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "301050",
+      "name" : "圣杯的力量",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "501050",
+        "501051"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302000",
+      "name" : "绿庭幽会",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502000",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302010",
+      "name" : "秘密",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502010"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302020",
+      "name" : "最后的吻",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "302030",
+      "name" : "唯一的朋友",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "502030",
+        "502031",
+        "502032"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
       "resultId" : "310000",
       "name" : "猫咪监视",
       "btnText" : "完成",
@@ -2768,8 +2872,7 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521110",
-        "550000"
+        "521100"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2779,8 +2882,19 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521120",
-        "550000"
+        "521110",
+        "521112"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "321111",
+      "name" : "铤而走险",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "521110",
+        "521111"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2790,8 +2904,7 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521130",
-        "550000"
+        "521120"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2801,8 +2914,7 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521140",
-        "550000"
+        "521130"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2812,8 +2924,8 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521150",
-        "550000"
+        "521140",
+        "521141"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2823,8 +2935,9 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521160",
-        "550000"
+        "521150",
+        "521151",
+        "521152"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2834,8 +2947,7 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521170",
-        "550000"
+        "521160"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2845,8 +2957,7 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521180",
-        "550000"
+        "521170"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
@@ -2856,8 +2967,7 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521190",
-        "550000"
+        "521180"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
