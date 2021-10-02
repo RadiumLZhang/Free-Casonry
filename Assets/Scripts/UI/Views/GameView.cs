@@ -20,9 +20,17 @@ public class GameView : MonoBehaviour
     private GameObject panelSettings;
     private GameObject panelEventExe;
     private GameObject panelResources;
+    
     private Text textMoney;
     private Text textInfluence;
     private Text textHidency;
+    private int m_oldMoney;
+    private int m_oldInfluence;
+    private int m_oldHidency;
+    private Animation m_moneyAnimation;
+    private Animation m_influenceAnimation;
+    private Animation m_hidencyAnimation;
+    
     private GameObject scrollSpecialEvent;
     private GameObject scrollRelationship;
     private RectTransform contentTransform;
@@ -53,9 +61,14 @@ public class GameView : MonoBehaviour
         panelSettings = transform.Find("PanelSettings").gameObject;
         panelEventExe = transform.Find("PanelEventExe").gameObject;
         panelResources = transform.Find("PanelResources").gameObject;
+        
         textMoney = panelResources.transform.Find("TextMoney").GetComponent<Text>();
         textInfluence = panelResources.transform.Find("TextInfluence").GetComponent<Text>();
         textHidency = panelResources.transform.Find("TextHidency").GetComponent<Text>();
+        m_moneyAnimation = textMoney.GetComponent<Animation>();
+        m_influenceAnimation = textInfluence.GetComponent<Animation>();
+        m_hidencyAnimation = textHidency.GetComponent<Animation>();
+        
         scrollSpecialEvent = transform.Find("ScrollSpecialEvent").gameObject;
         scrollRelationship = transform.Find("ScrollRelationship").gameObject;
         specialEventPrefab = Resources.Load<RectTransform>("Prefabs/SpecialEvent");
@@ -288,7 +301,13 @@ public class GameView : MonoBehaviour
     
     void Update()
     {
-        UpdatePanelResources();
+        var playerModel = PlayerModel.Instance;
+        if (playerModel.NeedUpdate)
+        {
+            UpdatePanelResources();
+            playerModel.NeedUpdate = false;
+        }
+        
         UpdateTime();
         UpdateRelationshipScale();
     }
@@ -307,9 +326,43 @@ public class GameView : MonoBehaviour
     }
     public void UpdatePanelResources()
     {
-        textMoney.text = "" + PlayerModel.Instance.Money;
-        textInfluence.text = "" + PlayerModel.Instance.Influence;
-        textHidency.text = "" + PlayerModel.Instance.Hidency;
+        var playerModel = PlayerModel.Instance;
+        
+        SetResource(textMoney, m_moneyAnimation, ref m_oldMoney, playerModel.Money);
+        SetResource(textInfluence, m_influenceAnimation, ref m_oldInfluence, playerModel.Influence);
+        SetResource(textHidency, m_hidencyAnimation, ref m_oldHidency, playerModel.Hidency);
+    }
+
+    private void SetResource(Text control, Animation animation, ref int oldValue, int newValue)
+    {
+        if (oldValue == newValue)
+        {
+            oldValue = newValue;
+            control.text = newValue.ToString();
+            control.SetAllDirty();
+            return;
+        }
+        
+        AnimationState state;
+        if (newValue > oldValue)
+        {
+            state = animation["GetResource"];
+        }
+        else
+        {
+            state = animation["LoseResource"];
+        }
+
+        state.speed = 1;
+        state.normalizedTime = 0;
+        
+        state.enabled = false;
+        animation.Sample();
+        animation.Play(state.name);
+
+        control.text = newValue.ToString();
+        oldValue = newValue;
+        control.SetAllDirty();
     }
 
     public void UpdateTime()
