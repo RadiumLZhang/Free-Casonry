@@ -151,7 +151,7 @@ namespace Logic.Condition
          private static bool CheckHumanVisibilityGreaterEqual(params object[] args)
          {
              var list = (RepeatedField<int>)args[0];
-             return (int) list[1] >= HumanManager.Instance.GetHuman((int) list[0]).Visibility;
+             return HumanManager.Instance.GetHuman(list[0]).Visibility >= list[1];
          }
          
          private static bool CheckHumanVisibilityEqual(params object[] args)
