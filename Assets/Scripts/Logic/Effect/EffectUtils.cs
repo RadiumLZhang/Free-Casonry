@@ -98,10 +98,10 @@ namespace Logic.Effect
                     break;
                 //事件记录变更
                 case 5013: 
-                    RecordChange(true);
+                    RecordChange(true, args);
                     break;
                 case 5014:
-                    RecordChange(false);
+                    RecordChange(false, args);
                     break;
                 //生成事件(建议两个合并)
                 case 5015:
