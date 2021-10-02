@@ -129,21 +129,17 @@ public class NPCMono : MonoBehaviour
         }
         
         npcRedPoint.SetActive(bIsSwitchToShown);
+        if (!bIsSwitchToShown)
+        {
+            return;
+        }
         var inAni = m_redPointAnimation[ImportantPointIn];
-        if (bIsSwitchToShown)
-        {
-            inAni.speed = 1;
-            inAni.normalizedTime = 0;
-        }
-        else
-        {
-            inAni.speed = -1;
-            inAni.normalizedTime = 1;
-        }
-        
+        inAni.speed = 1;
+        inAni.normalizedTime = 0;
+
         inAni.enabled = false;
         m_redPointAnimation.Sample();
-        m_redPointAnimation.Play(ImportantPointIn);
+        m_redPointAnimation.Play(inAni.name);
     }
 
     public void RefreshEventCycle()

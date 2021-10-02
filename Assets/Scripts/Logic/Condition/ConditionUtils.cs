@@ -106,17 +106,17 @@ namespace Logic.Condition
 
         private static bool CheckMoneyGreaterEqual(params object[] args)
         {
-            return (int)args[0] >= PlayerModel.Instance.Money;
+            return (int)args[0] <= PlayerModel.Instance.Money;
         }
 
         private static bool CheckCatInfluenceGreaterEqual(params object[] args)
         {
-            return (int) args[0] >= PlayerModel.Instance.Influence;
+            return (int) args[0] <= PlayerModel.Instance.Influence;
         }
 
         private static bool CheckCatHidencyGreaterEqual(params object[] args)
         {
-            return (int) args[0] >= PlayerModel.Instance.Hidency;
+            return (int) args[0] <= PlayerModel.Instance.Hidency;
         }
 
         private static bool CheckTimeReach(params object[] args)
@@ -129,7 +129,7 @@ namespace Logic.Condition
 
         private static bool CheckEventHandlerCountGreaterEqual(params object[] args)
         {
-            return (int)args[0] >= EventHandlerManager.Instance.GetHandlerCount();
+            return (int)args[0] <= EventHandlerManager.Instance.GetHandlerCount();
         }
         
         private static bool CheckEventHandlerCountEqual(params object[] args)
