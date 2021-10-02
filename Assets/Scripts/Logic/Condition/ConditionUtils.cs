@@ -48,8 +48,15 @@ namespace Logic.Condition
                 return false;
             }
             
+            var parasCount = config.Paras.Count;
+            var list = new object[parasCount];
+            for (int i = 0; i < parasCount; i++)
+            {
+                list[i] = config.Paras[i];
+            }
+            
             // confition id 是基础id，parameter是参数
-            return Check(config.BaseConditionId, config.Paras);
+            return Check(config.BaseConditionId, list);
         }
         
         // 基础条件id， 和传入参数
@@ -122,7 +129,7 @@ namespace Logic.Condition
         private static bool CheckTimeReach(params object[] args)
         {
             //TODO 缺时间接口
-            var list = (RepeatedField<int>)args[0];
+            var list = args;
             return TimeManager.Instance.GetTimeStamp() >=
                    TimeManager.Instance.TimeToStamp((int) list[0], (int) list[1], (int) list[2], (int) list[3]);
         }
@@ -150,18 +157,13 @@ namespace Logic.Condition
          
          private static bool CheckHumanVisibilityGreaterEqual(params object[] args)
          {
-             var list = (RepeatedField<int>)args[0];
-             return HumanManager.Instance.GetHuman(list[0]).Visibility >= list[1];
+             return HumanManager.Instance.GetHuman((int) args[0]).Visibility >= (int) args[1];
          }
          
          private static bool CheckHumanVisibilityEqual(params object[] args)
          {
-             if (!(args[0] is RepeatedField<int> list))
-             {
-                 return false;
-             }
 
-             return (int) list[1] == HumanManager.Instance.GetHuman(list[0]).Visibility;
+             return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).Visibility;
          }
          
          // private static bool CheckHumanRaiseCatFavorGreaterEqual(params object[] args)
@@ -186,8 +188,7 @@ namespace Logic.Condition
 
          private static bool CheckHasFlag(params object[] args)
          {
-             var list = (RepeatedField<int>)args[0];
-             return PlayerModel.Instance.CheckRecord(list[0]);
+             return PlayerModel.Instance.CheckRecord((int) args[0]);
          }
 
          private static bool CheckEmergencyChoice(params object[] args)

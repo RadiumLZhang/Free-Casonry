@@ -40,8 +40,7 @@ namespace Logic.Effect
                 Debug.LogError($"Invalid EffectId:{id}");
                 return;
             }
-
-
+            
             var parasCount = config.Paras.Count;
             var list = new object[parasCount];
             for (int i = 0; i < parasCount; i++)
