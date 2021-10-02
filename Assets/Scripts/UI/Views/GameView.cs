@@ -55,6 +55,8 @@ public class GameView : MonoBehaviour
     public float relationshipScale;
     public Vector2 oldRelationshipPos;
     public bool bIsRelationshipScaling;
+
+    private List<CatEvent> m_oldSpecialEvents;
     void Start()
     {
         panelCouncil = transform.Find("PanelCouncil").gameObject;
@@ -274,32 +276,84 @@ public class GameView : MonoBehaviour
     public void RefreshScrollSpecialEvent()
     {
         var events = EventManager.Instance.GetCommonEventList();
-        var originObjCount = contentTransform.childCount;
-        var n = Math.Min(events.Count, originObjCount);
-        //刷新现有的
-        for (var i = 0; i < n; i++)
+
+        if (m_oldSpecialEvents == null)
         {
-            contentTransform.GetChild(i).GetComponent<SpecialEventMono>().InitWithID(events[i].ID);
+            m_oldSpecialEvents = events;
+            CreateNewSpecialEvent(events);
+            return;
+        }
+        
+        var newList = new List<CatEvent>();
+        var keepList = new bool[m_oldSpecialEvents.Count];
+
+        foreach (var catEvent in events)
+        {
+            var i = 0;
+            for (; i < m_oldSpecialEvents.Count; i++)
+            {
+                if (catEvent.ID == m_oldSpecialEvents[i].ID)
+                {
+                    keepList[i] = true;
+                    break;
+                }
+            }
+
+            if (i >= m_oldSpecialEvents.Count)
+            {
+                newList.Add(catEvent);
+            }
         }
 
-        //增加新增的
-        for (var i = n; i < events.Count; i++)
+        //先销毁再新增，防止index发生变化
+        //销毁
+        DestroySpecialEvent(keepList);
+        
+        //新增
+        CreateNewSpecialEvent(newList);
+
+        newList.AddRange(m_oldSpecialEvents);
+        m_oldSpecialEvents = newList;
+    }
+
+    private void CreateNewSpecialEvent(List<CatEvent> events)
+    {
+        for (int i = events.Count - 1; i >= 0; i--)
         {
+            var catEvent = events[i];
+            
             var obj = Instantiate(specialEventPrefab).transform;
-            obj.GetComponent<SpecialEventMono>().InitWithID(events[i].ID);
+            obj.GetComponent<SpecialEventMono>().InitWithID(catEvent.ID);
             obj.SetParent(contentTransform);
+            obj.SetAsFirstSibling();
             obj.localPosition = Vector3.zero;
             obj.localRotation = Quaternion.identity;
             obj.localScale = Vector3.one;
-        }
+
+            var animation = obj.GetComponent<Animation>();
+            var state = animation["SpecialEventIn"];
+            state.speed = 1;
+            state.normalizedTime = 0;
         
-        //销毁多余的
-        for (var i = n; i < originObjCount; i++) {  
-            Destroy (contentTransform.GetChild (i).gameObject);  
-        }  
+            state.enabled = false;
+            animation.Sample();
+            animation.Play(state.name);
+        }
     }
-    
-    void Update()
+
+    private void DestroySpecialEvent(bool[] keepList)
+    {
+        for (int i = keepList.Length - 1; i >= 0; i--)
+        {
+            if (!keepList[i])
+            {
+                Destroy (contentTransform.GetChild (i).gameObject);
+                m_oldSpecialEvents.RemoveAt(i);
+            }
+        }
+    }
+
+        void Update()
     {
         var playerModel = PlayerModel.Instance;
         if (playerModel.NeedUpdate)
@@ -380,16 +434,18 @@ public class GameView : MonoBehaviour
     {
         float openPos = -rectExePanel.sizeDelta.x / 2.0f;
         float curPos = bIsOpen ? openPos : 0;
+
+        var velocity = 3.33f;
         for (float i = 0f; i < 0.3f; i += Time.deltaTime)
         {
             if (bIsOpen)
             {
-                curPos -= openPos * Time.deltaTime * 3.33f;
+                curPos -= openPos * Time.deltaTime * velocity;
                 if (curPos > 0) curPos = 0;
             }
             else
             {
-                curPos += openPos * Time.deltaTime * 3.33f;
+                curPos += openPos * Time.deltaTime * velocity;
                 if (curPos < openPos) curPos = openPos;
             }
             rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,curPos,rectExePanel.sizeDelta.x);
