@@ -121,9 +121,10 @@ namespace Logic.Condition
 
         private static bool CheckTimeReach(params object[] args)
         {
-            // TODO 缺时间接口
-            //return TimeManager.GetTimeStamp() >= 
-            return true;
+            //TODO 缺时间接口
+            var list = (RepeatedField<int>)args[0];
+            return TimeManager.Instance.GetTimeStamp() >=
+                   TimeManager.Instance.TimeToStamp((int) list[0], (int) list[1], (int) list[2], (int) list[3]);
         }
 
         private static bool CheckEventHandlerCountGreaterEqual(params object[] args)
@@ -149,9 +150,8 @@ namespace Logic.Condition
          
          private static bool CheckHumanVisibilityGreaterEqual(params object[] args)
          {
-             var arg = args[0];
-             return true;
-             //return (int) args[1] >= HumanManager.Instance.GetHuman((int) args[0]).Visibility;
+             var list = (RepeatedField<int>)args[0];
+             return (int) list[1] >= HumanManager.Instance.GetHuman((int) list[0]).Visibility;
          }
          
          private static bool CheckHumanVisibilityEqual(params object[] args)
