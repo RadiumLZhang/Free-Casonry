@@ -20,10 +20,12 @@ namespace Logic
         {
             Money = 0,
             Influence = 1,
-            Cohesion = 2,
+            Hidency = 2,
             ArmyDifference = 3,
             DiseaseSurvey = 4
         }
+
+        public bool NeedUpdate { get; set; } = true;
 
         /// <summary>
         /// 人类货币
@@ -57,8 +59,10 @@ namespace Logic
 
         public void SetResource(ResourceType type, int value)
         {
+            //todo 正式出包时修改
+            // m_resource[(int) type] = Math.Max(0, value);
             m_resource[(int) type] = value;
-            GameObject.Find("Canvas").GetComponent<GameView>().UpdatePanelResources();
+            NeedUpdate = true;
         }
 
         public int GetResource(ResourceType type)

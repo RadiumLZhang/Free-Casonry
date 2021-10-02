@@ -76,13 +76,13 @@ namespace Logic.Effect
                     SetGlobalValue(ResourceType.Influence, Operate.Set, args);
                     break;
                 case 5006:
-                    SetGlobalValue(ResourceType.Cohesion, Operate.Add, args);
+                    SetGlobalValue(ResourceType.Hidency, Operate.Add, args);
                     break;
                 case 5007:
-                    SetGlobalValue(ResourceType.Cohesion, Operate.Minus, args);
+                    SetGlobalValue(ResourceType.Hidency, Operate.Minus, args);
                     break;
                 case 5008:
-                    SetGlobalValue(ResourceType.Cohesion, Operate.Set, args);
+                    SetGlobalValue(ResourceType.Hidency, Operate.Set, args);
                     break;
                 //议程槽变更
                 case 5009:
