@@ -12554,6 +12554,258 @@
           ]
         }
       ]
+    },
+    {
+      "eventId" : "14002",
+      "name" : "1号",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 1,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "14003",
+      "name" : "2号",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 1,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "440030"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "eventId" : "14004",
+      "name" : "3号",
+      "type" : 0,
+      "consumeTime" : "3",
+      "imageout" : "Sprites/Main/4刺探事件卡片",
+      "imageIn" : "Sprites/Main/4刺探事件卡片",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "0",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 1,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "effects" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "340040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "440040"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ]
     }
   ]
 }

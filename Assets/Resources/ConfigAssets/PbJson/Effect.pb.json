@@ -2599,6 +2599,27 @@
       "paras" : [
         -50
       ]
+    },
+    {
+      "effectId" : "540020",
+      "baseEffectId" : "5013",
+      "paras" : [
+        140020
+      ]
+    },
+    {
+      "effectId" : "540030",
+      "baseEffectId" : "5013",
+      "paras" : [
+        140030
+      ]
+    },
+    {
+      "effectId" : "540040",
+      "baseEffectId" : "5013",
+      "paras" : [
+        140040
+      ]
     }
   ]
 }

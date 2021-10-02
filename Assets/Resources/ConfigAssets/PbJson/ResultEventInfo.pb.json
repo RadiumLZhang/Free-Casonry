@@ -3094,6 +3094,36 @@
         "540012"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "340020",
+      "name" : "1号",
+      "btnText" : "全加",
+      "recordId" : "0",
+      "effects" : [
+        "540020"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "340030",
+      "name" : "2号",
+      "btnText" : "全加",
+      "recordId" : "0",
+      "effects" : [
+        "540030"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "340040",
+      "name" : "3号",
+      "btnText" : "全减",
+      "recordId" : "0",
+      "effects" : [
+        "540040"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
     }
   ]
 }
