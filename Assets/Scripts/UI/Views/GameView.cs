@@ -338,7 +338,12 @@ public class GameView : MonoBehaviour
         {
             if (!keepList[i])
             {
-                contentTransform.GetChild (i).GetComponent<SpecialEventMono>().DestroyAnimation();
+                var specialEventMono = contentTransform.GetChild(i).GetComponent<SpecialEventMono>();
+                if (m_oldSpecialEvents[i].Status == EventStatus.OnProcess)
+                {
+                    specialEventMono.SetVisible(false);
+                }
+                specialEventMono.DestroyAnimation();
                 m_oldSpecialEvents.RemoveAt(i);
             }
         }
@@ -423,23 +428,28 @@ public class GameView : MonoBehaviour
     }
     IEnumerator ExePanelCoroutine(bool bIsOpen)
     {
+        var anchoredPosition = rectExePanel.anchoredPosition;
         float openPos = -rectExePanel.sizeDelta.x / 2.0f;
-        float curPos = bIsOpen ? openPos : 0;
+        float curPos = anchoredPosition.x;
 
         var velocity = 3.33f;
         for (float i = 0f; i < 0.3f; i += Time.deltaTime)
         {
-            if (bIsOpen)
+            if (!bIsOpen)
             {
                 curPos -= openPos * Time.deltaTime * velocity;
                 if (curPos > 0) curPos = 0;
             }
             else
             {
-                curPos += openPos * Time.deltaTime * velocity;
+                curPos += openPos *  Time.deltaTime * velocity;
                 if (curPos < openPos) curPos = openPos;
             }
-            rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,curPos,rectExePanel.sizeDelta.x);
+
+            
+            var y = anchoredPosition.y;
+            rectExePanel.anchoredPosition = new Vector2(curPos, y);
+            // rectExePanel.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Right,curPos,rectExePanel.sizeDelta.x);
             yield return null;
         }
     }

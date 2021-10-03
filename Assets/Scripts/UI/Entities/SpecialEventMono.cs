@@ -11,9 +11,14 @@ public class SpecialEventMono : MonoBehaviour
     private Logic.Event.CatEvent m_myCatEventInfo;
     private Text textRemainingTime;
     private long remainingTime;
+    
 
     private Animation m_animation;
-
+    private DragHandlerSpecialEvent m_dragHandlerSpecialEvent;
+    private Image m_imageEvent;
+    private Transform m_eventBackground;
+    private Text m_txtEventBackground;
+    
     private void Start()
     {
         m_animation = transform.GetComponent<Animation>();
@@ -39,20 +44,32 @@ public class SpecialEventMono : MonoBehaviour
         //读表
         //TODO:demo里不读表的话就自己写下myEventInfo结构体，有ID,Name,ConsumeTime和sprite即可
         m_myCatEventInfo = new Logic.Event.CatEvent(myID);
+        
+        
+        textRemainingTime = transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime").GetComponent<Text>();
+        m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
+        m_eventBackground = transform.Find("EventTextBackground");
+        m_txtEventBackground = m_eventBackground.Find("TextEvent").GetComponent<Text>();
+        m_dragHandlerSpecialEvent = transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>();
 
         //DragHandler接收ID
-        transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>().SetEventID(myID);
+        m_dragHandlerSpecialEvent.SetEventID(myID);
 
         //UI
         remainingTime = m_myCatEventInfo.ConsumeTime;
-        textRemainingTime = transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime")
-            .GetComponent<Text>();
-        transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
-        transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = m_myCatEventInfo.Name;
+        
+        m_imageEvent.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        m_txtEventBackground.text = m_myCatEventInfo.Name;
         textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
         //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身
     }
 
+    public void SetVisible(bool active)
+    {
+        m_eventBackground.gameObject.SetActive(active);
+        m_imageEvent.gameObject.SetActive(active);
+    }
+    
     public void DestroyAnimation()
     {
         var destroyAnimation = m_animation["DestroySpecialEvent"];
