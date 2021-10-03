@@ -12,6 +12,27 @@ public class SpecialEventMono : MonoBehaviour
     private Text textRemainingTime;
     private long remainingTime;
 
+    private Animation m_animation;
+
+    private void Start()
+    {
+        m_animation = transform.GetComponent<Animation>();
+            
+        var eventIn = m_animation["SpecialEventIn"];
+        eventIn.speed = 1;
+        eventIn.normalizedTime = 0;
+        eventIn.enabled = false;
+            
+        var scrollMove = m_animation["scrollMove"];
+        scrollMove.speed = 1;
+        scrollMove.normalizedTime = 0;
+        scrollMove.enabled = false;
+            
+        m_animation.Sample();
+        m_animation.Play(scrollMove.name);
+        m_animation.PlayQueued(eventIn.name);
+    }
+
     public void InitWithID(long ID)
     {
         myID = ID;
@@ -30,5 +51,21 @@ public class SpecialEventMono : MonoBehaviour
         transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = m_myCatEventInfo.Name;
         textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
         //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身
+    }
+
+    public void DestroyAnimation()
+    {
+        var destroyAnimation = m_animation["DestroySpecialEvent"];
+        destroyAnimation.speed = 1;
+        destroyAnimation.normalizedTime = 0;
+        destroyAnimation.enabled = false;
+
+        m_animation.Sample();
+        m_animation.Play(destroyAnimation.name);
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(transform.gameObject);
     }
 }

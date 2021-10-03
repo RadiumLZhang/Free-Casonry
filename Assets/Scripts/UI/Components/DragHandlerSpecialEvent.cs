@@ -19,6 +19,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     
     private Vector3 pos;                            //控件初始位置
     private Vector3 mousePos;                       //鼠标初始位置
+    private Vector3 localPos;                       //控件初始相对位置
 
     public float extractAngle;
     public bool bIsExtracting;
@@ -29,15 +30,17 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     {
         scrollRect = GameObject.Find("ScrollSpecialEvent").GetComponent<ScrollRect>();
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
+        rectTransform = transform.GetComponent<RectTransform>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
         bIsExtracting = false;
         timerDragStart = 6;
         GetComponent<Image>().raycastTarget = false;
-        rectTransform = transform.GetComponent<RectTransform>();
         
-        pos = GetComponent<RectTransform>().position;
+        pos = rectTransform.position;
+        localPos = rectTransform.localPosition;
+        
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
         tempMousePos_x = mousePos.x;
     }
@@ -47,7 +50,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         Vector3 newVec;          
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out newVec);
         Vector3 offset = new Vector3(newVec.x - mousePos.x, newVec.y - mousePos.y, 0);
-        rectTransform.position = pos + offset;
+        
         if (timerDragStart > 1)
         {
             timerDragStart--;
@@ -66,13 +69,17 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         
         if (!bIsExtracting)
         {
-            rectTransform.position = pos;
+            rectTransform.localPosition = localPos;
             if (timerDragStart == 1)
             {
                 GetComponent<Image>().raycastTarget = true;
             }
             scrollRect.horizontalNormalizedPosition -= (Input.mousePosition.x - tempMousePos_x) * Screen.width * 1.7f / Mathf.Pow(HandleSelfFittingHorizontal(transform.parent.parent),2.0f);
             tempMousePos_x = Input.mousePosition.x;
+        }
+        else
+        {
+            rectTransform.position = pos + offset;
         }
     }
     
@@ -86,7 +93,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;
         timerDragStart = 6;
-        rectTransform.position = pos;
+        rectTransform.localPosition = localPos;
         transform.GetComponent<Image>().maskable = true;
         transform.Find("EventTimeBackground").gameObject.SetActive(true);
         GetComponent<Image>().raycastTarget = true;

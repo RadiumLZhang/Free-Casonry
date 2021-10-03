@@ -329,15 +329,6 @@ public class GameView : MonoBehaviour
             obj.localPosition = Vector3.zero;
             obj.localRotation = Quaternion.identity;
             obj.localScale = Vector3.one;
-
-            var animation = obj.GetComponent<Animation>();
-            var state = animation["SpecialEventIn"];
-            state.speed = 1;
-            state.normalizedTime = 0;
-        
-            state.enabled = false;
-            animation.Sample();
-            animation.Play(state.name);
         }
     }
 
@@ -347,7 +338,7 @@ public class GameView : MonoBehaviour
         {
             if (!keepList[i])
             {
-                Destroy (contentTransform.GetChild (i).gameObject);
+                contentTransform.GetChild (i).GetComponent<SpecialEventMono>().DestroyAnimation();
                 m_oldSpecialEvents.RemoveAt(i);
             }
         }
