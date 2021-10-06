@@ -3,6 +3,8 @@
     {
       "resultId" : "300000",
       "name" : "猫的秘药",
+      "description1" : "国王葛林：感觉身体没有那么沉重了，我还活着吗。",
+      "description2" : "只是“暂时”活下来了，之后又会怎样呢？",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -14,6 +16,8 @@
     {
       "resultId" : "300010",
       "name" : "猫语者",
+      "description1" : "葛林：我怎么会答应与恶魔交易？你走吧。\\n\n西蒙：猫咪们会等待陛下回心转意的。",
+      "description2" : "没关系，他很快就会回心转意的",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -25,6 +29,8 @@
     {
       "resultId" : "300020",
       "name" : "逃亡",
+      "description1" : "葛林：难道一国之君，出门都要侍从允许吗？\\n\n守卫：陛下大病初愈，应以保养身体为重。",
+      "description2" : "守卫早已被买通，他跑不掉的",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -36,7 +42,8 @@
     {
       "resultId" : "300030",
       "name" : "求援",
-      "description2" : "当隐匿度降为0后，猫咪组织将因人类打击而被毁。",
+      "description1" : "守卫：嗯？只是只猫么。还以为当班第一天，我就要亲手杀人了呢。",
+      "description2" : "女仆嘉帕兹没有被发现",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -48,18 +55,23 @@
     {
       "resultId" : "300031",
       "name" : "求援",
-      "description2" : "当隐匿度降为0后，猫咪组织将因人类打击而被毁。",
+      "description1" : "守卫：亲王吩咐，经过的人都是刺客。不问缘由，格杀勿论！",
+      "description2" : "女仆嘉帕兹被守卫杀死",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "500031",
-        "550000"
+        "550000",
+        "500034",
+        "500035"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "300040",
-      "name" : "互不亏欠",
+      "name" : "亏欠",
+      "description1" : "佩尔：教廷会调查此事，只要你说了实话。我个人只能承诺到这一步。",
+      "description2" : "意义有限的承诺",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -71,6 +83,8 @@
     {
       "resultId" : "300050",
       "name" : "绝望",
+      "description1" : "葛林：猫，魔鬼的使徒。而我现在别无他法，只能求助于它们了吗？",
+      "description2" : "国王“愿意”与猫咪合作了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -82,6 +96,8 @@
     {
       "resultId" : "300060",
       "name" : "寝食难安",
+      "description1" : "葛林：猫，魔鬼的使徒。而我现在别无他法，只能求助于它们了吗？",
+      "description2" : "国王“愿意”与猫咪合作了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -93,6 +109,8 @@
     {
       "resultId" : "300070",
       "name" : "月下之盟",
+      "description1" : "西蒙：数日后，亲王将带兵攻入王都。猫咪会阻止他，也希望陛下不要忘记自己的承诺。",
+      "description2" : "7月15日，亲王将发起兵变。在此之前挫败其计划。",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -100,117 +118,16 @@
         "550000",
         "500074",
         "500075",
-        "500076"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "301000",
-      "name" : "圣杯的传言",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "501000"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "301010",
-      "name" : "圣杯的痕迹",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "501010"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "301020",
-      "name" : "圣杯的线索",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "501020"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "301030",
-      "name" : "火刑场遗迹",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "501030"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "301040",
-      "name" : "颠倒的酒杯",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "501040"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "301050",
-      "name" : "圣杯的力量",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "501050",
-        "501051"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "302000",
-      "name" : "绿庭幽会",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "502000",
-        "550000"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "302010",
-      "name" : "秘密",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "502010"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "302020",
-      "name" : "最后的吻",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "502020"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "302030",
-      "name" : "唯一的朋友",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "502030",
-        "502031",
-        "502032"
+        "500076",
+        "500077"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "葛林-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -223,6 +140,8 @@
     {
       "resultId" : "310010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "葛林-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -233,6 +152,8 @@
     {
       "resultId" : "310020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "葛林-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -243,37 +164,46 @@
     {
       "resultId" : "310030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "510010"
+        "0"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "510020",
-        "510040"
+        "0"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310050",
       "name" : "猫咪洗脑",
+      "description1" : "我们取得了因西亚地区的统治地位，剩下的工作交给组织下层打理即可。",
+      "description2" : "获得统治胜利",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "510030"
+        "512030",
+        "510030",
+        "510031"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "茵菲尔-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -288,6 +218,8 @@
     {
       "resultId" : "311010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "茵菲尔-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -298,6 +230,8 @@
     {
       "resultId" : "311020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "茵菲尔-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -308,37 +242,44 @@
     {
       "resultId" : "311030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "511010"
+        "0"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "511020",
-        "510040"
+        "0"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "311050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "511030"
+        "0"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "312000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "安彼西奥-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -355,6 +296,8 @@
     {
       "resultId" : "312010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "安彼西奥-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -365,6 +308,8 @@
     {
       "resultId" : "312020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "安彼西奥-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -375,6 +320,8 @@
     {
       "resultId" : "312030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "安彼西奥-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -385,27 +332,33 @@
     {
       "resultId" : "312040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "安彼西奥-收养猫咪，猫咪隐匿度极大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "512020",
-        "510040"
+        "512040"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "312050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "512030"
+        "0"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "313000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "佩尔-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -420,6 +373,8 @@
     {
       "resultId" : "313010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "佩尔-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -430,6 +385,8 @@
     {
       "resultId" : "313020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "佩尔-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -440,6 +397,8 @@
     {
       "resultId" : "313030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "佩尔-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -450,20 +409,25 @@
     {
       "resultId" : "313040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "佩尔-收养猫咪，猫咪隐匿度极大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "513020",
-        "510040"
+        "513040"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "313050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "猫咪影响力提升10点，该人被控制",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "512030",
         "513030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -471,6 +435,8 @@
     {
       "resultId" : "314000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "嘉帕兹-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -483,6 +449,8 @@
     {
       "resultId" : "314010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "嘉帕兹-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -493,6 +461,8 @@
     {
       "resultId" : "314020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "嘉帕兹-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -503,6 +473,8 @@
     {
       "resultId" : "314030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "嘉帕兹-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -513,6 +485,8 @@
     {
       "resultId" : "314040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "猫咪隐匿度提升10点，此人收养猫咪",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -524,9 +498,12 @@
     {
       "resultId" : "314050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "猫咪影响力提升10点，该人被控制",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "514030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -534,6 +511,8 @@
     {
       "resultId" : "315000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "门提尔-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -548,6 +527,8 @@
     {
       "resultId" : "315010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "门提尔-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -558,6 +539,8 @@
     {
       "resultId" : "315020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "门提尔-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -568,6 +551,8 @@
     {
       "resultId" : "315030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "门提尔-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -578,6 +563,8 @@
     {
       "resultId" : "315040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "门提尔-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -589,9 +576,12 @@
     {
       "resultId" : "315050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "门提尔-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "515030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -599,6 +589,8 @@
     {
       "resultId" : "316000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "班诺-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -613,6 +605,8 @@
     {
       "resultId" : "316010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "班诺-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -623,6 +617,8 @@
     {
       "resultId" : "316020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "班诺-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -633,6 +629,8 @@
     {
       "resultId" : "316030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "班诺-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -643,6 +641,8 @@
     {
       "resultId" : "316040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "班诺-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -654,9 +654,12 @@
     {
       "resultId" : "316050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "班诺-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "516030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -664,6 +667,8 @@
     {
       "resultId" : "317000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "瓦林提亚-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -681,6 +686,8 @@
     {
       "resultId" : "317010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "瓦林提亚-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -691,6 +698,8 @@
     {
       "resultId" : "317020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "瓦林提亚-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -701,6 +710,8 @@
     {
       "resultId" : "317030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "瓦林提亚-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -711,6 +722,8 @@
     {
       "resultId" : "317040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "瓦林提亚-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -722,9 +735,12 @@
     {
       "resultId" : "317050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "瓦林提亚-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "517030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -732,6 +748,8 @@
     {
       "resultId" : "318000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "费琳娜-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -748,6 +766,8 @@
     {
       "resultId" : "318010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "费琳娜-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -758,6 +778,8 @@
     {
       "resultId" : "318020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "费琳娜-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -768,6 +790,8 @@
     {
       "resultId" : "318030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "费琳娜-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -778,6 +802,8 @@
     {
       "resultId" : "318040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "费琳娜-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -789,9 +815,12 @@
     {
       "resultId" : "318050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "费琳娜-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "518030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -799,6 +828,8 @@
     {
       "resultId" : "319000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "依斯皮柯-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -814,6 +845,8 @@
     {
       "resultId" : "319010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "依斯皮柯-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -824,6 +857,8 @@
     {
       "resultId" : "319020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "依斯皮柯-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -834,6 +869,8 @@
     {
       "resultId" : "319030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "依斯皮柯-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -844,6 +881,8 @@
     {
       "resultId" : "319040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "依斯皮柯-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -855,9 +894,12 @@
     {
       "resultId" : "319050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "依斯皮柯-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "519030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -865,6 +907,8 @@
     {
       "resultId" : "320000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "尼奥塔德-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -880,6 +924,8 @@
     {
       "resultId" : "320010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "尼奥塔德-能见度增加",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -890,6 +936,8 @@
     {
       "resultId" : "320020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "尼奥塔德-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -900,6 +948,8 @@
     {
       "resultId" : "320030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "尼奥塔德-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -910,6 +960,8 @@
     {
       "resultId" : "320040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "尼奥塔德-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -921,9 +973,12 @@
     {
       "resultId" : "320050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "尼奥塔德-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "520030"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -931,6 +986,8 @@
     {
       "resultId" : "321000",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "塞达-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -944,6 +1001,8 @@
     {
       "resultId" : "321010",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "塞达-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -954,6 +1013,8 @@
     {
       "resultId" : "321020",
       "name" : "猫咪监视",
+      "description1" : "人类的一举一动，都不会逃出猫咪的眼睛。",
+      "description2" : "塞达-能见度增加，相关事件被揭露",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -964,6 +1025,8 @@
     {
       "resultId" : "321030",
       "name" : "猫咪陪伴",
+      "description1" : "人类会为放松警惕而付出代价，就如同当年的我们一样。",
+      "description2" : "塞达-心防减少",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -974,6 +1037,8 @@
     {
       "resultId" : "321040",
       "name" : "猫咪入住",
+      "description1" : "每一户养猫的人家，都将是我们潜伏的据点。",
+      "description2" : "塞达-收养猫咪，猫咪隐匿度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -985,266 +1050,21 @@
     {
       "resultId" : "321050",
       "name" : "猫咪洗脑",
+      "description1" : "被控制的人类会听从猫咪的命令，但也具有自己的感情。不应过度信任他们。",
+      "description2" : "塞达-受到洗脑控制，猫咪影响大幅提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
+        "550010",
         "521030"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300100",
-      "name" : "猫咪盛宴",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500100"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300110",
-      "name" : "异动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500110"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300120",
-      "name" : "突然袭击",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500120"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300130",
-      "name" : "猫咪救援",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500130"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300140",
-      "name" : "猫咪救援",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500140"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300150",
-      "name" : "猫咪救援",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500150"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300160",
-      "name" : "猫咪救援",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500160"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300170",
-      "name" : "紧急会议",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500170"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300180",
-      "name" : "将计就计",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500180"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300200",
-      "name" : "庆典开幕",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500200"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300210",
-      "name" : "猫咪渗透",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500210"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300220",
-      "name" : "猫咪渗透",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500220"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300230",
-      "name" : "猫咪渗透",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500230"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300240",
-      "name" : "猫咪渗透",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500240"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300250",
-      "name" : "王的罪行",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500250"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300260",
-      "name" : "宣判",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500260"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300270",
-      "name" : "神的使节",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500270"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300280",
-      "name" : "清水变美酒",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500280"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300290",
-      "name" : "猫咪行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500290"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300300",
-      "name" : "平息风暴",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500300"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300310",
-      "name" : "猫咪行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500310"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300320",
-      "name" : "死者复生",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500320"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300330",
-      "name" : "猫咪行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500330"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300340",
-      "name" : "决斗",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500340"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "300350",
-      "name" : "欢庆吧",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "500350"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "301000",
       "name" : "圣杯的传言",
+      "description1" : "跟据传闻的描述，有关的遗迹更可能位于王城的西边。我们应着重搜查这个方向。",
+      "description2" : "解析传言、线索与痕迹，以获悉圣杯的位置",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1255,6 +1075,8 @@
     {
       "resultId" : "301010",
       "name" : "圣杯的痕迹",
+      "description1" : "与火有关的位置，通常是厨房、森林、战场。也有可能是发生过火灾的地方，",
+      "description2" : "解析传言、线索与痕迹，以获悉圣杯的位置",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1265,6 +1087,8 @@
     {
       "resultId" : "301020",
       "name" : "圣杯的线索",
+      "description1" : "女巫，可能是与数十年前的女巫审判有关。某个女巫得到了圣杯，然后将其藏匿了起来。",
+      "description2" : "解析传言、线索与痕迹，以获悉圣杯的位置",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1275,6 +1099,8 @@
     {
       "resultId" : "301030",
       "name" : "火刑场遗迹",
+      "description1" : "没有在遗迹中找到圣杯，却发现了有人最近活动过的痕迹。是有人把圣杯拿走了吗？",
+      "description2" : "继续寻找圣杯的下落",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1285,6 +1111,8 @@
     {
       "resultId" : "301040",
       "name" : "颠倒的酒杯",
+      "description1" : "塞达挖出了他藏的宝物，猫咪圣杯就在其中！",
+      "description2" : "取得了猫咪圣杯",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1295,26 +1123,34 @@
     {
       "resultId" : "301050",
       "name" : "圣杯的力量",
+      "description1" : "在场的猫咪都感受到了，整个世界在一瞬间出现了微小变化。",
+      "description2" : "圣杯发挥力量，猫咪影响力与隐匿度均提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "501050"
+        "501050",
+        "501051"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "302000",
       "name" : "绿庭幽会",
+      "description1" : "茵菲尔：别谈正事了，浪费我们相处的时间。\\n\n安彼西奥：再忍耐几天亲爱的，就快结束了。",
+      "description2" : "王后是叛徒，我们要尽快将此事禀告国王",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "502000"
+        "502000",
+        "550000"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "302010",
-      "name" : "秘密",
+      "name" : "禀告国王",
+      "description1" : "葛林：毒药、书信……啊，这个字迹。不可能的，她是唯一不可能背叛我的人，为什么……",
+      "description2" : "他还需要一点时间来接受现实",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1325,6 +1161,8 @@
     {
       "resultId" : "302020",
       "name" : "最后的吻",
+      "description1" : "葛林：即便你背叛了我，我也依然爱你，因菲尔。所以，我也必须承受杀死心上人的痛苦。",
+      "description2" : "国王亲手杀死了王后",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -1335,806 +1173,22 @@
     {
       "resultId" : "302030",
       "name" : "唯一的朋友",
+      "description1" : "西蒙：做个好梦吧陛下。",
+      "description2" : "国王已毫无防备，可以开始洗脑仪式了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "502030"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303000",
-      "name" : "不安的传言",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503000"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303010",
-      "name" : "秘员集会",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503010"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303020",
-      "name" : "巫术审判团",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503020"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303030",
-      "name" : "女巫审判",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503030"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303040",
-      "name" : "政令",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503040"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303100",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503100"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303110",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503110"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303120",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503120"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303130",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503130"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303140",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503140"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303150",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503150"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303160",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503160"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303170",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503170"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303180",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503180"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303190",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503190"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303200",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503200"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303210",
-      "name" : "牺牲者",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503210"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303220",
-      "name" : "愿恩人安息",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503220"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303300",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503300"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303310",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503310"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303320",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503320"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303330",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503330"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303340",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503340"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303350",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503350"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303360",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503360"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303370",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503370"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303380",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503380"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303390",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503390"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303400",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503400"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303410",
-      "name" : "传闻打探",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503410"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303500",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503500"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303510",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503510"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303520",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503520"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303530",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503530"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303540",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503540"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303550",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503550"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303560",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503560"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303570",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503570"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303580",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503580"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303590",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503590"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303600",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503600"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303610",
-      "name" : "捕鼠行动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503610"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303700",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503700"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303710",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503710"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303720",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503720"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303730",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503730"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303740",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503740"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303750",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503750"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303760",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503760"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303770",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503770"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303780",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503780"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303790",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503790"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303800",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503800"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303810",
-      "name" : "传播询问",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503810"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303900",
-      "name" : "医疗记录",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503900"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303910",
-      "name" : "医疗记录",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503910"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "303920",
-      "name" : "医疗记录",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "503920"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304000",
-      "name" : "大军压境",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504000"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304010",
-      "name" : "资金支援",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504010"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304020",
-      "name" : "反间谍活动",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504020"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304030",
-      "name" : "宗教施压",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504030"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304040",
-      "name" : "老朋友",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504040"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304050",
-      "name" : "强健药方",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504050"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304060",
-      "name" : "英雄人物",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504060"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304070",
-      "name" : "倒戈相向",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504070"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304080",
-      "name" : "往昔之情",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504080"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304090",
-      "name" : "英雄人物",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504090"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304100",
-      "name" : "猫咪嚎叫",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504100"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304110",
-      "name" : "猫咪陪伴",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504110"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304120",
-      "name" : "猫咪潜入",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504120"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304130",
-      "name" : "猫咪投毒",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504130"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304200",
-      "name" : "决战",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504200"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304210",
-      "name" : "不再退缩",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504210"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304220",
-      "name" : "最后一击",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504220"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "304230",
-      "name" : "凯旋",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "504230"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "309000",
-      "name" : "终幕",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "509000"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "309010",
-      "name" : "终幕",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "509010"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "309020",
-      "name" : "终幕",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "509020"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
-      "resultId" : "309030",
-      "name" : "终幕",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "509030"
+        "502030",
+        "502031",
+        "502032"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "310100",
       "name" : "暗杀危机",
+      "description1" : "我们阻止了这一次暗杀，但下一次暗杀又会是什么时候呢？",
+      "description2" : "获得国王的酬金",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2146,6 +1200,8 @@
     {
       "resultId" : "310110",
       "name" : "暗杀危机",
+      "description1" : "我们阻止了这一次暗杀，但下一次暗杀又会是什么时候呢？",
+      "description2" : "获得国王的酬金",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2157,6 +1213,47 @@
     {
       "resultId" : "310120",
       "name" : "暗杀危机",
+      "description1" : "我们阻止了这一次暗杀，但下一次暗杀又会是什么时候呢？",
+      "description2" : "获得国王的酬金",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510120",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "310130",
+      "name" : "暗杀危机",
+      "description1" : "我们阻止了这一次暗杀，但下一次暗杀又会是什么时候呢？",
+      "description2" : "获得国王的酬金",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "310140",
+      "name" : "暗杀危机",
+      "description1" : "我们阻止了这一次暗杀，但下一次暗杀又会是什么时候呢？",
+      "description2" : "获得国王的酬金",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "510110",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "310150",
+      "name" : "暗杀危机",
+      "description1" : "我们阻止了这一次暗杀，但下一次暗杀又会是什么时候呢？",
+      "description2" : "获得国王的酬金",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2168,6 +1265,7 @@
     {
       "resultId" : "311060",
       "name" : "猫咪联络",
+      "description1" : "卡莉：致西蒙——其他成员正在处理紧急事务。影响力充足后，我将联系组织进行调度。",
       "description2" : "提升影响，寻找新成员",
       "btnText" : "完成",
       "recordId" : "0",
@@ -2180,6 +1278,8 @@
     {
       "resultId" : "312100",
       "name" : "武器置备",
+      "description1" : "尼奥塔德：所有路线的武器都突然被盘查了！\\n\n安彼西奥：到底是谁走漏的风声？",
+      "description2" : "武器运输被查，兵变难度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2191,6 +1291,8 @@
     {
       "resultId" : "312110",
       "name" : "兵力运输",
+      "description1" : "尼奥塔德：士兵们突然上吐下泻，都病倒了。 \\n\n安彼西奥：这不可能是巧合，有人在帮葛林。",
+      "description2" : "士兵行军受到阻碍，兵变难度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2202,6 +1304,8 @@
     {
       "resultId" : "312120",
       "name" : "贵族安抚",
+      "description1" : "尼奥塔德：那些贵族已经一脸恼怒地回去了。\\n\n安彼西奥：唉，希望他们到时候不要出手吧。",
+      "description2" : "贵族可能干预兵变，兵变难度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2213,6 +1317,8 @@
     {
       "resultId" : "312130",
       "name" : "宗教支持",
+      "description1" : "尼奥塔德：主教拒绝了，还说会关注我们。\\n\n安彼西奥：只能再找教廷的朋友想办法了。",
+      "description2" : "主教对兵变保持警惕，兵变难度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2224,6 +1330,8 @@
     {
       "resultId" : "312140",
       "name" : "意外失火",
+      "description1" : "地方侯爵：殿下的提案，恕我们不能同意。\\n\n安彼西奥：随你们便吧。",
+      "description2" : "亲王与地方贵族产生了嫌隙",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2235,6 +1343,8 @@
     {
       "resultId" : "313100",
       "name" : "伪造笔迹",
+      "description1" : "西蒙：一模一样的笔记。不如说就是她的字迹。把这封信寄出去，应该可以唬住主教吧。",
+      "description2" : "嘉帕兹真的死了吗？",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2246,6 +1356,8 @@
     {
       "resultId" : "313110",
       "name" : "寄送遗书",
+      "description1" : "佩尔：五年等来的，是遗书吗……至少，至少让我主持她的葬礼，我得见她最后一面。",
+      "description2" : "佩尔将去主持葬礼，此时家中不会有人",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2257,6 +1369,8 @@
     {
       "resultId" : "313120",
       "name" : "葬礼仪式",
+      "description1" : "佩尔：葬礼结束了。在今后的一年里，我仍会日日为你祷告。",
+      "description2" : "葬礼完成，佩尔返回家中",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2268,6 +1382,8 @@
     {
       "resultId" : "313130",
       "name" : "宁静",
+      "description1" : "佩尔：杂念不再萦绕在我的心上。嘉帕兹应该也宽恕我了吧。",
+      "description2" : "佩尔恢复了平静，我们错失了机会",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2279,6 +1395,8 @@
     {
       "resultId" : "313140",
       "name" : "天谴",
+      "description1" : "佩尔：为了权力而舍弃自己的女儿，我没有资格穿上那件红衣。",
+      "description2" : "佩尔的情绪有些不稳定",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2290,6 +1408,8 @@
     {
       "resultId" : "313150",
       "name" : "哀怨之影",
+      "description1" : "佩尔：你到底在哪儿，你还活着吗？这只是对我的考验对吧？来吧，什么我都接受！",
+      "description2" : "佩尔的心智已经有些不正常了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2301,6 +1421,8 @@
     {
       "resultId" : "313160",
       "name" : "救赎的使徒",
+      "description1" : "佩尔：做了一个梦。我差点入魔了，是这些猫咪把拉了回来。猫，应该是有神性的生物吧。",
+      "description2" : "佩尔开始亲近猫咪，控制他的时机已经成熟",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2313,6 +1435,8 @@
     {
       "resultId" : "313200",
       "name" : "猫的凝视",
+      "description1" : "佩尔：这些猫确实在盯着我。无论我在哪里，都有一双猫注视着我。这值得留意一下。",
+      "description2" : "对猫咪感兴趣，是他迈入深渊的开始",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2324,6 +1448,8 @@
     {
       "resultId" : "313210",
       "name" : "观察日记",
+      "description1" : "佩尔：这些活动记录表明，猫咪们在进行有组织的行动。这是否是某种不详的预兆？",
+      "description2" : "接下来，他会去调查古代文献",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2335,6 +1461,8 @@
     {
       "resultId" : "313220",
       "name" : "猫的研究",
+      "description1" : "佩尔：一些旧典籍中教义的解释，与现在有着一些差异。猫的部分也有着截然不同的论述。",
+      "description2" : "他得出了猫咪与众不同的结论",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2346,6 +1474,8 @@
     {
       "resultId" : "313230",
       "name" : "神的使徒",
+      "description1" : "佩尔：我需要表表示出对猫的敬重。",
+      "description2" : "佩尔相信猫咪了，控制他的时机已经成熟",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2358,6 +1488,21 @@
     {
       "resultId" : "315100",
       "name" : "点石成金",
+      "description1" : "门提尔：金子怎么不见了。不应该这样，我练习过很多次的。",
+      "description2" : "因为被猫咪拿了",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "515100",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
+      "resultId" : "315101",
+      "name" : "点石成金",
+      "description1" : "门提尔：你是我唯一的学生。如果我哪天被害了，希望你能继续研究下去。",
+      "description2" : "他好像真的相信炼金术",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2369,6 +1514,8 @@
     {
       "resultId" : "315110",
       "name" : "石头戏法",
+      "description1" : "茵菲尔：这就是你的成果么？看来也没有资助下去的必要了。",
+      "description2" : "门提尔表演未成功，空手而归",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2380,6 +1527,8 @@
     {
       "resultId" : "315111",
       "name" : "石头戏法",
+      "description1" : "茵菲尔：看起来还不错。这笔钱你拿去吧，三个月之内我希望能看到最终的结果。",
+      "description2" : "门提尔完成了表演，拿到了赞助",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2391,11 +1540,12 @@
     {
       "resultId" : "315120",
       "name" : "穷酸的钻研",
+      "description1" : "门提尔：材料又用完了，可是没钱买新的啊。看看能不能找些纯度高的替代品……",
+      "description2" : "获得了少量人类货币",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "515120",
-        "550000",
         "515121",
         "515122"
       ],
@@ -2404,11 +1554,12 @@
     {
       "resultId" : "315130",
       "name" : "不懈的钻研",
+      "description1" : "门提尔：三份贤者之石，两份铅……嗯，材料用完了，再去买点吧。",
+      "description2" : "获得了一些人类货币",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "515130",
-        "550000",
         "515131",
         "515132"
       ],
@@ -2417,6 +1568,8 @@
     {
       "resultId" : "315140",
       "name" : "“赃物”",
+      "description1" : "西蒙：门提尔家里还有不少金子和文献。不过我们不能拿太多，容易引起注意。",
+      "description2" : "获得大量人类货币",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2428,6 +1581,8 @@
     {
       "resultId" : "315150",
       "name" : "暴政的争论",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2439,6 +1594,8 @@
     {
       "resultId" : "315160",
       "name" : "滥杀的不满",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2450,6 +1607,8 @@
     {
       "resultId" : "315170",
       "name" : "苹果的启明",
+      "description1" : "门提尔：啊，我明白了！触媒也是有具有物质属性。这下，最大的难题解决了。",
+      "description2" : "门提尔揭开了炼金术的秘密",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2462,11 +1621,12 @@
     {
       "resultId" : "315180",
       "name" : "干点脏活",
+      "description1" : "门提尔：金子好像少了一点，是我记错了吗?",
+      "description2" : "获得大量人类货币",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "515180",
-        "550000",
         "515181"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -2474,6 +1634,8 @@
     {
       "resultId" : "316100",
       "name" : "虐猫人",
+      "description1" : "班诺：哎哟，死猫还敢抓我。跑得还挺快的。",
+      "description2" : "我们救下了猫咪，但也十分引人注目",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2485,6 +1647,8 @@
     {
       "resultId" : "316101",
       "name" : "虐猫人",
+      "description1" : "班诺：哼，不够解气。再去找个酒馆喝一壶好了。",
+      "description2" : "班诺对猫咪失去了兴趣",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2496,6 +1660,8 @@
     {
       "resultId" : "316110",
       "name" : "光荣的挑衅",
+      "description1" : "班诺：他一定是被我吓到了，所以才不敢接受我的挑战。哼哼，骑士可是很厉害的。",
+      "description2" : "瓦林提亚无视了他",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2507,6 +1673,8 @@
     {
       "resultId" : "316120",
       "name" : "重拾荣耀",
+      "description1" : "班诺：你就如同你的外表一样无能。哈哈，侍卫能赢骑士当然只是侥幸而已。",
+      "description2" : "班诺在决斗中胜利，信心大增",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2518,17 +1686,22 @@
     {
       "resultId" : "316121",
       "name" : "重拾荣耀",
+      "description1" : "瓦林提亚：已经够了。你的能力远不足以支撑你的虚荣，还是先去锻炼一下自己吧。",
+      "description2" : "班诺在决斗中胜利，信心受挫，心防下降",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
         "516121",
-        "550000"
+        "550000",
+        "516122"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "316130",
       "name" : "借酒消愁",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2539,7 +1712,9 @@
     },
     {
       "resultId" : "317100",
-      "name" : "事业或爱情？",
+      "name" : "秘密任务",
+      "description1" : "安彼西奥：塞达那小子最近失踪了，所以才把信交给你。注意这事是机密，不要被人看见。",
+      "description2" : "到时候跟踪他，就能弄明白信里是什么",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2551,6 +1726,8 @@
     {
       "resultId" : "317110",
       "name" : "不忠之人",
+      "description1" : "依斯皮柯：我最近要盯着他点，看看他会不会露出什么马脚。",
+      "description2" : "我们有“同伴”了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2562,6 +1739,8 @@
     {
       "resultId" : "317120",
       "name" : "约会",
+      "description1" : "瓦林提亚：你哥哥好像很讨厌我。\\n\n费琳娜：没关系的，我们可以慢慢说服他。",
+      "description2" : "只靠说服，可能会有点难",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2573,6 +1752,8 @@
     {
       "resultId" : "317130",
       "name" : "奉命行事",
+      "description1" : "女人：他应该多次跟你强调了，要……\\n\n瓦林提亚：要保守秘密。我知道的。",
+      "description2" : "我们可以尝试跟踪那个女人",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2584,6 +1765,8 @@
     {
       "resultId" : "317140",
       "name" : "捉奸",
+      "description1" : "虽然没有看清面容，但从这个她身上带有皇室的挂饰。这个人，恐怕是茵菲尔王后.",
+      "description2" : "王后和亲王之间有书信来往",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2593,8 +1776,23 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
+      "resultId" : "317141",
+      "name" : "捉奸",
+      "description1" : "瓦林提亚：我不认识她，我只是在执行工作。\\n\n依斯皮柯：你的工作就是约女人吗？",
+      "description2" : "他们争吵了起来，但我们也做不了什么",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "517141",
+        "550000"
+      ],
+      "picture" : "Sprites/Main/4刺探事件卡片"
+    },
+    {
       "resultId" : "317150",
       "name" : "他的抉择",
+      "description1" : "瓦林提亚：我无法说明。\\n\n费琳娜：那我们的关系也到此为止了吧。",
+      "description2" : "瓦林提亚与费琳娜的关系破裂",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2607,7 +1805,8 @@
     {
       "resultId" : "317151",
       "name" : "他的抉择",
-      "description2" : "医生开心的消息传为美谈",
+      "description1" : "瓦林提亚：唉。我就如实说了吧。这是殿下指派给我的任务。",
+      "description2" : "瓦林提亚吐露了实情",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2622,6 +1821,8 @@
     {
       "resultId" : "318100",
       "name" : "猫咪疗伤",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2631,8 +1832,9 @@
     },
     {
       "resultId" : "318110",
-      "name" : "猫咪圣草",
-      "description2" : "见到了神",
+      "name" : "神的启明",
+      "description1" : "猫神贝斯特：现在的人类还遵奉我们为神吗？\\n\n科恩：已经大不如前了，我的主。",
+      "description2" : "科恩见到了猫神，获得了”神启“",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2643,8 +1845,9 @@
     },
     {
       "resultId" : "318111",
-      "name" : "猫咪圣草",
-      "description2" : "看到了水",
+      "name" : "水的启明",
+      "description1" : "科恩发现自己浸在水下，周围还有许多笼子，每个笼子中都装了一只已经溺亡的猫咪。",
+      "description2" : "科恩看到了一些过去的片段",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2655,8 +1858,9 @@
     },
     {
       "resultId" : "318112",
-      "name" : "猫咪圣草",
-      "description2" : "看到了火",
+      "name" : "火的启明",
+      "description1" : "科恩看到了地狱般的火焰，无数的猫在火焰中挣扎翻滚，以及周遭狂热地呐喊着的人类。",
+      "description2" : "科恩看到了一些过去的片段",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2668,7 +1872,8 @@
     {
       "resultId" : "318113",
       "name" : "猫咪圣草",
-      "description2" : "做了好梦",
+      "description1" : "猫咪做了一场好梦，身心的疲劳都得到了缓解",
+      "description2" : "猫咪影响力提升5点",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2680,6 +1885,8 @@
     {
       "resultId" : "319100",
       "name" : "鼠患烦恼",
+      "description1" : "依斯皮柯：夹子都收起来了，却没有抓到老鼠。这些老鼠有点聪明，看来还得想想办法。",
+      "description2" : "厨师会继续寻找解决鼠患的办法",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2691,6 +1898,8 @@
     {
       "resultId" : "319101",
       "name" : "鼠患烦恼",
+      "description1" : "依斯皮柯：这个捕鼠夹还挺好用的，这下老鼠应该消停了吧。",
+      "description2" : "鼠患解决了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2702,6 +1911,8 @@
     {
       "resultId" : "319110",
       "name" : "不惜代价",
+      "description1" : "依斯皮柯：老鼠药不见了，但没有老鼠尸体。难道这些老鼠胃都是铁做的吗？",
+      "description2" : "厨师会继续寻找解决鼠患的办法",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2713,6 +1924,8 @@
     {
       "resultId" : "319111",
       "name" : "不惜代价",
+      "description1" : "依斯皮柯：成果不错，应该不用担心老鼠的问题了。只是为什么老鼠突然变多了？",
+      "description2" : "鼠患解决了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2724,6 +1937,8 @@
     {
       "resultId" : "319120",
       "name" : "猫的降世",
+      "description1" : "依斯皮柯：猫也不管用。现在满大街都是老鼠了，这么下去王城就要变成老鼠城了。",
+      "description2" : "老鼠将泛滥成灾",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2735,6 +1950,8 @@
     {
       "resultId" : "319121",
       "name" : "猫的降世",
+      "description1" : "依斯皮柯：果然是天意，不然猫怎么会平白无故地爬上祷告台呢？总算是把老鼠消灭掉了。",
+      "description2" : "厨师对猫咪心防降低，猫咪影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2748,6 +1965,8 @@
     {
       "resultId" : "319130",
       "name" : "鼠患四起",
+      "description1" : "茵菲尔：这些野猫还挺能干的嘛。随便打赏点剩的食物给它们吧。",
+      "description2" : "捕鼠做出贡献，猫咪影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2759,6 +1978,8 @@
     {
       "resultId" : "319140",
       "name" : "鼠患四起",
+      "description1" : "尼奥塔德：虽然猫也令人厌恶，但终归还是比老鼠好。抓完老鼠就把它们赶出去吧。",
+      "description2" : "捕鼠做出贡献，猫咪影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2770,6 +1991,8 @@
     {
       "resultId" : "319150",
       "name" : "鼠患四起",
+      "description1" : "谢谢了小家伙们，回头我替你们向费琳娜讨些猫薄荷吃，就当是感谢吧。",
+      "description2" : "捕鼠做出贡献，猫咪影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2781,6 +2004,8 @@
     {
       "resultId" : "320100",
       "name" : "建言",
+      "description1" : "安彼西奥：调兵。为了大业，必须冒些风险。\\n\n尼奥塔德：我这就去办。",
+      "description2" : "我们要想办法阻止士兵返回王都",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2792,6 +2017,8 @@
     {
       "resultId" : "320110",
       "name" : "奇怪的作息",
+      "description1" : "他似乎在暗中与国外势力通信，看来他对亲王也不忠诚。",
+      "description2" : "我们可以尝试拦截这封信",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2803,6 +2030,8 @@
     {
       "resultId" : "320120",
       "name" : "拦截密函",
+      "description1" : "安彼西奥：境外势力虎视眈眈。如果随意调兵，马上国境就会失守吧。",
+      "description2" : "兵源减少，兵变难度提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2813,19 +2042,10 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
-      "resultId" : "320121",
-      "name" : "拦截密函",
-      "btnText" : "完成",
-      "recordId" : "0",
-      "effects" : [
-        "520120",
-        "550000"
-      ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
-    },
-    {
       "resultId" : "320130",
       "name" : "逮捕叛徒",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2837,6 +2057,8 @@
     {
       "resultId" : "320140",
       "name" : "复仇",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2848,6 +2070,8 @@
     {
       "resultId" : "320150",
       "name" : "“偷狱”",
+      "description1" : "NAN",
+      "description2" : "NAN",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2859,6 +2083,8 @@
     {
       "resultId" : "320160",
       "name" : "放弃追债",
+      "description1" : "尼奥塔德：后续还需要一些手续，但现在塞达已经恢复自由了。",
+      "description2" : "塞达告别债务",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2869,6 +2095,8 @@
     {
       "resultId" : "321100",
       "name" : "逃债",
+      "description1" : "尼奥塔德：下次还没钱，就当心你的手指吧！\\n\n塞达：我会想办法还的，不要打我了…...",
+      "description2" : "借了高利贷，被讨债的盯上了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2879,6 +2107,8 @@
     {
       "resultId" : "321110",
       "name" : "铤而走险",
+      "description1" : "塞达：好像守备挺松懈。这些看不懂的东西拿了不少，不知道换了钱能不能把债还清。",
+      "description2" : "塞达从主教家拿了不少值钱的东西",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2890,6 +2120,8 @@
     {
       "resultId" : "321111",
       "name" : "铤而走险",
+      "description1" : "塞达：东西拿到一半，主教就突然回来了。只带走了这么点东西，应该不够还债吧……",
+      "description2" : "塞达没拿到太多的东西",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2901,6 +2133,8 @@
     {
       "resultId" : "321120",
       "name" : "赎金",
+      "description1" : "尼奥塔德：下次要借钱，还可以来找我。\\n\n塞达：我永远不会再来找你这个吸血鬼。",
+      "description2" : "塞达告别债务",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2911,6 +2145,8 @@
     {
       "resultId" : "321130",
       "name" : "救赎",
+      "description1" : "嘉帕兹：这点钱你拿着吧，以后小心一些。\\n\n塞达：呜，这个世上还是有好人的啊。",
+      "description2" : "嘉帕兹保护了塞达，还给了他一笔钱",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2921,6 +2157,8 @@
     {
       "resultId" : "321140",
       "name" : "难兄难弟",
+      "description1" : "塞达：再坏的猫咪，也比人类善良……也不全对。至少，当时救我的那个女人是个好人。",
+      "description2" : "其实塞达人也挺好的",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2932,6 +2170,8 @@
     {
       "resultId" : "321150",
       "name" : "寒酸的款待",
+      "description1" : "塞达：总有一种在吃最后的晚餐的感觉啊。赌博输光家产沦落至此，也是我自作自受吧。",
+      "description2" : "猫咪们大快朵颐，影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2944,6 +2184,8 @@
     {
       "resultId" : "321160",
       "name" : "自保措施",
+      "description1" : "塞达：下次他们再来，就叫他们有来无回！",
+      "description2" : "防卫设施准备就绪，等待讨债的人前来",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2954,6 +2196,8 @@
     {
       "resultId" : "321170",
       "name" : "破屋保卫战",
+      "description1" : "尼奥塔德：逃得了一时，你躲得了一辈子么？\n塞达：还敢再来，还有更多的猫粪等着你。",
+      "description2" : "他们应该不敢再来了",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2964,16 +2208,21 @@
     {
       "resultId" : "321180",
       "name" : "虚惊一场",
+      "description1" : "塞达：我以后不会再去赌了，提心吊胆的日子真不好受。还是跟你们一起吃吃喝喝更开心。",
+      "description2" : "猫咪们大快朵颐，影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "521180"
+        "521180",
+        "521181"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
       "resultId" : "330000",
       "name" : "猫咪审判",
+      "description1" : "平息了一次狂热的游行，但猫咪们也受了不少的损伤。以后我们需要更谨慎的行动。",
+      "description2" : "隐匿度提升。通过“猫咪入住”可以维持隐匿度",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2984,6 +2233,8 @@
     {
       "resultId" : "330010",
       "name" : "猫咪联络",
+      "description1" : "凯修：致卡莉——这就来。",
+      "description2" : "猫咪凯修参与行动，获得“猫咪入住”能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2995,6 +2246,8 @@
     {
       "resultId" : "330020",
       "name" : "猫咪联络",
+      "description1" : "科恩：致卡莉——如果在有生之年可以见证到审判之日的降临，这将是我的荣幸。",
+      "description2" : "猫咪科恩参与行动，获得“猫咪洗脑”能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3006,6 +2259,8 @@
     {
       "resultId" : "330030",
       "name" : "猫咪巡游",
+      "description1" : "取得了一些进展，但暂时没有成果。还需要继续寻找知情的猫咪。",
+      "description2" : "可以开展1次特训，提升猫咪能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3016,6 +2271,8 @@
     {
       "resultId" : "330040",
       "name" : "猫咪巡游",
+      "description1" : "取得了一些进展，但暂时没有成果。还需要继续寻找知情的猫咪。",
+      "description2" : "可以开展1次特训，提升猫咪能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3026,6 +2283,8 @@
     {
       "resultId" : "330050",
       "name" : "猫咪巡游",
+      "description1" : "我们在巡游中遇到了被骑士虐待的猫咪，它告诉了我们一条关键的传言。",
+      "description2" : "发现”圣杯的传言“",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3036,6 +2295,8 @@
     {
       "resultId" : "330060",
       "name" : "猫咪仪式",
+      "description1" : "取得了一些进展，但暂时没有成果。如果有猫咪能获得“神启“，应当可以取得突破。",
+      "description2" : "可以开展1次特训，提升猫咪能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3046,6 +2307,8 @@
     {
       "resultId" : "330070",
       "name" : "猫咪仪式",
+      "description1" : "取得了一些进展，但暂时没有成果。如果有猫咪能获得“神启“，应当可以取得突破。",
+      "description2" : "可以开展1次特训，提升猫咪能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3056,6 +2319,8 @@
     {
       "resultId" : "330080",
       "name" : "猫咪仪式",
+      "description1" : "科恩在仪式中感受到了神启，察觉到了圣杯的痕迹。",
+      "description2" : "发现”圣杯的痕迹“",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3066,6 +2331,8 @@
     {
       "resultId" : "330090",
       "name" : "猫咪集会",
+      "description1" : "取得了一些进展，但暂时没有成果。需要更多的猫咪影响力来协助我们。",
+      "description2" : "可以开展1次特训，提升猫咪能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3076,6 +2343,8 @@
     {
       "resultId" : "330100",
       "name" : "猫咪集会",
+      "description1" : "取得了一些进展，但暂时没有成果。需要更多的猫咪影响力来协助我们。",
+      "description2" : "可以开展1次特训，提升猫咪能力",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3086,6 +2355,8 @@
     {
       "resultId" : "330110",
       "name" : "猫咪集会",
+      "description1" : "让大量学者猫咪参与，查阅大量文献后，我们终于找到了圣杯的线索。",
+      "description2" : "发现”圣杯的线索“",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3096,6 +2367,8 @@
     {
       "resultId" : "330120",
       "name" : "穿梭特训",
+      "description1" : "凯修：注意技巧，看我示范。左右左右右左。身体摆动要与栏杆样子结合，速度才能更快。",
+      "description2" : "猫咪全员探查能力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3109,6 +2382,8 @@
     {
       "resultId" : "330130",
       "name" : "冥想特训",
+      "description1" : "科恩：如果不是身负使命，我也想整天缩在罐子冥想啊。",
+      "description2" : "猫咪全员密谋能力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3122,6 +2397,8 @@
     {
       "resultId" : "330140",
       "name" : "怜爱特训",
+      "description1" : "卡莉：控制好与人交流的频率。过于亲近会显得很廉价，而过于疏远会显得冷漠，明白吗？",
+      "description2" : "猫咪全员交际能力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3135,6 +2412,8 @@
     {
       "resultId" : "330150",
       "name" : "穿梭特训",
+      "description1" : "凯修：注意技巧，看我示范。左右左右右左。身体摆动要与栏杆样子结合，速度才能更快。",
+      "description2" : "猫咪全员探查能力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3148,6 +2427,8 @@
     {
       "resultId" : "330160",
       "name" : "冥想特训",
+      "description1" : "科恩：如果不是身负使命，我也想整天缩在罐子冥想啊。",
+      "description2" : "猫咪全员密谋能力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3161,6 +2442,8 @@
     {
       "resultId" : "330170",
       "name" : "怜爱特训",
+      "description1" : "卡莉：控制好与人交流的频率。过于亲近会显得很廉价，而过于疏远会显得冷漠，明白吗？",
+      "description2" : "猫咪全员交际能力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -3174,6 +2457,8 @@
     {
       "resultId" : "330180",
       "name" : "人类警觉",
+      "description1" : "猫咪共济会遭到人类的剿杀。猫被视为危险生物，从此在世界上被抹去。",
+      "description2" : "游戏失败",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
