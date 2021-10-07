@@ -137,7 +137,7 @@ public class GameView : MonoBehaviour
     }
     public void ButtonRelationship_OnClick()
     {
-        relationshipScale = 0.42f;
+        relationshipScale = 0.37f;
         bIsRelationshipScaling = true;
         oldRelationshipPos = new Vector2(UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().horizontalNormalizedPosition,UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().verticalNormalizedPosition);
         if (scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC && scrollRelationship.GetComponent<NPCManager>().currentOpenedNPC.GetComponent<NPCMono>().eventCycle.activeSelf)

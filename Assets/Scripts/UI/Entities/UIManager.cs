@@ -18,7 +18,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public GameView gameViewMono;
     
     //Images
-    public GameObject darkBackgroundImage;
+    //public GameObject darkBackgroundImage;
 
     //Panels
     public GameObject panelCouncil;
@@ -95,7 +95,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
-        darkBackgroundImage.SetActive(bIsSwitchToDark);
+        //darkBackgroundImage.SetActive(bIsSwitchToDark);
     }
 
     public void SwitchFinishFlag(int index,bool bIsSwitchToShown)
@@ -114,7 +114,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     public void Init()
     {
-        darkBackgroundImage = gameView.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
+        //darkBackgroundImage = gameView.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
         panelCouncil = gameView.Find("PanelCouncil").gameObject;
         panelSettings = gameView.Find("PanelSettings").gameObject;
         panelEventExe = gameView.Find("PanelEventExe").gameObject;
