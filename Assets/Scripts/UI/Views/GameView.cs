@@ -119,13 +119,16 @@ public class GameView : MonoBehaviour
 
     public void ButtonCloseRelationship_OnClick()
     {
-        relationshipScale = 1f;
+        relationshipScale = 0.75f;
         bIsRelationshipScaling = true;
         scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(oldRelationshipPos.x, oldRelationshipPos.y);
         scrollRelationship.GetComponent<ScrollRect>().enabled = true;
-        if(openSpecialScroll_coroutine != null) StopCoroutine(openSpecialScroll_coroutine);
-        if(closeSpecialScroll_coroutine != null) StopCoroutine(closeSpecialScroll_coroutine);
-        closeSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(true));
+        if (UIManager.Instance.buttonCloseRelationship.activeSelf)
+        {
+            if(openSpecialScroll_coroutine != null) StopCoroutine(openSpecialScroll_coroutine);
+            if(closeSpecialScroll_coroutine != null) StopCoroutine(closeSpecialScroll_coroutine);
+            openSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(true));
+        }
         rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,0f,0);
         
         //buttons
@@ -143,7 +146,7 @@ public class GameView : MonoBehaviour
         scrollRelationship.GetComponent<ScrollRect>().enabled = false;
         if(openSpecialScroll_coroutine != null) StopCoroutine(openSpecialScroll_coroutine);
         if(closeSpecialScroll_coroutine != null) StopCoroutine(closeSpecialScroll_coroutine);
-        openSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(false));
+        closeSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(false));
         rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,-185f,0);
         
         //buttons
