@@ -15,6 +15,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public bool buttonCouncilActive = true;
     
     public Transform gameView;
+    public GameView gameViewMono;
     
     //Images
     public GameObject darkBackgroundImage;

@@ -95,6 +95,7 @@ public class GameView : MonoBehaviour
     private void UIManagerInit()
     {
         UIManager.Instance.gameView = transform;
+        UIManager.Instance.gameViewMono = this;
         UIManager.Instance.Init();
     }
     public void ButtonTestEvent_OnClick()
