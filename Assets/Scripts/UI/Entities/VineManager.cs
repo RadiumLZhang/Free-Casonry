@@ -12,6 +12,7 @@ public class VineManager : MonoBehaviour
     }
     void Start()
     {
+        Vines = new Dictionary<int, VineMono>();
         m_content = transform.Find("Viewport/Content");
         AddVineFromID(101);
         AddVineFromID(100);
