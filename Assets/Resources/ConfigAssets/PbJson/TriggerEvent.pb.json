@@ -11,7 +11,6 @@
           "name" : "转移注意",
           "description" : "猫咪隐匿度降低",
           "effects" : [
-            "500032",
             "500033"
           ],
           "conditions" : [

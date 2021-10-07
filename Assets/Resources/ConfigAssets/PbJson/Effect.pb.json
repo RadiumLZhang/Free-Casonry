@@ -1036,8 +1036,18 @@
       ]
     },
     {
-      "effectId" : "510101",
-      "baseEffectId" : "5021"
+      "effectId" : "510103",
+      "baseEffectId" : "5003",
+      "paras" : [
+        10
+      ]
+    },
+    {
+      "effectId" : "510104",
+      "baseEffectId" : "5003",
+      "paras" : [
+        -30
+      ]
     },
     {
       "effectId" : "510110",
@@ -1072,13 +1082,6 @@
       "baseEffectId" : "5000",
       "paras" : [
         15
-      ]
-    },
-    {
-      "effectId" : "510103",
-      "baseEffectId" : "5003",
-      "paras" : [
-        10
       ]
     },
     {

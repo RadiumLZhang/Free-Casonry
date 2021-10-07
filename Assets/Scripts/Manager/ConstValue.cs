@@ -6,10 +6,10 @@
         public const int YEAR = 2021;
         
         // 游戏开始月份
-        public const int MONTH = 9;
+        public const int MONTH = 7;
         
         // 游戏开始日期
-        public const int DAY = 24;
+        public const int DAY = 13;
         
         // 现实中的一秒对应游戏中的x秒, TimeManager当中使用
         public const int TIME_STEP = 600;
