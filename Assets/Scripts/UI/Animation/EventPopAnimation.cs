@@ -10,7 +10,7 @@ namespace UI.Animation
         private Image ImageSource;
         private int mCurFrame = 0;
         private float mDelta = 0;
-        public float FPS = 15;
+        public float FPS = 22;
         public List<Sprite> SpriteFrames;
         public bool IsPlaying = false;
         public bool Foward = true;

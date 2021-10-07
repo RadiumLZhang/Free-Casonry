@@ -902,7 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358f665a9d2af7643b3862222757cecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPS: 15
+  FPS: 22
   SpriteFrames:
   - {fileID: -8514530108266402620, guid: 0c2a871783a5e694d9042fd3630f6f15, type: 3}
   - {fileID: -5196867197472075311, guid: 0c2a871783a5e694d9042fd3630f6f15, type: 3}
