@@ -21,24 +21,26 @@ namespace Manager
     
     public class SaveManager : BaseModel<SaveManager>
     {
-        private List<ISaveObject> nodeList;
-        private string savePath;
+        private List<ISaveObject> m_nodeList;
+        private string m_savePath;
+        private string m_loadPath;
 
         public void Init()
         {
-            savePath = "Assets/Resources/Save";
-            nodeList = new List<ISaveObject>();
+            m_savePath = "Assets/Resources/Save";
+            m_loadPath = "Save";
+            m_nodeList = new List<ISaveObject>();
             
             // 需要存档的对象在这里注册
-            nodeList.Add(TimeTickerManager.Instance);
-            nodeList.Add(TimeManager.Instance);
-            nodeList.Add(EventManager.Instance);
-            nodeList.Add(PlayerModel.Instance);
-            nodeList.Add(HumanManager.Instance);
-            nodeList.Add(EmergencyManager.Instance);
-            nodeList.Add(UIManager.Instance);
-            nodeList.Add(CatManager.Instance);
-            nodeList.Add(EventHandlerManager.Instance);
+            m_nodeList.Add(TimeTickerManager.Instance);
+            m_nodeList.Add(TimeManager.Instance);
+            m_nodeList.Add(EventManager.Instance);
+            m_nodeList.Add(PlayerModel.Instance);
+            m_nodeList.Add(HumanManager.Instance);
+            m_nodeList.Add(EmergencyManager.Instance);
+            m_nodeList.Add(UIManager.Instance);
+            m_nodeList.Add(CatManager.Instance);
+            m_nodeList.Add(EventHandlerManager.Instance);
 
             string userName = PlayerPrefs.GetString("saveName");
             if (userName != null && !"".Equals(userName))
@@ -49,9 +51,9 @@ namespace Manager
 
         public void SaveData(string name)
         {
-            string filePath = savePath + "/" + name + ".txt";
+            string filePath = m_savePath + "/" + name + ".txt";
             var list = new List<string>();
-            foreach (var node in nodeList)
+            foreach (var node in m_nodeList)
             {
                 list.Add(node.Save());
             }
@@ -69,19 +71,19 @@ namespace Manager
 
         public bool LoadData(string name)
         {
-            string filePath = savePath + "/" + name + ".txt";
-            if (!File.Exists(filePath))
-            {
-                return false;
-            }
+            string filePath = $"{m_loadPath}/{name}";
+            // if (!File.Exists(filePath))
+            // {
+            //     return false;
+            // }
 
             //var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(filePath);
             var asset = Resources.Load<TextAsset>(filePath);
             var json = asset.text;
             var list = JsonConvert.DeserializeObject<List<string>>(json);
-            for (int i = 0; i < nodeList.Count; i++)
+            for (int i = 0; i < m_nodeList.Count; i++)
             {
-                nodeList[i].Load(list[i]);
+                m_nodeList[i].Load(list[i]);
             }
 
             return true;
