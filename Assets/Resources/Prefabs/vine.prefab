@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 721770823942847949}
   - component: {fileID: 721770823942847947}
   - component: {fileID: 721770823942847948}
+  - component: {fileID: 1778736726160905148}
   m_Layer: 5
   m_Name: vine
   m_TagString: Untagged
@@ -76,6 +77,34 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1778736726160905148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721770823942847950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922b805bc01c243e5853d9cbb544118c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectMode: 3
+  m_EffectFactor: 1
+  m_TransitionTexture: {fileID: 2800000, guid: 4924553ea26c8884c8e7ecb69399549b, type: 3}
+  m_EffectArea: 0
+  m_KeepAspectRatio: 0
+  m_DissolveWidth: 0.5
+  m_DissolveSoftness: 0.461
+  m_DissolveColor: {r: 0.72156864, g: 0.5411765, b: 0.3254902, a: 1}
+  m_PassRayOnHidden: 0
+  m_Player:
+    play: 0
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
 --- !u!1 &721770824018706166
 GameObject:
   m_ObjectHideFlags: 0

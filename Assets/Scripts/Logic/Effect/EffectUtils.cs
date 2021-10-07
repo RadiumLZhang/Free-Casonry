@@ -233,9 +233,9 @@ namespace Logic.Effect
                     CatImageChange(args);
                     break;
                 //人际关系图操作
-                // case 5300:
-                //     ShowHuman(args);
-                //     break;
+                case 5300:
+                    ShowHuman(args);
+                    break;
                 // case 5301:
                 //     ShowRelationLine(args);
                 //     break;
@@ -659,6 +659,17 @@ namespace Logic.Effect
             {
                 PlayerModel.Instance.StoryProgress = value;
             }
+        }
+
+        private static void ShowHuman(params object[] args)
+        {
+            var humanId = (int) args[0];
+            if(!NPCManager.NPCs.TryGetValue(humanId, out var npcMono))
+            {
+                return;
+            }
+            
+            npcMono.Show();
         }
     }
 }

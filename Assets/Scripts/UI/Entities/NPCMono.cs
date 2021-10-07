@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Coffee.UIEffects;
 using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -21,6 +22,8 @@ public class NPCMono : MonoBehaviour
     private Animation m_redPointAnimation;
     private Transform backgroundButton;
 
+    private UITransitionEffect effect;
+
     private const string ImportantPointIn = "ImportantPointIn";
     
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
@@ -36,7 +39,8 @@ public class NPCMono : MonoBehaviour
         backgroundButton = transform.Find("EventCycle/root/Button");
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
         m_redPointAnimation = transform.Find("animationRoot").GetComponent<Animation>();
-        
+
+        effect = transform.GetComponent<UITransitionEffect>();
         m_trigger = transform.GetComponent<EventTrigger>();
         m_animation = transform.Find("EventCycle").GetComponent<Animation>();
         m_animation.Stop();
@@ -79,6 +83,7 @@ public class NPCMono : MonoBehaviour
         m_animation.Play("EventCycleShow");
         
         // eventCycle.SetActive(!eventCycle.activeSelf);
+        
     }
 
     public void OpenEventCycle()
@@ -154,7 +159,10 @@ public class NPCMono : MonoBehaviour
         {
             eventcols[i].EmptyCol();
         }
-        for (i = 0; i < list.Count; i++)
+
+        var n = Math.Min(list.Count, 5);
+        
+        for (i = 0; i < n; i++)
         {
             var tempEvent = list[i];
             eventcols[i].InitWithID(list[i].ID);
@@ -162,5 +170,17 @@ public class NPCMono : MonoBehaviour
         }
         
         SwitchNPCRedPoint(flag);
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+        effect.Show();
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+        effect.Hide();
     }
 }
