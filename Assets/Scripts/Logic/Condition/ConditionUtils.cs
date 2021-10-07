@@ -138,13 +138,13 @@ namespace Logic.Condition
                     return CheckCatCommunicationGreaterEqual((int) args[0], (int) args[1]) == false;
                   
                 case 4300:  //  人物X已出现在关系网中
-                        // todo
+                    return CheckNPCDisplay((int) args[0]);
                 case 4301:  //  人物X未出现在关系网中
-                        // todo
+                    return CheckNPCDisplay((int) args[0]) == false;
                 case 4302:  //  人物关系线X已出现在关系网中
-                        // todo
+                    return CheckVineIsDisplay((int) args[0]);
                 case 4303:  //  人物关系线X未出现在关系网中
-                        // todo
+                    return CheckVineIsDisplay((int) args[0]) == false;
                 
                 case 4400: // 拥有事件记录X
                     return CheckHasFlag((int) args[0]);
@@ -355,6 +355,17 @@ namespace Logic.Condition
          private static bool CheckStoryProgressLessEqual(int storyProgress)
          {
              return PlayerModel.Instance.StoryProgress <= storyProgress;
+         }
+
+         private static bool CheckVineIsDisplay(int vineId)
+         {
+             return VineManager.CheckVine(vineId);
+         }
+
+         private static bool CheckNPCDisplay(int npcId)
+         {
+             // todo
+             return false;
          }
     }
     
