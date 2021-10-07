@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class CouncilView : MonoBehaviour
 {
+    private enum CouncilState
+    {
+        Conspiracy,
+        Manage
+    }
+    
     private GameObject panelConspiracy;
     private GameObject panelManage;
     
@@ -14,6 +20,11 @@ public class CouncilView : MonoBehaviour
     private GameObject imageConspiracyOn;
     private GameObject imageManageOff;
     private GameObject imageManageOn;
+
+    private Animation m_conspiracyPanelAnimation;
+    private Animation m_managePanelAnimation;
+
+    private CouncilState state;
     
 
     void Start()
@@ -24,6 +35,11 @@ public class CouncilView : MonoBehaviour
         imageConspiracyOn = transform.Find("ImageConspiracyOn").gameObject;
         imageManageOff = transform.Find("ImageManageOff").gameObject;
         imageManageOn = transform.Find("ImageManageOn").gameObject;
+
+        m_conspiracyPanelAnimation = panelConspiracy.GetComponent<Animation>();
+        m_managePanelAnimation = panelManage.GetComponent<Animation>();
+
+        state = CouncilState.Manage;
     }
 
     private void SwitchLightToConspiracy(bool bIsConspiracy)
@@ -35,14 +51,56 @@ public class CouncilView : MonoBehaviour
     }
     public void ButtonConspiracy_OnClick()
     {
+        if (state == CouncilState.Conspiracy)
+        {
+            return;
+        }
+
+        state = CouncilState.Conspiracy;
+        
         SwitchLightToConspiracy(true);
-        panelConspiracy.SetActive(true);
-        panelManage.SetActive(false);
+        // panelConspiracy.SetActive(true);
+        // panelManage.SetActive(false);
+        
+        PanelInAnimation(m_conspiracyPanelAnimation);
+        PanelOutAnimation(m_managePanelAnimation);
     }
     public void ButtonManage_OnClick()
     {
-        SwitchLightToConspiracy(false);
-        panelConspiracy.SetActive(false);
+        if (state == CouncilState.Manage)
+        {
+            return;
+        }
+
+        state = CouncilState.Manage;
+        
+        // SwitchLightToConspiracy(false);
+        // panelConspiracy.SetActive(false);
         panelManage.SetActive(true);
+
+        PanelInAnimation(m_managePanelAnimation);
+        PanelOutAnimation(m_conspiracyPanelAnimation);
+    }
+
+    private void PanelInAnimation(Animation animation)
+    {
+        var panelIn = animation["PanelIn"];
+        panelIn.speed = 1;
+        panelIn.normalizedTime = 0;
+        panelIn.enabled = false;
+
+        animation.Sample();
+        animation.Play(panelIn.name);
+    }
+
+    private void PanelOutAnimation(Animation animation)
+    {
+        var panelIn = animation["PanelIn"];
+        panelIn.speed = -1;
+        panelIn.normalizedTime = 1;
+        panelIn.enabled = false;
+
+        animation.Sample();
+        animation.Play(panelIn.name);
     }
 }
