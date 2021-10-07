@@ -28,7 +28,7 @@ public class NPCInfoMono : MonoBehaviour
         m_textLabelA = transform.Find("animationRoot/TextLabelA").GetComponent<Text>();  
         m_textLabelB = transform.Find("animationRoot/TextLabelB").GetComponent<Text>();  
         m_slider = transform.Find("animationRoot/Slider").GetComponent<Slider>();  
-        m_imageCat = transform.Find("animationRoot/ImageCat").GetComponent<Image>();  
+        m_imageCat = transform.Find("animationRoot/ImageCat").GetComponent<Image>();
         m_animation = transform.Find("animationRoot").GetComponent<Animation>();
         m_animation.Stop();
     }
@@ -42,7 +42,10 @@ public class NPCInfoMono : MonoBehaviour
         
         m_textLabelA.text = npc.Tags[0];
         m_textLabelB.text = npc.Tags[1];
-        m_imageCat.sprite = Resources.Load<Sprite>(npc.cat.Image);
+        if (npc.cat != null)
+        {
+            m_imageCat.sprite = Resources.Load<Sprite>(npc.cat.Image);
+        }
         m_slider.value = npc.Defence * 10.0f;
     }
 
