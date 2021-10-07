@@ -11,11 +11,10 @@
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "不安",
         "多疑",
         "孤独"
       ],
-      "visibility" : 0,
+      "visibility" : 2,
       "Defense" : 10
     },
     {
@@ -29,9 +28,8 @@
       "canWashHead" : 0,
       "defaultCatId" : "61002",
       "tags" : [
-        "高贵",
-        "爱财",
-        "善变"
+        "善变",
+        "爱财"
       ],
       "visibility" : 0,
       "Defense" : 3
@@ -48,8 +46,7 @@
       "defaultCatId" : "0",
       "tags" : [
         "野心",
-        "才干",
-        "耐性"
+        "才干"
       ],
       "visibility" : 0,
       "Defense" : 10
@@ -66,8 +63,7 @@
       "defaultCatId" : "0",
       "tags" : [
         "虔诚",
-        "正直",
-        "有心结"
+        "正直"
       ],
       "visibility" : 0,
       "Defense" : 10
@@ -84,8 +80,7 @@
       "defaultCatId" : "0",
       "tags" : [
         "可靠",
-        "警惕",
-        "善辩"
+        "警惕"
       ],
       "visibility" : 0,
       "Defense" : 9
@@ -101,9 +96,8 @@
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "自信",
         "骗子",
-        "爱钻研"
+        "学究"
       ],
       "visibility" : 0,
       "Defense" : 8
@@ -119,7 +113,6 @@
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "无能",
         "虚荣",
         "忠诚"
       ],
@@ -138,8 +131,7 @@
       "defaultCatId" : "0",
       "tags" : [
         "冷面",
-        "温和",
-        "诚实"
+        "温和"
       ],
       "visibility" : 0,
       "Defense" : 8
@@ -156,8 +148,7 @@
       "defaultCatId" : "0",
       "tags" : [
         "爱猫",
-        "仁慈",
-        "学识"
+        "仁慈"
       ],
       "visibility" : 0,
       "Defense" : 6
@@ -174,8 +165,7 @@
       "defaultCatId" : "0",
       "tags" : [
         "粗俗",
-        "顾家",
-        "愚笨"
+        "顾家"
       ],
       "visibility" : 0,
       "Defense" : 8
@@ -191,9 +181,8 @@
       "canWashHead" : 1,
       "defaultCatId" : "0",
       "tags" : [
-        "多谋",
-        "傲慢",
-        "爱财"
+        "爱财",
+        "傲慢"
       ],
       "visibility" : 0,
       "Defense" : 9
@@ -210,7 +199,6 @@
       "defaultCatId" : "0",
       "tags" : [
         "猫语者",
-        "嗜赌",
         "讲义气"
       ],
       "visibility" : 0,

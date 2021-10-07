@@ -165,10 +165,10 @@
     },
     {
       "effectId" : "510010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60000,
-        2
+        -2
       ]
     },
     {
@@ -235,10 +235,10 @@
     },
     {
       "effectId" : "511010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60001,
-        2
+        -2
       ]
     },
     {
@@ -308,10 +308,10 @@
     },
     {
       "effectId" : "512010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60002,
-        2
+        -2
       ]
     },
     {
@@ -319,7 +319,7 @@
       "baseEffectId" : "5123",
       "paras" : [
         60002,
-        61000
+        61003
       ]
     },
     {
@@ -374,10 +374,10 @@
     },
     {
       "effectId" : "513010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60003,
-        2
+        -2
       ]
     },
     {
@@ -385,7 +385,7 @@
       "baseEffectId" : "5123",
       "paras" : [
         60003,
-        61000
+        61004
       ]
     },
     {
@@ -433,10 +433,10 @@
     },
     {
       "effectId" : "514010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60004,
-        2
+        -2
       ]
     },
     {
@@ -492,10 +492,10 @@
     },
     {
       "effectId" : "515010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60005,
-        2
+        -2
       ]
     },
     {
@@ -551,10 +551,10 @@
     },
     {
       "effectId" : "516010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60006,
-        2
+        -2
       ]
     },
     {
@@ -631,10 +631,10 @@
     },
     {
       "effectId" : "517010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60007,
-        2
+        -2
       ]
     },
     {
@@ -704,10 +704,10 @@
     },
     {
       "effectId" : "518010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60008,
-        2
+        -2
       ]
     },
     {
@@ -770,10 +770,10 @@
     },
     {
       "effectId" : "519010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60009,
-        2
+        -2
       ]
     },
     {
@@ -836,10 +836,10 @@
     },
     {
       "effectId" : "520010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60010,
-        2
+        -2
       ]
     },
     {
@@ -888,10 +888,10 @@
     },
     {
       "effectId" : "521010",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60011,
-        2
+        -2
       ]
     },
     {
@@ -1196,7 +1196,7 @@
     },
     {
       "effectId" : "513161",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60003,
         -5
@@ -1232,7 +1232,7 @@
     },
     {
       "effectId" : "513231",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60003,
         -5
@@ -1380,7 +1380,7 @@
     },
     {
       "effectId" : "515171",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60005,
         -3
@@ -1465,7 +1465,7 @@
     },
     {
       "effectId" : "516122",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60006,
         -4
@@ -1473,7 +1473,7 @@
     },
     {
       "effectId" : "516130",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60006,
         -3
@@ -1488,7 +1488,7 @@
     },
     {
       "effectId" : "516132",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60006,
         -3
@@ -1517,7 +1517,7 @@
     },
     {
       "effectId" : "517121",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60007,
         -3
@@ -1535,6 +1535,20 @@
       "baseEffectId" : "5013",
       "paras" : [
         117130
+      ]
+    },
+    {
+      "effectId" : "517131",
+      "baseEffectId" : "5301",
+      "paras" : [
+        700
+      ]
+    },
+    {
+      "effectId" : "517132",
+      "baseEffectId" : "5300",
+      "paras" : [
+        60011
       ]
     },
     {
@@ -1567,7 +1581,7 @@
     },
     {
       "effectId" : "517152",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60007,
         -3
@@ -1575,7 +1589,7 @@
     },
     {
       "effectId" : "517153",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60008,
         -3
@@ -1583,7 +1597,7 @@
     },
     {
       "effectId" : "517154",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60009,
         -3
@@ -1685,7 +1699,7 @@
     },
     {
       "effectId" : "519122",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60009,
         -3
@@ -1744,7 +1758,7 @@
       "effectId" : "520100",
       "baseEffectId" : "5013",
       "paras" : [
-        120000
+        120100
       ]
     },
     {
@@ -1868,7 +1882,7 @@
     },
     {
       "effectId" : "521121",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60011,
         -3
@@ -1890,7 +1904,7 @@
     },
     {
       "effectId" : "521124",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60011,
         -10
@@ -1912,7 +1926,7 @@
     },
     {
       "effectId" : "521141",
-      "baseEffectId" : "5108",
+      "baseEffectId" : "5107",
       "paras" : [
         60011,
         -3
