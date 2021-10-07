@@ -113,16 +113,10 @@ namespace Logic.Event
         public void ExecuteEffect()
         {
             //this.Status = EventStatus.OnProcess;
-            //todo 执行效果、代价
-            // Config.Effects;
-            if (!CanExecute())
-            {
-                return;
-            }
 
-            foreach (var VARIABLE in Config.Effects)
+            foreach (var effect in Config.Effects)
             {
-                
+                EffectUtils.ActivateEffect(effect);
             }
         }
         
