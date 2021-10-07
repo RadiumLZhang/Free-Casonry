@@ -1839,7 +1839,6 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "518110",
         "518113"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -1852,7 +1851,6 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "518110",
         "518114"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -1865,7 +1863,6 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "518110",
         "518113"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
@@ -1878,7 +1875,6 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "518110",
         "518116"
       ],
       "picture" : "Sprites/Main/4刺探事件卡片"
