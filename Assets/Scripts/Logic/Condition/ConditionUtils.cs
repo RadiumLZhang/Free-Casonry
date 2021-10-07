@@ -193,7 +193,7 @@ namespace Logic.Condition
 
          private static bool CheckEmergencyChoice(params object[] args)
          {
-             Emergency tempEmergency = EmergencyManager.Instance.GetEmergencyByID((long)args[0]);
+             Emergency tempEmergency = EmergencyManager.Instance.GetEmergencyByID((int)args[0]);
              return tempEmergency.GetChoice() == (int)args[1];
          }
     }
