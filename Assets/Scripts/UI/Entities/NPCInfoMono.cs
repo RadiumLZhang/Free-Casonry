@@ -13,6 +13,8 @@ public class NPCInfoMono : MonoBehaviour
     private Text m_textLabelA;
     private Text m_textLabelB;
     private Text m_textLabelC;
+    private Slider m_slider;
+    private Image m_imageCat;
     private Animation m_animation;
 
     private const string PanelInAnimation = "NpcPanelIn";
@@ -25,15 +27,10 @@ public class NPCInfoMono : MonoBehaviour
         m_textNPCVisibility = transform.Find("animationRoot/TextNPCVisibility").GetComponent<Text>(); 
         m_textLabelA = transform.Find("animationRoot/TextLabelA").GetComponent<Text>();  
         m_textLabelB = transform.Find("animationRoot/TextLabelB").GetComponent<Text>();  
-
+        m_slider = transform.Find("animationRoot/Slider").GetComponent<Slider>();  
+        m_imageCat = transform.Find("animationRoot/ImageCat").GetComponent<Image>();  
         m_animation = transform.Find("animationRoot").GetComponent<Animation>();
         m_animation.Stop();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SwitchNpcInfo(Human npc)
@@ -42,10 +39,11 @@ public class NPCInfoMono : MonoBehaviour
         m_textNPCName.text = npc.Name;
         m_textNPCTitle.text = npc.Title;
         m_textNPCVisibility.text = npc.Visibility.ToString();
-           
-        //todo 读两个label
-        m_textLabelA.text = npc.Name;
-        m_textLabelB.text = npc.Name;
+        
+        m_textLabelA.text = npc.Tags[0];
+        m_textLabelB.text = npc.Tags[1];
+        m_imageCat.sprite = Resources.Load<Sprite>(npc.cat.Image);
+        m_slider.value = npc.Defence * 10.0f;
     }
 
     public void OpenNpcInfo()

@@ -233,18 +233,18 @@ namespace Logic.Effect
                     CatImageChange(args);
                     break;
                 //人际关系图操作
-                // case 5300:
-                //     ShowHuman(args);
-                //     break;
-                // case 5301:
-                //     ShowRelationLine(args);
-                //     break;
+                case 5300:
+                    ShowHuman(args);
+                    break;
+                case 5301:
+                    ShowRelationLine(args);
+                    break;
                 // case 5302:
                 //     ShowAll(args);
                 //     break;
-                // case 5303:
-                //     SetRelation(args);
-                //     break;
+                case 5303:
+                    SetRelation(args);
+                    break;
                 case 5500:
                     SetStoryProcess(args);
                     break;
@@ -659,6 +659,41 @@ namespace Logic.Effect
             {
                 PlayerModel.Instance.StoryProgress = value;
             }
+        }
+
+        private static void ShowHuman(params object[] args)
+        {
+            var humanId = (int) args[0];
+            if(!NPCManager.NPCs.TryGetValue(humanId, out var npcMono))
+            {
+                return;
+            }
+            
+            npcMono.Show();
+        }
+
+        private static void ShowRelationLine(params object[] args)
+        {
+            var lineId = (int) args[0];
+            var vineMono = VineManager.GetVineFromID(lineId);
+            if (vineMono == null)
+            {
+                return;
+            }
+
+            vineMono.Show();
+        }
+
+        private static void SetRelation(params object[] args)
+        {
+            var lineId = (int) args[0];
+            var vineMono = VineManager.GetVineFromID(lineId);
+            if (vineMono == null)
+            {
+                return;
+            }
+            
+            vineMono.SetText((int) args[1]);
         }
     }
 }
