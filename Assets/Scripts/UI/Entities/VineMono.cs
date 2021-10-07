@@ -11,6 +11,8 @@ public class VineMono : MonoBehaviour
     private Transform relation;
     private Text relationText;
     
+    public bool Active { get; private set; }
+    
     void Start()
     {
         effect = transform.GetComponent<UITransitionEffect>();
@@ -26,11 +28,14 @@ public class VineMono : MonoBehaviour
 
     public void Show()
     {
+        Active = true;
+        gameObject.SetActive(true);
         effect.Show();
     }
 
     public void Hide()
     {
+        Active = false;
         effect.Hide();
     }
 

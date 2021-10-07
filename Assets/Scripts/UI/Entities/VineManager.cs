@@ -50,7 +50,12 @@ public class VineManager : MonoBehaviour
 
     public static bool CheckVine(int id)
     {
-        return Vines.ContainsKey(id);
+        if (!Vines.TryGetValue(id, out var vineMono))
+        {
+            return false;
+        }
+
+        return vineMono.Active;
     }
 
 }
