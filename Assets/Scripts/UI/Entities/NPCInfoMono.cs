@@ -25,7 +25,6 @@ public class NPCInfoMono : MonoBehaviour
         m_textNPCVisibility = transform.Find("animationRoot/TextNPCVisibility").GetComponent<Text>(); 
         m_textLabelA = transform.Find("animationRoot/TextLabelA").GetComponent<Text>();  
         m_textLabelB = transform.Find("animationRoot/TextLabelB").GetComponent<Text>();  
-        m_textLabelC = transform.Find("animationRoot/TextLabelC").GetComponent<Text>();
 
         m_animation = transform.Find("animationRoot").GetComponent<Animation>();
         m_animation.Stop();
@@ -44,10 +43,9 @@ public class NPCInfoMono : MonoBehaviour
         m_textNPCTitle.text = npc.Title;
         m_textNPCVisibility.text = npc.Visibility.ToString();
            
-        //todo 读三个label
+        //todo 读两个label
         m_textLabelA.text = npc.Name;
         m_textLabelB.text = npc.Name;
-        m_textLabelC.text = npc.Name;
     }
 
     public void OpenNpcInfo()

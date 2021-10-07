@@ -1494,11 +1494,16 @@
       ]
     },
     {
-      "conditionId" : "416130",
-      "baseConditionId" : "4400",
+      "conditionId" : "416122",
+      "baseConditionId" : "4403",
       "paras" : [
-        116121
+        21612,
+        1
       ]
+    },
+    {
+      "conditionId" : "416130",
+      "baseConditionId" : "0"
     },
     {
       "conditionId" : "417100",
