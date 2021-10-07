@@ -92,20 +92,85 @@ namespace Logic.Condition
                     return CheckHumanVisibilityEqual(args);
                 case 4104: // 目标人物X，能见度低于Y
                     return CheckHumanVisibilityGreaterEqual(args) == false;
-                    // case 4105:// 目标人物X，养猫意愿至少为Y
-                    //     return CheckHumanRaiseCatFavorGreaterEqual(args);
-                    // case 4106: // 目标人物X，养猫意愿为Y
-                    //     return CheckHumanRaiseCatFavorEqual(args);
-                    // case 4107: // 目标人物X，养猫意愿低于Y
-                    //     return CheckHumanRaiseCatFavorGreaterEqual(args) == false;
+                case 4105:// 目标人物X，心防至少为Y
+                    return CheckHumanDefenceGreaterEqual(args);
+                case 4106: // 目标人物X，心防为Y
+                    return CheckHumanDefenceEqual(args);
+                case 4107: // 目标人物X，心防低于Y
+                    return CheckHumanDefenceGreaterEqual(args) == false;
                     // case 4108: // 目标人物X，亲密度至少为Y
                     //     return CheckHumanIntimacyGreaterEqual(args);
                     // case 4109: //目标人物X，亲密度为Y
                     //     return CheckHumanIntimacyEqual(args);
-                case 4400:
-                    return CheckHasFlag(args);
-                case 4403:
+                
+                case 4111:  //  目标人物X，拥有洗脑状态
+                    return CheckHumanIsWashHead((int) args[0]);
+                case 4112:  //  目标人物X，未拥有洗脑状态
+                    return CheckHumanIsWashHead((int) args[0]) == false;
+                case 4113:  //  目标人物X，拥有任意猫咪
+                    return CheckHumanOwnCat((int) args[0]);
+                case 4114:  //  目标人物X，拥有猫咪Y
+                    return CheckHumanOwnCat((int) args[0], (int) args[1]);
+                case 4115:  //  目标人物X，未拥有猫咪
+                    return CheckHumanOwnCat((int) args[0]) == false;
+                case 4116:  //  目标人物X，允许养猫
+                    return CheckHumanCanOwnCat((int) args[0]);
+                case 4117:  //  目标人物X，禁止养猫
+                    return CheckHumanCanOwnCat((int) args[0]) == false;
+                    
+                case 4200:  //  目标猫咪X，密谋等级至少为Y
+                    return CheckCatConspiracyGreaterEqual((int) args[0], (int) args[1]);
+                case 4201:  //  目标猫咪X，密谋等级等于Y
+                    return CheckCatConspiracyEqual((int) args[0], (int) args[1]);
+                case 4202:  //  目标猫咪X，密谋等级低于Y
+                    return CheckCatConspiracyGreaterEqual((int) args[0], (int) args[1]) == false;
+                case 4203:  //  目标猫咪X，刺探等级至少为Y
+                    return CheckCatScoutGreaterEqual((int) args[0], (int) args[1]);
+                case 4204:  //  目标猫咪X，刺探等级等于Y
+                    return CheckCatScoutEqual((int) args[0], (int) args[1]);
+                case 4205:  //  目标猫咪X，刺探等级低于Y
+                    return CheckCatScoutGreaterEqual((int) args[0], (int) args[1]) == false;
+                case 4206:  //  目标猫咪X，交流等级至少为Y
+                    return CheckCatCommunicationGreaterEqual((int) args[0], (int) args[1]);
+                case 4207:  //  目标猫咪X，交流等级等于Y
+                    return CheckCatCommunicationEqual((int) args[0], (int) args[1]);
+                case 4208:  //  目标猫咪X，交流等级低于Y
+                    return CheckCatCommunicationGreaterEqual((int) args[0], (int) args[1]) == false;
+                  
+                case 4300:  //  人物X已出现在关系网中
+                        // todo
+                case 4301:  //  人物X未出现在关系网中
+                        // todo
+                case 4302:  //  人物关系线X已出现在关系网中
+                        // todo
+                case 4303:  //  人物关系线X未出现在关系网中
+                        // todo
+                
+                case 4400: // 拥有事件记录X
+                    return CheckHasFlag((int) args[0]);
+                case 4401: // 拥有事件记录X或Y
+                    return CheckHasFlag((int) args[0]) || CheckHasFlag((int) args[1]);
+                case 4402: // 拥有事件记录X和Y
+                    return CheckHasFlag((int) args[0]) && CheckHasFlag((int) args[1]);
+                case 4403:  // 该事件的突发事件当中选择了第X项
                     return CheckEmergencyChoice(args);
+                
+                
+                case 4500:  //  故事进度为X
+                    return CheckStoryProgressGreaterEqual((int) args[0]);
+                case 4501:  //  故事进度大于等于X
+                    return CheckStoryProgressEqual((int) args[0]);
+                case 4502:  //  故事进度小于等于X
+                    return CheckStoryProgressLessEqual((int) args[0]);
+                case 4503:  // 拥有至多X点人类货币
+                    return CheckPlayerPropertyLessOrEqual((int) args[0], PlayerModel.ResourceType.Money);
+                case 4504:  //  拥有至多X点猫咪影响力
+                    return CheckPlayerPropertyLessOrEqual((int) args[0], PlayerModel.ResourceType.Influence);
+                case 4505:  //  拥有至多X点猫咪隐匿度
+                    return CheckPlayerPropertyLessOrEqual((int) args[0], PlayerModel.ResourceType.Hidency);
+                case 4506:  //  执行任务的猫咪编号为X
+                    // todo
+                    return false;
             }
 
             return false;
@@ -186,15 +251,110 @@ namespace Logic.Condition
          //     return (int) args[1] == HumanManager.Instance.GetHuman((int) args[0]).GetFavorValue();
          // }
 
-         private static bool CheckHasFlag(params object[] args)
+         private static bool CheckHasFlag(int flagId)
          {
-             return PlayerModel.Instance.CheckRecord((int) args[0]);
+             return PlayerModel.Instance.CheckRecord(flagId);
          }
 
          private static bool CheckEmergencyChoice(params object[] args)
          {
              Emergency tempEmergency = EmergencyManager.Instance.GetEmergencyByID((int)args[0]);
              return tempEmergency.GetChoice() == (int)args[1];
+         }
+         
+         
+         /*补充********************************************************************************************/
+
+         private static bool CheckHumanDefenceGreaterEqual(params object[] args)
+         {
+             Human.Human human = HumanManager.Instance.GetHuman((int) args[0]);
+             return human.Defence >= (int) args[1];
+         }
+
+         private static bool CheckHumanDefenceEqual(params object[] args)
+         {
+             Human.Human human = HumanManager.Instance.GetHuman((int) args[0]);
+             return human.Defence == (int) args[1];
+         }
+
+         private static bool CheckPlayerPropertyLessOrEqual(int value, PlayerModel.ResourceType type)
+         {
+             return PlayerModel.Instance.GetResource(type) <= value;
+         }
+
+         private static bool CheckHumanIsWashHead(int humanId)
+         {
+             Human.Human human = HumanManager.Instance.GetHuman(humanId);
+             return human.IsWashHead;
+         }
+         
+         private static bool CheckHumanOwnCat(int humanId)
+         {
+             Human.Human human = HumanManager.Instance.GetHuman(humanId);
+             return human.cat != null;
+         }
+         
+         private static bool CheckHumanOwnCat(int humanId, int catId)
+         {
+             Human.Human human = HumanManager.Instance.GetHuman(humanId);
+             Cat cat = CatManager.Instance.GetCat(catId);
+
+             return cat != null && cat == human.cat;
+         }
+
+         private static bool CheckHumanCanOwnCat(int humanId)
+         {
+             Human.Human human = HumanManager.Instance.GetHuman(humanId);
+             return human.CanRaiseCat();
+         }
+
+         private static bool CheckCatConspiracyGreaterEqual(int catId, int conspiracy)
+         {
+             Cat cat = CatManager.Instance.GetCat(catId);
+             return cat.Conspiracy >= conspiracy;
+         }
+         
+         private static bool CheckCatConspiracyEqual(int catId, int conspiracy)
+         {
+             Cat cat = CatManager.Instance.GetCat(catId);
+             return cat.Conspiracy == conspiracy;
+         }
+
+         private static bool CheckCatScoutGreaterEqual(int catId, int scout)
+         {
+             Cat cat = CatManager.Instance.GetCat(catId);
+             return cat.ScoutValue >= scout;
+         }
+         
+         private static bool CheckCatScoutEqual(int catId, int scout)
+         {
+             Cat cat = CatManager.Instance.GetCat(catId);
+             return cat.ScoutValue == scout;
+         }
+
+         private static bool CheckCatCommunicationGreaterEqual(int catId, int communication)
+         {
+             Cat cat = CatManager.Instance.GetCat(catId);
+             return cat.Communication >= communication;
+         }
+         
+         private static bool CheckCatCommunicationEqual(int catId, int communication)
+         {
+             Cat cat = CatManager.Instance.GetCat(catId);
+             return cat.Communication == communication;
+         }
+
+         private static bool CheckStoryProgressGreaterEqual(int storyProgress)
+         {
+             return PlayerModel.Instance.StoryProgress >= storyProgress;
+         }
+         private static bool CheckStoryProgressEqual(int storyProgress)
+         {
+             return PlayerModel.Instance.StoryProgress == storyProgress;
+         }
+         private static bool CheckStoryProgressLessEqual(int storyProgress)
+         {
+             return PlayerModel.Instance.StoryProgress <= storyProgress;
          }
     }
     
