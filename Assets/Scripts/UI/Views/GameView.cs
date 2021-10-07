@@ -12,6 +12,7 @@ using Logic.Event;
 using Manager;
 using UI.Animation;
 using UnityEngine.Android;
+using Image = UnityEngine.UI.Image;
 using Random = UnityEngine.Random;
 
 public class GameView : MonoBehaviour
@@ -44,6 +45,10 @@ public class GameView : MonoBehaviour
     //左上角时间
     private Text textDate;
     private Text textTime;
+    //三个速度按钮
+    private Image buttonStop;
+    private Image buttonNormal;
+    private Image buttonSpeed;
     
     private Coroutine openExePanel_coroutine;
     private Coroutine closeExePanel_coroutine;
@@ -78,6 +83,10 @@ public class GameView : MonoBehaviour
         //左上角时间
         textDate = transform.Find("ImageTime").Find("TextDate").GetComponent<Text>();
         textTime = transform.Find("ImageTime").Find("TextTime").GetComponent<Text>();
+
+        buttonStop = transform.Find("PanelTickerButtons/ButtonPause").GetComponent<Image>();
+        buttonNormal = transform.Find("PanelTickerButtons/ButtonNormal").GetComponent<Image>();
+        buttonSpeed = transform.Find("PanelTickerButtons/ButtonSpeed").GetComponent<Image>();
         
         buttonOpenExePanel = panelEventExe.transform.Find("ButtonOpenExePanel").GetComponent<Button>();
         buttonCloseExePanel = panelEventExe.transform.Find("ButtonCloseExePanel").GetComponent<Button>();
@@ -90,6 +99,8 @@ public class GameView : MonoBehaviour
         bIsRelationshipScaling = false;
         UIManagerInit();
         EventHandlerManager.Instance.InitMono(panelEventExe.transform);
+        
+        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
     }
 
     private void UIManagerInit()
@@ -146,16 +157,25 @@ public class GameView : MonoBehaviour
     
     public void ButtonPause_OnClick()
     {
+        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
+        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
+        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
         TimeTickerManager.Instance.StopTick();
     }
     
     public void ButtonNormal_OnClick()
     {
+        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
+        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
+        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
         TimeTickerManager.Instance.StartTick();
     }
     
     public void ButtonSpeed_OnClick()
     {
+        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
+        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
+        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
         TimeTickerManager.Instance.StartTickWithSpeed(TickerSpeedEnum.Fast);
     }
     
