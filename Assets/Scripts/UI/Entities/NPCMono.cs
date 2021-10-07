@@ -162,7 +162,7 @@ public class NPCMono : MonoBehaviour
 
         var n = Math.Min(list.Count, 5);
         
-        for (i = 0; i < n; i++)
+        for (i = 0; i < list.Count; i++)
         {
             var tempEvent = list[i];
             eventcols[i].InitWithID(list[i].ID);
@@ -180,7 +180,6 @@ public class NPCMono : MonoBehaviour
 
     public void Hide()
     {
-        gameObject.SetActive(false);
         effect.Hide();
     }
 }
