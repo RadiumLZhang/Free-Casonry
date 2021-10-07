@@ -10759,7 +10759,7 @@
       "eventId" : "11811",
       "name" : "猫咪圣草",
       "type" : 0,
-      "consumeTime" : "5",
+      "consumeTime" : "8",
       "imageout" : "Sprites/Main/4刺探事件卡片",
       "imageIn" : "Sprites/Main/4刺探事件卡片",
       "expireTime" : "0",
@@ -10770,7 +10770,7 @@
       "isImportant" : 0,
       "priority" : 100,
       "preconditions" : [
-        "418110",
+        "418111",
         "0",
         "0"
       ],

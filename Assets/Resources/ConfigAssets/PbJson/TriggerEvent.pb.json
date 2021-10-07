@@ -372,7 +372,7 @@
       "name" : "入神",
       "description" : "猫咪仿佛看到了一扇门，但怎么尝试都无法接近。或许只有更具备神性的猫咪才能触碰它。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "接受启明",
@@ -381,7 +381,7 @@
             "0"
           ],
           "conditions" : [
-            "418112"
+            "0"
           ]
         },
         {
