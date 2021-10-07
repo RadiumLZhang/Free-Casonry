@@ -86,7 +86,7 @@ namespace EventHandler
             // 如果有紧急事件, 生成紧急事件
             if (emergencyId != 0)
             {
-                emergency = new Emergency(m_catEventInfo.GetEmergencyId());
+                emergency = EmergencyManager.Instance.GetEmergencyByID(m_catEventInfo.GetEmergencyId());
                 emergencyId = emergency.ID;
                 emergencyResolved = false;
                 emergencyTime = emergency.GetTimeOffset();
