@@ -39,6 +39,7 @@ namespace Manager
             m_nodeList.Add(UIManager.Instance);
             m_nodeList.Add(CatManager.Instance);
             m_nodeList.Add(EventHandlerManager.Instance);
+            m_nodeList.Add(VineSaveManager.Instance);
 
             string userName = PlayerPrefs.GetString("saveName");
             if (userName != null && !"".Equals(userName))

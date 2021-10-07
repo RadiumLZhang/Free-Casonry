@@ -11,7 +11,7 @@ public class VineMono : MonoBehaviour
     private Transform relation;
     private Text relationText;
     
-    public bool Active { get; private set; }
+    public bool Active { get; set; }
     
     void Start()
     {
