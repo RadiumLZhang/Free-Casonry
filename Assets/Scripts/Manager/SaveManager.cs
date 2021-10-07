@@ -23,12 +23,10 @@ namespace Manager
     {
         private List<ISaveObject> m_nodeList;
         private string m_savePath;
-        private string m_loadPath;
 
         public void Init()
         {
-            m_savePath = "Assets/Resources/Save";
-            m_loadPath = "Save";
+            m_savePath = "Assets/Save";
             m_nodeList = new List<ISaveObject>();
             
             // 需要存档的对象在这里注册
@@ -59,32 +57,26 @@ namespace Manager
             }
             string jsonString = JsonConvert.SerializeObject(list);
 
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
-            FileInfo fileInfo = new FileInfo(filePath);
-            StreamWriter streamWriter = fileInfo.CreateText();
-            streamWriter.Write(jsonString);
-            streamWriter.Close();
+            File.WriteAllText(filePath, jsonString, Encoding.UTF8);
         }
 
         public bool LoadData(string name)
         {
-            string filePath = $"{m_loadPath}/{name}";
-            // if (!File.Exists(filePath))
-            // {
-            //     return false;
-            // }
-
-            //var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(filePath);
-            var asset = Resources.Load<TextAsset>(filePath);
-            var json = asset.text;
+            string filePath = m_savePath + "/" + name + ".txt";
+            if (!File.Exists(filePath))
+            {
+                return false;
+            }
+            
+            var json = File.ReadAllText(filePath, Encoding.UTF8);
             var list = JsonConvert.DeserializeObject<List<string>>(json);
             for (int i = 0; i < m_nodeList.Count; i++)
             {
                 m_nodeList[i].Load(list[i]);
             }
+            
+            //加载完成后强制刷新一次下方的事件槽
+            //UIManager.Instance.gameViewMono.RefreshScrollSpecialEvent();
 
             return true;
         }

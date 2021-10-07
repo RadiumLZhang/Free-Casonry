@@ -227,6 +227,7 @@ namespace EventHandler
             if (eventIDReload != 0)
             {
                 m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
+                TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
             }
             if (emergencyIdReload != 0)
             {
@@ -239,7 +240,6 @@ namespace EventHandler
             emergencyTime = emergencyTimeReload;
             valid = validReload; // 议程槽是否被封印
             index = indexReload;
-            TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
         }
     }
 }

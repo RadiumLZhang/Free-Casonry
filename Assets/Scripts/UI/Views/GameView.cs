@@ -256,6 +256,7 @@ public class GameView : MonoBehaviour
     {
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
+        TimeTickerManager.Instance.Restore();
     }
     public void OpenExePanel()
     {
