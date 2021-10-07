@@ -38,10 +38,19 @@ public class VineManager : MonoBehaviour
         }
     }
 
-    public VineMono GetVineFromID(int id)
+    public static VineMono GetVineFromID(int id)
     {
-        return Vines[id];
+        if (!Vines.TryGetValue(id, out var vineMono))
+        {
+            return null;
+        }
+        
+        return vineMono;
     }
-    
+
+    public static bool CheckVine(int id)
+    {
+        return Vines.ContainsKey(id);
+    }
 
 }

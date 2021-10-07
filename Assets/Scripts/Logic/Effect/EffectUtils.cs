@@ -236,15 +236,15 @@ namespace Logic.Effect
                 case 5300:
                     ShowHuman(args);
                     break;
-                // case 5301:
-                //     ShowRelationLine(args);
-                //     break;
+                case 5301:
+                    ShowRelationLine(args);
+                    break;
                 // case 5302:
                 //     ShowAll(args);
                 //     break;
-                // case 5303:
-                //     SetRelation(args);
-                //     break;
+                case 5303:
+                    SetRelation(args);
+                    break;
                 case 5500:
                     SetStoryProcess(args);
                     break;
@@ -670,6 +670,30 @@ namespace Logic.Effect
             }
             
             npcMono.Show();
+        }
+
+        private static void ShowRelationLine(params object[] args)
+        {
+            var lineId = (int) args[0];
+            var vineMono = VineManager.GetVineFromID(lineId);
+            if (vineMono == null)
+            {
+                return;
+            }
+
+            vineMono.Show();
+        }
+
+        private static void SetRelation(params object[] args)
+        {
+            var lineId = (int) args[0];
+            var vineMono = VineManager.GetVineFromID(lineId);
+            if (vineMono == null)
+            {
+                return;
+            }
+            
+            vineMono.SetText((int) args[1]);
         }
     }
 }
