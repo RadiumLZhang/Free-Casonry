@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 721770823942847949}
   - component: {fileID: 721770823942847947}
   - component: {fileID: 721770823942847948}
+  - component: {fileID: 4617202916201264604}
   m_Layer: 5
   m_Name: vine
   m_TagString: Untagged
@@ -76,6 +77,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4617202916201264604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721770823942847950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c2cd085f351b14eadeadf2e2be907d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &721770824018706166
 GameObject:
   m_ObjectHideFlags: 0
