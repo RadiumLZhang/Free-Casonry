@@ -224,8 +224,14 @@ namespace EventHandler
         
         public void Load(long emergencyIdReload, bool emergencyResolvedReload, long eventIDReload, long cacheTimeReload, uint emergencyTimeReload, bool validReload, int indexReload)
         {
-            m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
-            emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
+            if (eventIDReload != 0)
+            {
+                m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
+            }
+            if (emergencyIdReload != 0)
+            {
+                emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
+            }
             emergencyId = emergencyIdReload;
             emergencyResolved = emergencyResolvedReload;
             eventID = eventIDReload;

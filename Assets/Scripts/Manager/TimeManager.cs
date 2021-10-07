@@ -116,7 +116,7 @@ namespace Manager
             if (timeStamp == 0L)
             {
                 System.DateTime configTime = new System.DateTime(ConstValue.YEAR, ConstValue.MONTH,
-                    ConstValue.DAY);
+                    ConstValue.DAY, ConstValue.HOUR, ConstValue.MINUTE, ConstValue.SECOND);
                 timeStamp = (long) (configTime - startTime).TotalSeconds;
             }
 

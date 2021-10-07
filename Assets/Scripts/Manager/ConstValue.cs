@@ -11,6 +11,15 @@
         // 游戏开始日期
         public const int DAY = 13;
         
+        // 游戏开始小时
+        public const int HOUR = 18;
+        
+        // 游戏开始分钟
+        public const int MINUTE = 0;
+        
+        // 游戏开始秒
+        public const int SECOND = 0;
+        
         // 现实中的一秒对应游戏中的x秒, TimeManager当中使用
         public const int TIME_STEP = 600;
         

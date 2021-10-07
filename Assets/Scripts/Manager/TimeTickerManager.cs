@@ -215,28 +215,12 @@ namespace Manager
         private int preSpeed; //    暂停前的时间
         private int stepPerSecond = ConstValue.TIME_TICKER_STEP; //	每秒步长
         private int frameIndex = 0; //	当前帧
-        private List<EventItem> eventList;
-        private List<WaitingEventItem> waitingList;
-        private List<LastingEventItem> lastingList;
+        private List<EventItem> eventList = new List<EventItem>();
+        private List<WaitingEventItem> waitingList = new List<WaitingEventItem>();
+        private List<LastingEventItem> lastingList = new List<LastingEventItem>();
 
         private System.Timers.Timer timer;
-
-
-        // 初始化
-        public void Init()
-        {
-            eventList = new List<EventItem>();
-            waitingList = new List<WaitingEventItem>();
-            lastingList = new List<LastingEventItem>();
-            
-            /*timer = new Timer(1000 / stepPerSecond);
-            timer.Elapsed += Ontick;
-            timer.AutoReset = true;
-            timer.Enabled = true;
-            //test();   --用来测试的test函数，可以打开看看控制台效果*/
-            
-        }
-
+        
         public IEnumerator Loop()
         {
             while (true)
