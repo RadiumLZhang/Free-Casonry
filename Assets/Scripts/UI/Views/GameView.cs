@@ -221,6 +221,13 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchDarkBackGround(false);
     }
 
+    public void ButtonCloseFinishDialog_OnClick()
+    {
+        UIManager.Instance.panelFinishEventDialog.SetActive(false);
+        UIManager.Instance.SwitchDarkBackGround(false);
+        TimeTickerManager.Instance.Restore(); //恢复时间
+    }
+
     public void ButtonEmergencyDialogChoice1_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);

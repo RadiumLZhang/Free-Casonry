@@ -4603,7 +4603,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1285887099}
         m_TargetAssemblyTypeName: GameView, Assembly-CSharp
-        m_MethodName: ButtonFinishDialog_OnClick
+        m_MethodName: ButtonCloseFinishDialog_OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
