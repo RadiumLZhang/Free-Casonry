@@ -39,6 +39,14 @@ namespace Logic.Event
 
             options = new List<EmergencyInfoConfig.Types.Option>(Config?.Options);
         }
+        
+        /**
+         * 不带参数的构造函数仅用于存档的反序列化
+         */
+        public Emergency()
+        {
+            
+        }
 
         public List<EmergencyInfoConfig.Types.Option> GetOptions()
         {

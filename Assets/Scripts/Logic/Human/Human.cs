@@ -82,6 +82,14 @@ namespace Logic.Human
 
             Tags = new List<String>(Config.Tags);
         }
+
+        /**
+         * 不带参数的构造函数仅用于存档的反序列化
+         */
+        public Human()
+        {
+            
+        }
         
         public bool CanRaiseCat()
         {

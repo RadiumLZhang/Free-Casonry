@@ -9,7 +9,6 @@ namespace Manager
         public void Start()
         {
             SaveManager.Instance.Init();
-            TimeTickerManager.Instance.Init();
             TimeManager.Instance.Init();
             EventManager.Instance.Init();
             HumanManager.Instance.Init();
