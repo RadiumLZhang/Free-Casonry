@@ -92,12 +92,12 @@ namespace Logic.Condition
                     return CheckHumanVisibilityEqual(args);
                 case 4104: // 目标人物X，能见度低于Y
                     return CheckHumanVisibilityGreaterEqual(args) == false;
-                case 4105:// 目标人物X，心防至少为Y
+                /*case 4105:// 目标人物X，心防至少为Y
                     return CheckHumanDefenceGreaterEqual(args);
                 case 4106: // 目标人物X，心防为Y
                     return CheckHumanDefenceEqual(args);
                 case 4107: // 目标人物X，心防低于Y
-                    return CheckHumanDefenceGreaterEqual(args) == false;
+                    return CheckHumanDefenceGreaterEqual(args) == false;*/
                     // case 4108: // 目标人物X，亲密度至少为Y
                     //     return CheckHumanIntimacyGreaterEqual(args);
                     // case 4109: //目标人物X，亲密度为Y
