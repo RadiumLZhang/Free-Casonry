@@ -46,7 +46,7 @@ public class SpecialEventMono : MonoBehaviour
         m_myCatEventInfo = new Logic.Event.CatEvent(myID);
         
         
-        textRemainingTime = transform.Find("ImageEvent").Find("EventTimeBackground").Find("TextEventTime").GetComponent<Text>();
+        textRemainingTime = transform.Find("EventTimeBackground").Find("TextEventTime").GetComponent<Text>();
         m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
         m_eventBackground = transform.Find("EventTextBackground");
         m_txtEventBackground = m_eventBackground.Find("TextEvent").GetComponent<Text>();
@@ -60,7 +60,7 @@ public class SpecialEventMono : MonoBehaviour
         
         m_imageEvent.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
         m_txtEventBackground.text = m_myCatEventInfo.Name;
-        textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
+        textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "";
         //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身
     }
 

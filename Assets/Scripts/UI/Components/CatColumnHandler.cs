@@ -95,7 +95,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         // transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
         
         remainingTime = eventHandler.GetTimeRemain();
-        textRemainingTime.text = Convert.ToString((remainingTime) * 10) + "分钟";
+        textRemainingTime.text = Convert.ToString((remainingTime) * 10);
         imageRemainingTime.gameObject.SetActive(true);
         
         if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
@@ -143,7 +143,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         }
         if (tempEvent != null && myID != -1)
         {
-            textRemainingTime.text = Convert.ToString((remainingTime) * 10) + "分钟";
+            textRemainingTime.text = Convert.ToString((remainingTime) * 10);
             var percent = (float)remainingTime / tempEvent.ConsumeTime;
             m_mask.localScale = new Vector3(1, percent, 1);
         }

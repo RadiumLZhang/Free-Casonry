@@ -98,21 +98,6 @@ public class GameView : MonoBehaviour
         UIManager.Instance.gameViewMono = this;
         UIManager.Instance.Init();
     }
-    public void ButtonTestEvent_OnClick()
-    {
-        
-        RefreshScrollSpecialEvent();
-
-        // foreach (var item in list)
-        // {
-        //     Transform temp = Instantiate(specialEventPrefab).transform;
-        //     temp.GetComponent<SpecialEventMono>().InitWithID(item.ID);
-        //     temp.SetParent(contentTransform);
-        //     temp.localPosition = Vector3.zero;
-        //     temp.localRotation = Quaternion.identity;
-        //     temp.localScale = Vector3.one;
-        // }
-    }
 
     public void ButtonSettings_OnClick()
     {
