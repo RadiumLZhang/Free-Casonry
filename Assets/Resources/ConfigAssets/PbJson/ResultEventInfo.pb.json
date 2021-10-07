@@ -1880,6 +1880,17 @@
       "picture" : "Sprites/Main/4刺探事件卡片"
     },
     {
+      "resultId" : "318114",
+      "name" : "猫咪圣草",
+      "description1" : "门中已经空无一物",
+      "description2" : "猫咪影响力提升5点",
+      "btnText" : "完成",
+      "recordId" : "0",
+      "effects" : [
+        "518116"
+      ]
+    },
+    {
       "resultId" : "319100",
       "name" : "鼠患烦恼",
       "description1" : "依斯皮柯：夹子都收起来了，却没有抓到老鼠。这些老鼠有点聪明，看来还得想想办法。",

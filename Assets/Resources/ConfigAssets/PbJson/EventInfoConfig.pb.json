@@ -19,14 +19,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -111,14 +112,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -203,14 +205,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -295,20 +298,21 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300030",
+          "conditions" : [
+            "400031"
+          ]
+        },
+        {
+          "eventId" : "300031",
           "conditions" : [
             "0"
           ]
         },
         {
-          "eventId" : "300031",
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -387,14 +391,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -479,14 +484,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -572,14 +578,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300060",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -665,14 +672,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "300070",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -757,14 +765,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "301000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -849,14 +858,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "301010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -941,14 +951,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "301020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1033,14 +1044,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "301030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1125,14 +1137,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "301040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1217,14 +1230,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "301050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1309,14 +1323,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "302000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1405,14 +1420,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "302010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1497,14 +1513,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "302020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1589,14 +1606,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "302030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1681,14 +1699,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1773,14 +1792,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1865,14 +1885,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -1957,14 +1978,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2049,14 +2071,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2141,14 +2164,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2235,14 +2259,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2329,14 +2354,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2423,14 +2449,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2517,14 +2544,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2611,14 +2639,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2705,14 +2734,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "310150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2799,14 +2829,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2892,14 +2923,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -2984,14 +3016,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3076,14 +3109,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3168,14 +3202,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3260,14 +3295,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3352,14 +3388,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "311060",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3444,14 +3481,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3537,14 +3575,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3629,14 +3668,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3721,14 +3761,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3815,13 +3856,17 @@
         "0"
       ],
       "effects" : [
-        "550012",
-        "0",
-        "0"
+        "550012"
       ],
       "result" : [
         {
           "eventId" : "312040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -3908,14 +3953,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4000,14 +4046,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4093,13 +4140,17 @@
         "0"
       ],
       "effects" : [
-        "512111",
-        "0",
-        "0"
+        "512111"
       ],
       "result" : [
         {
           "eventId" : "312110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4184,14 +4235,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4276,14 +4328,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4368,14 +4421,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4460,14 +4514,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "312130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4553,14 +4608,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4646,14 +4702,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4738,14 +4795,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4830,14 +4888,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -4924,13 +4983,17 @@
         "0"
       ],
       "effects" : [
-        "550012",
-        "0",
-        "0"
+        "550012"
       ],
       "result" : [
         {
           "eventId" : "313040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5017,14 +5080,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5112,14 +5176,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5204,14 +5269,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5297,13 +5363,17 @@
         "0"
       ],
       "effects" : [
-        "513121",
-        "0",
-        "0"
+        "513121"
       ],
       "result" : [
         {
           "eventId" : "313120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5388,14 +5458,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5480,14 +5551,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5572,14 +5644,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5664,14 +5737,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5756,14 +5830,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313200",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5848,14 +5923,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313210",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -5940,14 +6016,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313220",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6032,14 +6109,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "313230",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6124,14 +6202,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "314000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6216,14 +6295,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "314010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6309,14 +6389,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "314020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6401,14 +6482,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "314030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6495,13 +6577,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "314040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6588,14 +6674,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "314050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6683,14 +6770,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6776,14 +6864,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6868,14 +6957,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -6960,14 +7050,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7054,13 +7145,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "315040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7147,14 +7242,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7242,14 +7338,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7334,11 +7431,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315110",
@@ -7349,6 +7441,12 @@
         },
         {
           "eventId" : "315111",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7428,14 +7526,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7522,14 +7621,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7615,14 +7715,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7708,14 +7809,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7800,14 +7902,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7892,14 +7995,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315170",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -7987,14 +8091,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "315180",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8079,14 +8184,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8172,14 +8278,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8264,14 +8371,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8356,14 +8464,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8450,13 +8559,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "316040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8543,14 +8656,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8638,11 +8752,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316100",
@@ -8652,6 +8761,12 @@
         },
         {
           "eventId" : "316101",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8730,14 +8845,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8823,11 +8939,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316120",
@@ -8837,6 +8948,12 @@
         },
         {
           "eventId" : "316121",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -8916,14 +9033,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "316130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9008,14 +9126,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9101,14 +9220,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9193,14 +9313,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9285,14 +9406,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9379,13 +9501,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "317040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9472,14 +9598,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9567,14 +9694,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9661,14 +9789,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9753,14 +9882,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9847,12 +9977,17 @@
       ],
       "effects" : [
         "517131",
-        "517132",
-        "0"
+        "517132"
       ],
       "result" : [
         {
           "eventId" : "317130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -9940,11 +10075,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317140",
@@ -9954,6 +10084,12 @@
         },
         {
           "eventId" : "317141",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10032,11 +10168,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "317150",
@@ -10046,6 +10177,12 @@
         },
         {
           "eventId" : "317151",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10124,14 +10261,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "318000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10217,14 +10355,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "318010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10309,14 +10448,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "318020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10401,14 +10541,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "318030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10495,13 +10636,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "318040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10588,14 +10733,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "318050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10682,14 +10828,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "318100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10775,11 +10922,15 @@
         "0"
       ],
       "effects" : [
-        "518110",
-        "0",
-        "0"
+        "518110"
       ],
       "result" : [
+        {
+          "eventId" : "318114",
+          "conditions" : [
+            "418114"
+          ]
+        },
         {
           "eventId" : "318110",
           "conditions" : [
@@ -10868,14 +11019,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -10961,14 +11113,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11053,14 +11206,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11145,14 +11299,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11239,13 +11394,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "319040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11332,14 +11491,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11427,11 +11587,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319100",
@@ -11441,6 +11596,12 @@
         },
         {
           "eventId" : "319101",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11519,11 +11680,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319110",
@@ -11533,6 +11689,12 @@
         },
         {
           "eventId" : "319111",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11612,11 +11774,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319120",
@@ -11626,6 +11783,12 @@
         },
         {
           "eventId" : "319121",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11705,14 +11868,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11797,14 +11961,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11889,14 +12054,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "319150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -11981,14 +12147,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12074,14 +12241,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12166,14 +12334,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12258,14 +12427,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12352,13 +12522,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "320040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12445,14 +12619,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12540,14 +12715,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12632,14 +12808,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12725,14 +12902,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12817,14 +12995,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -12909,14 +13088,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13002,14 +13182,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13095,14 +13276,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "320160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13191,14 +13373,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13284,14 +13467,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13376,14 +13560,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13468,14 +13653,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13562,13 +13748,17 @@
         "0"
       ],
       "effects" : [
-        "550011",
-        "0",
-        "0"
+        "550011"
       ],
       "result" : [
         {
           "eventId" : "321040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13655,14 +13845,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13750,14 +13941,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13843,11 +14035,6 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321110",
@@ -13857,6 +14044,12 @@
         },
         {
           "eventId" : "321111",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -13937,14 +14130,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14030,14 +14224,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14122,14 +14317,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14215,14 +14411,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14308,14 +14505,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14401,14 +14599,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321170",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14493,14 +14692,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "321180",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14587,14 +14787,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14681,13 +14882,17 @@
         "0"
       ],
       "effects" : [
-        "530012",
-        "0",
-        "0"
+        "530012"
       ],
       "result" : [
         {
           "eventId" : "330010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14773,13 +14978,17 @@
         "0"
       ],
       "effects" : [
-        "530022",
-        "0",
-        "0"
+        "530022"
       ],
       "result" : [
         {
           "eventId" : "330020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14866,13 +15075,17 @@
         "0"
       ],
       "effects" : [
-        "530031",
-        "0",
-        "0"
+        "530031"
       ],
       "result" : [
         {
           "eventId" : "330030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -14959,13 +15172,17 @@
         "0"
       ],
       "effects" : [
-        "530041",
-        "0",
-        "0"
+        "530041"
       ],
       "result" : [
         {
           "eventId" : "330040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15053,13 +15270,17 @@
         "0"
       ],
       "effects" : [
-        "530051",
-        "0",
-        "0"
+        "530051"
       ],
       "result" : [
         {
           "eventId" : "330050",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15147,13 +15368,17 @@
         "0"
       ],
       "effects" : [
-        "530061",
-        "0",
-        "0"
+        "530061"
       ],
       "result" : [
         {
           "eventId" : "330060",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15240,13 +15465,17 @@
         "0"
       ],
       "effects" : [
-        "530071",
-        "0",
-        "0"
+        "530071"
       ],
       "result" : [
         {
           "eventId" : "330070",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15333,13 +15562,17 @@
         "0"
       ],
       "effects" : [
-        "530081",
-        "0",
-        "0"
+        "530081"
       ],
       "result" : [
         {
           "eventId" : "330080",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15427,13 +15660,17 @@
         "0"
       ],
       "effects" : [
-        "530091",
-        "0",
-        "0"
+        "530091"
       ],
       "result" : [
         {
           "eventId" : "330090",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15520,13 +15757,17 @@
         "0"
       ],
       "effects" : [
-        "530101",
-        "0",
-        "0"
+        "530101"
       ],
       "result" : [
         {
           "eventId" : "330100",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15613,13 +15854,17 @@
         "0"
       ],
       "effects" : [
-        "530111",
-        "0",
-        "0"
+        "530111"
       ],
       "result" : [
         {
           "eventId" : "330110",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15708,14 +15953,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330120",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15800,14 +16046,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330130",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15892,14 +16139,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330140",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -15984,14 +16232,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330150",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16077,14 +16326,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16170,14 +16420,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330170",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16263,14 +16514,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "330180",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16355,14 +16607,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340000",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16445,14 +16698,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340010",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16535,14 +16789,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340020",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16625,14 +16880,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16715,14 +16971,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340040",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16805,14 +17062,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]
@@ -16895,14 +17153,15 @@
         "0",
         "0"
       ],
-      "effects" : [
-        "0",
-        "0",
-        "0"
-      ],
       "result" : [
         {
           "eventId" : "340030",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
           "conditions" : [
             "0"
           ]

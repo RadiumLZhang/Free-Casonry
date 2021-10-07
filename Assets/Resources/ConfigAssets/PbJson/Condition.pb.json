@@ -5,7 +5,7 @@
       "baseConditionId" : "4102",
       "paras" : [
         60000,
-        1
+        3
       ]
     },
     {
@@ -27,6 +27,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60004,
+        1
+      ]
+    },
+    {
+      "conditionId" : "400031",
+      "baseConditionId" : "4403",
+      "paras" : [
+        20003,
         1
       ]
     },
@@ -1579,7 +1587,8 @@
       "conditionId" : "417141",
       "baseConditionId" : "4403",
       "paras" : [
-        0
+        21714,
+        1
       ]
     },
     {
@@ -1687,7 +1696,7 @@
       "baseConditionId" : "4403",
       "paras" : [
         21911,
-        0
+        1
       ]
     },
     {
@@ -1710,7 +1719,7 @@
       "baseConditionId" : "4403",
       "paras" : [
         21912,
-        0
+        1
       ]
     },
     {
@@ -1768,7 +1777,8 @@
       "conditionId" : "420121",
       "baseConditionId" : "4403",
       "paras" : [
-        0
+        22012,
+        1
       ]
     },
     {
@@ -2400,13 +2410,6 @@
       "baseConditionId" : "4000",
       "paras" : [
         50
-      ]
-    },
-    {
-      "conditionId" : "459010",
-      "baseConditionId" : "4403",
-      "paras" : [
-        0
       ]
     },
     {

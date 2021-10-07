@@ -20,9 +20,6 @@
         {
           "name" : "冷眼旁观",
           "description" : "女仆会陷入危险，不过这和猫咪无关",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -233,9 +230,6 @@
         {
           "name" : "换把钝剑",
           "description" : "换把钝剑，班诺也可能会赢",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -243,9 +237,6 @@
         {
           "name" : "换把好剑",
           "description" : "换把好剑，班诺一定会败",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -341,9 +332,6 @@
         {
           "name" : "追踪神秘人",
           "description" : "弄清神秘人的身份",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -351,9 +339,6 @@
         {
           "name" : "留下观察",
           "description" : "这边的情况更重要",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -377,19 +362,13 @@
         {
           "name" : "接受启明",
           "description" : "猫咪科恩执行行动",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
-            "0"
+            "418112"
           ]
         },
         {
           "name" : "享受美梦",
           "description" : "享受好当下，获得5点影响力",
-          "effects" : [
-            "518116"
-          ],
           "conditions" : [
             "0"
           ]
@@ -423,9 +402,6 @@
         {
           "name" : "不干涉",
           "description" : "让他抓去吧",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -459,9 +435,6 @@
         {
           "name" : "不干涉",
           "description" : "让他抓去吧",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -485,9 +458,6 @@
         {
           "name" : "拒绝捕鼠",
           "description" : "让它们泛滥成灾吧",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -495,9 +465,6 @@
         {
           "name" : "认真工作",
           "description" : "只有猫咪才是老鼠的天敌",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -521,9 +488,6 @@
         {
           "name" : "告知亲王",
           "description" : "安彼西奥将停止调动边境士兵",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
@@ -531,9 +495,6 @@
         {
           "name" : "散布流言",
           "description" : "用更委婉的方式阻止他",
-          "effects" : [
-            "0"
-          ],
           "conditions" : [
             "0"
           ]
