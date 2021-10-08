@@ -29,8 +29,7 @@ namespace Manager
          */
         public void StopTick()
         {
-            preSpeed = speed;
-            speed = (int) TickerSpeedEnum.Stop;
+            StartTickWithSpeed(TickerSpeedEnum.Stop);
         }
 
         /*
@@ -38,7 +37,7 @@ namespace Manager
          */
         public void StartTick()
         {
-            speed = (int) TickerSpeedEnum.Normal;
+            StartTickWithSpeed(TickerSpeedEnum.Normal);
         }
 
         /**
@@ -46,7 +45,7 @@ namespace Manager
          */
         public void Restore()
         {
-            speed = preSpeed;
+            StartTickWithSpeed((TickerSpeedEnum) preSpeed);
         }
 
         /*
@@ -55,7 +54,12 @@ namespace Manager
          */
         public void StartTickWithSpeed(TickerSpeedEnum speedEnum)
         {
-            speed = (int) speedEnum;
+            if (speed != preSpeed)
+            {
+                preSpeed = speed;
+                speed = (int) speedEnum;
+                UIManager.Instance.gameViewMono.SetSpeedButtonIcon(speed);
+            }
         }
 
         /**
