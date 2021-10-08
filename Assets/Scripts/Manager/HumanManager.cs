@@ -4,6 +4,7 @@ using HumanInfo;
 using Logic;
 using Logic.Human;
 using Newtonsoft.Json;
+using UnityEngine;
 
 namespace Manager
 {
@@ -54,10 +55,25 @@ namespace Manager
         public void Load(string json)
         {
             humanMap = JsonConvert.DeserializeObject<Dictionary<long, Human>>(json);
-            foreach (var human in humanMap)
-            {
-                NPCManager.NPCs[human.Key].gameObject.SetActive(human.Value.IsShow);
-            }
+            TimeTickerManager.Instance.AddNowWaitingEvent(
+                -1,
+                () =>
+                {
+                    return NPCManager.IsInit;
+                },
+                () =>
+                {
+                    foreach (var human in humanMap)
+                    {
+                        NPCManager.NPCs[human.Key].gameObject.SetActive(human.Value.IsShow);
+                    }
+                },
+                10,
+                () =>
+                {
+                    Debug.LogError("VineSaveManager:Load False!");
+                }
+            );
         }
     }
 }
