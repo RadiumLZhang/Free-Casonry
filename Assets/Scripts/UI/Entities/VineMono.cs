@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class VineMono : MonoBehaviour
 {
     public int id;
-    private UITransitionEffect effect;
+    private UITransitionEffect effectVine;
+    private UITransitionEffect effectBg;
+    private UITransitionEffect effectText;
     private Transform relation;
     private Text relationText;
     
@@ -15,9 +17,12 @@ public class VineMono : MonoBehaviour
     
     void Start()
     {
-        effect = transform.GetComponent<UITransitionEffect>();
         relation = transform.Find("Image");
         relationText = transform.Find("Image/Text").GetComponent<Text>();
+        
+        effectVine = transform.GetComponent<UITransitionEffect>();
+        effectBg = relation.GetComponent<UITransitionEffect>();
+        effectText = relationText.GetComponent<UITransitionEffect>();
     }
 
     // Update is called once per frame
@@ -30,13 +35,15 @@ public class VineMono : MonoBehaviour
     {
         Active = true;
         gameObject.SetActive(true);
-        effect.Show();
+        effectVine.Show();
+        effectBg.Show();
+        effectText.Show();
     }
 
     public void Hide()
     {
         Active = false;
-        effect.Hide();
+        effectVine.Hide();
     }
 
     public void SetText(int id)

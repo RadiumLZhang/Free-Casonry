@@ -63,9 +63,13 @@ namespace Manager
                 },
                 () =>
                 {
-                    foreach (var human in humanMap)
+                    foreach (var kv in humanMap)
                     {
-                        NPCManager.NPCs[human.Key].gameObject.SetActive(human.Value.IsShow);
+                        NPCManager.NPCs[kv.Key].gameObject.SetActive(kv.Value.IsShow);
+                        if (!kv.Value.IsAlive)
+                        {
+                            kv.Value.Death();
+                        }
                     }
                 },
                 10,

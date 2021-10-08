@@ -71,6 +71,7 @@ namespace EventHandler
         {
             eventID = newEventID;
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
+            Debug.Log("###" + m_catEventInfo);
             emergencyId = m_catEventInfo.GetEmergencyId();
             cacheTime = m_catEventInfo.ConsumeTime;
             TimeTickerManager.Instance.StopTick(); // 暂停时间
@@ -138,6 +139,7 @@ namespace EventHandler
             long resultId = m_catEventInfo.GetResultId();
             m_catEventInfo.FinishEffect(resultId);
             OnDestroyEvent();
+            monoHandler.OnFinish();
             UIManager.Instance.SwitchFinishFlag(index, false);
         }
         
@@ -154,6 +156,7 @@ namespace EventHandler
             cacheTime = 0;
             emergencyTime = 0;
             TimeTickerManager.Instance.Restore(); //恢复时间
+            monoHandler.OnFinish();
         }
 
         // 点击紧急事件红点

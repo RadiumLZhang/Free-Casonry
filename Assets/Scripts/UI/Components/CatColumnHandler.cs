@@ -83,6 +83,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 droppedSpecialEvent.gameObject.SetActive(false);
                 gameView.DroppedImage = droppedSpecialEvent.gameObject;
                 eventHandler.OnInit(myID);
+                
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
                 switch (m_myCatEventInfo.Type)
@@ -115,6 +116,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
             m_myCatEventInfo = eventHandler.GetEventInfo();
+            Debug.Log("hahah:" + m_myCatEventInfo);
             switch (m_myCatEventInfo.Type)
             {
                 case 0:
@@ -215,7 +217,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
     void Update()
     {
-        
+        /*if (TimeTickerManager.Instance.GetSpeed() == 0)
+        {
+            return;
+        }*/
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         remainingTime = eventHandler.GetTimeRemain();
         //只要栏位中有事件(即ID不是默认的-1)就用remainingTime刷新UI显示
@@ -230,10 +235,14 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             var percent = (float)remainingTime / tempEvent.ConsumeTime;
             m_mask.localScale = new Vector3(1, percent, 1);
         }
-        
-        
-        if (tempEvent == null)
+
+
+        /*if (tempEvent == null && myID == -1)
+        {   
+            Debug.Log("@@@ on finish");
             OnFinish();
+        }*/
+           
     }
 
     //TODO:事件完成时调这个方法清空栏位，可以是(0 == remainingTime)的时候？
@@ -248,7 +257,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         droppedNPCEvent = null;
         
         m_mask.gameObject.SetActive(false);
-        m_eventImage.gameObject.SetActive(false);
+        m_eventImage.gameObject.SetActive(true);
         m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = false;
     }
     

@@ -44,8 +44,6 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
         tempMousePos_x = mousePos.x;
-        
-        EventHandlerManager.Instance.RefreshColumnImage();
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -84,6 +82,11 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         else
         {
             rectTransform.position = pos + offset;
+        }
+        
+        if (bIsExtracting)
+        {
+            EventHandlerManager.Instance.RefreshColumnImage();
         }
     }
     

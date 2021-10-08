@@ -133,7 +133,7 @@ namespace Manager
                 var map = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonList[i]);
                 var mono = monoList[i];
                 var designedEventHandler = handlerList[i];
-                TimeTickerManager.Instance.AddWaitingEvent(
+                TimeTickerManager.Instance.AddNowWaitingEvent(
                     -1,
                     () =>
                     {
@@ -151,7 +151,6 @@ namespace Manager
                         int.Parse(map["index"])
                         );
                     },
-                    0,
                     10,
                     () =>
                     {
