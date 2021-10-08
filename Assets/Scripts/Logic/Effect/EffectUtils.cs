@@ -186,9 +186,11 @@ namespace Logic.Effect
                 case 5122:
                     HumanDeath(args);
                     break;
+                case 5119:
                 case 5123:
                     HumanGetCat(args);
                     break;
+                case 5120:
                 case 5124:
                     HumanLoseCat(args);
                     break;
