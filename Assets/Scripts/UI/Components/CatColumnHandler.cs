@@ -115,6 +115,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
             m_myCatEventInfo = eventHandler.GetEventInfo();
+            Debug.Log("hahah:" + m_myCatEventInfo);
             switch (m_myCatEventInfo.Type)
             {
                 case 0:
@@ -230,10 +231,14 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             var percent = (float)remainingTime / tempEvent.ConsumeTime;
             m_mask.localScale = new Vector3(1, percent, 1);
         }
-        
-        
-        if (tempEvent == null)
-            OnFinish();
+
+
+        if (tempEvent == null && myID == -1)
+        {   
+            Debug.Log("@@@ on finish");
+             OnFinish();
+        }
+           
     }
 
     //TODO:事件完成时调这个方法清空栏位，可以是(0 == remainingTime)的时候？

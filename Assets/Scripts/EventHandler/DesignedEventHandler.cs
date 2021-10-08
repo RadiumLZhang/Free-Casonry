@@ -71,6 +71,7 @@ namespace EventHandler
         {
             eventID = newEventID;
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
+            Debug.Log("###" + m_catEventInfo);
             emergencyId = m_catEventInfo.GetEmergencyId();
             cacheTime = m_catEventInfo.ConsumeTime;
             TimeTickerManager.Instance.StopTick(); // 暂停时间

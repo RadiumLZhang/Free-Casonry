@@ -71,7 +71,7 @@ namespace Logic.Event
         }
         public bool OptionCanChoose(int option)
         {
-            foreach (var condition in options[0].Conditions)
+            foreach (var condition in options[option-1].Conditions)
             {
                 if (!ConditionUtils.CheckCondition(condition))
                 {
