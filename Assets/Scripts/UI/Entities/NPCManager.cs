@@ -14,6 +14,7 @@ public class NPCManager : MonoBehaviour
     private bool bIsYStopped;
     public GameObject currentOpenedNPC;
     public static Dictionary<long, NPCMono> NPCs;
+    public static bool IsInit = false;
     void Start()
     {
         NPCs = new Dictionary<long, NPCMono>();
@@ -38,6 +39,7 @@ public class NPCManager : MonoBehaviour
             item.Value.id = item.Key;
         }
         UIManagerInitNPCs();
+        IsInit = true;
     }
     
     private void UIManagerInitNPCs()
