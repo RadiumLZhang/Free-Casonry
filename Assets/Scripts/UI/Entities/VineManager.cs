@@ -6,6 +6,8 @@ public class VineManager : MonoBehaviour
 {
     public static Dictionary<int, VineMono> Vines;
     private Transform m_content;
+
+    public static bool IsInit = false;
     private void AddVineFromID(int id)
     {
         Vines.Add(id,m_content.Find("vine" + id).GetComponent<VineMono>());
@@ -37,6 +39,8 @@ public class VineManager : MonoBehaviour
         {
             item.Value.id = item.Key;
         }
+
+        IsInit = true;
     }
 
     public static VineMono GetVineFromID(int id)

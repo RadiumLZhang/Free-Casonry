@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Logic;
 using Newtonsoft.Json;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Manager
@@ -23,7 +24,30 @@ namespace Manager
             var map = JsonConvert.DeserializeObject<Dictionary<int, bool>>(json);
             foreach (var kv in map)
             {
-                VineManager.Vines[kv.Key].Active = kv.Value;
+                TimeTickerManager.Instance.AddWaitingEvent(
+                    -1,
+                    () =>
+                    {
+                        return VineManager.IsInit;
+                    },
+                    () =>
+                    {
+                        if (kv.Value)
+                        {
+                            VineManager.Vines[kv.Key].Show();
+                        }
+                        else
+                        {
+                            VineManager.Vines[kv.Key].Hide();
+                        }
+                    },
+                    0,
+                    10,
+                    () =>
+                    {
+                        Debug.LogError("VineSaveManager:Load False!");
+                    }
+                );
             }
         }
     }
