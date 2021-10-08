@@ -2398,11 +2398,17 @@
     },
     {
       "effectId" : "530180",
-      "baseEffectId" : "5022"
+      "baseEffectId" : "5022",
+      "paras" : [
+        73000
+      ]
     },
     {
       "effectId" : "530181",
-      "baseEffectId" : "5022"
+      "baseEffectId" : "5022",
+      "paras" : [
+        73000
+      ]
     },
     {
       "effectId" : "550000",
@@ -2994,11 +3000,17 @@
     },
     {
       "effectId" : "530180",
-      "baseEffectId" : "5022"
+      "baseEffectId" : "5022",
+      "paras" : [
+        73000
+      ]
     },
     {
       "effectId" : "530181",
-      "baseEffectId" : "5022"
+      "baseEffectId" : "5022",
+      "paras" : [
+        73000
+      ]
     },
     {
       "effectId" : "550000",
@@ -3082,6 +3094,14 @@
       "baseEffectId" : "5013",
       "paras" : [
         140020
+      ]
+    },
+    {
+      "effectId" : "540021",
+      "baseEffectId" : "5303",
+      "paras" : [
+        101,
+        72000
       ]
     },
     {
