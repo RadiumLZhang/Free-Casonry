@@ -9,16 +9,15 @@ public class EndingMono : MonoBehaviour
     private Animation m_animation;
     private Text m_txtResult;
 
-    private void Start()
-    {
-        m_animation = GetComponent<Animation>();
-        m_txtResult = transform.Find("TxtEnding").GetComponent<Text>();
-    }
-
     public void EnterEnding(int id)
     {
+        gameObject.SetActive(true);
+        
+        m_animation = GetComponent<Animation>();
+        m_txtResult = transform.Find("TxtEnding").GetComponent<Text>();
+        
         var item = LanguageLoader.Instance.FindLanguageItem(id.ToString());
-        m_txtResult.text = item.ToString();
+        m_txtResult.text = item.Value;
         
         var state = m_animation["EndingPanelIn"];
 
@@ -33,5 +32,7 @@ public class EndingMono : MonoBehaviour
     public void Ending_OnClick()
     {
         SceneManager.LoadScene("StartMenu");
+
+        gameObject.SetActive(false);
     }
 }

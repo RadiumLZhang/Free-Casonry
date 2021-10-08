@@ -24,6 +24,7 @@ public class StartMenuView : MonoBehaviour
         PlayerPrefs.SetString("userName", UserName);
         PlayerPrefs.SetString("saveName", "");
         SceneManager.LoadScene("Game");
+        
     }
     public void ButtonContinue_OnClick()
     {

@@ -88,6 +88,8 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     //Animation
     public GameObject EventPopAnimation;
 
+    public EndingMono EndingMono;
+
     public string Save()
     {
         var jsonString = JsonConvert.SerializeObject(buttonCouncilActive);
@@ -143,6 +145,8 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         buttonCouncil.SetActive(buttonCouncilActive);
 
         panelNPCInfo = gameView.Find("PanelNPCInfo").GetComponent<NPCInfoMono>();
+
+        EndingMono = gameView.Find("EndingPanel").GetComponent<EndingMono>();
 
         InitCatColumns();
         InitDialogs();

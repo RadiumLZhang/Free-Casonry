@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Coffee.UIEffects;
+using Language;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class VineMono : MonoBehaviour
     private UITransitionEffect effectText;
     private Transform relation;
     private Text relationText;
+
+    public int relationId;
     
     public bool Active { get; set; }
     
@@ -48,7 +51,12 @@ public class VineMono : MonoBehaviour
 
     public void SetText(int id)
     {
-        //todo 把int映射到不同的关系上
-        relationText.text = id.ToString();
+        relationId = id;
+
+        var item = LanguageLoader.Instance.FindLanguageItem(id.ToString());
+        relationText.text = item.Value;
+
+        effectText.Show();
+        effectBg.Show();
     }
 }
