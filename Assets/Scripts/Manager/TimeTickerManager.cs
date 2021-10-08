@@ -54,7 +54,7 @@ namespace Manager
          */
         public void StartTickWithSpeed(TickerSpeedEnum speedEnum)
         {
-            if (speed != preSpeed)
+            if (speed != (int)speedEnum)
             {
                 preSpeed = speed;
                 speed = (int) speedEnum;

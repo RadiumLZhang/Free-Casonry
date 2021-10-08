@@ -172,7 +172,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         textRemainingTime.text = Convert.ToString((remainingTime) * 10);
         imageRemainingTime.gameObject.SetActive(true);
         m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = true;
-        InitHandler();
+        
+        remainingTime = eventHandler.GetTimeRemain();
+        textRemainingTime.text = Convert.ToString((remainingTime) * 10);
+        imageRemainingTime.gameObject.SetActive(true);
     }
     
     public void InitHandler()
