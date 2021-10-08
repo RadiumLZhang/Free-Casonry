@@ -186,9 +186,11 @@ namespace Logic.Effect
                 case 5122:
                     HumanDeath(args);
                     break;
+                case 5119:
                 case 5123:
                     HumanGetCat(args);
                     break;
+                case 5120:
                 case 5124:
                     HumanLoseCat(args);
                     break;
@@ -415,6 +417,8 @@ namespace Logic.Effect
             }
             
             human.SetProperty(type, result);
+            
+            UIManager.Instance.panelNPCInfo.GetComponent<NPCInfoMono>().SwitchNpcInfo(human);
         }
 
         private static void HumanPropertyLock(Human.Human.PropertyType type, bool isLock, params object[] args)
@@ -663,13 +667,8 @@ namespace Logic.Effect
 
         private static void ShowHuman(params object[] args)
         {
-            var humanId = (int) args[0];
-            if(!NPCManager.NPCs.TryGetValue(humanId, out var npcMono))
-            {
-                return;
-            }
-            
-            npcMono.Show();
+            var human = GetHuman(args[0]);
+            human.Show();
         }
 
         private static void ShowRelationLine(params object[] args)

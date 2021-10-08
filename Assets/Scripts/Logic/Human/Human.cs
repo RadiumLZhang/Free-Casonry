@@ -51,8 +51,8 @@ namespace Logic.Human
         /// </summary>
         public int Defence => m_properties[1];
         public bool DefenceLock => m_locks[1];
-        
-        
+
+        public bool IsShow { get; set; }
 
         /// <summary>
         /// 养的猫
@@ -78,7 +78,7 @@ namespace Logic.Human
             IsWashHead = false;
 
             m_properties[(int) PropertyType.Visibility] = Config.Visibility;
-            m_properties[(int) PropertyType.Defence] = 0;
+            m_properties[(int) PropertyType.Defence] = Config.Defense;
 
             Tags = new List<String>(Config.Tags);
         }
@@ -168,6 +168,18 @@ namespace Logic.Human
         {
             Image = image;
             //todo
+        }
+
+        public void Show()
+        {
+            IsShow = true;
+            
+            if(!NPCManager.NPCs.TryGetValue(ID, out var npcMono))
+            {
+                return;
+            }
+            
+            npcMono.Show();
         }
     }
 }

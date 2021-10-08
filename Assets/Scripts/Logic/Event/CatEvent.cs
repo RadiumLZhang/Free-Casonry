@@ -58,6 +58,9 @@ namespace Logic.Event
         public int Priority => Config?.Priority ?? 0;
 
         public bool HasTicker = false;
+        
+        // 事件倒计时
+        public int Countdown = 0;
 
         public CatEvent(long id)
         {
@@ -103,6 +106,10 @@ namespace Logic.Event
         {
             ExecuteCount++;
             Status = EventStatus.Generated;
+            if (ExpireTime != 0)
+            {
+                Countdown = (int)ExpireTime;
+            }
         }
 
         public bool IsDestroyed()
@@ -165,17 +172,25 @@ namespace Logic.Event
         public void AddTicker()
         {
             this.HasTicker = true;
-            TimeTickerManager.Instance.AddEvent(ID,
+            TimeTickerManager.Instance.AddLastingEvent(ID,
+                () =>
+                {
+                    this.Countdown--;
+                },
+                0,
+                1,
+                Countdown,
                 () =>
                 {
                     this.OutOfTimeResult();
-                },
-                (int) ExpireTime);
+                }
+            );
         }
 
         public void OutOfTimeResult()
         {
             this.HasTicker = false;
+            this.Countdown = 0;
             this.Status = EventStatus.Finished;
             //todo 结算超时效果
             // Config.ExpireEffect;

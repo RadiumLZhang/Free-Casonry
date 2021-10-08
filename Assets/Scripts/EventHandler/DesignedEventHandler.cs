@@ -60,6 +60,11 @@ namespace EventHandler
         {
             return cacheTime;
         }
+
+        public Cat GetCat()
+        {
+            return catInfo;
+        }
         
         // 拖动事件到议程槽触发
         public void OnInit(long newEventID)
@@ -206,6 +211,11 @@ namespace EventHandler
             // 更新倒计时
             cacheTime = cacheTime - 1;
             UpdateEmergencyEvent();
+        }
+        
+        public bool HasEvent()
+        {
+            return m_catEventInfo != null;
         }
 
         public string Save()

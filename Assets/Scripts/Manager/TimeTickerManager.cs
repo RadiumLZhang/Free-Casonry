@@ -99,6 +99,25 @@ namespace Manager
             insertEvent(waitingList, waitingEventItem);
             return 0;
         }
+        
+        /*
+         * 添加立刻等待事件
+         * @param: id               id配负数表示删不掉
+         * @param: condition        生效判定，需要返回布尔值(会在每次tick时候调用判定)
+         * @param: callBack         生效回调函数
+         * @param: destroySecond    经过x秒后不再等待，传入负数表示不会销毁
+         * @param: destroyCallBack  未生效回调
+         */
+        public int AddNowWaitingEvent(long id, ConditionCallBack conditionCallBack, CallBack callBack,
+            int destroySecond, CallBack destroyCallBack)
+        {
+            int frame = frameIndex;
+            int destroyFrame = destroySecond * stepPerSecond + frameIndex;
+            WaitingEventItem waitingEventItem =
+                new WaitingEventItem(id, callBack, frame, conditionCallBack, destroyFrame, destroyCallBack);
+            insertEvent(nowWaitingList, waitingEventItem);
+            return 0;
+        }
 
         /*
          * 添加持续性事件
@@ -158,6 +177,7 @@ namespace Manager
             removeByID(eventList, id);
             removeByID(waitingList, id);
             removeByID(lastingList, id);
+            removeByID(nowWaitingList, id);
         }
 
 
@@ -218,6 +238,7 @@ namespace Manager
         private List<EventItem> eventList = new List<EventItem>();
         private List<WaitingEventItem> waitingList = new List<WaitingEventItem>();
         private List<LastingEventItem> lastingList = new List<LastingEventItem>();
+        private List<WaitingEventItem> nowWaitingList = new List<WaitingEventItem>();
 
         private System.Timers.Timer timer;
         
@@ -239,6 +260,7 @@ namespace Manager
                 waitingHandle();
                 lastingHandle();
             }
+            nowWaitingHandle();
         }
 
         // 以生效帧升序插入
@@ -334,6 +356,49 @@ namespace Manager
                     if (waitingEventItem.destroyFrame >= 0 && waitingEventItem.destroyFrame <= frameIndex)
                     {
                         waitingList.RemoveAt(index);
+                        if (waitingEventItem.destroyCallBack != null)
+                        {
+                            waitingEventItem.destroyCallBack.Invoke();
+                        }
+                        continue;
+                    }
+
+                    index++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+        }
+        
+        private void nowWaitingHandle()
+        {
+            if (nowWaitingList.Count == 0)
+            {
+                return;
+            }
+
+            int index = 0;
+            while (nowWaitingList.Count > index)
+            {
+                WaitingEventItem waitingEventItem = nowWaitingList[index];
+                if (waitingEventItem.frame <= frameIndex)
+                {
+                    if (waitingEventItem.ConditionCallBack == null || waitingEventItem.ConditionCallBack.Invoke())
+                    {
+                        nowWaitingList.RemoveAt(index);
+                        if (waitingEventItem.callBack != null)
+                        {
+                            waitingEventItem.callBack.Invoke();
+                        }
+                        continue;
+                    }
+
+                    if (waitingEventItem.destroyFrame >= 0 && waitingEventItem.destroyFrame <= frameIndex)
+                    {
+                        nowWaitingList.RemoveAt(index);
                         if (waitingEventItem.destroyCallBack != null)
                         {
                             waitingEventItem.destroyCallBack.Invoke();
