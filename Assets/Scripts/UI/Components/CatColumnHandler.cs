@@ -73,8 +73,25 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
-                m_eventImage.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+                switch (m_myCatEventInfo.Type)
+                {
+                    case 0:
+                        m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/特殊事件玻璃");
+                        break;
+                    case 1:
+                        m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/探查事件玻璃");
+                        break;
+                    case 2:
+                        m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/密谋事件玻璃");
+                        break;
+                    case 3:
+                        m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/交际事件玻璃");
+                        break;
+                }
+        
+                m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
                 m_eventImage.enabled = true;
+                m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = true;
             }
         }
         else if ((droppedNPCEvent = pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
@@ -86,8 +103,25 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
             m_myCatEventInfo = eventHandler.GetEventInfo();
-            m_eventImage.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+            switch (m_myCatEventInfo.Type)
+            {
+                case 0:
+                    m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/特殊事件玻璃");
+                    break;
+                case 1:
+                    m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/探查事件玻璃");
+                    break;
+                case 2:
+                    m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/密谋事件玻璃");
+                    break;
+                case 3:
+                    m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/交际事件玻璃");
+                    break;
+            }
+        
+            m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
             m_eventImage.enabled = true;
+            m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = true;
         }
 
         InitHandler();
@@ -102,16 +136,31 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         gameView.currentDialogEventID = myID;
         m_myCatEventInfo = eventHandler.GetEventInfo();
-        m_eventImage.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        switch (m_myCatEventInfo.Type)
+        {
+            case 0:
+                m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/特殊事件玻璃");
+                break;
+            case 1:
+                m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/探查事件玻璃");
+                break;
+            case 2:
+                m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/密谋事件玻璃");
+                break;
+            case 3:
+                m_eventImage.sprite = Resources.Load<Sprite>("Sprites/Events/交际事件玻璃");
+                break;
+        }
+        
+        m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
         m_eventImage.enabled = true;
+        m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = true;
         InitHandler();
     }
     public void InitHandler()
     {
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
-        // transform.Find("ImageEvent").GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
-        // transform.Find("ImageEvent").GetComponent<Image>().enabled = true;
-        
+
         remainingTime = eventHandler.GetTimeRemain();
         textRemainingTime.text = Convert.ToString((remainingTime) * 10);
         imageRemainingTime.gameObject.SetActive(true);
@@ -182,6 +231,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         droppedNPCEvent = null;
         
         m_mask.gameObject.SetActive(false);
+        m_eventImage.gameObject.SetActive(false);
+        m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = false;
     }
     
     public void ButtonFinishFlag_OnClick()
