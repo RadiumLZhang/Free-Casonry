@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using EmergencyInfo;
+using Logic.Condition;
 using Logic.Effect;
 using UnityEngine;
 
@@ -70,8 +71,13 @@ namespace Logic.Event
         }
         public bool OptionCanChoose(int option)
         {
-            //todo 判断条件
-            // Config?.Options[0].Conditions;
+            foreach (var condition in options[0].Conditions)
+            {
+                if (!ConditionUtils.CheckCondition(condition))
+                {
+                    return false;
+                }
+            }
             return true;
         }
 
