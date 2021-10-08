@@ -9071,7 +9071,7 @@ GameObject:
   - component: {fileID: 962284242}
   - component: {fileID: 962284241}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12132,6 +12132,7 @@ MonoBehaviour:
   relationshipScale: 0
   oldRelationshipPos: {x: 0, y: 0}
   bIsRelationshipScaling: 0
+  player: {fileID: 0}
 --- !u!114 &1285887100
 MonoBehaviour:
   m_ObjectHideFlags: 0
