@@ -7341,11 +7341,11 @@
         {
           "eventId" : "315100",
           "conditions" : [
-            "0"
+            "415101"
           ]
         },
         {
-          "eventId" : "0",
+          "eventId" : "315101",
           "conditions" : [
             "0"
           ]
@@ -7583,7 +7583,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "415123"
           ]
         },
         {
@@ -7677,7 +7677,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "415132"
           ]
         },
         {
@@ -13979,7 +13979,7 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421110",
+            "421100",
             "421101"
           ]
         },

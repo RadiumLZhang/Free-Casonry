@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using EventHandler;
+using Logic;
 using Logic.Event;
 using Manager;
 using UnityEngine;
@@ -56,6 +57,14 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
         bg = transform.Find("ImageEventBG");
         highlightBg = transform.Find("ImageEventBGHighlighted");
+        
+        //UI初始化
+        Cat cat = EventHandlerManager.Instance.GetCatByIndex(index);
+        transform.Find("CatPortrait/ImageCat").GetComponent<Image>().sprite = Resources.Load<Sprite>(cat.Image);
+        transform.Find("CatName").GetComponent<Text>().text = cat.Name;
+        transform.Find("Image1/Text").GetComponent<Text>().text = cat.ScoutValue.ToString();
+        transform.Find("Image2/Text").GetComponent<Text>().text = cat.Conspiracy.ToString();
+        transform.Find("Image3/Text").GetComponent<Text>().text = cat.Communication.ToString();
     }
     public void OnDrop(PointerEventData eventData)
     {

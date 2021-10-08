@@ -72,6 +72,11 @@ namespace Manager
             }
             return null;
         }
+
+        public Cat GetCatByIndex(int index)
+        {
+            return handlerList[index].GetCat();
+        }
         public bool AddNewHandler(Cat catInfo)
         {
             if (handlerList.Count >= 4)
