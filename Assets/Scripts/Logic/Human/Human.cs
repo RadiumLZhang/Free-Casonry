@@ -78,7 +78,7 @@ namespace Logic.Human
             IsWashHead = false;
 
             m_properties[(int) PropertyType.Visibility] = Config.Visibility;
-            m_properties[(int) PropertyType.Defence] = 0;
+            m_properties[(int) PropertyType.Defence] = Config.Defense;
 
             Tags = new List<String>(Config.Tags);
         }

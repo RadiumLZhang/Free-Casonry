@@ -415,6 +415,8 @@ namespace Logic.Effect
             }
             
             human.SetProperty(type, result);
+            
+            UIManager.Instance.panelNPCInfo.GetComponent<NPCInfoMono>().SwitchNpcInfo(human);
         }
 
         private static void HumanPropertyLock(Human.Human.PropertyType type, bool isLock, params object[] args)
