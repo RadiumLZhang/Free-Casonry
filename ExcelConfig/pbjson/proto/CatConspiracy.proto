@@ -15,6 +15,7 @@ message CatConspiracyInfo
         // @name 达成条件
         int64 condition = 3;
         // @name 阴谋组编号
+        int64 GroupId = 4;
 
     }
 

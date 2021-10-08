@@ -25,15 +25,15 @@ namespace CatConspiracyInfo {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chlwcm90by9DYXRDb25zcGlyYWN5LnByb3RvEhFDYXRDb25zcGlyYWN5SW5m",
-            "byK6AQoRQ2F0Q29uc3BpcmFjeUluZm8SUgoScmVzdWx0RXZlbnRfY29uZmln",
+            "byLLAQoRQ2F0Q29uc3BpcmFjeUluZm8SUgoScmVzdWx0RXZlbnRfY29uZmln",
             "GAEgAygLMjYuQ2F0Q29uc3BpcmFjeUluZm8uQ2F0Q29uc3BpcmFjeUluZm8u",
-            "Q2F0Q29uc3BpcmFjeUl0ZW0aUQoRQ2F0Q29uc3BpcmFjeUl0ZW0SFAoMQ29u",
+            "Q2F0Q29uc3BpcmFjeUl0ZW0aYgoRQ2F0Q29uc3BpcmFjeUl0ZW0SFAoMQ29u",
             "c3BpcmFjeUlkGAEgASgDEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhEKCWNvbmRp",
-            "dGlvbhgDIAEoA2IGcHJvdG8z"));
+            "dGlvbhgDIAEoAxIPCgdHcm91cElkGAQgASgDYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::CatConspiracyInfo.CatConspiracyInfo), global::CatConspiracyInfo.CatConspiracyInfo.Parser, new[]{ "ResultEventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem), global::CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem.Parser, new[]{ "ConspiracyId", "Description", "Condition" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::CatConspiracyInfo.CatConspiracyInfo), global::CatConspiracyInfo.CatConspiracyInfo.Parser, new[]{ "ResultEventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem), global::CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem.Parser, new[]{ "ConspiracyId", "Description", "Condition", "GroupId" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -197,6 +197,7 @@ namespace CatConspiracyInfo {
           conspiracyId_ = other.conspiracyId_;
           description_ = other.description_;
           condition_ = other.condition_;
+          groupId_ = other.groupId_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -248,6 +249,20 @@ namespace CatConspiracyInfo {
           }
         }
 
+        /// <summary>Field number for the "GroupId" field.</summary>
+        public const int GroupIdFieldNumber = 4;
+        private long groupId_;
+        /// <summary>
+        /// @name 阴谋组编号
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public long GroupId {
+          get { return groupId_; }
+          set {
+            groupId_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as CatConspiracyItem);
@@ -264,6 +279,7 @@ namespace CatConspiracyInfo {
           if (ConspiracyId != other.ConspiracyId) return false;
           if (Description != other.Description) return false;
           if (Condition != other.Condition) return false;
+          if (GroupId != other.GroupId) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -273,6 +289,7 @@ namespace CatConspiracyInfo {
           if (ConspiracyId != 0L) hash ^= ConspiracyId.GetHashCode();
           if (Description.Length != 0) hash ^= Description.GetHashCode();
           if (Condition != 0L) hash ^= Condition.GetHashCode();
+          if (GroupId != 0L) hash ^= GroupId.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -298,6 +315,10 @@ namespace CatConspiracyInfo {
             output.WriteRawTag(24);
             output.WriteInt64(Condition);
           }
+          if (GroupId != 0L) {
+            output.WriteRawTag(32);
+            output.WriteInt64(GroupId);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -314,6 +335,9 @@ namespace CatConspiracyInfo {
           }
           if (Condition != 0L) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(Condition);
+          }
+          if (GroupId != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(GroupId);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -334,6 +358,9 @@ namespace CatConspiracyInfo {
           }
           if (other.Condition != 0L) {
             Condition = other.Condition;
+          }
+          if (other.GroupId != 0L) {
+            GroupId = other.GroupId;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -356,6 +383,10 @@ namespace CatConspiracyInfo {
               }
               case 24: {
                 Condition = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                GroupId = input.ReadInt64();
                 break;
               }
             }

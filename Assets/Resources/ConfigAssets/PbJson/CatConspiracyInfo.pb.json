@@ -3,87 +3,104 @@
     {
       "ConspiracyId" : "80000",
       "description" : "阻止“武器制备”",
-      "condition" : "450000"
+      "condition" : "450000",
+      "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80001",
       "description" : "妨碍“兵力运输”",
-      "condition" : "450001"
+      "condition" : "450001",
+      "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80002",
       "description" : "破坏“安抚拉拢”",
-      "condition" : "450002"
+      "condition" : "450002",
+      "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80003",
       "description" : "停止“宗教支持”",
-      "condition" : "450003"
+      "condition" : "450003",
+      "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80010",
       "description" : "打听“圣杯的传言”",
-      "condition" : "450010"
+      "condition" : "450010",
+      "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80011",
       "description" : "探求“圣杯的痕迹”",
-      "condition" : "450011"
+      "condition" : "450011",
+      "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80012",
       "description" : "寻觅“圣杯的线索”",
-      "condition" : "450012"
+      "condition" : "450012",
+      "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80013",
       "description" : "找到猫咪圣杯",
-      "condition" : "450013"
+      "condition" : "450013",
+      "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80020",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71020"
     },
     {
       "ConspiracyId" : "80030",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71030"
     },
     {
       "ConspiracyId" : "80040",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71040"
     },
     {
       "ConspiracyId" : "80050",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71050"
     },
     {
       "ConspiracyId" : "80060",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71060"
     },
     {
       "ConspiracyId" : "80070",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71070"
     },
     {
       "ConspiracyId" : "80080",
       "description" : "阴谋酝酿中",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71080"
     },
     {
       "ConspiracyId" : "80090",
       "description" : "找寻所有失落的圣器",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71090"
     },
     {
       "ConspiracyId" : "80091",
       "description" : "颠覆人类政权",
-      "condition" : "-1"
+      "condition" : "-1",
+      "GroupId" : "71090"
     }
   ]
 }
