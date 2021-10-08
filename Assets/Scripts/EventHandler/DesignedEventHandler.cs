@@ -139,6 +139,7 @@ namespace EventHandler
             long resultId = m_catEventInfo.GetResultId();
             m_catEventInfo.FinishEffect(resultId);
             OnDestroyEvent();
+            monoHandler.OnFinish();
             UIManager.Instance.SwitchFinishFlag(index, false);
         }
         
@@ -155,6 +156,7 @@ namespace EventHandler
             cacheTime = 0;
             emergencyTime = 0;
             TimeTickerManager.Instance.Restore(); //恢复时间
+            monoHandler.OnFinish();
         }
 
         // 点击紧急事件红点

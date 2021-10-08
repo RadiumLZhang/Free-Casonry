@@ -240,6 +240,7 @@ public class GameView : MonoBehaviour
         DroppedImage = null;
         eventHandler.OnDestroyEvent();
         UIManager.Instance.SwitchDarkBackGround(false);
+        
     }
     public void ButtonFinishDialog_OnClick()
     {
