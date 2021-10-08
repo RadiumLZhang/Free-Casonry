@@ -75,8 +75,22 @@ namespace Manager
             {
                 m_nodeList[i].Load(list[i]);
             }
-            
-            TimeTickerManager.Instance.StopTick();
+
+            TimeTickerManager.Instance.AddNowWaitingEvent(
+                -1, () =>
+                {
+                    return UIManager.Instance.IsInit;
+                },
+                () =>
+                {
+                    TimeTickerManager.Instance.StopTick();
+                },
+                10,
+                () =>
+                {
+                    Debug.LogError("SetTimeTicker Stop False!");
+                }
+            );
             
             //加载完成后强制刷新一次下方的事件槽
             UIManager.Instance.gameViewMono.RefreshScrollSpecialEvent();

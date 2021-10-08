@@ -58,8 +58,8 @@ namespace Manager
             {
                 preSpeed = speed;
                 speed = (int) speedEnum;
-                UIManager.Instance.gameViewMono.SetSpeedButtonIcon(speed);
             }
+            UIManager.Instance.gameViewMono.SetSpeedButtonIcon(speed);
         }
 
         /**

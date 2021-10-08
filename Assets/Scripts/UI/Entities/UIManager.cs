@@ -13,6 +13,8 @@ using UnityEngine.UI;
 public class UIManager: BaseModel<UIManager>, ISaveObject
 {
     public bool buttonCouncilActive = true;
+
+    public bool IsInit = false;
     
     public Transform gameView;
     public GameView gameViewMono;
@@ -146,6 +148,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
         InitCatColumns();
         InitDialogs();
+        IsInit = true;
     }
     private void InitCatColumns()
     {
