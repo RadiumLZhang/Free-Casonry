@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Logic.Conspiracy;
 using Manager;
+using TotalConspiracy;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +16,9 @@ public class ButtonConspiracy : MonoBehaviour
         CouncilView councilView = UIManager.Instance.panelCouncil.GetComponent<CouncilView>();
         councilView.SwitchConspiracyButton();
         transform.GetComponent<Image>().sprite =
-            (id == 80051) ? councilView.conspiracyFinalSpriteChosen : councilView.conspiracySpriteChosen;
-        Conspiracy temp = ConspiracyManager.Instance.GetConspiracy(id);
-        if (temp != null)
-            UIManager.Instance.panelCouncil.GetComponent<CouncilView>().SwitchConspiracy(temp);
+            (id == 71090) ? councilView.conspiracyFinalSpriteChosen : councilView.conspiracySpriteChosen;
+        TotalConspiracy.TotalConspiracy.Types.TotalConspiracyItem item = TotalConspiracyLoader.Instance.FindTotalConspiracyItem(id);
+        if (item != null)
+            UIManager.Instance.panelCouncil.GetComponent<CouncilView>().SwitchConspiracy(item);
     }
 }

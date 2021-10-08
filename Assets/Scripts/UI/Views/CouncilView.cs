@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CatConspiracyInfo;
 using Language;
 using Logic;
+using Logic.Condition;
 using Logic.Conspiracy;
+using TotalConspiracy;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,7 +39,8 @@ public class CouncilView : MonoBehaviour
     public Sprite conspiracyFinalSprite;
     public Sprite conspiracySpriteChosen;
     public Sprite conspiracyFinalSpriteChosen;
-    
+    public GameObject[] conspiracyRequirements;
+
     //管理panel
     private Text TextCatName;
     private Text TextCatID;
@@ -78,10 +82,12 @@ public class CouncilView : MonoBehaviour
         TextConspiracyDetail = conspiracyDetailPanel.Find("TextConspiracyDetail").GetComponent<Text>();
         ImageConspiracyButtons =  panelConspiracy.transform.Find("animationRoot/ImageTarget/ButtonsConspiracy").GetComponentsInChildren<Image>();
         ImageConspiracyFinalButton = panelConspiracy.transform.Find("animationRoot/ImageTarget/ButtonsConspiracy/ButtonConspiracyFinal").GetComponent<Image>();
-        // conspiracySprite = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标节点（不亮）.png");
-        // conspiracyFinalSprite = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标最终节点（不亮）.png");
-        // conspiracySpriteChosen = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标节点（点亮）.png");
-        // conspiracyFinalSpriteChosen = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标最终节点（点亮）.png");
+        Transform conspiracyRequirementPanel = conspiracyDetailPanel.Find("ImageRequirement");
+        conspiracyRequirements = new GameObject[4];
+        conspiracyRequirements[0] = conspiracyRequirementPanel.Find("Requirement1").gameObject;
+        conspiracyRequirements[1] = conspiracyRequirementPanel.Find("Requirement2").gameObject;
+        conspiracyRequirements[2] = conspiracyRequirementPanel.Find("Requirement3").gameObject;
+        conspiracyRequirements[3] = conspiracyRequirementPanel.Find("Requirement4").gameObject;
 
         m_conspiracyPanelAnimation = panelConspiracy.GetComponent<Animation>();
         m_managePanelAnimation = panelManage.GetComponent<Animation>();
@@ -161,10 +167,45 @@ public class CouncilView : MonoBehaviour
         animation.Play(panelIn.name);
     }
 
-    public void SwitchConspiracy(Conspiracy conspiracy)
+    public void SwitchConspiracy(TotalConspiracy.TotalConspiracy.Types.TotalConspiracyItem conspiracy)
     {
-        TextConspiracyName.text = conspiracy.Desc;
-        TextConspiracyDetail.text = conspiracy.Desc;
+        foreach (var item in conspiracyRequirements)
+        {
+            item.SetActive(false);
+        }
+        TextConspiracyName.text = conspiracy.ConspiracyTitle;
+        TextConspiracyDetail.text = conspiracy.ConspiracyDesc;
+        switch (conspiracy.ConspiracyId.Count)
+        {
+            case 1:
+                RefreshRequirement(conspiracy, 0);
+                break;
+            case 2:
+                RefreshRequirement(conspiracy, 0);
+                RefreshRequirement(conspiracy, 1);
+                break;
+            case 3:
+                RefreshRequirement(conspiracy, 0);
+                RefreshRequirement(conspiracy, 1);
+                RefreshRequirement(conspiracy, 2);
+                break;
+            case 4:
+                RefreshRequirement(conspiracy, 0);
+                RefreshRequirement(conspiracy, 1);
+                RefreshRequirement(conspiracy, 2);
+                RefreshRequirement(conspiracy, 3);
+                break;
+        }
+    }
+
+    private void RefreshRequirement(TotalConspiracy.TotalConspiracy.Types.TotalConspiracyItem conspiracy,
+        int requirementIndex)
+    {
+        var conspiracyInfo = CatConspiracyInfoLoader.Instance.FindCatConspiracyItem(conspiracy.ConspiracyId[requirementIndex]);
+        conspiracyRequirements[requirementIndex].SetActive(true);
+        conspiracyRequirements[requirementIndex].transform.Find("ImageDone").gameObject.SetActive(ConditionUtils.CheckCondition(conspiracyInfo.Condition));
+        conspiracyRequirements[requirementIndex].transform.Find("TextRequirement").GetComponent<Text>().text =
+            conspiracyInfo.Description;
     }
     public void SwitchCatDisplay(Cat cat)
     {

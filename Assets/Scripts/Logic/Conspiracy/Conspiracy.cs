@@ -9,6 +9,7 @@ namespace Logic.Conspiracy
         public long ID { get; set; }
         public string Desc { get; set; }
         public long Conditions { get; set; }
+        public long GroupId { get; set; }
         public CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem Config { get; private set; }
         
         public Conspiracy(long id)
@@ -23,6 +24,7 @@ namespace Logic.Conspiracy
 
             Desc = Config.Description;
             Conditions = Config.Condition;
+            GroupId = Config.GroupId;
         }
 
         public bool Check()
