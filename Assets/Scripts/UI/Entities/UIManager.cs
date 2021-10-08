@@ -57,6 +57,9 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public GameObject imageTarget_start;
     public GameObject imageParticipant_start;
     public GameObject imageParticipantCenter_start;
+
+    public GameObject buttonStartEvent;
+    public GameObject buttonStartEventDisabled;
     
     //FinsihEventDialog
     public Transform textEventName_finish;
@@ -74,6 +77,10 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public Transform textEventCardName_emergency;
     public Transform Choice1_emergency;
     public Transform Choice2_emergency;
+    public GameObject buttonChoice1;
+    public GameObject buttonChoice1Disabled;
+    public GameObject buttonChoice2;
+    public GameObject buttonChoice2Disabled;
     
     //CatColumns
     public CatColumnHandler[] catColumnHandlers;
@@ -163,6 +170,8 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         imageTarget_start = panelStartEventDialog.transform.Find("ImageTarget").gameObject;
         imageParticipant_start = panelStartEventDialog.transform.Find("ImageParticipant").gameObject;
         imageParticipantCenter_start = panelStartEventDialog.transform.Find("ImageParticipantCenter").gameObject;
+        buttonStartEvent = panelStartEventDialog.transform.Find("ButtonStartEvent").gameObject;
+        buttonStartEventDisabled = panelStartEventDialog.transform.Find("ButtonStartEventDisabled").gameObject;
         
         //FinishEventDialog
         textEventName_finish = panelFinishEventDialog.transform.Find("TextEventName");;
@@ -178,6 +187,10 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         textEventCardTime_emergency = imageEvent_emergency.Find("EventCard/TextEventCardTime");
         Choice1_emergency = panelEmergencyDialog.transform.Find("ImageChoice1");
         Choice2_emergency = panelEmergencyDialog.transform.Find("ImageChoice2");
+        buttonChoice1 = Choice1_emergency.Find("ButtonChoice").gameObject;
+        buttonChoice1Disabled = Choice1_emergency.Find("ButtonChoiceDisabled").gameObject;
+        buttonChoice2 = Choice2_emergency.Find("ButtonChoice").gameObject;
+        buttonChoice2Disabled = Choice2_emergency.Find("ButtonChoiceDisabled").gameObject;
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
@@ -187,6 +200,9 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
         imageEvent_start.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);//TODO:这个字段策划还没配！！
         textResultPreview_start.GetComponent<Text>().text = m_myCatEventInfo.Name;//TODO:读事件描述，然后替换这个.Name @muidarzhang
+        bool canExecute = m_myCatEventInfo.CanExecute();
+        buttonStartEvent.SetActive(canExecute);
+        buttonStartEventDisabled.SetActive(!canExecute);
         textEventCardTime_start.GetComponent<Text>().text = (m_myCatEventInfo.ConsumeTime * 10) + "分钟";
         switch(m_myCatEventInfo.Type)
         {
@@ -236,10 +252,21 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         {
             Choice1_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[0].Description;
             Choice1_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[0].Name;
+            bool bCanChoose1 = m_myEmergencyInfo.OptionCanChoose(1);
+            buttonChoice1.SetActive(bCanChoose1);
+            buttonChoice1Disabled.SetActive(!bCanChoose1);
             if (optionList.Count == 2)
             {
+                Choice2_emergency.gameObject.SetActive(true);
+                bool bCanChoose2 = m_myEmergencyInfo.OptionCanChoose(2);
+                buttonChoice1.SetActive(bCanChoose2);
+                buttonChoice1Disabled.SetActive(!bCanChoose2);
                 Choice2_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[1].Description;
                 Choice2_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[1].Name;
+            }
+            else
+            {
+                Choice2_emergency.gameObject.SetActive(false);
             }
         }
     }

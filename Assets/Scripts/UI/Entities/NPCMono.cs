@@ -23,6 +23,7 @@ public class NPCMono : MonoBehaviour
     private Transform backgroundButton;
     public Image imageCat;
     private UITransitionEffect effect;
+    private Image imageHuman;
 
     private const string ImportantPointIn = "ImportantPointIn";
     
@@ -30,6 +31,7 @@ public class NPCMono : MonoBehaviour
     
     private void Start()
     {
+        imageHuman = transform.GetComponent<Image>();
         eventCycle = transform.Find("EventCycle/root").gameObject;
         selfRect = transform.GetComponent<RectTransform>();
         contentRect = GameObject.Find("ScrollRelationship").transform.Find("Viewport").Find("Content").GetComponent<RectTransform>();
@@ -175,6 +177,7 @@ public class NPCMono : MonoBehaviour
 
     public void Show()
     {
+        
         gameObject.SetActive(true);
         effect.Show();
     }
@@ -182,5 +185,10 @@ public class NPCMono : MonoBehaviour
     public void Hide()
     {
         effect.Hide();
+    }
+
+    public void Death()
+    {
+        imageHuman.sprite = Resources.Load<Sprite>("Sprites/Main/NPCs/女仆死亡");
     }
 }

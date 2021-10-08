@@ -149,7 +149,13 @@ namespace Logic.Human
         public void Death()
         {
             IsAlive = false;
-            //todo 处理一些必要的逻辑
+            if (!NPCManager.NPCs.TryGetValue(ID, out var mono))
+            {
+                return;
+            }
+
+            mono.Death();
+            NPCManager.SetEventCycleActive(ID, false);
         }
 
         public void SetCat(long id)

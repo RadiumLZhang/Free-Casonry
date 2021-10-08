@@ -82,7 +82,7 @@ namespace Logic.Event
         {
             foreach (var id in Config.Preconditions)
             {
-                if (ConditionUtils.CheckCondition(id))
+                if (!ConditionUtils.CheckCondition(id))
                 {
                     return false;
                 }
