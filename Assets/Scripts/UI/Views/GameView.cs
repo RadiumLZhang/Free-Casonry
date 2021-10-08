@@ -171,26 +171,45 @@ public class GameView : MonoBehaviour
     
     public void ButtonPause_OnClick()
     {
-        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
-        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
-        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
         TimeTickerManager.Instance.StopTick();
     }
     
     public void ButtonNormal_OnClick()
     {
-        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
-        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
-        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
         TimeTickerManager.Instance.StartTick();
     }
     
     public void ButtonSpeed_OnClick()
     {
-        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
-        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
-        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
         TimeTickerManager.Instance.StartTickWithSpeed(TickerSpeedEnum.Fast);
+    }
+
+    public void SetSpeedButtonIcon(int speed)
+    {
+        if (speed == 0)
+        {
+            buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
+        }
+        else
+        {
+            buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
+        }
+        if (speed == 1)
+        {
+            buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
+        }
+        else
+        {
+            buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
+        }
+        if (speed == 2)
+        {
+            buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
+        }
+        else
+        {
+            buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
+        }
     }
     
     //Button in Council

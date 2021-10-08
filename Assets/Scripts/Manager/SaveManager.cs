@@ -76,8 +76,7 @@ namespace Manager
                 m_nodeList[i].Load(list[i]);
             }
             
-            //暂停时间
-            UIManager.Instance.gameViewMono.ButtonPause_OnClick();
+            TimeTickerManager.Instance.StopTick();
             
             //加载完成后强制刷新一次下方的事件槽
             UIManager.Instance.gameViewMono.RefreshScrollSpecialEvent();
