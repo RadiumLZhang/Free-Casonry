@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using Logic;
 using Logic.Conspiracy;
 
 namespace Manager
 {
-    public class ConspiracyManager
+    public class ConspiracyManager : BaseModel<ConspiracyManager>
     {
         /********************************* 接口 ***********************************************/
         
@@ -23,6 +24,13 @@ namespace Manager
         /********************************* 实现 ***********************************************/
         private Dictionary<long, Conspiracy> consMap;
         
+        public ConspiracyManager()
+        {
+            if (consMap == null)
+            {
+                consMap = new Dictionary<long, Conspiracy>();
+            }
+        }
         private Conspiracy LoadConspiracy(long id)
         {
             Conspiracy conspiracy = new Conspiracy(id);

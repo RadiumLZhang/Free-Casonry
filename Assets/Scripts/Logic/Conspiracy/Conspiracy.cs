@@ -6,9 +6,9 @@ namespace Logic.Conspiracy
 {
     public class Conspiracy
     {
-        private long ID { get; set; }
-        private string Desc { get; set; }
-        private long Conditions { get; set; }
+        public long ID { get; set; }
+        public string Desc { get; set; }
+        public long Conditions { get; set; }
         public CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem Config { get; private set; }
         
         public Conspiracy(long id)
