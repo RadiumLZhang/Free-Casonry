@@ -224,11 +224,14 @@ namespace EventHandler
         
         public void Load(long emergencyIdReload, bool emergencyResolvedReload, long eventIDReload, long cacheTimeReload, uint emergencyTimeReload, bool validReload, int indexReload)
         {
-            if (eventIDReload != 0)
+
+            if (eventIDReload == 0)
             {
-                m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
-                TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
+                return;
             }
+            m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
+            TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
+            
             if (emergencyIdReload != 0)
             {
                 emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
@@ -240,6 +243,8 @@ namespace EventHandler
             emergencyTime = emergencyTimeReload;
             valid = validReload; // 议程槽是否被封印
             index = indexReload;
+
+            monoHandler.Restore(m_catEventInfo);
         }
     }
 }
