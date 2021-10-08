@@ -5346,7 +5346,7 @@
       "eventId" : "11312",
       "name" : "葬礼仪式",
       "type" : 0,
-      "consumeTime" : "5",
+      "consumeTime" : "30",
       "imageout" : "11310",
       "imageIn" : "11310",
       "expireTime" : "0",
@@ -14073,7 +14073,7 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "421120",
+            "421110",
             "421111",
             "421112"
           ]
@@ -14120,7 +14120,7 @@
       "outOfTimeRecordId" : "0",
       "humanId" : "60011",
       "repeatTime" : 1,
-      "emergencyId" : "0",
+      "emergencyId" : "22016",
       "isImportant" : 0,
       "priority" : 100,
       "preconditions" : [

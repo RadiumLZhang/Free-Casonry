@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package TotalConspiracy;
+
+// @wrapper 阴谋总表(TotalConspiracy.pb.json)
+message TotalConspiracy
+{
+    message TotalConspiracyItem
+    {
+        // @name 阴谋组编号
+        // @key
+        int64 GroupId = 1;
+        // @name 目标编号
+        repeated int32 ConspiracyId = 2;
+        // @name 阴谋标题
+        string ConspiracyTitle = 3;
+        // @name 阴谋描述
+        string ConspiracyDesc = 4;
+    }
+
+    // @name 阴谋总表
+    repeated TotalConspiracyItem resultEvent_config = 1;
+}
