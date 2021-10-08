@@ -229,13 +229,6 @@ namespace EventHandler
             {
                 return;
             }
-            m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
-            TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
-            
-            if (emergencyIdReload != 0)
-            {
-                emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
-            }
             emergencyId = emergencyIdReload;
             emergencyResolved = emergencyResolvedReload;
             eventID = eventIDReload;
@@ -243,6 +236,14 @@ namespace EventHandler
             emergencyTime = emergencyTimeReload;
             valid = validReload; // 议程槽是否被封印
             index = indexReload;
+            m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
+            TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
+            
+            if (emergencyIdReload != 0)
+            {
+                emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
+            }
+            
 
             monoHandler.Restore(m_catEventInfo);
         }
