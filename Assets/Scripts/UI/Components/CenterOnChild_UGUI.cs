@@ -12,6 +12,8 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using Logic;
+using Manager;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditorInternal;
@@ -208,6 +210,7 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
         Temp_DarkenScale = MaskOpacity;
  
         _scrollView = GetComponent<ScrollRect>();
+        _centerChanged = SwitchCat;
         if (_scrollView == null)
         {
             Debug.LogError("错误：ScrollRect为空");
@@ -541,6 +544,39 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
         {
             _centerChanged(_index);          
         }
- 
+    }
+
+    public void SwitchCat(int _index)
+    {
+        Cat cat = CatManager.Instance.GetCat(61001);
+        switch (_index)
+        {
+            case 0:
+                cat = CatManager.Instance.GetCat(61001);break;
+            case 1:
+                cat = CatManager.Instance.GetCat(61002);break;
+            case 2:
+                cat = CatManager.Instance.GetCat(61003);break;
+            case 3:
+                cat = CatManager.Instance.GetCat(61004);break;
+        }
+        UIManager.Instance.panelCouncil.GetComponent<CouncilView>().SwitchCatDisplay(cat);
+    }
+
+    public void ButtonSwitchLeft_OnClick()
+    {
+        if (_curCenterChildIndex != 0)
+        {
+            SetCenterChild(_curCenterChildIndex - 1);
+            _isChangeCenter = true;
+        }
+    }
+    public void ButtonSwitchRight_OnClick()
+    {
+        if (_curCenterChildIndex != 3)
+        {
+            SetCenterChild(_curCenterChildIndex + 1);
+            _isChangeCenter = true;
+        }
     }
 }

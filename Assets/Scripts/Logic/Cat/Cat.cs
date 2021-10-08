@@ -87,6 +87,7 @@ namespace Logic
             Normal
         }
 
+        public long CatState;
         public enum CatPropertyType
         {
             Scout = 0,
