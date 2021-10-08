@@ -46,7 +46,7 @@ public class NPCInfoMono : MonoBehaviour
         {
             m_imageCat.sprite = Resources.Load<Sprite>(npc.cat.Image);
         }
-        m_slider.value = npc.Defence * 10.0f;
+        m_slider.value = npc.Defence / 10.0f;
     }
 
     public void OpenNpcInfo()

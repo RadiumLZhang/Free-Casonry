@@ -21,7 +21,7 @@ public class NPCMono : MonoBehaviour
     private GameObject npcRedPoint;
     private Animation m_redPointAnimation;
     private Transform backgroundButton;
-
+    public Image imageCat;
     private UITransitionEffect effect;
 
     private const string ImportantPointIn = "ImportantPointIn";
@@ -39,6 +39,7 @@ public class NPCMono : MonoBehaviour
         backgroundButton = transform.Find("EventCycle/root/Button");
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
         m_redPointAnimation = transform.Find("animationRoot").GetComponent<Animation>();
+        imageCat = transform.Find("ImageCat").GetComponent<Image>();
 
         effect = transform.GetComponent<UITransitionEffect>();
         m_trigger = transform.GetComponent<EventTrigger>();
@@ -66,7 +67,7 @@ public class NPCMono : MonoBehaviour
             //manager.StartNPCLerp((selfRect.anchoredPosition.x + contentX / 2.0f) / contentX,(selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.03f);
             UIManager.Instance.gameView.GetComponent<GameView>().oldRelationshipPos = new Vector2(
                 (selfRect.anchoredPosition.x + contentX / 2.0f) / contentX,
-                (selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.1f);
+                (selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.07f);
             UIManager.Instance.gameView.GetComponent<GameView>().ButtonCloseRelationship_OnClick();
             manager.SetOpenedNPC(gameObject);
         }

@@ -25,6 +25,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     private Image m_eventImage;
     private RectTransform m_mask;
 
+    private Transform bg;
+    private Transform highlightBg;
+
 
     private const string FlagAnimation = "FlagIn";
     
@@ -50,6 +53,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         
         m_eventImage = transform.Find("ImageEvent").GetComponent<Image>();
         m_mask = m_eventImage.transform.Find("Mask").GetComponent<RectTransform>();
+
+        bg = transform.Find("ImageEventBG");
+        highlightBg = transform.Find("ImageEventBGHighlighted");
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -86,6 +92,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
         InitHandler();
         m_mask.gameObject.SetActive(true);
+        
+        EventHandlerManager.Instance.ResetColumnImage();
     }
 
     public void Restore(CatEvent inEvent)
@@ -238,6 +246,12 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         inAni.enabled = false;
         m_finishFlagAnimation.Sample();
         m_finishFlagAnimation.Play(FlagAnimation);
+    }
+
+    public void HighLight(bool highLight)
+    {
+        highlightBg.gameObject.SetActive(highLight);
+        bg.gameObject.SetActive(!highLight);
     }
 }
     

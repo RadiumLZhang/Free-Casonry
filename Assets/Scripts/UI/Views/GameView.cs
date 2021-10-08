@@ -221,6 +221,11 @@ public class GameView : MonoBehaviour
             DroppedImage.SetActive(true);
         DroppedImage = null;
         UIManager.Instance.SwitchDarkBackGround(false);
+        NPCManager manager = UIManager.Instance.scrollRelationShip.GetComponent<NPCManager>();
+        if (manager.currentOpenedNPC)
+        {
+            manager.currentOpenedNPC.GetComponent<NPCMono>().CloseEventCycle();
+        }
     }
     
     public void ButtonCloseEventDialog_OnClick()

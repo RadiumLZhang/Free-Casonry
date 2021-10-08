@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -43,6 +44,8 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
         tempMousePos_x = mousePos.x;
+        
+        EventHandlerManager.Instance.RefreshColumnImage();
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -86,6 +89,8 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     public void OnEndDrag(PointerEventData eventData)
     {
         EndDrag();
+        
+        EventHandlerManager.Instance.ResetColumnImage();
     }
 
     public void EndDrag()

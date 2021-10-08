@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Language;
 using Logic;
+using Logic.Conspiracy;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,16 @@ public class CouncilView : MonoBehaviour
     private Animation m_conspiracyPanelAnimation;
     private Animation m_managePanelAnimation;
 
+    //阴谋panel
+    private Text TextConspiracyName;
+    private Text TextConspiracyDetail;
+    public Image[] ImageConspiracyButtons;
+    public Image ImageConspiracyFinalButton;
+    public Sprite conspiracySprite;
+    public Sprite conspiracyFinalSprite;
+    public Sprite conspiracySpriteChosen;
+    public Sprite conspiracyFinalSpriteChosen;
+    
     //管理panel
     private Text TextCatName;
     private Text TextCatID;
@@ -49,26 +60,45 @@ public class CouncilView : MonoBehaviour
         imageConspiracyOn = transform.Find("ImageConspiracyOn").gameObject;
         imageManageOff = transform.Find("ImageManageOff").gameObject;
         imageManageOn = transform.Find("ImageManageOn").gameObject;
-        Transform detailPanel = panelManage.transform.Find("animationRoot/ImageCatDetail");
-        TextCatName = detailPanel.Find("TextCatName").GetComponent<Text>();
-        TextCatID = detailPanel.Find("TextCatID").GetComponent<Text>();
-        TextCatCategory = detailPanel.Find("TextCatCategory").GetComponent<Text>();
-        ImageCatState = detailPanel.Find("ImageCatState");
+        
+        Transform manageDetailPanel = panelManage.transform.Find("animationRoot/ImageCatDetail");
+        TextCatName = manageDetailPanel.Find("TextCatName").GetComponent<Text>();
+        TextCatID = manageDetailPanel.Find("TextCatID").GetComponent<Text>();
+        TextCatCategory = manageDetailPanel.Find("TextCatCategory").GetComponent<Text>();
+        ImageCatState = manageDetailPanel.Find("ImageCatState");
         TextCatState = ImageCatState.transform.Find("TextCatState").GetComponent<Text>();
-        TextScoutValue = detailPanel.Find("TextScoutValue").GetComponent<Text>();
-        TextConspiracy = detailPanel.Find("TextConspiracy").GetComponent<Text>();
-        TextCommunication = detailPanel.Find("TextCommunication").GetComponent<Text>();
-        TextSkill = detailPanel.Find("TextSkill").GetComponent<Text>();
-        TextBiography = detailPanel.Find("TextBiography").GetComponent<Text>();
+        TextScoutValue = manageDetailPanel.Find("TextScoutValue").GetComponent<Text>();
+        TextConspiracy = manageDetailPanel.Find("TextConspiracy").GetComponent<Text>();
+        TextCommunication = manageDetailPanel.Find("TextCommunication").GetComponent<Text>();
+        TextSkill = manageDetailPanel.Find("TextSkill").GetComponent<Text>();
+        TextBiography = manageDetailPanel.Find("TextBiography").GetComponent<Text>();
+
+        Transform conspiracyDetailPanel = panelConspiracy.transform.Find("animationRoot/PanelConspiracyInfo");
+        TextConspiracyName = conspiracyDetailPanel.Find("TextConspiracyName").GetComponent<Text>();
+        TextConspiracyDetail = conspiracyDetailPanel.Find("TextConspiracyDetail").GetComponent<Text>();
+        ImageConspiracyButtons =  panelConspiracy.transform.Find("animationRoot/ImageTarget/ButtonsConspiracy").GetComponentsInChildren<Image>();
+        ImageConspiracyFinalButton = panelConspiracy.transform.Find("animationRoot/ImageTarget/ButtonsConspiracy/ButtonConspiracyFinal").GetComponent<Image>();
+        // conspiracySprite = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标节点（不亮）.png");
+        // conspiracyFinalSprite = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标最终节点（不亮）.png");
+        // conspiracySpriteChosen = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标节点（点亮）.png");
+        // conspiracyFinalSpriteChosen = Resources.Load<Sprite>("Sprites/Council/猫咪阴谋/3目标最终节点（点亮）.png");
 
         m_conspiracyPanelAnimation = panelConspiracy.GetComponent<Animation>();
         m_managePanelAnimation = panelManage.GetComponent<Animation>();
-        
-        //管理panel
 
         state = CouncilState.Manage;
     }
 
+    public void SwitchConspiracyButton()
+    {
+        foreach (Image child in ImageConspiracyButtons)
+        {
+            child.sprite = conspiracySprite;
+        }
+
+        ImageConspiracyFinalButton.sprite = conspiracyFinalSprite;
+
+    }
     private void SwitchLightToConspiracy(bool bIsConspiracy)
     {
         imageConspiracyOn.SetActive(bIsConspiracy);
@@ -131,6 +161,11 @@ public class CouncilView : MonoBehaviour
         animation.Play(panelIn.name);
     }
 
+    public void SwitchConspiracy(Conspiracy conspiracy)
+    {
+        TextConspiracyName.text = conspiracy.Desc;
+        TextConspiracyDetail.text = conspiracy.Desc;
+    }
     public void SwitchCatDisplay(Cat cat)
     {
         TextCatName.text = cat.Name;
