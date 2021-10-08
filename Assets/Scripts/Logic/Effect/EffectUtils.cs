@@ -665,13 +665,8 @@ namespace Logic.Effect
 
         private static void ShowHuman(params object[] args)
         {
-            var humanId = (int) args[0];
-            if(!NPCManager.NPCs.TryGetValue(humanId, out var npcMono))
-            {
-                return;
-            }
-            
-            npcMono.Show();
+            var human = GetHuman(args[0]);
+            human.Show();
         }
 
         private static void ShowRelationLine(params object[] args)
