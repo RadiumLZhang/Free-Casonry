@@ -212,10 +212,14 @@ public class CouncilView : MonoBehaviour
         TextCatName.text = cat.Name;
         TextCatID.text = cat.ID.ToString();
         TextCatCategory.text = cat.Type;
-        var stateTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
-        if(stateTextItem != null)
-            TextCatState.text = stateTextItem.Value;
-        ImageCatState.gameObject.SetActive(TextCatState.text != "");
+        ImageCatState.gameObject.SetActive(false);
+        if (cat.CatState != 0)
+        {
+            ImageCatState.gameObject.SetActive(true);
+            var stateTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
+            if(stateTextItem != null)
+                TextCatState.text = stateTextItem.Value;
+        }
         TextScoutValue.text = cat.ScoutValue.ToString();
         TextConspiracy.text = cat.Conspiracy.ToString();
         TextCommunication.text = cat.Communication.ToString();

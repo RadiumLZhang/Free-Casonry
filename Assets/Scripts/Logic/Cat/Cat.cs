@@ -53,6 +53,7 @@ namespace Logic
 
             Properties = new List<int>(Config.Property);
             Tags = new List<string>();
+            CatState = 0;
         }
 
         public void SetProperty(CatPropertyType type, int value)
