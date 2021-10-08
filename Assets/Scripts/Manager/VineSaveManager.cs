@@ -24,7 +24,7 @@ namespace Manager
             var map = JsonConvert.DeserializeObject<Dictionary<int, bool>>(json);
             foreach (var kv in map)
             {
-                TimeTickerManager.Instance.AddWaitingEvent(
+                TimeTickerManager.Instance.AddNowWaitingEvent(
                     -1,
                     () =>
                     {
@@ -41,7 +41,6 @@ namespace Manager
                             VineManager.Vines[kv.Key].Hide();
                         }
                     },
-                    0,
                     10,
                     () =>
                     {
