@@ -29,6 +29,10 @@ namespace Manager
         
         public void InitMono(Transform panelEventExe)
         {
+            if (monoList.Count == 4)
+            {
+                return;
+            }
             monoList.Add(panelEventExe.Find("EventSlot").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot1").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot2").GetComponent<CatColumnHandler>());
@@ -127,15 +131,36 @@ namespace Manager
             for (int i = 0; i < 4; i++)
             {
                 var map = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonList[i]);
-                handlerList[i].Load(
-                    long.Parse(map["emergencyId"]),
-                    bool.Parse(map["emergencyResolved"]),
-                    long.Parse(map["eventID"]),
-                    long.Parse(map["cacheTime"]),
-                    uint.Parse(map["emergencyTime"]),
-                    bool.Parse(map["valid"]),
-                    int.Parse(map["index"])
-                    );
+                var mono = monoList[i];
+                var designedEventHandler = handlerList[i];
+                TimeTickerManager.Instance.AddWaitingEvent(
+                    -1,
+                    () =>
+                    {
+                        return mono.isInit;
+                    },
+                    () =>
+                    {
+                        designedEventHandler.Load(
+                        long.Parse(map["emergencyId"]),
+                        bool.Parse(map["emergencyResolved"]),
+                        long.Parse(map["eventID"]),
+                        long.Parse(map["cacheTime"]),
+                        uint.Parse(map["emergencyTime"]),
+                        bool.Parse(map["valid"]),
+                        int.Parse(map["index"])
+                        );
+                    },
+                    0,
+                    10,
+                    () =>
+                    {
+                        Debug.LogError("Event Handler Manager:Load False!");
+                    }
+                );
+                
+                
+                
             }
         }
 

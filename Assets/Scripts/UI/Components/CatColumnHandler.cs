@@ -40,7 +40,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
     private Transform imageRemainingTime;
     private Text textRemainingTime;
-    
+    public bool isInit = false;
     void Start()
     {
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
@@ -54,6 +54,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         
         m_eventImage = transform.Find("ImageEvent").GetComponent<Image>();
         m_mask = m_eventImage.transform.Find("Mask").GetComponent<RectTransform>();
+        isInit = true;
+        Debug.Log("cat column is started");
 
         bg = transform.Find("ImageEventBG");
         highlightBg = transform.Find("ImageEventBGHighlighted");
@@ -65,6 +67,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         transform.Find("Image1/Text").GetComponent<Text>().text = cat.ScoutValue.ToString();
         transform.Find("Image2/Text").GetComponent<Text>().text = cat.Conspiracy.ToString();
         transform.Find("Image3/Text").GetComponent<Text>().text = cat.Communication.ToString();
+
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -163,9 +166,13 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         
         m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
         m_eventImage.enabled = true;
+        remainingTime = eventHandler.GetTimeRemain();
+        textRemainingTime.text = Convert.ToString((remainingTime) * 10);
+        imageRemainingTime.gameObject.SetActive(true);
         m_eventImage.transform.Find("ImageEventIcon").GetComponent<Image>().enabled = true;
         InitHandler();
     }
+    
     public void InitHandler()
     {
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
@@ -223,6 +230,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             var percent = (float)remainingTime / tempEvent.ConsumeTime;
             m_mask.localScale = new Vector3(1, percent, 1);
         }
+        
         
         if (tempEvent == null)
             OnFinish();
