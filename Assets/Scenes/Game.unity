@@ -6645,7 +6645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -767.79, y: -331.55048}
+  m_AnchoredPosition: {x: 179, y: 150.05}
   m_SizeDelta: {x: 399.9184, y: 233.8119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653501194
@@ -17722,6 +17722,7 @@ MonoBehaviour:
   conspiracyFinalSprite: {fileID: 21300000, guid: d06f2ecd922d4fd43a23b00841bcb1f7, type: 3}
   conspiracySpriteChosen: {fileID: 21300000, guid: 2a243e13ac63f374d99b7067c93e8ce4, type: 3}
   conspiracyFinalSpriteChosen: {fileID: 21300000, guid: 9e85ce3555357234da8bfb8ca70a93b6, type: 3}
+  conspiracyRequirements: []
 --- !u!114 &1904792618
 MonoBehaviour:
   m_ObjectHideFlags: 0
