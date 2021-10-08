@@ -88,6 +88,16 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         m_mask.gameObject.SetActive(true);
     }
 
+    public void Restore(CatEvent inEvent)
+    {
+        myID = inEvent.ID;
+        DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
+        gameView.currentDialogEventID = myID;
+        m_myCatEventInfo = eventHandler.GetEventInfo();
+        m_eventImage.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        m_eventImage.enabled = true;
+        InitHandler();
+    }
     public void InitHandler()
     {
         DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
