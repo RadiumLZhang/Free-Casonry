@@ -133,5 +133,21 @@ namespace Manager
                     );
             }
         }
+
+        public void RefreshColumnImage()
+        {
+            for (int i = 0; i < handlerList.Count; i++)
+            {
+                monoList[i].HighLight(!handlerList[i].HasEvent());
+            }
+        }
+
+        public void ResetColumnImage()
+        {
+            for (int i = 0; i < handlerList.Count; i++)
+            {
+                monoList[i].HighLight(false);
+            }
+        }
     }
 }

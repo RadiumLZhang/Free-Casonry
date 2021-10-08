@@ -207,6 +207,11 @@ namespace EventHandler
             cacheTime = cacheTime - 1;
             UpdateEmergencyEvent();
         }
+        
+        public bool HasEvent()
+        {
+            return m_catEventInfo != null;
+        }
 
         public string Save()
         {
