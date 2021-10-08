@@ -359,7 +359,7 @@ namespace Logic.Effect
 
         private static void GameEnd(params object[] args)
         {
-            //todo
+            UIManager.Instance.EndingMono.EnterEnding((int) args[0]);
         }
 
         private static void TagChange(bool isAdd, params object[] args)

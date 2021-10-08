@@ -10,10 +10,10 @@ namespace Manager
     {
         public string Save()
         {
-            var map = new Dictionary<int, bool>();
+            var map = new Dictionary<int, (bool, int)>();
             foreach (var kv in VineManager.Vines)
             {
-                map[kv.Key] = kv.Value.Active;
+                map[kv.Key] = (kv.Value.Active, kv.Value.relationId);
             }
             var jsonString = JsonConvert.SerializeObject(map);
             return jsonString;
@@ -21,7 +21,7 @@ namespace Manager
 
         public void Load(string json)
         {
-            var map = JsonConvert.DeserializeObject<Dictionary<int, bool>>(json);
+            var map = JsonConvert.DeserializeObject<Dictionary<int, (bool, int)>>(json);
             foreach (var kv in map)
             {
                 TimeTickerManager.Instance.AddNowWaitingEvent(
@@ -32,14 +32,17 @@ namespace Manager
                     },
                     () =>
                     {
-                        if (kv.Value)
+                        var vineMono = VineManager.Vines[kv.Key];
+                        if (kv.Value.Item1)
                         {
-                            VineManager.Vines[kv.Key].Show();
+                            vineMono.Show();
                         }
                         else
                         {
-                            VineManager.Vines[kv.Key].Hide();
+                            vineMono.Hide();
                         }
+                        
+                        vineMono.SetText(kv.Value.Item2);
                     },
                     10,
                     () =>

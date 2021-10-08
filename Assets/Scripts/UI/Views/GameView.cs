@@ -181,6 +181,7 @@ public class GameView : MonoBehaviour
     
     public void ButtonPause_OnClick()
     {
+<<<<<<< HEAD
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "暂停-订书机2");
         adplayer.clip = m_clip;
         adplayer.Play();
@@ -188,11 +189,14 @@ public class GameView : MonoBehaviour
         buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
         buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
+=======
+>>>>>>> 8ed5f3de4ff9f6adc691e41923739954bd18ead9
         TimeTickerManager.Instance.StopTick();
     }
     
     public void ButtonNormal_OnClick()
     {
+<<<<<<< HEAD
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "正常-订书机3");
         adplayer.clip = m_clip;
         adplayer.Play();
@@ -200,11 +204,14 @@ public class GameView : MonoBehaviour
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
         buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
         buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
+=======
+>>>>>>> 8ed5f3de4ff9f6adc691e41923739954bd18ead9
         TimeTickerManager.Instance.StartTick();
     }
     
     public void ButtonSpeed_OnClick()
     {
+<<<<<<< HEAD
         
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "加速-订书机1");
         adplayer.clip = m_clip;
@@ -213,7 +220,37 @@ public class GameView : MonoBehaviour
         buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
         buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
+=======
+>>>>>>> 8ed5f3de4ff9f6adc691e41923739954bd18ead9
         TimeTickerManager.Instance.StartTickWithSpeed(TickerSpeedEnum.Fast);
+    }
+
+    public void SetSpeedButtonIcon(int speed)
+    {
+        if (speed == 0)
+        {
+            buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
+        }
+        else
+        {
+            buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
+        }
+        if (speed == 1)
+        {
+            buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
+        }
+        else
+        {
+            buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
+        }
+        if (speed == 2)
+        {
+            buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
+        }
+        else
+        {
+            buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
+        }
     }
     
     //Button in Council

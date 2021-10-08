@@ -13,6 +13,8 @@ using UnityEngine.UI;
 public class UIManager: BaseModel<UIManager>, ISaveObject
 {
     public bool buttonCouncilActive = true;
+
+    public bool IsInit = false;
     
     public Transform gameView;
     public GameView gameViewMono;
@@ -87,10 +89,13 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     //Animation
     public GameObject EventPopAnimation;
-
+    
+    public EndingMono EndingMono;
     //music
     public AudioSource adplayer;
+
     
+
     public string Save()
     {
         var jsonString = JsonConvert.SerializeObject(buttonCouncilActive);
@@ -155,8 +160,11 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
         panelNPCInfo = gameView.Find("PanelNPCInfo").GetComponent<NPCInfoMono>();
 
+        EndingMono = gameView.Find("EndingPanel").GetComponent<EndingMono>();
+
         InitCatColumns();
         InitDialogs();
+        IsInit = true;
     }
     private void InitCatColumns()
     {

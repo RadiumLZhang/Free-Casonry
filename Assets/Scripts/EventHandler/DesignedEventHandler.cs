@@ -257,9 +257,23 @@ namespace EventHandler
             {
                 emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
             }
-            
 
-            monoHandler.Restore(m_catEventInfo);
+            TimeTickerManager.Instance.AddNowWaitingEvent(
+                -1,
+                () =>
+                {
+                    return true;
+                },
+                () =>
+                {
+                    monoHandler.Restore(m_catEventInfo);
+                },
+                10,
+                () =>
+                {
+                    Debug.LogError("DesignedEventHandler:Load False!");
+                }
+            );
         }
     }
 }
