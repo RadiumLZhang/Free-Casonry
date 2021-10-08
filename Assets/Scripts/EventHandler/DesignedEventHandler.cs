@@ -206,6 +206,7 @@ namespace EventHandler
             if (cacheTime <= 0)
             {
                 UIManager.Instance.SwitchEmergencyFlag(index, false);
+                UIManager.Instance.PlayBGM("AudioClips/主界面/" + "突发事件出现");
             }
         }
 

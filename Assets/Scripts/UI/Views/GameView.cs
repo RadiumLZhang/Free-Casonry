@@ -60,21 +60,14 @@ public class GameView : MonoBehaviour
     public float relationshipScale;
     public Vector2 oldRelationshipPos;
     public bool bIsRelationshipScaling;
-    //还有这里！！！@muidarzhang
+    
     public AudioSource adplayer;
 
 
     private List<CatEvent> m_oldSpecialEvents;
     void Start()
     {
-        //这是例子：@muidarzhang
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
-        //player.clip = Resources.Load<AudioClip>("AudioClips/" + "文件名，有文件夹的话就文件夹/文件名，不要后缀");@muidarzhang
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/" + "猫叫");
-        //下面这段方法在事件发生时调，上面这段在Start里初始化好@muidarzhang
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        //到这就完了@muidarzhang
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
         panelEventExe = transform.Find("PanelEventExe").gameObject;
@@ -123,6 +116,11 @@ public class GameView : MonoBehaviour
 
     public void ButtonSettings_OnClick()
     {
+        //@muidarzhang todo 
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-暗黑地牢");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         TimeTickerManager.Instance.StopTick();
         UIManager.Instance.SwitchDarkBackGround(true);
         panelSettings.SetActive(true);
@@ -130,6 +128,10 @@ public class GameView : MonoBehaviour
 
     public void ButtonCloseRelationship_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人际关系缩放-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         relationshipScale = 0.75f;
         bIsRelationshipScaling = true;
         scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(oldRelationshipPos.x, oldRelationshipPos.y);
@@ -148,6 +150,10 @@ public class GameView : MonoBehaviour
     }
     public void ButtonRelationship_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人际关系缩放-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         relationshipScale = 0.37f;
         bIsRelationshipScaling = true;
         oldRelationshipPos = new Vector2(UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().horizontalNormalizedPosition,UIManager.Instance.scrollRelationShip.GetComponent<ScrollRect>().verticalNormalizedPosition);
@@ -166,11 +172,19 @@ public class GameView : MonoBehaviour
     }
     public void ButtonCouncil_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "转入猫咪议会");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         panelCouncil.SetActive(true);
     }
     
     public void ButtonPause_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "暂停-订书机2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
         buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
@@ -179,6 +193,10 @@ public class GameView : MonoBehaviour
     
     public void ButtonNormal_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "正常-订书机3");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
         buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
         buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
@@ -187,6 +205,11 @@ public class GameView : MonoBehaviour
     
     public void ButtonSpeed_OnClick()
     {
+        
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "加速-订书机1");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
         buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
@@ -196,17 +219,30 @@ public class GameView : MonoBehaviour
     //Button in Council
     public void ButtonBacktoGame_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         panelCouncil.SetActive(false);
     }
 
     //Buttons in Settings
     public void ButtonSaveQuit_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-连续翻书");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         SaveManager.Instance.SaveData(PlayerPrefs.GetString("userName"));
         SceneManager.LoadScene("StartMenu");
     }
     public void ButtonResume_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
+        
         TimeTickerManager.Instance.Restore();
         UIManager.Instance.SwitchDarkBackGround(false);
         panelSettings.SetActive(false);
@@ -215,15 +251,29 @@ public class GameView : MonoBehaviour
     //Buttons in Event Exe
     public void ButtonOpenExePanel_OnClick()
     {
+        
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         OpenExePanel();
     }
     public void ButtonCloseExePanel_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         CloseExePanel();
     }
 
+    //开始事件
     public void ButtonStartEvent_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         //TODO：把原来的拖入响应事件放到这里
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
@@ -239,8 +289,13 @@ public class GameView : MonoBehaviour
         }
     }
     
+    // 关闭事件
     public void ButtonCloseEventDialog_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         UIManager.Instance.panelStartEventDialog.SetActive(false);
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         if (DroppedImage)
@@ -253,6 +308,8 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchDarkBackGround(false);
         
     }
+    
+    // 结算事件
     public void ButtonFinishDialog_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
@@ -261,6 +318,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchDarkBackGround(false);
     }
 
+    // 关闭结算
     public void ButtonCloseFinishDialog_OnClick()
     {
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
@@ -268,6 +326,7 @@ public class GameView : MonoBehaviour
         TimeTickerManager.Instance.Restore(); //恢复时间
     }
 
+    // 紧急选择1
     public void ButtonEmergencyDialogChoice1_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
@@ -276,6 +335,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchDarkBackGround(false);
     }
 
+    // 紧急选择2
     public void ButtonEmergencyDialogChoice2_OnClick()
     {
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
@@ -284,12 +344,15 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchDarkBackGround(false);
     }
 
+    // 关闭紧急
     public void ButtonCloseEmergencyDialog_OnClick()
     {
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
         TimeTickerManager.Instance.Restore();
     }
+    
+    
     public void OpenExePanel()
     {
         buttonOpenExePanel.gameObject.SetActive(false);

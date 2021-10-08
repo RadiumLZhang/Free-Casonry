@@ -88,6 +88,9 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     //Animation
     public GameObject EventPopAnimation;
 
+    //music
+    public AudioSource adplayer;
+    
     public string Save()
     {
         var jsonString = JsonConvert.SerializeObject(buttonCouncilActive);
@@ -114,6 +117,12 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         catColumnHandlers[index].SetEmergencyFlag(bIsSwitchToShown);
     }
 
+    public void PlayBGM(string path)
+    {
+        AudioClip m_clip = Resources.Load<AudioClip>(path);
+        adplayer.clip = m_clip;
+        adplayer.Play();
+    }
     public void SwitchCatColumn(int index, bool bIsSwitchToShown)
     {
         catColumnHandlers[index].gameObject.SetActive(bIsSwitchToShown);
@@ -121,7 +130,9 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     public void Init()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         //darkBackgroundImage = gameView.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
+        
         panelCouncil = gameView.Find("PanelCouncil").gameObject;
         panelSettings = gameView.Find("PanelSettings").gameObject;
         panelEventExe = gameView.Find("PanelEventExe").gameObject;
