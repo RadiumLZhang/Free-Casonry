@@ -65,6 +65,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
             {
                 bIsExtracting = true;
                 transform.GetComponent<Image>().maskable = false;
+                transform.Find("ImageEventIcon").GetComponent<Image>().maskable = false;
                 //transform.Find("EventTimeBackground").gameObject.SetActive(false);
                 gameView.OpenExePanel();
             }
@@ -100,6 +101,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         timerDragStart = 6;
         rectTransform.localPosition = localPos;
         transform.GetComponent<Image>().maskable = true;
+        transform.Find("ImageEventIcon").GetComponent<Image>().maskable = true;
         //transform.Find("EventTimeBackground").gameObject.SetActive(true);
         GetComponent<Image>().raycastTarget = true;
     }

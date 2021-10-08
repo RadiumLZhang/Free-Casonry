@@ -51,8 +51,8 @@ namespace Logic.Human
         /// </summary>
         public int Defence => m_properties[1];
         public bool DefenceLock => m_locks[1];
-        
-        
+
+        public bool IsShow { get; set; }
 
         /// <summary>
         /// 养的猫
@@ -168,6 +168,18 @@ namespace Logic.Human
         {
             Image = image;
             //todo
+        }
+
+        public void Show()
+        {
+            IsShow = true;
+            
+            if(!NPCManager.NPCs.TryGetValue(ID, out var npcMono))
+            {
+                return;
+            }
+            
+            npcMono.Show();
         }
     }
 }

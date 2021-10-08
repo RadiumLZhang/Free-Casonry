@@ -54,6 +54,10 @@ namespace Manager
         public void Load(string json)
         {
             humanMap = JsonConvert.DeserializeObject<Dictionary<long, Human>>(json);
+            foreach (var human in humanMap)
+            {
+                NPCManager.NPCs[human.Key].gameObject.SetActive(human.Value.IsShow);
+            }
         }
     }
 }
