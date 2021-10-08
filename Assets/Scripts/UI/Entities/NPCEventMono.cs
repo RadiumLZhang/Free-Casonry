@@ -26,9 +26,25 @@ public class NPCEventMono : MonoBehaviour
         remainingTime = m_myCatEventInfo.ConsumeTime;
         transform.Find("EventTimeBackground/TextEventTime").GetComponent<Text>().text = (m_myCatEventInfo.ConsumeTime * 10) + "";
         transform.Find("EventTimeBackground/TextEventMin").GetComponent<Text>().text = "min";
-        GameObject m_image = transform.Find("ImageEvent").gameObject;
-        m_image.SetActive(true);
-        m_image.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        Image m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
+        m_imageEvent.gameObject.SetActive(true);
+        switch (m_myCatEventInfo.Type)
+        {
+            case 0:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/特殊事件玻璃");
+                break;
+            case 1:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/探查事件玻璃");
+                break;
+            case 2:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/密谋事件玻璃");
+                break;
+            case 3:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/交际事件玻璃");
+                break;
+        }
+        
+        m_imageEvent.transform.Find("ImageEventIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
         
         transform.Find("EventTextBackground").Find("TextEvent").GetComponent<Text>().text = m_myCatEventInfo.Name;
         transform.Find("RedPoint").gameObject.SetActive(m_myCatEventInfo.IsImportant);

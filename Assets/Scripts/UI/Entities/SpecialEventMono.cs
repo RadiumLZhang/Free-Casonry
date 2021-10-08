@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ public class SpecialEventMono : MonoBehaviour
     private Animation m_animation;
     private DragHandlerSpecialEvent m_dragHandlerSpecialEvent;
     private Image m_imageEvent;
+    private Image m_imageEventIcon;
     private Transform m_eventBackground;
     private Text m_txtEventBackground;
     
@@ -48,6 +50,7 @@ public class SpecialEventMono : MonoBehaviour
         
         textRemainingTime = transform.Find("EventTimeBackground").Find("TextEventTime").GetComponent<Text>();
         m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
+        m_imageEventIcon = m_imageEvent.transform.Find("ImageEventIcon").GetComponent<Image>();
         m_eventBackground = transform.Find("EventTextBackground");
         m_txtEventBackground = m_eventBackground.Find("TextEvent").GetComponent<Text>();
         m_dragHandlerSpecialEvent = transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>();
@@ -57,8 +60,24 @@ public class SpecialEventMono : MonoBehaviour
 
         //UI
         remainingTime = m_myCatEventInfo.ConsumeTime;
+
+        switch (m_myCatEventInfo.Type)
+        {
+            case 0:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/特殊事件玻璃");
+                break;
+            case 1:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/探查事件玻璃");
+                break;
+            case 2:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/密谋事件玻璃");
+                break;
+            case 3:
+                m_imageEvent.sprite = Resources.Load<Sprite>("Sprites/Events/交际事件玻璃");
+                break;
+        }
         
-        m_imageEvent.sprite = Resources.Load<Sprite>(m_myCatEventInfo.Imageout);
+        m_imageEventIcon.sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
         m_txtEventBackground.text = m_myCatEventInfo.Name;
         textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "";
         //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身

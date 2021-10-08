@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -117,6 +118,7 @@ public class NPCManager : MonoBehaviour
         }
         
         UpdateAllNPCEvents();
+        UpdateAllNPCCats();
     }
     
     public static void SetEventCycleActive(long id, bool active)
@@ -134,6 +136,24 @@ public class NPCManager : MonoBehaviour
         foreach (var item in NPCs)
         {
             item.Value.RefreshEventCycle();
+        }
+    }
+
+    public void UpdateAllNPCCats()
+    {
+        foreach (var item in NPCs)
+        {
+            var human = HumanManager.Instance.GetHuman(item.Value.id);
+            if (human.cat != null)
+            {
+                item.Value.imageCat.sprite = Resources.Load<Sprite>(human.cat.Image);
+                item.Value.imageCat.gameObject.SetActive(true);
+            }
+            else
+            {
+                item.Value.imageCat.gameObject.SetActive(false);
+            }
+            
         }
     }
 }

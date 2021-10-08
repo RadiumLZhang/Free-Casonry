@@ -57,11 +57,31 @@
     },
     {
       "ConspiracyId" : "80050",
+      "description" : "阴谋酝酿中",
+      "condition" : "-1"
+    },
+    {
+      "ConspiracyId" : "80060",
+      "description" : "阴谋酝酿中",
+      "condition" : "-1"
+    },
+    {
+      "ConspiracyId" : "80070",
+      "description" : "阴谋酝酿中",
+      "condition" : "-1"
+    },
+    {
+      "ConspiracyId" : "80080",
+      "description" : "阴谋酝酿中",
+      "condition" : "-1"
+    },
+    {
+      "ConspiracyId" : "80090",
       "description" : "找寻所有失落的圣器",
       "condition" : "-1"
     },
     {
-      "ConspiracyId" : "80051",
+      "ConspiracyId" : "80091",
       "description" : "颠覆人类政权",
       "condition" : "-1"
     }

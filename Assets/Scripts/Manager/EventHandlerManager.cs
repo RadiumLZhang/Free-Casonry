@@ -76,6 +76,11 @@ namespace Manager
             }
             return null;
         }
+
+        public Cat GetCatByIndex(int index)
+        {
+            return handlerList[index].GetCat();
+        }
         public bool AddNewHandler(Cat catInfo)
         {
             if (handlerList.Count >= 4)
@@ -156,6 +161,22 @@ namespace Manager
                 
                 
                 
+            }
+        }
+
+        public void RefreshColumnImage()
+        {
+            for (int i = 0; i < handlerList.Count; i++)
+            {
+                monoList[i].HighLight(!handlerList[i].HasEvent());
+            }
+        }
+
+        public void ResetColumnImage()
+        {
+            for (int i = 0; i < handlerList.Count; i++)
+            {
+                monoList[i].HighLight(false);
             }
         }
     }

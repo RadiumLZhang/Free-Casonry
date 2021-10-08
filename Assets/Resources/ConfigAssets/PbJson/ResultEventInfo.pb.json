@@ -11,7 +11,7 @@
         "500000",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "300010",
@@ -24,7 +24,7 @@
         "500010",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10001"
     },
     {
       "resultId" : "300020",
@@ -37,7 +37,7 @@
         "500020",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10002"
     },
     {
       "resultId" : "300030",
@@ -51,7 +51,7 @@
         "550000",
         "500032"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10002"
     },
     {
       "resultId" : "300031",
@@ -66,7 +66,7 @@
         "500034",
         "500035"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10004"
     },
     {
       "resultId" : "300040",
@@ -79,7 +79,7 @@
         "500040",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10004"
     },
     {
       "resultId" : "300050",
@@ -92,7 +92,7 @@
         "500050",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10005"
     },
     {
       "resultId" : "300060",
@@ -105,7 +105,7 @@
         "500060",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10005"
     },
     {
       "resultId" : "300070",
@@ -122,7 +122,7 @@
         "500076",
         "500077"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10007"
     },
     {
       "resultId" : "310000",
@@ -136,7 +136,7 @@
         "510001",
         "510002"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310010",
@@ -148,7 +148,7 @@
       "effects" : [
         "510000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310020",
@@ -160,7 +160,7 @@
       "effects" : [
         "510000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310030",
@@ -172,7 +172,7 @@
       "effects" : [
         "0"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310040",
@@ -184,7 +184,7 @@
       "effects" : [
         "0"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310050",
@@ -198,7 +198,7 @@
         "510030",
         "510031"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311000",
@@ -214,7 +214,7 @@
         "511003",
         "511004"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311010",
@@ -226,7 +226,7 @@
       "effects" : [
         "511000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311020",
@@ -238,7 +238,7 @@
       "effects" : [
         "511000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311030",
@@ -250,7 +250,7 @@
       "effects" : [
         "0"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311040",
@@ -262,7 +262,7 @@
       "effects" : [
         "0"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311050",
@@ -274,7 +274,7 @@
       "effects" : [
         "0"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312000",
@@ -292,7 +292,7 @@
         "512005",
         "512006"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312010",
@@ -304,7 +304,7 @@
       "effects" : [
         "512000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312020",
@@ -316,7 +316,7 @@
       "effects" : [
         "512000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312030",
@@ -328,7 +328,7 @@
       "effects" : [
         "512010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312040",
@@ -341,7 +341,7 @@
         "512020",
         "512040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312050",
@@ -353,7 +353,7 @@
       "effects" : [
         "0"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313000",
@@ -369,7 +369,7 @@
         "513003",
         "513004"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313010",
@@ -381,7 +381,7 @@
       "effects" : [
         "513000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313020",
@@ -393,7 +393,7 @@
       "effects" : [
         "513000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313030",
@@ -405,7 +405,7 @@
       "effects" : [
         "513010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313040",
@@ -418,7 +418,7 @@
         "513020",
         "513040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313050",
@@ -431,7 +431,7 @@
         "512030",
         "513030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "314000",
@@ -445,7 +445,7 @@
         "514001",
         "514002"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "314010",
@@ -457,7 +457,7 @@
       "effects" : [
         "514000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "314020",
@@ -469,7 +469,7 @@
       "effects" : [
         "514000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "314030",
@@ -481,7 +481,7 @@
       "effects" : [
         "514010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "314040",
@@ -494,7 +494,7 @@
         "514020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "314050",
@@ -507,7 +507,7 @@
         "550010",
         "514030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315000",
@@ -523,7 +523,7 @@
         "515003",
         "515004"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315010",
@@ -535,7 +535,7 @@
       "effects" : [
         "515000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315020",
@@ -547,7 +547,7 @@
       "effects" : [
         "515000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315030",
@@ -559,7 +559,7 @@
       "effects" : [
         "515010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315040",
@@ -572,7 +572,7 @@
         "515020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315050",
@@ -585,7 +585,7 @@
         "550010",
         "515030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316000",
@@ -601,7 +601,7 @@
         "516003",
         "516004"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316010",
@@ -613,7 +613,7 @@
       "effects" : [
         "516000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316020",
@@ -625,7 +625,7 @@
       "effects" : [
         "516000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316030",
@@ -637,7 +637,7 @@
       "effects" : [
         "516010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316040",
@@ -650,7 +650,7 @@
         "516020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316050",
@@ -663,7 +663,7 @@
         "550010",
         "516030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317000",
@@ -682,7 +682,7 @@
         "517006",
         "517007"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317010",
@@ -694,7 +694,7 @@
       "effects" : [
         "517000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317020",
@@ -706,7 +706,7 @@
       "effects" : [
         "517000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317030",
@@ -718,7 +718,7 @@
       "effects" : [
         "517010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317040",
@@ -731,7 +731,7 @@
         "517020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317050",
@@ -744,7 +744,7 @@
         "550010",
         "517030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318000",
@@ -762,7 +762,7 @@
         "518005",
         "518006"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318010",
@@ -774,7 +774,7 @@
       "effects" : [
         "518000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318020",
@@ -786,7 +786,7 @@
       "effects" : [
         "518000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318030",
@@ -798,7 +798,7 @@
       "effects" : [
         "518010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318040",
@@ -811,7 +811,7 @@
         "518020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318050",
@@ -824,7 +824,7 @@
         "550010",
         "518030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319000",
@@ -841,7 +841,7 @@
         "519004",
         "519005"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319010",
@@ -853,7 +853,7 @@
       "effects" : [
         "519000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319020",
@@ -865,7 +865,7 @@
       "effects" : [
         "519000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319030",
@@ -877,7 +877,7 @@
       "effects" : [
         "519010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319040",
@@ -890,7 +890,7 @@
         "519020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319050",
@@ -903,7 +903,7 @@
         "550010",
         "519030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320000",
@@ -920,7 +920,7 @@
         "520004",
         "520005"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320010",
@@ -932,7 +932,7 @@
       "effects" : [
         "520000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320020",
@@ -944,7 +944,7 @@
       "effects" : [
         "520000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320030",
@@ -956,7 +956,7 @@
       "effects" : [
         "520010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320040",
@@ -969,7 +969,7 @@
         "520020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320050",
@@ -982,7 +982,7 @@
         "550010",
         "520030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321000",
@@ -997,7 +997,7 @@
         "521002",
         "521003"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321010",
@@ -1009,7 +1009,7 @@
       "effects" : [
         "521000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321020",
@@ -1021,7 +1021,7 @@
       "effects" : [
         "521000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321030",
@@ -1033,7 +1033,7 @@
       "effects" : [
         "521010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321040",
@@ -1046,7 +1046,7 @@
         "521020",
         "510040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321050",
@@ -1059,7 +1059,7 @@
         "550010",
         "521030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "301000",
@@ -1071,7 +1071,7 @@
       "effects" : [
         "501000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "301010",
@@ -1083,7 +1083,7 @@
       "effects" : [
         "501010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "301020",
@@ -1095,7 +1095,7 @@
       "effects" : [
         "501020"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "301030",
@@ -1107,7 +1107,7 @@
       "effects" : [
         "501030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "301040",
@@ -1119,7 +1119,7 @@
       "effects" : [
         "501040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "301050",
@@ -1132,7 +1132,7 @@
         "501050",
         "501051"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "302000",
@@ -1145,7 +1145,7 @@
         "502000",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "302010",
@@ -1157,7 +1157,7 @@
       "effects" : [
         "502010"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "302020",
@@ -1169,7 +1169,7 @@
       "effects" : [
         "502020"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "302030",
@@ -1183,7 +1183,7 @@
         "502031",
         "502032"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310100",
@@ -1196,7 +1196,7 @@
         "510100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310110",
@@ -1209,7 +1209,7 @@
         "510110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310120",
@@ -1222,7 +1222,7 @@
         "510120",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310130",
@@ -1235,7 +1235,7 @@
         "510100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310140",
@@ -1248,7 +1248,7 @@
         "510110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "310150",
@@ -1261,7 +1261,7 @@
         "510120",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "311060",
@@ -1274,7 +1274,7 @@
         "511060",
         "511061"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312100",
@@ -1287,7 +1287,7 @@
         "512100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312110",
@@ -1300,7 +1300,7 @@
         "512110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312120",
@@ -1313,7 +1313,7 @@
         "512120",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312130",
@@ -1326,7 +1326,7 @@
         "512130",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "312140",
@@ -1339,7 +1339,7 @@
         "512140",
         "550002"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313100",
@@ -1352,7 +1352,7 @@
         "513100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313110",
@@ -1365,7 +1365,7 @@
         "513110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313120",
@@ -1378,7 +1378,7 @@
         "513120",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313130",
@@ -1391,7 +1391,7 @@
         "513130",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313140",
@@ -1404,7 +1404,7 @@
         "513140",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313150",
@@ -1417,7 +1417,7 @@
         "513150",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313160",
@@ -1431,7 +1431,7 @@
         "550000",
         "513161"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313200",
@@ -1444,7 +1444,7 @@
         "513200",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313210",
@@ -1457,7 +1457,7 @@
         "513210",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313220",
@@ -1470,7 +1470,7 @@
         "513220",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "313230",
@@ -1484,7 +1484,7 @@
         "550000",
         "513231"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315100",
@@ -1497,7 +1497,7 @@
         "515100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315101",
@@ -1510,7 +1510,7 @@
         "515100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315110",
@@ -1523,7 +1523,7 @@
         "515110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315111",
@@ -1536,7 +1536,7 @@
         "515110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315120",
@@ -1550,7 +1550,7 @@
         "515121",
         "515122"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315130",
@@ -1564,7 +1564,7 @@
         "515131",
         "515132"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315140",
@@ -1577,7 +1577,7 @@
         "515140",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315150",
@@ -1590,7 +1590,7 @@
         "515150",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315160",
@@ -1603,7 +1603,7 @@
         "515160",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315170",
@@ -1617,7 +1617,7 @@
         "550000",
         "515171"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "315180",
@@ -1630,7 +1630,7 @@
         "515180",
         "515181"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316100",
@@ -1643,7 +1643,7 @@
         "516100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316101",
@@ -1656,7 +1656,7 @@
         "516100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316110",
@@ -1669,7 +1669,7 @@
         "516110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316120",
@@ -1682,7 +1682,7 @@
         "516120",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316121",
@@ -1696,7 +1696,7 @@
         "550000",
         "516122"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "316130",
@@ -1709,7 +1709,7 @@
         "516130",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317100",
@@ -1722,7 +1722,7 @@
         "517100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317110",
@@ -1735,7 +1735,7 @@
         "517110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317120",
@@ -1748,7 +1748,7 @@
         "517120",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317130",
@@ -1761,7 +1761,7 @@
         "517130",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317140",
@@ -1774,7 +1774,7 @@
         "517140",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317141",
@@ -1787,7 +1787,7 @@
         "517141",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317150",
@@ -1801,7 +1801,7 @@
         "550000",
         "517151"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "317151",
@@ -1817,7 +1817,7 @@
         "517153",
         "517154"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318100",
@@ -1829,7 +1829,7 @@
       "effects" : [
         "518100"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318110",
@@ -1841,7 +1841,7 @@
       "effects" : [
         "518113"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318111",
@@ -1853,7 +1853,7 @@
       "effects" : [
         "518114"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318112",
@@ -1865,7 +1865,7 @@
       "effects" : [
         "518115"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318113",
@@ -1877,7 +1877,7 @@
       "effects" : [
         "518116"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "318114",
@@ -1888,7 +1888,8 @@
       "recordId" : "0",
       "effects" : [
         "518116"
-      ]
+      ],
+      "picture" : "10000"
     },
     {
       "resultId" : "319100",
@@ -1901,7 +1902,7 @@
         "519100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319101",
@@ -1914,7 +1915,7 @@
         "519101",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319110",
@@ -1927,7 +1928,7 @@
         "519110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319111",
@@ -1940,7 +1941,7 @@
         "519111",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319120",
@@ -1951,9 +1952,10 @@
       "recordId" : "0",
       "effects" : [
         "519120",
-        "550000"
+        "550000",
+        "519121"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319121",
@@ -1963,12 +1965,11 @@
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
-        "519121",
         "550000",
         "519122",
         "519123"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319130",
@@ -1981,7 +1982,7 @@
         "519130",
         "519131"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319140",
@@ -1994,7 +1995,7 @@
         "519140",
         "519141"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "319150",
@@ -2007,7 +2008,7 @@
         "519150",
         "519151"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320100",
@@ -2020,7 +2021,7 @@
         "520100",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320110",
@@ -2033,7 +2034,7 @@
         "520110",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320120",
@@ -2047,7 +2048,7 @@
         "550000",
         "520121"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320130",
@@ -2060,7 +2061,7 @@
         "520130",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320140",
@@ -2073,7 +2074,7 @@
         "520140",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320150",
@@ -2086,7 +2087,7 @@
         "520150",
         "550000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "320160",
@@ -2098,7 +2099,7 @@
       "effects" : [
         "520160"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321100",
@@ -2110,7 +2111,7 @@
       "effects" : [
         "521100"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321110",
@@ -2123,7 +2124,7 @@
         "521110",
         "521112"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321111",
@@ -2136,7 +2137,7 @@
         "521110",
         "521111"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321120",
@@ -2148,7 +2149,7 @@
       "effects" : [
         "521120"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321130",
@@ -2160,7 +2161,7 @@
       "effects" : [
         "521130"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321140",
@@ -2173,7 +2174,7 @@
         "521140",
         "521141"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321150",
@@ -2187,7 +2188,7 @@
         "521151",
         "521152"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321160",
@@ -2199,7 +2200,7 @@
       "effects" : [
         "521160"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321170",
@@ -2211,7 +2212,7 @@
       "effects" : [
         "521170"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "321180",
@@ -2224,7 +2225,7 @@
         "521180",
         "521181"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330000",
@@ -2236,7 +2237,7 @@
       "effects" : [
         "530000"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330010",
@@ -2249,7 +2250,7 @@
         "530010",
         "530011"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330020",
@@ -2262,7 +2263,7 @@
         "530020",
         "530021"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330030",
@@ -2274,7 +2275,7 @@
       "effects" : [
         "530030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330040",
@@ -2286,7 +2287,7 @@
       "effects" : [
         "530040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330050",
@@ -2298,7 +2299,7 @@
       "effects" : [
         "530050"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330060",
@@ -2310,7 +2311,7 @@
       "effects" : [
         "530060"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330070",
@@ -2322,7 +2323,7 @@
       "effects" : [
         "530070"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330080",
@@ -2334,7 +2335,7 @@
       "effects" : [
         "530080"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330090",
@@ -2346,7 +2347,7 @@
       "effects" : [
         "530090"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330100",
@@ -2358,7 +2359,7 @@
       "effects" : [
         "530100"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330110",
@@ -2370,7 +2371,7 @@
       "effects" : [
         "530110"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330120",
@@ -2385,7 +2386,7 @@
         "530122",
         "530123"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330130",
@@ -2400,7 +2401,7 @@
         "530132",
         "530133"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330140",
@@ -2415,7 +2416,7 @@
         "530142",
         "530143"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330150",
@@ -2430,7 +2431,7 @@
         "530152",
         "530153"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330160",
@@ -2445,7 +2446,7 @@
         "530162",
         "530163"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330170",
@@ -2460,7 +2461,7 @@
         "530172",
         "530173"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "330180",
@@ -2472,7 +2473,7 @@
       "effects" : [
         "530180"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "340000",
@@ -2484,7 +2485,7 @@
         "540001",
         "540002"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "340010",
@@ -2496,7 +2497,7 @@
         "540011",
         "540012"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "340020",
@@ -2506,7 +2507,7 @@
       "effects" : [
         "540020"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "340030",
@@ -2516,7 +2517,7 @@
       "effects" : [
         "540030"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     },
     {
       "resultId" : "340040",
@@ -2526,7 +2527,7 @@
       "effects" : [
         "540040"
       ],
-      "picture" : "Sprites/Main/4刺探事件卡片"
+      "picture" : "10000"
     }
   ]
 }

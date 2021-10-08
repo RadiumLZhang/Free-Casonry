@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -43,6 +44,8 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
         tempMousePos_x = mousePos.x;
+        
+        EventHandlerManager.Instance.RefreshColumnImage();
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -62,6 +65,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
             {
                 bIsExtracting = true;
                 transform.GetComponent<Image>().maskable = false;
+                transform.Find("ImageEventIcon").GetComponent<Image>().maskable = false;
                 //transform.Find("EventTimeBackground").gameObject.SetActive(false);
                 gameView.OpenExePanel();
             }
@@ -86,6 +90,8 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     public void OnEndDrag(PointerEventData eventData)
     {
         EndDrag();
+        
+        EventHandlerManager.Instance.ResetColumnImage();
     }
 
     public void EndDrag()
@@ -95,6 +101,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         timerDragStart = 6;
         rectTransform.localPosition = localPos;
         transform.GetComponent<Image>().maskable = true;
+        transform.Find("ImageEventIcon").GetComponent<Image>().maskable = true;
         //transform.Find("EventTimeBackground").gameObject.SetActive(true);
         GetComponent<Image>().raycastTarget = true;
     }

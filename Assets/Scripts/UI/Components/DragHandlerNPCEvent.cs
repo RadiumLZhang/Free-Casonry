@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -28,6 +29,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
     }
     private GameObject InsImage()
     {
+        transform.Find("ImageEventIcon").GetComponent<Image>().raycastTarget = false;
         GetComponent<Image>().raycastTarget = false;
         GameObject tempImg = Instantiate(gameObject);
         tempImg.transform.SetParent(scrollRect.transform,false);
@@ -42,6 +44,9 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out mousePos);
         gameView.OpenExePanel();
         GetComponent<Image>().enabled = false;
+        transform.Find("ImageEventIcon").GetComponent<Image>().enabled = false;
+        
+        EventHandlerManager.Instance.RefreshColumnImage();
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -55,6 +60,8 @@ public class DragHandlerNPCEvent : MonoBehaviour,
     public void OnEndDrag(PointerEventData eventData)
     {
         EndDrag();
+        
+        EventHandlerManager.Instance.ResetColumnImage();
     }
 
     public void EndDrag()
@@ -62,7 +69,9 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         gameView.CloseExePanel();
         Destroy(draggingImage);
         GetComponent<Image>().enabled = true;
+        transform.Find("ImageEventIcon").GetComponent<Image>().enabled = true;
         GetComponent<Image>().raycastTarget = true;
+        transform.Find("ImageEventIcon").GetComponent<Image>().raycastTarget = true;
     }
 
     public void SetEventID(long id)
