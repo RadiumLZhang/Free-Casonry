@@ -60,10 +60,21 @@ public class GameView : MonoBehaviour
     public float relationshipScale;
     public Vector2 oldRelationshipPos;
     public bool bIsRelationshipScaling;
+    //还有这里！！！@muidarzhang
+    public AudioSource adplayer;
+
 
     private List<CatEvent> m_oldSpecialEvents;
     void Start()
     {
+        //这是例子：@muidarzhang
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
+        //player.clip = Resources.Load<AudioClip>("AudioClips/" + "文件名，有文件夹的话就文件夹/文件名，不要后缀");@muidarzhang
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/" + "猫叫");
+        //下面这段方法在事件发生时调，上面这段在Start里初始化好@muidarzhang
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        //到这就完了@muidarzhang
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
         panelEventExe = transform.Find("PanelEventExe").gameObject;
