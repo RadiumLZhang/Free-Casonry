@@ -5,7 +5,7 @@
       "name" : "遭遇守卫",
       "description" : "女仆不慎引起了守卫的注意。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "转移注意",
@@ -38,7 +38,7 @@
       "name" : "恶魔的契约",
       "description" : "我们可以要一点“定金”，国王是不会吝啬的。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "地位",
@@ -74,7 +74,7 @@
       "name" : "女仆的警觉",
       "description" : "嘉帕兹的警惕也波及到了猫咪上。阻止暗杀，也得避开她的视线。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "低调行动",
@@ -110,7 +110,7 @@
       "name" : "点石成金",
       "description" : "现在的炼金术不过是障眼法而已。我们可以在他表演的时候把金子换走，让他难堪。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "拿走金子",
@@ -148,7 +148,7 @@
       "name" : "石头戏法",
       "description" : "王后似乎也对炼金术产生了几分怀疑。如果在这里穿帮，门提尔可能会陷入危险的境地。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "拿走金子",
@@ -186,7 +186,7 @@
       "name" : "虐猫取乐",
       "description" : "被虐待的猫咪在向我们求救，但贸然出手又过于显眼",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "保护猫咪",
@@ -225,7 +225,7 @@
       "name" : "偷梁换柱",
       "description" : "如果我们换掉瓦林提亚的剑，可能可以左右决斗的结果",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "换把钝剑",
@@ -255,7 +255,7 @@
       "name" : "陪酒",
       "description" : "NAN",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "喝点酒",
@@ -291,7 +291,7 @@
       "name" : "小插曲",
       "description" : "猫咪们不是冒昧打扰，而是营造浪漫",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "粘人",
@@ -327,7 +327,7 @@
       "name" : "捉奸",
       "description" : "听到费琳娜的喊声后，女人马上逃开了。要让猫咪追上去吗？",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "追踪神秘人",
@@ -387,7 +387,7 @@
       "name" : "捕鼠工具",
       "description" : "简陋的捕鼠工具。如果破坏这些工具，依斯皮柯可能会求助于猫咪。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "破坏工具",
@@ -420,7 +420,7 @@
       "name" : "捕鼠毒药",
       "description" : "看起来不值钱的药丸。如果收起这些药丸，依斯皮柯可能会求助于猫咪。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "破坏工具",
@@ -453,7 +453,7 @@
       "name" : "捕鼠猫",
       "description" : "不认真工作，老鼠可能会泛滥成灾。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "拒绝捕鼠",
@@ -483,7 +483,7 @@
       "name" : "拦截密函",
       "description" : "安彼西奥并不会怀疑属下的忠诚，但我们有办法让他按兵不动。",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "告知亲王",
@@ -513,7 +513,7 @@
       "name" : "偿还",
       "description" : "借出去的钱也不都是他的，背后还有更大的利益链条",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "补足资金",
@@ -550,7 +550,7 @@
       "name" : "猫咪审判",
       "description" : "游行愈演愈烈，我们得做点什么平息这一切",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "贿赂",
@@ -584,7 +584,7 @@
     {
       "emergencyId" : "20104",
       "timeOffset" : 3,
-      "defaultOption" : 1,
+      "defaultOption" : 2,
       "options" : [
         {
           "name" : "仔细翻找",

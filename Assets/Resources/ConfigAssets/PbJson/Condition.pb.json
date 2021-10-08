@@ -133,7 +133,8 @@
       "conditionId" : "410050",
       "baseConditionId" : "4106",
       "paras" : [
-        60000
+        60000,
+        0
       ]
     },
     {
@@ -383,11 +384,7 @@
     },
     {
       "conditionId" : "414001",
-      "baseConditionId" : "4501",
-      "paras" : [
-        110,
-        110
-      ]
+      "baseConditionId" : "0"
     },
     {
       "conditionId" : "414010",
