@@ -185,6 +185,7 @@ public class GameView : MonoBehaviour
     }
     public void ButtonCouncil_OnClick()
     {
+        TimeTickerManager.Instance.StopTick();
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "转入猫咪议会");
         adplayer.clip = m_clip;
         adplayer.Play();
@@ -270,6 +271,7 @@ public class GameView : MonoBehaviour
         adplayer.clip = m_clip;
         adplayer.Play();
         
+        TimeTickerManager.Instance.Restore();
         panelCouncil.SetActive(false);
     }
 
