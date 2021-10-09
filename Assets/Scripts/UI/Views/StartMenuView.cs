@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Timers;
 using Manager;
 using UnityEngine;
@@ -9,11 +10,12 @@ using UnityEngine.Video;
 
 public class StartMenuView : MonoBehaviour
 {
-    public string UserName;
     public Text TextUserName;
     public VideoPlayer OPPlayer;
     private float TimerSkipOP;
     private GameObject ButtonSkipOP;
+    private GameObject ButtonContinue;
+    private GameObject ButtonContinueDisabled;
     private Text UserNameReminder;
     void Awake()
     {
@@ -21,6 +23,8 @@ public class StartMenuView : MonoBehaviour
         TextUserName = transform.Find("InputField/Text").GetComponent<Text>();
         OPPlayer = transform.Find("OPPlayer").GetComponent<VideoPlayer>();
         ButtonSkipOP = transform.Find("ButtonSkipOP").gameObject;
+        ButtonContinue = transform.Find("ButtonContinue").gameObject;
+        ButtonContinueDisabled = transform.Find("ButtonContinueDisabled").gameObject;
         UserNameReminder = transform.Find("InputField/Placeholder").GetComponent<Text>();
     }
 
@@ -36,12 +40,14 @@ public class StartMenuView : MonoBehaviour
             TimerSkipOP = 0;
             ButtonSkipOP.SetActive(false);
         }
+        bool bIsDataExists = File.Exists("Assets/Resources/Save/" + TextUserName.text + ".txt");
+        ButtonContinue.SetActive(bIsDataExists);
+        ButtonContinueDisabled.SetActive(!bIsDataExists);
     }
     public void ButtonStart_OnClick()
     {
         if (TextUserName.text != "")
         {
-            UserName = TextUserName.text;
             OPPlayer.gameObject.SetActive(true);
             OPPlayer.Play();
             OPPlayer.loopPointReached += OPFinished;
@@ -56,9 +62,8 @@ public class StartMenuView : MonoBehaviour
     {
         if (TextUserName.text != "")
         {
-            UserName = TextUserName.text;
-            PlayerPrefs.SetString("userName", UserName);
-            PlayerPrefs.SetString("saveName", UserName);
+            PlayerPrefs.SetString("userName", TextUserName.text);
+            PlayerPrefs.SetString("saveName", TextUserName.text);
             SceneManager.LoadScene("Game");
         }
         else
@@ -84,7 +89,7 @@ public class StartMenuView : MonoBehaviour
     private void StartGame()
     {
         OPPlayer.gameObject.SetActive(false);
-        PlayerPrefs.SetString("userName", UserName);
+        PlayerPrefs.SetString("userName", TextUserName.text);
         PlayerPrefs.SetString("saveName", "");
         SceneManager.LoadScene("Game");
     }

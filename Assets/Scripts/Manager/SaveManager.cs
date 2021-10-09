@@ -26,7 +26,7 @@ namespace Manager
 
         public void Init()
         {
-            m_savePath = "Assets/Save";
+            m_savePath = "Assets/Resources/Save";
             m_nodeList = new List<ISaveObject>();
             
             // 需要存档的对象在这里注册
@@ -60,7 +60,7 @@ namespace Manager
 
             File.WriteAllText(filePath, jsonString, Encoding.UTF8);
         }
-
+        
         public bool LoadData(string name)
         {
             string filePath = m_savePath + "/" + name + ".txt";
