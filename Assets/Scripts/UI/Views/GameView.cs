@@ -316,7 +316,7 @@ public class GameView : MonoBehaviour
     //开始事件
     public void ButtonStartEvent_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件开始-点火");
         adplayer.clip = m_clip;
         adplayer.Play();
         
@@ -338,7 +338,7 @@ public class GameView : MonoBehaviour
     // 关闭事件
     public void ButtonCloseEventDialog_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
         adplayer.clip = m_clip;
         adplayer.Play();
         
@@ -358,6 +358,10 @@ public class GameView : MonoBehaviour
     // 结算事件
     public void ButtonFinishDialog_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-连续翻书");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostFinish();
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
@@ -367,6 +371,10 @@ public class GameView : MonoBehaviour
     // 关闭结算
     public void ButtonCloseFinishDialog_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
         TimeTickerManager.Instance.Restore(); //恢复时间
