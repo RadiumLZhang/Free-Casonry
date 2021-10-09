@@ -99,9 +99,9 @@ namespace Manager
             {
                 return false;
             }
-
-            UIManager.Instance.RefreshEventSlots();
+            
             handlerList[index].SetValid(false);
+            UIManager.Instance.RefreshEventSlots();
             return true;
         }
 
