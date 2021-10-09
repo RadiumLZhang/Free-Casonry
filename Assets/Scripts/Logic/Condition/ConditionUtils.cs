@@ -200,8 +200,8 @@ namespace Logic.Condition
 
         private static bool CheckEventHandlerCountGreaterEqual(params object[] args)
         {
-            Debug.Log("基础条件4005：" + (int) args[0] + "");
-            return (int)args[0] >= EventHandlerManager.Instance.GetHandlerCount();
+            Debug.Log("基础条件4005：" + (int) args[0] + "  " + EventHandlerManager.Instance.GetHandlerCount());
+            return (int)args[0] <= EventHandlerManager.Instance.GetHandlerCount();
         }
         
         private static bool CheckEventHandlerCountEqual(params object[] args)
