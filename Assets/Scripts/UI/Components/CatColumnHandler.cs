@@ -41,6 +41,8 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     private Transform imageRemainingTime;
     private Text textRemainingTime;
     public bool isInit = false;
+
+    private DesignedEventHandler eventHandler;
     void Start()
     {
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
@@ -60,6 +62,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         bg = transform.Find("ImageEventBG");
         highlightBg = transform.Find("ImageEventBGHighlighted");
         
+        eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         //UI初始化
         Cat cat = EventHandlerManager.Instance.GetCatByIndex(index);
         transform.Find("CatPortrait/ImageCat").GetComponent<Image>().sprite = Resources.Load<Sprite>(cat.Image);
@@ -71,13 +74,15 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
+        var tempEvent = eventHandler.GetEventInfo();
         pointerDragCache = eventData.pointerDrag;
+        if (tempEvent == null)
+        {
         if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
         {
             if (droppedSpecialEvent.bIsExtracting)
             {
                 myID = droppedSpecialEvent.GetEventID();
-                DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
                 EventHandlerManager.Instance.CurSelectIndex = index;
                 
                 // on preinit
@@ -111,9 +116,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         else if ((droppedNPCEvent = pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
         {
             myID = droppedNPCEvent.GetEventID();
-            DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
             EventHandlerManager.Instance.CurSelectIndex = index;
             
+
             // on preinit
             eventHandler.OnInit(myID);
             gameView.currentDialogEventID = myID;
@@ -144,12 +149,23 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         m_mask.gameObject.SetActive(true);
         
         EventHandlerManager.Instance.ResetColumnImage();
+        }
+        else
+        {
+            if ((pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
+            {
+                pointerDragCache.GetComponent<DragHandlerSpecialEvent>().EndDrag();
+            }
+            else if ((pointerDragCache.GetComponent<DragHandlerNPCEvent>()) != null)
+            {
+                pointerDragCache.GetComponent<DragHandlerNPCEvent>().EndDrag();
+            }
+        }
     }
 
     public void Restore(CatEvent inEvent)
     {
         myID = inEvent.ID;
-        DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         gameView.currentDialogEventID = myID;
         m_myCatEventInfo = eventHandler.GetEventInfo();
         switch (m_myCatEventInfo.Type)
@@ -182,7 +198,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     
     public void InitHandler()
     {
-        DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
 
         remainingTime = eventHandler.GetTimeRemain();
         textRemainingTime.text = Convert.ToString((remainingTime) * 10);
@@ -226,7 +241,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         {
             return;
         }*/
-        DesignedEventHandler eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         remainingTime = eventHandler.GetTimeRemain();
         //只要栏位中有事件(即ID不是默认的-1)就用remainingTime刷新UI显示
         var tempEvent = eventHandler.GetEventInfo();
