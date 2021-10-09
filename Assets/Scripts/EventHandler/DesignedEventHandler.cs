@@ -28,6 +28,7 @@ namespace EventHandler
         private bool valid = true; // 议程槽是否被封印
         private CatColumnHandler monoHandler;
         private int index = 0;
+        private bool isEmergencyMusicPlay = false;
 
         // constructor
         public DesignedEventHandler(Cat cat)
@@ -74,6 +75,7 @@ namespace EventHandler
         // 拖动事件到议程槽触发
         public void OnInit(long newEventID)
         {
+            isEmergencyMusicPlay = false;
             eventID = newEventID;
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             Debug.Log("###" + m_catEventInfo);
@@ -161,6 +163,7 @@ namespace EventHandler
                 emergencyResolved = true;
             }
             UIManager.Instance.SwitchFinishFlag(index, true);
+            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "事件完成-暗黑地牢");
         }
 
         // 点击结算红点
@@ -193,7 +196,7 @@ namespace EventHandler
         public void OnDestroyEvent()
         {
             m_catEventInfo = null;
-            
+            isEmergencyMusicPlay = false;
             emergency = null;
             emergencyId = 0;
             emergencyResolved = false;
@@ -237,6 +240,11 @@ namespace EventHandler
                 if (emergencyResolved == false)
                 {
                     UIManager.Instance.SwitchEmergencyFlag(index, true);
+                    if (isEmergencyMusicPlay == false)
+                    {
+                        UIManager.Instance.PlayBGM("AudioClips/主界面/" + "突发事件出现");
+                        isEmergencyMusicPlay = true;
+                    }
                 }
                 else
                 {
@@ -251,7 +259,7 @@ namespace EventHandler
             if (cacheTime <= 0)
             {
                 UIManager.Instance.SwitchEmergencyFlag(index, false);
-                UIManager.Instance.PlayBGM("AudioClips/主界面/" + "突发事件出现");
+                
             }
         }
 
