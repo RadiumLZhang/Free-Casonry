@@ -75,10 +75,9 @@
     },
     {
       "conditionId" : "400070",
-      "baseConditionId" : "4102",
+      "baseConditionId" : "4400",
       "paras" : [
-        60000,
-        0
+        100060
       ]
     },
     {
@@ -384,7 +383,10 @@
     },
     {
       "conditionId" : "414001",
-      "baseConditionId" : "0"
+      "baseConditionId" : "4400",
+      "paras" : [
+        100010
+      ]
     },
     {
       "conditionId" : "414010",
@@ -2491,6 +2493,13 @@
       "baseConditionId" : "4000",
       "paras" : [
         50
+      ]
+    },
+    {
+      "conditionId" : "459010",
+      "baseConditionId" : "4400",
+      "paras" : [
+        100070
       ]
     },
     {
