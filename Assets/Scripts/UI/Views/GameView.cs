@@ -328,6 +328,7 @@ public class GameView : MonoBehaviour
             DroppedImage.SetActive(true);
         DroppedImage = null;
         UIManager.Instance.SwitchDarkBackGround(false);
+        UIManager.Instance.SwitchTickerButtons(true);
         NPCManager manager = UIManager.Instance.scrollRelationShip.GetComponent<NPCManager>();
         if (manager.currentOpenedNPC)
         {
@@ -352,7 +353,7 @@ public class GameView : MonoBehaviour
         DroppedImage = null;
         eventHandler.OnDestroyEvent();
         UIManager.Instance.SwitchDarkBackGround(false);
-        
+        UIManager.Instance.SwitchTickerButtons(true);
     }
     
     // 结算事件
@@ -366,6 +367,7 @@ public class GameView : MonoBehaviour
         eventHandler.OnPostFinish();
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
+        UIManager.Instance.SwitchTickerButtons(true);
     }
 
     // 关闭结算
@@ -377,6 +379,7 @@ public class GameView : MonoBehaviour
         
         UIManager.Instance.panelFinishEventDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
+        UIManager.Instance.SwitchTickerButtons(true);
         TimeTickerManager.Instance.Restore(); //恢复时间
     }
 
@@ -387,6 +390,7 @@ public class GameView : MonoBehaviour
         eventHandler.OnPostEmergency(1);
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
+        UIManager.Instance.SwitchTickerButtons(true);
     }
 
     // 紧急选择2
@@ -396,6 +400,7 @@ public class GameView : MonoBehaviour
         eventHandler.OnPostEmergency(2);
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
+        UIManager.Instance.SwitchTickerButtons(true);
     }
 
     // 关闭紧急
@@ -403,6 +408,7 @@ public class GameView : MonoBehaviour
     {
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
+        UIManager.Instance.SwitchTickerButtons(true);
         TimeTickerManager.Instance.Restore();
     }
     
