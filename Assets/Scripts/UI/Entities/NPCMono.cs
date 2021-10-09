@@ -78,7 +78,7 @@ public class NPCMono : MonoBehaviour
             UIManager.Instance.gameView.GetComponent<GameView>().oldRelationshipPos = new Vector2(
                 (selfRect.anchoredPosition.x + contentX / 2.0f) / contentX,
                 (selfRect.anchoredPosition.y + contentY / 2.0f) / contentY - 0.07f);
-            UIManager.Instance.gameView.GetComponent<GameView>().ButtonCloseRelationship_OnClick(false);
+            UIManager.Instance.gameView.GetComponent<GameView>().ButtonCloseRelationship_OnClickWithoutAudio();
             manager.SetOpenedNPC(gameObject);
         }
         

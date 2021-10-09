@@ -143,16 +143,17 @@ public class GameView : MonoBehaviour
         panelSettings.SetActive(true);
     }
 
-    public void ButtonCloseRelationship_OnClick(bool audio = true)
+    public void ButtonCloseRelationship_OnClick()
     {
-        if (audio)
-        {
-            AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人际关系缩放-Cultist Simulator");
-            adplayer.clip = m_clip;
-            adplayer.Play();
-        }
-        
-        
+
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人际关系缩放-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        ButtonCloseRelationship_OnClickWithoutAudio();
+    }
+    
+    public void ButtonCloseRelationship_OnClickWithoutAudio()
+    {
         relationshipScale = 0.75f;
         bIsRelationshipScaling = true;
         scrollRelationship.GetComponent<NPCManager>().StartNPCLerp(oldRelationshipPos.x, oldRelationshipPos.y);
@@ -169,6 +170,8 @@ public class GameView : MonoBehaviour
         UIManager.Instance.buttonRelationship.SetActive(true);
         UIManager.Instance.buttonCloseRelationship.SetActive(false);
     }
+    
+    
     public void ButtonRelationship_OnClick()
     {
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人际关系缩放-Cultist Simulator");
