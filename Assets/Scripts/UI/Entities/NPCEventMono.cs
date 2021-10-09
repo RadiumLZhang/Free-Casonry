@@ -24,8 +24,8 @@ public class NPCEventMono : MonoBehaviour
 
         //UI
         remainingTime = m_myCatEventInfo.ConsumeTime;
-        transform.Find("EventTimeBackground/TextEventTime").GetComponent<Text>().text = (m_myCatEventInfo.ConsumeTime * 10) + "";
-        transform.Find("EventTimeBackground/TextEventMin").GetComponent<Text>().text = "min";
+        transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>().text = (m_myCatEventInfo.ConsumeTime * 10) + "";
+        transform.Find("EventTextBackground/EventTimeBackground/TextEventMin").GetComponent<Text>().text = "min";
         Image m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
         m_imageEvent.gameObject.SetActive(true);
         switch (m_myCatEventInfo.Type)
@@ -52,8 +52,8 @@ public class NPCEventMono : MonoBehaviour
 
     public void EmptyCol()
     {
-        transform.Find("EventTimeBackground/TextEventTime").GetComponent<Text>().text = "";
-        transform.Find("EventTimeBackground/TextEventMin").GetComponent<Text>().text = "";
+        transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>().text = "";
+        transform.Find("EventTextBackground/EventTimeBackground/TextEventMin").GetComponent<Text>().text = "";
         GameObject m_image = transform.Find("ImageEvent").gameObject;
         m_image.GetComponent<Image>().sprite = null;
         m_image.SetActive(false);

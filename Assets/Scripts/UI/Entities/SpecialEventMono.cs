@@ -44,11 +44,10 @@ public class SpecialEventMono : MonoBehaviour
     {
         myID = ID;
         //读表
-        //TODO:demo里不读表的话就自己写下myEventInfo结构体，有ID,Name,ConsumeTime和sprite即可
         m_myCatEventInfo = new Logic.Event.CatEvent(myID);
         
         
-        textRemainingTime = transform.Find("EventTimeBackground").Find("TextEventTime").GetComponent<Text>();
+        textRemainingTime = transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>();
         m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
         m_imageEventIcon = m_imageEvent.transform.Find("ImageEventIcon").GetComponent<Image>();
         m_eventBackground = transform.Find("EventTextBackground");
