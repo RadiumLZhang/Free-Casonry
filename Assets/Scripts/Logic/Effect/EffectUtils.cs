@@ -614,15 +614,17 @@ namespace Logic.Effect
                 return;
             }
 
-            var text = LanguageLoader.Instance.FindLanguageItem(textId.ToString());
-            if (isAdd)
-            {
-                cat.AddTag(text.Value);
-            }
-            else
-            {
-                cat.RemoveTag(text.Value);
-            }
+            cat.CatState = textId;
+
+            // var text = LanguageLoader.Instance.FindLanguageItem(textId.ToString());
+            // if (isAdd)
+            // {
+            //     cat.AddTag(text.Value);
+            // }
+            // else
+            // {
+            //     cat.RemoveTag(text.Value);
+            // }
         }
 
         private static void CatImageChange(params object[] args)
