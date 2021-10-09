@@ -1013,7 +1013,7 @@
       "conditionId" : "402000",
       "baseConditionId" : "4102",
       "paras" : [
-        60003,
+        60002,
         3
       ]
     },
@@ -1037,7 +1037,7 @@
       "conditionId" : "402003",
       "baseConditionId" : "4400",
       "paras" : [
-        117141
+        117140
       ]
     },
     {
@@ -1191,6 +1191,13 @@
       ]
     },
     {
+      "conditionId" : "413101",
+      "baseConditionId" : "4400",
+      "paras" : [
+        100031
+      ]
+    },
+    {
       "conditionId" : "413110",
       "baseConditionId" : "4400",
       "paras" : [
@@ -1205,17 +1212,60 @@
       ]
     },
     {
+      "conditionId" : "413121",
+      "baseConditionId" : "4102",
+      "paras" : [
+        60011,
+        2
+      ]
+    },
+    {
+      "conditionId" : "413122",
+      "baseConditionId" : "4400",
+      "paras" : [
+        121100
+      ]
+    },
+    {
       "conditionId" : "413130",
       "baseConditionId" : "4400",
       "paras" : [
-        121121
+        121110
+      ]
+    },
+    {
+      "conditionId" : "413131",
+      "baseConditionId" : "4400",
+      "paras" : [
+        121111
+      ]
+    },
+    {
+      "conditionId" : "413132",
+      "baseConditionId" : "4400",
+      "paras" : [
+        113120
       ]
     },
     {
       "conditionId" : "413140",
       "baseConditionId" : "4400",
       "paras" : [
-        121122
+        121110
+      ]
+    },
+    {
+      "conditionId" : "413141",
+      "baseConditionId" : "4400",
+      "paras" : [
+        121112
+      ]
+    },
+    {
+      "conditionId" : "413142",
+      "baseConditionId" : "4400",
+      "paras" : [
+        113120
       ]
     },
     {
@@ -1305,6 +1355,13 @@
       "baseConditionId" : "4400",
       "paras" : [
         118114
+      ]
+    },
+    {
+      "conditionId" : "413232",
+      "baseConditionId" : "4506",
+      "paras" : [
+        61004
       ]
     },
     {
@@ -2208,7 +2265,7 @@
       "conditionId" : "430082",
       "baseConditionId" : "4400",
       "paras" : [
-        118110
+        118114
       ]
     },
     {

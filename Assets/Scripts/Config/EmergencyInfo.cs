@@ -24,20 +24,20 @@ namespace EmergencyInfo {
     static EmergencyInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chlwcm90by9FbWVyZ2VuY3lJbmZvLnByb3RvEg1FbWVyZ2VuY3lJbmZvIvkC",
+            "Chlwcm90by9FbWVyZ2VuY3lJbmZvLnByb3RvEg1FbWVyZ2VuY3lJbmZvIocD",
             "ChNFbWVyZ2VuY3lJbmZvQ29uZmlnEk4KFGVtZXJnZW5jeUl0ZW1fY29uZmln",
             "GAEgAygLMjAuRW1lcmdlbmN5SW5mby5FbWVyZ2VuY3lJbmZvQ29uZmlnLkVt",
-            "ZXJnZW5jeUl0ZW0avwEKDUVtZXJnZW5jeUl0ZW0SEwoLZW1lcmdlbmN5SWQY",
+            "ZXJnZW5jeUl0ZW0azQEKDUVtZXJnZW5jeUl0ZW0SEwoLZW1lcmdlbmN5SWQY",
             "ASABKAMSDwoHcGljdHVyZRgCIAEoCRIMCgRuYW1lGAMgASgJEhMKC2Rlc2Ny",
             "aXB0aW9uGAQgASgJEhIKCnRpbWVPZmZzZXQYBSABKA0SFQoNZGVmYXVsdE9w",
             "dGlvbhgGIAEoBRI6CgdvcHRpb25zGAcgAygLMikuRW1lcmdlbmN5SW5mby5F",
-            "bWVyZ2VuY3lJbmZvQ29uZmlnLk9wdGlvbhpQCgZPcHRpb24SDAoEbmFtZRgB",
-            "IAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRIPCgdlZmZlY3RzGAMgAygDEhIK",
-            "CmNvbmRpdGlvbnMYBSADKANiBnByb3RvMw=="));
+            "bWVyZ2VuY3lJbmZvQ29uZmlnLk9wdGlvbhIMCgR0eXBlGAggASgFGlAKBk9w",
+            "dGlvbhIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEg8KB2Vm",
+            "ZmVjdHMYAyADKAMSEgoKY29uZGl0aW9ucxgFIAMoA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig), global::EmergencyInfo.EmergencyInfoConfig.Parser, new[]{ "EmergencyItemConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem), global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem.Parser, new[]{ "EmergencyId", "Picture", "Name", "Description", "TimeOffset", "DefaultOption", "Options" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig), global::EmergencyInfo.EmergencyInfoConfig.Parser, new[]{ "EmergencyItemConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem), global::EmergencyInfo.EmergencyInfoConfig.Types.EmergencyItem.Parser, new[]{ "EmergencyId", "Picture", "Name", "Description", "TimeOffset", "DefaultOption", "Options", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EmergencyInfo.EmergencyInfoConfig.Types.Option), global::EmergencyInfo.EmergencyInfoConfig.Types.Option.Parser, new[]{ "Name", "Description", "Effects", "Conditions" }, null, null, null, null)})
           }));
     }
@@ -206,6 +206,7 @@ namespace EmergencyInfo {
           timeOffset_ = other.timeOffset_;
           defaultOption_ = other.defaultOption_;
           options_ = other.options_.Clone();
+          type_ = other.type_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -312,6 +313,20 @@ namespace EmergencyInfo {
           get { return options_; }
         }
 
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 8;
+        private int type_;
+        /// <summary>
+        /// @name 行动事件类型
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as EmergencyItem);
@@ -332,6 +347,7 @@ namespace EmergencyInfo {
           if (TimeOffset != other.TimeOffset) return false;
           if (DefaultOption != other.DefaultOption) return false;
           if(!options_.Equals(other.options_)) return false;
+          if (Type != other.Type) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -345,6 +361,7 @@ namespace EmergencyInfo {
           if (TimeOffset != 0) hash ^= TimeOffset.GetHashCode();
           if (DefaultOption != 0) hash ^= DefaultOption.GetHashCode();
           hash ^= options_.GetHashCode();
+          if (Type != 0) hash ^= Type.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -383,6 +400,10 @@ namespace EmergencyInfo {
             output.WriteInt32(DefaultOption);
           }
           options_.WriteTo(output, _repeated_options_codec);
+          if (Type != 0) {
+            output.WriteRawTag(64);
+            output.WriteInt32(Type);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -410,6 +431,9 @@ namespace EmergencyInfo {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(DefaultOption);
           }
           size += options_.CalculateSize(_repeated_options_codec);
+          if (Type != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Type);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -440,6 +464,9 @@ namespace EmergencyInfo {
             DefaultOption = other.DefaultOption;
           }
           options_.Add(other.options_);
+          if (other.Type != 0) {
+            Type = other.Type;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -477,6 +504,10 @@ namespace EmergencyInfo {
               }
               case 58: {
                 options_.AddEntriesFrom(input, _repeated_options_codec);
+                break;
+              }
+              case 64: {
+                Type = input.ReadInt32();
                 break;
               }
             }

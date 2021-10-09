@@ -1084,7 +1084,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "401030"
+            "401030",
+            "401031",
+            "401032"
           ]
         },
         {
@@ -1177,7 +1179,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "401040"
+            "401040",
+            "401041"
           ]
         },
         {
@@ -5215,7 +5218,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413100"
+            "413100",
+            "413101",
+            "400070"
           ]
         },
         {
@@ -5354,7 +5359,7 @@
       "humanId" : "60003",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 100,
       "preconditions" : [
         "0",
@@ -5362,7 +5367,8 @@
         "0"
       ],
       "effects" : [
-        "513121"
+        "513121",
+        "510100"
       ],
       "result" : [
         {
@@ -5404,7 +5410,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413120"
+            "413120",
+            "413121",
+            "413122"
           ]
         },
         {
@@ -5497,7 +5505,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413130"
+            "413130",
+            "413131",
+            "413132"
           ]
         },
         {
@@ -5590,7 +5600,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413140"
+            "413140",
+            "413142"
           ]
         },
         {
@@ -5607,7 +5618,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "413131"
           ]
         },
         {
@@ -5683,7 +5694,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413150"
+            "413150",
+            "413151"
           ]
         },
         {
@@ -5776,7 +5788,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413160"
+            "413160",
+            "413161"
           ]
         },
         {
@@ -5869,7 +5882,9 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413200"
+            "413200",
+            "413201",
+            "400070"
           ]
         },
         {
@@ -5962,7 +5977,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413210"
+            "413210",
+            "413211"
           ]
         },
         {
@@ -6055,7 +6071,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "413220"
+            "413220",
+            "413221"
           ]
         },
         {
@@ -6104,8 +6121,8 @@
       "isImportant" : 0,
       "priority" : 100,
       "preconditions" : [
-        "0",
-        "0",
+        "413231",
+        "413232",
         "0"
       ],
       "result" : [
@@ -6180,7 +6197,7 @@
         }
       ],
       "upDesc" : "佩尔：猫曾是神的使徒。近些年对猫的迫害，引发不祥的征兆。必须向教廷禀告此事。",
-      "downDesc" : "卸下主教的防备，为控制主教做好准备"
+      "downDesc" : "需要获得神启的猫咪参与"
     },
     {
       "eventId" : "11400",
@@ -14035,13 +14052,13 @@
       ],
       "result" : [
         {
-          "eventId" : "321110",
+          "eventId" : "321111",
           "conditions" : [
             "421113"
           ]
         },
         {
-          "eventId" : "321111",
+          "eventId" : "321110",
           "conditions" : [
             "0"
           ]
@@ -16861,7 +16878,7 @@
     },
     {
       "eventId" : "14003",
-      "name" : "2号",
+      "name" : "2号-神启",
       "type" : 0,
       "consumeTime" : "3",
       "imageout" : "13000",

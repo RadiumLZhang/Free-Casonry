@@ -22,6 +22,9 @@ message EmergencyInfoConfig
         int32 defaultOption = 6;
         // @name 选项
         repeated Option options = 7;
+        // @name 行动事件类型
+        int32 type = 8;
+
     }
 
     message Option

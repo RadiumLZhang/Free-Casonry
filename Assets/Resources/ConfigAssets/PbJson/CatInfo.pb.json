@@ -4,7 +4,7 @@
       "id" : "61000",
       "name" : "猫咪议员",
       "type" : "猫",
-      "image" : "Sprites\\Portraits\\61000",
+      "image" : "61000",
       "property" : [
         0,
         0,
@@ -16,7 +16,7 @@
       "id" : "61001",
       "name" : "西蒙",
       "type" : "黑猫",
-      "image" : "Sprites\\Portraits\\61001",
+      "image" : "61001",
       "property" : [
         2,
         2,
@@ -29,7 +29,7 @@
       "id" : "61002",
       "name" : "卡莉",
       "type" : "金吉拉",
-      "image" : "Sprites\\Portraits\\61002",
+      "image" : "61002",
       "property" : [
         2,
         1,
@@ -42,7 +42,7 @@
       "id" : "61003",
       "name" : "凯修",
       "type" : "埃及猫",
-      "image" : "Sprites\\Portraits\\61003",
+      "image" : "61003",
       "property" : [
         3,
         2,
@@ -55,7 +55,7 @@
       "id" : "61004",
       "name" : "科恩",
       "type" : "短毛猫",
-      "image" : "Sprites\\Portraits\\61004",
+      "image" : "61004",
       "property" : [
         1,
         3,

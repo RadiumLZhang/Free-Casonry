@@ -2,43 +2,43 @@
   "resultEvent_config" : [
     {
       "ConspiracyId" : "80000",
-      "description" : "阻止“武器制备”",
+      "description" : "在亲王处，阻止“武器制备”",
       "condition" : "450000",
       "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80001",
-      "description" : "妨碍“兵力运输”",
+      "description" : "在亲王处，妨碍“兵力运输”",
       "condition" : "450001",
       "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80002",
-      "description" : "破坏“安抚拉拢”",
+      "description" : "在亲王处，破坏“安抚拉拢”",
       "condition" : "450002",
       "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80003",
-      "description" : "停止“宗教支持”",
+      "description" : "在亲王处，停止“宗教支持”",
       "condition" : "450003",
       "GroupId" : "71000"
     },
     {
       "ConspiracyId" : "80010",
-      "description" : "打听“圣杯的传言”",
+      "description" : "展开“猫咪巡游”，打听“圣杯的传言”",
       "condition" : "450010",
       "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80011",
-      "description" : "探求“圣杯的痕迹”",
+      "description" : "进行“猫咪仪式”，探求“圣杯的痕迹”",
       "condition" : "450011",
       "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80012",
-      "description" : "寻觅“圣杯的线索”",
+      "description" : "举办“猫咪集会”，寻觅“圣杯的线索”",
       "condition" : "450012",
       "GroupId" : "71010"
     },
