@@ -110,7 +110,7 @@ public class CouncilView : MonoBehaviour
         buttonConspiracyChosen = transform.Find("ButtonConspiracyChosen").gameObject;
         buttonManageChosen = transform.Find("ButtonManageChosen").gameObject;
         
-        StartConspiracyButton.GetComponent<ButtonConspiracy>().OnClick();
+        StartConspiracyButton.GetComponent<ButtonConspiracy>().RefreshConspiracy();
         state = CouncilState.Manage;
     }
 
