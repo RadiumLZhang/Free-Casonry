@@ -40,7 +40,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
     // 事件环
     public void OnBeginDrag(PointerEventData eventData)
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人物信息");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
         adplayer.clip = m_clip;
         adplayer.Play();
         
@@ -65,8 +65,10 @@ public class DragHandlerNPCEvent : MonoBehaviour,
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件取消-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
         EndDrag();
-        
         EventHandlerManager.Instance.ResetColumnImage();
     }
 

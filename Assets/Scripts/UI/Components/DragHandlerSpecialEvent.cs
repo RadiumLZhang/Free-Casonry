@@ -99,16 +99,16 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     
     public void OnEndDrag(PointerEventData eventData)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件取消-Cultist Simulator");
+        adplayer.clip = m_clip;
+        adplayer.Play();
         EndDrag();
-        
         EventHandlerManager.Instance.ResetColumnImage();
     }
 
     public void EndDrag()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件取消-Cultist Simulator");
-        adplayer.clip = m_clip;
-        adplayer.Play();
+        
         
         if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;

@@ -24,13 +24,15 @@ public class NPCMono : MonoBehaviour
     public Image imageCat;
     private UITransitionEffect effect;
     private Image imageHuman;
-
+    public AudioSource adplayer;
+    
     private const string ImportantPointIn = "ImportantPointIn";
     
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
     
     private void Start()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         imageHuman = transform.GetComponent<Image>();
         eventCycle = transform.Find("EventCycle/root").gameObject;
         selfRect = transform.GetComponent<RectTransform>();
@@ -56,6 +58,10 @@ public class NPCMono : MonoBehaviour
 
     public void NPC_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人物信息");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         UIManager.Instance.SwitchNPCInfo(HumanManager.Instance.GetHuman(id));
         if (!eventCycle.activeSelf)
         {
