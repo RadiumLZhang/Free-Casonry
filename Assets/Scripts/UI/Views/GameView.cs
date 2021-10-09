@@ -17,6 +17,8 @@ using Random = UnityEngine.Random;
 
 public class GameView : MonoBehaviour
 {
+    private RawImage ImageStartGame;
+    private bool bIsGameStarting;
     private GameObject panelCouncil;
     private GameObject panelSettings;
     private GameObject panelEventExe;
@@ -70,6 +72,8 @@ public class GameView : MonoBehaviour
     private List<CatEvent> m_oldSpecialEvents;
     void Start()
     {
+        ImageStartGame = transform.Find("ImageStartGame").GetComponent<RawImage>();
+        bIsGameStarting = true;
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
@@ -488,7 +492,7 @@ public class GameView : MonoBehaviour
         }
     }
 
-        void Update()
+    void Update()
     {
         var playerModel = PlayerModel.Instance;
         if (playerModel.NeedUpdate)
@@ -499,6 +503,8 @@ public class GameView : MonoBehaviour
         
         UpdateTime();
         UpdateRelationshipScale();
+        if(bIsGameStarting)
+            GameStartFade();
     }
 
     public void UpdateRelationshipScale()
@@ -612,6 +618,15 @@ public class GameView : MonoBehaviour
             }
             rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,curPos,0);
             yield return null;
+        }
+    }
+    
+    private void GameStartFade()
+    {
+        ImageStartGame.color = Color.Lerp(ImageStartGame.color, Color.clear, Time.deltaTime * 1.0f);
+        if (ImageStartGame.color.a < 0.1f)
+        {
+            ImageStartGame.gameObject.SetActive(false);
         }
     }
 }

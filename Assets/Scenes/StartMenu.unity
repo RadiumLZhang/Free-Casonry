@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 679477989}
   - component: {fileID: 679477988}
   - component: {fileID: 679477992}
+  - component: {fileID: 679477993}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -624,6 +625,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UserName: 
   TextUserName: {fileID: 0}
+  OPPlayer: {fileID: 0}
+--- !u!81 &679477993
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679477987}
+  m_Enabled: 1
 --- !u!1 &706464182
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +990,6 @@ GameObject:
   - component: {fileID: 1055575407}
   - component: {fileID: 1055575409}
   - component: {fileID: 1055575408}
-  - component: {fileID: 1055575410}
   - component: {fileID: 1055575412}
   - component: {fileID: 1055575411}
   m_Layer: 5
@@ -1029,7 +1038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 42a3eb201847b034c8c02f50095ab312, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1044,18 +1053,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055575406}
   m_CullTransparentMesh: 1
---- !u!114 &1055575410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055575406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef38c6ea2faa0044ba6b3caf032e837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1055575411
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1160,11 +1157,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055575406}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 0946ca810cc34844ba417e1d5439f309, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 853b6cb9f88847a4dbfcf819836f9109, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 42a3eb201847b034c8c02f50095ab312, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -1172,19 +1169,19 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 1
   m_TargetAudioSources:
-  - {fileID: 0}
+  - {fileID: 1055575411}
   m_DirectAudioVolumes:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &1104000994
