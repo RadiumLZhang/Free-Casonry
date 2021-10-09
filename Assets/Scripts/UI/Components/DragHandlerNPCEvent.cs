@@ -18,12 +18,13 @@ public class DragHandlerNPCEvent : MonoBehaviour,
     private GameObject draggingImage;
     private ScrollRect scrollRect;
     private GameView gameView;
-    
+    public AudioSource adplayer;
     private Vector3 pos;                            //控件初始位置
     private Vector3 mousePos;                       //鼠标初始位置
     
     void Start()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         scrollRect = GameObject.Find("ScrollSpecialEvent").GetComponent<ScrollRect>();
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
     }
@@ -38,6 +39,10 @@ public class DragHandlerNPCEvent : MonoBehaviour,
     
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         draggingImage = InsImage();
         rectTransform = draggingImage.transform.GetComponent<RectTransform>();
         pos = GetComponent<RectTransform>().position;

@@ -37,6 +37,10 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         bIsExtracting = false;
         timerDragStart = 6;
         GetComponent<Image>().raycastTarget = false;
@@ -50,9 +54,6 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     
     public void OnDrag(PointerEventData eventData)
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
-        adplayer.clip = m_clip;
-        adplayer.Play();
         
         Vector3 newVec;          
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out newVec);
