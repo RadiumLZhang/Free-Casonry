@@ -25,17 +25,17 @@ namespace ResultEventInfo {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chtwcm90by9SZXN1bHRFdmVudEluZm8ucHJvdG8SD1Jlc3VsdEV2ZW50SW5m",
-            "byKEAgoPUmVzdWx0RXZlbnRJbmZvEkwKEnJlc3VsdEV2ZW50X2NvbmZpZxgB",
+            "byKSAgoPUmVzdWx0RXZlbnRJbmZvEkwKEnJlc3VsdEV2ZW50X2NvbmZpZxgB",
             "IAMoCzIwLlJlc3VsdEV2ZW50SW5mby5SZXN1bHRFdmVudEluZm8uUmVzdWx0",
-            "RXZlbnRJdGVtGqIBCg9SZXN1bHRFdmVudEl0ZW0SEAoIcmVzdWx0SWQYASAB",
+            "RXZlbnRJdGVtGrABCg9SZXN1bHRFdmVudEl0ZW0SEAoIcmVzdWx0SWQYASAB",
             "KAMSDAoEbmFtZRgCIAEoCRIUCgxkZXNjcmlwdGlvbjEYAyABKAkSFAoMZGVz",
             "Y3JpcHRpb24yGAQgASgJEg8KB2J0blRleHQYBSABKAkSEAoIcmVjb3JkSWQY",
-            "BiABKAMSDwoHZWZmZWN0cxgHIAMoAxIPCgdwaWN0dXJlGAggASgJYgZwcm90",
-            "bzM="));
+            "BiABKAMSDwoHZWZmZWN0cxgHIAMoAxIPCgdwaWN0dXJlGAggASgJEgwKBHR5",
+            "cGUYCSABKAViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::ResultEventInfo.ResultEventInfo), global::ResultEventInfo.ResultEventInfo.Parser, new[]{ "ResultEventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::ResultEventInfo.ResultEventInfo.Types.ResultEventItem), global::ResultEventInfo.ResultEventInfo.Types.ResultEventItem.Parser, new[]{ "ResultId", "Name", "Description1", "Description2", "BtnText", "RecordId", "Effects", "Picture" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::ResultEventInfo.ResultEventInfo), global::ResultEventInfo.ResultEventInfo.Parser, new[]{ "ResultEventConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::ResultEventInfo.ResultEventInfo.Types.ResultEventItem), global::ResultEventInfo.ResultEventInfo.Types.ResultEventItem.Parser, new[]{ "ResultId", "Name", "Description1", "Description2", "BtnText", "RecordId", "Effects", "Picture", "Type" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -204,6 +204,7 @@ namespace ResultEventInfo {
           recordId_ = other.recordId_;
           effects_ = other.effects_.Clone();
           picture_ = other.picture_;
+          type_ = other.type_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -325,6 +326,20 @@ namespace ResultEventInfo {
           }
         }
 
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 9;
+        private int type_;
+        /// <summary>
+        /// @name 行动事件类型
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as ResultEventItem);
@@ -346,6 +361,7 @@ namespace ResultEventInfo {
           if (RecordId != other.RecordId) return false;
           if(!effects_.Equals(other.effects_)) return false;
           if (Picture != other.Picture) return false;
+          if (Type != other.Type) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -360,6 +376,7 @@ namespace ResultEventInfo {
           if (RecordId != 0L) hash ^= RecordId.GetHashCode();
           hash ^= effects_.GetHashCode();
           if (Picture.Length != 0) hash ^= Picture.GetHashCode();
+          if (Type != 0) hash ^= Type.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -402,6 +419,10 @@ namespace ResultEventInfo {
             output.WriteRawTag(66);
             output.WriteString(Picture);
           }
+          if (Type != 0) {
+            output.WriteRawTag(72);
+            output.WriteInt32(Type);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -431,6 +452,9 @@ namespace ResultEventInfo {
           size += effects_.CalculateSize(_repeated_effects_codec);
           if (Picture.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Picture);
+          }
+          if (Type != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Type);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -464,6 +488,9 @@ namespace ResultEventInfo {
           effects_.Add(other.effects_);
           if (other.Picture.Length != 0) {
             Picture = other.Picture;
+          }
+          if (other.Type != 0) {
+            Type = other.Type;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -507,6 +534,10 @@ namespace ResultEventInfo {
               }
               case 66: {
                 Picture = input.ReadString();
+                break;
+              }
+              case 72: {
+                Type = input.ReadInt32();
                 break;
               }
             }
