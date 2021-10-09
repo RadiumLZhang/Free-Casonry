@@ -68,7 +68,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         //UI初始化
         Cat cat = EventHandlerManager.Instance.GetCatByIndex(index);
-        transform.Find("CatPortrait/ImageCat").GetComponent<Image>().sprite = Resources.Load<Sprite>(cat.Image);
+        transform.Find("CatPortrait/ImageCat").GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Portraits/" + cat.Image);
         transform.Find("CatName").GetComponent<Text>().text = cat.Name;
         transform.Find("Image1/Text").GetComponent<Text>().text = cat.ScoutValue.ToString();
         transform.Find("Image2/Text").GetComponent<Text>().text = cat.Conspiracy.ToString();

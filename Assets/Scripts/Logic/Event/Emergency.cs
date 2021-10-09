@@ -27,7 +27,7 @@ namespace Logic.Event
 
         public string Picture => Config?.Picture;
         
-        //public int Type => Config?.Type ?? 0;@TODO:@takiding
+        public int Type => Config?.Type ?? 0;
         
         private int choice;
 

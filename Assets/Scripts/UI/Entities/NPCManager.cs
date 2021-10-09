@@ -148,7 +148,7 @@ public class NPCManager : MonoBehaviour
             var human = HumanManager.Instance.GetHuman(item.Value.id);
             if (human.cat != null)
             {
-                item.Value.imageCat.sprite = Resources.Load<Sprite>(human.cat.Image);
+                item.Value.imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + human.cat.Image);
                 item.Value.imageCat.gameObject.SetActive(true);
             }
             else
