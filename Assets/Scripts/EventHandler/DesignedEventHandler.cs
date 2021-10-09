@@ -123,6 +123,7 @@ namespace EventHandler
             
             
             TimeTickerManager.Instance.StopTick(); // 暂停时间
+            
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
@@ -174,6 +175,7 @@ namespace EventHandler
             ResultEventInfo.ResultEventInfo.Types.ResultEventItem item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
             TimeTickerManager.Instance.StopTick();
             // 跳出弹窗
+            
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
@@ -212,6 +214,7 @@ namespace EventHandler
         // 点击紧急事件红点
         public void OnEmergency()
         {
+            
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {

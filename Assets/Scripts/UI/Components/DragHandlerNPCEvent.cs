@@ -37,9 +37,10 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         return tempImg;
     }
     
+    // 事件环
     public void OnBeginDrag(PointerEventData eventData)
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人物信息");
         adplayer.clip = m_clip;
         adplayer.Play();
         

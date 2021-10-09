@@ -13,13 +13,14 @@ public class VineMono : MonoBehaviour
     private UITransitionEffect effectText;
     private Transform relation;
     private Text relationText;
-
+    public AudioSource adplayer;
     public int relationId;
     
     public bool Active { get; set; }
     
     void Start()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         relation = transform.Find("Image");
         relationText = transform.Find("Image/Text").GetComponent<Text>();
         
@@ -58,5 +59,12 @@ public class VineMono : MonoBehaviour
 
         effectText.Show();
         effectBg.Show();
+    }
+
+    public void PlayBGM(string path)
+    {
+        AudioClip m_clip = Resources.Load<AudioClip>(path);
+        adplayer.clip = m_clip;
+        adplayer.Play();
     }
 }

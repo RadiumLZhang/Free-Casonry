@@ -669,10 +669,12 @@ namespace Logic.Effect
 
         private static void ShowHuman(params object[] args)
         {
+            
             var human = GetHuman(args[0]);
             human.Show();
         }
 
+        // 展示人物关系线
         private static void ShowRelationLine(params object[] args)
         {
             var lineId = (int) args[0];
@@ -682,6 +684,7 @@ namespace Logic.Effect
                 return;
             }
 
+            vineMono.PlayBGM("AudioClips/主界面/藤蔓蔓延");
             vineMono.Show();
         }
 

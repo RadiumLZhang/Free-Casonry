@@ -62,10 +62,11 @@ public class CouncilView : MonoBehaviour
     public GameObject StartConspiracyButton;
 
     private CouncilState state;
-    
+    public AudioSource adplayer;
 
     void Awake()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         panelConspiracy = transform.Find("PanelConspiracy").gameObject;
         panelManage = transform.Find("PanelManage").gameObject;
         imageConspiracyOff = transform.Find("ImageConspiracyOff").gameObject;
@@ -142,8 +143,14 @@ public class CouncilView : MonoBehaviour
         imageManageOn.SetActive(!bIsConspiracy);
         imageConspiracyOff.SetActive(!bIsConspiracy);
     }
+    
+    // 猫咪阴谋
     public void ButtonConspiracy_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-暗黑地牢");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         if (state == CouncilState.Conspiracy)
         {
             return;
@@ -159,8 +166,14 @@ public class CouncilView : MonoBehaviour
         PanelInAnimation(m_conspiracyPanelAnimation);
         PanelOutAnimation(m_managePanelAnimation);
     }
+    
+    // 猫咪管理
     public void ButtonManage_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-暗黑地牢");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         if (state == CouncilState.Manage)
         {
             return;

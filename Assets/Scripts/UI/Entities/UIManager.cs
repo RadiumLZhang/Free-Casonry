@@ -230,6 +230,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
+        
         SwitchDarkBackGround(true);
         SwitchTickerButtons(false);
         panelStartEventDialog.SetActive(true);
