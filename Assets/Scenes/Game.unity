@@ -6978,6 +6978,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653501192}
   m_CullTransparentMesh: 1
+--- !u!1 &658241069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2021338196983157553, guid: 46215de51ad6a4043b94617216bb5fc4, type: 3}
+  m_PrefabInstance: {fileID: 513587259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712867120
 GameObject:
   m_ObjectHideFlags: 0
@@ -18291,6 +18296,7 @@ MonoBehaviour:
   conspiracySpriteChosen: {fileID: 21300000, guid: 2a243e13ac63f374d99b7067c93e8ce4, type: 3}
   conspiracyFinalSpriteChosen: {fileID: 21300000, guid: 9e85ce3555357234da8bfb8ca70a93b6, type: 3}
   conspiracyRequirements: []
+  StartConspiracyButton: {fileID: 658241069}
 --- !u!114 &1904792618
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -59,6 +59,7 @@ public class CouncilView : MonoBehaviour
     //Btns
     private GameObject buttonConspiracyChosen;
     private GameObject buttonManageChosen;
+    public GameObject StartConspiracyButton;
 
     private CouncilState state;
     
@@ -108,6 +109,7 @@ public class CouncilView : MonoBehaviour
         buttonConspiracyChosen = transform.Find("ButtonConspiracyChosen").gameObject;
         buttonManageChosen = transform.Find("ButtonManageChosen").gameObject;
         
+        StartConspiracyButton.GetComponent<ButtonConspiracy>().OnClick();
         state = CouncilState.Manage;
     }
 
