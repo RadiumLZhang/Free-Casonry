@@ -17,6 +17,7 @@ namespace Manager
         private List<DesignedEventHandler> handlerList = new List<DesignedEventHandler>();
         private List<CatColumnHandler> monoList = new List<CatColumnHandler>();
 
+        public int CurSelectIndex { get; set; }
         
         public EventHandlerManager()
         {

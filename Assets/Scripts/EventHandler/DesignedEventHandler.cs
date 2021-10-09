@@ -146,7 +146,6 @@ namespace EventHandler
         // 取消事件进行 or 完成事件后调用
         public void OnDestroyEvent()
         {
-            catInfo = null;
             m_catEventInfo = null;
             
             emergency = null;

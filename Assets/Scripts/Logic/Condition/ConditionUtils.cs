@@ -169,8 +169,7 @@ namespace Logic.Condition
                 case 4505:  //  拥有至多X点猫咪隐匿度
                     return CheckPlayerPropertyLessOrEqual((int) args[0], PlayerModel.ResourceType.Hidency);
                 case 4506:  //  执行任务的猫咪编号为X
-                    // todo
-                    return false;
+                    return CheckCatId((int) args[0]);
             }
 
             return false;
@@ -366,6 +365,14 @@ namespace Logic.Condition
          {
              // todo
              return false;
+         }
+
+         private static bool CheckCatId(long id)
+         {
+             var eventHandlerManager = EventHandlerManager.Instance;
+             var curSelectCat = eventHandlerManager.GetCatByIndex(eventHandlerManager.CurSelectIndex);
+
+             return curSelectCat.ID == id;
          }
     }
     
