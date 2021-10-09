@@ -67,7 +67,7 @@ public class GameView : MonoBehaviour
     public bool bIsRelationshipScaling;
     
     public AudioSource adplayer;
-
+    public AudioSource bgm;
 
     private List<CatEvent> m_oldSpecialEvents;
     
@@ -78,6 +78,10 @@ public class GameView : MonoBehaviour
         ImageStartGame = transform.Find("ImageStartGame").GetComponent<RawImage>();
         bIsGameStarting = true;
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
+        bgm =  GameObject.Find("BGM").GetComponent<AudioSource>();
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/BGM/Ivan Sokol - Fugue in G Minor, BWV 578");
+        bgm.clip = m_clip;
+        bgm.Play();
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
         panelEventExe = transform.Find("PanelEventExe").gameObject;
