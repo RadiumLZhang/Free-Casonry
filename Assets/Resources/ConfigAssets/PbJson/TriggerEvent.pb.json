@@ -77,7 +77,7 @@
       "emergencyId" : "21010",
       "picture" : "11000",
       "name" : "女仆的警觉",
-      "description" : "嘉帕兹的警惕也波及到了猫咪上。阻止暗杀，也得避开她的视线。",
+      "description" : "女仆的警惕也波及到了猫咪上。阻止暗杀，也得避开她的视线。",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
@@ -236,7 +236,7 @@
       "emergencyId" : "21612",
       "picture" : "11610",
       "name" : "偷梁换柱",
-      "description" : "如果我们换掉瓦林提亚的剑，可能可以左右决斗的结果",
+      "description" : "如果我们换掉侍从的剑，可能可以左右决斗的结果",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
@@ -344,7 +344,7 @@
       "emergencyId" : "21714",
       "picture" : "11710",
       "name" : "捉奸",
-      "description" : "听到费琳娜的喊声后，女人马上逃开了。要让猫咪追上去吗？",
+      "description" : "听到医生的喊声后，神秘的女人马上逃开了。要让猫咪追上去吗？",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
@@ -408,7 +408,7 @@
       "emergencyId" : "21910",
       "picture" : "11913",
       "name" : "捕鼠工具",
-      "description" : "简陋的捕鼠工具。如果破坏这些工具，依斯皮柯可能会求助于猫咪。",
+      "description" : "简陋的捕鼠工具。如果破坏这些工具，厨师可能会求助于猫咪。",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
@@ -443,7 +443,7 @@
       "emergencyId" : "21911",
       "picture" : "11913",
       "name" : "捕鼠毒药",
-      "description" : "看起来不值钱的药丸。如果收起这些药丸，依斯皮柯可能会求助于猫咪。",
+      "description" : "看起来不值钱的药丸。如果收起这些药丸，厨师可能会求助于猫咪。",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
@@ -510,7 +510,7 @@
       "emergencyId" : "22012",
       "picture" : "12010",
       "name" : "拦截密函",
-      "description" : "安彼西奥并不会怀疑属下的忠诚，但我们有办法让他按兵不动。",
+      "description" : "亲王并不会怀疑属下的忠诚，但我们有办法让他按兵不动。",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
@@ -542,7 +542,7 @@
       "emergencyId" : "22016",
       "picture" : "12113",
       "name" : "偿还",
-      "description" : "借出去的钱也不都是他的，背后还有更大的利益链条",
+      "description" : "侯爵坐地起价，这下钱可能会不够",
       "timeOffset" : 3,
       "defaultOption" : 2,
       "options" : [
