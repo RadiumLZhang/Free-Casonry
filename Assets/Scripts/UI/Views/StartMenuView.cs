@@ -20,12 +20,14 @@ public class StartMenuView : MonoBehaviour
     
     public void ButtonStart_OnClick()
     {
+        UserName = TextUserName.text;
         OPPlayer.gameObject.SetActive(true);
         OPPlayer.Play();
         OPPlayer.loopPointReached += StartGame;
     }
     public void ButtonContinue_OnClick()
     {
+        UserName = TextUserName.text;
         PlayerPrefs.SetString("userName", UserName);
         PlayerPrefs.SetString("saveName", UserName);
         SceneManager.LoadScene("Game");
@@ -36,9 +38,5 @@ public class StartMenuView : MonoBehaviour
         PlayerPrefs.SetString("userName", UserName);
         PlayerPrefs.SetString("saveName", "");
         SceneManager.LoadScene("Game");
-    }
-    public void ButtonLogin_OnClick()
-    {
-        UserName = TextUserName.text;
     }
 }

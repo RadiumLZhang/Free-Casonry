@@ -59,14 +59,11 @@ public class CouncilView : MonoBehaviour
     //Btns
     private GameObject buttonConspiracyChosen;
     private GameObject buttonManageChosen;
-    
-    //猫激活状态
-    public bool[] bIsCatUnlocked;
-    
+
     private CouncilState state;
     
 
-    void Start()
+    void Awake()
     {
         panelConspiracy = transform.Find("PanelConspiracy").gameObject;
         panelManage = transform.Find("PanelManage").gameObject;
@@ -110,23 +107,20 @@ public class CouncilView : MonoBehaviour
 
         buttonConspiracyChosen = transform.Find("ButtonConspiracyChosen").gameObject;
         buttonManageChosen = transform.Find("ButtonManageChosen").gameObject;
-
-        bIsCatUnlocked = new bool[4];
-        for (int i = 0; i < 4; i++)
-        {
-            bIsCatUnlocked[i] = EventHandlerManager.Instance.GetHandlerByIndex(i).GetValid();
-        }
-
-        RefreshCatList();
         
         state = CouncilState.Manage;
+    }
+
+    private void OnEnable()
+    {
+        RefreshCatList();
     }
 
     public void RefreshCatList()
     {
         for (int i = 0; i < 4; i++)
         {
-            ImageCats[i].SetActive(bIsCatUnlocked[i]);
+            ImageCats[i].SetActive(EventHandlerManager.Instance.GetHandlerByIndex(i).GetValid());
         }
     }
     public void SwitchConspiracyButton()
@@ -247,7 +241,7 @@ public class CouncilView : MonoBehaviour
 
     public void SwitchCatDisplay(Cat cat, int index)
     {
-        if (bIsCatUnlocked[index])
+        if (EventHandlerManager.Instance.GetHandlerByIndex(index).GetValid())
         {
             TextCatName.text = cat.Name;
             TextCatID.text = cat.ID.ToString();
