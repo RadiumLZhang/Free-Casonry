@@ -6,6 +6,7 @@ using Language;
 using Logic;
 using Logic.Condition;
 using Logic.Conspiracy;
+using Manager;
 using TotalConspiracy;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,6 +53,15 @@ public class CouncilView : MonoBehaviour
     private Text TextCommunication;
     private Text TextSkill;
     private Text TextBiography;
+    private GameObject[] ImageCats;
+    
+    
+    //Btns
+    private GameObject buttonConspiracyChosen;
+    private GameObject buttonManageChosen;
+    
+    //猫激活状态
+    public bool[] bIsCatUnlocked;
     
     private CouncilState state;
     
@@ -76,6 +86,12 @@ public class CouncilView : MonoBehaviour
         TextCommunication = manageDetailPanel.Find("TextCommunication").GetComponent<Text>();
         TextSkill = manageDetailPanel.Find("TextSkill").GetComponent<Text>();
         TextBiography = manageDetailPanel.Find("TextBiography").GetComponent<Text>();
+        ImageCats = new GameObject[4];
+        Transform catList = panelManage.transform.Find("animationRoot/ScrollListCats/Viewport/Content");
+        for (int i = 0; i < 4; i++)
+        {
+            ImageCats[i] = catList.Find("Image" + i + "/ImageCat").gameObject;
+        }
 
         Transform conspiracyDetailPanel = panelConspiracy.transform.Find("animationRoot/PanelConspiracyInfo");
         TextConspiracyName = conspiracyDetailPanel.Find("TextConspiracyName").GetComponent<Text>();
@@ -92,9 +108,27 @@ public class CouncilView : MonoBehaviour
         m_conspiracyPanelAnimation = panelConspiracy.GetComponent<Animation>();
         m_managePanelAnimation = panelManage.GetComponent<Animation>();
 
+        buttonConspiracyChosen = transform.Find("ButtonConspiracyChosen").gameObject;
+        buttonManageChosen = transform.Find("ButtonManageChosen").gameObject;
+
+        bIsCatUnlocked = new bool[4];
+        for (int i = 0; i < 4; i++)
+        {
+            bIsCatUnlocked[i] = EventHandlerManager.Instance.GetHandlerByIndex(i).GetValid();
+        }
+
+        RefreshCatList();
+        
         state = CouncilState.Manage;
     }
 
+    public void RefreshCatList()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            ImageCats[i].SetActive(bIsCatUnlocked[i]);
+        }
+    }
     public void SwitchConspiracyButton()
     {
         foreach (Image child in ImageConspiracyButtons)
@@ -120,7 +154,8 @@ public class CouncilView : MonoBehaviour
         }
 
         state = CouncilState.Conspiracy;
-        
+        buttonManageChosen.SetActive(false);
+        buttonConspiracyChosen.SetActive(true);
         SwitchLightToConspiracy(true);
         panelConspiracy.SetActive(true);
         panelManage.SetActive(false);
@@ -136,10 +171,12 @@ public class CouncilView : MonoBehaviour
         }
 
         state = CouncilState.Manage;
-        
+        buttonManageChosen.SetActive(true);
+        buttonConspiracyChosen.SetActive(false);
         SwitchLightToConspiracy(false);
         panelConspiracy.SetActive(false);
         panelManage.SetActive(true);
+        RefreshCatList();
 
         PanelInAnimation(m_managePanelAnimation);
         PanelOutAnimation(m_conspiracyPanelAnimation);
@@ -207,25 +244,42 @@ public class CouncilView : MonoBehaviour
         conspiracyRequirements[requirementIndex].transform.Find("TextRequirement").GetComponent<Text>().text =
             conspiracyInfo.Description;
     }
-    public void SwitchCatDisplay(Cat cat)
+
+    public void SwitchCatDisplay(Cat cat, int index)
     {
-        TextCatName.text = cat.Name;
-        TextCatID.text = cat.ID.ToString();
-        TextCatCategory.text = cat.Type;
-        ImageCatState.gameObject.SetActive(false);
-        if (cat.CatState != 0)
+        if (bIsCatUnlocked[index])
         {
-            ImageCatState.gameObject.SetActive(true);
-            var stateTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
-            if(stateTextItem != null)
-                TextCatState.text = stateTextItem.Value;
+            TextCatName.text = cat.Name;
+            TextCatID.text = cat.ID.ToString();
+            TextCatCategory.text = cat.Type;
+            ImageCatState.gameObject.SetActive(false);
+            if (cat.CatState != 0)
+            {
+                ImageCatState.gameObject.SetActive(true);
+                var stateTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
+                if(stateTextItem != null)
+                    TextCatState.text = stateTextItem.Value;
+            }
+            TextScoutValue.text = cat.ScoutValue.ToString();
+            TextConspiracy.text = cat.Conspiracy.ToString();
+            TextCommunication.text = cat.Communication.ToString();
+            var skillTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
+            if(skillTextItem != null)
+                TextSkill.text = skillTextItem.Value;
+            TextBiography.text = cat.Description;
         }
-        TextScoutValue.text = cat.ScoutValue.ToString();
-        TextConspiracy.text = cat.Conspiracy.ToString();
-        TextCommunication.text = cat.Communication.ToString();
-        var skillTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
-        if(skillTextItem != null)
-            TextSkill.text = skillTextItem.Value;
-        TextBiography.text = cat.Description;
+        else
+        {
+            TextCatName.text = "未解锁";
+            TextCatID.text = "??????";
+            TextCatCategory.text = "未知";
+            ImageCatState.gameObject.SetActive(false);
+            TextScoutValue.text = "?";
+            TextConspiracy.text = "?";
+            TextCommunication.text = "?";
+            TextSkill.text = "未知";
+            TextBiography.text = "";
+        }
+        
     }
 }

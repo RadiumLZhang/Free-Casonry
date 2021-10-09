@@ -34,7 +34,7 @@ namespace Manager
             {
                 return;
             }
-            monoList.Add(panelEventExe.Find("EventSlot").GetComponent<CatColumnHandler>());
+            monoList.Add(panelEventExe.Find("EventSlot0").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot1").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot2").GetComponent<CatColumnHandler>());
             monoList.Add(panelEventExe.Find("EventSlot3").GetComponent<CatColumnHandler>());

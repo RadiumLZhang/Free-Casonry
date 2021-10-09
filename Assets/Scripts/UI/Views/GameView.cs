@@ -42,9 +42,12 @@ public class GameView : MonoBehaviour
     private RectTransform specialEventPrefab;
     public long currentDialogEventID;
 
+    private GameObject[] eventSlots;
+
     //左上角时间
     private Text textDate;
     private Text textTime;
+    
     //三个速度按钮
     private Image buttonStop;
     private Image buttonNormal;
@@ -98,13 +101,16 @@ public class GameView : MonoBehaviour
         rectSpecialScroll = scrollSpecialEvent.GetComponent<RectTransform>();
         rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,0f,0);
         contentTransform = scrollSpecialEvent.transform.Find("Viewport").Find("ContentSpecialEvent").GetComponent<RectTransform>();
-
-
+        
+        
         bIsRelationshipScaling = false;
         UIManagerInit();
         EventHandlerManager.Instance.InitMono(panelEventExe.transform);
         
         buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
+        
+        EventHandlerManager.Instance.GetHandlerByIndex(0).SetValid(true);//第一只猫启用
+        UIManager.Instance.RefreshEventSlots();
     }
 
     private void UIManagerInit()
@@ -176,6 +182,7 @@ public class GameView : MonoBehaviour
         adplayer.clip = m_clip;
         adplayer.Play();
         
+        panelCouncil.GetComponent<CouncilView>().RefreshCatList();
         panelCouncil.SetActive(true);
     }
     

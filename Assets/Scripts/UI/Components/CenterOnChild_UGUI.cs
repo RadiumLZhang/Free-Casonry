@@ -560,7 +560,7 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
             case 3:
                 cat = CatManager.Instance.GetCat(61004);break;
         }
-        UIManager.Instance.panelCouncil.GetComponent<CouncilView>().SwitchCatDisplay(cat);
+        UIManager.Instance.panelCouncil.GetComponent<CouncilView>().SwitchCatDisplay(cat, _index);
     }
 
     public void ButtonSwitchLeft_OnClick()
