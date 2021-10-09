@@ -26,25 +26,25 @@
     },
     {
       "ConspiracyId" : "80010",
-      "description" : "展开“猫咪巡游”，打听“圣杯的传言”",
+      "description" : "展开“猫咪巡游”，打听圣杯的传言",
       "condition" : "450010",
       "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80011",
-      "description" : "进行“猫咪仪式”，探求“圣杯的痕迹”",
+      "description" : "进行“猫咪仪式”，探求圣杯的痕迹",
       "condition" : "450011",
       "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80012",
-      "description" : "举办“猫咪集会”，寻觅“圣杯的线索”",
+      "description" : "举办“猫咪集会”，寻觅圣杯的线索",
       "condition" : "450012",
       "GroupId" : "71010"
     },
     {
       "ConspiracyId" : "80013",
-      "description" : "找到猫咪圣杯",
+      "description" : "找回猫咪圣杯",
       "condition" : "450013",
       "GroupId" : "71010"
     },
