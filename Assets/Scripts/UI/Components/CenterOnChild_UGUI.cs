@@ -183,6 +183,7 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
     public delegate void CenterChangedCallBack(int _index);
     public CenterChangedCallBack _centerChanged;
  
+    public AudioSource adplayer;
     /// <summary>
     /// 当前中心ChildItem
     /// </summary>
@@ -202,6 +203,7 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
     void Awake()
     {
         //初始化
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         _curCenterChildIndex = 0;
         _lastCenterChildIndex = _curCenterChildIndex;
         Temp_EnlargeScale = CenterChildScale;
@@ -565,6 +567,9 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
 
     public void ButtonSwitchLeft_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "切换猫咪");
+        adplayer.clip = m_clip;
+        adplayer.Play();
         if (_curCenterChildIndex != 0)
         {
             SetCenterChild(_curCenterChildIndex - 1);
@@ -573,6 +578,10 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
     }
     public void ButtonSwitchRight_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "切换猫咪");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         if (_curCenterChildIndex != 3)
         {
             SetCenterChild(_curCenterChildIndex + 1);

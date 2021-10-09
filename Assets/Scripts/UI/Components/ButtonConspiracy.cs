@@ -10,9 +10,19 @@ using UnityEngine.UI;
 public class ButtonConspiracy : MonoBehaviour
 {
     public long id;
+    public AudioSource adplayer;
+
+    void Start()
+    {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
+    }
 
     public void OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "目标阅览");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         CouncilView councilView = transform.parent.parent.parent.parent.parent.GetComponent<CouncilView>();
         councilView.SwitchConspiracyButton();
         transform.GetComponent<Image>().sprite =
