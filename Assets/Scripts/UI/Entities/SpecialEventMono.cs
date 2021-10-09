@@ -11,6 +11,7 @@ public class SpecialEventMono : MonoBehaviour
     private long myID = -1;
     private Logic.Event.CatEvent m_myCatEventInfo;
     private Text textRemainingTime;
+    private Text textMin;
     private long remainingTime;
     
 
@@ -21,7 +22,7 @@ public class SpecialEventMono : MonoBehaviour
     private Transform m_eventBackground;
     private Text m_txtEventBackground;
     
-    private void Start()
+    private void Awake()
     {
         m_animation = transform.GetComponent<Animation>();
             
@@ -38,6 +39,15 @@ public class SpecialEventMono : MonoBehaviour
         m_animation.Sample();
         m_animation.Play(scrollMove.name);
         m_animation.PlayQueued(eventIn.name);
+        
+        textRemainingTime = transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>();
+        textMin = textRemainingTime.transform.parent.Find("TextEventMin").GetComponent<Text>();
+        m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
+        m_imageEventIcon = m_imageEvent.transform.Find("ImageEventIcon").GetComponent<Image>();
+        m_eventBackground = transform.Find("EventTextBackground");
+        m_txtEventBackground = m_eventBackground.Find("TextEvent").GetComponent<Text>();
+        m_dragHandlerSpecialEvent = transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>();
+
     }
 
     public void InitWithID(long ID)
@@ -46,14 +56,6 @@ public class SpecialEventMono : MonoBehaviour
         //读表
         m_myCatEventInfo = new Logic.Event.CatEvent(myID);
         
-        
-        textRemainingTime = transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>();
-        m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
-        m_imageEventIcon = m_imageEvent.transform.Find("ImageEventIcon").GetComponent<Image>();
-        m_eventBackground = transform.Find("EventTextBackground");
-        m_txtEventBackground = m_eventBackground.Find("TextEvent").GetComponent<Text>();
-        m_dragHandlerSpecialEvent = transform.Find("ImageEvent").GetComponent<DragHandlerSpecialEvent>();
-
         //DragHandler接收ID
         m_dragHandlerSpecialEvent.SetEventID(myID);
 
@@ -78,8 +80,6 @@ public class SpecialEventMono : MonoBehaviour
         
         m_imageEventIcon.sprite = Resources.Load<Sprite>("Sprites/Events/" + m_myCatEventInfo.Imageout);
         m_txtEventBackground.text = m_myCatEventInfo.Name;
-        textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10) + "";
-        //TODO:监听销毁事件的Event，获取传参的ID并判断是否符合自身ID，是则销毁自身
     }
 
     public void SetVisible(bool active)
@@ -102,5 +102,22 @@ public class SpecialEventMono : MonoBehaviour
     public void DestroySelf()
     {
         Destroy(transform.gameObject);
+    }
+
+    private void Update()
+    {
+        if (m_myCatEventInfo != null)
+        {
+            if (m_myCatEventInfo.Countdown == 0)
+            {
+                textRemainingTime.text = "";
+                textMin.text = "";
+            }
+            else
+            {
+                textRemainingTime.text = (m_myCatEventInfo.Countdown * 10).ToString();
+                textMin.text = "分后销毁";
+            }
+        }
     }
 }

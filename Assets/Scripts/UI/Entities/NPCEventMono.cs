@@ -11,8 +11,31 @@ public class NPCEventMono : MonoBehaviour
     private long myID = -1;
     private Logic.Event.CatEvent m_myCatEventInfo;
     private Text textRemainingTime;
-    private long remainingTime;
+    private Text textMin;
 
+    void Awake()
+    {
+        textRemainingTime = transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>();
+        textMin = textRemainingTime.transform.parent.Find("TextEventMin").GetComponent<Text>();
+    }
+
+    void Update()
+    {
+        if (m_myCatEventInfo != null)
+        {
+            if (m_myCatEventInfo.Countdown == 0)
+            {
+                textRemainingTime.text = "";
+                textMin.text = "";
+            }
+            else
+            {
+                textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10).ToString();
+                textMin.text = "分后销毁";
+            }
+        }
+    }
+    
     public void InitWithID(long ID)
     {
         myID = ID;
@@ -23,9 +46,6 @@ public class NPCEventMono : MonoBehaviour
         transform.Find("ImageEvent").GetComponent<DragHandlerNPCEvent>().SetEventID(myID);
 
         //UI
-        remainingTime = m_myCatEventInfo.ConsumeTime;
-        transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>().text = (m_myCatEventInfo.ConsumeTime * 10) + "";
-        transform.Find("EventTextBackground/EventTimeBackground/TextEventMin").GetComponent<Text>().text = "min";
         Image m_imageEvent = transform.Find("ImageEvent").GetComponent<Image>();
         m_imageEvent.gameObject.SetActive(true);
         switch (m_myCatEventInfo.Type)
@@ -52,8 +72,10 @@ public class NPCEventMono : MonoBehaviour
 
     public void EmptyCol()
     {
-        transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>().text = "";
-        transform.Find("EventTextBackground/EventTimeBackground/TextEventMin").GetComponent<Text>().text = "";
+        textRemainingTime = transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>();
+        textMin = textRemainingTime.transform.parent.Find("TextEventMin").GetComponent<Text>();
+        textRemainingTime.text = "";
+        textMin.text = "";
         GameObject m_image = transform.Find("ImageEvent").gameObject;
         m_image.GetComponent<Image>().sprite = null;
         m_image.SetActive(false);
