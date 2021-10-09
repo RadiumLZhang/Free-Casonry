@@ -145,7 +145,6 @@ public class GameView : MonoBehaviour
 
     public void ButtonCloseRelationship_OnClick()
     {
-
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "人际关系缩放-Cultist Simulator");
         adplayer.clip = m_clip;
         adplayer.Play();
@@ -572,9 +571,14 @@ public class GameView : MonoBehaviour
 
         //两个距离之差，为正表示放大手势， 为负表示缩小手势  
         float offset = newDistance - oldDistance;
-        if (offset < 0)
+        if (offset < 0 && !UIManager.Instance.buttonCloseRelationship.activeSelf)
         {
             ButtonRelationship_OnClick();
+        }
+
+        if (offset > 0 && UIManager.Instance.buttonCloseRelationship.activeSelf)
+        {
+            ButtonCloseRelationship_OnClick();
         }
     }
     public void UpdateRelationshipScale()

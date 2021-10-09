@@ -43,7 +43,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
         adplayer.clip = m_clip;
         adplayer.Play();
-        
+        Input.multiTouchEnabled = false;
         draggingImage = InsImage();
         rectTransform = draggingImage.transform.GetComponent<RectTransform>();
         pos = GetComponent<RectTransform>().position;
@@ -70,6 +70,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         adplayer.Play();
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
+        Input.multiTouchEnabled = true;
     }
 
     public void EndDrag()

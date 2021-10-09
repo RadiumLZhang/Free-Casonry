@@ -37,6 +37,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        Input.multiTouchEnabled = false;
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
         adplayer.clip = m_clip;
         adplayer.Play();
@@ -104,6 +105,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         adplayer.Play();
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
+        Input.multiTouchEnabled = true;
     }
 
     public void EndDrag()

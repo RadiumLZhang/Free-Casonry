@@ -13,7 +13,7 @@ public class StartMenuView : MonoBehaviour
     public VideoPlayer OPPlayer;
     void Awake()
     {
-        //Input.multiTouchEnabled = false;
+        Input.multiTouchEnabled = true;
         TextUserName = transform.Find("InputField/Text").GetComponent<Text>();
         OPPlayer = transform.Find("OPPlayer").GetComponent<VideoPlayer>();
     }
