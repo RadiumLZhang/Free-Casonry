@@ -542,6 +542,9 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
     /// </summary>
     public void CenterChanged(int _index)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "切换猫咪");
+        adplayer.clip = m_clip;
+        adplayer.Play();
         if (_centerChanged != null)
         {
             _centerChanged(_index);          
@@ -567,9 +570,6 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
 
     public void ButtonSwitchLeft_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "切换猫咪");
-        adplayer.clip = m_clip;
-        adplayer.Play();
         if (_curCenterChildIndex != 0)
         {
             SetCenterChild(_curCenterChildIndex - 1);
@@ -578,10 +578,7 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
     }
     public void ButtonSwitchRight_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "切换猫咪");
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        
+
         if (_curCenterChildIndex != 3)
         {
             SetCenterChild(_curCenterChildIndex + 1);
