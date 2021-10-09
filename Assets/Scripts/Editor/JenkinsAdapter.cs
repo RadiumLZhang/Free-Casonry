@@ -20,6 +20,6 @@ public class JenkinsAdapter
         DateTime date3 = DateTime.Now;
         string timeInfo = date3.ToString("yyyy.MM.dd_HH.mm.ss");
 
-        BuildPipeline.BuildPlayer(sceneList.ToArray(), "E:/MiniGameBuildOutputs/CatClub_" + timeInfo + ".apk", BuildTarget.Android, BuildOptions.None);
+        BuildPipeline.BuildPlayer(sceneList.ToArray(), "E:/MiniGameBuildOutputs/FreeCasonry_" + timeInfo + ".apk", BuildTarget.Android, BuildOptions.None);
     }
 }
