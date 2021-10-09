@@ -70,6 +70,9 @@ public class GameView : MonoBehaviour
 
 
     private List<CatEvent> m_oldSpecialEvents;
+    
+    private Touch oldTouch1;  //上次触摸点1(手指1)  
+    private Touch oldTouch2;  //上次触摸点2(手指2)  
     void Start()
     {
         ImageStartGame = transform.Find("ImageStartGame").GetComponent<RawImage>();
@@ -384,6 +387,10 @@ public class GameView : MonoBehaviour
     // 紧急选择1
     public void ButtonEmergencyDialogChoice1_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostEmergency(1);
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
@@ -394,6 +401,10 @@ public class GameView : MonoBehaviour
     // 紧急选择2
     public void ButtonEmergencyDialogChoice2_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostEmergency(2);
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
@@ -404,13 +415,17 @@ public class GameView : MonoBehaviour
     // 关闭紧急
     public void ButtonCloseEmergencyDialog_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
         UIManager.Instance.SwitchTickerButtons(true);
         TimeTickerManager.Instance.Restore();
     }
     
-    
+    //这两个不加音效
     public void OpenExePanel()
     {
         buttonOpenExePanel.gameObject.SetActive(false);
@@ -515,10 +530,40 @@ public class GameView : MonoBehaviour
         
         UpdateTime();
         UpdateRelationshipScale();
-        if(bIsGameStarting)
+        if (bIsGameStarting)
+        {
             GameStartFade();
+        }
+
+        if(Input.touchCount == 2)
+            MutliTouch();
     }
 
+    private void MutliTouch()
+    {
+        //多点触摸, 放大缩小  
+        Touch newTouch1 = Input.GetTouch(0);
+        Touch newTouch2 = Input.GetTouch(1);
+
+        //第2点刚开始接触屏幕, 只记录，不做处理  
+        if (newTouch2.phase == TouchPhase.Began)
+        {
+            oldTouch2 = newTouch2;
+            oldTouch1 = newTouch1;
+            return;
+        }
+
+        //计算老的两点距离和新的两点间距离，变大要放大模型，变小要缩放模型  
+        float oldDistance = Vector2.Distance(oldTouch1.position, oldTouch2.position);
+        float newDistance = Vector2.Distance(newTouch1.position, newTouch2.position);
+
+        //两个距离之差，为正表示放大手势， 为负表示缩小手势  
+        float offset = newDistance - oldDistance;
+        if (offset < 0)
+        {
+            ButtonRelationship_OnClick();
+        }
+    }
     public void UpdateRelationshipScale()
     {
         if (bIsRelationshipScaling)
