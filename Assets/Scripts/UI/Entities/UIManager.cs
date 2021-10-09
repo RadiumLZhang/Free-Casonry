@@ -45,6 +45,8 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public GameObject buttonCouncilCatManage;
     public GameObject buttonCloseRelationship;
     public GameObject buttonRelationship;
+    public GameObject buttonNormalTicker;
+    public GameObject buttonSpeedTicker;
     
     //NPCs
     public Dictionary<long, GameObject> NPCEventCycles;
@@ -157,6 +159,8 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         buttonCouncilCatManage = panelCouncil.transform.Find("ButtonManage").gameObject;
         buttonCloseRelationship = gameView.Find("ButtonCloseRelationship").gameObject;
         buttonRelationship = gameView.Find("ButtonRelationship").gameObject;
+        buttonNormalTicker = gameView.Find("PanelTickerButtons/ButtonNormal").gameObject;
+        buttonSpeedTicker = gameView.Find("PanelTickerButtons/ButtonSpeed").gameObject;
         EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
         
         buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
@@ -227,6 +231,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
         SwitchDarkBackGround(true);
+        SwitchTickerButtons(false);
         panelStartEventDialog.SetActive(true);
         textEventName_start.GetComponent<Text>().text = m_myCatEventInfo.Name;
         textEventDescription_start.GetComponent<Text>().text = m_myCatEventInfo.UpDesc;
@@ -278,45 +283,36 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public void InitEmergencyDialog(Emergency m_myEmergencyInfo, long cacheTime)
     {
         SwitchDarkBackGround(true);
+        SwitchTickerButtons(false);
         panelEmergencyDialog.SetActive(true);
         textEventName_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Name;
         textEventDescription_emergency.GetComponent<Text>().text = m_myEmergencyInfo.Description;
         textEventCardTime_emergency.GetComponent<Text>().text = (cacheTime * 10) + "min";
-        //imageEvent_emergency.GetComponent<Image>().sprite = FindEventCard(m_myEmergencyInfo.Type);//@TODO:@takiding
+        imageEvent_emergency.GetComponent<Image>().sprite = FindEventCard(m_myEmergencyInfo.Type);
         imageEventIcon_emergency.GetComponent<Image>().sprite =
             Resources.Load<Sprite>("Sprites/Cards/" + m_myEmergencyInfo.Picture);
         List<EmergencyInfoConfig.Types.Option> optionList = m_myEmergencyInfo.GetOptions();
-        if (optionList.Count >= 1)
-        {
-            Choice1_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[0].Description;
-            Choice1_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[0].Name;
-            bool bCanChoose1 = m_myEmergencyInfo.OptionCanChoose(1);
-            buttonChoice1.SetActive(bCanChoose1);
-            buttonChoice1Disabled.SetActive(!bCanChoose1);
-            if (optionList.Count == 2)
-            {
-                Choice2_emergency.gameObject.SetActive(true);
-                bool bCanChoose2 = m_myEmergencyInfo.OptionCanChoose(2);
-                buttonChoice1.SetActive(bCanChoose2);
-                buttonChoice1Disabled.SetActive(!bCanChoose2);
-                Choice2_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[1].Description;
-                Choice2_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[1].Name;
-            }
-            else
-            {
-                Choice2_emergency.gameObject.SetActive(false);
-            }
-        }
+        Choice1_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[0].Description;
+        Choice1_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[0].Name;
+        Choice2_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[1].Description;
+        Choice2_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[1].Name;
+        bool bCanChoose1 = m_myEmergencyInfo.OptionCanChoose(1);
+        buttonChoice1.SetActive(bCanChoose1);
+        buttonChoice1Disabled.SetActive(!bCanChoose1);
+        bool bCanChoose2 = m_myEmergencyInfo.OptionCanChoose(2);
+        buttonChoice2.SetActive(bCanChoose2);
+        buttonChoice2Disabled.SetActive(!bCanChoose2);
     }
     
     public void InitFinishEventDialog(ResultEventInfo.ResultEventInfo.Types.ResultEventItem m_myResultInfo)
     {
         SwitchDarkBackGround(true);
+        SwitchTickerButtons(false);
         panelFinishEventDialog.SetActive(true);
         textEventName_finish.GetComponent<Text>().text = m_myResultInfo.Name;
         textEventDescription_finish.GetComponent<Text>().text = m_myResultInfo.Description1;
-        //imageEvent_finish.GetComponent<Image>().sprite = FindEventCard(m_myResultInfo.Type);//@TODO:@takiding
-        imageEventIcon_finish.GetComponent<Image>().sprite = Resources.Load<Sprite>(m_myResultInfo.Picture);
+        imageEvent_finish.GetComponent<Image>().sprite = FindEventCard(m_myResultInfo.Type);
+        imageEventIcon_finish.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Cards/" + m_myResultInfo.Picture);
         textResult_finish.GetComponent<Text>().text = m_myResultInfo.Description2;
         //buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
     }
@@ -354,6 +350,12 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
             m_buttonCouncilAnimation.Sample();
             m_buttonCouncilAnimation.Play("ButtonCouncilIn");
         }
+    }
+
+    public void SwitchTickerButtons(bool bIsShown)
+    {
+        buttonNormalTicker.SetActive(bIsShown);
+        buttonSpeedTicker.SetActive(bIsShown);
     }
     public Sprite FindEventCard(int type)
     {
