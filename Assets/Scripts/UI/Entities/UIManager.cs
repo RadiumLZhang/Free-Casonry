@@ -21,7 +21,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public GameView gameViewMono;
     
     //Images
-    //public GameObject darkBackgroundImage;
+    public GameObject darkBackgroundImage;
 
     //Panels
     public GameObject panelCouncil;
@@ -115,7 +115,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     public void SwitchDarkBackGround(bool bIsSwitchToDark)
     {
-        //darkBackgroundImage.SetActive(bIsSwitchToDark);
+        darkBackgroundImage.SetActive(bIsSwitchToDark);
     }
 
     public void SwitchFinishFlag(int index,bool bIsSwitchToShown)
@@ -141,7 +141,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public void Init()
     {
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
-        //darkBackgroundImage = gameView.Find("ScrollRelationship/Viewport/Content/BackgroundImage/ImageBackgroundDark").gameObject;
+        darkBackgroundImage = gameView.Find("ScrollRelationship/Viewport/Content/BackgroundImageDark").gameObject;
         
         panelCouncil = gameView.Find("PanelCouncil").gameObject;
         panelSettings = gameView.Find("PanelSettings").gameObject;
