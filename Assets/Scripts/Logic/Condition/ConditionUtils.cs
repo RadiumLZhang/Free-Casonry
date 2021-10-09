@@ -200,7 +200,7 @@ namespace Logic.Condition
 
         private static bool CheckEventHandlerCountGreaterEqual(params object[] args)
         {
-            return (int)args[0] <= EventHandlerManager.Instance.GetHandlerCount();
+            return (int)args[0] >= EventHandlerManager.Instance.GetHandlerCount();
         }
         
         private static bool CheckEventHandlerCountEqual(params object[] args)
