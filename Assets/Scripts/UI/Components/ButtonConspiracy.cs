@@ -13,7 +13,7 @@ public class ButtonConspiracy : MonoBehaviour
 
     public void OnClick()
     {
-        CouncilView councilView = transform.parent.parent.parent.parent.parent.GetComponent<CouncilView>();
+        CouncilView councilView = UIManager.Instance.panelCouncil.GetComponent<CouncilView>();
         councilView.SwitchConspiracyButton();
         transform.GetComponent<Image>().sprite =
             (id == 71090) ? councilView.conspiracyFinalSpriteChosen : councilView.conspiracySpriteChosen;
