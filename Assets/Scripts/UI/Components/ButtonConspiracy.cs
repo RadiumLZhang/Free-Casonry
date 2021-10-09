@@ -12,7 +12,7 @@ public class ButtonConspiracy : MonoBehaviour
     public long id;
     public AudioSource adplayer;
 
-    void Start()
+    void Awake()
     {
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
     }
@@ -22,6 +22,11 @@ public class ButtonConspiracy : MonoBehaviour
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "目标阅览");
         adplayer.clip = m_clip;
         adplayer.Play();
+        RefreshConspiracy();
+    }
+
+    public void RefreshConspiracy()
+    {
         CouncilView councilView = UIManager.Instance.panelCouncil.GetComponent<CouncilView>();
 
         councilView.SwitchConspiracyButton();
