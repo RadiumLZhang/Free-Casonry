@@ -79,6 +79,47 @@ namespace EventHandler
             Debug.Log("###" + m_catEventInfo);
             emergencyId = m_catEventInfo.GetEmergencyId();
             cacheTime = m_catEventInfo.ConsumeTime;
+            
+            if (m_catEventInfo.Type == 0)
+            {
+                // do nothing
+            }
+            else if (m_catEventInfo.Type == 1) //刺探
+            {
+                if (catInfo.ScoutValue * 5.0 > cacheTime / 2.0)
+                {
+                    cacheTime = (long)Math.Ceiling(cacheTime / 2.0);
+                }
+                else
+                {
+                    cacheTime = cacheTime - catInfo.ScoutValue * 5;
+                }
+                
+            }else if (m_catEventInfo.Type == 2) // 密谋
+            {
+                if (catInfo.ScoutValue * 5.0 > cacheTime / 2.0)
+                {
+                    cacheTime = (long)Math.Ceiling(cacheTime / 2.0);
+                }
+                else
+                {
+                    cacheTime = cacheTime - catInfo.Conspiracy * 5;
+                }
+                
+                
+            }else if (m_catEventInfo.Type == 3) //交流
+            {
+                if (catInfo.ScoutValue * 5.0 > cacheTime / 2.0)
+                {
+                    cacheTime = (long)Math.Ceiling(cacheTime / 2.0);
+                }
+                else
+                {
+                    cacheTime = cacheTime - catInfo.Communication * 5;
+                }
+            }
+            
+            
             TimeTickerManager.Instance.StopTick(); // 暂停时间
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
