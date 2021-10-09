@@ -33,7 +33,7 @@ namespace EventHandler
         public DesignedEventHandler(Cat cat)
         {
             catInfo = cat;
-            valid = true;
+            valid = false;
         }
 
         public void SetMonoHandler(CatColumnHandler handler)
@@ -49,6 +49,11 @@ namespace EventHandler
         public void SetValid(bool newValid)
         {
             valid = newValid;
+        }
+        
+        public bool GetValid()
+        {
+            return valid;
         }
         
         public Logic.Event.CatEvent GetEventInfo()

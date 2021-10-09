@@ -86,6 +86,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     
     //CatColumns
     public CatColumnHandler[] catColumnHandlers;
+    public GameObject[] eventSlots;
 
     //Animation
     public GameObject EventPopAnimation;
@@ -168,9 +169,14 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     }
     private void InitCatColumns()
     {
+        eventSlots = new GameObject[4];
+        for (int i = 0; i < 4; i++)
+        {
+            eventSlots[i] = panelEventExe.transform.Find("EventSlot" + i).gameObject;
+        }
         catColumnHandlers = new[]
         {
-            panelEventExe.transform.Find("EventSlot").GetComponent<CatColumnHandler>(),
+            panelEventExe.transform.Find("EventSlot0").GetComponent<CatColumnHandler>(),
             panelEventExe.transform.Find("EventSlot1").GetComponent<CatColumnHandler>(),
             panelEventExe.transform.Find("EventSlot2").GetComponent<CatColumnHandler>(),
             panelEventExe.transform.Find("EventSlot3").GetComponent<CatColumnHandler>()
@@ -300,7 +306,15 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         textResult_finish.GetComponent<Text>().text = m_myResultInfo.Description2;
         //buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
     }
-
+    
+    public void RefreshEventSlots()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            eventSlots[i].SetActive(EventHandlerManager.Instance.GetHandlerByIndex(i).GetValid());
+        }
+    }
+    
     public void SwitchNPCInfo(Human m_NPC)
     {
         panelNPCInfo.SwitchNpcInfo(m_NPC);
