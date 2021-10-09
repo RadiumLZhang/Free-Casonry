@@ -25,6 +25,10 @@ namespace Logic.Event
         
         public List<EmergencyInfoConfig.Types.Option> options;
 
+        public string Picture => Config?.Picture;
+        
+        //public int Type => Config?.Type ?? 0;@TODO:@takiding
+        
         private int choice;
 
         public Emergency(long id)

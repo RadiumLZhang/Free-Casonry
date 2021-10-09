@@ -50,6 +50,10 @@ namespace Logic.Event
 
         public bool IsImportant => Config?.IsImportant == 1;
 
+        public string UpDesc => Config?.UpDesc;
+        
+        public string DownDesc => Config?.DownDesc;
+
         public EventStatus Status { get; set; }
 
         /// <summary>
