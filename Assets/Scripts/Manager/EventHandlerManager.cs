@@ -48,7 +48,16 @@ namespace Manager
         // 获取议程槽的数量
         public int GetHandlerCount()
         {
-            return handlerList.Count;
+            int num = 0;
+            for(int i = 0; i < 4; i++)
+            {
+                if (handlerList[i].GetValid())
+                {
+                    num++;
+                }
+            }
+
+            return num;
         }
 
         // 获取议程槽的事件
