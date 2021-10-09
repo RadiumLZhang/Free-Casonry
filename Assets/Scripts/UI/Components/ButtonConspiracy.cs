@@ -22,8 +22,8 @@ public class ButtonConspiracy : MonoBehaviour
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "目标阅览");
         adplayer.clip = m_clip;
         adplayer.Play();
-        
-        CouncilView councilView = transform.parent.parent.parent.parent.parent.GetComponent<CouncilView>();
+        CouncilView councilView = UIManager.Instance.panelCouncil.GetComponent<CouncilView>();
+
         councilView.SwitchConspiracyButton();
         transform.GetComponent<Image>().sprite =
             (id == 71090) ? councilView.conspiracyFinalSpriteChosen : councilView.conspiracySpriteChosen;
