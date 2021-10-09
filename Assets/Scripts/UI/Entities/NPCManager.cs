@@ -155,7 +155,8 @@ public class NPCManager : MonoBehaviour
             {
                 item.Value.imageCat.gameObject.SetActive(false);
             }
-            
+
+            item.Value.imageWashHead.SetActive(human.IsWashHead);
         }
     }
 }

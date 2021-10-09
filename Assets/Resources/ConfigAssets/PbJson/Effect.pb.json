@@ -2246,7 +2246,7 @@
       "effectId" : "530121",
       "baseEffectId" : "5203",
       "paras" : [
-        2,
+        61000,
         1
       ]
     },
@@ -2254,7 +2254,7 @@
       "effectId" : "530122",
       "baseEffectId" : "5203",
       "paras" : [
-        3,
+        61001,
         1
       ]
     },
@@ -2262,7 +2262,15 @@
       "effectId" : "530123",
       "baseEffectId" : "5203",
       "paras" : [
-        4,
+        61002,
+        1
+      ]
+    },
+    {
+      "effectId" : "530124",
+      "baseEffectId" : "5203",
+      "paras" : [
+        61003,
         1
       ]
     },
@@ -2277,7 +2285,7 @@
       "effectId" : "530131",
       "baseEffectId" : "5200",
       "paras" : [
-        2,
+        61000,
         1
       ]
     },
@@ -2285,7 +2293,7 @@
       "effectId" : "530132",
       "baseEffectId" : "5200",
       "paras" : [
-        3,
+        61001,
         1
       ]
     },
@@ -2293,7 +2301,15 @@
       "effectId" : "530133",
       "baseEffectId" : "5200",
       "paras" : [
-        4,
+        61002,
+        1
+      ]
+    },
+    {
+      "effectId" : "530134",
+      "baseEffectId" : "5200",
+      "paras" : [
+        61003,
         1
       ]
     },
@@ -2308,7 +2324,7 @@
       "effectId" : "530141",
       "baseEffectId" : "5206",
       "paras" : [
-        2,
+        61000,
         1
       ]
     },
@@ -2316,7 +2332,7 @@
       "effectId" : "530142",
       "baseEffectId" : "5206",
       "paras" : [
-        3,
+        61001,
         1
       ]
     },
@@ -2324,7 +2340,15 @@
       "effectId" : "530143",
       "baseEffectId" : "5206",
       "paras" : [
-        4,
+        61002,
+        1
+      ]
+    },
+    {
+      "effectId" : "530144",
+      "baseEffectId" : "5206",
+      "paras" : [
+        61003,
         1
       ]
     },
@@ -2339,7 +2363,7 @@
       "effectId" : "530151",
       "baseEffectId" : "5203",
       "paras" : [
-        2,
+        61000,
         1
       ]
     },
@@ -2347,7 +2371,7 @@
       "effectId" : "530152",
       "baseEffectId" : "5203",
       "paras" : [
-        3,
+        61001,
         1
       ]
     },
@@ -2355,7 +2379,15 @@
       "effectId" : "530153",
       "baseEffectId" : "5203",
       "paras" : [
-        4,
+        61002,
+        1
+      ]
+    },
+    {
+      "effectId" : "530154",
+      "baseEffectId" : "5203",
+      "paras" : [
+        61003,
         1
       ]
     },
@@ -2370,7 +2402,7 @@
       "effectId" : "530161",
       "baseEffectId" : "5200",
       "paras" : [
-        2,
+        61000,
         1
       ]
     },
@@ -2378,7 +2410,7 @@
       "effectId" : "530162",
       "baseEffectId" : "5200",
       "paras" : [
-        3,
+        61001,
         1
       ]
     },
@@ -2386,7 +2418,15 @@
       "effectId" : "530163",
       "baseEffectId" : "5200",
       "paras" : [
-        4,
+        61002,
+        1
+      ]
+    },
+    {
+      "effectId" : "530164",
+      "baseEffectId" : "5200",
+      "paras" : [
+        61003,
         1
       ]
     },
@@ -2401,7 +2441,7 @@
       "effectId" : "530171",
       "baseEffectId" : "5206",
       "paras" : [
-        2,
+        61000,
         1
       ]
     },
@@ -2409,7 +2449,7 @@
       "effectId" : "530172",
       "baseEffectId" : "5206",
       "paras" : [
-        3,
+        61001,
         1
       ]
     },
@@ -2417,7 +2457,15 @@
       "effectId" : "530173",
       "baseEffectId" : "5206",
       "paras" : [
-        4,
+        61002,
+        1
+      ]
+    },
+    {
+      "effectId" : "530174",
+      "baseEffectId" : "5206",
+      "paras" : [
+        61003,
         1
       ]
     },
@@ -2576,14 +2624,6 @@
       ]
     },
     {
-      "effectId" : "540021",
-      "baseEffectId" : "5303",
-      "paras" : [
-        101,
-        72000
-      ]
-    },
-    {
       "effectId" : "540030",
       "baseEffectId" : "5013",
       "paras" : [
@@ -2595,6 +2635,14 @@
       "baseEffectId" : "5013",
       "paras" : [
         140040
+      ]
+    },
+    {
+      "effectId" : "540041",
+      "baseEffectId" : "5303",
+      "paras" : [
+        101,
+        72000
       ]
     }
   ]

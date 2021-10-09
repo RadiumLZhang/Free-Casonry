@@ -19,6 +19,7 @@ public class NPCMono : MonoBehaviour
     private EventTrigger m_trigger;
     private Animation m_animation;
     private GameObject npcRedPoint;
+    public GameObject imageWashHead;
     private Animation m_redPointAnimation;
     private Transform backgroundButton;
     public Image imageCat;
@@ -42,6 +43,7 @@ public class NPCMono : MonoBehaviour
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
         backgroundButton = transform.Find("EventCycle/root/Button");
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
+        imageWashHead = transform.Find("ImageWashHead").gameObject;
         m_redPointAnimation = transform.Find("animationRoot").GetComponent<Animation>();
         imageCat = transform.Find("ImageCat").GetComponent<Image>();
 

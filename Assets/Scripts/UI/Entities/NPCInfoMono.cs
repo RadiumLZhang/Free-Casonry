@@ -15,6 +15,7 @@ public class NPCInfoMono : MonoBehaviour
     private Text m_textLabelC;
     private Slider m_slider;
     private Image m_imageCat;
+    private GameObject m_imageWashHead;
     private Animation m_animation;
 
     private const string PanelInAnimation = "NpcPanelIn";
@@ -29,6 +30,7 @@ public class NPCInfoMono : MonoBehaviour
         m_textLabelB = transform.Find("animationRoot/TextLabelB").GetComponent<Text>();  
         m_slider = transform.Find("animationRoot/Slider").GetComponent<Slider>();  
         m_imageCat = transform.Find("animationRoot/ImageCat").GetComponent<Image>();
+        m_imageWashHead = transform.Find("animationRoot/ImageWashHead").gameObject;
         m_animation = transform.Find("animationRoot").GetComponent<Animation>();
         m_animation.Stop();
     }
@@ -52,6 +54,7 @@ public class NPCInfoMono : MonoBehaviour
             m_imageCat.gameObject.SetActive(false);
         }
         m_slider.value = npc.Defence / 10.0f;
+        m_imageWashHead.SetActive(npc.IsWashHead);
     }
 
     public void OpenNpcInfo()
