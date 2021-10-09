@@ -294,8 +294,10 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         List<EmergencyInfoConfig.Types.Option> optionList = m_myEmergencyInfo.GetOptions();
         Choice1_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[0].Description;
         Choice1_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[0].Name;
+        Choice1_emergency.Find("ButtonChoiceDisabled/Text").GetComponent<Text>().text = optionList[0].Name;
         Choice2_emergency.Find("TextChoice").GetComponent<Text>().text = optionList[1].Description;
         Choice2_emergency.Find("ButtonChoice/Text").GetComponent<Text>().text = optionList[1].Name;
+        Choice2_emergency.Find("ButtonChoiceDisabled/Text").GetComponent<Text>().text = optionList[1].Name;
         bool bCanChoose1 = m_myEmergencyInfo.OptionCanChoose(1);
         buttonChoice1.SetActive(bCanChoose1);
         buttonChoice1Disabled.SetActive(!bCanChoose1);
