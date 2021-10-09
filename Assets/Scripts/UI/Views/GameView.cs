@@ -384,6 +384,10 @@ public class GameView : MonoBehaviour
     // 紧急选择1
     public void ButtonEmergencyDialogChoice1_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostEmergency(1);
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
@@ -394,6 +398,10 @@ public class GameView : MonoBehaviour
     // 紧急选择2
     public void ButtonEmergencyDialogChoice2_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+
         var eventHandler = EventHandlerManager.Instance.GetHandlerByEventID(currentDialogEventID);
         eventHandler.OnPostEmergency(2);
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
@@ -404,13 +412,17 @@ public class GameView : MonoBehaviour
     // 关闭紧急
     public void ButtonCloseEmergencyDialog_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框关闭-翻书2");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+
         UIManager.Instance.panelEmergencyDialog.SetActive(false);
         UIManager.Instance.SwitchDarkBackGround(false);
         UIManager.Instance.SwitchTickerButtons(true);
         TimeTickerManager.Instance.Restore();
     }
     
-    
+    //这两个不加音效
     public void OpenExePanel()
     {
         buttonOpenExePanel.gameObject.SetActive(false);
