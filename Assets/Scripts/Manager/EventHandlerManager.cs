@@ -100,19 +100,21 @@ namespace Manager
                 return false;
             }
 
-            handlerList[index].SetValid(true);
+            UIManager.Instance.RefreshEventSlots();
+            handlerList[index].SetValid(false);
             return true;
         }
 
         public bool EnableHandler(int index)
         {
             if (handlerList.Count <= index)
-                return false;
-            else
             {
-                handlerList[index].SetValid(false);
-                return true;
+                return false;
             }
+            
+            handlerList[index].SetValid(true);
+            UIManager.Instance.RefreshEventSlots();
+            return true;
         }
 
         public string Save()
