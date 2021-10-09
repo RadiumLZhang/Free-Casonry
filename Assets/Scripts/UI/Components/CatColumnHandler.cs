@@ -37,7 +37,9 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
 
     //remainingTime维护剩余时间
     private long remainingTime;
-
+    
+    public AudioSource adplayer;
+    
     private Transform imageRemainingTime;
     private Text textRemainingTime;
     public bool isInit = false;
@@ -45,6 +47,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     private DesignedEventHandler eventHandler;
     void Start()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
         imageRemainingTime = transform.Find("CatPortrait/ImageRemainingTime");
         textRemainingTime = imageRemainingTime.Find("TextRemainingTime").GetComponent<Text>();
@@ -74,6 +77,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件放入音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         var tempEvent = eventHandler.GetEventInfo();
         pointerDragCache = eventData.pointerDrag;
         if (tempEvent == null)
@@ -282,12 +289,20 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     
     public void ButtonFinishFlag_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框出现-翻书1");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnFinish();
         gameView.currentDialogEventID = myID;
     }
     
     public void ButtonEmergencyFlag_OnClick()
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框出现-翻书1");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnEmergency();
         gameView.currentDialogEventID = myID;
     }

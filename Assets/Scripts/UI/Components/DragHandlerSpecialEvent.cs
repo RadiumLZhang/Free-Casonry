@@ -26,9 +26,11 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     public bool bIsExtracting;
     private uint timerDragStart;
     private float tempMousePos_x;
-
+    public AudioSource adplayer;
+    
     void Start()
     {
+        adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         scrollRect = GameObject.Find("ScrollSpecialEvent").GetComponent<ScrollRect>();
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();
         rectTransform = transform.GetComponent<RectTransform>();
@@ -48,6 +50,10 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     
     public void OnDrag(PointerEventData eventData)
     {
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         Vector3 newVec;          
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, null, out newVec);
         Vector3 offset = new Vector3(newVec.x - mousePos.x, newVec.y - mousePos.y, 0);
@@ -99,6 +105,10 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
 
     public void EndDrag()
     {
+        /*AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件放入音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();*/
+        
         if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;
         timerDragStart = 6;
