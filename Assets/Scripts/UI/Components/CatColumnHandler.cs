@@ -289,20 +289,12 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     
     public void ButtonFinishFlag_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框出现-翻书1");
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnFinish();
         gameView.currentDialogEventID = myID;
     }
     
     public void ButtonEmergencyFlag_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "对话框出现-翻书1");
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        
         EventHandlerManager.Instance.GetHandlerByIndex(index).OnEmergency();
         gameView.currentDialogEventID = myID;
     }

@@ -126,6 +126,7 @@ namespace EventHandler
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
+                    UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
                     UIManager.Instance.InitStartEventDialog(m_catEventInfo);
                 });
         }
@@ -176,6 +177,7 @@ namespace EventHandler
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
+                    UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
                     UIManager.Instance.InitFinishEventDialog(item);
                 }
                 );
@@ -213,6 +215,7 @@ namespace EventHandler
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
+                    UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
                     UIManager.Instance.InitEmergencyDialog(emergency, cacheTime);
                 }
             );
