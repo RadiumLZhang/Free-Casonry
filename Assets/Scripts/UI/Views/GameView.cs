@@ -282,12 +282,16 @@ public class GameView : MonoBehaviour
     //Button in Council
     public void ButtonBacktoGame_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        
-        TimeTickerManager.Instance.Restore();
-        panelCouncil.SetActive(false);
+        UIManager.Instance.SwitchSceneAnimation.GetComponent<SwitchSceneAnimation>().Play(
+            () =>
+            {
+                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
+                adplayer.clip = m_clip;
+                adplayer.Play();
+                
+                TimeTickerManager.Instance.Restore();
+                panelCouncil.SetActive(false);
+            });
     }
 
     //Buttons in Settings

@@ -18,6 +18,8 @@ namespace UI.Animation
         public bool Loop = false;
         public delegate void CallBack();
         public CallBack CallBackFunction;
+        public int HandleCallBackFrame = 0;
+        private bool HasHandleCallBack = false;
         public int FrameCount
         {
 
@@ -50,6 +52,7 @@ namespace UI.Animation
             mCurFrame = 0;
             IsPlaying = true;
             Foward = true;
+            HasHandleCallBack = false;
         }
 
         public void Play(CallBack callBack)
@@ -61,6 +64,7 @@ namespace UI.Animation
             mCurFrame = 0;
             IsPlaying = true;
             Foward = true;
+            HasHandleCallBack = false;
         }
 
         public void PlayReverse()
@@ -95,6 +99,15 @@ namespace UI.Animation
                     mCurFrame--;
                 }
 
+                if (!HasHandleCallBack && mCurFrame >= HandleCallBackFrame)
+                {
+                    HasHandleCallBack = true;
+                    if (CallBackFunction != null)
+                    {
+                        CallBackFunction.Invoke();
+                    }
+                }
+
                 if (mCurFrame >= FrameCount)
                 {
 
@@ -105,10 +118,6 @@ namespace UI.Animation
                     }
                     else
                     {
-                        if (CallBackFunction != null)
-                        {
-                            CallBackFunction.Invoke();
-                        }
                         IsPlaying = false;
                         SetSprite(0);
                         UIManager.Instance.SwitchSceneAnimation.SetActive(false);
