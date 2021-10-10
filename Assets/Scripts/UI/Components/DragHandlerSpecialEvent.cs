@@ -38,6 +38,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     public void OnBeginDrag(PointerEventData eventData)
     {
         Input.multiTouchEnabled = false;
+        Debug.Log("muisc:4");
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
         adplayer.clip = m_clip;
         adplayer.Play();
@@ -100,6 +101,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     
     public void OnEndDrag(PointerEventData eventData)
     {
+        Debug.Log("muisc:3");
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件取消-Cultist Simulator");
         adplayer.clip = m_clip;
         adplayer.Play();

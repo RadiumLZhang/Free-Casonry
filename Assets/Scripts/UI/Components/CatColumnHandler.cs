@@ -77,15 +77,19 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
+        Debug.Log("muisc:5");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件放入音效");
+        adplayer.clip = m_clip;
+        adplayer.Play();
+        
         pointerDragCache = eventData.pointerDrag;
         if (pointerDragCache.name != "ImageEvent" || pointerDragCache.GetComponent<DragHandlerSpecialEvent>()?.bIsExtracting == false)
         {
             return;
         }
         print(pointerDragCache);
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件放入音效");
-        adplayer.clip = m_clip;
-        adplayer.Play();
+        
+        //eventHandler = EventHandlerManager.Instance.GetHandlerByIndex(index);
         var tempEvent = eventHandler.GetEventInfo();
         
         if (tempEvent == null)
@@ -134,6 +138,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             
 
                 // on preinit
+                droppedNPCEvent.gameObject.SetActive(false);
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
@@ -174,6 +179,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
                 pointerDragCache.GetComponent<DragHandlerNPCEvent>().EndDrag();
             }
         }
+        
     }
 
     public void Restore(CatEvent inEvent)

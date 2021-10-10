@@ -329,10 +329,11 @@ namespace EventHandler
                 cacheTime = 0;
             }
             
+            
             if (emergencyIdReload != 0)
             {
                 emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
-                
+                UpdateEmergencyEvent();
             }
 
             TimeTickerManager.Instance.AddNowWaitingEvent(
