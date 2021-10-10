@@ -351,6 +351,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         m_finishFlagAnimation.Play(FlagAnimation);
     }
 
+    public void SetFinishGlass()
+    {
+        m_eventImage.sprite = UIManager.Instance.FinFinishGlass(eventHandler.GetEventInfo().Type);
+    }
     public void HighLight(bool highLight)
     {
         highlightBg.gameObject.SetActive(highLight);

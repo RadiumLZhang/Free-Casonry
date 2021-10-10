@@ -125,6 +125,11 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     {
         catColumnHandlers[index].SetFinishFlag(bIsSwitchToShown);
     }
+
+    public void SwitchFinishGlass(int index)
+    {
+        catColumnHandlers[index].SetFinishGlass();
+    }
     public void SwitchEmergencyFlag(int index,bool bIsSwitchToShown)
     {
         catColumnHandlers[index].SetEmergencyFlag(bIsSwitchToShown);
@@ -374,6 +379,22 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
                 return Resources.Load<Sprite>("Sprites/Cards/密谋事件");
             case 3:
                 return Resources.Load<Sprite>("Sprites/Cards/交际事件");
+        }
+        return null;
+    }
+    
+    public Sprite FinFinishGlass(int type)
+    {
+        switch (type)
+        {
+            case 0:
+                return Resources.Load<Sprite>("Sprites/Events/特殊事件完成动效");
+            case 1:
+                return Resources.Load<Sprite>("Sprites/Events/探查事件完成动效");
+            case 2:
+                return Resources.Load<Sprite>("Sprites/Events/密谋事件完成动效");
+            case 3:
+                return Resources.Load<Sprite>("Sprites/Events/交际事件完成动效");
         }
         return null;
     }

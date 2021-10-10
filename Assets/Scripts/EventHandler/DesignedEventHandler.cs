@@ -167,6 +167,7 @@ namespace EventHandler
                 emergencyResolved = true;
             }
             UIManager.Instance.SwitchFinishFlag(index, true);
+            UIManager.Instance.SwitchFinishGlass(index);
             UIManager.Instance.PlayBGM("AudioClips/主界面/" + "事件完成-暗黑地牢减轻版");
         }
 
