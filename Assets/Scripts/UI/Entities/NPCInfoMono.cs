@@ -37,7 +37,7 @@ public class NPCInfoMono : MonoBehaviour
 
     public void SwitchNpcInfo(Human npc)
     {
-        m_imageNPC.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + npc.Image);
+        m_imageNPC.sprite = Resources.Load<Sprite>("Sprites/PortraitsNoColor/" + npc.Image);
         m_textNPCName.text = npc.Name;
         m_textNPCTitle.text = npc.Title;
         m_textNPCVisibility.text = npc.Visibility.ToString();
@@ -46,7 +46,7 @@ public class NPCInfoMono : MonoBehaviour
         m_textLabelB.text = npc.Tags[1];
         if (npc.cat != null)
         {
-            m_imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + npc.cat.Image);
+            m_imageCat.sprite = Resources.Load<Sprite>("Sprites/PortraitsNoColor/" + npc.cat.Image);
             m_imageCat.gameObject.SetActive(true);
         }
         else
