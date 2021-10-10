@@ -77,16 +77,17 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag == UIManager.Instance.scrollRelationShip.gameObject)
+        pointerDragCache = eventData.pointerDrag;
+        if (pointerDragCache.name != "ImageEvent")
         {
             return;
         }
+        print(pointerDragCache);
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件放入音效");
         adplayer.clip = m_clip;
         adplayer.Play();
-        
         var tempEvent = eventHandler.GetEventInfo();
-        pointerDragCache = eventData.pointerDrag;
+        
         if (tempEvent == null)
         {
             Input.multiTouchEnabled = false;
