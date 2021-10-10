@@ -15246,27 +15246,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPS: 22
   SpriteFrames:
-  - {fileID: -4498357707146445477, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 9060415561191477128, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 5109412775058028003, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 6225733588890934378, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 8695739145312004577, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 5399252696451488067, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -2393474293642871438, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -766881254696726829, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -9101072243783297513, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -5274337523873914864, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -1319581547350377430, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -6805022322835736847, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 1221360191154523361, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 3244608171148745889, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -723669954033815049, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 4152431971659480291, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 7704247612115070959, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 2538872015021490118, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -3401108415421693414, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: 5749069400124759161, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
-  - {fileID: -1456154951858786100, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
+  - {fileID: -2077609377509297541, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 8803211122494762693, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 6290710608585256673, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -6238004166343437557, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 3063372812697283360, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 3851748251472178079, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -5238121657561942945, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 3591355121742528813, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 3223846024569731015, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -5523337447116814565, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 7835233543238252779, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 2361738238330156556, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 9174743429507953654, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 171728948881164556, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 6986858908695325539, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -3613081123827524167, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -5134931885238823245, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -5103222822369270038, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 8949295609831802332, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: 4732788783066963021, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -4694349411063499332, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
+  - {fileID: -6127898529195417399, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
   IsPlaying: 0
   Foward: 1
   AutoPlay: 0
@@ -15292,7 +15293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4498357707146445477, guid: 4f78b8436f511384fb56807c1ba4f408, type: 3}
+  m_Sprite: {fileID: -2077609377509297541, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15454,6 +15455,7 @@ MonoBehaviour:
     image: {fileID: 249471846}
   - type: 0
     image: {fileID: 80892394}
+  _curCenterChildIndex: 0
   adplayer: {fileID: 0}
 --- !u!114 &1582057690
 MonoBehaviour:
