@@ -99,8 +99,18 @@ public class NPCMono : MonoBehaviour
 
     public void OpenEventCycle()
     {
+        //用button的状态当做是否打开的判断
+        if (backgroundButton.gameObject.activeSelf)
+        {
+            return;
+        }
         backgroundButton.gameObject.SetActive(true);
         var inAni = m_animation["EventCycleShow"];
+        if (m_animation.IsPlaying(inAni.name) && inAni.speed == 1)
+        {
+            return;
+        }
+        
         inAni.speed = 1;
         inAni.normalizedTime = 0;
         
@@ -113,8 +123,19 @@ public class NPCMono : MonoBehaviour
     
     public void CloseEventCycle()
     {
+        //用button的状态当做是否打开的判断
+        if (!backgroundButton.gameObject.activeSelf)
+        {
+            return;
+        }
+        
         backgroundButton.gameObject.SetActive(false);
         var inAni = m_animation["EventCycleShow"];
+        if (m_animation.IsPlaying(inAni.name) && inAni.speed == -1)
+        {
+            return;
+        }
+        
         inAni.speed = -1;
         inAni.normalizedTime = 1;
         

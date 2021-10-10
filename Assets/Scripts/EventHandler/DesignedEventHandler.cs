@@ -130,6 +130,8 @@ namespace EventHandler
                 {
                     UIManager.Instance.InitStartEventDialog(m_catEventInfo);
                 });
+
+            EventHandlerManager.Instance.CurSelectIndex = index;
         }
 
         // 点击确认开始事件触发
@@ -183,6 +185,8 @@ namespace EventHandler
                     UIManager.Instance.InitFinishEventDialog(item);
                 }
                 );
+
+            EventHandlerManager.Instance.CurSelectIndex = index;
         }
 
         //点击结算，触发结果事件效果
@@ -223,6 +227,8 @@ namespace EventHandler
                 }
             );
             TimeTickerManager.Instance.StopTick(); // 暂停时间
+
+            EventHandlerManager.Instance.CurSelectIndex = index;
         }
 
         // 点击紧急事件结算
