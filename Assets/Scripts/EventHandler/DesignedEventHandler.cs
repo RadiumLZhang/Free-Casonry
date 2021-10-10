@@ -165,7 +165,7 @@ namespace EventHandler
                 emergencyResolved = true;
             }
             UIManager.Instance.SwitchFinishFlag(index, true);
-            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "事件完成-暗黑地牢");
+            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "事件完成-暗黑地牢减轻版");
         }
 
         // 点击结算红点
