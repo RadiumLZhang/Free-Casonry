@@ -192,6 +192,11 @@ public class NPCManager : MonoBehaviour
         var human = HumanManager.Instance.GetHuman(id);
         var mono = NPCs[id];
         
+        if (!human.IsShow)
+        {
+            return;
+        }
+
         mono.SetWashHead(human.IsWashHead);
     }
 }

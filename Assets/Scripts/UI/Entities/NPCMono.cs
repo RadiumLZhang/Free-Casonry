@@ -19,15 +19,23 @@ public class NPCMono : MonoBehaviour
     private EventTrigger m_trigger;
     private Animation m_animation;
     private GameObject npcRedPoint;
+    
     public GameObject imageWashHead;
+    private UITransitionEffect m_imgWashHeadEffect;
+    
     private Animation m_redPointAnimation;
     private Transform backgroundButton;
+    
     public Image imageCat;
+    private UITransitionEffect m_imgCatEffect;
+        
     private UITransitionEffect effect;
     private Image imageHuman;
     public AudioSource adplayer;
     
     private const string ImportantPointIn = "ImportantPointIn";
+    
+    
     
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
     
@@ -42,10 +50,15 @@ public class NPCMono : MonoBehaviour
         scrollRect = GameObject.Find("ScrollRelationship").GetComponent<ScrollRect>();
         manager = GameObject.Find("ScrollRelationship").GetComponent<NPCManager>();
         backgroundButton = transform.Find("EventCycle/root/Button");
+        
         npcRedPoint = transform.Find("animationRoot/RedPoint").gameObject;
-        imageWashHead = transform.Find("ImageWashHead").gameObject;
         m_redPointAnimation = transform.Find("animationRoot").GetComponent<Animation>();
+        
+        imageWashHead = transform.Find("ImageWashHead").gameObject;
+        m_imgWashHeadEffect = imageWashHead.GetComponent<UITransitionEffect>();
+
         imageCat = transform.Find("ImageCat").GetComponent<Image>();
+        m_imgCatEffect = imageCat.GetComponent<UITransitionEffect>();
 
         effect = transform.GetComponent<UITransitionEffect>();
         m_trigger = transform.GetComponent<EventTrigger>();
@@ -181,6 +194,7 @@ public class NPCMono : MonoBehaviour
     {
         imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + name);
         imageCat.gameObject.SetActive(true);
+        m_imgCatEffect.Show();
         imageCat.SetAllDirty();
     }
 
@@ -192,6 +206,10 @@ public class NPCMono : MonoBehaviour
     public void SetWashHead(bool isWashHead)
     {
         imageWashHead.SetActive(isWashHead);
+        if (isWashHead)
+        {
+            m_imgWashHeadEffect.Show();
+        }
     }
 
     public void RefreshEventCycle()

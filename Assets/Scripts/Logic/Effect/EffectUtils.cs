@@ -37,7 +37,9 @@ namespace Logic.Effect
             var config = EffectLoader.Instance.FindEffectItem(id);
             if (config == null)
             {
+#if UNITY_EDITOR
                 Debug.LogError($"Invalid EffectId:{id}");
+#endif
                 return;
             }
             

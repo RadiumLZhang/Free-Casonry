@@ -86,13 +86,13 @@ namespace Logic.Human
             Tags = new List<String>(Config.Tags);
         }
 
-        // /**
-        //  * 不带参数的构造函数仅用于存档的反序列化
-        //  */
-        // public Human()
-        // {
-        //     
-        // }
+        /**
+         * 不带参数的构造函数仅用于存档的反序列化
+         */
+        public Human()
+        {
+            
+        }
         
         public bool CanRaiseCat()
         {
@@ -189,10 +189,10 @@ namespace Logic.Human
             {
                 return;
             }
-            
-            
+
             npcMono.Show();
             NPCManager.SetNpcCat(ID);
+            NPCManager.SetNpcWashHead(ID);
         }
 
         public void Restore()

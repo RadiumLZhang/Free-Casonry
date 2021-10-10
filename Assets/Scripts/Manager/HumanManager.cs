@@ -94,8 +94,12 @@ namespace Manager
                     foreach (var kv in humanMap)
                     {
                         var human = kv.Value;
-                        
-                        NPCManager.NPCs[kv.Key].gameObject.SetActive(human.IsShow);
+
+                        if (human.IsShow)
+                        {
+                            human.Show();
+                        }
+
                         if (!human.IsAlive)
                         {
                             human.Death();
