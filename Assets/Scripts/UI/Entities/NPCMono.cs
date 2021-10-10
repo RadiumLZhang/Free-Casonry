@@ -198,6 +198,8 @@ public class NPCMono : MonoBehaviour
         {
             return;
         }
+
+        m_catName = name;
         
         imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + name);
         imageCat.gameObject.SetActive(true);
