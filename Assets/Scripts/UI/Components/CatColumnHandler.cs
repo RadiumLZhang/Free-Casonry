@@ -78,7 +78,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         pointerDragCache = eventData.pointerDrag;
-        if (pointerDragCache.name != "ImageEvent")
+        if (pointerDragCache.name != "ImageEvent" || pointerDragCache.GetComponent<DragHandlerSpecialEvent>()?.bIsExtracting == false)
         {
             return;
         }
