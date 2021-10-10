@@ -685,7 +685,7 @@ namespace Logic.Effect
             }
 
             vineMono.PlayBGM("AudioClips/主界面/藤蔓蔓延");
-            vineMono.Show();
+            vineMono.Show(((int) args[1]) == 1);
         }
 
         private static void SetRelation(params object[] args)
