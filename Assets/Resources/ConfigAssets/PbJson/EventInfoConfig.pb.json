@@ -370,7 +370,7 @@
         }
       ],
       "upDesc" : "国王：宫中四处都是叛贼的耳目，小心行事。 \n女仆：我一定会将这封信交给佩尔主教。",
-      "downDesc" : "猫咪的行动会导致隐匿度下降"
+      "downDesc" : "猫咪每次行动都会导致隐匿度下降2点"
     },
     {
       "eventId" : "10004",
@@ -557,7 +557,7 @@
         }
       ],
       "upDesc" : "国王：有人要谋害于我，身边却没有可依靠的人。最信任的仆从因我而死，我该怎么办？",
-      "downDesc" : "国王有几分动摇"
+      "downDesc" : "隐匿度降为0后，猫咪会遭到人类剿杀"
     },
     {
       "eventId" : "10006",
@@ -651,7 +651,7 @@
         }
       ],
       "upDesc" : "国王：有人要谋害于我，我却做不了什么。主教不肯伸出援手，我该怎么对抗叛贼的部队？",
-      "downDesc" : "国王有几分动摇"
+      "downDesc" : "隐匿度降为0后，猫咪会遭到人类剿杀"
     },
     {
       "eventId" : "10007",
@@ -2824,7 +2824,7 @@
       "humanId" : "60001",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -3337,7 +3337,7 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "0"
+            "-1"
           ]
         },
         {
@@ -3476,7 +3476,7 @@
       "humanId" : "60002",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 1,
+      "isImportant" : 0,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -3821,7 +3821,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "412040"
           ]
         },
         {
@@ -3853,7 +3853,7 @@
       "isImportant" : 0,
       "priority" : 180,
       "preconditions" : [
-        "0",
+        "412042",
         "459005",
         "0"
       ],
@@ -4012,7 +4012,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "412040"
+            "-1"
           ]
         },
         {
@@ -5238,7 +5238,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "413040"
+            "-1"
           ]
         },
         {
@@ -6846,7 +6846,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "414040"
+            "-1"
           ]
         },
         {
@@ -7977,7 +7977,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "415040"
+            "-1"
           ]
         },
         {
@@ -8827,7 +8827,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "416040"
+            "-1"
           ]
         },
         {
@@ -9769,7 +9769,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "417040"
+            "-1"
           ]
         },
         {
@@ -10886,6 +10886,7 @@
           "conditions" : [
             "418050",
             "418051",
+            "418052",
             "459003"
           ]
         },
@@ -10903,7 +10904,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "418040"
+            "-1"
           ]
         },
         {
@@ -11662,7 +11663,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "419040"
+            "-1"
           ]
         },
         {
@@ -12790,7 +12791,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "420040"
+            "-1"
           ]
         },
         {
@@ -14016,7 +14017,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "421040"
+            "-1"
           ]
         },
         {

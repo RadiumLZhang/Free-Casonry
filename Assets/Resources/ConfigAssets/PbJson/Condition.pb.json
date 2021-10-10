@@ -133,7 +133,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60000,
-        0
+        1
       ]
     },
     {
@@ -141,7 +141,7 @@
       "baseConditionId" : "4102",
       "paras" : [
         60000,
-        2
+        3
       ]
     },
     {
@@ -204,7 +204,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60001,
-        0
+        1
       ]
     },
     {
@@ -212,7 +212,7 @@
       "baseConditionId" : "4102",
       "paras" : [
         60001,
-        2
+        3
       ]
     },
     {
@@ -275,7 +275,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60002,
-        0
+        1
       ]
     },
     {
@@ -283,7 +283,7 @@
       "baseConditionId" : "4102",
       "paras" : [
         60002,
-        2
+        3
       ]
     },
     {
@@ -354,7 +354,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60003,
-        0
+        1
       ]
     },
     {
@@ -362,14 +362,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60003,
-        2
+        3
       ]
     },
     {
       "conditionId" : "413052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60003,
         61004
       ]
     },
@@ -433,7 +433,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60004,
-        0
+        1
       ]
     },
     {
@@ -441,14 +441,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60004,
-        2
+        3
       ]
     },
     {
       "conditionId" : "414052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60004,
         61000
       ]
     },
@@ -505,7 +505,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60005,
-        0
+        1
       ]
     },
     {
@@ -513,14 +513,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60005,
-        2
+        3
       ]
     },
     {
       "conditionId" : "415052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60005,
         61000
       ]
     },
@@ -577,7 +577,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60006,
-        0
+        1
       ]
     },
     {
@@ -585,14 +585,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60006,
-        2
+        3
       ]
     },
     {
       "conditionId" : "416052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60006,
         61000
       ]
     },
@@ -649,7 +649,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60007,
-        0
+        1
       ]
     },
     {
@@ -657,14 +657,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60007,
-        2
+        3
       ]
     },
     {
       "conditionId" : "417052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60007,
         61000
       ]
     },
@@ -721,7 +721,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60008,
-        0
+        1
       ]
     },
     {
@@ -729,14 +729,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60008,
-        2
+        3
       ]
     },
     {
       "conditionId" : "418052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60008,
         61000
       ]
     },
@@ -793,7 +793,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60009,
-        0
+        1
       ]
     },
     {
@@ -801,14 +801,14 @@
       "baseConditionId" : "4102",
       "paras" : [
         60009,
-        2
+        3
       ]
     },
     {
       "conditionId" : "419052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60009,
         61000
       ]
     },
@@ -865,7 +865,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60010,
-        0
+        1
       ]
     },
     {
@@ -873,7 +873,15 @@
       "baseConditionId" : "4102",
       "paras" : [
         60010,
-        2
+        3
+      ]
+    },
+    {
+      "conditionId" : "420052",
+      "baseConditionId" : "4114",
+      "paras" : [
+        60010,
+        61000
       ]
     },
     {
@@ -929,7 +937,7 @@
       "baseConditionId" : "4107",
       "paras" : [
         60011,
-        0
+        1
       ]
     },
     {
@@ -944,7 +952,7 @@
       "conditionId" : "421052",
       "baseConditionId" : "4114",
       "paras" : [
-        60002,
+        60011,
         61000
       ]
     },
