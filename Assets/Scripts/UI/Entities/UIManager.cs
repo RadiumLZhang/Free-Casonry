@@ -96,6 +96,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     //Animation
     public GameObject EventPopAnimation;
+    public GameObject SwitchSceneAnimation;
     
     public EndingMono EndingMono;
     //music
@@ -162,6 +163,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         buttonNormalTicker = gameView.Find("PanelTickerButtons/ButtonNormal").gameObject;
         buttonSpeedTicker = gameView.Find("PanelTickerButtons/ButtonSpeed").gameObject;
         EventPopAnimation = gameView.Find("Animation/EventPopAnimation").gameObject;
+        SwitchSceneAnimation = gameView.Find("Animation/SwitchSceneAnimation").gameObject;
         
         buttonCouncil = gameView.Find("ButtonCouncil").gameObject;
         m_buttonCouncilAnimation = buttonCouncil.GetComponent<Animation>();

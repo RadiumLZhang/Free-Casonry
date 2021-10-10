@@ -201,10 +201,15 @@ public class GameView : MonoBehaviour
     public void ButtonCouncil_OnClick()
     {
         TimeTickerManager.Instance.StopTick();
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "转入猫咪议会");
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        panelCouncil.SetActive(true);
+        
+        UIManager.Instance.SwitchSceneAnimation.GetComponent<SwitchSceneAnimation>().Play(
+            () =>
+            {
+                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "转入猫咪议会");
+                adplayer.clip = m_clip;
+                adplayer.Play();
+                panelCouncil.SetActive(true);
+            });
     }
     
     public void ButtonPause_OnClick()
@@ -282,12 +287,16 @@ public class GameView : MonoBehaviour
     //Button in Council
     public void ButtonBacktoGame_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
-        adplayer.clip = m_clip;
-        adplayer.Play();
-        
-        TimeTickerManager.Instance.Restore();
-        panelCouncil.SetActive(false);
+        UIManager.Instance.SwitchSceneAnimation.GetComponent<SwitchSceneAnimation>().Play(
+            () =>
+            {
+                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
+                adplayer.clip = m_clip;
+                adplayer.Play();
+                
+                TimeTickerManager.Instance.Restore();
+                panelCouncil.SetActive(false);
+            });
     }
 
     //Buttons in Settings
