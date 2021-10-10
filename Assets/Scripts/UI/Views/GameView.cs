@@ -139,7 +139,7 @@ public class GameView : MonoBehaviour
     public void ButtonSettings_OnClick()
     {
         //@muidarzhang todo 
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-暗黑地牢");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "转入猫咪议会");
         adplayer.clip = m_clip;
         adplayer.Play();
         
