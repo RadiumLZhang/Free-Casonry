@@ -19,7 +19,7 @@ namespace Logic.Event
     }
     public class CatEvent
     {
-        public long ID { get; private set; }
+        public long ID { get; set; }
 
         public EventInfoConfig.Types.EventItemConfig Config { get; private set; }
 
@@ -41,7 +41,7 @@ namespace Logic.Event
         /// <summary>
         /// 已执行次数
         /// </summary>
-        public int ExecuteCount { get; private set; }
+        public int ExecuteCount { get; set; }
 
         /// <summary>
         /// 绑定的突发事件id, 0代表没有

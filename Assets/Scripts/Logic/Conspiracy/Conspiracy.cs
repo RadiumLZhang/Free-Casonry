@@ -10,7 +10,7 @@ namespace Logic.Conspiracy
         public string Desc { get; set; }
         public long Conditions { get; set; }
         public long GroupId { get; set; }
-        public CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem Config { get; private set; }
+        public CatConspiracyInfo.CatConspiracyInfo.Types.CatConspiracyItem Config { get; set; }
         
         public Conspiracy(long id)
         {
