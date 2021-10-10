@@ -77,6 +77,10 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
+        if (eventData.pointerDrag == UIManager.Instance.scrollRelationShip.gameObject)
+        {
+            return;
+        }
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件放入音效");
         adplayer.clip = m_clip;
         adplayer.Play();
