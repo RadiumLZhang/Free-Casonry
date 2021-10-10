@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Manager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -54,7 +55,7 @@ public class SpecialEventMono : MonoBehaviour
     {
         myID = ID;
         //读表
-        m_myCatEventInfo = new Logic.Event.CatEvent(myID);
+        m_myCatEventInfo = EventManager.Instance.GetCatEventByID(myID);
         
         //DragHandler接收ID
         m_dragHandlerSpecialEvent.SetEventID(myID);
