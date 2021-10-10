@@ -167,7 +167,7 @@ public class CenterOnChild_UGUI : MonoBehaviour, IEndDragHandler, IDragHandler, 
     /// <summary>
     /// 当前中心child索引
     /// </summary>
-    private int _curCenterChildIndex = 0;
+    public int _curCenterChildIndex = 0;
     /// <summary>
     /// 上一次中心child索引
     /// </summary>

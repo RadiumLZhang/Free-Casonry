@@ -54,6 +54,7 @@ public class CouncilView : MonoBehaviour
     private Text TextSkill;
     private Text TextBiography;
     private GameObject[] ImageCats;
+    private CenterOnChild_UGUI CenterOnChildMono;
     
     
     //Btns
@@ -92,6 +93,8 @@ public class CouncilView : MonoBehaviour
             ImageCats[i] = catList.Find("Image" + i + "/ImageCat").gameObject;
         }
 
+        CenterOnChildMono = panelManage.transform.Find("animationRoot/ScrollListCats").GetComponent<CenterOnChild_UGUI>();
+
         Transform conspiracyDetailPanel = panelConspiracy.transform.Find("animationRoot/PanelConspiracyInfo");
         TextConspiracyName = conspiracyDetailPanel.Find("TextConspiracyName").GetComponent<Text>();
         TextConspiracyDetail = conspiracyDetailPanel.Find("TextConspiracyDetail").GetComponent<Text>();
@@ -117,6 +120,7 @@ public class CouncilView : MonoBehaviour
     private void OnEnable()
     {
         RefreshCatList();
+        CenterOnChildMono.SwitchCat(CenterOnChildMono._curCenterChildIndex);
     }
 
     public void RefreshCatList()
