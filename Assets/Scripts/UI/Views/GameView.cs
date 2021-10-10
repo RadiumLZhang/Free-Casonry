@@ -296,6 +296,7 @@ public class GameView : MonoBehaviour
                 
                 TimeTickerManager.Instance.Restore();
                 panelCouncil.SetActive(false);
+                UIManager.Instance.SwitchDarkBackGround(false);
             });
     }
 
