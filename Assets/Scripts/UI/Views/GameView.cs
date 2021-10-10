@@ -205,7 +205,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchSceneAnimation.GetComponent<SwitchSceneAnimation>().Play(
             () =>
             {
-                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "转入猫咪议会");
+                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/OP/" + "幕布转场");
                 adplayer.clip = m_clip;
                 adplayer.Play();
                 panelCouncil.SetActive(true);
@@ -290,7 +290,7 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchSceneAnimation.GetComponent<SwitchSceneAnimation>().Play(
             () =>
             {
-                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "游戏开始-Cultist Simulator");
+                AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/OP/" + "幕布转场");
                 adplayer.clip = m_clip;
                 adplayer.Play();
                 
