@@ -272,9 +272,7 @@ public class CouncilView : MonoBehaviour
             TextScoutValue.text = cat.ScoutValue.ToString();
             TextConspiracy.text = cat.Conspiracy.ToString();
             TextCommunication.text = cat.Communication.ToString();
-            var skillTextItem = LanguageLoader.Instance.FindLanguageItem(cat.CatState.ToString());
-            if(skillTextItem != null)
-                TextSkill.text = skillTextItem.Value;
+            TextSkill.text = cat.Skill;
             TextBiography.text = cat.Description;
         }
         else
