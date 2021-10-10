@@ -21,7 +21,7 @@ namespace Logic.Event
     {
         public long ID { get; set; }
 
-        public EventInfoConfig.Types.EventItemConfig Config { get; private set; }
+        public EventInfoConfig.Types.EventItemConfig Config { get; set; }
 
         public string Name => Config?.Name;
 
