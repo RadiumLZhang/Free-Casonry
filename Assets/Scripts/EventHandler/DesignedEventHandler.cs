@@ -124,10 +124,10 @@ namespace EventHandler
             
             TimeTickerManager.Instance.StopTick(); // 暂停时间
             
+            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
-                    UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
                     UIManager.Instance.InitStartEventDialog(m_catEventInfo);
                 });
         }
@@ -176,10 +176,10 @@ namespace EventHandler
             TimeTickerManager.Instance.StopTick();
             // 跳出弹窗
             
+            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
-                    UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
                     UIManager.Instance.InitFinishEventDialog(item);
                 }
                 );
@@ -215,10 +215,10 @@ namespace EventHandler
         public void OnEmergency()
         {
             
+            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
-                    UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
                     UIManager.Instance.InitEmergencyDialog(emergency, cacheTime);
                 }
             );
