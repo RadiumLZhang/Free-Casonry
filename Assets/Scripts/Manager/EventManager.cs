@@ -125,6 +125,10 @@ namespace Manager
                 foreach (var e in list.Value)
                 {
                     id2Event[e.ID] = e;
+                    if (e.Status == EventStatus.Generated && e.HasTicker)
+                    {
+                        e.AddTicker();
+                    }
                 }
             }
         }

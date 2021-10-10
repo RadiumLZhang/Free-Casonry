@@ -112,7 +112,7 @@ namespace Logic.Event
             Status = EventStatus.Generated;
             if (ExpireTime != 0)
             {
-                Countdown = (int)ExpireTime;
+                Countdown = (int)ExpireTime; 
             }
         }
 
@@ -175,6 +175,17 @@ namespace Logic.Event
 
         public void AddTicker()
         {
+            if (ExpireTime == 0)
+            {
+                return;
+            }
+
+            if (Countdown <= 0)
+            {
+                OutOfTimeResult();
+                return;
+            }
+            
             this.HasTicker = true;
             TimeTickerManager.Instance.AddLastingEvent(ID,
                 () =>
@@ -183,12 +194,18 @@ namespace Logic.Event
                 },
                 0,
                 1,
-                Countdown,
+                Countdown - 1, //不减1会多数1s
                 () =>
                 {
                     this.OutOfTimeResult();
+                    Status = EventStatus.Finished;
                 }
             );
+        }
+
+        public void RemoveTicker()
+        {
+            TimeTickerManager.Instance.RemoveByID(ID);
         }
 
         public void OutOfTimeResult()

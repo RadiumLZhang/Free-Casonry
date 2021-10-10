@@ -150,6 +150,8 @@ namespace EventHandler
                 emergencyTime = emergency.GetTimeOffset();
             }
             m_catEventInfo.Status = EventStatus.OnProcess; 
+            m_catEventInfo.RemoveTicker();
+            
             TimeTickerManager.Instance.AddLastingEvent(newEventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
             TimeTickerManager.Instance.Restore(); //恢复时间
             m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
@@ -335,7 +337,8 @@ namespace EventHandler
                 emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
                 UpdateEmergencyEvent();
             }
-
+            
+            
             TimeTickerManager.Instance.AddNowWaitingEvent(
                 -1,
                 () =>
