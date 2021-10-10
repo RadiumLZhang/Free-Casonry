@@ -63,4 +63,13 @@ public class VineManager : MonoBehaviour
         return vineMono.Active;
     }
 
+    public static void ShowAll()
+    {
+        foreach (var item in Vines)
+        {
+            var vine = item.Value;
+            vine.Show();
+        }
+    }
+
 }

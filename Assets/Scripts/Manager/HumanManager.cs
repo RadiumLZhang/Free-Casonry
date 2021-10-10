@@ -46,6 +46,15 @@ namespace Manager
             return null;
         }
 
+        public void ShowAll()
+        {
+            foreach (var item in humanMap)
+            {
+                var human = item.Value;
+                human.Show();
+            }
+        }
+
         public string Save()
         {
             var jsonString = JsonConvert.SerializeObject(humanMap);

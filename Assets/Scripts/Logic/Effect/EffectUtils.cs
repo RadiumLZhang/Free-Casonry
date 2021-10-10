@@ -241,9 +241,9 @@ namespace Logic.Effect
                 case 5301:
                     ShowRelationLine(args);
                     break;
-                // case 5302:
-                //     ShowAll(args);
-                //     break;
+                case 5302:
+                    ShowAll(args);
+                    break;
                 case 5303:
                     SetRelation(args);
                     break;
@@ -669,7 +669,6 @@ namespace Logic.Effect
 
         private static void ShowHuman(params object[] args)
         {
-            
             var human = GetHuman(args[0]);
             human.Show();
         }
@@ -685,6 +684,12 @@ namespace Logic.Effect
             }
 
             vineMono.Show(((int) args[1]) == 1);
+        }
+
+        private static void ShowAll(params object[] args)
+        {
+            VineManager.ShowAll();
+            HumanManager.Instance.ShowAll();
         }
 
         private static void SetRelation(params object[] args)
