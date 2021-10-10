@@ -147,6 +147,10 @@
       "baseEffectId" : "5018"
     },
     {
+      "effectId" : "500079",
+      "baseEffectId" : "5304"
+    },
+    {
       "effectId" : "510000",
       "baseEffectId" : "5102",
       "paras" : [

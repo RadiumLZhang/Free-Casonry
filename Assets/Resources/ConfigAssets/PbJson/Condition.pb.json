@@ -130,7 +130,7 @@
     },
     {
       "conditionId" : "410050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60000,
         0
@@ -201,7 +201,7 @@
     },
     {
       "conditionId" : "411050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60001,
         0
@@ -272,7 +272,7 @@
     },
     {
       "conditionId" : "412050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60002,
         0
@@ -351,7 +351,7 @@
     },
     {
       "conditionId" : "413050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60003,
         0
@@ -430,7 +430,7 @@
     },
     {
       "conditionId" : "414050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60004,
         0
@@ -502,7 +502,7 @@
     },
     {
       "conditionId" : "415050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60005,
         0
@@ -574,7 +574,7 @@
     },
     {
       "conditionId" : "416050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60006,
         0
@@ -646,7 +646,7 @@
     },
     {
       "conditionId" : "417050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60007,
         0
@@ -718,7 +718,7 @@
     },
     {
       "conditionId" : "418050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60008,
         0
@@ -790,7 +790,7 @@
     },
     {
       "conditionId" : "419050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60009,
         0
@@ -862,7 +862,7 @@
     },
     {
       "conditionId" : "420050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60010,
         0
@@ -926,7 +926,7 @@
     },
     {
       "conditionId" : "421050",
-      "baseConditionId" : "4106",
+      "baseConditionId" : "4107",
       "paras" : [
         60011,
         0
