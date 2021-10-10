@@ -1694,7 +1694,7 @@
       "humanId" : "60000",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -6306,7 +6306,7 @@
       "humanId" : "60004",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 1,
+      "isImportant" : 0,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -6353,7 +6353,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "414000"
+            "414000",
+            "414001"
           ]
         },
         {

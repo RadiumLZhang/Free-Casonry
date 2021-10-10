@@ -35,7 +35,7 @@
       "baseConditionId" : "4403",
       "paras" : [
         20003,
-        0
+        1
       ]
     },
     {
@@ -383,7 +383,7 @@
     },
     {
       "conditionId" : "414001",
-      "baseConditionId" : "4103",
+      "baseConditionId" : "4400",
       "paras" : [
         100010
       ]
@@ -1699,7 +1699,7 @@
       "baseConditionId" : "4403",
       "paras" : [
         21714,
-        0
+        1
       ]
     },
     {
@@ -1889,7 +1889,7 @@
       "baseConditionId" : "4403",
       "paras" : [
         22012,
-        0
+        1
       ]
     },
     {
