@@ -343,7 +343,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.05
   m_Text: "\u6587\u672C\u6211\u5462\u5427\u6211\u5462\u5427\n\u6587\u672C\u6211\n\u6587\u672C\u6211\u5462\u5427\u6211\u5462\u5427\n\u6587\u672C\u6211\u5462\u5427\u6211\n\u6587\u672C\u6211\u5462\u5427\u6587\u672C\u6211\u5462\u5427"
 --- !u!222 &35201227
 CanvasRenderer:
