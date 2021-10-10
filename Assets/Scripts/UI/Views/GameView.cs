@@ -18,7 +18,7 @@ using Random = UnityEngine.Random;
 public class GameView : MonoBehaviour
 {
     private RawImage ImageStartGame;
-    private bool bIsGameStarting;
+    //private bool bIsGameStarting;
     private GameObject panelCouncil;
     private GameObject panelSettings;
     private GameObject panelEventExe;
@@ -78,7 +78,7 @@ public class GameView : MonoBehaviour
     void Start()
     {
         ImageStartGame = transform.Find("ImageStartGame").GetComponent<RawImage>();
-        bIsGameStarting = true;
+        //bIsGameStarting = true;
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         bgm =  GameObject.Find("BGM").GetComponent<AudioSource>();
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/BGM/Ivan Sokol - Fugue in G Minor, BWV 578");
