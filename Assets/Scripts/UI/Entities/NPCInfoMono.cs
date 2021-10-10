@@ -22,7 +22,7 @@ public class NPCInfoMono : MonoBehaviour
     
     void Start()
     {
-        m_imageNPC = transform.Find("animationRoot/ImageNPCBackground/ImageNPC").GetComponent<Image>();
+        m_imageNPC = transform.Find("animationRoot/ImageNPCBackground/Mask/ImageNPC").GetComponent<Image>();
         m_textNPCName = transform.Find("animationRoot/TextNPCName").GetComponent<Text>();
         m_textNPCTitle = transform.Find("animationRoot/TextNPCTitle").GetComponent<Text>();
         m_textNPCVisibility = transform.Find("animationRoot/TextNPCVisibility").GetComponent<Text>(); 
