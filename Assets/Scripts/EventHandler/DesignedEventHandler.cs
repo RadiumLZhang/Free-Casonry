@@ -174,6 +174,7 @@ namespace EventHandler
         // 点击结算红点
         public void OnFinish()
         {
+            m_catEventInfo = EventManager.Instance.GetCatEventByID((long)eventID);
             long resultId = m_catEventInfo.GetResultId();
             ResultEventInfo.ResultEventInfo.Types.ResultEventItem item = ResultEventInfoLoader.Instance.FindResultEventItem(resultId);
             TimeTickerManager.Instance.StopTick();
