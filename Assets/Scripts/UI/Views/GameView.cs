@@ -83,7 +83,6 @@ public class GameView : MonoBehaviour
         bgm =  GameObject.Find("BGM").GetComponent<AudioSource>();
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/BGM/Ivan Sokol - Fugue in G Minor, BWV 578");
         bgm.clip = m_clip;
-        bgm.loop = true;
         bgm.Play();
         panelCouncil = transform.Find("PanelCouncil").gameObject;
         panelSettings = transform.Find("PanelSettings").gameObject;
