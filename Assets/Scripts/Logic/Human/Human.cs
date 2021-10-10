@@ -196,7 +196,10 @@ namespace Logic.Human
         public void Restore()
         {
             Config = HumanInfoLoader.Instance.Findperson(ID);
-            SetCat(CatId);
+            if (CatId != 0)
+            {
+                cat = CatManager.Instance.GetCat(CatId);
+            }
         }
     }
 }
