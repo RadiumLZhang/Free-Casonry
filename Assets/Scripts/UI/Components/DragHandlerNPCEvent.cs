@@ -74,11 +74,11 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
         //Input.multiTouchEnabled = true;
-        UIManager.Instance.SwitchDraggingMask(false);
     }
 
     public void EndDrag()
     {
+        UIManager.Instance.SwitchDraggingMask(false);
         gameView.CloseExePanel();
         Destroy(draggingImage);
         GetComponent<Image>().enabled = true;

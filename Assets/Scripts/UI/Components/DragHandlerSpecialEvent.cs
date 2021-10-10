@@ -109,11 +109,11 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
         //Input.multiTouchEnabled = true;
-        UIManager.Instance.SwitchDraggingMask(false);
     }
 
     public void EndDrag()
     {
+        UIManager.Instance.SwitchDraggingMask(false);
         if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;
         timerDragStart = 6;
