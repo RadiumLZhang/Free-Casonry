@@ -3648,7 +3648,7 @@
           ]
         }
       ],
-      "upDesc" : "密切监视人类最近的动向，了解人类的性格与习惯。",
+      "upDesc" : "谨慎坚定的人，需要更高的能见度才能展开行动。",
       "downDesc" : "能见度增加"
     },
     {
@@ -3741,7 +3741,7 @@
           ]
         }
       ],
-      "upDesc" : "密切监视人类最近的动向，了解人类的性格与习惯。",
+      "upDesc" : "谨慎坚定的人，需要更高的能见度才能展开行动。",
       "downDesc" : "能见度增加"
     },
     {
@@ -5044,7 +5044,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "413050"
           ]
         },
         {
@@ -6651,7 +6651,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "414050"
           ]
         },
         {
@@ -7219,7 +7219,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "415050"
           ]
         },
         {
@@ -8632,7 +8632,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "416050"
           ]
         },
         {
@@ -9574,7 +9574,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "417050"
           ]
         },
         {
@@ -10709,7 +10709,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "418050"
           ]
         },
         {
@@ -11016,7 +11016,7 @@
       "eventId" : "11811",
       "name" : "猫咪圣草",
       "type" : 0,
-      "consumeTime" : "5",
+      "consumeTime" : "8",
       "imageout" : "11811",
       "imageIn" : "11811",
       "expireTime" : "0",
@@ -11467,7 +11467,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "419050"
           ]
         },
         {
@@ -12595,7 +12595,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "420050"
           ]
         },
         {
@@ -13821,7 +13821,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "421050"
           ]
         },
         {
