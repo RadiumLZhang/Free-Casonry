@@ -99,8 +99,12 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public GameObject SwitchSceneAnimation;
     
     public EndingMono EndingMono;
+    
     //music
     public AudioSource adplayer;
+
+    //haha
+    private GameObject draggingMask;
 
     
 
@@ -178,6 +182,8 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
         EndingMono = gameView.Find("EndingPanel").GetComponent<EndingMono>();
 
+        draggingMask = gameView.Find("DraggingMask").gameObject;
+        
         InitCatColumns();
         InitDialogs();
         IsInit = true;
@@ -237,7 +243,6 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     }
     public void InitStartEventDialog(CatEvent m_myCatEventInfo)
     {
-        
         SwitchDarkBackGround(true);
         SwitchTickerButtons(false);
         panelStartEventDialog.SetActive(true);
@@ -340,6 +345,10 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         panelNPCInfo.SwitchNpcInfo(m_NPC);
     }
 
+    public void SwitchDraggingMask(bool bIsActive)
+    {
+        draggingMask.SetActive(bIsActive);
+    }
     public void ScaleRelationship(float scale)
     {
         scrollRelationShip.transform.localScale = new Vector3(scale, scale, 1.0f);

@@ -38,6 +38,7 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
     public void OnBeginDrag(PointerEventData eventData)
     {
         //Input.multiTouchEnabled = false;
+        UIManager.Instance.SwitchDraggingMask(true);
         Debug.Log("muisc:4");
         AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件移动音效");
         adplayer.clip = m_clip;
@@ -108,12 +109,11 @@ public class DragHandlerSpecialEvent : MonoBehaviour,
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
         //Input.multiTouchEnabled = true;
+        UIManager.Instance.SwitchDraggingMask(false);
     }
 
     public void EndDrag()
     {
-        
-        
         if (bIsExtracting) gameView.CloseExePanel();
         bIsExtracting = false;
         timerDragStart = 6;

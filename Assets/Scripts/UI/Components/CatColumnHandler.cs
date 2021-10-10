@@ -95,6 +95,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
         if (tempEvent == null)
         {
             //Input.multiTouchEnabled = true;
+            UIManager.Instance.SwitchDraggingMask(false);
             if ((droppedSpecialEvent = pointerDragCache.GetComponent<DragHandlerSpecialEvent>()) != null)
             {
                 if (droppedSpecialEvent.bIsExtracting)

@@ -45,6 +45,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         adplayer.clip = m_clip;
         adplayer.Play();
         //Input.multiTouchEnabled = false;
+        UIManager.Instance.SwitchDraggingMask(true);
         draggingImage = InsImage();
         rectTransform = draggingImage.transform.GetComponent<RectTransform>();
         pos = GetComponent<RectTransform>().position;
@@ -73,6 +74,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
         //Input.multiTouchEnabled = true;
+        UIManager.Instance.SwitchDraggingMask(false);
     }
 
     public void EndDrag()
