@@ -104,10 +104,15 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
     public AudioSource adplayer;
 
     //haha
-    private GameObject draggingMask;
+    public GameObject draggingMask;
 
+
+    public bool bIsMutliDragActive()
+    {
+        return (!(panelCouncil.activeSelf || draggingMask.activeSelf || panelEmergencyDialog.activeSelf ||
+                  panelStartEventDialog.activeSelf || panelFinishEventDialog.activeSelf || panelSettings.activeSelf));
+    }
     
-
     public string Save()
     {
         var jsonString = JsonConvert.SerializeObject(buttonCouncilActive);

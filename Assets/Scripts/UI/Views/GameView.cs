@@ -563,7 +563,7 @@ public class GameView : MonoBehaviour
         //     GameStartFade();
         // }
 
-        if(Input.touchCount == 2)
+        if(Input.touchCount == 2 && UIManager.Instance.bIsMutliDragActive())
             MutliTouch();
     }
 
