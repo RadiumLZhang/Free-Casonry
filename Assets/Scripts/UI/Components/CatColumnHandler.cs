@@ -134,7 +134,6 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             {
                 myID = droppedNPCEvent.GetEventID();
                 EventHandlerManager.Instance.CurSelectIndex = index;
-                droppedNPCEvent.gameObject.SetActive(false);
             
 
                 // on preinit
