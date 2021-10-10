@@ -987,6 +987,7 @@ GameObject:
   - component: {fileID: 2535074838709241049}
   - component: {fileID: 2535074838709241050}
   - component: {fileID: 2535074838709241051}
+  - component: {fileID: 1877993976021298164}
   m_Layer: 5
   m_Name: EventSlot
   m_TagString: Untagged
@@ -1076,6 +1077,22 @@ MonoBehaviour:
   index: 0
   adplayer: {fileID: 0}
   isInit: 0
+--- !u!111 &1877993976021298164
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535074838709241053}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ade797fe75e4d3440b3eb2e58df37ce1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: ade797fe75e4d3440b3eb2e58df37ce1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2535074838783239529
 GameObject:
   m_ObjectHideFlags: 0
