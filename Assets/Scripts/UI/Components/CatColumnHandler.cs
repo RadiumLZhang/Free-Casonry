@@ -137,6 +137,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
             
 
                 // on preinit
+                droppedNPCEvent.gameObject.SetActive(false);
                 eventHandler.OnInit(myID);
                 gameView.currentDialogEventID = myID;
                 m_myCatEventInfo = eventHandler.GetEventInfo();
