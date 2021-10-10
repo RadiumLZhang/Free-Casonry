@@ -74,7 +74,7 @@
       "effectId" : "500050",
       "baseEffectId" : "5013",
       "paras" : [
-        100050
+        100060
       ]
     },
     {
@@ -95,7 +95,7 @@
       "effectId" : "500071",
       "baseEffectId" : "5003",
       "paras" : [
-        50
+        0
       ]
     },
     {
@@ -193,10 +193,6 @@
       ]
     },
     {
-      "effectId" : "510031",
-      "baseEffectId" : "5023"
-    },
-    {
       "effectId" : "510040",
       "baseEffectId" : "5006",
       "paras" : [
@@ -239,6 +235,14 @@
       "baseEffectId" : "5300",
       "paras" : [
         60005
+      ]
+    },
+    {
+      "effectId" : "511005",
+      "baseEffectId" : "5301",
+      "paras" : [
+        701,
+        0
       ]
     },
     {
@@ -379,10 +383,10 @@
       ]
     },
     {
-      "effectId" : "513004",
+      "effectId" : "513006",
       "baseEffectId" : "5300",
       "paras" : [
-        60010
+        60011
       ]
     },
     {
@@ -443,6 +447,21 @@
       "baseEffectId" : "5300",
       "paras" : [
         60003
+      ]
+    },
+    {
+      "effectId" : "514003",
+      "baseEffectId" : "5301",
+      "paras" : [
+        600,
+        0
+      ]
+    },
+    {
+      "effectId" : "514004",
+      "baseEffectId" : "5300",
+      "paras" : [
+        60010
       ]
     },
     {
@@ -1034,18 +1053,6 @@
         60000,
         3
       ]
-    },
-    {
-      "effectId" : "509000"
-    },
-    {
-      "effectId" : "509010"
-    },
-    {
-      "effectId" : "509020"
-    },
-    {
-      "effectId" : "509030"
     },
     {
       "effectId" : "510100",
@@ -2470,20 +2477,6 @@
       ]
     },
     {
-      "effectId" : "530180",
-      "baseEffectId" : "5022",
-      "paras" : [
-        73000
-      ]
-    },
-    {
-      "effectId" : "530181",
-      "baseEffectId" : "5022",
-      "paras" : [
-        73000
-      ]
-    },
-    {
       "effectId" : "550000",
       "baseEffectId" : "5006",
       "paras" : [
@@ -2530,6 +2523,41 @@
       "baseEffectId" : "5006",
       "paras" : [
         -50
+      ]
+    },
+    {
+      "effectId" : "550020",
+      "baseEffectId" : "5022",
+      "paras" : [
+        73000
+      ]
+    },
+    {
+      "effectId" : "550021",
+      "baseEffectId" : "5022",
+      "paras" : [
+        73001
+      ]
+    },
+    {
+      "effectId" : "550022",
+      "baseEffectId" : "5022",
+      "paras" : [
+        73002
+      ]
+    },
+    {
+      "effectId" : "550023",
+      "baseEffectId" : "5022",
+      "paras" : [
+        73003
+      ]
+    },
+    {
+      "effectId" : "550024",
+      "baseEffectId" : "5022",
+      "paras" : [
+        73004
       ]
     },
     {

@@ -283,7 +283,7 @@
       "eventId" : "10003",
       "name" : "求援",
       "type" : 0,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "10007",
       "imageIn" : "10007",
       "expireTime" : "0",
@@ -657,7 +657,7 @@
       "eventId" : "10007",
       "name" : "月下之盟",
       "type" : 0,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "10007",
       "imageIn" : "10007",
       "expireTime" : "0",
@@ -1305,7 +1305,7 @@
         }
       ],
       "upDesc" : "圣杯散发出黯淡的光芒。只要接近，都能感受到难以名状的神圣感。",
-      "downDesc" : "举行仪式，提升猫咪的影响力与隐匿度"
+      "downDesc" : "使用圣器，取得圣杯胜利"
     },
     {
       "eventId" : "10200",
@@ -1406,13 +1406,13 @@
     {
       "eventId" : "10201",
       "name" : "禀告国王",
-      "type" : 0,
+      "type" : 3,
       "consumeTime" : "5",
       "imageout" : "10200",
       "imageIn" : "10200",
-      "expireTime" : "40",
+      "expireTime" : "60",
       "outOfTimeRecordId" : "0",
-      "humanId" : "0",
+      "humanId" : "60000",
       "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 1,
@@ -1598,7 +1598,7 @@
       "imageIn" : "10200",
       "expireTime" : "0",
       "outOfTimeRecordId" : "0",
-      "humanId" : "0",
+      "humanId" : "60000",
       "repeatTime" : 1,
       "emergencyId" : "0",
       "isImportant" : 1,
@@ -1772,7 +1772,7 @@
           ]
         }
       ],
-      "upDesc" : "密切监视人类最近的动向，了解人类的性格与习惯。",
+      "upDesc" : "密切监视人类最近的动向，了解人类的特点与习惯。",
       "downDesc" : "能见度增加"
     },
     {
@@ -2249,7 +2249,7 @@
       "consumeTime" : "5",
       "imageout" : "11010",
       "imageIn" : "11010",
-      "expireTime" : "80",
+      "expireTime" : "90",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
       "repeatTime" : 1,
@@ -2294,7 +2294,7 @@
         }
       ],
       "expireEffect" : [
-        "510101",
+        "550020",
         "0",
         "0"
       ],
@@ -2344,7 +2344,7 @@
       "consumeTime" : "5",
       "imageout" : "11010",
       "imageIn" : "11010",
-      "expireTime" : "80",
+      "expireTime" : "90",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
       "repeatTime" : 1,
@@ -2389,7 +2389,7 @@
         }
       ],
       "expireEffect" : [
-        "510101",
+        "550020",
         "0",
         "0"
       ],
@@ -2439,7 +2439,7 @@
       "consumeTime" : "5",
       "imageout" : "11010",
       "imageIn" : "11010",
-      "expireTime" : "80",
+      "expireTime" : "90",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
       "repeatTime" : 1,
@@ -2484,7 +2484,7 @@
         }
       ],
       "expireEffect" : [
-        "510101",
+        "550020",
         "0",
         "0"
       ],
@@ -2534,7 +2534,7 @@
       "consumeTime" : "5",
       "imageout" : "11010",
       "imageIn" : "11010",
-      "expireTime" : "80",
+      "expireTime" : "90",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
       "repeatTime" : 1,
@@ -2579,7 +2579,7 @@
         }
       ],
       "expireEffect" : [
-        "510101",
+        "550020",
         "0",
         "0"
       ],
@@ -2629,7 +2629,7 @@
       "consumeTime" : "5",
       "imageout" : "11010",
       "imageIn" : "11010",
-      "expireTime" : "80",
+      "expireTime" : "90",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
       "repeatTime" : 1,
@@ -2674,7 +2674,7 @@
         }
       ],
       "expireEffect" : [
-        "510101",
+        "550020",
         "0",
         "0"
       ],
@@ -2724,7 +2724,7 @@
       "consumeTime" : "5",
       "imageout" : "11010",
       "imageIn" : "11010",
-      "expireTime" : "80",
+      "expireTime" : "90",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
       "repeatTime" : 1,
@@ -2769,7 +2769,7 @@
         }
       ],
       "expireEffect" : [
-        "510101",
+        "550020",
         "0",
         "0"
       ],
@@ -3476,7 +3476,7 @@
       "humanId" : "60002",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -4012,7 +4012,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "412040"
           ]
         },
         {
@@ -4592,6 +4592,102 @@
       "downDesc" : "主教对女仆作有过承诺"
     },
     {
+      "eventId" : "11216",
+      "name" : "兵变解决",
+      "type" : 3,
+      "consumeTime" : "5",
+      "imageout" : "11210",
+      "imageIn" : "11210",
+      "expireTime" : "0",
+      "outOfTimeRecordId" : "0",
+      "humanId" : "60001",
+      "repeatTime" : 1,
+      "emergencyId" : "0",
+      "isImportant" : 1,
+      "priority" : 150,
+      "preconditions" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "result" : [
+        {
+          "eventId" : "312160",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        },
+        {
+          "eventId" : "0",
+          "conditions" : [
+            "0"
+          ]
+        }
+      ],
+      "expireEffect" : [
+        "0",
+        "0",
+        "0"
+      ],
+      "generateConditions" : [
+        {
+          "conditions" : [
+            "412160",
+            "412161",
+            "412162",
+            "412163"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "destroyConditions" : [
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        },
+        {
+          "conditions" : [
+            "-1"
+          ]
+        }
+      ],
+      "upDesc" : "猫咪们已经彻底阻止了兵变。契约已经完成，向国王汇报吧。",
+      "downDesc" : "禀报后，取得阴谋胜利"
+    },
+    {
       "eventId" : "11300",
       "name" : "猫咪监视",
       "type" : 1,
@@ -5142,7 +5238,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "413040"
           ]
         },
         {
@@ -5351,7 +5447,7 @@
       "eventId" : "11312",
       "name" : "葬礼仪式",
       "type" : 0,
-      "consumeTime" : "30",
+      "consumeTime" : "5",
       "imageout" : "11310",
       "imageIn" : "11310",
       "expireTime" : "0",
@@ -5367,8 +5463,7 @@
         "0"
       ],
       "effects" : [
-        "513121",
-        "510100"
+        "513121"
       ],
       "result" : [
         {
@@ -6211,7 +6306,7 @@
       "humanId" : "60004",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -6258,8 +6353,7 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "414000",
-            "414001"
+            "414000"
           ]
         },
         {
@@ -6751,7 +6845,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "414040"
           ]
         },
         {
@@ -7340,7 +7434,7 @@
       "eventId" : "11510",
       "name" : "点石成金",
       "type" : 1,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11510",
       "imageIn" : "11510",
       "expireTime" : "0",
@@ -7426,14 +7520,14 @@
           ]
         }
       ],
-      "upDesc" : "炼金术士：今天讲介质与触媒。你在打瞌睡吗？.\n医生：不，我醒着呢，老师。",
-      "downDesc" : "门提尔在传授炼金术的知识"
+      "upDesc" : "炼金术士：今天讲触媒。你在打瞌睡吗？\n医生：不，我醒着呢，老师。",
+      "downDesc" : "炼金术士在传授炼金术的知识"
     },
     {
       "eventId" : "11511",
       "name" : "石头戏法",
       "type" : 1,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11510",
       "imageIn" : "11510",
       "expireTime" : "0",
@@ -7520,7 +7614,7 @@
           ]
         }
       ],
-      "upDesc" : "炼金术士：再给我一点时间，马上就有突破了。\n茵菲尔：让我先看看成果，再考虑资助的事。",
+      "upDesc" : "炼金术士：再给我一点时间，马上就有突破。\n茵菲尔：让我先看看成果，再考虑资助的事。",
       "downDesc" : "给皇后表演炼金术的进展"
     },
     {
@@ -7882,7 +7976,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "415040"
           ]
         },
         {
@@ -8732,7 +8826,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "416040"
           ]
         },
         {
@@ -8753,7 +8847,7 @@
       "eventId" : "11610",
       "name" : "虐猫人",
       "type" : 3,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11610",
       "imageIn" : "11610",
       "expireTime" : "0",
@@ -8940,7 +9034,7 @@
       "eventId" : "11612",
       "name" : "重拾荣耀",
       "type" : 2,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11610",
       "imageIn" : "11610",
       "expireTime" : "0",
@@ -9034,7 +9128,7 @@
       "eventId" : "11613",
       "name" : "借酒消愁",
       "type" : 3,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11610",
       "imageIn" : "11610",
       "expireTime" : "0",
@@ -9674,7 +9768,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "417040"
           ]
         },
         {
@@ -9883,7 +9977,7 @@
       "eventId" : "11712",
       "name" : "约会",
       "type" : 3,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11710",
       "imageIn" : "11710",
       "expireTime" : "0",
@@ -10076,7 +10170,7 @@
       "eventId" : "11714",
       "name" : "捉奸",
       "type" : 1,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11710",
       "imageIn" : "11710",
       "expireTime" : "0",
@@ -10167,7 +10261,7 @@
     },
     {
       "eventId" : "11715",
-      "name" : "他的抉择",
+      "name" : "坦白",
       "type" : 3,
       "consumeTime" : "5",
       "imageout" : "11710",
@@ -10808,7 +10902,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "418040"
           ]
         },
         {
@@ -10922,7 +11016,7 @@
       "eventId" : "11811",
       "name" : "猫咪圣草",
       "type" : 0,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11811",
       "imageIn" : "11811",
       "expireTime" : "0",
@@ -11567,7 +11661,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "419040"
           ]
         },
         {
@@ -11588,7 +11682,7 @@
       "eventId" : "11910",
       "name" : "鼠患烦恼",
       "type" : 2,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11913",
       "imageIn" : "11913",
       "expireTime" : "0",
@@ -11681,7 +11775,7 @@
       "eventId" : "11911",
       "name" : "不惜代价",
       "type" : 2,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11913",
       "imageIn" : "11913",
       "expireTime" : "0",
@@ -11775,7 +11869,7 @@
       "eventId" : "11912",
       "name" : "猫的降世",
       "type" : 2,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "11913",
       "imageIn" : "11913",
       "expireTime" : "0",
@@ -12695,7 +12789,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "420040"
           ]
         },
         {
@@ -12903,7 +12997,7 @@
       "eventId" : "12012",
       "name" : "拦截密函",
       "type" : 2,
-      "consumeTime" : "10",
+      "consumeTime" : "5",
       "imageout" : "12010",
       "imageIn" : "12010",
       "expireTime" : "0",
@@ -13921,7 +14015,7 @@
       "destroyConditions" : [
         {
           "conditions" : [
-            "-1"
+            "421040"
           ]
         },
         {
@@ -14940,7 +15034,8 @@
       "generateConditions" : [
         {
           "conditions" : [
-            "430010"
+            "430010",
+            "430011"
           ]
         },
         {
@@ -16521,7 +16616,7 @@
       "expireTime" : "40",
       "outOfTimeRecordId" : "0",
       "humanId" : "0",
-      "repeatTime" : 1,
+      "repeatTime" : 100,
       "emergencyId" : "0",
       "isImportant" : 0,
       "priority" : 500,
@@ -16563,14 +16658,15 @@
         }
       ],
       "expireEffect" : [
-        "530181",
+        "550021",
         "0",
         "0"
       ],
       "generateConditions" : [
         {
           "conditions" : [
-            "430180"
+            "430180",
+            "459010"
           ]
         },
         {
@@ -16602,7 +16698,7 @@
         }
       ],
       "upDesc" : "人类的统治者已经发现了猫咪共济会的存在。组织即将承受覆灭的命运。",
-      "downDesc" : "组织暴露将导致完全失败"
+      "downDesc" : "组织暴露导致完全失败"
     },
     {
       "eventId" : "14000",
