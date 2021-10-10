@@ -172,12 +172,13 @@ namespace Logic.Human
             {
                 cat = CatManager.Instance.GetCat(id);
             }
+            
+            NPCManager.SetNpcCat(ID);
         }
 
         public void SetImage(string image)
         {
             Image = image;
-            NPCManager.SetNpcCat(ID);
         }
 
         public void Show()
