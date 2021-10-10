@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Logic.Human
 {
+    [Serializable]
     public class Human
     {
         public enum PropertyType
@@ -15,30 +16,30 @@ namespace Logic.Human
             Defence = 1
         }
         
-        public long ID { get; private set; }
+        public long ID { get; set; }
 
-        public readonly HumanInfo.HumanInfo.Types.person Config;
+        public HumanInfo.HumanInfo.Types.person Config;
 
-        public string Name { get; private set; }
+        public string Name { get; set; }
         
-        public string Title { get; private set; }
+        public string Title { get; set; }
 
-        public string Image { get; private set; }
+        public string Image { get; set; }
         
-        public int Sex { get; private set; }
+        public int Sex { get; set; }
 
-        public bool IsImport { get; private set; } = false;
+        public bool IsImport { get; set; } = false;
 
-        public bool IsWashHead { get; private set; }
+        public bool IsWashHead { get; set; }
 
-        public bool IsEventRollActive { get; private set; }
+        public bool IsEventRollActive { get; set; }
+
+        public bool IsAlive { get; set; } = true;
         
-        public bool IsAlive { get; private set; }
-        
-        public List<String> Tags { get; private set; }
+        public List<String> Tags { get; set; }
 
-        private int[] m_properties = new int[2];
-        private bool[] m_locks = new bool[2];
+        public int[] m_properties = new int[2];
+        public bool[] m_locks = new bool[2];
 
         /// <summary>
         /// 能见度
@@ -59,6 +60,8 @@ namespace Logic.Human
         /// </summary>
         public Cat cat;
 
+        public long CatId { get; set; }
+
 
         public Human(long mID)
         {
@@ -66,7 +69,7 @@ namespace Logic.Human
             Config = HumanInfoLoader.Instance.Findperson(mID);
             if (Config == null)
             {
-                Debug.LogError("Invalid human id!");
+                Debug.LogError($"Invalid human id {mID}!");
                 return;
             }
 
@@ -83,13 +86,13 @@ namespace Logic.Human
             Tags = new List<String>(Config.Tags);
         }
 
-        /**
-         * 不带参数的构造函数仅用于存档的反序列化
-         */
-        public Human()
-        {
-            
-        }
+        // /**
+        //  * 不带参数的构造函数仅用于存档的反序列化
+        //  */
+        // public Human()
+        // {
+        //     
+        // }
         
         public bool CanRaiseCat()
         {
@@ -169,12 +172,13 @@ namespace Logic.Human
             {
                 cat = CatManager.Instance.GetCat(id);
             }
+            
+            NPCManager.SetNpcCat(ID);
         }
 
         public void SetImage(string image)
         {
             Image = image;
-            NPCManager.SetNpcCat(ID);
         }
 
         public void Show()
@@ -187,6 +191,15 @@ namespace Logic.Human
             }
             
             npcMono.Show();
+        }
+
+        public void Restore()
+        {
+            Config = HumanInfoLoader.Instance.Findperson(ID);
+            if (CatId != 0)
+            {
+                cat = CatManager.Instance.GetCat(CatId);
+            }
         }
     }
 }

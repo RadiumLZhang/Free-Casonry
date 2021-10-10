@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Manager;
@@ -15,7 +16,7 @@ public class NPCManager : MonoBehaviour
     public GameObject currentOpenedNPC;
     public static Dictionary<long, NPCMono> NPCs;
     public static bool IsInit = false;
-    void Start()
+    void Awake()
     {
         NPCs = new Dictionary<long, NPCMono>();
         lerpPosX = 0.5f;
@@ -50,6 +51,12 @@ public class NPCManager : MonoBehaviour
             UIManager.Instance.NPCEventCycles.Add(i,NPCs[i].eventCycle);
         }
     }
+
+    private void OnDestroy()
+    {
+        NPCs = null;
+    }
+
     public void StartNPCLerp(float x, float y)
     {
         bIsLerping = true;

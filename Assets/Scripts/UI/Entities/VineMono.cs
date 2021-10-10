@@ -18,9 +18,23 @@ public class VineMono : MonoBehaviour
     
     public bool Active { get; set; }
     
+    private bool IsInit { get; set; }
+    
     void Awake()
     {
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
+        Init();
+    }
+
+    public void Init()
+    {
+        if (IsInit)
+        {
+            return;
+        }
+
+        IsInit = true;
+        
         relation = transform.Find("Image");
         relationText = transform.Find("Image/Text").GetComponent<Text>();
         
@@ -29,11 +43,6 @@ public class VineMono : MonoBehaviour
         effectText = relationText.GetComponent<UITransitionEffect>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Show(bool isReverse = false)
     {
@@ -67,8 +76,15 @@ public class VineMono : MonoBehaviour
 
     public void Hide()
     {
+        if (!Active)
+        {
+            return;
+        }
+        
         Active = false;
         effectVine.Hide();
+        effectBg.Hide();
+        effectText.Hide();
     }
 
     public void SetText(int id)
@@ -76,6 +92,11 @@ public class VineMono : MonoBehaviour
         relationId = id;
 
         var item = LanguageLoader.Instance.FindLanguageItem(id.ToString());
+        if (item == null)
+        {
+            return;
+        }
+        
         relationText.text = item.Value;
 
         

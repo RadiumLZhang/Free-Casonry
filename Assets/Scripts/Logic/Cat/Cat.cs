@@ -6,17 +6,17 @@ namespace Logic
 {
     public class Cat
     {
-        public long ID { get; private set; }
+        public long ID { get; set; }
         
-        public CatInfo.CatInfo.Types.CatItemConfig Config { get; private set; }
+        public CatInfo.CatInfo.Types.CatItemConfig Config { get; set; }
 
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
-        public string Type { get; private set; }
+        public string Type { get; set; }
 
-        public string Image { get; private set; }
+        public string Image { get; set; }
         
-        public List<int> Properties { get; private set; }
+        public List<int> Properties { get; set; }
 
         /// <summary>
         /// 刺探

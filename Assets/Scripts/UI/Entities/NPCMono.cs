@@ -82,7 +82,6 @@ public class NPCMono : MonoBehaviour
             manager.SetOpenedNPC(gameObject);
         }
         
-        var inAni = m_animation["EventCycleShow"];
         if (eventCycle.activeSelf)
         {
             CloseEventCycle();
@@ -91,7 +90,6 @@ public class NPCMono : MonoBehaviour
         {
             OpenEventCycle();
         }
-        m_animation.Play("EventCycleShow");
         
         // eventCycle.SetActive(!eventCycle.activeSelf);
         
@@ -183,6 +181,7 @@ public class NPCMono : MonoBehaviour
     {
         imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + name);
         imageCat.gameObject.SetActive(true);
+        imageCat.SetAllDirty();
     }
 
     public void RemoveCatImage()

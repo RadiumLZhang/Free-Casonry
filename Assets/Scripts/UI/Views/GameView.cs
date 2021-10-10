@@ -75,7 +75,7 @@ public class GameView : MonoBehaviour
     
     private Touch oldTouch1;  //上次触摸点1(手指1)  
     private Touch oldTouch2;  //上次触摸点2(手指2)  
-    void Start()
+    void Awake()
     {
         ImageStartGame = transform.Find("ImageStartGame").GetComponent<RawImage>();
         //bIsGameStarting = true;
