@@ -35,8 +35,26 @@ public class VineMono : MonoBehaviour
         
     }
 
-    public void Show()
+    public void Show(bool isReverse = false)
     {
+        if (Active)
+        {
+            return;
+        }
+        
+        if (isReverse)
+        {
+            effectVine.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex_Reverse");
+            effectBg.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex_Reverse");
+            effectText.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex_Reverse");
+        }
+        else
+        {
+            effectVine.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex");
+            effectBg.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex");
+            effectText.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex");
+        }
+        
         Active = true;
         gameObject.SetActive(true);
         effectVine.Show();
@@ -57,6 +75,10 @@ public class VineMono : MonoBehaviour
         var item = LanguageLoader.Instance.FindLanguageItem(id.ToString());
         relationText.text = item.Value;
 
+        
+        effectBg.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex");
+        effectText.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex");
+        
         effectText.Show();
         effectBg.Show();
     }

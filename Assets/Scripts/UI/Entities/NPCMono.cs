@@ -185,6 +185,10 @@ public class NPCMono : MonoBehaviour
 
     public void Show()
     {
+        if (gameObject.activeSelf)
+        {
+            return;
+        }
         
         gameObject.SetActive(true);
         effect.Show();
