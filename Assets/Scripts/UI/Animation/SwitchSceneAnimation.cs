@@ -18,7 +18,7 @@ namespace UI.Animation
         public bool Loop = false;
         public delegate void CallBack();
         public CallBack CallBackFunction;
-        public int HandleCallBackFrame = 0;
+        public int HandleCallBackFrame = 7;
         private bool HasHandleCallBack = false;
         public int FrameCount
         {
