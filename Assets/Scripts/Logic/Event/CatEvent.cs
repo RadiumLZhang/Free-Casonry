@@ -198,7 +198,6 @@ namespace Logic.Event
                 () =>
                 {
                     this.OutOfTimeResult();
-                    Status = EventStatus.Finished;
                 }
             );
         }

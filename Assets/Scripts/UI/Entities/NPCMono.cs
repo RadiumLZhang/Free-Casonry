@@ -190,8 +190,15 @@ public class NPCMono : MonoBehaviour
         m_redPointAnimation.Play(inAni.name);
     }
 
+    private string m_catName;
+    
     public void SetCatImage(string name)
     {
+        if (m_catName == name && imageCat.gameObject.activeSelf)
+        {
+            return;
+        }
+        
         imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + name);
         imageCat.gameObject.SetActive(true);
         m_imgCatEffect.Show();
@@ -205,6 +212,11 @@ public class NPCMono : MonoBehaviour
 
     public void SetWashHead(bool isWashHead)
     {
+        if (isWashHead == imageWashHead.activeSelf)
+        {
+            return;
+        }
+        
         imageWashHead.SetActive(isWashHead);
         if (isWashHead)
         {

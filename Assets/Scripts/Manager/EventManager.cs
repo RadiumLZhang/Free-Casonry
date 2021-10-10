@@ -84,6 +84,9 @@ namespace Manager
                     {
                         e.Status = EventStatus.Init;
                     }
+                    
+                    //延迟一帧执行，用于播放动画
+                    continue;
                 }
                 // init
                 if (e.Status == EventStatus.Init)
