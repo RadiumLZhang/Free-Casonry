@@ -147,7 +147,7 @@ public class CouncilView : MonoBehaviour
     // 猫咪阴谋
     public void ButtonConspiracy_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-暗黑地牢");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "选择建筑-Darkest Dungeon");
         adplayer.clip = m_clip;
         adplayer.Play();
         
@@ -170,7 +170,7 @@ public class CouncilView : MonoBehaviour
     // 猫咪管理
     public void ButtonManage_OnClick()
     {
-        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/主界面/" + "事件完成-暗黑地牢");
+        AudioClip m_clip = Resources.Load<AudioClip>("AudioClips/猫咪议会/" + "选择建筑-Darkest Dungeon");
         adplayer.clip = m_clip;
         adplayer.Play();
         
