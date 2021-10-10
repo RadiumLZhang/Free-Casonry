@@ -1,2 +1,3 @@
 # CatClub
-ROCA Team 50 meow
+MINIGAME:FreeCasonry
+Author:Tencent 2021 ROCA Team 50
