@@ -44,7 +44,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         Debug.Log("muisc:1");
         adplayer.clip = m_clip;
         adplayer.Play();
-        Input.multiTouchEnabled = false;
+        //Input.multiTouchEnabled = false;
         draggingImage = InsImage();
         rectTransform = draggingImage.transform.GetComponent<RectTransform>();
         pos = GetComponent<RectTransform>().position;
