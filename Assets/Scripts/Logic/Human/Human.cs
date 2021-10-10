@@ -190,7 +190,9 @@ namespace Logic.Human
                 return;
             }
             
+            
             npcMono.Show();
+            NPCManager.SetNpcCat(ID);
         }
 
         public void Restore()

@@ -171,6 +171,11 @@ public class NPCManager : MonoBehaviour
     {
         var human = HumanManager.Instance.GetHuman(id);
         var mono = NPCs[id];
+
+        if (!human.IsShow)
+        {
+            return;
+        }
         
         if (human.cat != null)
         {
