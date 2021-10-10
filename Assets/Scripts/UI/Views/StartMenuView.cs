@@ -17,6 +17,8 @@ public class StartMenuView : MonoBehaviour
     private GameObject ButtonContinue;
     private GameObject ButtonContinueDisabled;
     private Text UserNameReminder;
+
+    private RawImage m_imgFadeIn;
     void Awake()
     {
         Input.multiTouchEnabled = true;
@@ -26,6 +28,8 @@ public class StartMenuView : MonoBehaviour
         ButtonContinue = transform.Find("ButtonContinue").gameObject;
         ButtonContinueDisabled = transform.Find("ButtonContinueDisabled").gameObject;
         UserNameReminder = transform.Find("InputField/Placeholder").GetComponent<Text>();
+
+        m_imgFadeIn = transform.Find("img_fadeIn").GetComponent<RawImage>();
     }
 
     void Update()
@@ -48,6 +52,9 @@ public class StartMenuView : MonoBehaviour
     {
         if (TextUserName.text != "")
         {
+            m_imgFadeIn.color = new Color(0, 0, 0, 1f);
+            m_imgFadeIn.SetAllDirty();
+            
             OPPlayer.gameObject.SetActive(true);
             OPPlayer.Play();
             OPPlayer.loopPointReached += OPFinished;

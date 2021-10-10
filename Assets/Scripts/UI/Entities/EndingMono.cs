@@ -33,6 +33,6 @@ public class EndingMono : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
 
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
     }
 }
