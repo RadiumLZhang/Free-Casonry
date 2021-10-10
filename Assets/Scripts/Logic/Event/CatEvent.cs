@@ -196,10 +196,11 @@ namespace Logic.Event
             this.HasTicker = false;
             this.Countdown = 0;
             this.Status = EventStatus.Finished;
-            //todo 结算超时效果
-            // Config.ExpireEffect;
-            //todo 超时record 不知道干嘛用
-            // Config.OutOfTimeRecordId;
+            //结算超时效果
+            foreach (var effect in Config.ExpireEffect)
+            {
+                EffectUtils.ActivateEffect(effect);
+            }
         }
 
         private bool CheckConditionGroup(RepeatedField<EventInfoConfig.Types.ConditionGroup> conditionGroup)

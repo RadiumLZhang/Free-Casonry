@@ -268,6 +268,9 @@ namespace Logic.Effect
                 case 5509:
                     SetGlobalValue(ResourceType.DiseaseSurvey, Operate.Set, args);
                     break;
+                case 5304:
+                    SwitchMapMode();
+                    break;
                 default:
                     break;
             }
@@ -702,6 +705,11 @@ namespace Logic.Effect
             }
             
             vineMono.SetText((int) args[1]);
+        }
+
+        private static void SwitchMapMode()
+        {
+            UIManager.Instance.gameViewMono.ButtonRelationship_OnClick();
         }
     }
 }
