@@ -31,7 +31,7 @@ namespace Logic
         /// </summary>
         public int Communication => Properties[2];
 
-        public long skillId { get; set; }
+        public string Skill { get; set; }
         
         public string Description { get; private set; }
 
@@ -50,7 +50,9 @@ namespace Logic
             Name = Config.Name;
             Type = Config.Type;
             Image = Config.Image;
-
+            Description = Config.Description;
+            Skill = Config.Skill;
+            
             Properties = new List<int>(Config.Property);
             Tags = new List<string>();
             CatState = 0;
