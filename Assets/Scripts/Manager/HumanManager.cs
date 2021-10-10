@@ -34,6 +34,9 @@ namespace Manager
                     humanMap[person.HumanId] = new Human(person.HumanId);
                 }
             }
+
+            //直接将国王设置成显示
+            humanMap[60000].IsShow = true;
         }
         private Human LoadHuman(long id)
         {
@@ -57,13 +60,28 @@ namespace Manager
 
         public string Save()
         {
-            var jsonString = JsonConvert.SerializeObject(humanMap);
+            var savDic = new Dictionary<long, string>();
+            foreach (var item in humanMap)
+            {
+                var human = item.Value;
+                savDic[item.Key] = JsonConvert.SerializeObject(human);
+            }
+            
+            var jsonString = JsonConvert.SerializeObject(savDic);
             return jsonString;
         }
         
         public void Load(string json)
         {
-            humanMap = JsonConvert.DeserializeObject<Dictionary<long, Human>>(json);
+            var savDic = JsonConvert.DeserializeObject<Dictionary<long, string>>(json);
+            humanMap = new Dictionary<long, Human>();
+            foreach (var kv in savDic)
+            {
+                var human = JsonConvert.DeserializeObject<Human>(kv.Value);
+                human.Restore();
+                humanMap[kv.Key] = human;
+            }
+
             TimeTickerManager.Instance.AddNowWaitingEvent(
                 -1,
                 () =>
@@ -72,12 +90,15 @@ namespace Manager
                 },
                 () =>
                 {
+                    
                     foreach (var kv in humanMap)
                     {
-                        NPCManager.NPCs[kv.Key].gameObject.SetActive(kv.Value.IsShow);
-                        if (!kv.Value.IsAlive)
+                        var human = kv.Value;
+                        
+                        NPCManager.NPCs[kv.Key].gameObject.SetActive(human.IsShow);
+                        if (!human.IsAlive)
                         {
-                            kv.Value.Death();
+                            human.Death();
                         }
                     }
                 },

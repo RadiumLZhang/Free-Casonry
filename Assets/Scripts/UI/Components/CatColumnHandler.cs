@@ -45,7 +45,7 @@ public class CatColumnHandler : MonoBehaviour, IDropHandler
     public bool isInit = false;
 
     private DesignedEventHandler eventHandler;
-    void Start()
+    void Awake()
     {
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         gameView = GameObject.Find("Canvas").GetComponent<GameView>();

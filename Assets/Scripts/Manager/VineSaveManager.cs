@@ -33,7 +33,8 @@ namespace Manager
                     () =>
                     {
                         var vineMono = VineManager.Vines[kv.Key];
-                        if (kv.Value.Item1)
+                        vineMono.Init();
+                          if (kv.Value.Item1)
                         {
                             vineMono.Show();
                         }

@@ -12,7 +12,7 @@ public class VineManager : MonoBehaviour
     {
         Vines.Add(id,m_content.Find("vine" + id).GetComponent<VineMono>());
     }
-    void Start()
+    void Awake()
     {
         Vines = new Dictionary<int, VineMono>();
         m_content = transform.Find("Viewport/Content");
@@ -41,6 +41,14 @@ public class VineManager : MonoBehaviour
         }
 
         IsInit = true;
+    }
+
+    public void init()
+    {
+        if (Vines != null && Vines.Count > 0)
+        {
+            return;
+        }
     }
 
     public static VineMono GetVineFromID(int id)

@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3694590478793837472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -989,7 +989,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventCycle: {fileID: 0}
   id: 0
+  imageWashHead: {fileID: 0}
   imageCat: {fileID: 0}
+  adplayer: {fileID: 0}
   eventcols: []
 --- !u!114 &2151324340056496874
 MonoBehaviour:
