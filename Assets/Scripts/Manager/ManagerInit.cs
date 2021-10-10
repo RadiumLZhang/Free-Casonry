@@ -1,4 +1,5 @@
 ﻿using System;
+using Logic;
 using Logic.Condition;
 using UnityEngine;
 
@@ -22,6 +23,14 @@ namespace Manager
         {
             TimeManager.Destroy();
             TimeTickerManager.Destroy();
+            
+            CatManager.Destroy();
+            EventManager.Destroy();
+            HumanManager.Destroy();
+            EventHandlerManager.Destroy();
+            EmergencyManager.Destroy();
+            ConspiracyManager.Destroy();
+            PlayerModel.Destroy();
         }
 
         // 初始化挂载的Ticker
