@@ -15266,8 +15266,6 @@ MonoBehaviour:
   - {fileID: -5103222822369270038, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
   - {fileID: 8949295609831802332, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
   - {fileID: 4732788783066963021, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
-  - {fileID: -4694349411063499332, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
-  - {fileID: -6127898529195417399, guid: f0e4a88846c2ec34a9d33dacbd07d206, type: 3}
   IsPlaying: 0
   Foward: 1
   AutoPlay: 0
