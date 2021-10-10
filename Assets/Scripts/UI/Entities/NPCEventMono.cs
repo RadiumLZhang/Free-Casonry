@@ -30,7 +30,7 @@ public class NPCEventMono : MonoBehaviour
             }
             else
             {
-                textRemainingTime.text = (m_myCatEventInfo.ConsumeTime * 10).ToString();
+                textRemainingTime.text = (m_myCatEventInfo.Countdown * 10).ToString();
                 textMin.text = "分后销毁";
             }
         }
