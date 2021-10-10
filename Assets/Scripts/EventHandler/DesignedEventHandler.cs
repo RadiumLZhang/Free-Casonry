@@ -124,7 +124,7 @@ namespace EventHandler
             
             TimeTickerManager.Instance.StopTick(); // 暂停时间
             
-            UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
+            //UIManager.Instance.PlayBGM("AudioClips/主界面/" + "对话框出现-翻书1");
             UIManager.Instance.EventPopAnimation.GetComponent<EventPopAnimation>().Play(
                 () =>
                 {
