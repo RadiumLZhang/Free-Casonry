@@ -72,7 +72,7 @@ public class DragHandlerNPCEvent : MonoBehaviour,
         adplayer.Play();
         EndDrag();
         EventHandlerManager.Instance.ResetColumnImage();
-        Input.multiTouchEnabled = true;
+        //Input.multiTouchEnabled = true;
     }
 
     public void EndDrag()
