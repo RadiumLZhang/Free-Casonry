@@ -120,7 +120,7 @@ public class NPCManager : MonoBehaviour
         }
         
         UpdateAllNPCEvents();
-        UpdateAllNPCCats();
+        // UpdateAllNPCCats();
     }
     
     public static void SetEventCycleActive(long id, bool active)
@@ -158,5 +158,28 @@ public class NPCManager : MonoBehaviour
 
             item.Value.imageWashHead.SetActive(human.IsWashHead);
         }
+    }
+
+    public static void SetNpcCat(long id)
+    {
+        var human = HumanManager.Instance.GetHuman(id);
+        var mono = NPCs[id];
+        
+        if (human.cat != null)
+        {
+            mono.SetCatImage(human.cat.Image);
+        }
+        else
+        {
+            mono.RemoveCatImage();
+        }
+    }
+
+    public static void SetNpcWashHead(long id)
+    {
+        var human = HumanManager.Instance.GetHuman(id);
+        var mono = NPCs[id];
+        
+        mono.SetWashHead(human.IsWashHead);
     }
 }

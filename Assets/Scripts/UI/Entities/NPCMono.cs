@@ -31,7 +31,7 @@ public class NPCMono : MonoBehaviour
     
     public List<NPCEventMono> eventcols = new List<NPCEventMono>();
     
-    private void Start()
+    private void Awake()
     {
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         imageHuman = transform.GetComponent<Image>();
@@ -158,15 +158,35 @@ public class NPCMono : MonoBehaviour
         m_redPointAnimation.Play(inAni.name);
     }
 
+    public void SetCatImage(string name)
+    {
+        imageCat.sprite = Resources.Load<Sprite>("Sprites/Portraits/" + name);
+        imageCat.gameObject.SetActive(true);
+    }
+
+    public void RemoveCatImage()
+    {
+        imageCat.gameObject.SetActive(false);
+    }
+
+    public void SetWashHead(bool isWashHead)
+    {
+        imageWashHead.SetActive(isWashHead);
+    }
+
     public void RefreshEventCycle()
     {
         // by default
+        if (eventcols.Count == 0)
+        {
+            return;
+        }
         
         var list = EventManager.Instance.GetRoleEventList(id);
         int i = 0;
 
         var flag = false;
-        for (; i < 5; i++)
+        for (; i < eventcols.Count; i++)
         {
             eventcols[i].EmptyCol();
         }

@@ -138,6 +138,7 @@ namespace Logic.Human
         public void SetWashHead(bool status)
         {
             IsWashHead = status;
+            NPCManager.SetNpcWashHead(ID);
         }
 
         public void SetEventRoll(bool status)
@@ -173,7 +174,7 @@ namespace Logic.Human
         public void SetImage(string image)
         {
             Image = image;
-            //todo
+            NPCManager.SetNpcCat(ID);
         }
 
         public void Show()

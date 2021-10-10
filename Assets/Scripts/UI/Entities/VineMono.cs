@@ -18,7 +18,7 @@ public class VineMono : MonoBehaviour
     
     public bool Active { get; set; }
     
-    void Start()
+    void Awake()
     {
         adplayer = GameObject.Find("AudioSource").GetComponent<AudioSource>();
         relation = transform.Find("Image");
@@ -42,6 +42,8 @@ public class VineMono : MonoBehaviour
             return;
         }
         
+        gameObject.SetActive(true);
+
         if (isReverse)
         {
             effectVine.transitionTexture = Resources.Load<Texture>("Texture/UITransitionTex_Reverse");
@@ -56,7 +58,6 @@ public class VineMono : MonoBehaviour
         }
         
         Active = true;
-        gameObject.SetActive(true);
         effectVine.Show();
         effectBg.Show();
         effectText.Show();
