@@ -1689,7 +1689,7 @@
       "consumeTime" : "5",
       "imageout" : "11000",
       "imageIn" : "11000",
-      "expireTime" : "50",
+      "expireTime" : "0",
       "outOfTimeRecordId" : "0",
       "humanId" : "60000",
       "repeatTime" : 1,
