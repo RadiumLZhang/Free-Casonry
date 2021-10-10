@@ -317,11 +317,21 @@ namespace EventHandler
             valid = validReload; // 议程槽是否被封印
             index = indexReload;
             m_catEventInfo = EventManager.Instance.GetCatEventByID(eventIDReload);
-            TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
+            
+            if (cacheTime > 0)
+            {
+                TimeTickerManager.Instance.AddLastingEvent(eventID,UpdateTime, 1, 1, (int)cacheTime, OnPreFinish);
+            }
+            else if (cacheTime <= 0)
+            {
+                OnPreFinish();
+                cacheTime = 0;
+            }
             
             if (emergencyIdReload != 0)
             {
                 emergency = EmergencyManager.Instance.GetEmergencyByID(emergencyIdReload);
+                
             }
 
             TimeTickerManager.Instance.AddNowWaitingEvent(
