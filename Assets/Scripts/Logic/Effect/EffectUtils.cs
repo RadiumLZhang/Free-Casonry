@@ -684,7 +684,6 @@ namespace Logic.Effect
                 return;
             }
 
-            vineMono.PlayBGM("AudioClips/主界面/藤蔓蔓延");
             vineMono.Show(((int) args[1]) == 1);
         }
 

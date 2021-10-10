@@ -60,6 +60,8 @@ public class VineMono : MonoBehaviour
         effectVine.Show();
         effectBg.Show();
         effectText.Show();
+        
+        PlayBGM("AudioClips/主界面/藤蔓蔓延");
     }
 
     public void Hide()
