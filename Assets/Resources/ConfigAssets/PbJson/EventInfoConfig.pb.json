@@ -3476,7 +3476,7 @@
       "humanId" : "60002",
       "repeatTime" : 1,
       "emergencyId" : "0",
-      "isImportant" : 0,
+      "isImportant" : 1,
       "priority" : 200,
       "preconditions" : [
         "0",
@@ -5447,7 +5447,7 @@
       "eventId" : "11312",
       "name" : "葬礼仪式",
       "type" : 0,
-      "consumeTime" : "5",
+      "consumeTime" : "20",
       "imageout" : "11310",
       "imageIn" : "11310",
       "expireTime" : "0",

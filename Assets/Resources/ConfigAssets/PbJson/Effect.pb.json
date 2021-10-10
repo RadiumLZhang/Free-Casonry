@@ -1022,6 +1022,14 @@
       ]
     },
     {
+      "effectId" : "502001",
+      "baseEffectId" : "5301",
+      "paras" : [
+        702,
+        0
+      ]
+    },
+    {
       "effectId" : "502010",
       "baseEffectId" : "5013",
       "paras" : [
@@ -1225,6 +1233,14 @@
       "baseEffectId" : "5013",
       "paras" : [
         113140
+      ]
+    },
+    {
+      "effectId" : "513141",
+      "baseEffectId" : "5303",
+      "paras" : [
+        601,
+        72001
       ]
     },
     {
