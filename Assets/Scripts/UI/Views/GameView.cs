@@ -70,6 +70,8 @@ public class GameView : MonoBehaviour
     public AudioSource bgm;
 
     private List<CatEvent> m_oldSpecialEvents;
+
+    // private Animation m_startAnimation;
     
     private Touch oldTouch1;  //上次触摸点1(手指1)  
     private Touch oldTouch2;  //上次触摸点2(手指2)  
@@ -122,6 +124,9 @@ public class GameView : MonoBehaviour
         
         EventHandlerManager.Instance.GetHandlerByIndex(0).SetValid(true);//第一只猫启用
         UIManager.Instance.RefreshEventSlots();
+
+        // m_startAnimation = transform.Find("ImageStartGame").GetComponent<Animation>();
+        // GameStartFade();
     }
 
     private void UIManagerInit()
@@ -209,9 +214,9 @@ public class GameView : MonoBehaviour
         adplayer.clip = m_clip;
         adplayer.Play();
         
-        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
-        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
-        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
+        // buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（亮）");
+        // buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
+        // buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
 
 
         TimeTickerManager.Instance.StopTick();
@@ -224,9 +229,9 @@ public class GameView : MonoBehaviour
         adplayer.clip = m_clip;
         adplayer.Play();
         
-        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
-        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
-        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
+        // buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（亮）");
+        // buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(暗）");
+        // buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
 
         TimeTickerManager.Instance.StartTick();
     }
@@ -239,9 +244,9 @@ public class GameView : MonoBehaviour
         adplayer.clip = m_clip;
         adplayer.Play();
         
-        buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
-        buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
-        buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
+        // buttonSpeed.sprite = Resources.Load<Sprite>("Sprites/Main/3 快进icon(亮）");
+        // buttonNormal.sprite = Resources.Load<Sprite>("Sprites/Main/3 播放icon（暗）");
+        // buttonStop.sprite = Resources.Load<Sprite>("Sprites/Main/3 暂停icon（暗）");
 
         TimeTickerManager.Instance.StartTickWithSpeed(TickerSpeedEnum.Fast);
     }
@@ -542,10 +547,10 @@ public class GameView : MonoBehaviour
         
         UpdateTime();
         UpdateRelationshipScale();
-        if (bIsGameStarting)
-        {
-            GameStartFade();
-        }
+        // if (bIsGameStarting)
+        // {
+        //     GameStartFade();
+        // }
 
         if(Input.touchCount == 2)
             MutliTouch();
@@ -697,10 +702,21 @@ public class GameView : MonoBehaviour
     
     private void GameStartFade()
     {
-        ImageStartGame.color = Color.Lerp(ImageStartGame.color, Color.clear, Time.deltaTime * 1.0f);
-        if (ImageStartGame.color.a < 0.1f)
-        {
-            ImageStartGame.gameObject.SetActive(false);
-        }
+        // ImageStartGame.color = Color.Lerp(ImageStartGame.color, Color.clear, Time.deltaTime * 1.0f);
+        // if (ImageStartGame.color.a < 0.1f)
+        // {
+        //     ImageStartGame.gameObject.SetActive(false);
+        // }
+        
+        // AnimationState state;
+        // state = m_startAnimation["PanelFadeIn"];
+        //
+        // state.speed = -1;
+        // state.normalizedTime = 1;
+        //
+        // state.enabled = false;
+        // m_startAnimation.Sample();
+        // m_startAnimation.Play(state.name);
     }
 }
+    

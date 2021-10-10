@@ -2914,6 +2914,7 @@ GameObject:
   - component: {fileID: 299449031}
   - component: {fileID: 299449033}
   - component: {fileID: 299449032}
+  - component: {fileID: 299449034}
   m_Layer: 5
   m_Name: ImageStartGame
   m_TagString: Untagged
@@ -2975,6 +2976,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299449030}
   m_CullTransparentMesh: 1
+--- !u!111 &299449034
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299449030}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 26815484f41569a4186fe214f37b3a0b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26815484f41569a4186fe214f37b3a0b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &310276409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5023,7 +5040,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 66.76923}
+  m_SizeDelta: {x: 1000, y: 57.434677}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509597851
 MonoBehaviour:
@@ -5060,11 +5077,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: bbc7101ec6a38fc4e9721e325beda89d, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 60
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -12615,6 +12632,7 @@ MonoBehaviour:
   oldRelationshipPos: {x: 0, y: 0}
   bIsRelationshipScaling: 0
   adplayer: {fileID: 0}
+  bgm: {fileID: 0}
 --- !u!114 &1285887100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21217,6 +21235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1525848972}
     m_Modifications:
+    - target: {fileID: 721770823942847948, guid: 8a2e50a274ea75e4e9f85d390ce71a41, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 721770823942847949, guid: 8a2e50a274ea75e4e9f85d390ce71a41, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -21305,6 +21327,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: vine101
       objectReference: {fileID: 0}
+    - target: {fileID: 1365828412713550331, guid: 8a2e50a274ea75e4e9f85d390ce71a41, type: 3}
+      propertyPath: m_EffectFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365828412713550331, guid: 8a2e50a274ea75e4e9f85d390ce71a41, type: 3}
+      propertyPath: m_TransitionTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: b4aa8c54f24a7104aa2befe61fe21cfd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a2e50a274ea75e4e9f85d390ce71a41, type: 3}
 --- !u!1001 &2021338196143288010
