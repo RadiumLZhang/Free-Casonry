@@ -2534,14 +2534,14 @@
     },
     {
       "effectId" : "550011",
-      "baseEffectId" : "5006",
+      "baseEffectId" : "5000",
       "paras" : [
         -20
       ]
     },
     {
       "effectId" : "550012",
-      "baseEffectId" : "5006",
+      "baseEffectId" : "5000",
       "paras" : [
         -50
       ]
