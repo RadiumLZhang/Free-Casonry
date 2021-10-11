@@ -250,6 +250,13 @@
       ]
     },
     {
+      "effectId" : "511006",
+      "baseEffectId" : "5300",
+      "paras" : [
+        60011
+      ]
+    },
+    {
       "effectId" : "511010",
       "baseEffectId" : "5107",
       "paras" : [
