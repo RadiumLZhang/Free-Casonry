@@ -61,6 +61,7 @@ namespace Logic
         public void SetProperty(CatPropertyType type, int value)
         {
             Properties[(int) type] = value;
+            UIManager.Instance.RefreshCatColumns();
         }
 
         public int GetProperty(CatPropertyType type)

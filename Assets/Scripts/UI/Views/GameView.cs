@@ -462,7 +462,6 @@ public class GameView : MonoBehaviour
     //这两个不加音效
     public void OpenExePanel()
     {
-        UIManager.Instance.RefreshCatColumns();
         buttonOpenExePanel.gameObject.SetActive(false);
         buttonCloseExePanel.gameObject.SetActive(true);
         if(openExePanel_coroutine != null) StopCoroutine(openExePanel_coroutine);
