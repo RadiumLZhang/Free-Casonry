@@ -802,7 +802,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6208\u5362\u6BD4"
+  m_Text: "\u6211\u662F\u5C0F\u732B"
 --- !u!1 &2535074838194983671
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 1
 --- !u!1 &2535074838341233826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4
+  m_Text: 1
 --- !u!1 &2535074838946584754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.8328, y: 7.8141}
+  m_AnchoredPosition: {x: 5.44, y: 7.8141}
   m_SizeDelta: {x: 117.38, y: 117.3698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3565602289637128692
