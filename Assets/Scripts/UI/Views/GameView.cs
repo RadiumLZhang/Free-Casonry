@@ -65,6 +65,7 @@ public class GameView : MonoBehaviour
     public float relationshipScale;
     public Vector2 oldRelationshipPos;
     public bool bIsRelationshipScaling;
+    private float timerResource;
     
     public AudioSource adplayer;
     public AudioSource bgm;
@@ -126,6 +127,7 @@ public class GameView : MonoBehaviour
         EventHandlerManager.Instance.GetHandlerByIndex(0).SetValid(true);//第一只猫启用
         UIManager.Instance.RefreshEventSlots();
 
+        timerResource = 0f;
         // m_startAnimation = transform.Find("ImageStartGame").GetComponent<Animation>();
         // GameStartFade();
     }
@@ -452,10 +454,15 @@ public class GameView : MonoBehaviour
         UIManager.Instance.SwitchTickerButtons(true);
         TimeTickerManager.Instance.Restore();
     }
-    
+
+    public void ButtonResources_OnClick()
+    {
+        timerResource = 3.5f;
+    }
     //这两个不加音效
     public void OpenExePanel()
     {
+        UIManager.Instance.RefreshCatColumns();
         buttonOpenExePanel.gameObject.SetActive(false);
         buttonCloseExePanel.gameObject.SetActive(true);
         if(openExePanel_coroutine != null) StopCoroutine(openExePanel_coroutine);
@@ -554,6 +561,25 @@ public class GameView : MonoBehaviour
         {
             UpdatePanelResources();
             playerModel.NeedUpdate = false;
+        }
+        
+        if (UIManager.Instance.resourceDescription.activeSelf)
+        {
+            timerResource -= Time.deltaTime;
+        }
+
+        if (timerResource > 0) 
+        {
+            UIManager.Instance.SwitchResourceDesc(true);
+        }
+        else
+        {
+            UIManager.Instance.SwitchResourceDesc(false);
+        }
+
+        if (panelCouncil.activeSelf)
+        {
+            UIManager.Instance.SwitchResourceDesc(true);
         }
         
         UpdateTime();
