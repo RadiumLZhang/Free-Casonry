@@ -2034,7 +2034,7 @@
       "resultId" : "318113",
       "name" : "猫咪圣草",
       "description1" : "猫咪做了一场好梦，身心的疲劳都得到了缓解",
-      "description2" : "猫咪影响力提升5点",
+      "description2" : "猫咪影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
@@ -2047,7 +2047,7 @@
       "resultId" : "318114",
       "name" : "猫咪圣草",
       "description1" : "门中已经空无一物",
-      "description2" : "猫咪影响力提升5点",
+      "description2" : "猫咪影响力提升",
       "btnText" : "完成",
       "recordId" : "0",
       "effects" : [
