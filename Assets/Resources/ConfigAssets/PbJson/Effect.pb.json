@@ -2527,7 +2527,7 @@
     },
     {
       "effectId" : "550010",
-      "baseEffectId" : "5006",
+      "baseEffectId" : "5003",
       "paras" : [
         30
       ]
