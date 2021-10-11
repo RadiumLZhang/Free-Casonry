@@ -17,7 +17,7 @@ public class NPCMono : MonoBehaviour
     private ScrollRect scrollRect;
     private NPCManager manager;
     private EventTrigger m_trigger;
-    private Animation m_animation;
+    public Animation m_animation;
     private GameObject npcRedPoint;
     
     public GameObject imageWashHead;
