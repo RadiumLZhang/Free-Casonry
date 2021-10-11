@@ -59,8 +59,8 @@ namespace Logic
 
         public void SetResource(ResourceType type, int value)
         {
-            //todo 正式出包时修改
-            // m_resource[(int) type] = Math.Max(0, value);
+            //资源类型无负值
+            m_resource[(int) type] = Math.Max(0, value);
             m_resource[(int) type] = value;
             NeedUpdate = true;
         }
