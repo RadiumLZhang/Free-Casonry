@@ -195,8 +195,7 @@ public class GameView : MonoBehaviour
         if(openSpecialScroll_coroutine != null) StopCoroutine(openSpecialScroll_coroutine);
         if(closeSpecialScroll_coroutine != null) StopCoroutine(closeSpecialScroll_coroutine);
         closeSpecialScroll_coroutine = StartCoroutine(ScrollSpecialCoroutine(false));
-        rectSpecialScroll.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Bottom,-185f,0);
-        
+
         //buttons
         UIManager.Instance.buttonCloseRelationship.SetActive(true);
         UIManager.Instance.buttonRelationship.SetActive(false);
@@ -717,7 +716,7 @@ public class GameView : MonoBehaviour
     IEnumerator ScrollSpecialCoroutine(bool bIsOpen)
     {
         float openPos = 0;
-        float closePos = -185f;
+        float closePos = -200f;
         float curPos = bIsOpen ? closePos : openPos;
         for (float i = 0f; i < 0.3f; i += Time.deltaTime)
         {
