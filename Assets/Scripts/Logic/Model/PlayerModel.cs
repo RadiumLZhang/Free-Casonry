@@ -15,7 +15,7 @@ namespace Logic
     
     public class PlayerModel : BaseModel<PlayerModel>, ISaveObject
     {
-        private int[] m_resource = new int[5];
+        private int[] m_resource = new int[5]{0, 10, 50, 0, 0};
         public enum ResourceType
         {
             Money = 0,
