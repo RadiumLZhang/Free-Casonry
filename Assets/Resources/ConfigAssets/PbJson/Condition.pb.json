@@ -82,10 +82,12 @@
     },
     {
       "conditionId" : "410000",
-      "baseConditionId" : "4103",
+      "baseConditionId" : "4003",
       "paras" : [
-        60000,
-        2
+        7,
+        10,
+        18,
+        30
       ]
     },
     {
