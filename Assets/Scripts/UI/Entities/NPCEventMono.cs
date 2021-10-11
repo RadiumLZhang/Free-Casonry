@@ -12,11 +12,14 @@ public class NPCEventMono : MonoBehaviour
     private Logic.Event.CatEvent m_myCatEventInfo;
     private Text textRemainingTime;
     private Text textMin;
-
+    private Transform m_NPC;
+    private Transform m_ImageEvent;
     void Awake()
     {
         textRemainingTime = transform.Find("EventTextBackground/EventTimeBackground/TextEventTime").GetComponent<Text>();
         textMin = textRemainingTime.transform.parent.Find("TextEventMin").GetComponent<Text>();
+        m_NPC = transform.parent.parent.parent;
+        m_ImageEvent = transform.Find("ImageEvent");
     }
 
     void Update()
@@ -34,6 +37,7 @@ public class NPCEventMono : MonoBehaviour
                 textMin.text = "分后销毁";
             }
         }
+        m_ImageEvent.GetComponent<DragHandlerNPCEvent>().enabled = !m_NPC.GetComponent<NPCMono>().m_animation.isPlaying;
     }
     
     public void InitWithID(long ID)
