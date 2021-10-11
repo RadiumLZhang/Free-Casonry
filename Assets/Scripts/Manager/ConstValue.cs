@@ -9,7 +9,7 @@
         public const int MONTH = 7;
         
         // 游戏开始日期
-        public const int DAY = 13;
+        public const int DAY = 10;
         
         // 游戏开始小时
         public const int HOUR = 18;
