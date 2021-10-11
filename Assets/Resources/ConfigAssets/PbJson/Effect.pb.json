@@ -100,16 +100,16 @@
     },
     {
       "effectId" : "500072",
-      "baseEffectId" : "5003",
+      "baseEffectId" : "5000",
       "paras" : [
-        80
+        20
       ]
     },
     {
       "effectId" : "500073",
-      "baseEffectId" : "5000",
+      "baseEffectId" : "5003",
       "paras" : [
-        20
+        80
       ]
     },
     {
@@ -200,7 +200,7 @@
       "effectId" : "510040",
       "baseEffectId" : "5006",
       "paras" : [
-        10
+        15
       ]
     },
     {
@@ -352,7 +352,7 @@
       "effectId" : "512040",
       "baseEffectId" : "5006",
       "paras" : [
-        20
+        25
       ]
     },
     {
@@ -1718,6 +1718,7 @@
       "effectId" : "518117",
       "baseEffectId" : "5209",
       "paras" : [
+        61004,
         70201
       ]
     },
