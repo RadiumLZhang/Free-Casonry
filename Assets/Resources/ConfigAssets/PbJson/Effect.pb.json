@@ -100,14 +100,14 @@
     },
     {
       "effectId" : "500072",
-      "baseEffectId" : "5000",
+      "baseEffectId" : "5003",
       "paras" : [
         20
       ]
     },
     {
       "effectId" : "500073",
-      "baseEffectId" : "5003",
+      "baseEffectId" : "5000",
       "paras" : [
         80
       ]
@@ -420,14 +420,14 @@
       "effectId" : "513031",
       "baseEffectId" : "5006",
       "paras" : [
-        15
+        60
       ]
     },
     {
       "effectId" : "513040",
       "baseEffectId" : "5006",
       "paras" : [
-        20
+        25
       ]
     },
     {
@@ -2529,7 +2529,7 @@
       "effectId" : "550010",
       "baseEffectId" : "5006",
       "paras" : [
-        15
+        30
       ]
     },
     {
