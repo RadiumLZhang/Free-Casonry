@@ -13,7 +13,7 @@ using UnityEngine.UI;
 
 public class UIManager: BaseModel<UIManager>, ISaveObject
 {
-    public bool buttonCouncilActive = true;
+    public bool buttonCouncilActive = false;
 
     public bool IsInit = false;
     
