@@ -105,6 +105,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
 
     //haha
     public GameObject draggingMask;
+    public GameObject resourceDescription;
 
 
     public bool bIsMutliDragActive()
@@ -188,6 +189,7 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         EndingMono = gameView.Find("EndingPanel").GetComponent<EndingMono>();
 
         draggingMask = gameView.Find("DraggingMask").gameObject;
+        resourceDescription = panelResources.transform.Find("ResourceDescription").gameObject;
         
         InitCatColumns();
         InitDialogs();
@@ -336,13 +338,29 @@ public class UIManager: BaseModel<UIManager>, ISaveObject
         textResult_finish.GetComponent<Text>().text = m_myResultInfo.Description2;
         //buttonText_finish.GetComponent<Text>().text = m_myResultInfo.BtnTxt;
     }
-    
+
+    public void RefreshCatColumns()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Cat m_cat;
+            m_cat = EventHandlerManager.Instance.GetHandlerByIndex(eventSlots[i].GetComponent<CatColumnHandler>().index).GetCat();
+            eventSlots[i].transform.Find("Image1/Text").GetComponent<Text>().text = m_cat.ScoutValue.ToString();
+            eventSlots[i].transform.Find("Image2/Text").GetComponent<Text>().text = m_cat.Conspiracy.ToString();
+            eventSlots[i].transform.Find("Image3/Text").GetComponent<Text>().text = m_cat.Communication.ToString();
+        }
+    }
     public void RefreshEventSlots()
     {
         for (int i = 0; i < 4; i++)
         {
             eventSlots[i].SetActive(EventHandlerManager.Instance.GetHandlerByIndex(i).GetValid());
         }
+    }
+
+    public void SwitchResourceDesc(bool bIsActive)
+    {
+        resourceDescription.SetActive(bIsActive);
     }
     
     public void SwitchNPCInfo(Human m_NPC)
