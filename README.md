@@ -1,10 +1,5 @@
-# Free Casony 猫咪共济会
+# Free Casony
 This is an independent, narrative and storytelling management mobile game based on **Unity3D** development.
-
-
-**Author**
-- Tencent 2021 ROCA Team 50
-- Member: Lei Zhang, Diking Li, Xinqi Zhou, Jonah Wei, Xianh Huang
 
 **Prize**
 - Tencent Minigame Project Gold Award, 2021.
@@ -34,7 +29,6 @@ If you are interested in the design, please check out [Design Summary](https://r
 **Installation**
 
 [Release 1.0.0](https://github.com/RadiumLZhang/CatClub/releases/tag/v1.0.0)
-
 
 **License**
 
