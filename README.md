@@ -1,4 +1,4 @@
-# Free Casony
+# Free Casonry
 This is an independent, narrative and storytelling management mobile game based on **Unity3D** development.
 
 **Prize**
