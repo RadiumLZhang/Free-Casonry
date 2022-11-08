@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 Tencent 2021 ROCA Team 50
+Copyright (c) 2022 Lei Zhang, Diking Li, Xinqi Zhou, Jonah Wei, Xianh Huang
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
